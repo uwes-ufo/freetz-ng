@@ -22,3 +22,7 @@
 /packages
 /source
 
+# uwe
+!.config
+!.config-7270
+!.config-7490
