@@ -1,6 +1,6 @@
-$(call PKG_INIT_BIN, 1.2.12)
+$(call PKG_INIT_BIN, 4.4.1)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.bz2
-$(PKG)_SOURCE_MD5:=3bc8a4681d720059157b3e0b481c12c7
+$(PKG)_SOURCE_MD5:=9c2ca54e7f353a861e57525ff6da335b
 $(PKG)_SITE:=http://www.ffmpeg.org/releases
 
 $(PKG)_DEPENDS_ON += zlib
@@ -14,8 +14,8 @@ $(PKG)_BINARIES_BUILD_DIR  := $($(PKG)_BINARIES:%=$($(PKG)_DIR)/%)
 $(PKG)_BINARIES_TARGET_DIR := $($(PKG)_BINARIES:%=$($(PKG)_DEST_DIR)/usr/bin/%)
 
 $(PKG)_LIBNAMES_SHORT      := avcodec avdevice avfilter avformat avutil postproc swresample swscale
-$(PKG)_LIBVERSIONS_MAJOR   := 54      54       3        54       52     52       0          2
-$(PKG)_LIBVERSIONS_MINOR   := 92.100  3.103    42.103   63.104   18.100 2.100    17.102     2.100
+$(PKG)_LIBVERSIONS_MAJOR   := 58      58       7        58       56     55       3          5
+$(PKG)_LIBVERSIONS_MINOR   := 134.100 13.100   110.100  76.100   70.100 9.100    9.100      9.100
 
 $(PKG)_LIBNAMES_LONG_MAJOR := $(join $($(PKG)_LIBNAMES_SHORT:%=lib%.so.),$($(PKG)_LIBVERSIONS_MAJOR))
 $(PKG)_LIBNAMES_LONG       := $(join $($(PKG)_LIBNAMES_LONG_MAJOR:%=%.),$($(PKG)_LIBVERSIONS_MINOR))
@@ -44,7 +44,7 @@ $(PKG)_CONFIGURE_OPTIONS += --enable-cross-compile
 $(PKG)_CONFIGURE_OPTIONS += --cross-prefix="$(TARGET_CROSS)"
 $(PKG)_CONFIGURE_OPTIONS += --arch="$(TARGET_ARCH_ENDIANNESS_DEPENDENT)"
 $(PKG)_CONFIGURE_OPTIONS += --disable-mips32r2
-$(PKG)_CONFIGURE_OPTIONS += --disable-mipsdspr1
+$(PKG)_CONFIGURE_OPTIONS += --disable-mipsdsp
 $(PKG)_CONFIGURE_OPTIONS += --disable-mipsdspr2
 $(PKG)_CONFIGURE_OPTIONS += --disable-mipsfpu
 $(PKG)_CONFIGURE_OPTIONS += --target-os=linux
@@ -82,7 +82,7 @@ $(PKG)_CONFIGURE_OPTIONS += $($(PKG)_CONFIGURE_PARSERS)
 $(PKG)_CONFIGURE_OPTIONS += $($(PKG)_CONFIGURE_PROTOCOLS)
 
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_ffmpeg),--enable-ffmpeg,--disable-ffmpeg)
-$(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_ffserver),--enable-ffserver,--disable-ffserver)
+$(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_ffserver),--enable-ffserver)#,--disable-ffserver)
 $(PKG)_CONFIGURE_OPTIONS += --disable-ffplay
 $(PKG)_CONFIGURE_OPTIONS += --disable-ffprobe
 
