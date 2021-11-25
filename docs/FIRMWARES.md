@@ -101,9 +101,9 @@ Currently supported devices and firmwares
 * __Fritz!Box 4040__
   - 155.07.01 rev61489 {ALL}
   - 155.07.14 rev73181 {ALL} [MESH18 NL4]
-  - 155.07.28 rev90043 {ALL} [PSQ19P2NL3-Go0phie0]
+  - 155.07.29 rev92647 {ALL} [PSQ19P2NL4]
 * __Fritz!Box 4060 (DEVELOPER)__
-  - 261.07.28 rev90916 {ALL} [PSQ19P2NL3-Go0phie0] (Inhaus)
+  - 261.07.28 rev92702 {ALL} [PSQ19P2NL4] (Inhaus)
 
 ### Fritz!Box Fon (50xx/51xx)
 
@@ -329,7 +329,7 @@ Currently supported devices and firmwares
 * __Fritz!Box Fon WLAN 7412__
   - 137.06.30 rev31572 {GER}
   - 137.06.50 rev32502 {GER}
-  - 137.06.86 rev70979 {GER}
+  - 137.06.87 rev92248 {GER}
   - Alien 7430 {GER} (No wlan!)
 * __Fritz!Box Fon WLAN 7430__
   - 146.06.30 rev32200 {GER}
