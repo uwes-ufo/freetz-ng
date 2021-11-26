@@ -84,7 +84,7 @@ $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_EVERYTHING),--extra-lib
 )
 
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_ffmpeg),--enable-ffmpeg,--disable-ffmpeg)
-$(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_ffserver),--enable-ffserver)#,--disable-ffserver)
+$(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_ffserver),--enable-ffserver) #,--disable-ffserver)
 $(PKG)_CONFIGURE_OPTIONS += --disable-ffplay
 $(PKG)_CONFIGURE_OPTIONS += --disable-ffprobe
 $(PKG_SOURCE_DOWNLOAD)
