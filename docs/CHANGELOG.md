@@ -44,7 +44,7 @@ Latest changes
 
  - Build system:
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.37.x
-   * ccache 4.4.2
+   * ccache 4.5.1
    * precompiled host-tools 2021-10-15
 
  - Updated tools and hooks:
@@ -66,7 +66,7 @@ Latest changes
    * Curl 7.80.0
    * davfs2 1.5.2/1.6.1
    * git 2.34.1
-   * HAProxy 2.4.8
+   * HAProxy 2.5.0
    * libexif 0.6.24
    * libgcrypt 1.9.4
    * Nano 5.9
