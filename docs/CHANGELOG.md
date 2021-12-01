@@ -53,6 +53,7 @@ Latest changes
    * pseudo 1.9.0 oe-core 0cda3ba
 
  - BusyBox package:
+   * Version 1.33.2 updated
    * Version 1.34.1 updated
    
  - Updated packages and libs:
@@ -75,7 +76,7 @@ Latest changes
    * PCSC-lite (pcscd) 1.9.4
    * socat 1.7.4.2
    * SQLite 3.36.0
-   * strace 4.9/5.0/5.14
+   * strace 4.9/5.0/5.15
    * Stunnel 5.60
    * tinc 1.0.36/1.1pre18
    * Tor 0.4.6.8
