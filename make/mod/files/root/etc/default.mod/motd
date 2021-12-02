@@ -1,6 +1,7 @@
 echo -n 'Welcome at '
 hostname
 echo
+echo -e "\e[33m"
 cat << EOX
    _                  _
   | |_ ___   __ _ ___| |_ ___ _ __
@@ -8,3 +9,4 @@ cat << EOX
   | || (_) | (_| \__ \ ||  __/ |
    \__\___/ \__,_|___/\__\___|_|     Less features - more bugs!
 EOX
+echo -e "\e[0m"
