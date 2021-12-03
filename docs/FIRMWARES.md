@@ -174,12 +174,12 @@ Currently supported devices and firmwares
   - 142.06.83 rev43648 {ALL}
   - 142.07.01 rev63482 {GER}
   - 142.07.13 rev73673 {GER} [MESH18 NL3]
-  - 142.07.27 rev89408 {GER} [PSQ19P2NL2-aM7Poh3a]
+  - 142.07.29 rev92398 {GER} [PSQ19P2NL4]
 * __Fritz!Box 6820 v2 LTE__
   - 142.07.13 rev73674 {INT} [MESH18 NL3]
-  - 142.07.27 rev89409 {INT} [PSQ19P2NL2-aM7Poh3a]
+  - 142.07.29 rev92405 {INT} [PSQ19P2NL4]
 * __Fritz!Box 6820 v3 LTE (UNTESTED)__
-  - 254.07.27 rev91073 {GER} [PSQ19P2NL2-aM7Poh3a]
+  - 254.07.29 rev92400 {GER} [PSQ19P2NL4]
 
 * __Fritz!Box 6840 LTE__
   - 105.06.30 rev31187 {GER}
@@ -193,7 +193,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box 6850 LTE (UNTESTED)__
   - 262.07.21 rev82687 {ALL} [PSQ19]
-  - 262.07.28 rev91074 {ALL} [PSQ19P2NL3-Go0phie0]
+  - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
 * __Fritz!Box 6850 5G (DEVELOPER)__
   - 258.07.19 rev82499 {ALL} [PSQ19] (Inhaus)
 
