@@ -103,7 +103,7 @@ Currently supported devices and firmwares
   - 155.07.14 rev73181 {ALL} [MESH18 NL4]
   - 155.07.29 rev92647 {ALL} [PSQ19P2NL4]
 * __Fritz!Box 4060 (DEVELOPER)__
-  - 261.07.28 rev92702 {ALL} [PSQ19P2NL4] (Inhaus)
+  - 261.07.29 rev92827 {ALL} [PSQ19P2NL4]
 
 ### Fritz!Box Fon (50xx/51xx)
 
@@ -136,7 +136,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box 5530 Fiber (DEVELOPER)__
   - 257.07.21 rev83233 {GER} [AXKFW2]
-  - 257.07.27 rev89022 {ALL} [PSQ19P2NL2-aM7Poh3a]
+  - 257.07.29 rev93005 {ALL} [PSQ19P2NL4]
 
 ### Fritz!Box Cable (64xx/65xx/66xx)
 
@@ -195,7 +195,7 @@ Currently supported devices and firmwares
   - 262.07.21 rev82687 {ALL} [PSQ19]
   - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
 * __Fritz!Box 6850 5G (DEVELOPER)__
-  - 258.07.19 rev82499 {ALL} [PSQ19] (Inhaus)
+  - 258.07.28 rev00000 {ALL} [PSQ19P2NL4] (Inhaus)
 
 * __Fritz!Box 6890 LTE__
   - 162.06.87 rev59283 {ALL}
@@ -296,7 +296,7 @@ Currently supported devices and firmwares
 * __Fritz!Box Fon WLAN 7360 v2__
   - 124.06.30 rev30889 {GER}
   - 124.06.50 rev32505 {GER}
-  - 124.06.86 rev70981 {GER}
+  - 124.06.87 rev92874 {GER}
   - 124.06.31 rev32500 {INT}
   - 124.06.52 rev33299 {INT}
   - 124.06.86 rev70983 {INT}
@@ -317,12 +317,12 @@ Currently supported devices and firmwares
   - 84.06.04 rev28179 {GER}
   - 84.06.30 rev30889 {GER}
   - 84.06.51 rev33001 {GER}
-  - 84.06.86 rev70974 {GER}
+  - 84.06.87 rev92934 {GER}
   - 84.05.23 rev27631 {INT}
   - 84.06.06 rev27689 {INT}
   - 84.06.30 rev31156 {INT}
   - 84.06.53 rev34469 {INT}
-  - 84.06.86 rev70976 {INT}
+  - 84.06.87 rev92938 {INT}
 
 ### Fritz!Box Fon WLAN (74xx)
 
