@@ -140,7 +140,7 @@ Currently supported devices and firmwares
 
 ### Fritz!Box Cable (64xx/65xx/66xx)
 
-* __Fritz!Box 6430 Cable (UNTESTED)__
+* __Fritz!Box 6430 Cable__
   - 159.07.12 rev72224 {GER} [MESH18 NL2]
 * __Fritz!Box 6490 Cable__
   - 141.06.87 rev48327 {GER}
@@ -484,12 +484,12 @@ Currently supported devices and firmwares
 * __Fritz!Repeater 2400 (UNTESTED)__
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.21 rev83013 {ALL} [PSQ19]
-  - 169.07.27 rev89422 {ALL} [PSQ19P2NL2-aM7Poh3a]
+  - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
 * __Fritz!Repeater 3000__
   - 174.07.04 rev66458 {ALL}
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
   - 174.07.21 rev83015 {ALL} [PSQ19]
-  - 174.07.27 rev89424 {ALL} [PSQ19P2NL2-aM7Poh3a]
+  - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
 * __Fritz!Repeater 6000 (DEVELOPER)__
   - 253.07.28 rev89494 {ALL} [PSQ19P2NL2-aM7Poh3a]
 
