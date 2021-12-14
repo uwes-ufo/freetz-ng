@@ -400,9 +400,9 @@ Currently supported devices and firmwares
   - 153.07.21 rev82454 {GER} [PSQ19]
   - 153.07.29 rev92247 {GER} [PSQ19P2NL4]
 * __Fritz!Box Fon WLAN 7581 (UNTESTED)__
-  - 152.07.15 rev89092 {ALL} [MESH18 NL3]
+  - 152.07.16 rev93246 {ALL} [WU21 MESH18]
 * __Fritz!Box Fon WLAN 7582 (UNTESTED)__
-  - 156.07.15 rev89093 {ALL} [MESH18 NL3]
+  - 156.07.16 rev93247 {ALL} [WU21 MESH18]
 * __Fritz!Box Fon WLAN 7583__
   - 167.07.12 rev70707 {GER} [MESH18 NL2]
   - 167.07.15 rev75887 {INT} [MESH18 NL2]
@@ -491,7 +491,7 @@ Currently supported devices and firmwares
   - 174.07.21 rev83015 {ALL} [PSQ19]
   - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
 * __Fritz!Repeater 6000 (DEVELOPER)__
-  - 253.07.28 rev89494 {ALL} [PSQ19P2NL2-aM7Poh3a]
+  - 253.07.29 rev93257 {ALL} [PSQ19P2NL4]
 
 ### T-Com derivatives
 
