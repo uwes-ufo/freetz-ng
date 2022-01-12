@@ -1,6 +1,6 @@
 --- networking/telnetd.c
 +++ networking/telnetd.c
-@@ -509,6 +509,7 @@
+@@ -516,6 +516,7 @@
  
  	/* Restore default signal handling ASAP */
  	bb_signals((1 << SIGCHLD) + (1 << SIGPIPE), SIG_DFL);

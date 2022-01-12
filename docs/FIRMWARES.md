@@ -97,7 +97,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box 4020__
   - 147.06.83 rev43440 {GER}
-  - 147.07.01 rev64348 {GER}
+  - 147.07.02 rev93867 {GER}
 * __Fritz!Box 4040__
   - 155.07.01 rev61489 {ALL}
   - 155.07.14 rev73181 {ALL} [MESH18 NL4]
@@ -202,7 +202,7 @@ Currently supported devices and firmwares
   - 162.07.03 rev68723 {ALL}
   - 162.07.13 rev73668 {ALL} [MESH18 NL3]
   - 162.07.21 rev82271 {ALL} [PSQ19]
-  - 162.07.28 rev91075 {ALL} [PSQ19P2NL3-Go0phie0]
+  - 162.07.29 rev93213 {ALL} [PSQ19P2NL4]
 
 ### Fritz!Box Fon WLAN (70xx)
 
@@ -439,12 +439,12 @@ Currently supported devices and firmwares
   - 118.06.50 rev33971 {ALL}
   - 118.06.92 rev47429 {ALL}
   - 118.07.01 rev65031 {ALL}
-  - 118.07.13 rev84269 {ALL} [MESH18 NL3]
+  - 118.07.14 rev93758 {ALL} [WU21 MESH18]
 
 * __Fritz!Powerline 1240E (UNTESTED)__
   - 150.06.92 rev47432 {ALL}
   - 150.07.01 rev63180 {ALL}
-  - 150.07.13 rev84270 {ALL} [MESH18 NL3]
+  - 150.07.14 rev93759 {ALL} [WU21 MESH18]
 * __Fritz!Powerline 1260E__
   - 157.07.01 rev63181 {ALL}
   - 157.07.12 rev70670 {ALL} [MESH18 NL2]
@@ -462,7 +462,7 @@ Currently supported devices and firmwares
   - 128.06.51 rev34135 {ALL}
   - 128.06.92 rev47360 {ALL}
   - 128.07.01 rev63068 {ALL}
-  - 128.07.13 rev84190 {ALL} [MESH18 NL3]
+  - 128.07.14 rev93705 {ALL} [WU21 MESH18]
 * __Fritz!WLAN Repeater DVB-C__
   - 133.06.32 rev31507 {ALL}
   - 133.06.50 rev33858 {ALL}

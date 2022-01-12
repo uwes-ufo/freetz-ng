@@ -45,33 +45,40 @@ Latest changes
  - Build system:
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.37.x
    * ccache 4.5.1
-   * precompiled host-tools 2021-10-15
+   * precompiled host-tools 2021-12-30
 
  - Updated tools and hooks:
    * BusyBox 1.34.1
-   * kconfig 5.15
+   * fakeroot 1.26-1.1
+   * kconfig 5.16
    * pseudo 1.9.0 oe-core 0cda3ba
 
  - BusyBox package:
-   * Version 1.33.2 updated
+   * Version 1.33.2 removed
    * Version 1.34.1 updated
+   * Version 1.35.0 added
    
  - Updated packages and libs:
    * ACME.sh 3.0.1 (letsencrypt)
-   * Apache 2.4.51
+   * Apache 2.4.52
+   * AutoFS 5.0.5/5.1.8
    * BIND 9.11.36
    * Bip 0.9.2
    * CA-bundle 2021-10-26
    * CCID driver 1.4.36
    * cifs-utils 6.14
-   * Curl 7.80.0
+   * Curl 7.81.0
    * davfs2 1.5.2/1.6.1
+   * expat 2.4.2
    * git 2.34.1
    * HAProxy 2.5.0
    * libexif 0.6.24
    * libgcrypt 1.9.4
    * libgpg-error 1.43
    * lighttpd 1.4.63
+   * libneon 0.32.1
+   * mbed TLS 2.7.19/2.28.0
+   * minicom 2.8
    * Nano 6.0
    * OpenSSH 8.8p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1m/3.0.1
@@ -79,13 +86,15 @@ Latest changes
    * pcre 8.45
    * PCSC-lite (pcscd) 1.9.4
    * socat 1.7.4.2
-   * SQLite 3.36.0
-   * strace 4.9/5.0/5.15
+   * SQLite 3.37.0
+   * strace 4.9/5.0/5.16
    * Stunnel 5.60
    * tinc 1.0.36/1.1pre18
-   * Tor 0.4.6.8
+   * Tor 0.4.6.9
    * Unbound 1.14.0
+   * UnRAR 6.1.3
    * Wget GNU 1.21.2
+   * wireguard-linux-compat 1.0.20211208
    * wireguard-tools 1.0.20210914
 
  - Firmware updates:

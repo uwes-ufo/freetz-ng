@@ -7,7 +7,7 @@
 -int FAST_FUNC find_applet_by_name(const char *name)
 +int FAST_FUNC find_applet_by_name(const char *original_name)
  {
- 	unsigned i, max;
+ 	unsigned i;
  	int j;
  	const char *p;
 +	const char *name = original_name;

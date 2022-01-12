@@ -188,7 +188,7 @@ DEBUGFS="${TOOLS_DIR}/${DEBUGFS_TOOL}"
 FINDSQUASHFS="${TOOLS_DIR}/${FINDSQUASHFS_TOOL}"
 TICHKSUM="${TOOLS_DIR}/${TICHKSUM_TOOL}"
 MAKEDEVS="${TOOLS_DIR}/${MAKEDEVS_TOOL}"
-MAKEDEVS_FILE="${TOOLS_DIR}/device_table.txt"
+MAKEDEVS_FILE="${TOOLS_DIR}/device.table"
 TAR="${TOOLS_DIR}/${TAR_TOOL}"
 TAR_GNU="${TOOLS_DIR}/${TAR_GNU_TOOL}"
 MD5SUM="${TOOLS_DIR}/${MD5SUM_TOOL}"
@@ -1201,7 +1201,7 @@ if [ "$DO_MOD" -gt 0 ]; then
 		DETECTED_OPENSSL_VER_AVM="$(find ${FILESYSTEM_DIR}/lib/libcrypto.so.* -type f  -exec strings {} \; 2>/dev/null | sed -nr 's/^@?OpenSSL ([0-9]\.[-0-9a-z\.]*)[ \t]*/\1\t/p')"
 		echo2 "... used by AVM ...... ${DETECTED_OPENSSL_VER_AVM:-none}"
 		if [ "$FREETZ_LIB_libcrypto" == "y" ]; then
-			DETECTED_OPENSSL_VER_MOD="$(find ${FILESYSTEM_MOD_DIR}/usr/lib/freetz/libcrypto.so.* -type f  -exec strings {} \; | sed -nr 's/^@?OpenSSL ([0-9]\.[-0-9a-z\.]*)[ \t]*/\1\t/p')"
+			DETECTED_OPENSSL_VER_MOD="$(find ${FILESYSTEM_MOD_DIR}${FREETZ_LIBRARY_DIR}/libcrypto.so.* -type f  -exec strings {} \; | sed -nr 's/^@?OpenSSL ([0-9]\.[-0-9a-z\.]*)[ \t]*/\1\t/p')"
 			echo2 "... used by Freetz ... ${DETECTED_OPENSSL_VER_MOD:-none}"
 		#	[ "$DETECTED_OPENSSL_VER_MOD" != "$DETECTED_OPENSSL_VER_AVM" ] & warn2 "Freetz and AVM OpenSSL versions do not match"
 		fi
@@ -1797,6 +1797,11 @@ if [ "$action_names" ]; then
 		  || [ -z "$FREETZ_IMAGE_NAME_CUSTOM" ]; then
 			modstring+="_${modmakedate}"
 		fi
+		#EXTRA
+		if [ -n "$FREETZ_IMAGE_NAME_EXTRA" ] \
+		  || [ -z "$FREETZ_IMAGE_NAME_CUSTOM" ]; then
+			modstring+="-${FREETZ_IMAGE_NAME_EXTRA}"
+		fi
 		#done
 		echo -n "$modstring"
 	}
@@ -1828,8 +1833,11 @@ if [ "$action_names" ]; then
 		error 1 "packing of var.tar failed"
 	fi
 
-	[ "$FREETZ_AVM_HAS_UDEV" == "y" ] || \
+	if [ "$FREETZ_AVM_HAS_UDEV" != "y" ]; then
+		[ -s "$MAKEDEVS_FILE" ] || error 1 "file $MAKEDEVS_FILE not found or empty"
 		$MAKEDEVS -d $MAKEDEVS_FILE $FILESYSTEM_MOD_DIR > $MOD_DIR/filesystem.log 2>&1
+		[ $? -ne 0 ] && cat $MOD_DIR/filesystem.log && error 1 "makedevs failed"
+	fi
 fi
 
 # -------------------------------------------

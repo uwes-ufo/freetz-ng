@@ -1,6 +1,6 @@
 --- networking/httpd.c
 +++ networking/httpd.c
-@@ -1580,6 +1580,9 @@
+@@ -1592,6 +1592,9 @@
  	if (script != NULL)
  		*script = '\0';         /* cut off /PATH_INFO */
  

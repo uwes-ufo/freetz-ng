@@ -6,7 +6,7 @@ TODO: document the problem we have without this patch
 
 --- libbb/copy_file.c
 +++ libbb/copy_file.c
-@@ -296,7 +296,11 @@
+@@ -298,7 +298,11 @@
  		if (!S_ISREG(source_stat.st_mode))
  			new_mode = 0666;
  
@@ -19,7 +19,7 @@ TODO: document the problem we have without this patch
  			/*
  			 * O_CREAT|O_EXCL: require that file did not exist before creation
  			 */
-@@ -307,6 +311,7 @@
+@@ -309,6 +313,7 @@
  			 */
  			dst_fd = open(dest, O_WRONLY|O_CREAT|O_TRUNC, new_mode);
  		}

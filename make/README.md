@@ -34,7 +34,7 @@ Index:
   * **[ACME.sh 3.0.1 (letsencrypt)](../docs/make/acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
-  * **[apache2: Apache HTTP Server 2.4.51 (binary only)](../docs/make/apache2.md)<a id='apache2'></a>**<br>
+  * **[apache2: Apache HTTP Server 2.4.52 (binary only)](../docs/make/apache2.md)<a id='apache2'></a>**<br>
     The Apache httpd server
      - [apache.conf](../docs/make/apache2.md#apacheconf)
      - [Passwortschutz mit .htaccess](../docs/make/apache2.md#passwortschutz-mit-htaccess)
@@ -56,7 +56,7 @@ Index:
   * **<u>atop 2.2.3 (binary only)</u><a id='atop'></a>**<br>
     The program atop is an interactive monitor to view the load on a Linux system. It shows the occupation of the most critical hardware resources (from a performance point of view) on system level, i.e. cpu, memory, disk and network.
 
-  * **[AutoFS 5.0.5/5.1.7](../docs/make/autofs.md)<a id='autofs'></a>**<br>
+  * **[AutoFS 5.0.5/5.1.8](../docs/make/autofs.md)<a id='autofs'></a>**<br>
     Autofs is a kernel-based automounter for Linux. It performs a job similar to amd(8) but relies on a small stub of kernel code instead of pretending to be an NFS server. The result is simpler code, better reliability, and much faster operation in the common case (everything already mounted).
      - [Optionale Aufrufparameter](../docs/make/autofs.md#optionale-aufrufparameter)
      - [Beispielkonfigurationen der auto.conf](../docs/make/autofs.md#beispielkonfigurationen-der-autoconf)
@@ -167,7 +167,7 @@ Index:
   * **[Ctorrent dnh3.3.2 (binary only)](../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 7.80.0 (binary only)](../docs/make/curl.md)<a id='curl'></a>**<br>
+  * **[Curl 7.81.0 (binary only)](../docs/make/curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -478,7 +478,7 @@ Index:
   * **[microperl 5.10.1 (binary only)](../docs/make/microperl.md)<a id='microperl'></a>**<br>
     Perl without operating-specific functions such as readdir.
 
-  * **<u>minicom 2.5 (binary only)</u><a id='minicom'></a>**<br>
+  * **[minicom 2.8 (binary only)](../docs/make/minicom.md)<a id='minicom'></a>**<br>
     Minicom is a menu driven communications program. It emulates ANSI and VT102 terminals. It has a dialing directory and auto zmodem download. NOTE: Minicom will expect its configurations in "/var/tmp/flash/minicom/" which has to be created before the first run of the binary by "mkdir -p  /var/tmp/flash/minicom/". To save this and after any change of minicom's configurations you will have to write it to flash with "modsave".
 
   * **[minidlna 1.3.0](../docs/make/minidlna.md)<a id='minidlna'></a>**<br>
@@ -865,7 +865,7 @@ Index:
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **<u>SQLite (v3.x) database engine (CLI) 3.36.0 (binary only)</u><a id='sqlite'></a>**<br>
+  * **<u>SQLite (v3.x) database engine (CLI) 3.37.0 (binary only)</u><a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
@@ -950,7 +950,7 @@ Index:
   * **<u>tmux 2.5 (binary only)</u><a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.6.8](../docs/make/tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.6.9](../docs/make/tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
      - [Tor als Proxy benutzen](../docs/make/tor.md#tor-als-proxy-benutzen)
      - [Tor und Privoxy](../docs/make/tor.md#tor-und-privoxy)
@@ -993,7 +993,7 @@ Index:
   * **[unfs3 0.9.22](../docs/make/unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **<u>unrar 6.0.7 (binary only)</u><a id='unrar'></a>**<br>
+  * **<u>UnRAR 6.1.3 (binary only)</u><a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **<u>usbids: USB IDs 0.0</u><a id='usbids'></a>**<br>
@@ -1038,7 +1038,7 @@ Index:
      - [Datendurchsatz](../docs/make/wireguard.md#datendurchsatz)
      - [Konfiguration für einen Wireguard-Server auf der Fritzbox mit einem PC erstellen](../docs/make/wireguard.md#konfiguration-für-einen-wireguard-server-auf-der-fritzbox-mit-einem-pc-erstellen)
 
-  * **[wireguard-linux-compat 1.0.20210606](../docs/make/wireguard-linux-compat.md)<a id='wireguard-linux-compat'></a>**<br>
+  * **[wireguard-linux-compat 1.0.20211208](../docs/make/wireguard-linux-compat.md)<a id='wireguard-linux-compat'></a>**<br>
     This package provides the kernel module required for Wireguard
 
   * **[WOL 0.7.1 (binary only)](../docs/make/wol.md)<a id='wol'></a>**<br>
@@ -1099,7 +1099,7 @@ Index:
   * **[pciutils 3.1.7 (binary only)](../docs/make/pciutils.md)<a id='pciutils'></a>**<br>
     The PCI Utilities are a collection of programs for inspecting and manipulating configuration of PCI devices, all based on a common portable library libpci which offers access to the PCI configuration space on a variety of operating systems. lspci displays detailed information about all PCI buses and devices in the system. setpci allows reading from and writing to PCI device configuration registers. For example, you can adjust the latency timers with it.
 
-  * **[strace 4.9/5.0/5.15 (binary only)](../docs/make/strace.md)<a id='strace'></a>**<br>
+  * **[strace 4.9/5.0/5.16 (binary only)](../docs/make/strace.md)<a id='strace'></a>**<br>
     strace - trace system calls and signals strace is a system call tracer, i.e. a debugging tool which prints out a trace of all the system calls made by a another process/program.
      - [Tip: Vermeiden von "unfinished" und "resumed" in strace-Logs](../docs/make/strace.md#tip-vermeiden-von-unfinished-und-resumed-in-strace-logs)
 
