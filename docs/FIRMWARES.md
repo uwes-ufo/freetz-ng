@@ -194,8 +194,8 @@ Currently supported devices and firmwares
 * __Fritz!Box 6850 LTE (UNTESTED)__
   - 262.07.21 rev82687 {ALL} [PSQ19]
   - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
-* __Fritz!Box 6850 5G (DEVELOPER)__
-  - 258.07.28 rev00000 {ALL} [PSQ19P2NL4] (Inhaus)
+* __Fritz!Box 6850 5G (UNTESTED)__
+  - 258.07.29 rev93816 {ALL} [PSQ19P2NL4]
 
 * __Fritz!Box 6890 LTE__
   - 162.06.87 rev59283 {ALL}
@@ -433,7 +433,7 @@ Currently supported devices and firmwares
   - 129.06.50 rev33971 {ALL}
   - 129.06.92 rev47358 {ALL}
   - 129.07.01 rev65030 {ALL}
-  - 129.07.13 rev86607 {ALL} [MESH18 NL3]
+  - 129.07.14 rev93854 {ALL} [WU21 MESH18]
 * __Fritz!Powerline 546E__
   - 118.06.32 rev31507 {GER}
   - 118.06.50 rev33971 {ALL}
