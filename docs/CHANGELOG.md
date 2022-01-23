@@ -52,7 +52,7 @@ Latest changes
 
  - Updated tools and hooks:
    * BusyBox 1.34.1
-   * fakeroot 1.26-1.1
+   * fakeroot 1.27-1
    * kconfig 5.16
    * pseudo 1.9.0 oe-core 0cda3ba
 
@@ -72,13 +72,13 @@ Latest changes
    * cifs-utils 6.14
    * Curl 7.81.0
    * davfs2 1.5.2/1.6.1
-   * expat 2.4.2
+   * expat 2.4.3
    * git 2.34.1
    * HAProxy 2.5.0
    * libexif 0.6.24
    * libgcrypt 1.9.4
    * libgpg-error 1.43
-   * lighttpd 1.4.63
+   * lighttpd 1.4.64
    * libneon 0.32.1
    * mbed TLS 2.7.19/2.28.0
    * minicom 2.8

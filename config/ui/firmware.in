@@ -430,6 +430,12 @@ choice
 		select FREETZ_AVM_SOURCE_FOR_SYSTEM_TYPE_VR9
 		bool "7490"
 
+#	config FREETZ_TYPE_7510
+#		depends on FREETZ_SERIES_ALL || FREETZ_SERIES_4N5
+#		select FREETZ_AVM_SOURCE_FOR_SYSTEM_TYPE_QCAARMv8
+#		bool "7510 - DEVELOPER"
+#		depends on FREETZ_SHOW_DEVELOPER
+
 	config FREETZ_TYPE_7520
 		depends on FREETZ_SERIES_ALL || FREETZ_SERIES_4N5
 		select FREETZ_AVM_SOURCE_FOR_SYSTEM_TYPE_IPQ40xx
@@ -689,36 +695,29 @@ choice
 		depends on FREETZ_AVM_HAS_FIRMWARE_07_2X
 
 
-	config FREETZ_TYPE_FIRMWARE_07_25_INHAUS
-		bool "FRITZ!OS 07.24 Inhaus"
-		select FREETZ_AVM_VERSION_07_25
-		depends on FREETZ_AVM_HAS_FIRMWARE_07_25_INHAUS && FREETZ_SHOW_ADVANCED
-		help
-			Enable this to use an AVM Inhaus firmware as base for modding.
-
 	config FREETZ_TYPE_FIRMWARE_07_25
 		bool "FRITZ!OS 07.25+"
 		select FREETZ_AVM_VERSION_07_25
 		depends on FREETZ_AVM_HAS_FIRMWARE_07_25
-
-	config FREETZ_TYPE_FIRMWARE_07_25_LABOR
-		bool "FRITZ!OS 07.25+ Labor"
-		select FREETZ_AVM_VERSION_07_25
-		select FREETZ_DL_DETECT_IMAGE_NAME
-		select FREETZ_TYPE_FIRMWARE_DETECT_LATEST
-		depends on FREETZ_AVM_HAS_FIRMWARE_07_25_LABOR && FREETZ_SHOW_EXPERT
-		help
-			Enable this to use an AVM Labor firmware as base for modding.
-			For more details see <http://www.avm.de/Labor/>.
 
 
 	config FREETZ_TYPE_FIRMWARE_07_4X_INHAUS
 		bool "FRITZ!OS 07.39 Inhaus - UNTESTED"
 		select FREETZ_AVM_VERSION_07_4X
 		select FREETZ_TYPE_FIRMWARE_DETECT_LATEST
-		depends on FREETZ_AVM_HAS_FIRMWARE_07_4X_INHAUS && FREETZ_SHOW_ADVANCED
+		depends on FREETZ_AVM_HAS_FIRMWARE_07_4X_INHAUS && FREETZ_SHOW_EXPERT
 		help
 			Enable this to use an AVM Inhaus firmware as base for modding.
+
+	config FREETZ_TYPE_FIRMWARE_07_4X_LABOR
+		bool "FRITZ!OS 07.39 Labor - UNTESTED"
+		select FREETZ_AVM_VERSION_07_4X
+#		select FREETZ_DL_DETECT_IMAGE_NAME
+#		select FREETZ_TYPE_FIRMWARE_DETECT_LATEST
+		depends on FREETZ_AVM_HAS_FIRMWARE_07_4X_LABOR && FREETZ_SHOW_ADVANCED
+		help
+			Enable this to use an AVM Labor firmware as base for modding.
+			For more details see <http://www.avm.de/Labor/>.
 
 
 endchoice # "Firmware version" #
@@ -778,14 +777,13 @@ config FREETZ_TYPE_FIRMWARE_INHAUS
 	default y
 	depends on \
 		FREETZ_TYPE_FIRMWARE_07_1X_INHAUS || \
-		FREETZ_TYPE_FIRMWARE_07_25_INHAUS || \
 		FREETZ_TYPE_FIRMWARE_07_4X_INHAUS
 
 config FREETZ_TYPE_FIRMWARE_LABOR
 	bool
 	default y
 	depends on \
-		FREETZ_TYPE_FIRMWARE_07_25_LABOR
+		FREETZ_TYPE_FIRMWARE_07_4X_LABOR
 
 ###
 ### Warning messages
@@ -825,6 +823,7 @@ config FREETZ_TYPE_FIRMWARE_UNTESTED
 	depends on \
 		FREETZ_TYPE_0300 || \
 		FREETZ_TYPE_0450 || \
+		FREETZ_TYPE_1209 || \
 		FREETZ_TYPE_1240 || \
 		FREETZ_TYPE_1260_V2 || \
 		FREETZ_TYPE_2400 || \
@@ -837,6 +836,7 @@ config FREETZ_TYPE_FIRMWARE_UNTESTED
 		FREETZ_TYPE_6820_V3 || \
 		FREETZ_TYPE_6850_4G || \
 		FREETZ_TYPE_6850_5G || \
+		FREETZ_TYPE_7510 || \
 		FREETZ_TYPE_7539 || \
 		FREETZ_TYPE_7581 || \
 		FREETZ_TYPE_7582 || \

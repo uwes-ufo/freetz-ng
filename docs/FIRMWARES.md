@@ -26,7 +26,7 @@ Currently supported devices and firmwares
 ### Not supported devices
 
   * Repeater N/G, 310, 600 v1+v2 & 1160: No LAN ports, so a recovery is not possible.
-  * Repeater 1200 AX is not supported yet by [fitimg](https://boxmatrix.info/wiki/FIT-Image#History)
+  * Repeater 1200 AX & Fritz!Box 7510 are not supported yet by [fitimg](https://boxmatrix.info/wiki/FIT-Image#History)
 
 ### Newer firmware versions
 
@@ -142,6 +142,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box 6430 Cable__
   - 159.07.12 rev72224 {GER} [MESH18 NL2]
+  - 159.07.29 rev93977 {GER} [PSQ19P2NL4]
 * __Fritz!Box 6490 Cable__
   - 141.06.87 rev48327 {GER}
   - 141.07.02 rev65390 {GER}
@@ -422,9 +423,11 @@ Currently supported devices and firmwares
   - 154.07.21 rev82154 {ALL} [PSQ19]
   - 154.07.29 rev92051 {ALL} [PSQ19P2NL4]
   - 154.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
+  - 154.07.39 rev94022 {ALL} [MOVE21] (Labor)
 * __Fritz!Box Fon WLAN 7590 AX__
   - 259.07.29 rev92052 {ALL} [PSQ19P2NL4]
   - 259.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
+  - 259.07.39 rev94093 {ALL} [MOVE21] (Labor)
 
 ### Fritz!Powerline
 
