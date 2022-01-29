@@ -75,6 +75,7 @@ Latest changes
    * expat 2.4.3
    * git 2.34.1
    * HAProxy 2.5.0
+   * iksemel 3.1.1
    * libexif 0.6.24
    * libgcrypt 1.9.4
    * libgpg-error 1.43
@@ -95,7 +96,7 @@ Latest changes
    * tinc 1.0.36/1.1pre18
    * Tor 0.4.6.9
    * Unbound 1.14.0
-   * UnRAR 6.1.3
+   * UnRAR 6.1.4
    * Wget GNU 1.21.2
    * wireguard-linux-compat 1.0.20211208
    * wireguard-tools 1.0.20210914
