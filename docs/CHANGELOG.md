@@ -62,12 +62,12 @@ Latest changes
    * Version 1.35.0 added
    
  - Updated packages and libs:
-   * ACME.sh 3.0.1 (letsencrypt)
+   * ACME.sh 3.0.2 (letsencrypt)
    * Apache 2.4.52
    * AutoFS 5.0.5/5.1.8
    * BIND 9.11.36
    * Bip 0.9.2
-   * CA-bundle 2021-10-26
+   * CA-bundle 2022-02-01
    * CCID driver 1.4.36
    * cifs-utils 6.14
    * Curl 7.81.0
@@ -81,6 +81,7 @@ Latest changes
    * libgpg-error 1.43
    * lighttpd 1.4.64
    * libneon 0.32.1
+   * libusb1 1.0.23/1.0.25
    * mbed TLS 2.7.19/2.28.0
    * minicom 2.8
    * Nano 6.0
