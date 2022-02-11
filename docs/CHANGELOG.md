@@ -45,7 +45,7 @@ Latest changes
  - Build system:
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.37.x
    * ccache 4.5.1
-   * precompiled host-tools 2022-01-22
+   * precompiled host-tools 2022-02-10
 
  - New packages and libs:
    * libnfsidmap 0.27
@@ -54,6 +54,7 @@ Latest changes
    * BusyBox 1.34.1
    * fakeroot 1.27-1
    * kconfig 5.16
+   * ncurses 6.3
    * pseudo 1.9.0 oe-core 0cda3ba
 
  - BusyBox package:
@@ -85,6 +86,8 @@ Latest changes
    * mbed TLS 2.7.19/2.28.0
    * minicom 2.8
    * Nano 6.0
+   * ncurses 6.3
+   * ncursesw 6.3
    * OpenSSH 8.8p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1m/3.0.1
    * OpenVPN 2.4.11/2.5.5
@@ -94,6 +97,7 @@ Latest changes
    * SQLite 3.37.0
    * strace 4.9/5.0/5.16
    * Stunnel 5.60
+   * Sundtek DVB driver 130210.134617/170310.204343/210803.071224
    * tinc 1.0.36/1.1pre18
    * Tor 0.4.6.9
    * Unbound 1.14.0
