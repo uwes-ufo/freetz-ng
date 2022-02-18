@@ -76,7 +76,7 @@ Latest changes
    * davfs2 1.5.2/1.6.1
    * expat 2.4.4
    * git 2.34.1
-   * HAProxy 2.5.0
+   * HAProxy 2.5.2
    * iksemel 3.1.1
    * libexif 0.6.24
    * libgcrypt 1.9.4
@@ -84,7 +84,7 @@ Latest changes
    * lighttpd 1.4.64
    * libneon 0.32.1
    * libusb1 1.0.23/1.0.25
-   * LCD4linux 38ef448-git
+   * LCD4linux e2cfdc5-git
    * mbed TLS 2.7.19/2.28.0
    * minicom 2.8
    * Nano 6.0

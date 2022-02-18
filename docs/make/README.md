@@ -248,7 +248,7 @@ Index:
 
 ### H
 
-  * **[HAProxy 2.5.0](haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.5.2](haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[haserl 0.9.35 (binary only)](haserl.md)<a id='haserl'></a>**<br>
@@ -347,7 +347,7 @@ Index:
 
 ### L
 
-  * **[LCD4linux 38ef448-git](lcd4linux.md)<a id='lcd4linux'></a>**<br>
+  * **[LCD4linux e2cfdc5-git](lcd4linux.md)<a id='lcd4linux'></a>**<br>
     LCD4Linux is a small program that grabs information from the kernel and some subsystems and displays it on an external liquid crystal display.
 
   * **<u>lftp 4.8.4 (binary only)</u><a id='lftp'></a>**<br>
