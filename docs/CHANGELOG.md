@@ -44,14 +44,14 @@ Latest changes
 
  - Build system:
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.37.x
-   * ccache 4.5.1
-   * precompiled host-tools 2022-02-23
+   * ccache 4.6
+   * precompiled host-tools 2022-03-07
    * precompiled toolchains r18095/r18877/r18922
 
  - Host tools:
    * BusyBox 1.34.1
-   * fakeroot 1.27-1
-   * fitimg 0.7
+   * fakeroot 1.28-1
+   * fitimg 0.7.1
    * kconfig 5.16
    * ncurses 6.3
    * patchelf 0.13.1
@@ -70,7 +70,7 @@ Latest changes
    * cifs-utils 6.14
    * Curl 7.82.0
    * davfs2 1.5.2/1.6.1
-   * expat 2.4.6
+   * expat 2.4.7
    * git 2.34.1
    * HAProxy 2.5.4
    * iksemel 3.1.1
@@ -78,6 +78,7 @@ Latest changes
    * libgcrypt 1.9.4
    * libgpg-error 1.43
    * lighttpd 1.4.64
+   * libmaxminddb 1.6.0
    * libneon 0.32.1
    * libnfsidmap 0.27
    * libusb1 1.0.23/1.0.25

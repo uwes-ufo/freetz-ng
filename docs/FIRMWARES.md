@@ -160,6 +160,7 @@ Currently supported devices and firmwares
   - 161.07.13 rev75441 {GER} [MESH18 NL3]
   - 161.07.22 rev84582 {GER} [PSQ19]
   - 161.07.29 rev92035 {GER} [PSQ19P2NL4]
+  - 161.07.39 rev94697 {GER} [MOVE21] (Labor)
 * __Fritz!Box 6660 Cable__
   - 252.07.15 rev78740 {GER} [6660 FCS]
   - 252.07.24 rev85910 {GER} [PSQ19]
@@ -185,10 +186,10 @@ Currently supported devices and firmwares
 * __Fritz!Box 6840 LTE__
   - 105.06.30 rev31187 {GER}
   - 105.06.50 rev33168 {GER}
-  - 105.06.85 rev64222 {GER}
+  - 105.06.87 rev94195 {GER}
   - 105.06.30 rev31224 {INT}
   - 105.06.50 rev33168 {INT}
-  - 105.06.85 rev64221 {INT}
+  - 105.06.87 rev94196 {INT}
 * __Fritz!Box 6842 LTE (UNTESTED)__
   - 123.06.34 rev36874 {GER}
 
@@ -196,7 +197,7 @@ Currently supported devices and firmwares
   - 262.07.21 rev82687 {ALL} [PSQ19]
   - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
 * __Fritz!Box 6850 5G (UNTESTED)__
-  - 258.07.29 rev93816 {ALL} [PSQ19P2NL4]
+  - 258.07.30 rev94600 {ALL} [PSQ19P2NL4]
 
 * __Fritz!Box 6890 LTE__
   - 162.06.87 rev59283 {ALL}
@@ -381,6 +382,7 @@ Currently supported devices and firmwares
   - 164.07.13 rev75481 {INT} [MESH18 NL3]
   - 164.07.21 rev82823 {ALL} [PSQ19]
   - 164.07.29 rev92062 {ALL} [PSQ19P2NL4]
+  - 164.07.39 rev94937 {ALL} [MOVE21] (Labor)
 * __Fritz!Box Fon WLAN 7530 AX (UNTESTED)__
   - 256.07.22 rev85878 {ALL} [PSQ19]
   - 256.07.29 rev92446 {ALL} [PSQ19P2NL4]
@@ -427,7 +429,7 @@ Currently supported devices and firmwares
   - 154.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 154.07.39 rev94022 {ALL} [MOVE21] (Labor)
 * __Fritz!Box Fon WLAN 7590 AX__
-  - 259.07.29 rev92052 {ALL} [PSQ19P2NL4]
+  - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
   - 259.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 259.07.39 rev94093 {ALL} [MOVE21] (Labor)
 
@@ -492,6 +494,7 @@ Currently supported devices and firmwares
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.21 rev83013 {ALL} [PSQ19]
   - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
+  - 169.07.39 rev94804 {ALL} [MOVE21] (Labor)
 * __Fritz!Repeater 3000__
   - 174.07.04 rev66458 {ALL}
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
