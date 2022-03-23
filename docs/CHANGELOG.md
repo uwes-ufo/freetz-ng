@@ -52,7 +52,7 @@ Latest changes
    * BusyBox 1.34.1
    * fakeroot 1.28-1
    * fitimg 0.7.2
-   * kconfig 5.16
+   * kconfig 5.17
    * ncurses 6.3
    * patchelf 0.13.1
    * pseudo 1.9.0 oe-core 0cda3ba
@@ -70,8 +70,8 @@ Latest changes
    * Bip 0.9.2
    * BusyBox 1.34.1
    * BusyBox 1.35.0
-   * CA-bundle 2022-02-01
-   * CCID driver 1.4.36
+   * CA-bundle 2022-03-18
+   * CCID 1.5.0
    * cifs-utils 6.14
    * Curl 7.82.0
    * davfs2 1.5.2/1.6.1
@@ -93,11 +93,11 @@ Latest changes
    * Nano 6.0
    * ncurses 6.3
    * ncursesw 6.3
-   * OpenSSH 8.8p1
+   * OpenSSH 8.9p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1n/3.0.2
-   * OpenVPN 2.4.11/2.5.6
+   * OpenVPN 2.4.12/2.5.6
    * pcre 8.45
-   * PCSC-lite (pcscd) 1.9.4
+   * PCSC-lite 1.9.5
    * socat 1.7.4.2
    * SQLite 3.37.0
    * strace 4.9/5.0/5.16
