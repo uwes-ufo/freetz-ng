@@ -100,7 +100,7 @@ Latest changes
    * PCSC-lite 1.9.5
    * socat 1.7.4.2
    * SQLite 3.37.0
-   * strace 4.9/5.0/5.16
+   * strace 4.9/5.0/5.17
    * Stunnel 5.60
    * Sundtek DVB driver 130210.134617/170310.204343/210803.071224
    * tinc 1.0.36/1.1pre18
@@ -112,6 +112,7 @@ Latest changes
    * Wget GNU 1.21.2
    * wireguard-linux-compat 1.0.20211208
    * wireguard-tools 1.0.20210914
+   * zlib 1.2.12
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
