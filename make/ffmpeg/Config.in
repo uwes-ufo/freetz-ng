@@ -5,8 +5,7 @@ config FREETZ_PACKAGE_FFMPEG
 		FFmpeg is a complete, cross-platform solution to record,
 		convert and stream audio and video.
 
-menu "Configuration"
-	depends on FREETZ_PACKAGE_FFMPEG
+if FREETZ_PACKAGE_FFMPEG
 
 config FREETZ_PACKAGE_FFMPEG_ffmpeg
 	bool "Include ffmpeg"
