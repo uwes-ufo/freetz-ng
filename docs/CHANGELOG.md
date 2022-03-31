@@ -70,12 +70,12 @@ Latest changes
    * Bip 0.9.2
    * BusyBox 1.34.1
    * BusyBox 1.35.0
-   * CA-bundle 2022-03-18
+   * CA-bundle 2022-03-29
    * CCID 1.5.0
    * cifs-utils 6.14
    * Curl 7.82.0
    * davfs2 1.5.2/1.6.1
-   * expat 2.4.7
+   * expat 2.4.8
    * git 2.34.1
    * HAProxy 2.5.4
    * iksemel 3.1.1
