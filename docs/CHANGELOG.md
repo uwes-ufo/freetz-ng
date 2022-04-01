@@ -2624,5 +2624,5 @@ See svn log for more details.
 
 ```
 
-Latest change of this file: $Id: bcfa68e1a4c5681bcdc98ca15760a240b0c0efd6 $
+Latest change of this file: $Id$
 ```
