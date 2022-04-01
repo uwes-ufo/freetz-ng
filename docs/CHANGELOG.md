@@ -77,16 +77,19 @@ Latest changes
    * davfs2 1.5.2/1.6.1
    * expat 2.4.8
    * git 2.34.1
-   * HAProxy 2.5.4
+   * HAProxy 2.5.5
    * iksemel 3.1.1
    * libexif 0.6.24
+   * libgsasl 1.10.0
    * libgcrypt 1.9.4
    * libgpg-error 1.43
-   * lighttpd 1.4.64
+   * libidn 1.38
    * libmaxminddb 1.6.0
    * libneon 0.32.1
    * libnfsidmap 0.27
+   * libudns 0.4
    * libusb1 1.0.23/1.0.25
+   * lighttpd 1.4.64
    * LCD4linux e2cfdc5-git
    * mbed TLS 2.7.19/2.28.0
    * minicom 2.8
@@ -97,9 +100,11 @@ Latest changes
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1n/3.0.2
    * OpenVPN 2.4.12/2.5.6
    * pcre 8.45
+   * pcre2 10.39
    * PCSC-lite 1.9.5
    * socat 1.7.4.2
    * SQLite 3.37.0
+   * sslh 1.22c
    * strace 4.9/5.0/5.17
    * Stunnel 5.60
    * Sundtek DVB driver 130210.134617/170310.204343/210803.071224
@@ -2619,5 +2624,5 @@ See svn log for more details.
 
 ```
 
-Latest change of this file: $Id$
+Latest change of this file: $Id: bcfa68e1a4c5681bcdc98ca15760a240b0c0efd6 $
 ```
