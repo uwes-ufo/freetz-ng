@@ -66,7 +66,7 @@ Latest changes
    * ACME.sh 3.0.2 (letsencrypt)
    * Apache 2.4.53
    * AutoFS 5.0.5/5.1.8
-   * BIND 9.11.36
+   * BIND 9.16.27
    * Bip 0.9.2
    * BusyBox 1.34.1
    * BusyBox 1.35.0
@@ -90,6 +90,7 @@ Latest changes
    * libnfsidmap 0.27
    * libudns 0.4
    * libusb1 1.0.23/1.0.25
+   * libuv 1.44.1
    * lighttpd 1.4.64
    * LCD4linux e2cfdc5-git
    * mbed TLS 2.7.19/2.28.0
