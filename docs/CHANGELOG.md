@@ -91,7 +91,6 @@ Latest changes
    * libnfsidmap 0.27
    * libudns 0.4
    * libusb1 1.0.23/1.0.26
-   * libutf8proc 2.7.0
    * libuv 1.44.1
    * lighttpd 1.4.64
    * LCD4linux e2cfdc5-git
@@ -111,6 +110,7 @@ Latest changes
    * sslh 1.22c
    * strace 4.9/5.0/5.17
    * Stunnel 5.60
+   * Subversion 1.9.12/1.14.2
    * Sundtek DVB driver 130210.134617/170310.204343/210803.071224
    * tinc 1.0.36/1.1pre18
    * tinyproxy 1.11.0
@@ -118,6 +118,7 @@ Latest changes
    * uClibc-ng 1.0.40
    * Unbound 1.14.0
    * UnRAR 6.1.4
+   * utf8proc 2.7.0
    * Wget GNU 1.21.2
    * wireguard-linux-compat 1.0.20211208
    * wireguard-tools 1.0.20210914
