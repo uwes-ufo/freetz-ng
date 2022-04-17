@@ -15,7 +15,7 @@ TOPDIR=.
 CONFIG_IN=config/Config.in
 CONFIG_IN_CACHE=config/.cache.in
 CONFIG_IN_CUSTOM=config/custom.in
-CONFIG=tools/config
+CONFIG=tools/kconfig
 
 SHELL:=/bin/bash
 IMAGE:=
@@ -184,6 +184,11 @@ ifeq ($(shell sed -n 's/^FREETZ_BUSYBOX___V..._LAST_SYSTEM_ID=//p' $(TOPDIR)/.co
 DLCHG:=$(shell echo 'y' ; sed 's/^\(FREETZ_BUSYBOX___V..._LAST_SYSTEM_ID\)=.*/\1=899/' -i $(TOPDIR)/.config)
 $(info BusyBox LAST_SYSTEM_ID automatically changed.)
 endif
+# compat 2022/04: remove orphan yourfritz link in tools
+ifeq ($(shell test -L $(TOPDIR)/tools/yf && echo y),y)
+DLCHG:=$(shell echo 'y' ; rm -f $(TOPDIR)/tools/yf $(TOPDIR)/source/host-tools/yf-*/.installed)
+$(info Orphan link automatically removed.)
+endif
 #
 $(if $(DLCHG),$(error Please re-run))
 endif
@@ -221,6 +226,8 @@ TOOLS_DIRCLEAN:=$(patsubst %,%-dirclean,$(TOOLS))
 TOOLS_DISTCLEAN:=$(patsubst %,%-distclean,$(TOOLS))
 TOOLS_SOURCE:=$(patsubst %,%-source,$(TOOLS))
 TOOLS_PRECOMPILED:=$(patsubst %,%-precompiled,$(TOOLS))
+TOOLS_RECOMPILE:=$(patsubst %,%-recompile,$(TOOLS))
+TOOLS_AUTOFIX:=$(patsubst %,%-autofix,$(TOOLS))
 
 $(DL_DIR):
 	@ \
@@ -368,6 +375,10 @@ endif # FREETZ_HAVE_DOT_CONFIG!=y
 #wrapper: $TOOL-host -> $TOOL-host-precompiled
 $(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : $(if $(FREETZ_HOSTTOOLS_DOWNLOAD),tools-host,%-precompiled)
 $(filter $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : %-precompiled
+
+$(patsubst %,%-autofix,$(TOOLS)): %-autofix : %-dirclean
+	$(MAKE) AUTO_FIX_PATCHES=y $*-unpacked
+$(patsubst %,%-recompile,$(TOOLS)): %-recompile : %-dirclean %-precompiled
 
 tools: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_CONDITIONAL),$(TOOLS))
 tools-dirclean: $(TOOLS_DIRCLEAN)
@@ -558,6 +569,6 @@ help:
 .PHONY: all world step $(KCONFIG_TARGETS) config-cache tools recover \
 	config-clean-deps-modules config-clean-deps-libs config-clean-deps-busybox config-clean-deps-terminfo config-clean-deps config-clean-deps-keep-busybox \
 	cacheclean clean dirclean distclean common-cacheclean common-clean common-dirclean common-distclean release \
-	$(TOOLS) $(TOOLS_CACHECLEAN) $(TOOLS_CLEAN) $(TOOLS_DIRCLEAN) $(TOOLS_DISTCLEAN) $(TOOLS_SOURCE) $(TOOLS_PRECOMPILED) \
+	$(TOOLS) $(TOOLS_CACHECLEAN) $(TOOLS_CLEAN) $(TOOLS_DIRCLEAN) $(TOOLS_DISTCLEAN) $(TOOLS_SOURCE) $(TOOLS_PRECOMPILED) $(TOOLS_RECOMPILE) $(TOOLS_AUTOFIX) \
 	check-dot-config-uptodateness
 
