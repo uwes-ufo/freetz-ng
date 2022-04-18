@@ -1,13 +1,18 @@
-$(call PKG_INIT_LIB, 2.63)
+$(call PKG_INIT_LIB, $(if $(FREETZ_AVM_GCC_4_MAX),2.49,2.64))
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_SOURCE_SHA256:=0c637b8f44fc7d8627787e9cf57f15ac06c1ddccb53e41feec5496be3466f77f
+$(PKG)_SOURCE_SHA256_ABANDON:=e98bc4d93645082ec787730b0fd1a712b38882465c505777de17c338831ee181
+$(PKG)_SOURCE_SHA256_CURRENT:=c8465e1f0b068d5fc06199231135ccac7adb56d662b1de93589252e8cd071e13
+$(PKG)_SOURCE_SHA256:=$(LIBCAP_SOURCE_SHA256_$(if $(FREETZ_AVM_GCC_4_MAX),ABANDON,CURRENT))
 $(PKG)_SITE:=@KERNEL/linux/libs/security/linux-privs/libcap2
+### VERSION:=2.49/2.64
 ### WEBSITE:=https://sites.google.com/site/fullycapable/
 ### MANPAGE:=https://pkg.go.dev/kernel.org/pub/linux/libs/security/libcap/cap
 ### CHANGES:=https://sites.google.com/site/fullycapable/release-notes-for-libcap
 ### CVSREPO:=https://git.kernel.org/pub/scm/libs/libcap/libcap.git
 
 $(PKG)_DEPENDS_ON += attr
+
+$(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_AVM_GCC_4_MAX),abandon,current)
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/$(pkg)/$(pkg).so.$($(PKG)_VERSION)
 $(PKG)_STAGING_BINARY:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/$(pkg).so.$($(PKG)_VERSION)
@@ -23,6 +28,7 @@ $($(PKG)_BINARY): $($(PKG)_DIR)/.configured
 		CC="$(TARGET_CC)" \
 		AR="$(TARGET_AR)" \
 		RANLIB="$(TARGET_RANLIB)" \
+		OBJCOPY="$(TARGET_OBJCOPY)" \
 		CFLAGS="$(TARGET_CFLAGS) -fPIC" \
 		BUILD_CC="$(CC)" \
 		PAM_CAP=no \
