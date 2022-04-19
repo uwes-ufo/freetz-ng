@@ -45,6 +45,8 @@ Latest changes
 
  - Packages & libs:
    * libcap 2.49/2.64
+   * libneon 0.30.2/0.32.2
+   * LCD4linux e691a4b-git
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
