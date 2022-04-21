@@ -89,7 +89,7 @@ Index:
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.16.27](../docs/make/bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.16.28](../docs/make/bind.md)<a id='bind'></a>**<br>
     BIND is an implementation of the Domain Name System (DNS) protocols. The name BIND stands for "Berkeley Internet Name Daemon". You have to provide the config and needed zone files yourself.
      - [named.conf](../docs/make/bind.md#namedconf)
 
@@ -517,8 +517,8 @@ Index:
   * **<u>Mosquitto 1.6.15</u><a id='mosquitto'></a>**<br>
     Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers like the Arduino.
 
-  * **[mtr 0.80/0.94 (binary only)](../docs/make/mtr.md)<a id='mtr'></a>**<br>
-    mtr combines the functionality of the 'traceroute' and 'ping' programs in a single network diagnostic tool.
+  * **[MTR 0.80/0.95 (binary only)](../docs/make/mtr.md)<a id='mtr'></a>**<br>
+    MTR combines the functionality of the 'traceroute' and 'ping' programs in a single network diagnostic tool.
 
 ### N
 

@@ -1,5 +1,6 @@
 #!/bin/bash
 # packs host-tools to dl/tools-VERSION.tar.xz in ~6min
+#Arg $1: <VERSION>
 
 VERSION="${1:-$(date '+%Y-%m-%d')}"
 FILE="tools-$VERSION"
@@ -14,6 +15,7 @@ FREETZ_USER_LEVEL_EXPERT=y
 # FREETZ_TOOLCHAIN_CCACHE is not set
 # FREETZ_HOSTTOOLS_DOWNLOAD is not set
 FREETZ_JLEVEL=9
+FREETZ_DL_SITE_USER="https://github.com/Freetz-NG/dl-mirror/raw/master"
 EOF
 }
 
@@ -36,8 +38,8 @@ cp -a .config "$FILE.conf"
 time for x in $BUILD; do make $x; done 2>&1 | tee "$FILE.make"  # 4min
 for x in $LOCAL; do [ "$x" != "tools-host" ] && make $x-distclean; done
 time sed -n 's,^/,tools/,p' tools/.gitignore | grep -vE "/(${SKIP// /|})$" | tar cvf - -T - | xz -9 - > "$OUTP"  # 1min
+echo "################################################################"
 du -h "$OUTP"
-sha256sum "$OUTP"
-ln -f "$OUTP"
-echo "Created ${OUTP##*/}"
+sha256sum "$OUTP" | sed 's/^/SHA256:=/;s/ .*//'
+echo "OUTPUT:=${OUTP##*/}"
 

@@ -1,22 +1,13 @@
-name: docs
+name: generate_kos
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/docs.yml'
-      - 'docs/generate.sh'
-      - 'docs/*/generate.sh'
-      - 'make/*/Config.in'
-      - 'make/*/*.mk'
-      - 'make/libs/*/Config.in'
-      - 'make/libs/*/*.mk'
-      - 'config/ui/patches.in'
-      - 'docs/wiki/*/*.md'
-      - 'docs/screenshots/*.png'
-      - 'docs/screenshots/*.jpg'
-      - 'docs/screenshots/*.gif'
-  workflow_dispatch:
+      - '.github/workflows/generate_kos.yml'
+      - 'config/generate_kos.sh'
+      - 'make/linux/configs/avm/*'
+# workflow_dispatch:
 
 jobs:
   build:
@@ -32,7 +23,7 @@ jobs:
       - name: install
         run: |
           DEBIAN_FRONTEND=noninteractive apt-get -y install \
-            git locales imagemagick
+            git locales
 
       - name: locale
         run: locale-gen en_US.utf8 && locale-gen de_DE.UTF-8 && update-locale
@@ -43,23 +34,24 @@ jobs:
         run: |
           umask 0022
           git config --global --add safe.directory $GITHUB_WORKSPACE
-          git clone https://$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
+          git clone https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
 
       - name: generate
         run: |
           export LANG=en_US.utf8
-          docs/generate.sh
+          config/generate_kos.sh
 
       - name: commit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global --add safe.directory $GITHUB_WORKSPACE
+          git pull
           git add .
           git status
           git config --local user.name github-actions
           git config --local user.email github-actions@github.com
-          git diff --cached --quiet && exit 0 || git commit -m "docs: automatic update"
+          git diff --cached --quiet && exit 0 || git commit -m "kos: automatic update"
           git config --local credential.helper '!x() { echo "password=$GITHUB_TOKEN"; };x'
           git push origin $GITHUB_REF_NAME
 
