@@ -426,35 +426,40 @@ recover:
 		done; \
 	fi
 
-menuconfig: config-cache $(CONFIG)/mconf
+menuconfig: config-cache
 	@$(CONFIG)/mconf $(CONFIG_IN_CACHE)
 
-menuconfig-single: config-cache $(CONFIG)/mconf
+menuconfig-single: config-cache
 	@MENUCONFIG_MODE="single_menu" $(CONFIG)/mconf $(CONFIG_IN_CACHE)
 
-menuconfig-nocache: $(CONFIG_IN_CUSTOM) $(CONFIG)/mconf
+menuconfig-nocache: $(CONFIG_IN_CUSTOM) kconfig-host
 	@$(CONFIG)/mconf $(CONFIG_IN)
 
-config: config-cache $(CONFIG)/conf
+config: config-cache
 	@$(CONFIG)/conf $(CONFIG_IN_CACHE)
 
 config-compress: .config.compressed
-.config.compressed: .config config-cache $(CONFIG)/conf
+.config.compressed: .config config-cache
 	@$(CONFIG)/conf --savedefconfig $@ $(CONFIG_IN_CACHE)
 	@sed -e "/^FREETZ_FWMOD_SIGN_PASSWORD=/d" -i $@ 2>/dev/null
 #	@echo "Compressed configuration written to $@."; \
 #	echo  "It is equivalent to .config, but contains only non-default user selections and no signing key password."
 
-listnewconfig: config-cache $(CONFIG)/conf
+listnewconfig: config-cache
 	@$(CONFIG)/conf --listnewconfig $(CONFIG_IN_CACHE)
 
-oldconfig olddefconfig allnoconfig allyesconfig randconfig: config-cache $(CONFIG)/conf
+oldconfig olddefconfig allnoconfig allyesconfig randconfig: config-cache
 	@$(CONFIG)/conf --$@ $(CONFIG_IN_CACHE) && touch .config
 
 reuseconfig: .config
 	@tools/reuseconfig
 
-config-cache: $(CONFIG_IN_CACHE)
+config-cache: $(CONFIG_IN_CACHE) kconfig-host
+
+config-cache-clean:
+	@$(RM) $(CONFIG_IN_CACHE)
+
+config-cache-refresh: config-cache-clean config-cache
 
 ifneq ($(findstring clean,$(MAKECMDGOALS)),clean)
 -include include/config/cache.conf.cmd
@@ -527,7 +532,7 @@ common-distclean: common-dirclean
 	$(RM) -r $(PACKAGES_DIR_ROOT) $(SOURCE_DIR_ROOT)
 	$(RM) -r $(TOOLCHAIN_BUILD_DIR)
 	$(RM) -r $(TOOLS_BUILD_DIR)
-	$(RM)    $(DL_DIR)
+	-$(RM)   $(DL_DIR) 2>/dev/null
 	@echo "The files ./.config ./config/custom.in ./.fwmod_custom and the directories ~/.freetz-dl/ ~/.freetz-signature/ were not removed."
 
 release: distclean
@@ -567,7 +572,7 @@ check-dot-config-uptodateness: $(CONFIG_IN_CACHE)
 help:
 	@sed 's/^# /\n/;/```/d' docs/wiki/20_Advanced/make_targets.en.md
 
-.PHONY: all world step $(KCONFIG_TARGETS) config-cache tools recover \
+.PHONY: all world step $(KCONFIG_TARGETS) config-cache config-cache-clean config-cache-refresh tools recover \
 	config-clean-deps-modules config-clean-deps-libs config-clean-deps-busybox config-clean-deps-terminfo config-clean-deps config-clean-deps-keep-busybox \
 	cacheclean clean dirclean distclean common-cacheclean common-clean common-dirclean common-distclean release \
 	$(TOOLS) $(TOOLS_CACHECLEAN) $(TOOLS_CLEAN) $(TOOLS_DIRCLEAN) $(TOOLS_DISTCLEAN) $(TOOLS_SOURCE) $(TOOLS_PRECOMPILED) $(TOOLS_RECOMPILE) $(TOOLS_AUTOFIX) \

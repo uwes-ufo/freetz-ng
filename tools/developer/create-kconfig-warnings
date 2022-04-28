@@ -12,7 +12,7 @@ warn_file=conf-warnings.log
 
 # Create output directory and refresh config cache
 mkdir -p $warn_dir
-make config-cache > /dev/null
+make config-cache-refresh > /dev/null
 
 # Create <rounds> random configurations + warning logs and move them
 # to separate subdirectories (keep existing ones!)
@@ -20,7 +20,7 @@ while ((r++ < rounds)); do
 
 	# Capture stderr (=warnings) in buffer
 	IFS=$'\n'
-	warn_buf=($(tools/kconfig/conf --randconfig config/.cache.in 2>&1 > /dev/null))
+	warn_buf=($(make randconfig 2>&1 > /dev/null))
 	unset IFS
 
 	# On error in 'conf --randconfig' skip this round
