@@ -50,17 +50,19 @@ Latest changes
    * yf-bootmanager 0.8.3 9a1d3b8
 
  - Packages & libs:
+   * ACME.sh 3.0.3 (letsencrypt)
    * BIND 9.11.37/9.16.28
    * CA-bundle 2022-04-26
    * Curl 7.83.0
    * htop 1.0.3/2.3.0
-   * juis_check 1.1
+   * juis_check 1.2
    * libcap 2.49/2.64
    * libneon 0.30.2/0.32.2
    * LCD4linux e691a4b-git
    * ltrace 0.7.3checkpoint1-git
    * MTR 0.80/0.95
    * Nano 6.3
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1o/3.0.3
    * Tor 0.4.7.7
 
  - Firmware updates:
