@@ -167,6 +167,7 @@ Currently supported devices and firmwares
   - 252.07.29 rev92037 {GER} [PSQ19P2NL4]
   - 252.07.39 rev95485 {GER} [MOVE21] (Labor)
 * __Fritz!Box 6690 Cable (UNTESTED)__
+  - 267.07.29 rev92355 {GER} [PSQ19P2NL4]
   - 267.07.39 rev96142 {GER} [MOVE21] (Labor)
 
 ### Fritz!Box LTE (68xx)
@@ -199,6 +200,7 @@ Currently supported devices and firmwares
 * __Fritz!Box 6850 LTE (UNTESTED)__
   - 262.07.21 rev82687 {ALL} [PSQ19]
   - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
+  - 262.07.39 rev96343 {ALL} [MOVE21] (Labor)
 * __Fritz!Box 6850 5G (UNTESTED)__
   - 258.07.30 rev94600 {ALL} [PSQ19P2NL4]
 
@@ -208,6 +210,7 @@ Currently supported devices and firmwares
   - 162.07.13 rev73668 {ALL} [MESH18 NL3]
   - 162.07.21 rev82271 {ALL} [PSQ19]
   - 162.07.29 rev93213 {ALL} [PSQ19P2NL4]
+  - 162.07.39 rev95589 {ALL} [MOVE21] (Labor)
 
 ### Fritz!Box Fon WLAN (70xx)
 
