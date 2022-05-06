@@ -50,7 +50,7 @@ Latest changes
    * yf-bootmanager 0.8.3 9a1d3b8
 
  - Packages & libs:
-   * ACME.sh 3.0.3 (letsencrypt)
+   * ACME.sh 3.0.4 (letsencrypt)
    * BIND 9.11.37/9.16.28
    * CA-bundle 2022-04-26
    * Curl 7.83.0
@@ -63,6 +63,7 @@ Latest changes
    * MTR 0.80/0.95
    * Nano 6.3
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1o/3.0.3
+   * SQLite 3.38.4
    * Tor 0.4.7.7
 
  - Firmware updates:
