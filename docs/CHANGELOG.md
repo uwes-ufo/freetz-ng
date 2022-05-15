@@ -44,7 +44,9 @@ Latest changes
    * Loading build kernel modules may work or do not. You'll notice.
 
  - Build system:
+   * ccache 4.6.1
    * precompiled host-tools 2022-04-24
+   * precompiled toolchains r19231
 
  - Host tools:
    * yf-bootmanager 0.8.3 9a1d3b8
@@ -68,6 +70,7 @@ Latest changes
    * Nano 6.3
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1o/3.0.3
    * pcre2 10.40
+   * Privoxy 3.0.33
    * SQLite 3.38.5
    * Tor 0.4.7.7
 
