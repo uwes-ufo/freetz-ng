@@ -1,4 +1,4 @@
-# Stunnel 5.60
+# Stunnel 5.64
  - Homepage: [https://www.stunnel.org/](https://www.stunnel.org/)
  - Manpage: [https://www.stunnel.org/static/stunnel.html](https://www.stunnel.org/static/stunnel.html)
  - Changelog: [https://www.stunnel.org/NEWS.html](https://www.stunnel.org/NEWS.html)
@@ -63,12 +63,7 @@ Homepage](http://www.stunnel.org/examples/).
 
 ### Weiterführende Links
 
--   [Wikipedia](http://en.wikipedia.org/wiki/Stunnel)
-    (EN) Article
--   [Stunnel.ORG](http://www.stunnel.org/) ---
-    Stunnel Homepage
--   [matrixtunnel](matrixtunnel.md) --- kleiner Stunnel Ersatz
--   [xrelayd](xrelayd.md) --- Nachfolger von Matrixtunnel
--   [Artikel im
-    Forum](http://www.ip-phone-forum.de/showthread.php?t=123174)
+-   [Wikipedia (EN)](http://en.wikipedia.org/wiki/Stunnel)
+-   [xrelayd](xrelayd.md)
+-   [Artikel im Forum](http://www.ip-phone-forum.de/showthread.php?t=123174)
 
