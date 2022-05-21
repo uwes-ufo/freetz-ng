@@ -46,7 +46,7 @@ Latest changes
  - Build system:
    * ccache 4.6.1
    * precompiled host-tools 2022-04-24
-   * precompiled toolchains r19231
+   * precompiled toolchains r19231/r19417
 
  - Host tools:
    * yf-bootmanager 0.8.3 9a1d3b8
@@ -75,6 +75,7 @@ Latest changes
    * Stunnel 5.64
    * SQLite 3.38.5
    * Tor 0.4.7.7
+   * uClibc-ng 1.0.41
    * Wget GNU 1.21.3
 
  - Firmware updates:
