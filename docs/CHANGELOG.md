@@ -45,10 +45,13 @@ Latest changes
 
  - Build system:
    * ccache 4.6.1
-   * precompiled host-tools 2022-04-24
+   * precompiled host-tools 2022-05-23
    * precompiled toolchains r19231/r19417
 
  - Host tools:
+   * fakeroot 1.29
+   * fitimg 0.8
+   * kconfig 5.18
    * yf-bootmanager 0.8.3 9a1d3b8
 
  - Packages & libs:
