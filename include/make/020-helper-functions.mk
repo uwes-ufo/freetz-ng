@@ -167,7 +167,7 @@ define UNPACK_TARBALL
 	$(strip $(call UNPACK_TARBALL__INT,$(strip $(1)),$(strip $(2)),$(suffix $(strip $(1))),$(strip $(3)),$(strip $(4))))
 endef
 
-UNPACK_TARBALL_PREREQUISITES := busybox-host tar-host
+UNPACK_TARBALL_PREREQUISITES := kconfig-host busybox-host tar-host
 
 # $1: list of directories containing the patches
 # $2: directory to apply the patches to
@@ -192,6 +192,7 @@ define COPY_USING_TAR
 		--exclude=.build-prereq-checked \
 		--exclude=.unpacked \
 		--exclude=.configured \
+		--exclude=.prepared \
 		--exclude=.compiled \
 		--exclude=.installed \
 		$(if $(strip $(3)),$(strip $(3)),.) \

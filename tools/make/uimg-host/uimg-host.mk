@@ -1,18 +1,12 @@
 $(call TOOLS_INIT, 871930df297e3a03bc315be75ecfc8c5c7a809ab)
 $(PKG)_SOURCE:=uimg-$($(PKG)_VERSION).tar.xz
-$(PKG)_SOURCE_SHA256:=1f5b3b473f50c6ff79a7859be336245c39fc1d2b6c89baf862de6de1f7caf8e0
+$(PKG)_HASH:=1f5b3b473f50c6ff79a7859be336245c39fc1d2b6c89baf862de6de1f7caf8e0
 $(PKG)_SITE:=git@https://bitbucket.org/fesc2000/uimg-tool.git
 
 
-$(pkg)-source: $(DL_DIR)/$($(PKG)_SOURCE)
-$(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
-	$(DL_TOOL) $(DL_DIR) $(UIMG_HOST_SOURCE) $(UIMG_HOST_SITE) $(UIMG_HOST_SOURCE_SHA256)
-
-$(pkg)-unpacked: $($(PKG)_DIR)/.unpacked
-$($(PKG)_DIR)/.unpacked: $(DL_DIR)/$($(PKG)_SOURCE) | $(TOOLS_SOURCE_DIR) $(UNPACK_TARBALL_PREREQUISITES)
-	$(call UNPACK_TARBALL,$(DL_DIR)/$(UIMG_HOST_SOURCE),$(TOOLS_SOURCE_DIR))
-	$(call APPLY_PATCHES,$(UIMG_HOST_MAKE_DIR)/patches,$(UIMG_HOST_DIR))
-	touch $@
+$(TOOLS_SOURCE_DOWNLOAD)
+$(TOOLS_UNPACKED)
+$(TOOLS_CONFIGURED_NOP)
 
 $($(PKG)_DIR)/uimg: $($(PKG)_DIR)/.unpacked
 	$(TOOLS_SUBMAKE) CC="$(TOOLS_CC)" CXX="$(TOOLS_CXX)" CFLAGS="$(TOOLS_CFLAGS)" LDFLAGS="$(TOOLS_LDFLAGS)" -C $(UIMG_HOST_DIR) all
