@@ -1,20 +1,14 @@
 $(call TOOLS_INIT, 2.5.1)
 $(PKG)_SOURCE:=scons-$($(PKG)_VERSION).tar.gz
-$(PKG)_SOURCE_MD5:=aaaf09e1351a598f98d17b0cf1103e7a
+$(PKG)_HASH:=0b25218ae7b46a967db42f2a53721645b3d42874a65f9552ad16ce26d30f51f2
 $(PKG)_SITE:=@SF/scons
 
 $(PKG)_DEPENDS:=python-host
 
 
-$(pkg)-source: $(DL_DIR)/$($(PKG)_SOURCE)
-$(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
-	$(DL_TOOL) $(DL_DIR) $(SCONS_HOST_SOURCE) $(SCONS_HOST_SITE) $(SCONS_HOST_SOURCE_MD5)
-
-$(pkg)-unpacked: $($(PKG)_DIR)/.unpacked
-$($(PKG)_DIR)/.unpacked: $(DL_DIR)/$($(PKG)_SOURCE) | $(TOOLS_SOURCE_DIR) $(UNPACK_TARBALL_PREREQUISITES)
-	$(call UNPACK_TARBALL,$(DL_DIR)/$(SCONS_HOST_SOURCE),$(TOOLS_SOURCE_DIR))
-	$(call APPLY_PATCHES,$(SCONS_HOST_MAKE_DIR)/patches,$(SCONS_HOST_DIR))
-	touch $@
+$(TOOLS_SOURCE_DOWNLOAD)
+$(TOOLS_UNPACKED)
+$(TOOLS_CONFIGURED_NOP)
 
 $(HOST_TOOLS_DIR)/usr/bin/scons: $($(PKG)_DIR)/.unpacked | $($(PKG)_DEPENDS)
 	$(abspath $(HOST_TOOLS_DIR)/usr/bin/python) \

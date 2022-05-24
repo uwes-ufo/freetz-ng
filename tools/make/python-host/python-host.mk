@@ -1,40 +1,24 @@
 $(call TOOLS_INIT, 2.7.18)
 $(PKG)_SOURCE:=Python-$($(PKG)_VERSION).tar.xz
-$(PKG)_MD5:=fd6cc8ec0a78c44036f825e739f36e5a
+$(PKG)_HASH:=b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43
 $(PKG)_SITE:=http://www.python.org/ftp/python/$($(PKG)_VERSION)
 
 $(PKG)_DIR:=$(TOOLS_SOURCE_DIR)/Python-$($(PKG)_VERSION)
 $(PKG)_BINARY:=$($(PKG)_DIR)/python
 $(PKG)_TARGET_BINARY:=$(HOST_TOOLS_DIR)/usr/bin/python2.7
 
+# python quirk: CFLAGS and OPT flags passed here are then used while cross-compiling -> use some target neutral flags
+$(PKG)_CONFIGURE_ENV += OPT="-fno-inline"
 
-$(pkg)-source: $(DL_DIR)/$($(PKG)_SOURCE)
-$(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
-	$(DL_TOOL) $(DL_DIR) $(PYTHON_HOST_SOURCE) $(PYTHON_HOST_SITE) $(PYTHON_HOST_MD5)
+$(PKG)_CONFIGURE_OPTIONS += --build=$(GNU_HOST_NAME)
+$(PKG)_CONFIGURE_OPTIONS += --host=$(GNU_HOST_NAME)
+$(PKG)_CONFIGURE_OPTIONS += --target=$(GNU_HOST_NAME)
+$(PKG)_CONFIGURE_OPTIONS += --prefix=/usr
 
-$(pkg)-unpacked: $($(PKG)_DIR)/.unpacked
-$($(PKG)_DIR)/.unpacked: $(DL_DIR)/$($(PKG)_SOURCE) | $(TOOLS_SOURCE_DIR) $(UNPACK_TARBALL_PREREQUISITES)
-	$(call UNPACK_TARBALL,$(DL_DIR)/$(PYTHON_HOST_SOURCE),$(TOOLS_SOURCE_DIR))
-	@touch $@
 
-# python quirk:
-#  CFLAGS and OPT flags passed here are then used while cross-compiling -> use some target neutral flags
-$(pkg)-configured: $($(PKG)_DIR)/.configured
-$($(PKG)_DIR)/.configured: $($(PKG)_DIR)/.unpacked
-	(cd $(PYTHON_HOST_DIR); $(RM) config.cache; \
-		CC="$(TOOLS_CC)" \
-		CXX="$(TOOLS_CXX)" \
-		CFLAGS="$(TOOLS_CFLAGS)" \
-		LDFLAGS="$(TOOLS_LDFLAGS)" \
-		OPT="-fno-inline" \
-		./configure \
-		--build=$(GNU_HOST_NAME) \
-		--host=$(GNU_HOST_NAME) \
-		--target=$(GNU_HOST_NAME) \
-		--prefix=/usr \
-		$(SILENT) \
-	);
-	@touch $@
+$(TOOLS_SOURCE_DOWNLOAD)
+$(TOOLS_UNPACKED)
+$(TOOLS_CONFIGURED_CONFIGURE)
 
 $($(PKG)_BINARY): $($(PKG)_DIR)/.configured
 	(PATH=$(TARGET_PATH); \

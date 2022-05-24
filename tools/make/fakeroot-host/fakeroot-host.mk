@@ -1,6 +1,6 @@
 $(call TOOLS_INIT, 1.29)
 $(PKG)_SOURCE:=fakeroot_$($(PKG)_VERSION).orig.tar.gz
-$(PKG)_SOURCE_SHA256:=8fbbafb780c9173e3ace4a04afbc1d900f337f3216883939f5c7db3431be7c20
+$(PKG)_HASH:=8fbbafb780c9173e3ace4a04afbc1d900f337f3216883939f5c7db3431be7c20
 $(PKG)_SITE:=https://ftp.debian.org/debian/pool/main/f/fakeroot
 ### WEBSITE:=https://wiki.debian.org/FakeRoot
 ### MANPAGE:=https://man.archlinux.org/man/fakeroot.1.en
@@ -24,27 +24,23 @@ $(PKG)_TARGET_BIARCH_LIB:=$($(PKG)_BIARCH_LD_PRELOAD_PATH)/libfakeroot-0.so
 BIARCH_BUILD_SYSTEM:=$(filter-out 32,$(HOST_BITNESS))
 
 
-$(pkg)-source: $(DL_DIR)/$($(PKG)_SOURCE)
-$(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
-	$(DL_TOOL) $(DL_DIR) $(FAKEROOT_HOST_SOURCE) $(FAKEROOT_HOST_SITE) $(FAKEROOT_HOST_SOURCE_SHA256)
-
-$(pkg)-unpacked: $($(PKG)_DIR)/.unpacked
-$($(PKG)_DIR)/.unpacked: $(DL_DIR)/$($(PKG)_SOURCE) | $(TOOLS_SOURCE_DIR) $(UNPACK_TARBALL_PREREQUISITES)
-	$(call UNPACK_TARBALL,$(DL_DIR)/$(FAKEROOT_HOST_SOURCE),$(TOOLS_SOURCE_DIR))
-	$(call APPLY_PATCHES,$(FAKEROOT_HOST_MAKE_DIR)/patches,$(FAKEROOT_HOST_DIR))
-	touch $@
+$(TOOLS_SOURCE_DOWNLOAD)
+$(TOOLS_UNPACKED)
 
 $($(PKG)_MAINARCH_DIR)/.configured: $($(PKG)_DIR)/.unpacked
+	@$(call _ECHO,configuring)
 	(mkdir -p $(FAKEROOT_HOST_MAINARCH_DIR); cd $(FAKEROOT_HOST_MAINARCH_DIR); $(RM) config.cache; \
 		CC="$(TOOLS_CC)" \
 		CXX="$(TOOLS_CXX)" \
 		CFLAGS="$(TOOLS_CFLAGS)" \
+		CXXFLAGS="$(TOOLS_CXXFLAGS)" \
 		LDFLAGS="$(TOOLS_LDFLAGS)" \
 		../../configure \
 		--prefix=$(FAKEROOT_HOST_DESTDIR) \
 		--enable-shared \
 		$(if $(findstring Microsoft,$(shell uname -r)),--with-ipc=tcp,--with-ipc=sysv) \
 		$(DISABLE_NLS) \
+		$(QUIET) \
 		$(SILENT) \
 	);
 	touch $@
@@ -55,10 +51,12 @@ $($(PKG)_TARGET_SCRIPT): $($(PKG)_MAINARCH_DIR)/.configured
 	$(SED) -i 's,^PATHS=.*,PATHS=$${FAKEROOT_PREFIX}/lib:$${FAKEROOT_PREFIX}/lib32,'                        $(FAKEROOT_HOST_TARGET_SCRIPT)
 
 $($(PKG)_BIARCH_DIR)/.configured: $($(PKG)_DIR)/.unpacked
+	@$(call _ECHO,configuring)
 	(mkdir -p $(FAKEROOT_HOST_BIARCH_DIR); cd $(FAKEROOT_HOST_BIARCH_DIR); $(RM) config.cache; \
 		CC="$(TOOLS_CC)" \
 		CXX="$(TOOLS_CXX)" \
 		CFLAGS="$(TOOLS_CFLAGS) $(HOST_CFLAGS_FORCE_32BIT_CODE)" \
+		CXXFLAGS="$(TOOLS_CXXFLAGS) $(HOST_CFLAGS_FORCE_32BIT_CODE)" \
 		LDFLAGS="$(TOOLS_LDFLAGS)" \
 		../../configure \
 		--prefix=$(FAKEROOT_HOST_DESTDIR) \
@@ -66,6 +64,7 @@ $($(PKG)_BIARCH_DIR)/.configured: $($(PKG)_DIR)/.unpacked
 		$(if $(findstring Microsoft,$(shell uname -r)),--with-ipc=tcp,--with-ipc=sysv) \
 		$(if $(findstring Microsoft,$(shell uname -r)),--host=$(shell uname -m),) \
 		$(DISABLE_NLS) \
+		$(QUIET) \
 		$(SILENT) \
 	);
 	touch $@

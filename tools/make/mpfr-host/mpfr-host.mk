@@ -1,38 +1,26 @@
 $(call TOOLS_INIT, 3.1.6)
 $(PKG)_SOURCE:=mpfr-$($(PKG)_VERSION).tar.xz
-$(PKG)_SOURCE_SHA256:=7a62ac1a04408614fccdc506e4844b10cf0ad2c2b1677097f8f35d3a1344a950
+$(PKG)_HASH:=7a62ac1a04408614fccdc506e4844b10cf0ad2c2b1677097f8f35d3a1344a950
 $(PKG)_SITE:=http://www.mpfr.org/mpfr-$($(PKG)_VERSION)
 
 $(PKG)_DESTDIR:=$(HOST_TOOLS_DIR)
 $(PKG)_BINARY:=$($(PKG)_DESTDIR)/lib/libmpfr.a
 $(PKG)_DEPENDS:=gmp-host
 
+$(PKG)_CONFIGURE_ENV += CC="$(TOOLCHAIN_HOST_CC)"
+$(PKG)_CONFIGURE_ENV += CFLAGS="$(TOOLCHAIN_HOST_CFLAGS)"
 
-$(pkg)-source: $(DL_DIR)/$($(PKG)_SOURCE)
-$(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
-	$(DL_TOOL) $(DL_DIR) $(MPFR_HOST_SOURCE) $(MPFR_HOST_SITE) $(MPFR_HOST_SOURCE_SHA256)
+$(PKG)_CONFIGURE_OPTIONS += --prefix=$(MPFR_HOST_DESTDIR)
+$(PKG)_CONFIGURE_OPTIONS += --build=$(GNU_HOST_NAME)
+$(PKG)_CONFIGURE_OPTIONS += --host=$(GNU_HOST_NAME)
+$(PKG)_CONFIGURE_OPTIONS += --disable-shared
+$(PKG)_CONFIGURE_OPTIONS += --enable-static
+$(PKG)_CONFIGURE_OPTIONS += --with-gmp=$(GMP_HOST_DESTDIR)
 
-$(pkg)-unpacked: $($(PKG)_DIR)/.unpacked
-$($(PKG)_DIR)/.unpacked: $(DL_DIR)/$($(PKG)_SOURCE) | $(TOOLS_SOURCE_DIR) $(UNPACK_TARBALL_PREREQUISITES)
-	$(call UNPACK_TARBALL,$(DL_DIR)/$(MPFR_HOST_SOURCE),$(TOOLS_SOURCE_DIR))
-	$(call APPLY_PATCHES,$(MPFR_HOST_MAKE_DIR)/patches,$(MPFR_HOST_DIR))
-	touch $@
 
-$($(PKG)_DIR)/.configured: $($(PKG)_DIR)/.unpacked $($(PKG)_DEPENDS:%-host=$($(PKG)_DESTDIR)/lib/lib%.a)
-	(cd $(MPFR_HOST_DIR); $(RM) config.cache; \
-		CC="$(TOOLCHAIN_HOST_CC)" \
-		CFLAGS="$(TOOLCHAIN_HOST_CFLAGS)" \
-		./configure \
-		--prefix=$(MPFR_HOST_DESTDIR) \
-		--build=$(GNU_HOST_NAME) \
-		--host=$(GNU_HOST_NAME) \
-		--disable-shared \
-		--enable-static \
-		--with-gmp=$(GMP_HOST_DESTDIR) \
-		$(DISABLE_NLS) \
-		$(SILENT) \
-	)
-	touch $@
+$(TOOLS_SOURCE_DOWNLOAD)
+$(TOOLS_UNPACKED)
+$(TOOLS_CONFIGURED_CONFIGURE)
 
 $($(PKG)_BINARY): $($(PKG)_DIR)/.configured | $(HOST_TOOLS_DIR)
 	$(TOOLS_SUBMAKE) -C $(MPFR_HOST_DIR)/src install

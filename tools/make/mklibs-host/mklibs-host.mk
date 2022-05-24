@@ -1,6 +1,6 @@
 $(call TOOLS_INIT, 0.1.34)
 $(PKG)_SOURCE:=mklibs_$($(PKG)_VERSION).tar.gz
-$(PKG)_SOURCE_MD5:=afe0ed527ba96b8a882b5de350603007
+$(PKG)_HASH:=0c13c314f5c397529f58a5a02d57d83aeb4463d6a0d80b9374c6576ec37ed39f
 $(PKG)_SITE:=http://archive.debian.org/debian/pool/main/m/mklibs
 
 $(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_DIR)/build/bin
@@ -9,27 +9,14 @@ $(PKG)_TARGET_SCRIPT:=$($(PKG)_DESTDIR)/mklibs
 $(PKG)_READELF_BINARY:=$($(PKG)_DIR)/src/mklibs-readelf/mklibs-readelf
 $(PKG)_READELF_TARGET_BINARY:=$($(PKG)_DESTDIR)/mklibs-readelf
 
+$(PKG)_CONFIGURE_OPTIONS += --prefix=/
 
-$(pkg)-source: $(DL_DIR)/$($(PKG)_SOURCE)
-$(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
-	$(DL_TOOL) $(DL_DIR) $(MKLIBS_HOST_SOURCE) $(MKLIBS_HOST_SITE) $(MKLIBS_HOST_SOURCE_MD5)
 
-$(pkg)-unpacked: $($(PKG)_DIR)/.unpacked
-$($(PKG)_DIR)/.unpacked: $(DL_DIR)/$($(PKG)_SOURCE) | $(TOOLS_SOURCE_DIR) $(UNPACK_TARBALL_PREREQUISITES)
-	$(call UNPACK_TARBALL,$(DL_DIR)/$(MKLIBS_HOST_SOURCE),$(TOOLS_SOURCE_DIR))
-	$(call APPLY_PATCHES,$(MKLIBS_HOST_MAKE_DIR)/patches,$(MKLIBS_HOST_DIR))
-	touch $@
+$(TOOLS_SOURCE_DOWNLOAD)
+$(TOOLS_UNPACKED)
+$(TOOLS_CONFIGURED_CONFIGURE)
 
 $($(PKG)_SCRIPT): $($(PKG)_DIR)/.unpacked
-
-$($(PKG)_DIR)/.configured: $($(PKG)_DIR)/.unpacked
-	(cd $(MKLIBS_HOST_DIR); $(RM) config.cache; \
-		./configure \
-		--prefix=/ \
-		$(DISABLE_NLS) \
-		$(SILENT) \
-	);
-	touch $@
 
 $($(PKG)_READELF_BINARY): $($(PKG)_DIR)/.configured
 	$(TOOLS_SUBMAKE) CC="$(TOOLS_CC)" CXX="$(TOOLS_CXX)" CFLAGS="$(TOOLS_CFLAGS)" LDFLAGS="$(TOOLS_LDFLAGS)" -C $(MKLIBS_HOST_DIR) all

@@ -1,39 +1,27 @@
 $(call TOOLS_INIT, 1.1.0)
 $(PKG)_SOURCE:=mpc-$($(PKG)_VERSION).tar.gz
-$(PKG)_SOURCE_SHA1:=b019d9e1d27ec5fb99497159d43a3164995de2d0
+$(PKG)_HASH:=6985c538143c1208dcb1ac42cedad6ff52e267b47e5f970183a3e75125b43c2e
 $(PKG)_SITE:=@GNU/mpc
 
 $(PKG)_DESTDIR:=$(HOST_TOOLS_DIR)
 $(PKG)_BINARY:=$($(PKG)_DESTDIR)/lib/libmpc.a
 $(PKG)_DEPENDS:=gmp-host mpfr-host
 
+$(PKG)_CONFIGURE_ENV += CC="$(TOOLCHAIN_HOSTCC)"
+$(PKG)_CONFIGURE_ENV += CFLAGS="$(TOOLCHAIN_HOST_CFLAGS)"
 
-$(pkg)-source: $(DL_DIR)/$($(PKG)_SOURCE)
-$(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
-	$(DL_TOOL) $(DL_DIR) $(MPC_HOST_SOURCE) $(MPC_HOST_SITE) $(MPC_HOST_SOURCE_SHA1)
+$(PKG)_CONFIGURE_OPTIONS += --prefix=$(MPC_HOST_DESTDIR)
+$(PKG)_CONFIGURE_OPTIONS += --build=$(GNU_HOST_NAME)
+$(PKG)_CONFIGURE_OPTIONS += --host=$(GNU_HOST_NAME)
+$(PKG)_CONFIGURE_OPTIONS += --disable-shared
+$(PKG)_CONFIGURE_OPTIONS += --enable-static
+$(PKG)_CONFIGURE_OPTIONS += --with-gmp=$(GMP_HOST_DESTDIR)
+$(PKG)_CONFIGURE_OPTIONS += --with-mpfr=$(MPFR_HOST_DESTDIR)
 
-$(pkg)-unpacked: $($(PKG)_DIR)/.unpacked
-$($(PKG)_DIR)/.unpacked: $(DL_DIR)/$($(PKG)_SOURCE) | $(TOOLS_SOURCE_DIR) $(UNPACK_TARBALL_PREREQUISITES)
-	$(call UNPACK_TARBALL,$(DL_DIR)/$(MPC_HOST_SOURCE),$(TOOLS_SOURCE_DIR))
-	$(call APPLY_PATCHES,$(MPC_HOST_MAKE_DIR)/patches,$(MPC_HOST_DIR))
-	touch $@
 
-$($(PKG)_DIR)/.configured: $($(PKG)_DIR)/.unpacked $($(PKG)_DEPENDS:%-host=$($(PKG)_DESTDIR)/lib/lib%.a)
-	(cd $(MPC_HOST_DIR); $(RM) config.cache; \
-		CC="$(TOOLCHAIN_HOSTCC)" \
-		CFLAGS="$(TOOLCHAIN_HOST_CFLAGS)" \
-		./configure \
-		--prefix=$(MPC_HOST_DESTDIR) \
-		--build=$(GNU_HOST_NAME) \
-		--host=$(GNU_HOST_NAME) \
-		--disable-shared \
-		--enable-static \
-		--with-gmp=$(GMP_HOST_DESTDIR) \
-		--with-mpfr=$(MPFR_HOST_DESTDIR) \
-		$(DISABLE_NLS) \
-		$(SILENT) \
-	)
-	touch $@
+$(TOOLS_SOURCE_DOWNLOAD)
+$(TOOLS_UNPACKED)
+$(TOOLS_CONFIGURED_CONFIGURE)
 
 $($(PKG)_BINARY): $($(PKG)_DIR)/.configured | $(HOST_TOOLS_DIR)
 	$(TOOLS_SUBMAKE) -C $(MPC_HOST_DIR) install

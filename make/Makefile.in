@@ -8,7 +8,7 @@ endif
 SUBMAKE1=cmd() { $(MAKE_ENV) $(MAKE1) $(QUIET) "$$@" $(SILENT) || { $(call ERROR,1,$(BUILD_FAIL_MSG)) } }; $(call _ECHO,building) cmd
 SUBMAKE=cmd() { $(MAKE_ENV) $(MAKE) $(QUIET) "$$@" $(SILENT) || { $(call ERROR,1,$(BUILD_FAIL_MSG)) } }; $(call _ECHO,building) cmd
 CONFIGURE=conf_cmd() { ./configure $(QUIET) "$$$$@" $(SILENT) || { $(call ERROR,1,$(BUILD_FAIL_MSG)) } };
-AUTORECONF=autoreconf -f -i || { $(call ERROR,1,autoreconf failed) };
+AUTORECONF=autoreconf -f -i $(SILENT) || { $(call ERROR,1,autoreconf failed) };
 
 HOSTCC:=gcc
 HOST_STRIP:=strip --strip-all -R .note -R .comment
@@ -134,7 +134,7 @@ $(PACKAGES_DIR):
 
 # If CONFIG_SITE is exported, it can cause errors in the host builds
 unexport CONFIG_SITE
-CONFIG_SITE:=$(FREETZ_BASE_DIR)/$(INCLUDE_DIR)/config.site/$(call qstrip,$(FREETZ_TARGET_UCLIBC_TRIPLET))
+TARGET_SITE:=$(FREETZ_BASE_DIR)/$(INCLUDE_DIR)/config.site/$(call qstrip,$(FREETZ_TARGET_UCLIBC_TRIPLET))
 
 TARGET_AR:=$(TARGET_MAKE_PATH)/$(TARGET_CROSS)ar
 TARGET_AS:=$(TARGET_MAKE_PATH)/$(TARGET_CROSS)as
@@ -149,7 +149,7 @@ TARGET_READELF:=$(TARGET_MAKE_PATH)/$(TARGET_CROSS)readelf
 TARGET_STRIP:=$(TARGET_MAKE_PATH)/$(TARGET_CROSS)strip --remove-section={.comment,.note,.pdr}
 
 # Don't use TARGET_TOOLCHAIN_PATH here because it's not set
-TARGET_PATH="$(TARGET_MAKE_PATH):$(KERNEL_MAKE_PATH):$(PATH)"
+TARGET_PATH="$(TARGET_MAKE_PATH):$(KERNEL_MAKE_PATH):$(PATH_DIR):$(PATH)"
 
 
 # commands to run before calling configure
@@ -613,7 +613,7 @@ $(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
 			$(DL_DIR) \
 			$(if $($(PKG)_SOURCE_DOWNLOAD_NAME),$($(PKG)_SOURCE_DOWNLOAD_NAME),$($(PKG)_SOURCE)) \
 			$($(PKG)_SITE) \
-			$(or $($(PKG)_SOURCE_SHA512),$($(PKG)_SOURCE_SHA256),$($(PKG)_SOURCE_SHA1),$($(PKG)_SOURCE_MD5),$($(PKG)_SOURCE_CHECKSUM)) \
+			$(or $($(PKG)_SOURCE_SHA512),$($(PKG)_SOURCE_SHA256),$($(PKG)_SOURCE_SHA1),$($(PKG)_SOURCE_MD5),$($(PKG)_SOURCE_CHECKSUM),$($(PKG)_HASH)) \
 			$(SILENT) \
 			$(if $($(PKG)_SOURCE_DOWNLOAD_NAME),&& mv -f $(DL_DIR)/$($(PKG)_SOURCE_DOWNLOAD_NAME) $(DL_DIR)/$($(PKG)_SOURCE)); \
 	fi
@@ -629,7 +629,7 @@ $(MIRROR_DIR)/$($(PKG)_SOURCE): | $(MIRROR_DIR)
 			$(MIRROR_DIR) \
 			$(if $($(PKG)_SOURCE_DOWNLOAD_NAME),$($(PKG)_SOURCE_DOWNLOAD_NAME),$($(PKG)_SOURCE)) \
 			$($(PKG)_SITE) \
-			$(or $($(PKG)_SOURCE_SHA512),$($(PKG)_SOURCE_SHA256),$($(PKG)_SOURCE_SHA1),$($(PKG)_SOURCE_MD5),$($(PKG)_SOURCE_CHECKSUM)) \
+			$(or $($(PKG)_SOURCE_SHA512),$($(PKG)_SOURCE_SHA256),$($(PKG)_SOURCE_SHA1),$($(PKG)_SOURCE_MD5),$($(PKG)_SOURCE_CHECKSUM),$($(PKG)_HASH)) \
 			$(SILENT) \
 			$(if $($(PKG)_SOURCE_DOWNLOAD_NAME),&& mv -f $(DL_DIR)/$($(PKG)_SOURCE_DOWNLOAD_NAME) $(DL_DIR)/$($(PKG)_SOURCE)); \
 	fi
@@ -790,7 +790,7 @@ $($(PKG)_DIR)/.configured: $($(PKG)_DIR)/.build-prereq-checked $($(PKG)_DIR)/.un
 		$(if $(strip $($(PKG)_BUILD_SUBDIR)),cd $(strip $($(PKG)_BUILD_SUBDIR));,) \
 		$(TARGET_CONFIGURE_ENV) \
 		$($(PKG)_CONFIGURE_ENV) \
-		CONFIG_SITE=$(CONFIG_SITE) \
+		CONFIG_SITE=$(TARGET_SITE) \
 		conf_cmd \
 		$(if $(findstring y,$($(PKG)_CONFIGURE_DEFOPTS)), $(TARGET_CONFIGURE_OPTIONS)) \
 		$($(PKG)_CONFIGURE_OPTIONS) \
