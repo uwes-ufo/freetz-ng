@@ -244,8 +244,6 @@ if [ "$DEBUG" == "1" ]; then
 	echo "    CHECKSUM=$CHECKSUM"
 fi
 
-echo -ne "\e[48;5;56mdownloading\e[49m ... "
-
 # Mute on verbose 0
 if [ "$FREETZ_VERBOSITY_LEVEL" == "0" ]; then
 	exec 11>/dev/null
@@ -307,8 +305,9 @@ if [ -n "$URLs" ]; then
 				sites[(( num_sites++ ))]=https://ftp.gnu.org/gnu/$subpath
 			elif [ ${url:0:7} == "@KERNEL" ]; then
 				subpath=${url/@KERNEL\//}
-				sites[(( num_sites++ ))]=https://kernel.org/pub/$subpath
-				sites[(( num_sites++ ))]=ftp://ftp.kernel.org/pub/$subpath
+				sites[(( num_sites++ ))]=https://cdn.kernel.org/pub/$subpath
+				sites[(( num_sites++ ))]=https://mirrors.kernel.org/pub/$subpath
+				sites[(( num_sites++ ))]=https://www.kernel.org/pub/$subpath
 			elif [ ${url:0:8} == "@TELEKOM" ]; then
 				subpath=${url/@TELEKOM\//}
 				sites[(( num_sites++ ))]=https://www.telekom.de/hilfe/downloads/$subpath
