@@ -22,6 +22,7 @@ KERNEL_ECHO_TYPE:=KRN
 
 
 $(DL_FW_DIR)/$(DL_KERNEL_SOURCE): | $(DL_FW_DIR)
+	@$(call _ECHO,downloading,$(KERNEL_ECHO_TYPE))
 	$(DL_TOOL) $(DL_FW_DIR) $(FREETZ_DL_KERNEL_SOURCE) $(FREETZ_DL_KERNEL_SITE) $(FREETZ_DL_KERNEL_HASH) $(SILENT)
 
 # Make sure that a perfectly clean build is performed whenever Freetz package
@@ -31,7 +32,7 @@ kernel-unpacked: $(KERNEL_DIR)/.unpacked
 $(KERNEL_DIR)/.unpacked: $(DL_FW_DIR)/$(DL_KERNEL_SOURCE) | $(UNPACK_TARBALL_PREREQUISITES) gcc-kernel
 	$(RM) -r $(KERNEL_DIR)
 	mkdir -p $(KERNEL_SOURCE_DIR)
-	@$(call _ECHO,unpacking,$(KERNEL_ECHO_TYPE))
+	@$(call _ECHO,preparing,$(KERNEL_ECHO_TYPE))
 	@$(call UNPACK_TARBALL,$(DL_FW_DIR)/$(DL_KERNEL_SOURCE),$(KERNEL_SOURCE_DIR),1)
 	@$(call _ECHO,patching,$(KERNEL_ECHO_TYPE))
 	#

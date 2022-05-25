@@ -106,12 +106,13 @@ GCC_CONDITIONAL_PATCHES += $(if $(FREETZ_TARGET_GCC_DEFAULT_AS_NEEDED),default-a
 gcc-source: $(DL_DIR)/$(GCC_SOURCE)
 ifneq ($(strip $(DL_DIR)/$(GCC_SOURCE)), $(strip $(DL_DIR)/$(GCC_KERNEL_SOURCE)))
 $(DL_DIR)/$(GCC_SOURCE): | $(DL_DIR)
-	$(DL_TOOL) $(DL_DIR) $(GCC_SOURCE) $(GCC_SITE) $(GCC_HASH)
+	@$(call _ECHO,downloading,$(GCC_ECHO_TYPE),$(GCC_ECHO_MAKE))
+	$(DL_TOOL) $(DL_DIR) $(GCC_SOURCE) $(GCC_SITE) $(GCC_HASH) $(SILENT)
 endif
 
 gcc-unpacked: $(GCC_DIR)/.unpacked
 $(GCC_DIR)/.unpacked: $(DL_DIR)/$(GCC_SOURCE) | $(TARGET_TOOLCHAIN_DIR) $(UNPACK_TARBALL_PREREQUISITES)
-	@$(call _ECHO,unpacking,$(GCC_ECHO_TYPE),$(GCC_ECHO_MAKE))
+	@$(call _ECHO,preparing,$(GCC_ECHO_TYPE),$(GCC_ECHO_MAKE))
 	$(RM) -r $(GCC_DIR)
 	$(call UNPACK_TARBALL,$(DL_DIR)/$(GCC_SOURCE),$(TARGET_TOOLCHAIN_DIR))
 	$(call APPLY_PATCHES,$(GCC_PATCHES_ROOT_DIR) $(addprefix $(GCC_PATCHES_ROOT_DIR)/,$(strip $(GCC_CONDITIONAL_PATCHES))),$(GCC_DIR))
