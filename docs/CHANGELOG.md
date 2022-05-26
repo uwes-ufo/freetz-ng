@@ -44,14 +44,16 @@ Latest changes
    * Loading build kernel modules may work or do not. You'll notice.
 
  - Build system:
+   * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.38.x
    * ccache 4.6.1
-   * precompiled host-tools 2022-05-23
+   * precompiled host-tools 2022-05-26
    * precompiled toolchains r19231/r19417
 
  - Host tools:
    * fakeroot 1.29
    * fitimg 0.8
    * kconfig 5.18
+   * patchelf 0.14.5
    * yf-bootmanager 0.8.3 9a1d3b8
 
  - Packages & libs:

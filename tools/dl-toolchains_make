@@ -65,7 +65,7 @@ FREETZ_SERIES_ALL=y
 FREETZ_BUILD_TOOLCHAIN=y
 FREETZ_USER_LEVEL_DEVELOPER=y
 # FREETZ_TOOLCHAIN_32BIT is not set
-# FREETZ_TOOLCHAIN_CCACHE is not set
+FREETZ_TOOLCHAIN_CCACHE=y
 FREETZ_HOSTTOOLS_DOWNLOAD=y
 FREETZ_VERBOSITY_LEVEL=0
 FREETZ_DL_SITE_USER="https://github.com/Freetz-NG/dl-mirror/raw/master"
@@ -77,9 +77,6 @@ dltc() {
 	echo "Building toolchains for ${options// /, }"
 	miniconfig $options > .config
 	make distclean
-	rm -rf dl 2>/dev/null
-	ln -sf ~/.freetz-dl dl
-	mkdir -p dl
 	make kconfig-host-conf
 	make olddefconfig
 	cp -a .config tc-${options// /_}.conf
