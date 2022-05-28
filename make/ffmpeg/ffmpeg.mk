@@ -74,6 +74,7 @@ $(PKG)_CONFIGURE_OPTIONS += --disable-filters
 $(PKG)_CONFIGURE_OPTIONS += --disable-hwaccels
 
 ifeq ($(strip $(FREETZ_PACKAGE_FFMPEG_EVERYTHING)),y)
+	$(PKG)_DEPENDS_ON += lzma1
 	$(PKG)_DEPENDS_ON += openssl
 	$(PKG)_CONFIGURE_OPTIONS += --enable-nonfree
 	$(PKG)_CONFIGURE_OPTIONS += --enable-openssl
