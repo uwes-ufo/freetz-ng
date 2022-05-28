@@ -26,10 +26,7 @@ $(CCACHE_DIR)/.unpacked: $(DL_DIR)/$(CCACHE_SOURCE) | $(TARGET_TOOLCHAIN_DIR) $(
 	@$(call _ECHO,preparing,$(CCACHE_ECHO_TYPE),$(CCACHE_ECHO_MAKE))
 	$(RM) -r $(CCACHE_DIR)
 	$(call UNPACK_TARBALL,$(DL_DIR)/$(CCACHE_SOURCE),$(TARGET_TOOLCHAIN_DIR))
-	#$(call APPLY_PATCHES,$(CCACHE_MAKE_DIR)/patches,$(CCACHE_DIR))
-	# WARNING - this will break if the toolchain is moved.
-	# Should probably patch things to use a relative path.
-	$(SED) -i 's,ctx.config.path(),"$(CCACHE_BIN_DIR)",' $(CCACHE_DIR)/src/execute.cpp
+	$(call APPLY_PATCHES,$(CCACHE_MAKE_DIR)/patches,$(CCACHE_DIR))
 	touch $@
 
 $(CCACHE_DIR)/.configured: $(CCACHE_DIR)/.unpacked
@@ -82,7 +79,8 @@ $(TARGET_TOOLCHAIN_STAGING_DIR)/$(CCACHE_TARGET_BINARY): $(CCACHE_DIR)/$(CCACHE_
 ifeq ($(strip $(FREETZ_BUILD_TOOLCHAIN)),y)
 ccache: gcc $(TARGET_TOOLCHAIN_STAGING_DIR)/$(CCACHE_TARGET_BINARY)
 else
-ccache: $(TARGET_TOOLCHAIN_STAGING_DIR)/$(CCACHE_TARGET_BINARY)
+#ccache: $(TARGET_TOOLCHAIN_STAGING_DIR)/$(CCACHE_TARGET_BINARY)
+ccache: $(TARGET_CROSS_COMPILER)
 endif
 
 

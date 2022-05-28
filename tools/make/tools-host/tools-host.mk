@@ -1,6 +1,6 @@
-$(call TOOLS_INIT, 2022-05-26)
+$(call TOOLS_INIT, 2022-05-27)
 $(PKG)_SOURCE:=tools-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=2c33abcb1e0000e934242639e9e7f157c7d5ffc7f6a126dee555ed289d70a8e4
+$(PKG)_HASH:=d1c7b911589db009ed3f4e5c6b7d17c6fb72f12b56ec36dfb74231be905fad73
 $(PKG)_SITE:=@MIRROR/
 
 $(PKG)_DEPENDS_ON:=kconfig-host
@@ -15,8 +15,8 @@ endef
 #$(DL_DIR)/$($(PKG)_SOURCE): | $(DL_DIR)
 #	$(info ERROR: File '$(DL_DIR)/$(TOOLS_HOST_SOURCE)' not found.)
 #	$(info There is and will no download source be available.)
-#	$(info Either disable 'FREETZ_HOSTTOOLS_DOWNLOAD' in menuconfig)
-#	$(info or create the file by yourself with 'tools/dl-hosttools'.)
+#	$(info Either disable 'FREETZ_HOSTTOOLS_DOWNLOAD' in menuconfig or)
+#	$(info create the file by yourself with 'tools/dl-hosttools own'.)
 #	$(error )
 $(TOOLS_SOURCE_DOWNLOAD)
 $(TOOLS_UNPACKED)

@@ -46,12 +46,13 @@ Latest changes
  - Build system:
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.38.x
    * ccache 4.6.1
-   * precompiled host-tools 2022-05-26
-   * precompiled toolchains r19231/r19417
+   * precompiled host-tools 2022-05-27
+   * precompiled toolchains r19511
 
  - Host tools:
    * fakeroot 1.29
    * fitimg 0.8
+   * Haserl 0.9.36
    * kconfig 5.18
    * patchelf 0.14.5
    * yf-bootmanager 0.8.3 9a1d3b8
@@ -524,7 +525,6 @@ Latest changes
     * gnu-make 4.2.1
     * gnutls 3.6.15
     * haproxy 1.8.27
-    * haserl 0.9.35
     * hplip 3.14.6
     * htop 1.0.3
     * httpry 0.1.8
