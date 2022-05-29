@@ -20,6 +20,10 @@ ifeq ($(strip $(FREETZ_VERBOSITY_LEVEL)),2)
 KERNEL_COMMON_MAKE_OPTIONS += V=1
 endif
 
+DL_KERNEL_AVMPACK_SOURCE:=$(call qstrip,$(FREETZ_DL_KERNEL_AVMPACK_SOURCE))
+DL_KERNEL_AVMPACK_HASH:=$(call qstrip,$(FREETZ_DL_KERNEL_AVMPACK_HASH))
+DL_KERNEL_AVMPACK_SITE:=@MIRROR/
+
 DL_KERNEL_VANILLA_SOURCE:=$(call qstrip,$(FREETZ_DL_KERNEL_VANILLA_SOURCE))
 DL_KERNEL_VANILLA_HASH:=$(call qstrip,$(FREETZ_DL_KERNEL_VANILLA_HASH))
 DL_KERNEL_VANILLA_SITE:=@KERNEL/linux/kernel/v$(call qstrip,$(FREETZ_KERNEL_VANILLA_DLDIR))
@@ -28,8 +32,18 @@ DL_KERNEL_AVMDIFF_SOURCE:=$(call qstrip,$(FREETZ_DL_KERNEL_AVMDIFF_SOURCE))
 DL_KERNEL_AVMDIFF_HASH:=$(call qstrip,$(FREETZ_DL_KERNEL_AVMDIFF_HASH))
 DL_KERNEL_AVMDIFF_SITE:=@MIRROR/
 
+ifeq ($(strip $(FREETZ_DL_KERNEL_KONGLOMERAT)),y)
+DL_KERNEL_SOURCE:=$(DL_FW_DIR)/$(DL_KERNEL_AVMPACK_SOURCE)
+else
+DL_KERNEL_SOURCE:=$(DL_DIR)/$(DL_KERNEL_VANILLA_SOURCE)
+endif
+
 KERNEL_ECHO_TYPE:=KRN
 
+
+$(DL_FW_DIR)/$(DL_KERNEL_AVMPACK_SOURCE): | $(DL_FW_DIR)
+	@$(call _ECHO,downloading,$(KERNEL_ECHO_TYPE))
+	$(DL_TOOL) $(DL_FW_DIR) $(DL_KERNEL_AVMPACK_SOURCE) $(DL_KERNEL_AVMPACK_SITE) $(DL_KERNEL_AVMPACK_HASH) $(SILENT)
 
 $(DL_DIR)/$(DL_KERNEL_VANILLA_SOURCE): | $(DL_DIR)
 	@$(call _ECHO,downloading,$(KERNEL_ECHO_TYPE))
@@ -43,12 +57,12 @@ $(DL_DIR)/$(DL_KERNEL_AVMDIFF_SOURCE): | $(DL_DIR)
 # options have changed. The safest way to achieve this is by starting over
 # with the source directory.
 kernel-unpacked: $(KERNEL_DIR)/.unpacked
-$(KERNEL_DIR)/.unpacked: $(DL_DIR)/$(DL_KERNEL_VANILLA_SOURCE) $(if $(FREETZ_REPLACE_SOURCE_AVAILABLE),$(DL_DIR)/$(DL_KERNEL_AVMDIFF_SOURCE)) | $(UNPACK_TARBALL_PREREQUISITES) gcc-kernel
+$(KERNEL_DIR)/.unpacked: $(DL_KERNEL_SOURCE) $(if $(FREETZ_REPLACE_SOURCE_AVAILABLE),$(DL_DIR)/$(DL_KERNEL_AVMDIFF_SOURCE)) | $(UNPACK_TARBALL_PREREQUISITES) gcc-kernel
 	@echo "Using kernel version: $(call qstrip,$(FREETZ_KERNEL_VERSION))" $(SILENT)
 	$(RM) -r $(KERNEL_DIR)
 	mkdir -p $(KERNEL_SOURCE_DIR)
 	@$(call _ECHO,preparing,$(KERNEL_ECHO_TYPE))
-	@$(call UNPACK_TARBALL,$(DL_DIR)/$(DL_KERNEL_VANILLA_SOURCE),$(KERNEL_SOURCE_DIR),1)
+	@$(call UNPACK_TARBALL,$(DL_KERNEL_SOURCE),$(KERNEL_SOURCE_DIR),1)
 	@$(call _ECHO,patching,$(KERNEL_ECHO_TYPE))
 	@echo "" $(SILENT)
 ifeq ($(strip $(FREETZ_REPLACE_SOURCE_AVAILABLE)),y)
@@ -62,8 +76,8 @@ endif
 	@$(call _ECHO,fixing,$(KERNEL_ECHO_TYPE))
 ifeq ($(strip $(FREETZ_REPLACE_SOURCE_AVAILABLE)),y)
 	@find $(KERNEL_SOURCE_DIR) -type l -exec rm -f {} ';'
-	@$(XZ) -d $(DL_DIR)/$(DL_KERNEL_AVMDIFF_SOURCE) -c | grep -E '^    (Dirs|Link|Exec)# .*' | while read a b c d; do \
-	  [ "$$a" == "Dirs#" ] && mkdir -p $(KERNEL_SOURCE_DIR)/$${b%/*}; \
+	@$(TOOLS_DIR)/unxz $(DL_DIR)/$(DL_KERNEL_AVMDIFF_SOURCE) -c | grep -E '^    (Dirs|Link|Exec)# .*' | while read a b c d; do \
+	  [ "$$a" == "Dirs#" ] && mkdir -p $(KERNEL_SOURCE_DIR)/$$b; \
 	  [ "$$a" == "Link#" ] && mkdir -p $(KERNEL_SOURCE_DIR)/$${b%/*}; \
 	  [ "$$a" == "Link#" ] && ln -sf $$d $(KERNEL_SOURCE_DIR)/$$b; \
 	  [ "$$a" == "Exec#" ] && chmod +x $(KERNEL_SOURCE_DIR)/$$b; \
@@ -154,7 +168,7 @@ endif
 $(KERNEL_DIR)/.configured: $(KERNEL_DIR)/.unpacked $(KERNEL_CONFIG_FILE)
 	$(call _ECHO,configuring,$(KERNEL_ECHO_TYPE))
 	cp $(KERNEL_CONFIG_FILE) $(KERNEL_SOURCE_DIR)/.config
-ifeq ($(strip $(FREETZ_REPLACE_SOURCE_AVAILABLE)),y)
+ifeq ($(strip $(FREETZ_KERNEL_VERSION_2_MAX)),y)
 	$(SUBMAKE) $(KERNEL_COMMON_MAKE_OPTIONS) oldconfig
 else
 	$(SUBMAKE) $(KERNEL_COMMON_MAKE_OPTIONS) olddefconfig
