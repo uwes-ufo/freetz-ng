@@ -11,6 +11,26 @@
 # Just run 'make menuconfig', configure stuff, then run 'make'.
 # You shouldn't need to mess with anything beyond this point...
 #--------------------------------------------------------------
+
+# Envira: Custom environment and arguments
+ENVIRA_MARK:=ENVIRA
+ifneq ($($(ENVIRA_MARK)),y)
+ENVIRA_PATH_REL:=tools/path
+ENVIRA_PATH_ABS:=$(shell realpath $(ENVIRA_PATH_REL))
+ENVIRA_MAKE_ARGS:=--no-print-directory
+ENVIRA_MAKE_ARGS+=$(ENVIRA_MARK)=y
+
+envira:
+	@tools/freetz_revision make
+	@PATH="$(ENVIRA_PATH_ABS):$(PATH)" $(MAKE) $(ENVIRA_MAKE_ARGS) $(MAKECMDGOALS)
+.PHONY: envira
+
+$(MAKECMDGOALS): envira
+	@:
+.PHONY: $(MAKECMDGOALS)
+
+else # Envira
+
 TOPDIR=.
 CONFIG_IN=config/Config.in
 CONFIG_IN_CACHE=config/.cache.in
@@ -46,7 +66,6 @@ include $(sort $(wildcard $(INCLUDE_DIR)/make/*.mk))
 # load user configuration file
 -include $(TOPDIR)/.config
 
-PATH_DIR=$(TOOLS_DIR)/path
 DL_TOOL:=$(TOOLS_DIR)/freetz_download
 PATCH_TOOL:=$(TOOLS_DIR)/freetz_patch
 PARSE_CONFIG_TOOL:=$(TOOLS_DIR)/parse-config
@@ -91,6 +110,7 @@ define ERROR
 kill $$$$; \
 printf "\n$(_Y)%s$(_N)\n" "ERROR: $(2)";  exit $(1);
 endef
+
 
 # check for very old linux with kernel v3 or less
 ifeq ($(shell uname -r | sed 's/\..*//;s/^[1-3]//'),)
@@ -149,6 +169,7 @@ endif
 ifeq ($(shell gcc --version | grep -q "gcc (SUSE Linux) 4.5.0 20100604" && echo y),y)
 $(error gcc (SUSE Linux) 4.5.0 has known bugs. Please install and use a different version)
 endif
+
 
 # genin: (re)generate .in files if necessary
 ifneq ($(findstring clean,$(MAKECMDGOALS)),clean)
@@ -399,7 +420,7 @@ $(filter $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : %-precompiled
 
 $(patsubst %,%-autofix,$(TOOLS)): %-autofix : %-dirclean
 	$(MAKE) AUTO_FIX_PATCHES=y $*-unpacked
-$(patsubst %,%-recompile,$(TOOLS)): %-recompile : %-distclean %-precompiled
+$(patsubst %,%-recompile,$(TOOLS)): %-recompile : %-dirclean %-precompiled
 
 tools: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_CONDITIONAL),$(TOOLS))
 tools-all: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_TARXZBUNDLE),$(TOOLS))
@@ -614,4 +635,6 @@ help:
 	cacheclean clean dirclean distclean common-cacheclean common-clean common-dirclean common-distclean release \
 	$(TOOLS) $(TOOLS_CACHECLEAN) $(TOOLS_CLEAN) $(TOOLS_DIRCLEAN) $(TOOLS_DISTCLEAN) $(TOOLS_SOURCE) $(TOOLS_PRECOMPILED) $(TOOLS_RECOMPILE) $(TOOLS_AUTOFIX) \
 	clear-echo-temporary check-dot-config-uptodateness
+
+endif # Envira
 
