@@ -6,6 +6,8 @@ on:
     paths:
       - '.github/workflows/image_generate.yml'
       - '.github/docker/generate/*'
+  schedule:
+    - cron: '45 18 28 * *'
   workflow_dispatch:
 
 
@@ -25,6 +27,7 @@ jobs:
         id: prepare
         run: |
           OWNER="$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')"
+          [ -z "$OWNER" ] && OWNER="$(echo ${{ github.actor }} | tr '[:upper:]' '[:lower:]')"
           [ -n "$OWNER" ] && echo "::set-output name=owner::$OWNER" || exit 1
           IMAGE="$(echo "${{ github.workflow }}" | sed 's/.*_//')"
           [ -n "$IMAGE" ] && echo "::set-output name=image::$IMAGE" || exit 1
