@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng f69bfd9eb uwe 2022-06-06
+#  freetz-ng b04222125 uwe 2022-06-06
 #
 
 #
@@ -734,7 +734,10 @@ FREETZ_PACKAGE_SAMBA_MAX_DEBUG_LEVEL=2
 # FREETZ_PACKAGE_SISPMCTL is not set
 # FREETZ_PACKAGE_SLANG is not set
 # FREETZ_PACKAGE_SLURM is not set
-# FREETZ_PACKAGE_SMARTMONTOOLS is not set
+
+#
+# Smartmontools (not available, needs libstdc++ as Standard C++ Library)
+#
 # FREETZ_PACKAGE_SMSTOOLS3 is not set
 # FREETZ_PACKAGE_SMUSBUTIL is not set
 # FREETZ_PACKAGE_SOCAT is not set
