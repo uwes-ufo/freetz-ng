@@ -43,7 +43,7 @@ ifneq ($(shell grep -q "$$($(ENVIRA_REV_TOOL))" $(ENVIRA_LAST_REV) 2>/dev/null &
 endif
 endif
 	@$(ENVIRA_REV_TOOL) make
-	@umask $(ENVIRA_UMASK) && PATH="$(ENVIRA_PATH_ABS):$(PATH)" $(MAKE) $(MAKECMDGOALS) $(ENVIRA_MAKE_VARS)
+	@umask $(ENVIRA_UMASK) && PATH="$(ENVIRA_PATH_ABS):$(PATH)" $(MAKE) $(MAKECMDGOALS) $(ENVIRA_MAKE_VARS) || kill $$$$
 .PHONY: envira
 
 $(MAKECMDGOALS): envira
@@ -127,8 +127,8 @@ endef
 
 # Print yellow error message and exit
 define ERROR
-[ "$$FREETZ_VERBOSITY_LEVEL" = "0" ] && echo && cat .build.log 2>/dev/null; \
-kill $$$$; \
+[ "$(FREETZ_VERBOSITY_LEVEL)" = "0" ] && echo && cat .build.log 2>/dev/null; \
+kill $$$$ 2>/dev/null || kill $$$$$$$$ 2>/dev/null; \
 printf "\n$(_Y)%s$(_N)\n" "ERROR: $(2)";  exit $(1);
 endef
 
