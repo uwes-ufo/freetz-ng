@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng c2f6e5f34 uwe 2022-06-08
+#  freetz-ng 5314eb7d5 uwe 2022-06-08
 #
 
 #
@@ -3002,11 +3002,10 @@ FREETZ_TARGET_UCLIBC_PROVIDES_SSP=y
 # Tools and toolchains options ------------------------
 #
 FREETZ_TOOLCHAIN_MINIMIZE_REQUIRED_GLIBC_VERSION=y
-# FREETZ_TOOLCHAIN_32BIT is not set
-# FREETZ_TOOLCHAIN_CCACHE is not set
+FREETZ_TOOLCHAIN_CCACHE=y
 FREETZ_ROOTEMU_FAKEROOT=y
 # FREETZ_ROOTEMU_PSEUDO is not set
-# FREETZ_HOSTTOOLS_DOWNLOAD is not set
+FREETZ_HOSTTOOLS_DOWNLOAD=y
 # end of Toolchain options
 
 #
