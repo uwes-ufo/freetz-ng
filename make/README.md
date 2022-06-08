@@ -8,7 +8,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ACME.sh 3.0.4 (letsencrypt)](../docs/make/acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
-  * **[apache2: Apache HTTP Server 2.4.53 (binary only)](../docs/make/apache2.md)<a id='apache2'></a>**<br>
+  * **[apache2: Apache HTTP Server 2.4.54 (binary only)](../docs/make/apache2.md)<a id='apache2'></a>**<br>
     The Apache httpd server
      - [apache.conf](../docs/make/apache2.md#apacheconf)
      - [Passwortschutz mit .htaccess](../docs/make/apache2.md#passwortschutz-mit-htaccess)
@@ -741,7 +741,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### R
 
-  * **[radvd 1.9.3](../docs/make/radvd.md)<a id='radvd'></a>**<br>
+  * **[radvd 1.9.3/2.19](../docs/make/radvd.md)<a id='radvd'></a>**<br>
     The "router advertisement daemon" (radvd) is used for host autoconfiguration in ipv6 networks.
      - [Request a subnet from SixXS](../docs/make/radvd.md#request-a-subnet-from-sixxs)
      - [Creating a Feetz Image with Radvd](../docs/make/radvd.md#creating-a-feetz-image-with-radvd)

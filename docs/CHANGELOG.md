@@ -60,6 +60,7 @@ Latest changes
 
  - Packages & libs:
    * ACME.sh 3.0.4 (letsencrypt)
+   * Apache 2.4.54
    * BIND 9.11.37/9.16.29
    * CA-bundle 2022-04-26
    * Curl 7.83.1
@@ -83,6 +84,7 @@ Latest changes
    * PCSC-lite 1.9.7
    * pcre2 10.40
    * Privoxy 3.0.33
+   * radvd 1.9.3/2.19
    * Smartmontools 7.3
    * Stunnel 5.64
    * SQLite 3.38.5
