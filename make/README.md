@@ -919,13 +919,13 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Features](../docs/make/tinc.md#features)
      - [Verwendete Bibliotheken](../docs/make/tinc.md#verwendete-bibliotheken)
 
-  * **[Tinyproxy 1.11.0](../docs/make/tinyproxy.md)<a id='tinyproxy'></a>**<br>
+  * **[Tinyproxy 1.11.1](../docs/make/tinyproxy.md)<a id='tinyproxy'></a>**<br>
     Tinyproxy is a lightweight HTTP and HTTPS proxy.
      - [Proxy auto-config (pac)](../docs/make/tinyproxy.md#proxy-auto-config-pac)
      - [URL blocking](../docs/make/tinyproxy.md#url-blocking)
      - [Memory usage](../docs/make/tinyproxy.md#memory-usage)
 
-  * **[tmux 3.3 (binary only)](../docs/make/tmux.md)<a id='tmux'></a>**<br>
+  * **[tmux 3.3a (binary only)](../docs/make/tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
   * **[Tor 0.4.7.7](../docs/make/tor.md)<a id='tor'></a>**<br>
