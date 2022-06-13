@@ -97,11 +97,16 @@ new_menu_deliver() {
 
 	echo "<ul class='menu new'>"
 
-	echo "<li><a id='logout' href='/cgi-bin/logout.cgi'>Logout</a></li>"
 	new_menu_tree "$dir/status"
 	new_menu_tree "$dir/system"
+	new_menu_package_tree "mod"
+	ls /usr/lib/cgi-bin/conf.avm/* &>/dev/null && new_menu_package_tree "avm"
+	echo "<li><a id='logout' onclick='return confirm(\"Logout?\")' href='/cgi-bin/logout.cgi'>Logout</a></li>"
+	echo "<hr>"
 
 	while read -r pkg; do
+		# ignore "internal" mod and avm packages
+		[ "$pkg" = mod -o "$pkg" = avm ] && continue
 		new_menu_package_tree "$pkg"
 	done < "$dir/packages"
 
