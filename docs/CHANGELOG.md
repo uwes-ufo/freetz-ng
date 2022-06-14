@@ -73,6 +73,7 @@ Latest changes
    * libgcrypt 1.10.1
    * libgpg-error 1.45
    * libneon 0.30.2/0.32.2
+   * libpcap 1.1.1/1.10.1
    * libxml 2.9.14
    * LCD4linux 9d4e4b7-git
    * lighttpd 1.4.65
@@ -89,6 +90,7 @@ Latest changes
    * Smartmontools 7.3
    * Stunnel 5.64
    * SQLite 3.38.5
+   * tcpdump 4.1.1/4.99.1
    * tmux 3.3a
    * Tinyproxy 1.11.0
    * Tor 0.4.7.7
@@ -139,7 +141,7 @@ Latest changes
    * BusyBox 1.35.0
    * CA-bundle 2022-03-29
    * CCID 1.5.0
-   * cifs-utils 6.14
+   * cifs-utils 6.15
    * Curl 7.82.0
    * davfs2 1.5.2/1.6.1
    * dropbear 2022.82

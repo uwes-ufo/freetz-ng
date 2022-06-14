@@ -118,7 +118,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Telefon-Benachrichtigung](../docs/make/checkmaild.md#telefon-benachrichtigung)
      - [Beispiel-Skripte](../docs/make/checkmaild.md#beispiel-skripte)
 
-  * **[Cifsmount 6.14](../docs/make/cifsmount.md)<a id='cifsmount'></a>**<br>
+  * **[Cifsmount 6.15](../docs/make/cifsmount.md)<a id='cifsmount'></a>**<br>
     User space helper for mounting remote CIFS shares + CGI web interface for easy configuration of up to three mounts incl. (auto-) start/stop. CIFS is an extended version of SMB, the well-known protocol used by MS Windows and Samba for sharing folders, files and printers. Thus, cifsmount is a replacement for smbmount, having the advantage of being significantly smaller than smbmount. So if you want to mount Windows or Samba shares from your router box, this package is for you. If this does not work, enable replace-kernel!
      - [Konfiguration cifsmount](../docs/make/cifsmount.md#konfiguration-cifsmount)
      - [Fehlersuche](../docs/make/cifsmount.md#fehlersuche)
@@ -507,7 +507,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     A netcat clone with ipv6 support.
 
   * **[ncftp 3.2.6 (binaries only)](../docs/make/ncftp.md)<a id='ncftp'></a>**<br>
-    NcFTP is a free program that use the File Transfer Protocol. The purpose of ncftp is to provide a powerful and flexible interface to the Internet standard File Transfer Protocol. Although the program appears to be rather spartan, you'll find that ncftp has a wealth of valuable performance and usage features. The program was designed with an emphasis on usability, and it does as much as it can for you automatically so you can do what you expect to do with a file transfer program, which is transfer files between two interconnected systems. WWW: http://www.ncftp.com/ncftp/
+    NcFTP is a free program that use the File Transfer Protocol. The purpose of ncftp is to provide a powerful and flexible interface to the Internet standard File Transfer Protocol. Although the program appears to be rather spartan, you'll find that ncftp has a wealth of valuable performance and usage features. The program was designed with an emphasis on usability, and it does as much as it can for you automatically so you can do what you expect to do with a file transfer program, which is transfer files between two interconnected systems.
      - [Was ist NcFTP?](../docs/make/ncftp.md#was-ist-ncftp)
      - [Wozu kann NcFTP benutzt werden?](../docs/make/ncftp.md#wozu-kann-ncftp-benutzt-werden)
      - [Wie installiere ich NcFTP?](../docs/make/ncftp.md#wie-installiere-ich-ncftp)
@@ -896,7 +896,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### T
 
-  * **[Tcpdump 4.1.1 (binary only)](../docs/make/tcpdump.md)<a id='tcpdump'></a>**<br>
+  * **[tcpdump 4.1.1/4.99.1 (binary only)](../docs/make/tcpdump.md)<a id='tcpdump'></a>**<br>
     Network monitoring and data acquisition tool
      - [Warning](../docs/make/tcpdump.md#warning)
 

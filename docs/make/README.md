@@ -86,7 +86,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Checkmaild 0.4.7](checkmaild.md)<a id='checkmaild'></a>**<br>
     Checkmaild checks pop3/smtp mail accounts for new mails on a given interval. A configurable shell script starts the desired actions when new mails arrive.
 
-  * **[Cifsmount 6.14](cifsmount.md)<a id='cifsmount'></a>**<br>
+  * **[Cifsmount 6.15](cifsmount.md)<a id='cifsmount'></a>**<br>
     User space helper for mounting remote CIFS shares + CGI web interface for easy configuration of up to three mounts incl. (auto-) start/stop. CIFS is an extended version of SMB, the well-known protocol used by MS Windows and Samba for sharing folders, files and printers. Thus, cifsmount is a replacement for smbmount, having the advantage of being significantly smaller than smbmount. So if you want to mount Windows or Samba shares from your router box, this package is for you. If this does not work, enable replace-kernel!
 
   * **<u>classpath GNU 0.98 (binary only)</u><a id='classpath'></a>**<br>
@@ -389,7 +389,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     A netcat clone with ipv6 support.
 
   * **[ncftp 3.2.6 (binaries only)](ncftp.md)<a id='ncftp'></a>**<br>
-    NcFTP is a free program that use the File Transfer Protocol. The purpose of ncftp is to provide a powerful and flexible interface to the Internet standard File Transfer Protocol. Although the program appears to be rather spartan, you'll find that ncftp has a wealth of valuable performance and usage features. The program was designed with an emphasis on usability, and it does as much as it can for you automatically so you can do what you expect to do with a file transfer program, which is transfer files between two interconnected systems. WWW: http://www.ncftp.com/ncftp/
+    NcFTP is a free program that use the File Transfer Protocol. The purpose of ncftp is to provide a powerful and flexible interface to the Internet standard File Transfer Protocol. Although the program appears to be rather spartan, you'll find that ncftp has a wealth of valuable performance and usage features. The program was designed with an emphasis on usability, and it does as much as it can for you automatically so you can do what you expect to do with a file transfer program, which is transfer files between two interconnected systems.
 
   * **[ndas](ndas.md)<a id='ndas'></a>**<br>
     Network Direct Attached Storage (NDAS)
@@ -661,7 +661,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### T
 
-  * **[Tcpdump 4.1.1 (binary only)](tcpdump.md)<a id='tcpdump'></a>**<br>
+  * **[tcpdump 4.1.1/4.99.1 (binary only)](tcpdump.md)<a id='tcpdump'></a>**<br>
     Network monitoring and data acquisition tool
 
   * **<u>tcpproxy 2.0.0-beta15 (binary only)</u><a id='tcpproxy'></a>**<br>
