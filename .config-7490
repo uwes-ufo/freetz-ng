@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng d53bd84d2 uwe 2022-06-15
+#  freetz-ng d2838c008 uwe 2022-06-15
 #
 
 #
@@ -427,10 +427,7 @@ FREETZ_PACKAGE_CALLMONITOR_monitor=y
 #
 # E
 #
-
-#
-# E-MailRelay (not available, needs libstdc++ as Standard C++ Library)
-#
+# FREETZ_PACKAGE_EMAILRELAY is not set
 # FREETZ_PACKAGE_EMPTY is not set
 # FREETZ_PACKAGE_ESPEAK is not set
 # end of E
@@ -575,10 +572,7 @@ FREETZ_PACKAGE_NANO_SYNTAX_FILE_XML=y
 # FREETZ_PACKAGE_NGIRCD is not set
 # FREETZ_PACKAGE_NMAP is not set
 # FREETZ_PACKAGE_NOIP is not set
-
-#
-# NZBGet (not available, needs libstdc++ as Standard C++ Library)
-#
+# FREETZ_PACKAGE_NZBGET is not set
 # end of N
 
 #
@@ -735,10 +729,7 @@ FREETZ_PACKAGE_SAMBA_MAX_DEBUG_LEVEL=2
 # FREETZ_PACKAGE_SISPMCTL is not set
 # FREETZ_PACKAGE_SLANG is not set
 # FREETZ_PACKAGE_SLURM is not set
-
-#
-# Smartmontools (not available, needs libstdc++ as Standard C++ Library)
-#
+# FREETZ_PACKAGE_SMARTMONTOOLS is not set
 # FREETZ_PACKAGE_SMSTOOLS3 is not set
 # FREETZ_PACKAGE_SMUSBUTIL is not set
 # FREETZ_PACKAGE_SOCAT is not set
@@ -768,10 +759,7 @@ FREETZ_PACKAGE_STUNNEL=y
 # FREETZ_PACKAGE_TCP_WRAPPERS is not set
 # FREETZ_PACKAGE_TCPDUMP is not set
 # FREETZ_PACKAGE_TCPPROXY is not set
-
-#
-# Tesseract OCR (not available, needs libstdc++ as Standard C++ Library)
-#
+# FREETZ_PACKAGE_TESSERACT is not set
 # FREETZ_PACKAGE_TICHKSUM is not set
 # FREETZ_PACKAGE_TIFF is not set
 # FREETZ_PACKAGE_TINC is not set
@@ -1049,6 +1037,7 @@ FREETZ_LIB_libgcc_s=y
 # FREETZ_LIB_libpng12 is not set
 # FREETZ_LIB_libgd is not set
 FREETZ_LIB_libopenjpeg=y
+# FREETZ_LIB_libtesseract is not set
 # FREETZ_LIB_libtiff is not set
 # FREETZ_LIB_libtiffxx is not set
 # FREETZ_LIB_libnetpbm is not set
@@ -2979,8 +2968,10 @@ FREETZ_TARGET_GCC_5_MAX=y
 FREETZ_TARGET_GCC_8_MAX=y
 FREETZ_TARGET_GCC_9_MAX=y
 FREETZ_TARGET_GCC_DEFAULT_AS_NEEDED=y
+# FREETZ_STDCXXLIB_FORCE_GNULIBSTDCXX is not set
 FREETZ_STDCXXLIB_USE_UCLIBCXX=y
-# FREETZ_STDCXXLIB_USE_GNULIBSTDCXX is not set
+FREETZ_STDCXXLIB_USE_UCLIBCXX_CHOICE=y
+# FREETZ_STDCXXLIB_USE_GNULIBSTDCXX_CHOICE is not set
 FREETZ_TARGET_UCLIBC_1=y
 FREETZ_TARGET_UCLIBC_VERSION="1.0.41"
 FREETZ_TARGET_UCLIBC_MAJOR_VERSION="1"
