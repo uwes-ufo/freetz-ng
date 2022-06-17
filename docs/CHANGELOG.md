@@ -80,8 +80,10 @@ Latest changes
    * lighttpd 1.4.65
    * ltrace 0.7.3checkpoint1-git
    * mc (Midnight Commander) 4.8.28
+   * mini-snmpd 1.6
    * MTR 0.80/0.95
    * Nano 6.3
+   * Net-SNMP 5.9.1
    * NZBGet 21.1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1o/3.0.3
    * OpenVPN 2.4.12/2.5.7
@@ -95,7 +97,7 @@ Latest changes
    * tcpdump 4.1.1/4.99.1
    * tmux 3.3a
    * Tinyproxy 1.11.0
-   * Tor 0.4.7.7
+   * Tor 0.4.7.8
    * uClibc-ng 1.0.41
    * UnRAR 6.1.7
    * Vim 8.2.5052
