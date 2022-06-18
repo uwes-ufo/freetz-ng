@@ -47,7 +47,7 @@ Latest changes
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.38.x
    * ccache 4.6.1
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0
-   * precompiled host-tools 2022-05-27
+   * precompiled host-tools 2022-06-18
    * precompiled toolchains r19511
 
  - Host tools:
@@ -57,7 +57,7 @@ Latest changes
    * kconfig 5.18
    * patchelf 0.14.5
    * yf-bootmanager 0.8.3 9a1d3b8
-   * yf-fit_tools 0.2 21e6d86
+   * yf-fit_tools 0.2 fb983be
 
  - Packages & libs:
    * ACME.sh 3.0.4 (letsencrypt)
@@ -99,6 +99,7 @@ Latest changes
    * Tinyproxy 1.11.0
    * Tor 0.4.7.8
    * uClibc-ng 1.0.41
+   * Unbound 1.16.0
    * UnRAR 6.1.7
    * Vim 8.2.5052
    * Wget GNU 1.21.3
