@@ -47,7 +47,7 @@ Latest changes
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.38.x
    * ccache 4.6.1
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0
-   * precompiled host-tools 2022-06-18
+   * precompiled host-tools 2022-06-19
    * precompiled toolchains r19511
 
  - Host tools:
@@ -57,7 +57,7 @@ Latest changes
    * kconfig 5.18
    * patchelf 0.14.5
    * yf-bootmanager 0.8.3 9a1d3b8
-   * yf-fit_tools 0.2 fb983be
+   * yf-fit_tools 0.2 399b791
 
  - Packages & libs:
    * ACME.sh 3.0.4 (letsencrypt)
@@ -92,6 +92,7 @@ Latest changes
    * Privoxy 3.0.33
    * radvd 1.9.3/2.19
    * Smartmontools 7.3
+   * strace 4.9/5.0/5.18
    * Stunnel 5.64
    * SQLite 3.38.5
    * tcpdump 4.1.1/4.99.1
