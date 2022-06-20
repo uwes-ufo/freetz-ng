@@ -47,12 +47,11 @@ Latest changes
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.38.x
    * ccache 4.6.1
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0
-   * precompiled host-tools 2022-06-19
+   * precompiled host-tools 2022-06-20
    * precompiled toolchains r19511
 
  - Host tools:
    * fakeroot 1.29
-   * fitimg 0.8
    * Haserl 0.9.36
    * kconfig 5.18
    * patchelf 0.14.5

@@ -10,8 +10,13 @@ program     cmake                  FREETZ_TOOLCHAIN_CCACHE
 program     cpio                   FREETZ_AVM_PROP_INNER_FILESYSTEM_TYPE_CPIO
 program     dd                     FREETZ_PACKAGE_SUNDTEK
 program     depmod                 FREETZ_AVM_VERSION_07_2X_MIN
+program     dtc                    FREETZ_AVM_HAS_FWLAYOUT_6
+program     dumpimage              FREETZ_AVM_HAS_FWLAYOUT_6
 program     execstack              FREETZ_AVM_VERSION_07_2X_MIN
 program     fastjar                FREETZ_PACKAGE_CLASSPATH
+program     fdtdump                FREETZ_AVM_HAS_FWLAYOUT_6
+program     fdtget                 FREETZ_AVM_HAS_FWLAYOUT_6
+program     fdtput                 FREETZ_AVM_HAS_FWLAYOUT_6
 program     file
 program     find
 program     flex
@@ -27,8 +32,8 @@ program     javac                  FREETZ_PACKAGE_CLASSPATH
 program     ldconfig
 program     libtool
 program     libtoolize             FREETZ_PACKAGE_GNTPSEND
-program     mkimage                FREETZ_AVM_HAS_FWLAYOUT_6
 program     md5sum
+program     mkimage                FREETZ_AVM_HAS_FWLAYOUT_6
 program     nc                     FREETZ_TYPE_FIRMWARE_DETECT_LATEST
 program     openssl             or FREETZ_FWMOD_VALIDATE FREETZ_FWMOD_SIGN
 program     patch
