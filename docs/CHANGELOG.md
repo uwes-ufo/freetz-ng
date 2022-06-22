@@ -61,6 +61,7 @@ Latest changes
  - Packages & libs:
    * ACME.sh 3.0.4 (letsencrypt)
    * Apache 2.4.54
+   * atop 2.7.1
    * BIND 9.11.37/9.16.29
    * CA-bundle 2022-04-26
    * Curl 7.83.1
@@ -84,7 +85,7 @@ Latest changes
    * Nano 6.3
    * Net-SNMP 5.9.1
    * NZBGet 21.1
-   * OpenSSL 0.9.8zh/1.0.2u/1.1.1o/3.0.3
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1p/3.0.4
    * OpenVPN 2.4.12/2.5.7
    * PCSC-lite 1.9.8
    * pcre2 10.40
