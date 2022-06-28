@@ -1,5 +1,6 @@
 echo -n 'Welcome at '
 hostname
+uname -a
 echo
 echo -e "\e[33m"
 cat << EOX

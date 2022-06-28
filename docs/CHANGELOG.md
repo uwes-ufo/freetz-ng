@@ -47,16 +47,17 @@ Latest changes
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.38.x
    * ccache 4.6.1
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0
-   * precompiled host-tools 2022-06-20
-   * precompiled toolchains r19511
+   * precompiled host-tools 2022-06-27
+   * precompiled toolchains r19900
 
  - Host tools:
    * fakeroot 1.29
    * Haserl 0.9.36
    * kconfig 5.18
    * patchelf 0.14.5
-   * yf-bootmanager 0.8.3 9a1d3b8
-   * yf-fit_tools 0.2 399b791
+   * U-Boot 2022.04
+   * yf-bootmanager 0.8.6 87ee8c3
+   * yf-fit_tools 0.2 24011d3
 
  - Packages & libs:
    * ACME.sh 3.0.4 (letsencrypt)
@@ -65,6 +66,7 @@ Latest changes
    * BIND 9.11.37/9.16.29
    * CA-bundle 2022-04-26
    * Curl 7.83.1
+   * dtc 1.6.1
    * git 2.36.1
    * HAProxy 2.6.1
    * htpdate 1.3.4

@@ -12,8 +12,8 @@ $(PKG)_TARGET_ALL := $(join $(KCONFIG_HOST_TARGET_ARG),$(patsubst %,--%,$(KCONFI
 $(PKG)_BUILD_PREREQ:=bison flex
 $(PKG)_DEPENDS_ON:=
 
-$(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_REAL_DEVELOPER_ONLY__BUTTONS),buttons)
-$(PKG)_REBUILD_SUBOPTS += FREETZ_REAL_DEVELOPER_ONLY__BUTTONS
+$(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_MENUCONFIG_BUTTONS),buttons)
+$(PKG)_REBUILD_SUBOPTS += FREETZ_MENUCONFIG_BUTTONS
 
 
 define $(PKG)_CUSTOM_UNPACK
@@ -30,6 +30,9 @@ $($(PKG)_TARGET_PRG:%=$($(PKG)_DIR)/scripts/kconfig/%): $($(PKG)_DIR)/.unpacked
 $(patsubst %,$($(PKG)_TARGET_DIR)/%,$($(PKG)_TARGET_PRG)): $($(PKG)_TARGET_DIR)/% : $($(PKG)_DIR)/scripts/kconfig/%
 	$(INSTALL_FILE)
 	@$(call _ECHO_DONE)
+
+# hack for _BUILD_PREREQ of sub-bins
+$(patsubst %,$(pkg)-%,$($(PKG)_TARGET_PRG)): $(pkg)-precompiled--int
 
 $(patsubst %,$(pkg)-%,$($(PKG)_TARGET_PRG)): $(pkg)-% : $($(PKG)_TARGET_DIR)/%
 $(pkg)-gconf: $(pkg)-gconf.glade
@@ -61,7 +64,7 @@ $(pkg)-distclean: $(pkg)-dirclean
 
 
 .PHONY: $(pkg)-source $(pkg)-unpacked
-.PHONY: $(pkg) $(pkg)-conf $(pkg)-gconf $(pkg)-qconf
+.PHONY: $(pkg) $(pkg)-conf $(pkg)-mconf $(pkg)-nconf $(pkg)-gconf $(pkg)-qconf $(pkg)-gconf.glade
 .PHONY: $(pkg)-clean $(pkg)-dirclean $(pkg)-distclean
 
 $(TOOLS_FINISH)

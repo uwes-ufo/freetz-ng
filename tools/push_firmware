@@ -42,6 +42,7 @@ PATH=${PATH:+${PATH}:}/sbin
 
 UIMG_TOOL="${0%/*}/uimg"
 TSUM_TOOL="${0%/*}/tichksum"
+FDTD_TOOL="${0%/*}/fit/fdtdump"
 
 function wait_loader() {
 	echo -en " * No reply from box, assuming switch-off or restart. Trying to re-detect box.\n   Waiting "
@@ -180,7 +181,6 @@ function push_fw() {
 				-W "quote MEDIA SDRAM" \
 				-W "quote SETENV memsize ${FREESIZE}" \
 				-W "quote SETENV kernel_args_tmp \"${AFU}mtdram1=${MTDSTART},${MAPLIMIT} mtdparts_ext=update-image.0:${FILESIZE}@0x0(fit-image)\"" \
-				-X "$([ ! $LFS ] && echo "quote SYST" || echo "quote SETENV linux_fs_start $LFS")" \
 				-Y "quote QUIT" \
 				$ip ${fitimage} "${MTDSTART} ${MAPLIMIT}" || exit $?
 		elif [ $ISRAM ]; then
@@ -247,7 +247,6 @@ quote MEDIA SDRAM
 quote SETENV memsize ${FREESIZE}
 quote SETENV kernel_args_tmp \"${AFU}mtdram1=${MTDSTART},${MAPLIMIT} mtdparts_ext=update-image.0:${FILESIZE}@0x0(fit-image)\"
 put ${fitimage} "${MTDSTART} ${MAPLIMIT}"
-$([ $LFS ] && echo quote SETENV linux_fs_start $LFS)
 quit
 EOT
 		elif [ $ISRAM ]; then
@@ -326,6 +325,19 @@ prepare_image() {
 		if [ ! -s "$fitimage" ]; then
 			echo -e "Error: file is not a valid fit-boot image to be written to the device.\n" >&2
 			exit 1
+		fi
+#		FITV="$(tail -c +73 "$fitimage" | $FDTD_TOOL - 2>/dev/null | sed -nr 's/.*"mtdram=/mtdram=/p')"
+		FITV="$(strings "$fitimage" | grep '^mtdram=')"
+		if [ "$FITV" != "${FITV#mtdram=ram-filesystem,}" ]; then
+			FITV='0'
+		elif [ "$FITV" != "${FITV#mtdram=rootfs_ram,}" ]; then
+			echo -e "Error: it is not known how to flash a fit-boot image with 'rootfs_ram' method yet." >&2
+			echo -e "Error: run a recovery.exe and get a capture by wireguard or tcpdump to add it." >&2
+			echo -e "Error: meanwhile install an older firmware and flash this one by the web interface.\n" >&2
+			exit 1
+			FITV='1'
+		else
+			FITV='0'
 		fi
 	elif [ $ISRAM ]; then
 		tmpdir=$(mktemp -td freetz_XXX) || { echo "Error creating temporary directory."; exit 1; }
@@ -576,6 +588,7 @@ fi
 [ $ISUIMG ]     && [ ! $LFS ]                  && LFS="1"
 [ $ISUIMG ]     && [ ! -x $UIMG_TOOL ]         && echo "File $UIMG_TOOL missing. Run 'make uimg-host' first."              && exit 1
 [ $ISRAM ]      && [ ! -x $TSUM_TOOL ]         && echo "File $TSUM_TOOL missing. Run 'make tichksum-host' first."          && exit 1
+[ $ISFIT ]      && [ ! -x $FDTD_TOOL ]         && echo "File $FDTD_TOOL missing. Run 'make dtc-host' first."               && exit 1
 [ ! $ISRAM ] && [ ! $ISFIT ] && [ $FULLSIZE ]  && echo "Parameter '-ram' is only allowed for ram-boot and fit-boot mode."  && exit 1
 [ ! $ISRAM ] && [ ! $ISFIT ] && [ $MAPSTART ]  && echo "Parameter '-map' is only allowed for ram-boot and fit-boot mode."  && exit 1
 [ ! $ISRAM ] && [ ! $ISFIT ] && [ $ALIBYTES ]  && echo "Parameter '-ali' is only allowed for ram-boot and fit-boot mode."  && exit 1
@@ -676,6 +689,7 @@ if [ -n "$ISRAM$ISFIT" ]; then
 			Fritz_Box_HW257*)	MAPSTART=0x20000000 ;;  # 5530
 			Fritz_Box_HW261*)	MAPSTART=0x40000000 ;;  # 4060
 			Fritz_Box_HW268*)	MAPSTART=0x40000000 ;;  # 1209
+#			Fritz_Box_HW270*)	MAPSTART=0x?0000000 ;;  # 3009
 			Fritz_Box_HW271*)	MAPSTART=0x40000000 ;;  # 7510
 			Fritz_Box_HW272*)	MAPSTART=0x40000000 ;;  # 5590
 			*)
@@ -703,6 +717,7 @@ if [ -n "$ISRAM$ISFIT" ]; then
 			Fritz_Box_HW257*)	FULLSIZE=0x40000000 ;;  # 5530 (1.0 GB)
 			Fritz_Box_HW261*)	FULLSIZE=0x40000000 ;;  # 4060 (1.0 GB)
 			Fritz_Box_HW268*)	FULLSIZE=0x10000000 ;;  # 1209 (256 MB)
+#			Fritz_Box_HW270*)	FULLSIZE=0x?0000000 ;;  # 3009 (??? MB)
 			Fritz_Box_HW271*)	FULLSIZE=0x20000000 ;;  # 7510 (512 MB)
 			Fritz_Box_HW272*)	FULLSIZE=0x40000000 ;;  # 5590 (1.0 GB)
 			*)

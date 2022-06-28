@@ -31,6 +31,7 @@
 ##############################################################################
 
 [ -r /etc/options.cfg ] && . /etc/options.cfg
+[ "$1" == "startup" ] && VISUALIZE='no' || VISUALIZE='yes'
 
 get_partition_by_name() {
 	if [ "$FREETZ_TYPE_CABLE" != "y" ]; then
@@ -45,7 +46,7 @@ get_partition_by_name() {
 fitinfo() {
 	[ -e /tmp/bootmanager.data ] && . /tmp/bootmanager.data
 	VER="${inactive_version#*.}"
-	VER="${inactive_version%-*}"
+	VER="${VER%-*}"
 	REV="${inactive_version#*-}"
 	DAT="$(date -d @$inactive_date_epoch +'%d.%m.%Y %H:%M:%S')"
 	echo "FritzOS ${VER:-UNKNOWN}${REV:+ rev$REV}${DAT:+ ($DAT)}"
@@ -80,9 +81,28 @@ imginfo() {
 	fi
 }
 
+DUMPS="/tmp/.lfs.fitdump"
 CACHE="/tmp/.lfs.caching"
 OUTER="/tmp/.lfs.reserve"
 INNER="/tmp/.lfs.wrapper"
+fitmnt() {
+	MTD_DEAD="$(sed -n "s,:.*fit$LFS_DEAD.*,,p" /proc/mtd)"
+	[ -z "$MTD_DEAD" ] && MTD_DEAD="disk/by-partlabel/fit$LFS_DEAD"
+	tail -c +73 /dev/$MTD_DEAD | fitdump --output $DUMPS --nodenames -
+	for PART in $DUMPS/*.image; do
+		PART="${PART##*/}"
+		[ "${PART/TZ_HW/}" != "$PART" ] && continue # TrustZone
+		[ "${PART/_HW0/}"  != "$PART" ] && continue # other CPU
+		[ "${PART/HW273/}" != "$PART" ] && continue # also 5590
+		[ "${PART/flat_dt/}" != "$PART" ] && continue
+		[ "${PART/kernel/}"  != "$PART" ] && continue
+		break
+	done
+	mkdir $OUTER
+	modprobe loop 2>/dev/null
+	mount -t squashfs -o ro,loop $DUMPS/$PART $OUTER || mount -o ro,loop $DUMPS/$PART $OUTER
+	MNT=$OUTER
+}
 resmnt() {
 	mkdir $OUTER
 	[ -d /wrapper ] && fst=yaffs2 || fst=squashfs
@@ -103,6 +123,7 @@ resunm() {
 			rmdir $X
 		done
 	done
+	rm -rf $DUMPS
 }
 
 # SWITCHABLE="y"
@@ -112,15 +133,17 @@ if [ -x "$(which bootslotctl)" ]; then
 	LFS_DEAD="$(bootslotctl get_other)"
 	NEXT="$LFS_LIVE"
 	[ "$LFS_LIVE" == "$LFS_DEAD" ] && LFS_LIVE="$(( ($LFS_LIVE+1) %2 ))"  # && SWITCHABLE="n"
-	PRIB="$(imginfo /)"
-#	MTD_DEAD="$(sed -n "s,:.*fit$LFS_DEAD.*,,p" /proc/mtd)"
-#	OFF_DEAD="$(sed -nr 's,^rootfs_type.*rootfs_offset=([0-9]*).*,\1,p' /tmp/bootmanager.inactive.fit)"
-#	#rootfs_type=squashfs rootfs_offset=X rootfs_size=Y
-#	cat /dev/$MTD_DEAD > $OUTER
-#	modprobe loop 2>/dev/null
-#	mount -o loop,offset=$OFF_DEAD $OUTER $INNER
-#	SECB="$(imginfo $OUTER)"
-	SECB="$(fitinfo)"
+	[ "$VISUALIZE" != "yes" ] || PRIB="$(imginfo /)"
+	if [ -x /usr/bin/bootmanager ]; then
+		SECB="$(fitinfo)"
+	else
+		SECB="$(cat $CACHE 2>/dev/null)"
+		if [ -z "$SECB" ]; then
+			[ "$FREETZ_AVM_PROP_INNER_FILESYSTEM_TYPE_CPIO" != "y" ] && fitmnt  # || TODO: cpio
+			SECB="$(imginfo $MNT | tee $CACHE)"
+		fi
+		resunm
+	fi
 else
 	NEXT="$(sed -n 's/^linux_fs_start[ \t]*//p' /proc/sys/urlader/environment)"
 	[ -z "$NEXT" ] && NEXT=0
@@ -128,8 +151,8 @@ else
 	LIVE="$(get_partition_by_name filesystem)"
 	DEAD="$(get_partition_by_name filesystem reserved)"
 
-	PRIB="$(imginfo /)"
-	find "${CACHE%/*}/" -maxdepth 1 -name "${CACHE##*/}" -mmin +9 -exec rm -f {} ';'
+	[ "$VISUALIZE" != "yes" ] || PRIB="$(imginfo /)"
+#	find "${CACHE%/*}/" -maxdepth 1 -name "${CACHE##*/}" -mmin +9 -exec rm -f {} ';'
 	SECB="$(cat $CACHE 2>/dev/null)"
 	if [ -z "$SECB" ]; then
 		resmnt
@@ -141,12 +164,12 @@ else
 	[ $LIVE -gt $DEAD ] && LFS_DEAD=0 || LFS_DEAD=1
 fi
 
-[ "$LFS_LIVE" != "$NEXT" ] && RUN="$(lang de:"deaktiviert" en:"disabled")" || RUN="$(lang de:"aktiviert" en:"enabled")"
-PRIH="$(lang de:"Momentan in" en:"Running at") linux_fs_start=$LFS_LIVE, $RUN $(lang de:"beim n&auml;chsten Systemstart" en:"on next system start")"
+visualize() {
+	[ "$LFS_LIVE" != "$NEXT" ] && RUN="$(lang de:"deaktiviert" en:"disabled")" || RUN="$(lang de:"aktiviert" en:"enabled")"
+	PRIH="$(lang de:"Momentan in" en:"Running at") linux_fs_start=$LFS_LIVE, $RUN $(lang de:"beim n&auml;chsten Systemstart" en:"on next system start")"
 
-[ "$LFS_DEAD" != "$NEXT" ] && RUN="$(lang de:"deaktiviert" en:"disabled")" || RUN="$(lang de:"aktiviert" en:"enabled")"
-SECH="$(lang de:"Reserve in" en:"Reserve at") linux_fs_start=$LFS_DEAD, $RUN $(lang de:"beim n&auml;chsten Systemstart" en:"on next system start")"
-
+	[ "$LFS_DEAD" != "$NEXT" ] && RUN="$(lang de:"deaktiviert" en:"disabled")" || RUN="$(lang de:"aktiviert" en:"enabled")"
+	SECH="$(lang de:"Reserve in" en:"Reserve at") linux_fs_start=$LFS_DEAD, $RUN $(lang de:"beim n&auml;chsten Systemstart" en:"on next system start")"
 
 cat << EOF | sed -r 's#(Running|Momentan| enabled| aktiviert)#<span class="success">\1</span>#g;s#(Reserve| disabled| deaktiviert)#<span class="failure">\1</span>#g'
 <h1>$(lang de:"Vorhandene Firmwareversionen" en:"Available firmware versions")</h1>
@@ -156,6 +179,8 @@ cat << EOF | sed -r 's#(Running|Momentan| enabled| aktiviert)#<span class="succe
 <pre>$SECB</pre>
 EOF
 
-# [ "$SWITCHABLE" != "n" ] && \
-stat_button linux_fs_start "$(lang de:"Firmwarepartition wechseln" en:"Toggle firmware partition")"
+#	[ "$SWITCHABLE" != "n" ] && \
+	stat_button linux_fs_start "$(lang de:"Firmwarepartition wechseln" en:"Toggle firmware partition")"
+}
+[ "$VISUALIZE" != "yes" ] || visualize
 
