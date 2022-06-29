@@ -65,9 +65,9 @@ Latest changes
    * atop 2.7.1
    * BIND 9.11.37/9.16.29
    * CA-bundle 2022-04-26
-   * Curl 7.83.1
+   * Curl 7.84.0
    * dtc 1.6.1
-   * git 2.36.1
+   * Git 2.37.0
    * HAProxy 2.6.1
    * htpdate 1.3.4
    * htop 1.0.3/2.3.1
@@ -96,7 +96,7 @@ Latest changes
    * Smartmontools 7.3
    * strace 4.9/5.0/5.18
    * Stunnel 5.64
-   * SQLite 3.38.5
+   * SQLite 3.39.0
    * tcpdump 4.1.1/4.99.1
    * tmux 3.3a
    * Tinyproxy 1.11.0
