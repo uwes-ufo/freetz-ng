@@ -66,6 +66,7 @@ Latest changes
    * BIND 9.11.37/9.16.29
    * CA-bundle 2022-04-26
    * Curl 7.84.0
+   * Dante 1.4.3
    * dtc 1.6.1
    * Git 2.37.0
    * HAProxy 2.6.1
@@ -87,12 +88,13 @@ Latest changes
    * Nano 6.3
    * Net-SNMP 5.9.1
    * NZBGet 21.1
-   * OpenSSL 0.9.8zh/1.0.2u/1.1.1p/3.0.4
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1q/3.0.5
    * OpenVPN 2.4.12/2.5.7
    * PCSC-lite 1.9.8
    * pcre2 10.40
    * Privoxy 3.0.33
    * radvd 1.9.3/2.19
+   * ser2net 3.5.4
    * Smartmontools 7.3
    * strace 4.9/5.0/5.18
    * Stunnel 5.64
@@ -687,8 +689,7 @@ Latest changes
     * menuconfig push-firmware: flashes the latest build image ./images/latest.image Use ./tools/push_firmware for more options
     * sorting: The packages in menuconfig are sorted now alphabetical. For a faster navigation just type the character, or
       space for pre-assigned.
-    * labor detection: Labor firmware URL is not hardcoded anymore in Freetz, the current URL is detected by using
-      boxmatrix.info, see https://boxmatrix.info/wiki/Labor-Files for currently availabele labor firmwares.
+    * labor detection: Labor firmware URL is not hardcoded anymore in Freetz, the current URL is detected by using boxmatrix.
       The labor option is enabled for all devices without current FritzOS, but having previous FritzOS version.
 
 - Other stuff:

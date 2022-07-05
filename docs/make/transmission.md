@@ -54,7 +54,7 @@ Huge, relatively.
 You will probably need a swap file and you may want to increase
 [swappiness](http://lwn.net/Articles/83588/) to 80
 or something (in Freetz WebIF since
-[[6886]](https://trac.boxmatrix.info/freetz-ng/changeset/6886)).
+(Changeset r6886).
 
 ```
   ------------------------- ------------ -----------
@@ -66,7 +66,7 @@ or something (in Freetz WebIF since
 ```
 
 You can monitor these values easily with the patch from ticket
-[#1308](https://trac.boxmatrix.info/freetz-ng/ticket/1308)
+Ticket #1308
 
 ### Limit memory usage
 

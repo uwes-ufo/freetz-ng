@@ -150,7 +150,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### D
 
-  * **<u>dante 1.2.2 (binary only)</u><a id='dante'></a>**<br>
+  * **[Dante 1.4.3 (binary only)](../docs/make/dante.md)<a id='dante'></a>**<br>
     socks proxy daemon
 
   * **[davfs2: davfs 1.5.2/1.6.1](../docs/make/davfs2.md)<a id='davfs2'></a>**<br>
@@ -615,7 +615,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSH 9.0p1](../docs/make/openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
-  * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1p/3.0.4 (binary only)](../docs/make/openssl.md)<a id='openssl'></a>**<br>
+  * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1q/3.0.5 (binary only)](../docs/make/openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
   * **[OpenVPN 2.4.12/2.5.7](../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
@@ -796,7 +796,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [einhängen/attach](../docs/make/screen.md#einhängenattach)
      - [PuTTY-Tip: Änderung der Fensterbreite beim Screen-Start verhindern](../docs/make/screen.md#putty-tip-änderung-der-fensterbreite-beim-screen-start-verhindern)
 
-  * **[ser2net 2.7](../docs/make/ser2net.md)<a id='ser2net'></a>**<br>
+  * **[ser2net 3.5.4](../docs/make/ser2net.md)<a id='ser2net'></a>**<br>
     Ser2net is a program for allowing network connections to serial ports. It supports RFC 2217 (remote control of serial port parameters), but you must have a complient client.
 
   * **<u>sfk: Swiss File Knife 1.9.7.2</u><a id='sfk'></a>**<br>

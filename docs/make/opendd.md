@@ -29,7 +29,7 @@ Beispielskripte:
 
 Hiermit wird konfiguriert wie die externe IP ermittelt wird. Ab
 Trunk-Version
-[r7376](https://trac.boxmatrix.info/freetz-ng/changeset/7376) wird get_ip an [zentraler
+Changeset r7376 wird get_ip an [zentraler
 Stelle](mod.html#get_ip) konfiguriert, wodurch diese Option bei
 opendd entfällt.
 
@@ -60,7 +60,7 @@ werden:
   E-Mail-Server       Postausgangs-Server des Absender-Accounts (z.B. für Freenet: mx.freenet.de)
   Benutzername        Benutzername des Absender-Accounts
   Passwort            Passwort des Absender-Accounts
-  Timeout             Wie lange auf eine Antwort des E-Mail Servers gewartet wird (nur Freetz, [#2132](https://trac.boxmatrix.info/freetz-ng/ticket/2132))
-  max. Versuche       Maximale Anzahl an Versuchen den E-Mail Server zu erreichen (nur Freetz, [#2132](https://trac.boxmatrix.info/freetz-ng/ticket/2132))
+  Timeout             Wie lange auf eine Antwort des E-Mail Servers gewartet wird (nur Freetz, Ticket #2132)
+  max. Versuche       Maximale Anzahl an Versuchen den E-Mail Server zu erreichen (nur Freetz, Ticket #2132)
   ------------------- --------------------------------------------------------------------------------------------------
 
