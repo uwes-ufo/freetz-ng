@@ -1,3 +1,7 @@
+[ "$FREETZ_ADD_ETCSERVICES" == "y" ] || return 0
+echo1 "creating etc/services"
+
+cat << 'EOF' > ${FILESYSTEM_MOD_DIR}/etc/services
 echo		7/tcp
 echo		7/udp
 discard		9/tcp
@@ -102,9 +106,11 @@ radius		1812/tcp
 radius		1812/udp
 radius-acct	1813/tcp	radacct
 radius-acct	1813/udp	radacct
-ssdp		1900/udp	Simple Service Discovery Protocol
-#nfs		2049/tcp	Network File System
-#nfs		2049/udp	Network File System
+ssdp		1900/udp	# Simple Service Discovery Protocol
+nfsd		2047/tcp	nfs	# Network File System
+nfsd		2047/udp	nfs	# Network File System
+#nfs		2049/tcp	# AVM noobs running an obscure webserver on this port with older FOS
+#nfs		2049/udp	# AVM noobs running an obscure webserver on this port with older FOS
 dict		2628/tcp
 dict		2628/udp
 gpsd		2947/tcp
@@ -135,10 +141,10 @@ xmpp-client	5222/tcp	jabber-client
 xmpp-client	5222/udp	jabber-client
 xmpp-server	5269/tcp	jabber-server
 xmpp-server	5269/udp	jabber-server
-pcp		5351/udp	Port Control Protocol
-mdns		5353/tcp	Multicast Domain Name Service
-mdns		5353/udp	Multicast Domain Name Service
-llmnr		5355/udp	Link Local Multicast Name Resolution
+pcp		5351/udp	# Port Control Protocol
+mdns		5353/tcp	# Multicast Domain Name Service
+mdns		5353/udp	# Multicast Domain Name Service
+llmnr		5355/udp	# Link Local Multicast Name Resolution
 postgresql	5432/tcp	postgres
 postgresql	5432/udp	postgres
 x11		6000/tcp
@@ -174,34 +180,5 @@ sane-port	6566/tcp	sane saned
 ircd		6667/tcp
 git		9418/tcp
 
-avm-contfiltd	82/tcp
-avm-telefon1	1011/tcp
-avm-telefon2	1012/tcp
-avm-rtp		7077/udp	Telefonie RTCP
-avm-usermand	8080/tcp
-kids-locked	8182/tcp	Kindersicherung
-avm-update	8183/tcp	Updatehinweis
-kids-ticket	8184/tcp	Ticketeingabe
-guest-nag	8185/tcp	Gasthinweise
-guest-login	8186/tcp	Gastanmeldung
-avm-telefon3	8888/tcp
-avm-upnp	49000/udp	Universal Plug and Play
-avm-mesh	53805/udp	Mesh Discovery
-
-freetz		81/tcp
-nhipt		83/tcp
-wol		84/tcp
-digitemp	85/tcp
-rrdstats	86/tcp
-vnstat		87/tcp
-lcd4linux	89/tcp
-aha		90/tcp
-nfs		2047/tcp
-nfs		2047/udp
-pyload-remote	7227/tcp
-pyload-webif	8000/tcp
-lighttpd	8008/tcp
-privoxy		8118/tcp
-tor		9050/tcp
-xmail		10025/tcp
+EOF
 
