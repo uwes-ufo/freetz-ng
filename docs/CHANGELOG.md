@@ -46,8 +46,9 @@ Latest changes
  - Packages & libs:
    * CA-bundle 2022-07-19
    * Git 2.37.1
+   * htpdate 1.3.5
    * mbed TLS 2.7.19/2.28.1
-   * SQLite 3.39.1
+   * SQLite 3.39.2
    * Unbound 1.16.1
    * Vim 9.0.0049
 

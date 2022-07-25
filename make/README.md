@@ -336,7 +336,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[htop 1.0.3/3.2.1 (binary only)](../docs/make/htop.md)<a id='htop'></a>**<br>
     htop is a more powerful alternative to top, using ncurses.
 
-  * **[htpdate 1.3.4](../docs/make/htpdate.md)<a id='htpdate'></a>**<br>
+  * **[htpdate 1.3.5](../docs/make/htpdate.md)<a id='htpdate'></a>**<br>
     The HTTP Time Protocol (HTP) is used to synchronize a computer's time with web servers as reference time source. Htpdate will synchronize your computer's time by extracting timestamps from HTTP headers found in web server responses. Htpdate can be used as a daemon, to keep your computer synchronized. WWW: http://www.clevervest.com/htp/ Manpage: http://linux.die.net/man/8/htpdate This package automatically removes AVM'S chronyd if necessary.
 
   * **<u>httpry 0.1.8</u><a id='httpry'></a>**<br>
@@ -846,7 +846,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite (v3.x) database engine (CLI) 3.39.1 (binary only)](../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite (v3.x) database engine (CLI) 3.39.2 (binary only)](../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
