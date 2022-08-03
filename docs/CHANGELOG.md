@@ -43,11 +43,15 @@ Latest changes
  - Known problems:
    * Loading build kernel modules may work or do not. You'll notice.
 
+ - Host tools:
+   * kconfig 5.19
+
  - Packages & libs:
    * CA-bundle 2022-07-19
    * Git 2.37.1
    * htpdate 1.3.5
    * mbed TLS 2.7.19/2.28.1
+   * Nano 6.4
    * SQLite 3.39.2
    * Stunnel 5.65
    * Unbound 1.16.1

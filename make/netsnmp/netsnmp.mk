@@ -72,9 +72,6 @@ NETSNMP_MIB_MODULES_EXCLUDED:=\
 	disman/event \
 	disman/schedule \
 	host \
-	ieee802dot11 \
-	if-mib \
-	mibII \
 	notification \
 	notification-log-mib \
 	target \
@@ -82,6 +79,18 @@ NETSNMP_MIB_MODULES_EXCLUDED:=\
 	ucd_snmp \
 	udp-mib \
 	utilities
+
+ifneq ($(strip $(FREETZ_PACKAGE_NETSNMP_WITH_64BIT)),y)
+NETSNMP_MIB_MODULES_EXCLUDED += \
+	ieee802dot11 \
+	if-mib \
+	mibII
+else
+NETSNMP_MIB_MODULES_INCLUDED += \
+	if-mib/ifXTable \
+	ip-mib/inetNetToMediaTable
+$(PKG)_CONFIGURE_OPTIONS += --enable-mfd-rewrites
+endif
 
 NETSNMP_TRANSPORTS_INCLUDED:=Callback UDP
 
@@ -101,6 +110,7 @@ ifeq ($(strip $(FREETZ_PACKAGE_NETSNMP_WITH_ZLIB)),y)
 $(PKG)_DEPENDS_ON += zlib
 endif
 
+$(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_NETSNMP_WITH_64BIT
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_NETSNMP_WITH_OPENSSL
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_NETSNMP_WITH_ZLIB
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_NETSNMP_WITH_APPLICATIONS
@@ -113,7 +123,7 @@ $(PKG)_CONFIGURE_OPTIONS += --enable-static
 $(PKG)_CONFIGURE_OPTIONS += --with-endianness=$(if $(FREETZ_TARGET_ARCH_BE),big,little)
 $(PKG)_CONFIGURE_OPTIONS += --with-logfile=/var/log/snmpd.log
 $(PKG)_CONFIGURE_OPTIONS += --with-persistent-directory=/var/lib/snmp
-$(PKG)_CONFIGURE_OPTIONS += --with-default-snmp-version=2
+$(PKG)_CONFIGURE_OPTIONS += --with-default-snmp-version=$(if $(FREETZ_PACKAGE_NETSNMP_WITH_ZLIB),2,1)
 $(PKG)_CONFIGURE_OPTIONS += --with-sys-contact=root@localhost
 $(PKG)_CONFIGURE_OPTIONS += --with-sys-location=Unknown
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_NETSNMP_WITH_APPLICATIONS),--enable-applications,--disable-applications)
