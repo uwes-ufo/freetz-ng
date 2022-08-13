@@ -11,7 +11,7 @@ UCLIBC_HASH_0.9.29   = ca70501ae859cd86b387bb196908838275b4b06e6f4d692f9aa51b8a6
 UCLIBC_HASH_0.9.32.1 = b41c91dcc043919a3c19bd73a524adfd375d6d8792ad7be3631f90ecad8465e9
 UCLIBC_HASH_0.9.33.2 = 988d2c777e0605fe253d12157f71ec68f25d1bb8428725d2b7460bf9977e1662
 UCLIBC_HASH_1.0.14   = 3c63d9f8c8b98b65fa5c4040d1c8ab1b36e99a16e1093810cedad51ac15c9a9e
-UCLIBC_HASH_1.0.41   = b32a92a0218d95922d6976464e6ef51e2ebacfbcdb605820458d9dbb8a61e025
+UCLIBC_HASH_1.0.42   = ec6dae44ce86558885e56bc3bef6bd4d082397114e6e1fc15795f71e804d7016
 UCLIBC_HASH=$(UCLIBC_HASH_$(UCLIBC_VERSION))
 
 UCLIBC_ECHO_TYPE:=TTC
@@ -161,6 +161,17 @@ uclibc-menuconfig: $(UCLIBC_DIR)/.config
 	cp -f $^ $(UCLIBC_CONFIG_FILE) && \
 	touch $^
 
+uclibc-olddefconfig: $(UCLIBC_DIR)/.config
+	$(UCLIBC_MAKE) -C $(UCLIBC_DIR) \
+		$(UCLIBC_COMMON_BUILD_FLAGS) \
+		PREFIX=$(TARGET_TOOLCHAIN_DIR)/$(UCLIBC_DEVEL_SUBDIR)/ \
+		DEVEL_PREFIX=/usr/ \
+		RUNTIME_PREFIX=$(TARGET_TOOLCHAIN_DIR)/$(UCLIBC_DEVEL_SUBDIR)/ \
+		HOSTCC="$(TOOLCHAIN_HOSTCC) $(UCLIBC_HOST_CFLAGS)" \
+		olddefconfig && \
+	cp -f $^ $(UCLIBC_CONFIG_FILE) && \
+	touch $^
+
 $(UCLIBC_DIR)/lib/libc.a: $(UCLIBC_DIR)/.configured | $(UCLIBC_PREREQ_GCC_INITIAL)
 	@$(call _ECHO,building,$(UCLIBC_ECHO_TYPE),$(UCLIBC_ECHO_MAKE))
 	$(UCLIBC_MAKE) -C $(UCLIBC_DIR) \
@@ -246,6 +257,9 @@ $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/libc.so.$(TARGET_TOOLCHAIN_UC
 	touch -c $@
 endif
 
+uclibc-autofix: uclibc-dirclean
+	$(MAKE) AUTO_FIX_PATCHES=y uclibc-unpacked
+
 uclibc-configured: kernel-configured $(UCLIBC_DIR)/.configured
 
 uclibc: $(UCLIBC_PREREQ_GCC_INITIAL) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libc.a $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/libc.so.$(TARGET_TOOLCHAIN_UCLIBC_MAJOR_VERSION)
@@ -297,7 +311,7 @@ uclibc_target-dirclean:
 uclibc_target-distclean: uclibc_target-dirclean
 
 
-.PHONY: uclibc-source uclibc-unpacked uclibc-menuconfig uclibc-configured
+.PHONY: uclibc-source uclibc-unpacked uclibc-autofix uclibc-menuconfig uclibc-olddefconfig uclibc-configured
 .PHONY: uclibc        uclibc-clean        uclibc-dirclean        uclibc-distclean
 .PHONY: uclibc_target uclibc_target-clean uclibc_target-dirclean uclibc_target-distclean
 

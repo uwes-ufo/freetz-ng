@@ -44,7 +44,7 @@ jobs:
           git clone https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
 
       - name: cache
-        uses: actions/cache@v3.0.5
+        uses: actions/cache@v3
         with:
           path: |
             dl/*
@@ -75,7 +75,7 @@ jobs:
           git tag -d dl-hosttools && git push --delete origin dl-hosttools || true
 
       - name: release
-        uses: ncipollo/release-action@v1.10.0
+        uses: ncipollo/release-action@v1
         with:
           tag: dl-hosttools
           name: dl-hosttools

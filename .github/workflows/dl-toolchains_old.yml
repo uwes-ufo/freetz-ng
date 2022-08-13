@@ -51,7 +51,7 @@ jobs:
           git clone https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
 
       - name: cache
-        uses: actions/cache@v3.0.5
+        uses: actions/cache@v3
         with:
           path: |
             dl/*
@@ -90,7 +90,7 @@ jobs:
 #         for x in $(git tag | grep -v "_$ACTIONS_VERSION$" | grep 'dl-toolchains_'); do git tag -d $x && git push --delete origin $x || true; done
 
       - name: release
-        uses: ncipollo/release-action@v1.10.0
+        uses: ncipollo/release-action@v1
         with:
           tag: dl-toolchains_${{ steps.version.outputs.version }}
           name: dl-toolchains-${{ steps.version.outputs.version }}
