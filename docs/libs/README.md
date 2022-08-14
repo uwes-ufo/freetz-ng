@@ -85,7 +85,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libavmhmac (libavmhmac.so) - EXPERIMENTAL 0.2](libavmhmac.md)<a id='libavmhmac'></a>**<br>
     Replaces AVM's libavmhmac. Our libavmhmac only forwards functions to openssl's libcrypto where AVM wrote their own implementations. We have no clue why they did this.
 
-  * **[libcap (libcap.so) 2.49/2.64](libcap.md)<a id='libcap'></a>**<br>
+  * **[libcap (libcap.so) 2.49/2.65](libcap.md)<a id='libcap'></a>**<br>
     A library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.
 
   * **[libcapi: CAPI 2.0 (libcapi20.so) avm-7390.05.50](libcapi.md)<a id='libcapi'></a>**<br>
@@ -205,7 +205,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libusb1: libusb-1.0 (libusb-1.0.so) 1.0.23/1.0.26](libusb1.md)<a id='libusb1'></a>**<br>
     A library for accessing Linux USB devices (current API).
 
-  * **[libuv (libuv.so) 1.44.1](libuv.md)<a id='libuv'></a>**<br>
+  * **[libuv (libuv.so) 1.44.2](libuv.md)<a id='libuv'></a>**<br>
     libuv is a async IO library for various programs
 
   * **[libvorbis (libvorbis.so) 1.3.5](libvorbis.md)<a id='libvorbis'></a>**<br>

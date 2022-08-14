@@ -49,9 +49,11 @@ Latest changes
  - Packages & libs:
    * BIND 9.11.37/9.16.31
    * CA-bundle 2022-07-19
-   * Git 2.37.1
+   * Git 2.37.2
    * htpdate 1.3.6
+   * libcap 2.49/2.65
    * libtirpc 1.3.3
+   * libuv 1.44.2
    * Lighttpd 1.4.66
    * mbed TLS 2.7.19/2.28.1
    * Nano 6.4
