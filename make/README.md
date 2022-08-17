@@ -314,7 +314,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.1](../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.2](../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](../docs/make/haserl.md)<a id='haserl'></a>**<br>
@@ -977,7 +977,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UnRAR 6.1.7 (binary only)](../docs/make/unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
-  * **<u>usbids: USB IDs 0.0</u><a id='usbids'></a>**<br>
+  * **[usbids: usb.ids a5edeafb60](../docs/make/usbids.md)<a id='usbids'></a>**<br>
     This package provides up-to-date version of the usb.ids file needed by many usb related packages.
 
   * **<u>util-linux (binary only)</u><a id='util-linux'></a>**<br>

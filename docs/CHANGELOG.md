@@ -50,6 +50,7 @@ Latest changes
    * BIND 9.11.37/9.16.31
    * CA-bundle 2022-07-19
    * Git 2.37.2
+   * HAProxy 2.6.2
    * htpdate 1.3.6
    * libcap 2.49/2.65
    * libtirpc 1.3.3
@@ -64,6 +65,7 @@ Latest changes
    * Stunnel 5.65
    * uClibc-ng 1.0.42
    * Unbound 1.16.2
+   * usb.ids a5edeafb60
    * Vim 9.0.0049
 
  - Firmware updates:
