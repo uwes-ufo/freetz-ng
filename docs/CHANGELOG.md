@@ -45,6 +45,8 @@ Latest changes
 
  - Host tools:
    * kconfig 5.19
+   * precompiled host-tools 2022-08-21
+   * xz 5.2.6
 
  - Packages & libs:
    * BIND 9.11.37/9.16.31
@@ -67,6 +69,7 @@ Latest changes
    * Unbound 1.16.2
    * usb.ids a5edeafb60
    * Vim 9.0.0049
+   * XZ Utils 5.2.6
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
