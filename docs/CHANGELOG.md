@@ -43,6 +43,9 @@ Latest changes
  - Known problems:
    * Loading build kernel modules may work or do not. You'll notice.
 
+ - Build system:
+   * ccache 4.6.2
+
  - Host tools:
    * kconfig 5.19
    * precompiled host-tools 2022-08-21
@@ -65,6 +68,7 @@ Latest changes
    * SQLite 3.39.2
    * strace 4.9/5.0/5.19
    * Stunnel 5.65
+   * Tor 0.4.7.9
    * uClibc-ng 1.0.42
    * Unbound 1.16.2
    * usb.ids a5edeafb60
