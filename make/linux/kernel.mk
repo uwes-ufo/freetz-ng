@@ -68,25 +68,22 @@ $(KERNEL_DIR)/.unpacked: $(DL_KERNEL_SOURCE) $(if $(FREETZ_REPLACE_SOURCE_AVAILA
 ifeq ($(strip $(FREETZ_REPLACE_SOURCE_AVAILABLE)),y)
 	@echo "#vanilla to avm patch: $(DL_DIR)/$(DL_KERNEL_AVMDIFF_SOURCE)" $(SILENT)
 	@$(call APPLY_PATCHES,$(DL_DIR),$(KERNEL_SOURCE_DIR),$(DL_KERNEL_AVMDIFF_SOURCE))
+	@echo "#vanilla to avm fixes" $(SILENT)
+	@find $(KERNEL_SOURCE_DIR) -type l -exec rm -f {} ';'
+	@$(TOOLS_DIR)/unxz $(DL_DIR)/$(DL_KERNEL_AVMDIFF_SOURCE) -c | grep -E '^    #FREETZ# (mkdir|chmod|slink|touch) .*' | while read x a b c; do \
+	  [ "$$a" != "mkdir" ] && [ "$$b" != "$${b%/*}" ] && mkdir -p    "$(KERNEL_SOURCE_DIR)/$${b%/*}"; \
+	  [ "$$a" == "mkdir" ] && mkdir -p    "$(KERNEL_SOURCE_DIR)/$${b}"; \
+	  [ "$$a" == "chmod" ] && touch       "$(KERNEL_SOURCE_DIR)/$${b}"; \
+	  [ "$$a" == "chmod" ] && chmod +x    "$(KERNEL_SOURCE_DIR)/$${b}"; \
+	  [ "$$a" == "slink" ] && ln -s "$$c" "$(KERNEL_SOURCE_DIR)/$${b}"; \
+	  [ "$$a" == "touch" ] && touch       "$(KERNEL_SOURCE_DIR)/$${b}"; \
+	done || true
 endif
 	@echo "#kernel version specific patches: $(KERNEL_PATCHES_DIR)" $(SILENT)
 	@$(call APPLY_PATCHES,$(KERNEL_PATCHES_DIR),$(KERNEL_DIR))
 	@echo "#firmware version specific patches: $(KERNEL_PATCHES_DIR)/$(AVM_SOURCE_ID)" $(SILENT)
 	@$(call APPLY_PATCHES,$(KERNEL_PATCHES_DIR)/$(AVM_SOURCE_ID),$(KERNEL_DIR))
-	@$(call _ECHO,fixing,$(KERNEL_ECHO_TYPE))
-ifeq ($(strip $(FREETZ_REPLACE_SOURCE_AVAILABLE)),y)
-	@find $(KERNEL_SOURCE_DIR) -type l -exec rm -f {} ';'
-	@$(TOOLS_DIR)/unxz $(DL_DIR)/$(DL_KERNEL_AVMDIFF_SOURCE) -c | grep -E '^    #FREETZ# (mkdir|chmod|slink|touch) .*' | while read x a b c; do \
-	  [ "$$a" == "mkdir" ] && mkdir -p    "$(KERNEL_SOURCE_DIR)/$${b}"; \
-	  [ "$$a" == "chmod" ] && mkdir -p    "$(KERNEL_SOURCE_DIR)/$${b%/*}"; \
-	  [ "$$a" == "chmod" ] && touch       "$(KERNEL_SOURCE_DIR)/$${b}"; \
-	  [ "$$a" == "chmod" ] && chmod +x    "$(KERNEL_SOURCE_DIR)/$${b}"; \
-	  [ "$$a" == "slink" ] && mkdir -p    "$(KERNEL_SOURCE_DIR)/$${b%/*}"; \
-	  [ "$$a" == "slink" ] && ln -s "$$c" "$(KERNEL_SOURCE_DIR)/$${b}"; \
-	  [ "$$a" == "touch" ] && mkdir -p    "$(KERNEL_SOURCE_DIR)/$${b%/*}"; \
-	  [ "$$a" == "touch" ] && touch       "$(KERNEL_SOURCE_DIR)/$${b}"; \
-	done || true
-endif
+	@echo "#additional generic fixes" $(SILENT)
 	@for i in $(KERNEL_LINKING_FILES); do \
 		f="$${i%%,*}"; symlink_location="$${i##*,}"; \
 		if [ -e "$(KERNEL_SOURCE_DIR)/$${f}" ] && [ -d "$(KERNEL_SOURCE_DIR)/$$(dirname $${symlink_location})" ]; then \
@@ -97,9 +94,9 @@ endif
 					&& \
 					[ "$$(readlink -f "$(KERNEL_SOURCE_DIR)/$${symlink_location}")" != "$(abspath $(KERNEL_SOURCE_DIR))/$${f}" ] \
 				; then \
-					$(call nMESSAGE, Warning: Symlink \"$(KERNEL_SOURCE_DIR)/$${symlink_location}\" doesn't point to expected \"$${symlink_target}\"); \
+					$(call MESSAGE, Warning: Symlink \"$(KERNEL_SOURCE_DIR)/$${symlink_location}\" doesn't point to expected \"$${symlink_target}\"); \
 					if [ "$$(readlink "$(KERNEL_SOURCE_DIR)/$${symlink_location}" | sed 's/^\/.*/X/')" == "X" ]; then \
-						$(call nMESSAGE, Deleting \"$(KERNEL_SOURCE_DIR)/$${symlink_location}\" --> $$(readlink "$(KERNEL_SOURCE_DIR)/$${symlink_location}")); \
+						$(call MESSAGE, Deleting \"$(KERNEL_SOURCE_DIR)/$${symlink_location}\" --> $$(readlink "$(KERNEL_SOURCE_DIR)/$${symlink_location}")); \
 						$(RM) "$(KERNEL_SOURCE_DIR)/$${symlink_location}"; \
 					else \
 						continue; \
@@ -110,17 +107,17 @@ endif
 			fi; \
 			\
 			if [ -e "$(KERNEL_SOURCE_DIR)/$${symlink_location}" ]; then \
-				$(call nMESSAGE, Warning: \"$(KERNEL_SOURCE_DIR)/$${symlink_location}\" is expected to be a symlink to \"$${symlink_target}\"); \
+				$(call MESSAGE, Warning: \"$(KERNEL_SOURCE_DIR)/$${symlink_location}\" is expected to be a symlink to \"$${symlink_target}\"); \
 				continue; \
 			fi; \
 			\
-			$(call nMESSAGE, Linking  \"$(KERNEL_SOURCE_DIR)/$${symlink_location}\" to \"$${symlink_target}\"); \
+			$(call MESSAGE, Linking  \"$(KERNEL_SOURCE_DIR)/$${symlink_location}\" to \"$${symlink_target}\"); \
 			ln -sf "$${symlink_target}" "$(KERNEL_SOURCE_DIR)/$${symlink_location}"; \
 		fi; \
 	done;
 	@for i in $$(find $(KERNEL_SOURCE_DIR) -name Makefile.26 -printf '%h\n'); do \
 		if [ ! -e $$i/Makefile ]; then \
-			$(call nMESSAGE, Linking  \"$$i/Makefile\" to \"Makefile.26\"); \
+			$(call MESSAGE, Linking  \"$$i/Makefile\" to \"Makefile.26\"); \
 			ln -sf Makefile.26 $$i/Makefile; \
 		fi; \
 	done;
@@ -148,7 +145,7 @@ endif
 		}' {} '+' \
 		| sort -u \
 	); do \
-		$(call nMESSAGE, Creating \"$$i\"); \
+		$(call MESSAGE, Creating \"$$i\"); \
 		mkdir -p $$(dirname "$$i"); \
 		[ -h $$i ] && $(RM) $$i; \
 		touch $$i; \
@@ -159,13 +156,12 @@ endif
 		| sort -u \
 	); do \
 		if [ ! -e $(KERNEL_SOURCE_DIR)/$$i ]; then \
-			$(call nMESSAGE, Creating \"$(KERNEL_SOURCE_DIR)/$$i\"); \
+			$(call MESSAGE, Creating \"$(KERNEL_SOURCE_DIR)/$$i\"); \
 			mkdir -p $(KERNEL_SOURCE_DIR)/$${i%\/*}; \
 			[ -h $(KERNEL_SOURCE_DIR)/$$i ] && $(RM) $(KERNEL_SOURCE_DIR)/$$i; \
 			touch $(KERNEL_SOURCE_DIR)/$$i; \
 		fi; \
 	done; \
-	$(call nMESSAGE);
 	ln -s linux-$(KERNEL_VERSION_MAJOR) $(KERNEL_DIR)/linux
 	touch $@
 
