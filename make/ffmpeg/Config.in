@@ -1,4 +1,4 @@
-config FREETZ_PACKAGE_FFMPEG
+menuconfig FREETZ_PACKAGE_FFMPEG
 	bool "FFmpeg 4.4.2"
 	default n
 	help
