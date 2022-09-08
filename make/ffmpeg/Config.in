@@ -41,16 +41,11 @@ config FREETZ_PACKAGE_FFMPEG_ffserver
 	select FREETZ_PACKAGE_FFMPEG_PROTOCOL_rtp
 	default n
 
-config FREETZ_PACKAGE_FFMPEG_EVERYTHING_ABANDON
-	bool
-	default y
-	depends on (FREETZ_TARGET_UCLIBC_0_9_28 || FREETZ_TARGET_UCLIBC_0_9_29)
-	help
-		libatomic needs uclibc > 0.9.29
-
 config FREETZ_PACKAGE_FFMPEG_EVERYTHING
 	bool "everything"
-	depends on !FREETZ_PACKAGE_FFMPEG_EVERYTHING_ABANDON
+	depends on !FREETZ_TARGET_UCLIBC_0_9_28
+	depends on !FREETZ_TARGET_UCLIBC_0_9_29
+	depends on FREETZ_OPENSSL_VERSION_1
 	select FREETZ_LIB_liblzma
 	select FREETZ_LIB_libopenjpeg
 	default n
