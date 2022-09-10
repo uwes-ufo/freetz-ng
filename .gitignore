@@ -26,4 +26,6 @@
 !.config
 !.config-7270
 !.config-7490
+
+# ignore eclipse project files
 /.project
