@@ -52,23 +52,27 @@ Latest changes
    * xz 5.2.6
 
  - Packages & libs:
-   * BIND 9.11.37/9.16.32
+   * BIND 9.11.37/9.16.33
    * CA-bundle 2022-07-19
    * Curl 7.85.0
    * expat 2.4.9
    * ffmpeg 4.4.2
+   * FUSE 2.9.9
    * Git 2.37.3
    * HAProxy 2.6.4
    * htpdate 1.3.6
    * libcap 2.49/2.65
+   * liblz4 1.9.4
+   * libnettle 3.8.1
    * libtirpc 1.3.3
    * libuv 1.44.2
    * Lighttpd 1.4.67
-   * liblz4 1.9.4
    * mbed TLS 2.7.19/2.28.1
    * minidlna 1.3.2
    * Nano 6.4
    * Net-SNMP 5.9.3
+   * rsync 3.2.6
+   * Screen 4.9.0
    * SQLite 3.39.3
    * strace 4.9/5.0/5.19
    * Stunnel 5.65
