@@ -47,7 +47,7 @@ Latest changes
    * ccache 4.6.3
 
  - Host tools:
-   * kconfig 5.19
+   * kconfig 6.0
    * precompiled host-tools 2022-08-21
    * xz 5.2.6
 
@@ -61,10 +61,11 @@ Latest changes
    * FreeType 2.12.1
    * FUSE 2.9.9
    * Git 2.37.3
-   * HAProxy 2.6.4
+   * HAProxy 2.6.6
    * htpdate 1.3.6
    * jpeg 9e
-   * libcap 2.49/2.65
+   * libattr 2.5.1
+   * libcap 2.49/2.66
    * liblz4 1.9.4
    * libmaxminddb 1.7.1
    * libnettle 3.8.1
@@ -82,7 +83,7 @@ Latest changes
    * Stunnel 5.65
    * Tor 0.4.7.9
    * uClibc-ng 1.0.42
-   * Unbound 1.16.2
+   * Unbound 1.16.6
    * usb.ids a5edeafb60
    * Vim 9.0.0049
    * XZ Utils 5.2.6

@@ -10,7 +10,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[apr-util: Apache Portable Runtime Utility Library (libaprutil-1.so) 1.6.1](apr-util.md)<a id='apr-util'></a>**<br>
     APR Util is a utilities library implemented on top of APR, providing database access, xml parsing, and other useful functionality.
 
-  * **[attr: libattr (libattr.so) 2.4.44](attr.md)<a id='attr'></a>**<br>
+  * **[attr: libattr (libattr.so) 2.5.1](attr.md)<a id='attr'></a>**<br>
     libattr allows to modify extended attributes of files.
 
 ### B
@@ -85,7 +85,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libavmhmac (libavmhmac.so) - EXPERIMENTAL 0.2](libavmhmac.md)<a id='libavmhmac'></a>**<br>
     Replaces AVM's libavmhmac. Our libavmhmac only forwards functions to openssl's libcrypto where AVM wrote their own implementations. We have no clue why they did this.
 
-  * **[libcap (libcap.so) 2.49/2.65](libcap.md)<a id='libcap'></a>**<br>
+  * **[libcap (libcap.so) 2.49/2.66](libcap.md)<a id='libcap'></a>**<br>
     A library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.
 
   * **[libcapi: CAPI 2.0 (libcapi20.so) avm-7390.05.50](libcapi.md)<a id='libcapi'></a>**<br>
