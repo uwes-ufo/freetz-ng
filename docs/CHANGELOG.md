@@ -48,12 +48,12 @@ Latest changes
 
  - Host tools:
    * kconfig 6.0
-   * precompiled host-tools 2022-08-21
-   * xz 5.2.6
+   * precompiled host-tools 2022-10-12
+   * xz 5.2.7
 
  - Packages & libs:
    * BIND 9.11.37/9.16.33
-   * CA-bundle 2022-07-19
+   * CA-bundle 2022-10-11
    * Cifsmount 7.0
    * Curl 7.85.0
    * Dnsmasq 2.80/2.87
@@ -79,6 +79,7 @@ Latest changes
    * minidlna 1.3.2
    * Nano 6.4
    * Net-SNMP 5.9.3
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1r/3.0.6
    * rsync 3.2.6
    * Screen 4.9.0
    * SQLite 3.39.4
@@ -90,7 +91,7 @@ Latest changes
    * UNFS3 0.9.23
    * usb.ids a5edeafb60
    * Vim 9.0.0049
-   * XZ Utils 5.2.6
+   * XZ Utils 5.2.7
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
