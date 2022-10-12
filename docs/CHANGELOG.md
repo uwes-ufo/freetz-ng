@@ -47,37 +47,51 @@ Latest changes
    * ccache 4.6.3
 
  - Host tools:
-   * kconfig 5.19
-   * precompiled host-tools 2022-08-21
-   * xz 5.2.6
+   * kconfig 6.0
+   * precompiled host-tools 2022-10-12
+   * xz 5.2.7
 
  - Packages & libs:
-   * BIND 9.11.37/9.16.32
-   * CA-bundle 2022-07-19
+   * BIND 9.11.37/9.16.33
+   * CA-bundle 2022-10-11
+   * Cifsmount 7.0
    * Curl 7.85.0
+   * Dnsmasq 2.80/2.87
    * expat 2.4.9
-   * ffmpeg 4.4.2
-   * Git 2.37.3
-   * HAProxy 2.6.4
+   * FFmpeg 5.1.2
+   * FreeType 2.12.1
+   * FUSE 2.9.9
+   * Git 2.38.0
+   * HAProxy 2.6.6
    * htpdate 1.3.6
-   * libcap 2.49/2.65
+   * iPerf3 3.12
+   * jpeg 9e
+   * libattr 2.5.1
+   * libcap 2.49/2.66
+   * liblz4 1.9.4
+   * libmaxminddb 1.7.1
+   * libnettle 3.8.1
+   * libpopt 1.19
    * libtirpc 1.3.3
    * libuv 1.44.2
    * Lighttpd 1.4.67
-   * liblz4 1.9.4
    * mbed TLS 2.7.19/2.28.1
    * minidlna 1.3.2
    * Nano 6.4
    * Net-SNMP 5.9.3
-   * SQLite 3.39.3
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1r/3.0.6
+   * rsync 3.2.6
+   * Screen 4.9.0
+   * SQLite 3.39.4
    * strace 4.9/5.0/5.19
-   * Stunnel 5.65
+   * Stunnel 5.66
    * Tor 0.4.7.9
    * uClibc-ng 1.0.42
-   * Unbound 1.16.2
+   * Unbound 1.16.6
+   * UNFS3 0.9.23
    * usb.ids a5edeafb60
    * Vim 9.0.0049
-   * XZ Utils 5.2.6
+   * XZ Utils 5.2.7
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

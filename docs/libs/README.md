@@ -10,7 +10,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[apr-util: Apache Portable Runtime Utility Library (libaprutil-1.so) 1.6.1](apr-util.md)<a id='apr-util'></a>**<br>
     APR Util is a utilities library implemented on top of APR, providing database access, xml parsing, and other useful functionality.
 
-  * **[attr: libattr (libattr.so) 2.4.44](attr.md)<a id='attr'></a>**<br>
+  * **[attr: libattr (libattr.so) 2.5.1](attr.md)<a id='attr'></a>**<br>
     libattr allows to modify extended attributes of files.
 
 ### B
@@ -36,7 +36,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FLAC (libFLAC.so) 1.3.2](flac.md)<a id='flac'></a>**<br>
     Free Lossless Audio Codec library.
 
-  * **[FreeType 2 font engine (freetype.so) 2.10.1](freetype.md)<a id='freetype'></a>**<br>
+  * **[FreeType (freetype.so) 2.12.1](freetype.md)<a id='freetype'></a>**<br>
     FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well.
 
 ### G
@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[jansson: libjansson (libjansson.so) 2.7](jansson.md)<a id='jansson'></a>**<br>
     A C library for encoding, decoding and manipulating JSON data.
 
-  * **[JPEG library (libjpeg.so) 9d](jpeg.md)<a id='jpeg'></a>**<br>
+  * **[JPEG library (libjpeg.so) 9e](jpeg.md)<a id='jpeg'></a>**<br>
     libjpeg is a library for handling the JPEG (JFIF) image format
 
 ### L
@@ -85,7 +85,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libavmhmac (libavmhmac.so) - EXPERIMENTAL 0.2](libavmhmac.md)<a id='libavmhmac'></a>**<br>
     Replaces AVM's libavmhmac. Our libavmhmac only forwards functions to openssl's libcrypto where AVM wrote their own implementations. We have no clue why they did this.
 
-  * **[libcap (libcap.so) 2.49/2.65](libcap.md)<a id='libcap'></a>**<br>
+  * **[libcap (libcap.so) 2.49/2.66](libcap.md)<a id='libcap'></a>**<br>
     A library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.
 
   * **[libcapi: CAPI 2.0 (libcapi20.so) avm-7390.05.50](libcapi.md)<a id='libcapi'></a>**<br>
@@ -148,7 +148,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libmad (libmad.so) 0.15.1b](libmad.md)<a id='libmad'></a>**<br>
     MAD is a high-quality MPEG audio decoder. It currently supports MPEG-1 and the MPEG-2 extension to Lower Sampling Frequencies, as well as the so-called MPEG 2.5 format. All three audio layers (Layer I, Layer II, and Layer III a.k.a. MP3) are fully implemented.
 
-  * **[libmaxminddb (libmaxminddb.so) 1.6.0](libmaxminddb.md)<a id='libmaxminddb'></a>**<br>
+  * **[libmaxminddb (libmaxminddb.so) 1.7.1](libmaxminddb.md)<a id='libmaxminddb'></a>**<br>
     C library for the MaxMind DB file format. You'll need an additional .mmdb file, put it on storage. Get it here: https://github.com/P3TERX/GeoLite.mmdb/
 
   * **[libmnl (libmnl.so) 1.0.4](libmnl.md)<a id='libmnl'></a>**<br>
@@ -247,7 +247,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[neon: libneon (libneon.so) 0.30.2/0.32.2](neon.md)<a id='neon'></a>**<br>
     neon is an HTTP and WebDAV client library, with a C language API.
 
-  * **[nettle: libnettle (libnettle.so) 3.6](nettle.md)<a id='nettle'></a>**<br>
+  * **[nettle: libnettle (libnettle.so) 3.8.1](nettle.md)<a id='nettle'></a>**<br>
     A low level cryptographic library (symmetric and one-way cryptos)
 
 ### O
@@ -279,7 +279,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[polarssl13: PolarSSL-1.3.x (libpolarssl13.so) 1.3.22](polarssl13.md)<a id='polarssl13'></a>**<br>
     The aim of the PolarSSL project is to provide a quality, open-source cryptographic library written in C and targeted at embedded systems. See https://polarssl.org for more details.
 
-  * **[popt: libpopt (libpopt.so) 1.16](popt.md)<a id='popt'></a>**<br>
+  * **[popt: libpopt (libpopt.so) 1.19](popt.md)<a id='popt'></a>**<br>
     The popt library exists essentially for parsing command line options.
 
   * **[protobuf-c: libprotobuf-c (libprotobuf-c.so) 1.1.0](protobuf-c.md)<a id='protobuf-c'></a>**<br>
@@ -287,7 +287,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### R
 
-  * **[readline: libreadline (libreadline.so) 6.3](readline.md)<a id='readline'></a>**<br>
+  * **[readline: libreadline (libreadline.so) 8.2](readline.md)<a id='readline'></a>**<br>
     The Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. Both Emacs and vi editing modes are available. The Readline library includes additional functions to maintain a list of previously-entered command lines, to recall and perhaps reedit those lines, and perform csh-like history expansion on previous commands.
 
 ### S

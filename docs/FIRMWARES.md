@@ -206,6 +206,7 @@ Currently supported devices and firmwares
   - 262.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
 * __Fritz!Box 6850 5G (UNTESTED)__
   - 258.07.30 rev94600 {ALL} [PSQ19P2NL4]
+  - 258.07.39 rev99728 {ALL} [MOVE21] (Labor)
   - 258.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
 
 * __Fritz!Box 6890 LTE__
@@ -507,7 +508,7 @@ Currently supported devices and firmwares
   - 172.07.29 rev93267 {ALL} [PSQ19P2NL4]
 * __Fritz!Repeater 1200 AX__
   - 268.07.30 rev93528 {ALL} [PSQ19P2NL4]
-* __Fritz!Repeater 2400 (UNTESTED)__
+* __Fritz!Repeater 2400__
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.21 rev83013 {ALL} [PSQ19]
   - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
