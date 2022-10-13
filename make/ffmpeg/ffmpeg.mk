@@ -1,6 +1,6 @@
-$(call PKG_INIT_BIN, 4.4.2)
+$(call PKG_INIT_BIN, 4.4.3)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.bz2
-$(PKG)_HASH:=F98A482520C47507521A907914DAA9EFBC1384E0591B5AFC3DA18AA897DE2948
+$(PKG)_HASH:=33b8c2dbcd530fe1db5710415345609b4ca227bd0da1e3a9332dbb0f11fd273a
 $(PKG)_SITE:=http://www.ffmpeg.org/releases
 
 $(PKG)_DEPENDS_ON += zlib
@@ -32,7 +32,6 @@ $(PKG)_PROTOCOLS := file http pipe rtp tcp udp
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_TARGET_IPV6_SUPPORT
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_FFMPEG_ffmpeg
-$(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_FFMPEG_ffserver
 $(foreach i,encoder decoder muxer demuxer parser protocol, \
 	$(eval $(PKG)_REBUILD_SUBOPTS += $(patsubst %,FREETZ_PACKAGE_FFMPEG_$(call TOUPPER_NAME,$(i))_%,$($(PKG)_$(call TOUPPER_NAME,$(i))S))) \
 	$(eval $(PKG)_CONFIGURE_$(call TOUPPER_NAME,$(i))S := $(foreach c,$($(PKG)_$(call TOUPPER_NAME,$(i))S),$(if $(FREETZ_PACKAGE_FFMPEG_$(call TOUPPER_NAME,$(i))_$(c)),--enable-$(i)="$(c)"))) \
@@ -90,7 +89,6 @@ $(PKG)_CONFIGURE_OPTIONS += $($(PKG)_CONFIGURE_PROTOCOLS)
 endif
 
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_ffmpeg),--enable-ffmpeg,--disable-ffmpeg)
-$(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_FFMPEG_ffserver),--enable-ffserver) #,--disable-ffserver)
 $(PKG)_CONFIGURE_OPTIONS += --disable-ffplay
 $(PKG)_CONFIGURE_OPTIONS += --disable-ffprobe
 $(PKG_SOURCE_DOWNLOAD)

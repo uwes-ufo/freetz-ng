@@ -1,5 +1,4 @@
 [ "$EXTERNAL_FREETZ_PACKAGE_FFMPEG_ffmpeg" == "y" ] && EXTERNAL_FILES+=" /usr/bin/ffmpeg"
-[ "$EXTERNAL_FREETZ_PACKAGE_FFMPEG_ffserver" == "y" ] && EXTERNAL_FILES+=" /usr/bin/ffserver"
 
 [ "$EXTERNAL_FREETZ_LIB_libavcodec" == "y" ] && EXTERNAL_FILES+=" ${FREETZ_LIBRARY_DIR}/libavcodec.so.58.134.100"
 [ "$EXTERNAL_FREETZ_LIB_libavdevice" == "y" ] && EXTERNAL_FILES+=" ${FREETZ_LIBRARY_DIR}/libavdevice.so.58.13.100"
