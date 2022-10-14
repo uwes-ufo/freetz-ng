@@ -62,7 +62,7 @@ Latest changes
    * FreeType 2.12.1
    * FUSE 2.9.9
    * Git 2.38.0
-
+   * GnuTLS 3.7.8
    * HAProxy 2.6.6
    * htpdate 1.3.6
    * iPerf3 3.12
@@ -2768,5 +2768,5 @@ See svn log for more details.
 
 ```
 
-Latest change of this file: $Id: 9da85f946de175a4399794c7ebc9a0ddffe12c96 $
+Latest change of this file: $Id$
 ```
