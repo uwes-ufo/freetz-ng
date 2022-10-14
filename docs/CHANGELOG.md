@@ -62,6 +62,7 @@ Latest changes
    * FreeType 2.12.1
    * FUSE 2.9.9
    * Git 2.38.0
+   * GnuTLS 3.7.8
    * HAProxy 2.6.6
    * htpdate 1.3.6
    * iPerf3 3.12
@@ -72,6 +73,7 @@ Latest changes
    * libmaxminddb 1.7.1
    * libnettle 3.8.1
    * libpopt 1.19
+   * libtasn1 4.19.0
    * libtirpc 1.3.3
    * libuv 1.44.2
    * Lighttpd 1.4.67
@@ -79,7 +81,7 @@ Latest changes
    * minidlna 1.3.2
    * Nano 6.4
    * Net-SNMP 5.9.3
-   * OpenSSL 0.9.8zh/1.0.2u/1.1.1r/3.0.6
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1q/3.0.5
    * rsync 3.2.6
    * Screen 4.9.0
    * SQLite 3.39.4
@@ -92,6 +94,7 @@ Latest changes
    * usb.ids a5edeafb60
    * Vim 9.0.0049
    * XZ Utils 5.2.7
+   * zlib 1.2.13
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
