@@ -1,7 +1,7 @@
 #!/bin/bash
 # generates docs/make/README.md and make/README.md (subs)
 MDPWD="$(dirname $(realpath $0))"
-INPWD="$MDPWD/../../make"
+INPWD="$MDPWD/../../make/pkgs"
 
 PKGS=$(
 for dir in avm $(find "$INPWD" -maxdepth 1 -mindepth 1 -type d); do
@@ -30,7 +30,7 @@ echo "$PKGS" | sed 's/##.*//g' | uniq | while read cat; do
 		if [ -e "$MDPWD/$pkg.md" ]; then
 			while [ "$(awk 'END{print NR}' "$MDPWD/$pkg.md")" -lt 2 ]; do echo >> "$MDPWD/$pkg.md"; done
 			sed "1c# $dsc" -i "$MDPWD/$pkg.md"
-			lnk="https://github.com/Freetz-NG/freetz-ng/tree/master/make/$pkg/"
+			lnk="https://github.com/Freetz-NG/freetz-ng/tree/master/make/pkgs/$pkg/"
 			sed "/^ - Package: \[.*)$/d" -i "$MDPWD/$pkg.md"
 			sed "2i\ - Package: \[${lnk:44}\]($lnk)" -i "$MDPWD/$pkg.md"
 			for pair in CVSREPO°Repository CHANGES°Changelog MANPAGE°Manpage WEBSITE°Homepage; do
@@ -38,7 +38,7 @@ echo "$PKGS" | sed 's/##.*//g' | uniq | while read cat; do
 				lnk="$(sed -n "s/^### ${pair%%°*}:= *//p" "$INPWD/$pkg/$pkg.mk")"
 				[ -n "$lnk" ] && sed "2i\ - ${pair#*°}: \[$lnk\]($lnk)" -i "$MDPWD/$pkg.md"
 			done
-			itm="[$itm](../docs/make/$pkg.md)"
+			itm="[$itm](../../docs/make/$pkg.md)"
 			lst="$(sed -n 's/^### //p' "$MDPWD/$pkg.md" | grep -v ' Links$')"
 		else
 			itm="<u>$itm</u>"
@@ -55,9 +55,9 @@ echo "$PKGS" | sed 's/##.*//g' | uniq | while read cat; do
 		help="$(tail -n "$T" "$INPWD/$pkg/Config.in" | head -n "$(( ${N:-99} - 1 ))" | grep -vP '^[ \t]*$' | sed 's/[ \t]*$//g;s/^[ \t]*//g;s/$/ /g' | tr -d '\n' | sed 's/ $//')"
 		[ -z "$help" ] && echo "nohelp2: $pkg" 1>&2 || echo "    $help"
 
-		[ -n "$lst" ] && echo "$lst" | while read line; do echo "     - [$line](../docs/make/$pkg.md#$(echo "$line" | sed -re 's/(.*)/\L\1/;s/[ _]/-/g;s/[^-0-9a-z]//g'))"; done
+		[ -n "$lst" ] && echo "$lst" | while read line; do echo "     - [$line](../../docs/make/$pkg.md#$(echo "$line" | sed -re 's/(.*)/\L\1/;s/[ _]/-/g;s/[^-0-9a-z]//g'))"; done
 
 	done
 done >> "$INPWD/README.md"
-grep -v '^     - ' "$INPWD/README.md" | sed 's,](../docs/make/,](,g' > "$MDPWD/README.md"
+grep -v '^     - ' "$INPWD/README.md" | sed 's,](../../docs/make/,](,g' > "$MDPWD/README.md"
 
