@@ -314,7 +314,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>js OSSP 1.6.20070208 (binary only)</u><a id='js'></a>**<br>
     OSSP js is a stand-alone distribution of the JavaScript (JS) programming language reference implementation from Mozilla.
 
-  * **[juis_check 1.1](juis_check.md)<a id='juis-check'></a>**<br>
+  * **[juis_check 1.3](juis_check.md)<a id='juis-check'></a>**<br>
     This integrates the juis_check script from tools/ dir into the image. It run 23 time faster (0,3sec vs 7sec) than other bloated implementations and needs only 4% of space (4kB vs 93kB).
 
 ### K
@@ -450,7 +450,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Openntpd 3.9p1](openntpd.md)<a id='openntpd'></a>**<br>
     OpenNTPD is a FREE, easy to use implementation of the Network Time Protocol. This package automatically removes AVM'S chronyd if necessary.
 
-  * **[OpenSSH 9.0p1](openssh.md)<a id='openssh'></a>**<br>
+  * **[OpenSSH 9.1p1](openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1q/3.0.5 (binary only)](openssl.md)<a id='openssl'></a>**<br>

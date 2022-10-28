@@ -12,7 +12,7 @@
 # You shouldn't need to mess with anything beyond this point...
 #--------------------------------------------------------------
 
-include include/make/100-suffixes.mk
+include make/include/100-suffixes.mk
 MAKEFLAGS+=--no-print-directory
 
 # Envira: Custom environment and arguments
@@ -81,8 +81,8 @@ MIRROR_DIR:=$(DL_DIR)/mirror
 TOOLCHAIN_BUILD_DIR:=$(TOOLCHAIN_DIR)/$(BUILD_DIR)
 TOOLS_BUILD_DIR:=$(TOOLS_DIR)/$(BUILD_DIR)
 
-include $(INCLUDE_DIR)/make/200-aliases.mk
-include $(INCLUDE_DIR)/make/300-helper.mk
+include $(MAKE_DIR)/include/200-aliases.mk
+include $(MAKE_DIR)/include/300-helper.mk
 
 # load user configuration file
 -include $(TOPDIR)/.config
@@ -145,7 +145,7 @@ $(error Running makefile as root is prohibited! Please build Freetz as normal us
 endif
 
 # Mod archive unpacked incorrectly (heuristics)? -> Error
-ifeq ($(shell MWW=make/mod/files/root/usr/mww; \
+ifeq ($(shell MWW=make/pkgs/mod/files/root/usr/mww; \
 	[ ! -L $$MWW/cgi-bin/index.cgi -o ! -x $$MWW/cgi-bin/status.cgi -o -x $$MWW/index.html ] \
 	&& echo y\
 ),y)
@@ -153,7 +153,7 @@ $(error File permissions or links are wrong! Please unpack Freetz on a filesyste
 endif
 
 # Folder root/ needs 755 permissions
-ifneq ($(shell stat -c %a make/mod/files/root),755)
+ifneq ($(shell stat -c %a make/pkgs/mod/files/root),755)
 $(error Wrong build directory permissions. Please set umask to 0022 and then unpack/checkout again in a directory having no uid-/gid-bits set)
 endif
 
@@ -168,7 +168,7 @@ $(error Cygwin is not supported! Please use a real Linux environment)
 endif
 
 # git-svn removes empty directories, check for one of them
-ifneq (OK,$(shell [ -d make/mod/files/root/sys ] && echo OK))
+ifneq (OK,$(shell [ -d make/pkgs/mod/files/root/sys ] && echo OK))
 $(error The empty directory root/sys is missing! Please do a clean checkout)
 endif
 
@@ -191,7 +191,7 @@ endif
 # genin: (re)generate .in files if necessary
 ifneq ($(findstring clean,$(MAKECMDGOALS)),clean)
 # Note: the list of the packages to be treated specially (the 3rd argument of get-subdirs-containing) should match that used in genin
-ifneq ($(call genin-get-considered-packages,make/Config.in.generated),$(call get-subdirs-containing,make,Config.in,libs busybox asterisk[-].* python[-].* iptables-cgi ruby-fcgi nhipt sg3_utils))
+ifneq ($(call genin-get-considered-packages,make/pkgs/Config.in.generated),$(call get-subdirs-containing,make/pkgs,Config.in,asterisk[-].* iptables-cgi nhipt python[-].* ruby-fcgi sg3_utils))
 ifneq ($(shell $(GENERATE_IN_TOOL) $(if $(findstring legacy,$(MAKECMDGOALS)),legacy) >&2 && echo OK),OK)
 $(error genin failed)
 endif
@@ -284,12 +284,12 @@ endif
 export FREETZ_VERBOSITY_LEVEL
 export VERBOSE
 
-include $(INCLUDE_DIR)/make/400-host.mk
-include $(INCLUDE_DIR)/make/500-echo.mk
-include $(INCLUDE_DIR)/make/600-macros.mk
+include $(MAKE_DIR)/include/400-host.mk
+include $(MAKE_DIR)/include/500-echo.mk
+include $(MAKE_DIR)/include/600-macros.mk
 
-include $(TOOLS_DIR)/make/Makefile.in
-include $(call sorted-wildcard,$(TOOLS_DIR)/make/*/*.mk)
+include $(MAKE_DIR)/host-tools/Makefile.in
+include $(call sorted-wildcard,$(MAKE_DIR)/host-tools/*/*.mk)
 
 TOOLS_CACHECLEAN:=$(patsubst %,%-cacheclean,$(TOOLS))
 TOOLS_CLEAN:=$(patsubst %,%-clean,$(TOOLS))
@@ -331,16 +331,20 @@ step: image world tools firmware
 
 -include .config.cmd
 
-include $(TOOLCHAIN_DIR)/make/Makefile.in
-include $(INCLUDE_DIR)/make/700-image.mk
-include $(MAKE_DIR)/Makefile.in
+include $(MAKE_DIR)/toolchain/Makefile.in
+include $(MAKE_DIR)/include/700-image.mk
+include $(MAKE_DIR)/pkgs/Makefile.in
 include $(call sorted-wildcard,$(MAKE_DIR)/libs/*/Makefile.in)
-include $(call sorted-wildcard,$(MAKE_DIR)/*/Makefile.in)
+include $(call sorted-wildcard,$(MAKE_DIR)/pkgs/*/Makefile.in)
+include $(call sorted-wildcard,$(MAKE_DIR)/busybox/Makefile.in)
+include $(call sorted-wildcard,$(MAKE_DIR)/kernel/Makefile.in)
 
 ALL_PACKAGES:=
 NON_LOCALSOURCE_PACKAGES:=
 include $(call sorted-wildcard,$(MAKE_DIR)/libs/*/*.mk)
-include $(call sorted-wildcard,$(MAKE_DIR)/*/*.mk)
+include $(call sorted-wildcard,$(MAKE_DIR)/pkgs/*/*.mk)
+include $(call sorted-wildcard,$(MAKE_DIR)/busybox/busybox.mk)
+include $(call sorted-wildcard,$(MAKE_DIR)/kernel/kernel.mk)
 PACKAGES_CHECK_DOWNLOADS:=$(patsubst %,%-check-download,$(NON_LOCALSOURCE_PACKAGES))
 PACKAGES_MIRROR:=$(patsubst %,%-download-mirror,$(NON_LOCALSOURCE_PACKAGES))
 
@@ -367,10 +371,10 @@ TOOLCHAIN_DISTCLEAN:=$(patsubst %,%-distclean,$(TOOLCHAIN))
 TOOLCHAIN_SOURCE:=$(patsubst %,%-source,$(TOOLCHAIN))
 
 ifeq ($(strip $(FREETZ_BUILD_TOOLCHAIN)),y)
-include $(TOOLCHAIN_DIR)/make/kernel-toolchain.mk
-include $(TOOLCHAIN_DIR)/make/target-toolchain.mk
+include $(MAKE_DIR)/toolchain/kernel-toolchain.mk
+include $(MAKE_DIR)/toolchain/target-toolchain.mk
 else
-include $(TOOLCHAIN_DIR)/make/download-toolchain.mk
+include $(MAKE_DIR)/toolchain/download-toolchain.mk
 endif
 
 package-list: package-list-clean $(PACKAGES_LIST)
@@ -599,7 +603,7 @@ $(eval $(call CONFIG_CLEAN_DEPS,config-clean-deps-keep-busybox,kernel modules$(_
 common-cacheclean:
 	[ ! -x .fwmod_custom ] || ./.fwmod_custom clean
 	./fwmod_custom clean
-	$(RM) make/Config.in.generated make/external.in.generated
+	$(RM) make/pkgs/Config.in.generated make/pkgs/external.in.generated
 	$(RM) .config.compressed .config.old  .config.*.tmp
 	$(RM) .packages .exclude-release-tmp $(CONFIG_IN_CACHE)
 	$(RM) $(DL_FW_DIR)/*.detected.image $(DL_FW_DIR)/*.detected.image.url
