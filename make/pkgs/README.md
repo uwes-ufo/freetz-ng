@@ -142,7 +142,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only)](../../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 7.85.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
+  * **[Curl 7.86.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -178,7 +178,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[decrypt-fritzos-cfg: decrypt FRITZ!OS configs 0.2](../../docs/make/decrypt-fritzos-cfg.md)<a id='decrypt-fritzos-cfg'></a>**<br>
     This package provides a set of tools making it possible to decrypt encrypted parts (usually credentials) of FRITZ!OS configuration files. See https://github.com/PeterPawn/decode_passwords, http://www.ip-phone-forum.de/showthread.php?t=276183, http://www.ip-phone-forum.de/showthread.php?t=295101 for usage details and technical background. NO RESPONSIBILITY DISCLAIMER: Adding easy usable tools like these (to emphasize it once more - tools providing password decryption capabilities) decreases the SECURITY of your box. Use it on YOUR OWN RISK, Freetz is not responsible for any potential losses or damages resulting/arising from adding these tools to your firmware.
 
-  * **[dehydrated 0.7.0 (letsencrypt)](../../docs/make/dehydrated.md)<a id='dehydrated'></a>**<br>
+  * **[dehydrated 0.7.1 (letsencrypt)](../../docs/make/dehydrated.md)<a id='dehydrated'></a>**<br>
     Dehydrated is a client for signing certificates with an ACME-server (e.g. Let's Encrypt) implemented as a relatively simple (zsh-compatible) bash-script. This client supports both ACME v1 and the new ACME v2 including support for wildcard certificates!
      - [Zertifikat erstellen](../../docs/make/dehydrated.md#zertifikat-erstellen)
      - [Zertifikat benutzen](../../docs/make/dehydrated.md#zertifikat-benutzen)
