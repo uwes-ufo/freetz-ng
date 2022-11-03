@@ -21,6 +21,7 @@
 /kernel
 /packages
 /source
+/toolchain
 
 # uwe
 !.config
@@ -29,3 +30,4 @@
 
 # ignore eclipse project files
 /.project
+
