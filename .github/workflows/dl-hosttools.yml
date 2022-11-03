@@ -12,7 +12,7 @@ on:
 jobs:
   build:
     container:
-#     image: ubuntu:18.04
+#     image: ubuntu:20.04
 #     image: freetzng/dl-packs
       image: ghcr.io/freetz-ng/dl-packs
     runs-on: ubuntu-latest
@@ -49,13 +49,13 @@ jobs:
           path: |
             dl/*
             !dl/tools-*.tar.xz
-          key: ${{ github.workflow }}-20220526
+          key: ${{ github.workflow }}
 
       - name: version
         id: version
         run: |
           export VERSION="r$(tools/freetz_revision short)"
-          [ -n "$VERSION" ] && echo "::set-output name=version::$VERSION" || exit 1
+          [ -n "$VERSION" ] && echo "version=$VERSION" >> $GITHUB_OUTPUT || exit 1
           echo "################################################################" && bash -c "echo VERSION=$VERSION"
 
       - name: generate
