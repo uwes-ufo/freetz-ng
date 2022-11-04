@@ -48,7 +48,8 @@ Latest changes
    * Ccache 4.7.2
 
  - Host tools:
-   * precompiled host-tools 2022-11-01
+   * fakeroot 1.30.1
+   * precompiled host-tools 2022-11-04
 
  - Packages:
    * Curl 7.86.0
