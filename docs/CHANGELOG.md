@@ -45,10 +45,11 @@ Latest changes
    * Loading build kernel modules may work or do not. You'll notice.
 
  - Build system:
-   * Ccache 4.7.2
+   * Ccache 4.7.3
 
  - Host tools:
-   * precompiled host-tools 2022-11-01
+   * fakeroot 1.30.1
+   * precompiled host-tools 2022-11-04
 
  - Packages:
    * Curl 7.86.0
@@ -61,6 +62,7 @@ Latest changes
  - Libraries:
    * expat 2.5.0
    * libidn 1.41
+   * libgpg-error 1.46
    * libxml2 2.10.3
 
  - Firmware updates:
