@@ -148,7 +148,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>dosfstools 3.0.28 (binary only)</u><a id='dosfstools'></a>**<br>
     utilities to create, check and label MS-DOS FAT filesystems
 
-  * **[Dropbear 2022.82](dropbear.md)<a id='dropbear'></a>**<br>
+  * **[Dropbear 2022.83](dropbear.md)<a id='dropbear'></a>**<br>
     Dropbear SSH server and client Dropbear is a relatively small SSH 2 server and client. It runs on a variety of POSIX-based platforms. Dropbear is open source software, distributed under a MIT-style license. Dropbear is particularly useful for "embedded"-type Linux (or other Unix) systems, such as wireless routers. Features - A small memory footprint suitable for memory-constrained environments - Dropbear can compile to a 110kB statically linked binary with uClibc on x86 (only minimal options selected) - Dropbear server implements X11 forwarding, and authentication-agent forwarding for OpenSSH clients - Can run from inetd or standalone - Compatible with OpenSSH ~/.ssh/authorized_keys public key authentication - The server, client, keygen, and key converter can be compiled into a single binary (a la busybox) - Features can easily be disabled when compiling to save space TCP forwarding support
 
   * **[dtach 0.8 (binary only)](dtach.md)<a id='dtach'></a>**<br>
@@ -690,7 +690,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[tmux 3.3a (binary only)](tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.7.10](tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.7.11](tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
 
   * **[Transmission 3.00 (binary only)](transmission.md)<a id='transmission'></a>**<br>
