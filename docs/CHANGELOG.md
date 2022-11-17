@@ -49,8 +49,9 @@ Latest changes
 
  - Host tools:
    * fakeroot 1.30.1
-   * precompiled host-tools 2022-11-04
+   * precompiled host-tools 2022-11-17
    * sed 4.9
+   * xz 5.2.8
 
  - Packages:
    * Curl 7.86.0
@@ -62,6 +63,7 @@ Latest changes
    * RPCBind 1.2.6
    * strace 4.9/5.0/6.0
    * Tor 0.4.7.11
+   * XZ Utils 5.2.8
 
  - Libraries:
    * expat 2.5.0
