@@ -57,6 +57,7 @@ Latest changes
    * Curl 7.86.0
    * dehydrated 0.7.1 (letsencrypt)
    * Dropbear 2022.83
+   * Nano 7.0
    * OpenSSH 9.1p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7
    * OpenVPN 2.4.12/2.5.8
@@ -69,6 +70,7 @@ Latest changes
    * expat 2.5.0
    * libidn 1.41
    * libgpg-error 1.46
+   * libusb-compat 0.1.8
    * libxml2 2.10.3
    * neon 0.30.2/0.32.4
 
