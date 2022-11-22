@@ -45,7 +45,7 @@ Latest changes
    * Loading build kernel modules may work or do not. You'll notice.
 
  - Build system:
-   * Ccache 4.7.3
+   * Ccache 4.7.4
 
  - Host tools:
    * fakeroot 1.30.1
@@ -64,6 +64,7 @@ Latest changes
    * RPCBind 1.2.6
    * strace 4.9/5.0/6.0
    * Tor 0.4.7.11
+   * Unbound 1.17.0
    * XZ Utils 5.2.8
 
  - Libraries:
