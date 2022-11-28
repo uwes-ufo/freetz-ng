@@ -5,7 +5,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### A
 
-  * **[ACME.sh 3.0.4 (letsencrypt)](acme.md)<a id='acme'></a>**<br>
+  * **[ACME.sh 3.0.5 (letsencrypt)](acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
   * **[apache2: Apache HTTP Server 2.4.54 (binary only)](apache2.md)<a id='apache2'></a>**<br>
@@ -319,7 +319,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### K
 
-  * **[Knockd 0.7](knock.md)<a id='knock'></a>**<br>
+  * **[Knock 0.8](knock.md)<a id='knock'></a>**<br>
     Knockd is a port-knock server. It listens to all traffic on an ethernet (or PPP) interface, looking for special "knock" sequences of port-hits.
 
 ### L
