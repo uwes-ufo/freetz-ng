@@ -2,6 +2,10 @@ $(call PKG_INIT_BIN, 1.0.4)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HASH:=X
 $(PKG)_SITE:=git@https://github.com/catalinii/minisatip
+### WEBSITE:=https://minisatip.org
+### MANPAGE:=https://github.com/catalinii/minisatip/wiki
+### CHANGES:=https://github.com/catalinii/minisatip/releases
+### CVSREPO:=https://github.com/catalinii/minisatip
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/$(pkg)
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/$(pkg)
@@ -11,6 +15,8 @@ $(PKG)_TARGET_WEBROOT := $($(PKG)_DEST_DIR)/usr/share/minisatip/html
 
 $(PKG)_EXCLUDED += $(if $(FREETZ_PACKAGE_MINISATIP_HTML),,usr/share)
 
+
+$(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_KERNEL_VERSION_2_6_39_MAX),$(if $(FREETZ_KERNEL_VERSION_2_6_39_3),sendmmsg))
 
 $(PKG)_CONFIGURE_OPTIONS += --disable-dvbca
 $(PKG)_CONFIGURE_OPTIONS += --disable-netcv

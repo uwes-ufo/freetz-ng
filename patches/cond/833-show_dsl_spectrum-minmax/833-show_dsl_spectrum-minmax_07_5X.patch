@@ -1,0 +1,33 @@
+--- usr/www/all/internet/spectrum.js
++++ usr/www/all/internet/spectrum.js
+@@ -18,7 +18,7 @@
+ }
+ ;
+ let active=false;
+-let showMinMax=false;
++let showMinMax=true;
+ let defChartChannelLinePatternsSVG;
+ let snrData= {
+ 
+@@ -702,10 +702,10 @@
+ class:"textlink nocancel",id:"uiToggleMinMax"
+ }
+ ," {
+-?557:386?
++?557:61?
+ }
+ ")),html2.div(html2.a( {
+-class:"hide",id:"uiMinMaxReset"
++class:"textlink",id:"uiMinMaxReset"
+ }
+ ," {
+ ?557:66?
+@@ -1146,7 +1146,7 @@
+ 
+ }
+ ;
+-showMinMax=false;
++showMinMax=true;
+ gResetMinMax=false;
+ active=false;
+ 

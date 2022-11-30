@@ -45,25 +45,37 @@ Latest changes
    * Loading build kernel modules may work or do not. You'll notice.
 
  - Build system:
-   * Ccache 4.7.3
+   * Ccache 4.7.4
 
  - Host tools:
    * fakeroot 1.30.1
-   * precompiled host-tools 2022-11-04
+   * precompiled host-tools 2022-11-17
+   * sed 4.9
+   * xz 5.2.8
 
  - Packages:
+   * ACME.sh 3.0.5 (letsencrypt)
    * Curl 7.86.0
    * dehydrated 0.7.1 (letsencrypt)
+   * Dropbear 2022.83
+   * Knock 0.8
+   * Nano 7.0
    * OpenSSH 9.1p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7
    * OpenVPN 2.4.12/2.5.8
+   * RPCBind 1.2.6
    * strace 4.9/5.0/6.0
+   * Tor 0.4.7.11
+   * Unbound 1.17.0
+   * XZ Utils 5.2.8
 
  - Libraries:
    * expat 2.5.0
    * libidn 1.41
    * libgpg-error 1.46
+   * libusb-compat 0.1.8
    * libxml2 2.10.3
+   * neon 0.30.2/0.32.4
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

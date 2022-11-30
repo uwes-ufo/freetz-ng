@@ -199,7 +199,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libtool (libltdl.so) 1.5.26](libtool.md)<a id='libtool'></a>**<br>
     A generic dynamic object loading library
 
-  * **[libusb-0.1 (libusb-0.1.so) 0.1.7/0.1.12](libusb.md)<a id='libusb'></a>**<br>
+  * **[libusb-0.1 (libusb-0.1.so) 0.1.8/0.1.12](libusb.md)<a id='libusb'></a>**<br>
     A library for accessing Linux USB devices (legacy API).
 
   * **[libusb1: libusb-1.0 (libusb-1.0.so) 1.0.23/1.0.26](libusb1.md)<a id='libusb1'></a>**<br>
@@ -244,7 +244,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ncursesw (libncursesw.so) 6.3](ncursesw.md)<a id='ncursesw'></a>**<br>
     ncurses is a programming library providing an API, allowing the programmer to write text user interfaces in a terminal-independent manner. It also optimizes screen changes, in order to reduce the latency experienced when using remote shells. Ncurses stands for "new curses", and is a replacement for the discontinued 4.4 BSD classic curses. Ncursesw has additional wide-character (unicode) support. Ncurses and Ncursesw libraries are source-compatible, but not binary-compatible.
 
-  * **[neon: libneon (libneon.so) 0.30.2/0.32.2](neon.md)<a id='neon'></a>**<br>
+  * **[neon: libneon (libneon.so) 0.30.2/0.32.4](neon.md)<a id='neon'></a>**<br>
     neon is an HTTP and WebDAV client library, with a C language API.
 
   * **[nettle: libnettle (libnettle.so) 3.8.1](nettle.md)<a id='nettle'></a>**<br>
