@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.36/9.16.33](../../docs/make/bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.16.35](../../docs/make/bind.md)<a id='bind'></a>**<br>
     BIND is an implementation of the Domain Name System (DNS) protocols. The name BIND stands for "Berkeley Internet Name Daemon". You have to provide the config and needed zone files yourself.
      - [named.conf](../../docs/make/bind.md#namedconf)
 
@@ -107,7 +107,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Callmonitor 1.20.9-git](../../docs/make/callmonitor.md)<a id='callmonitor'></a>**<br>
     Callmonitor enables you to perform arbitrary actions upon incoming calls on your AVM Fritz!Box (e.g., to send notifications to your favorite set-top box, to wake up your PC, or to send you a mail when you have missed a call).
 
-  * **[CCID 1.5.0](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
+  * **[CCID 1.5.1](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
     ccid provides the source code for a generic USB CCID (Chip/Smart Card Interface Devices) driver and ICCD (Integrated Circuit(s) Card Devices).
 
   * **[Checkmaild 0.4.7](../../docs/make/checkmaild.md)<a id='checkmaild'></a>**<br>
@@ -314,7 +314,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.6](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.7](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](../../docs/make/haserl.md)<a id='haserl'></a>**<br>
@@ -641,7 +641,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>p7zip 16.02 (binary only)</u><a id='p7zip'></a>**<br>
     7-Zip  is  a  file  archiver  with the highest compression ratio. The program supports 7z (that implements LZMA compression algorithm), ZIP, CAB, ARJ, GZIP, BZIP2, TAR, CPIO, RPM and DEB formats. Compression ratio in the new 7z format is 30-50% better  than ratio in ZIP format.
 
-  * **[PCSC-lite 1.9.8 (binary only)](../../docs/make/pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
+  * **[PCSC-lite 1.9.9 (binary only)](../../docs/make/pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
     The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a very small form factor for communicating to smart cards and readers.
 
   * **<u>phonebook-tools: Phone book tools 0.0</u><a id='phonebook-tools'></a>**<br>
@@ -846,7 +846,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite 3.39.4 (binary only)](../../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite 3.40.0 (binary only)](../../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>

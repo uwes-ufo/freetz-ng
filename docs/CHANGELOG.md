@@ -58,16 +58,21 @@ Latest changes
 
  - Packages:
    * ACME.sh 3.0.5 (letsencrypt)
+   * BIND 9.11.37/9.16.35
+   * CCID 1.5.1
    * Curl 7.86.0
    * dehydrated 0.7.1 (letsencrypt)
    * Dropbear 2022.83
+   * HAProxy 2.6.7
    * Knock 0.8
    * Nano 7.0
    * OpenSSH 9.1p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7
    * OpenVPN 2.4.12/2.5.8
+   * PCSC-lite 1.9.9
    * RPCBind 1.2.6
    * strace 4.9/5.0/6.0
+   * SQLite 3.40.0
    * Tor 0.4.7.11
    * Unbound 1.17.0
    * XZ Utils 5.2.8
