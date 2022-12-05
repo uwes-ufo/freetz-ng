@@ -54,7 +54,7 @@ Latest changes
    * fakeroot 1.30.1
    * precompiled host-tools 2022-11-17
    * sed 4.9
-   * xz 5.2.8
+   * xz 5.2.9
 
  - Packages:
    * ACME.sh 3.0.5 (letsencrypt)
@@ -62,6 +62,7 @@ Latest changes
    * CCID 1.5.1
    * Curl 7.86.0
    * dehydrated 0.7.1 (letsencrypt)
+   * Dnsmasq 2.80/2.88
    * Dropbear 2022.83
    * HAProxy 2.6.7
    * Knock 0.8
@@ -75,7 +76,7 @@ Latest changes
    * SQLite 3.40.0
    * Tor 0.4.7.11
    * Unbound 1.17.0
-   * XZ Utils 5.2.8
+   * XZ Utils 5.2.9
 
  - Libraries:
    * expat 2.5.0
