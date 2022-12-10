@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 8ff297df5 uwe 2022-12-06
+#  freetz-ng b57492310 uwe 2022-12-10
 #
 
 #
@@ -1446,7 +1446,7 @@ FREETZ_MODULES_OWN=""
 # FREETZ_MODULE_ppp_async is not set
 # FREETZ_MODULE_ppp_deflate is not set
 # FREETZ_MODULE_ppp_generic is not set
-# FREETZ_MODULE_ppp_mppe_mppc is not set
+# FREETZ_MODULE_ppp_mppe is not set
 # FREETZ_MODULE_pppoe is not set
 
 #
