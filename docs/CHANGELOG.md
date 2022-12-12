@@ -55,6 +55,11 @@ Latest changes
    * sed 4.9
    * xz 5.2.9
 
+ - Patches:
+   * remove AVMCOUNTERD: collects some data for you
+   * remove AVM-WireGuard: VPN even with IPv6 support!!1
+   * Various Fritzos 7.5 related changes
+
  - Packages:
    * ACME.sh 3.0.5 (letsencrypt)
    * BIND 9.11.37/9.16.35
@@ -63,7 +68,7 @@ Latest changes
    * dehydrated 0.7.1 (letsencrypt)
    * Dnsmasq 2.80/2.88
    * Dropbear 2022.83
-   * Git 2.38.2
+   * Git 2.39.0
    * HAProxy 2.6.7
    * Knock 0.8
    * Lua 5.1.5/5.4.4
@@ -86,7 +91,7 @@ Latest changes
    * libusb-compat 0.1.8
    * libxml2 2.10.3
    * neon 0.30.2/0.32.4
-   * pcre2 10.41
+   * pcre2 10.42
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
