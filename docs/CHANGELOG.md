@@ -49,6 +49,7 @@ Latest changes
 
  - Host tools:
    * fakeroot 1.30.1
+   * kconfig 6.1
    * precompiled host-tools 2022-12-10
    * pseudo 1.9.0 oe-core c9670c2
    * sed 4.9
@@ -62,6 +63,7 @@ Latest changes
    * dehydrated 0.7.1 (letsencrypt)
    * Dnsmasq 2.80/2.88
    * Dropbear 2022.83
+   * Git 2.38.2
    * HAProxy 2.6.7
    * Knock 0.8
    * Lua 5.1.5/5.4.4
