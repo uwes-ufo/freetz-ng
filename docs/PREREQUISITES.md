@@ -6,8 +6,12 @@ Eine einfache Möglichkeit die benötigten Pakete zu installieren besteht darin,
  - [Ubuntu](#ubuntu)
  - sonst keine
 
+### Problematische Distributionen
+ - Debian
+ - Gentoo
+
 ### Alle anderen Distributionen
-... sind ungetestet und können funktinieren oder auch nicht. Dies hängt start von den Fähigkeiten des Bedieners ab. Debian ist dafür bekannt ungeeignet zu sein.
+... sind ungetestet und können funktionieren oder auch nicht. Dies hängt start von den Fähigkeiten des Bedieners ab.
 
 ### Distribution ermitteln
 Wenn man vergessen hat welche Linux Version installiert ist kann dies so prüfen:
