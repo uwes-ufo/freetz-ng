@@ -137,7 +137,7 @@ Currently supported devices and firmwares
   - 257.07.30 rev99334 {ALL} [PSQ19P2NL4]
   - 257.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
 * __Fritz!Box 5590 Fiber__
-  - 272.07.29 rev95450 {ALL} [PSQ19P2NL4]
+  - 272.07.30 rev101793 {ALL} [PSQ19P2NL4]
 
 ### Fritz!Box Cable (64xx/65xx/66xx)
 
@@ -448,8 +448,7 @@ Currently supported devices and firmwares
   - 154.07.13 rev74390 {INT} [MESH18 NL3]
   - 154.07.21 rev82154 {ALL} [PSQ19]
   - 154.07.29 rev92051 {ALL} [PSQ19P2NL4]
-  - 154.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
-  - 154.07.39 rev00000 {ALL} [MOVE21] (Labor)
+  - 154.07.50 rev101716 {ALL} [MOVE21]
 * __Fritz!Box Fon WLAN 7590 AX__
   - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
   - 259.07.39 rev00000 {ALL} [MOVE21] (Inhaus)

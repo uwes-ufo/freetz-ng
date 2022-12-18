@@ -380,12 +380,21 @@ config FREETZ_REMOVE_AVM_VPN
 		vpn settings. This will save about 120kB compressed size.
 
 config FREETZ_REMOVE_AVM_WIREGUARD
-	bool "Remove WireGuard - UNTESTED"
+	bool "Remove WireGuard"
 	default n
 	depends on FREETZ_AVM_HAS_WIREGUARD
+	select FREETZ_REMOVE_AVM_VPN if FREETZ_AVM_HAS_VPN
 	help
 		Remove AVM's WireGuard executables, library and kernel module.
 		This will save about 275kB compressed size.
+
+config FREETZ_REMOVE_AVMCOUNTERD
+	bool "Remove AVMCOUNTERD"
+	default n
+	depends on FREETZ_AVM_HAS_AVMCOUNTERD
+	help
+		Remove AVM's AVMCOUNTERD executable and libraries.
+		This will save about 68kB compressed size.
 
 config FREETZ_REMOVE_WEBSRV
 	bool "Remove websrv"
@@ -1257,7 +1266,6 @@ config FREETZ_MODIFY_DSL_WARNING
 
 config FREETZ_MODIFY_DSL_SPECTRUM
 	bool "Extend DSL spectrum"
-	depends on FREETZ_AVM_VERSION_07_25_MAX  # fixme
 	depends on FREETZ_TYPE_DSL && FREETZ_AVM_VERSION_06_5X_MIN && !FREETZ_REMOVE_DSLD && !FREETZ_REMOVE_MULTI_ANNEX_FIRMWARE_PRIME
 	default n
 	help

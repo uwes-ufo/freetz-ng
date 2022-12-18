@@ -2,6 +2,7 @@
 
 . /etc/init.d/modlibrc
 DAEMON=dsld
+DAEMON_BIN=dsld
 DAEMON_LONG_NAME="AVM-$DAEMON"
 PID_FILE=/var/run/${DAEMON}.pid
 
@@ -40,7 +41,7 @@ start() {
 
 	#remove duplicate arguments
 	DAEMON_ARGS="$(for arg in $DAEMON_CMD $DAEMON_OPT; do [ "$arg" != "dsld" ] && echo " $arg"; done |sort -u)"
-	$DAEMON $DAEMON_ARGS 2>/dev/null
+	$DAEMON_BIN $DAEMON_ARGS 2>/dev/null
 	exitval=$?
 	if [ "$exitval" -eq 0 ]; then
 		echo 'done.'
@@ -57,11 +58,19 @@ stop() {
 	if [ -n "$DAEMON_PID" ]; then
 		for arg in $(xargs -0 < /proc/${DAEMON_PID}/cmdline); do grep -q " $arg" ${TMPFILE}OPT 2>/dev/null || echo " $arg"; done > ${TMPFILE}CMD
 	fi
-	$DAEMON -s
+	$DAEMON_BIN -s
 }
 
 reload() {
-	$DAEMON -I
+	local ret
+	if [ -x "$(which svctl)" ]; then
+		msgsend -a $DAEMON reload
+		ret=$?
+	else
+		$DAEMON_BIN -I
+		ret=$?
+	fi
+	return $ret
 }
 
 set_options() {

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 DAEMON=multid
+DAEMON_BIN=multid
 DAEMON_LONG_NAME="AVM-$DAEMON"
 CONF_NAME=avm
 . /etc/init.d/modlibrc
@@ -107,7 +108,15 @@ stop() {
 }
 
 reload() {
-	$DAEMON_BIN -I
+	local ret
+	if [ -x "$(which svctl)" ]; then
+		msgsend -a $DAEMON reload
+		ret=$?
+	else
+		$DAEMON_BIN -I
+		ret=$?
+	fi
+	return $ret
 }
 
 case $1 in

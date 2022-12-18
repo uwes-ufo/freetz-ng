@@ -1,19 +1,19 @@
-$(call PKG_INIT_LIB, 10.40)
+$(call PKG_INIT_LIB, 10.42)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.bz2
-$(PKG)_HASH:=14e4b83c4783933dc17e964318e6324f7cae1bc75d8f3c79bc6969f00c159d68
-$(PKG)_SITE:=https://github.com/PhilipHazel/pcre2/releases/download/pcre2-$($(PKG)_VERSION)
+$(PKG)_HASH:=8d36cd8cb6ea2a4c2bb358ff6411b0c788633a2a45dabbf1aeb4b701d1b5e840
+$(PKG)_SITE:=https://github.com/PCRE2Project/pcre2/releases/download/pcre2-$($(PKG)_VERSION)
 ### WEBSITE:=https://www.pcre.org/
 ### MANPAGE:=https://www.pcre.org/current/doc/html/
-### CHANGES:=https://www.pcre.org/changelog.txt
-### CVSREPO:=https://github.com/PhilipHazel/pcre2
+### CHANGES:=https://github.com/PCRE2Project/pcre2/blob/master/ChangeLog
+### CVSREPO:=https://github.com/PCRE2Project/pcre2
 
-$(PKG)_LIB_VERSION:=0.11.0
+$(PKG)_LIB_VERSION:=0.11.2
 $(PKG)_LIBNAME=libpcre2-8.so.$($(PKG)_LIB_VERSION)
 $(PKG)_BINARY:=$($(PKG)_DIR)/.libs/$($(PKG)_LIBNAME)
 $(PKG)_STAGING_BINARY:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/$($(PKG)_LIBNAME)
 $(PKG)_TARGET_BINARY:=$($(PKG)_TARGET_DIR)/$($(PKG)_LIBNAME)
 
-$(PKG)_POSIX_LIB_VERSION:=3.0.2
+$(PKG)_POSIX_LIB_VERSION:=3.0.4
 $(PKG)_POSIX_LIBNAME=libpcre2-posix.so.$($(PKG)_POSIX_LIB_VERSION)
 $(PKG)_POSIX_BINARY:=$($(PKG)_DIR)/.libs/$($(PKG)_POSIX_LIBNAME)
 $(PKG)_POSIX_STAGING_BINARY:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/$($(PKG)_POSIX_LIBNAME)

@@ -1,6 +1,18 @@
 # PREREQUISITES: Installation der benötigten Pakete
 Eine einfache Möglichkeit die benötigten Pakete zu installieren besteht darin, diesen Code per Copy and Paste auf der Konsole auszuführen!
 
+### Getestete Distributionen
+ - [Fedora](#fedora)
+ - [Ubuntu](#ubuntu)
+ - sonst keine
+
+### Problematische Distributionen
+ - Debian
+ - Gentoo
+
+### Alle anderen Distributionen
+... sind ungetestet und können funktionieren oder auch nicht. Dies hängt start von den Fähigkeiten des Bedieners ab.
+
 ### Distribution ermitteln
 Wenn man vergessen hat welche Linux Version installiert ist kann dies so prüfen:
 

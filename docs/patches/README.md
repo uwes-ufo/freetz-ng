@@ -20,13 +20,16 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[REMOVE_AURA_USB: Remove AURA (AVM USB Remote-Architecture)](REMOVE_AURA_USB.md)<a id='remove-aura-usb'></a>**<br>
     Remove the aura-usb-daemon (remote USB connection, USB-Fernanschluss) and some related files. This patch only removes the files, not the settings in AVM's web interface.
 
+  * **<u>Remove AVMCOUNTERD</u><a id='remove-avmcounterd'></a>**<br>
+    Remove AVM's AVMCOUNTERD executable and libraries. This will save about 68kB compressed size.
+
   * **[REMOVE_AVM_E2FSPROGS: Remove e2fsprogs](REMOVE_AVM_E2FSPROGS.md)<a id='remove-avm-e2fsprogs'></a>**<br>
     Removes the e2fsprogs files (blkid, fsck, mkfs) and libraries. Saves about 220KB of compressed space. Warning: Without blkid the AVM scripts could not mount!
 
   * **[REMOVE_AVM_VPN: Remove VPN](REMOVE_AVM_VPN.md)<a id='remove-avm-vpn'></a>**<br>
     Remove AVM's vpn and some other related files This patch removes the files and related Web UI entrys, but not the vpn settings. This will save about 120kB compressed size.
 
-  * **<u>REMOVE_AVM_WIREGUARD: Remove WireGuard - UNTESTED</u><a id='remove-avm-wireguard'></a>**<br>
+  * **<u>REMOVE_AVM_WIREGUARD: Remove WireGuard</u><a id='remove-avm-wireguard'></a>**<br>
     Remove AVM's WireGuard executables, library and kernel module. This will save about 275kB compressed size.
 
 ### B
