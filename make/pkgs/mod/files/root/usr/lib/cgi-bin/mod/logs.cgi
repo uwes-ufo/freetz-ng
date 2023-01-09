@@ -28,12 +28,13 @@ case "$3" in
 	logs_avm*)
 		logg=false
 
-		msgsend ctlmgr sessions
+		aicmd ctlmgr sessions show 2>/dev/null | sed -rn 's/^ +//p' > /var/tmp/sessions.txt
+		[ -s /var/tmp/sessions.txt ] || msgsend ctlmgr sessions
 		[ "0$(wc -l /var/tmp/sessions.txt 2>/dev/null | sed 's/ .*//')" -gt 2 ] || rm -f /var/tmp/sessions.txt
 		do_log /var/tmp/sessions.txt "WEB-Sessions"
 		rm -f /var/tmp/sessions.txt
 
-		[ -x "$(which svctl)" ] && svctl status | sed 's/\.service//g;s/, status/ /g;s/$/./g' > /var/tmp/svctl.txt 2>&1
+		[ -x "$(which svctl)" ] && svctl status 2>&1 | sed 's/\.service//g;s/, status/ /g;s/$/./g' > /var/tmp/svctl.txt
 		do_log /var/tmp/svctl.txt "AVM-Supervisor"
 		rm -f /var/tmp/svctl.txt
 

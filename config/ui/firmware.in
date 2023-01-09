@@ -717,7 +717,7 @@ choice
 
 
 	config FREETZ_TYPE_FIRMWARE_07_5X_INHAUS
-		bool "FRITZ!OS 07.39 Inhaus - UNTESTED"
+		bool "FRITZ!OS 07.39/41/51 Inhaus - UNTESTED"
 		select FREETZ_AVM_VERSION_07_5X
 		select FREETZ_TYPE_FIRMWARE_DETECT_LATEST
 		depends on FREETZ_AVM_HAS_FIRMWARE_07_5X_INHAUS && FREETZ_SHOW_EXPERT
@@ -725,7 +725,7 @@ choice
 			Enable this to use an AVM Inhaus firmware as base for modding.
 
 	config FREETZ_TYPE_FIRMWARE_07_5X_LABOR
-		bool "FRITZ!OS 07.39 Labor - UNTESTED"
+		bool "FRITZ!OS 07.39/51 Labor - UNTESTED"
 		select FREETZ_AVM_VERSION_07_5X
 		depends on FREETZ_AVM_HAS_FIRMWARE_07_5X_LABOR && FREETZ_SHOW_EXPERT
 		help
@@ -733,7 +733,7 @@ choice
 			For more details see <http://www.avm.de/Labor/>.
 
 	config FREETZ_TYPE_FIRMWARE_07_5X
-		bool "FRITZ!OS 07.50+"
+		bool "FRITZ!OS 07.50+ - UNTESTED"
 		select FREETZ_AVM_VERSION_07_5X
 		depends on FREETZ_AVM_HAS_FIRMWARE_07_5X
 

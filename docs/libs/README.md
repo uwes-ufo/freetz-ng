@@ -94,7 +94,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libconfig (libconfig.so) 1.5](libconfig.md)<a id='libconfig'></a>**<br>
     Libconfig is a simple library for processing structured configuration files. Libconfig is very compact - just 46K for the stripped C shared library. This makes it well-suited for memory-constrained systems.
 
-  * **[libctlmgr (libctlmgr.so) 0.6.9](libctlmgr.md)<a id='libctlmgr'></a>**<br>
+  * **[libctlmgr (libctlmgr.so) 1.0](libctlmgr.md)<a id='libctlmgr'></a>**<br>
     This is Freetz compatibility library which overwrites functions of AVM's libraries, e.g. write_etc_passwd.
 
   * **[libdaemon (libdaemon.so) 0.14](libdaemon.md)<a id='libdaemon'></a>**<br>
@@ -109,7 +109,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libelf (libelf.so) 0.8.13](libelf.md)<a id='libelf'></a>**<br>
     libelf - ELF object file access library
 
-  * **[libev (libev.so) 4.15](libev.md)<a id='libev'></a>**<br>
+  * **[libev (libev.so) 4.33](libev.md)<a id='libev'></a>**<br>
     libev provides a full-featured and high-performance event loop that is loosely modelled after libevent. It includes relative timers, absolute timers with customized rescheduling, synchronous signals, process status change events, event watchers dealing with the event loop itself, file watchers, and even limited support for fork events. It uses a priority queue to manage timers and uses arrays as fundamental data structure. It has no artificial limitations on the number of watchers waiting for the same event.
 
   * **[libevent (libevent.so) 2.1.12-stable](libevent.md)<a id='libevent'></a>**<br>
@@ -154,7 +154,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libmnl (libmnl.so) 1.0.4](libmnl.md)<a id='libmnl'></a>**<br>
     libmnl is a minimalistic user-space library oriented to Netlink developers. There are a lot of common tasks in parsing, validating, constructing of both the Netlink header and TLVs that are repetitive and easy to get wrong. This library aims to provide simple helpers that allows you to re-use code and to avoid re-inventing the wheel.
 
-  * **[libmultid (libmultid.so) 0.5](libmultid.md)<a id='libmultid'></a>**<br>
+  * **[libmultid (libmultid.so) 1.0](libmultid.md)<a id='libmultid'></a>**<br>
     If this library is preloaded to multid, some portbindings will be remapped.
 
   * **[libnet (libnet.so) 1.1.4](libnet.md)<a id='libnet'></a>**<br>
@@ -175,7 +175,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libosip2 (libosip2.so) 3.5.0](libosip2.md)<a id='libosip2'></a>**<br>
     GNU oSIP library, a Session Initiation Protocol (SIP) implementation.
 
-  * **[libpcap (libpcap.so) 1.1.1/1.10.1](libpcap.md)<a id='libpcap'></a>**<br>
+  * **[libpcap (libpcap.so) 1.1.1/1.10.2](libpcap.md)<a id='libpcap'></a>**<br>
     libpcap is a system-independent interface for user-level packet capture. libpcap provides a portable framework for low-level network monitoring. Applications include network statistics collection, security monitoring, network debugging, etc.
 
   * **[libpng: PNG library (libpng.so) 1.2.59](libpng.md)<a id='libpng'></a>**<br>
@@ -227,7 +227,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### M
 
-  * **[mbedtls: mbed crypto (libmbedcrypto.so) 2.7.19/2.28.1](mbedtls.md)<a id='mbedtls'></a>**<br>
+  * **[mbedtls: mbedCrypto (libmbedcrypto.so) 2.7.19/2.28.2](mbedtls.md)<a id='mbedtls'></a>**<br>
     Enables support for the Blowfish block cipher.
 
   * **[mpc: GNU MPC Library (libmpc.so) 1.1.0](mpc.md)<a id='mpc'></a>**<br>
@@ -238,10 +238,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### N
 
-  * **[ncurses (libncurses.so) 6.3](ncurses.md)<a id='ncurses'></a>**<br>
+  * **[ncurses (libncurses.so) 6.4](ncurses.md)<a id='ncurses'></a>**<br>
     ncurses is a programming library providing an API, allowing the programmer to write text user interfaces in a terminal-independent manner. It also optimizes screen changes, in order to reduce the latency experienced when using remote shells. Ncurses stands for "new curses", and is a replacement for the discontinued 4.4 BSD classic curses.
 
-  * **[ncursesw (libncursesw.so) 6.3](ncursesw.md)<a id='ncursesw'></a>**<br>
+  * **[ncursesw (libncursesw.so) 6.4](ncursesw.md)<a id='ncursesw'></a>**<br>
     ncurses is a programming library providing an API, allowing the programmer to write text user interfaces in a terminal-independent manner. It also optimizes screen changes, in order to reduce the latency experienced when using remote shells. Ncurses stands for "new curses", and is a replacement for the discontinued 4.4 BSD classic curses. Ncursesw has additional wide-character (unicode) support. Ncurses and Ncursesw libraries are source-compatible, but not binary-compatible.
 
   * **[neon: libneon (libneon.so) 0.30.2/0.32.4](neon.md)<a id='neon'></a>**<br>

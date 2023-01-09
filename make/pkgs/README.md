@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.16.35](../../docs/make/bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.16.36](../../docs/make/bind.md)<a id='bind'></a>**<br>
     BIND is an implementation of the Domain Name System (DNS) protocols. The name BIND stands for "Berkeley Internet Name Daemon". You have to provide the config and needed zone files yourself.
      - [named.conf](../../docs/make/bind.md#namedconf)
 
@@ -74,7 +74,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Networks](../../docs/make/bip.md#networks)
      - [Users](../../docs/make/bip.md#users)
 
-  * **[Bird 1.6.4](../../docs/make/bird.md)<a id='bird'></a>**<br>
+  * **[BIRD 1.6.8](../../docs/make/bird.md)<a id='bird'></a>**<br>
     The BIRD Internet Routing Daemon
 
   * **<u>bittwist 1.1 (binary only)</u><a id='bittwist'></a>**<br>
@@ -123,7 +123,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Konfiguration cifsmount](../../docs/make/cifsmount.md#konfiguration-cifsmount)
      - [Fehlersuche](../../docs/make/cifsmount.md#fehlersuche)
 
-  * **<u>classpath GNU 0.98 (binary only)</u><a id='classpath'></a>**<br>
+  * **[classpath GNU 0.99 (binary only)](../../docs/make/classpath.md)<a id='classpath'></a>**<br>
     GNU Classpath, Essential Libraries for Java, is a GNU project to create free core class libraries for use with virtual machines and compilers for the java programming language.
 
   * **<u>Cntlm 0.93beta5 (binary only)</u><a id='cntlm'></a>**<br>
@@ -142,7 +142,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only)](../../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 7.86.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
+  * **[Curl 7.87.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -356,7 +356,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>iftop 0.17 (binary only)</u><a id='iftop'></a>**<br>
     iftop does for network usage what top(1) does for CPU usage. It listens to network traffic on a named interface and displays a table of current bandwidth usage by pairs of hosts. Handy for answering the question "why is our ADSL link so slow?". WWW: http://www.ex-parrot.com/pdw/iftop/
 
-  * **[igmpproxy 0.1](../../docs/make/igmpproxy.md)<a id='igmpproxy'></a>**<br>
+  * **[IGMPproxy 0.4](../../docs/make/igmpproxy.md)<a id='igmpproxy'></a>**<br>
     IGMPproxy is a simple dynamic Multicast Routing Daemon using only IGMP signalling. It's intended for simple forwarding of Multicast traffic between networks.
 
   * **<u>ImageMagick 7.0.10-10 (binary only)</u><a id='imagemagick'></a>**<br>
@@ -403,8 +403,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### J
 
-  * **[JamVM 1.5.4 (binary only)](../../docs/make/jamvm.md)<a id='jamvm'></a>**<br>
-    JamVM - extremely small Java VM JamVM is a new Java Virtual Machine which conforms to the JVM specification version 2 (blue book). In comparison to most other VM's (free and commercial) it is extremely small, with a stripped executable on PowerPC of only ~160K, and Intel 140K. However, unlike other small VMs (e.g. KVM) it is designed to support the full specification, and includes support for object finalisation, Soft/Weak/Phantom References, class-unloading, the Java Native Interface (JNI) and the Reflection API. Class Libraries: JamVM is designed to use the GNU Classpath Java class library. A number of classes are reference classes which must be modified for a particular VM. These are provided along with JamVM (see INSTALL). JamVM should always work with the latest development snapshot of Classpath (currently 0.93). It should also work with the latest version direct from CVS, and the upcoming 0.94 snapshot (but check the Classpath mailing lists for possible patches). Later snapshots of Classpath may also work, if no modifications have been made to the VM interface. Note, JamVM will not work with the class library from Sun or IBM's Virtual Machines.
+  * **[JamVM 2.0.0 (binary only)](../../docs/make/jamvm.md)<a id='jamvm'></a>**<br>
+    JamVM - extremely small Java VM JamVM 2.0.0 is the first release of JamVM with support for OpenJDK.  Although IcedTea already includes JamVM with OpenJDK support, this has been based on periodic snapshots of the development tree. This release supports OpenJDK 6, 7 and 8 (the latest).  With OpenJDK 7 and 8 this includes full support for JSR 292 (invokedynamic).  JamVM 2.0.0 with OpenJDK 8 also includes full support for Lambda expressions (JSR 335), type annotations (JSR 308) and method parameter reflection. In addition to OpenJDK support, JamVM 2.0.0 also includes many bug-fixes, performance improvements and improved compatibility (from running the OpenJDK jtreg tests).  The following is an edited list of the top ~100 commits (out of 300+) in date order (most recent first).  The list has been categorised into those affecting OpenJDK only, GNU Classpath only, and both OpenJDK and GNU Classpath (All).
 
   * **<u>jq 1.6 (binary only)</u><a id='jq'></a>**<br>
     jq is a lightweight and flexible command-line JSON processor.
@@ -428,7 +428,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>lftp 4.8.4 (binary only)</u><a id='lftp'></a>**<br>
     LFTP is sophisticated file transfer program with command line interface. It supports FTP, HTTP, FISH, SFTP, HTTPS and FTPS protocols. GNU Readline library is used for input.
 
-  * **[Lighttpd 1.4.67](../../docs/make/lighttpd.md)<a id='lighttpd'></a>**<br>
+  * **[Lighttpd 1.4.68](../../docs/make/lighttpd.md)<a id='lighttpd'></a>**<br>
     Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver; as it is designed and optimized for high performance environments. With a small memory footprint compared to other web-servers, effective management of the cpu-load, and advanced feature set (FastCGI, SCGI, Auth, Output-Compression, URL-Rewriting and many more) lighttpd is the perfect solution for every server that is suffering load problems. In case you want to configure virtual hosts, you may want to consider the package onlinechanged-cgi which allows you to configure multiple DynDNS entries for your box.
      - [Einrichtung](../../docs/make/lighttpd.md#einrichtung)
      - [Perl](../../docs/make/lighttpd.md#perl)
@@ -503,7 +503,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Nagios is an Open Source host, service and network monitoring program.
      - [Weiterführende Informationen](../../docs/make/nagios.md#weiterführende-informationen)
 
-  * **[Nano 7.0 (binary only)](../../docs/make/nano.md)<a id='nano'></a>**<br>
+  * **[Nano 7.1 (binary only)](../../docs/make/nano.md)<a id='nano'></a>**<br>
     GNU GPL'd Pico clone with more functionality. GNU nano is a small and friendly text editor. Besides basic text editing, nano offers many extra features like an interactive search and replace, go to line and column number, auto-indentation, feature toggles and filename tab completion. The original goal for nano was a complete bug-for-bug compatible emulation of Pico, but nano's current goal is to be as compatible as possible while offering a superset of Pico's functionality. IMPORTANT NOTES: 1.) Selecting any option besides "Tiny binary" will make the nano binary bigger. The range is somewhere between 142 KB and 249 KB, depending on the options chosen. 2.) Please also be aware of the fact that changing any feature options results in an automatic rebuild of the package - just in case you were wondering. 3.) Note that UTF8 support and spell checking is disabled by default.
 
   * **<u>nc6 1.0 (binary only)</u><a id='nc6'></a>**<br>
@@ -846,7 +846,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite 3.40.0 (binary only)](../../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite 3.40.1 (binary only)](../../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
@@ -899,7 +899,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### T
 
-  * **[tcpdump 4.1.1/4.99.1 (binary only)](../../docs/make/tcpdump.md)<a id='tcpdump'></a>**<br>
+  * **[tcpdump 4.1.1/4.99.2 (binary only)](../../docs/make/tcpdump.md)<a id='tcpdump'></a>**<br>
     Network monitoring and data acquisition tool
      - [Warning](../../docs/make/tcpdump.md#warning)
 
@@ -931,7 +931,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[tmux 3.3a (binary only)](../../docs/make/tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.7.11](../../docs/make/tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.7.12](../../docs/make/tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
      - [Tor als Proxy benutzen](../../docs/make/tor.md#tor-als-proxy-benutzen)
      - [Tor und Privoxy](../../docs/make/tor.md#tor-und-privoxy)
@@ -1046,7 +1046,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>xsltproc 1.1.33 (binary only)</u><a id='xsltproc'></a>**<br>
     xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.
 
-  * **[XZ Utils 5.2.9 (binary only)](../../docs/make/xz.md)<a id='xz'></a>**<br>
+  * **[XZ Utils 5.4.0 (binary only)](../../docs/make/xz.md)<a id='xz'></a>**<br>
     XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm compression format, which provides memory-hungry but powerful compression (often better than bzip2) and fast, easy decompression. This package provides the command line tools for working with XZ compression. They can also handle the older LZMA format, and if invoked via appropriate symlinks will emulate the behavior of the commands in the lzma package.
 
 # Debug helpers
