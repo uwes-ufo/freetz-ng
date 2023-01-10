@@ -177,8 +177,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Remove mediasrv (UPnP/DLNA)](REMOVE_MEDIASRV.md)<a id='remove-mediasrv'></a>**<br>
     Remove the MediaServer-daemon (mediasrv) and some other related files. This patch hides also the MediaServer options in the Web UI, so you must disable it before flashing the new image. Saves compressed 230 KB on a 7270_V2 and 40 KB on a 7170.
 
-  * **<u>Remove MESHD</u><a id='remove-meshd'></a>**<br>
-    Removes "meshd" and "meshd_config" services and related files like the daemon and some scripts. This prevents log-spam when PLCD is removed too. There are NO changes of the avm-webif!
+  * **<u>Remove MESHD (Settings Synchronize)</u><a id='remove-meshd'></a>**<br>
+    Removes "meshd" and "meshd_config" services and related files like the daemon and some scripts. This prevents log-spam when PLCD is removed too. Even AVM calles it "mesh" it is used to synchronize telephone and wlan settings from the master device to its authenticated slaves. There are NO changes of the avm-webif!
 
   * **<u>REMOVE_MICROVOIP_DSL: Remove microvoip-dsl.bin</u><a id='remove-microvoip-dsl'></a>**<br>
     Remove the files lib/modules/microvoip-dsl.bin and lib/modules/2.6.13.1-*/kernel/drivers/atm/avm_atm/tiatm.ko This saves about 590-700 KB of uncompressed data size.
@@ -203,8 +203,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Remove NAS](REMOVE_NAS.md)<a id='remove-nas'></a>**<br>
     Removes the AVM NAS Webinterface and internal memory file (saves about 390 KB in compressed image).
 
-  * **<u>Remove NEXUS (AVM mesh)</u><a id='remove-nexus'></a>**<br>
-    Removes "nexus" related files like the daemon, service and some scripts. There are NO changes of the avm-webif!
+  * **<u>Remove NEXUS - EXPERIMENTAL</u><a id='remove-nexus'></a>**<br>
+    Removes "nexus" related files like the daemon, service and some scripts. AVM's begin of the "mesh" promotion campaign to share AHA data with all network devices. There are NO changes of the avm-webif!
 
   * **<u>Remove NLS</u><a id='remove-nls'></a>**<br>
     Remove NLS support This patch will remove all the nls_*.ko kernel module from the firmware. This may affect mounting FAT, NTFS and other filesystems. You can add some of the Freetz kernel nls modules if you need them.
@@ -213,6 +213,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Remove NTFS support This patch will remove ntfs-3g dependent files from the firmware. Be careful, mounting volumes with this filesystem will not work. It saves about 118K compressed space in kernel.image.
 
 ### P
+
+  * **<u>Remove PCPD (Port Control Protocol)</u><a id='remove-pcpd'></a>**<br>
+    Removes "pcpd" service and related files like the daemon and some of the tools. PCP is used for dynamic port-forwardings and does not work without MESHD (don't ask). There are NO changes of the avm-webif!
 
   * **<u>REMOVE_PIGLET_ISDN: Remove ISDN piglet file(s)</u><a id='remove-piglet-isdn'></a>**<br>
     The firmware of this model contains separate piglet files for ISDN and POTS. Depending on your type of fixed line usage you can safely remove the unneeded bitfile(s). Hint: If you are using POTS fixed line you can try to select this patch. Be careful! Sometimes even POTS models are using the ISDN files and not the POTS ones. If your box ends up in a reboot cycle, you should deselect this patch and maybe want to try the other one, even
@@ -226,7 +229,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[REMOVE_PIGLET_V2: Remove v2 piglet file(s)](REMOVE_PIGLET_V2.md)<a id='remove-piglet-v2'></a>**<br>
     The firmware of this model contains double piglet files. Which instance is needed depends on the hardware version (v1 or v2) of your box. You can safely remove the unneeded instance. Hint: If "echo $HWRevision_BitFileCount" returns "" (nothing) you could select this patch.
 
-  * **<u>Remove PLCD (powerline)</u><a id='remove-plcd'></a>**<br>
+  * **<u>Remove PLCD (AVM Powerline)</u><a id='remove-plcd'></a>**<br>
     This removes the plcd daemon (44-76kB uncompressed) and related start script. Known so far: It is used to scan the network for PLC devices and show them on the webinterface in mesh/network.
 
   * **[Remove printserv](REMOVE_PRINTSERV.md)<a id='remove-printserv'></a>**<br>
