@@ -50,10 +50,13 @@ Latest changes
  - Host tools:
    * busybox 1.36.0
    * fakeroot 1.30.1
+   * fastjar 0.98
    * kconfig 6.1
+   * mklibs 0.1.45
    * ncurses 6.4
-   * precompiled host-tools 2023-01-07
+   * precompiled host-tools 2023-01-12
    * pseudo 1.9.0 oe-core c9670c2
+   * python 3.11.1
    * sed 4.9
    * xz 5.4.0
 
