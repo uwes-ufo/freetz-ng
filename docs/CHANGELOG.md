@@ -54,12 +54,14 @@ Latest changes
    * kconfig 6.1
    * mklibs 0.1.45
    * ncurses 6.4
+   * patchelf 0.17.2
    * precompiled host-tools 2023-01-13
    * prelink 20130503
    * pseudo 1.9.0 oe-core c9670c2
    * python 3.11.1
    * sed 4.9
-   * xz 5.4.0
+   * u-boot 2023.01
+   * xz 5.4.1
 
  - Patches:
    * remove AVMCOUNTERD: collects some data for you
@@ -99,7 +101,7 @@ Latest changes
    * tcpdump 4.1.1/4.99.2
    * Tor 0.4.7.12
    * Unbound 1.17.0
-   * XZ Utils 5.4.0
+   * XZ Utils 5.4.1
 
  - Libraries:
    * expat 2.5.0
