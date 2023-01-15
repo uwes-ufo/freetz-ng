@@ -20,6 +20,7 @@ glibc-devel.i686
 gnutls-devel
 ImageMagick
 inkscape
+javapackages-tools
 kmod
 libacl-devel
 libattr-devel
@@ -44,7 +45,9 @@ perl-String-CRC32
 pkgconfig
 pv
 qt5-qtbase-devel
+rpcgen
 rsync
+sharutils
 sqlite-devel
 sqlite.i686
 subversion

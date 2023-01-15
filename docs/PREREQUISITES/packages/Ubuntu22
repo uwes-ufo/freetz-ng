@@ -22,7 +22,9 @@ graphicsmagick
 imagemagick
 inkscape
 intltool
+java-wrappers
 kmod
+lib32ncurses5-dev
 lib32stdc++6
 lib32z1-dev
 libacl1-dev
@@ -38,9 +40,10 @@ libssl-dev
 libstring-crc32-perl
 libtool-bin
 libusb-dev
+libxml2-dev
 libzstd-dev
 make
-netcat
+netcat-openbsd
 patch
 perl
 pkg-config

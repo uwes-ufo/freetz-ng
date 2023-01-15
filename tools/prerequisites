@@ -2,6 +2,7 @@
 SCRIPT="$(readlink -f $0)"
 PARENT="$(dirname ${SCRIPT%/*})"
 PACKAGES="$PARENT/docs/PREREQUISITES/packages"
+[ "$1" == '-y' ] && shift && doy="-y" || doy=""
 ARG="$1"
 
 check_requisite() {
@@ -83,7 +84,8 @@ makefile_internal() {
 
 show_usage() {
 	echo "Checks or installs prerequisites"
-	echo "Usage: $0 <ARG>"
+	echo "Usage: $0 <-y> <ARG>"
+	echo "  -y: Install instantly, don't ask before"
 	echo "Available linux systems for <ARG>: "
 	for x in "$PACKAGES/"*; do echo "  - ${x##*/}"; done
 	echo "Without <ARG> it will be tried to detect the current Linux."
@@ -100,15 +102,14 @@ detect_linux() {
 
 install_requisite() {
 	[ ! -e "$PACKAGES/${1##*/}" ] && echo "File not found: ${1##*/}" && exit 1
-	case "${1##*/}" in
-		Fedora*)	installer='sudo dnf' ;;
-		Debian*)	installer='sudo apt' ;;
-		Ubuntu*)	installer='sudo apt-get' ;;
-		*)		installer='echo' ;;
-	esac
 	vals="$(sed 's/[\t ]*#.*//g' "$PACKAGES/${1##*/}" | sort | tr '\n' ' ' | sed 's/^ *//;s/  */ /g;s/ *$//')"
-	echo "Installing these '${1##*/}' packages by '${installer##* }': $vals"
-	$installer install $vals
+	echo "Installing these '${1##*/}' packages: $vals"
+	case "${1##*/}" in
+		Fedora*)                         sudo dnf --refresh  install $doy $vals ;;
+		Debian*)  sudo apt-get update && sudo apt            install $doy $vals ;;
+		Ubuntu*)  sudo apt-get update && sudo apt-get        install $doy $vals ;;
+		*)        echo 'No known installer' ;;
+	esac
 }
 
 [ "$ARG" == "makefile_internal" ] && makefile_internal
