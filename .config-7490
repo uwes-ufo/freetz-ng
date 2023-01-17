@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 842a005ed uwe 2023-01-16
+#  freetz-ng 38966b6b5 uwe 2023-01-17
 #
 
 #
@@ -325,7 +325,10 @@ FREETZ_ADD_SWAPOPTIONS=y
 FREETZ_CUSTOM_ETCSERVICES=y
 # FREETZ_ADD_ETCNETCONFIG is not set
 # FREETZ_ENFORCE_URLADER_SETTINGS is not set
-FREETZ_ENFORCE_FIRMWARE_VERSION_VIA_RCCONF=""
+FREETZ_ENFORCE_BRANDING_none=y
+# FREETZ_ENFORCE_BRANDING_1und1 is not set
+# FREETZ_ENFORCE_BRANDING_avm is not set
+# FREETZ_ENFORCE_BRANDING_avme is not set
 
 #
 # Misc patches ---------------------------------------------
