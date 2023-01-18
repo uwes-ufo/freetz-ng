@@ -54,11 +54,12 @@ Latest changes
    * kconfig 6.1
    * mklibs 0.1.45
    * ncurses 6.4
-   * precompiled host-tools 2023-01-15
+   * precompiled host-tools 2023-01-18
    * prelink 20130503
    * pseudo 1.9.0 oe-core c9670c2
    * python 3.11.1
    * sed 4.9
+   * sfk 1.9.8.2
    * u-boot 2023.01
    * xz 5.4.1
 
@@ -82,6 +83,7 @@ Latest changes
    * Git 2.39.0
    * HAProxy 2.6.7
    * IGMPproxy 0.4
+   * ImageMagick 7.1.0-57
    * jamvm 2.0.0
    * Knock 0.8
    * libpcap 1.1.1/1.10.2
@@ -95,6 +97,7 @@ Latest changes
    * OpenVPN 2.4.12/2.5.8
    * PCSC-lite 1.9.9
    * RPCBind 1.2.6
+   * Swiss File Knife 1.9.8.2
    * strace 4.9/5.0/6.1
    * SQLite 3.40.1
    * tcpdump 4.1.1/4.99.2

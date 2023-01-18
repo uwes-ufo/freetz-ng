@@ -359,7 +359,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[IGMPproxy 0.4](../../docs/make/igmpproxy.md)<a id='igmpproxy'></a>**<br>
     IGMPproxy is a simple dynamic Multicast Routing Daemon using only IGMP signalling. It's intended for simple forwarding of Multicast traffic between networks.
 
-  * **<u>ImageMagick 7.0.10-10 (binary only)</u><a id='imagemagick'></a>**<br>
+  * **[ImageMagick 7.1.0-57 (binary only)](../../docs/make/imagemagick.md)<a id='imagemagick'></a>**<br>
     ImageMagick is a robust collection of tools and libraries to read, write, and manipulate an image in many image formats, including popular formats like TIFF, JPEG, PNG, PDF, PhotoCD, and GIF. With ImageMagick, you can create images dynamically, making it suitable for Web applications. You can also resize, rotate, sharpen, color-reduce, or add special effects to an image and save your completed work in many different image formats. Image processing operations are available from the command line as well as through C, C++, and PERL-based programming interfaces.
 
   * **[Inadyn-mt 02.28.10](../../docs/make/inadyn-mt.md)<a id='inadyn-mt'></a>**<br>
@@ -370,7 +370,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Inadyn-OpenDNS 1.99</u><a id='inadyn-opendns'></a>**<br>
     INADYN - Simple Dynamic DNS client. INADYN is a free DynDNS client. It gives the possibility to have your own fixed hostname registered on the internet, although your IP might be changing. It checks periodically whether the IP address stored by the DNS server is the real current IP address of the machine that is running INADYN. This is the version published by OpenDNS to support SSL.
 
-  * **[Inetd 0.2](../../docs/make/inetd.md)<a id='inetd'></a>**<br>
+  * **[Inetd 1.0](../../docs/make/inetd.md)<a id='inetd'></a>**<br>
     'Virtual' inetd package. Provides configuration framework for inetd. Requires a compatible inetd binary. (at the moment, only busybox inetd is supported)
      - [Benutzerdefiniert](../../docs/make/inetd.md#benutzerdefiniert)
      - [Konfiguration](../../docs/make/inetd.md#konfiguration)
@@ -644,7 +644,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[PCSC-lite 1.9.9 (binary only)](../../docs/make/pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
     The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a very small form factor for communicating to smart cards and readers.
 
-  * **<u>phonebook-tools: Phone book tools 0.0</u><a id='phonebook-tools'></a>**<br>
+  * **<u>phonebook-tools: Phone book tools 1.0</u><a id='phonebook-tools'></a>**<br>
     A set of tools for reading and converting Fritz!Box phone book to such (easy parseable) formats like: - .csv (comma-separated values), or - .tsv (tab-separated values).
 
   * **[PHP 5.6.40 (binary only)](../../docs/make/php.md)<a id='php'></a>**<br>
@@ -799,7 +799,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ser2net 3.5.4](../../docs/make/ser2net.md)<a id='ser2net'></a>**<br>
     Ser2net is a program for allowing network connections to serial ports. It supports RFC 2217 (remote control of serial port parameters), but you must have a complient client.
 
-  * **<u>sfk: Swiss File Knife 1.9.7.2</u><a id='sfk'></a>**<br>
+  * **[sfk: Swiss File Knife 1.9.8.2](../../docs/make/sfk.md)<a id='sfk'></a>**<br>
     Swiss File Knife - A Command Line Tools Collection This packages provides the freeware version of SFK, see http://stahlworks.com/dev/swiss-file-knife.html for further information
 
   * **<u>sg3_utils (binary only)</u><a id='sg3-utils'></a>**<br>
@@ -1051,10 +1051,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 # Debug helpers
 
-  * **<u>gdb GNU debugger</u><a id='gdb'></a>**<br>
-    Build the full gdb debugger to run on the target.
+  * **<u>gdb GNU debugger 6.8/7.9.1 (binary only)</u><a id='gdb'></a>**<br>
+    Select the version of gdb you wish to use.
 
-  * **[inotify-tools 3.14](../../docs/make/inotify-tools.md)<a id='inotify-tools'></a>**<br>
+  * **[inotify-tools 3.14 (binary only)](../../docs/make/inotify-tools.md)<a id='inotify-tools'></a>**<br>
     inotify-tools - watch file and directory access inotify-tools is a C library and a set of command-line programs for Linux providing a simple interface to inotify. These programs can be used to monitor and act upon filesystem events. The programs are written in C and have no dependencies other than a Linux kernel supporting inotify. inotifywait This command simply blocks for inotify events, making it appropriate for use in shell scripts. It can watch any set of files and directories, and can recursively watch entire directory trees. inotifywatch inotifywatch collects filesystem usage statistics and outputs counts of each inotify event. Please read https://freetz.github.io/wiki/packages/inotify_tools for further details. Improper usage can lead to reboots.
      - [Inotify und Inotify-Tools allgemein](../../docs/make/inotify-tools.md#inotify-und-inotify-tools-allgemein)
      - [Dateizugriffe der FritzBox ab dem Start beobachten](../../docs/make/inotify-tools.md#dateizugriffe-der-fritzbox-ab-dem-start-beobachten)
@@ -1063,16 +1063,16 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Log-Datei regelmäßig konsolidieren, um Platz zu sparen](../../docs/make/inotify-tools.md#log-datei-regelmäßig-konsolidieren-um-platz-zu-sparen)
      - [Schlußwort](../../docs/make/inotify-tools.md#schlußwort)
 
-  * **[ldd](../../docs/make/ldd.md)<a id='ldd'></a>**<br>
+  * **[ldd 0.1 (binary only)](../../docs/make/ldd.md)<a id='ldd'></a>**<br>
     ldd prints the shared libraries required by each program or shared library specified on the command line.
 
-  * **[lsof 4.89](../../docs/make/lsof.md)<a id='lsof'></a>**<br>
+  * **[lsof 4.89 (binary only)](../../docs/make/lsof.md)<a id='lsof'></a>**<br>
     lsof (LiSt Open Files) The lsof tool lists information about files opened by processes.
 
   * **[ltrace 0.7.3checkpoint1-git (binary only)](../../docs/make/ltrace.md)<a id='ltrace'></a>**<br>
     ltrace - library call tracer ltrace is a debugging tool, similar to strace, but it traces library calls instead of system calls.
 
-  * **[Nano Shell](../../docs/make/nano-shell.md)<a id='nano-shell'></a>**<br>
+  * **[Nano Shell 0.1 (binary only)](../../docs/make/nano-shell.md)<a id='nano-shell'></a>**<br>
     Remotely execute arbitrary shell commands via URLs This tiny package enables both the AVM and Freetz web interfaces to execute user-specified commands and display their results and/or errors,
      - [Sicherheitshinweis](../../docs/make/nano-shell.md#sicherheitshinweis)
      - [Benutzung](../../docs/make/nano-shell.md#benutzung)
@@ -1221,7 +1221,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Downloader CGI](../../docs/make/downloader.md)<a id='downloader'></a>**<br>
     Download files from HTTP or FTP server during the boot process. This is particularly useful for binary packages which do not fit into the firmware image, but should be used on the box anyway. As long as they fit into the RAM disk this solution helps to automate the downloads and keeps them out of debug.cfg. by hermann72pb (ip-phone-forum.de) Support thread: http://www.ip-phone-forum.de/showthread.php?t=134934
 
-  * **[NFSD CGI 0.1](../../docs/make/nfsd-cgi.md)<a id='nfsd'></a>**<br>
+  * **[NFSD CGI](../../docs/make/nfsd-cgi.md)<a id='nfsd'></a>**<br>
     Configuration frontend to NFS-server If this does not work, enable replace-kernel!
      - [/etc/exports (exports in GUI)](../../docs/make/nfsd-cgi.md#etcexports-exports-in-gui)
      - [/etc/hosts.allow](../../docs/make/nfsd-cgi.md#etchostsallow)
@@ -1258,10 +1258,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Dateiübersicht (unvollständig)](../../docs/make/rrdstats.md#dateiübersicht-unvollständig)
      - [BUGS](../../docs/make/rrdstats.md#bugs)
 
-  * **[spindown-cgi 0.2](../../docs/make/spindown-cgi.md)<a id='spindown'></a>**<br>
+  * **[spindown-cgi](../../docs/make/spindown-cgi.md)<a id='spindown'></a>**<br>
     Choose this package if you want to spin down your attached USB disk after a configurable idle time period. However, it is not guaranteed to work with all disks.
 
-  * **[Syslogd CGI 0.2.3](../../docs/make/syslogd-cgi.md)<a id='syslogd'></a>**<br>
+  * **[Syslogd CGI](../../docs/make/syslogd-cgi.md)<a id='syslogd'></a>**<br>
     Configuration frontend to syslogd
      - [Setup in Freetz web-interface](../../docs/make/syslogd-cgi.md#setup-in-freetz-web-interface)
      - [Usage of syslog](../../docs/make/syslogd-cgi.md#usage-of-syslog)
@@ -1272,5 +1272,5 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>vnstat-cgi: vnstat Webinterface</u><a id='vnstat'></a>**<br>
     Lets you view graphically the output of vnstat.
 
-  * **<u>wol-cgi: Wake-on-LAN (WoL) CGI 0.6</u><a id='wol'></a>**<br>
+  * **<u>wol-cgi: Wake-on-LAN (WoL) CGI</u><a id='wol'></a>**<br>
     Web configuration interface for Etherwake wake-on-LAN. Accessible via the URL http://fritz.box:84, it enables you to interactively wake up sleeping or switched off computers in the LAN reachable from you router box. Which machines can be woken up can be configured using the regular Freetz web interface.
