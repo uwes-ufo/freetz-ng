@@ -80,13 +80,13 @@ Latest changes
    * dehydrated 0.7.1 (letsencrypt)
    * Dnsmasq 2.80/2.88
    * Dropbear 2022.83
-   * Git 2.39.0
+   * Git 2.39.1
    * HAProxy 2.6.7
    * IGMPproxy 0.4
    * ImageMagick 7.1.0-57
    * jamvm 2.0.0
    * Knock 0.8
-   * libpcap 1.1.1/1.10.2
+   * libpcap 1.1.1/1.10.3
    * Lighttpd 1.4.68
    * Lua 5.1.5/5.4.4
    * Nano 7.1
@@ -102,7 +102,7 @@ Latest changes
    * SQLite 3.40.1
    * tcpdump 4.1.1/4.99.2
    * Tor 0.4.7.12
-   * Unbound 1.17.0
+   * Unbound 1.17.1
    * XZ Utils 5.4.1
 
  - Libraries:
