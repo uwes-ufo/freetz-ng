@@ -82,14 +82,16 @@ Latest changes
    * Dropbear 2022.83
    * Git 2.39.1
    * HAProxy 2.6.7
+   * htpdate 1.3.7
    * IGMPproxy 0.4
    * ImageMagick 7.1.0-57
    * jamvm 2.0.0
    * Knock 0.8
+   * libffi 3.4.4
    * libpcap 1.1.1/1.10.3
    * Lighttpd 1.4.68
    * Lua 5.1.5/5.4.4
-   * Nano 7.1
+   * Nano 7.2
    * ncurses 6.4
    * ncursesw 6.4
    * OpenSSH 9.1p1
@@ -106,17 +108,23 @@ Latest changes
    * XZ Utils 5.4.1
 
  - Libraries:
+   * cairo 1.17.4
    * expat 2.5.0
+   * fontconfig 2.14.1
+   * fribidi 1.0.12
+   * harfbuzz 6.0.0
    * libctlmgr 1.0
    * libev 4.33
    * libidn 1.41
    * libgpg-error 1.46
    * libmultid 1.0
+   * libpng 1.6.39
    * libusb-compat 0.1.8
    * libxml2 2.10.3
    * mbedTLS 2.7.19/2.28.2
    * neon 0.30.2/0.32.4
    * pcre2 10.42
+   * pixman 0.42.2
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
@@ -144,6 +152,7 @@ Latest changes
    * FFmpeg 5.1.2
    * FreeType 2.12.1
    * FUSE 2.9.9
+   * gettext 0.21.1
    * Git 2.38.0
    * GnuTLS 3.7.8
    * HAProxy 2.6.6

@@ -336,7 +336,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[htop 1.0.3/3.2.1 (binary only)](../../docs/make/htop.md)<a id='htop'></a>**<br>
     htop is a more powerful alternative to top, using ncurses.
 
-  * **[htpdate 1.3.6](../../docs/make/htpdate.md)<a id='htpdate'></a>**<br>
+  * **[htpdate 1.3.7](../../docs/make/htpdate.md)<a id='htpdate'></a>**<br>
     The HTTP Time Protocol (HTP) is used to synchronize a computer's time with web servers as reference time source. Htpdate will synchronize your computer's time by extracting timestamps from HTTP headers found in web server responses. Htpdate can be used as a daemon, to keep your computer synchronized. WWW: http://www.clevervest.com/htp/ Manpage: http://linux.die.net/man/8/htpdate This package automatically removes AVM'S chronyd if necessary.
 
   * **<u>httpry 0.1.8</u><a id='httpry'></a>**<br>
@@ -503,7 +503,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Nagios is an Open Source host, service and network monitoring program.
      - [Weiterführende Informationen](../../docs/make/nagios.md#weiterführende-informationen)
 
-  * **[Nano 7.1 (binary only)](../../docs/make/nano.md)<a id='nano'></a>**<br>
+  * **[Nano 7.2 (binary only)](../../docs/make/nano.md)<a id='nano'></a>**<br>
     GNU GPL'd Pico clone with more functionality. GNU nano is a small and friendly text editor. Besides basic text editing, nano offers many extra features like an interactive search and replace, go to line and column number, auto-indentation, feature toggles and filename tab completion. The original goal for nano was a complete bug-for-bug compatible emulation of Pico, but nano's current goal is to be as compatible as possible while offering a superset of Pico's functionality. IMPORTANT NOTES: 1.) Selecting any option besides "Tiny binary" will make the nano binary bigger. The range is somewhere between 142 KB and 249 KB, depending on the options chosen. 2.) Please also be aware of the fact that changing any feature options results in an automatic rebuild of the package - just in case you were wondering. 3.) Note that UTF8 support and spell checking is disabled by default.
 
   * **<u>nc6 1.0 (binary only)</u><a id='nc6'></a>**<br>

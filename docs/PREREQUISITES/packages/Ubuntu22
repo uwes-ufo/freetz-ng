@@ -18,9 +18,9 @@ gcc
 gcc-multilib
 gettext
 git
+gperf
 graphicsmagick
 imagemagick
-inet-tools
 inkscape
 intltool
 java-wrappers
@@ -46,6 +46,7 @@ libzstd-dev
 make
 ncftp
 netcat-openbsd
+net-tools
 patch
 patchutils
 perl

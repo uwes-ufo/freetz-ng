@@ -18,8 +18,8 @@ git
 glib2-devel
 glibc-devel.i686
 gnutls-devel
+gperf
 ImageMagick
-inet-tools
 inkscape
 javapackages-tools
 kmod
@@ -40,6 +40,7 @@ ncurses-devel
 ncurses-devel.i686
 ncurses-term
 netcat
+net-tools
 openssl
 openssl-devel
 patch
