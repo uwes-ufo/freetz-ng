@@ -46,6 +46,7 @@ Latest changes
 
  - Build system:
    * Ccache 4.7.4
+   * Meson support
 
  - Host tools:
    * busybox 1.36.0
@@ -99,6 +100,7 @@ Latest changes
    * OpenVPN 2.4.12/2.5.8
    * PCSC-lite 1.9.9
    * RPCBind 1.2.6
+   * RRDtool 1.2.30/1.8.0
    * Swiss File Knife 1.9.8.2
    * strace 4.9/5.0/6.1
    * SQLite 3.40.1
@@ -112,6 +114,7 @@ Latest changes
    * expat 2.5.0
    * fontconfig 2.14.1
    * fribidi 1.0.12
+   * glib2 2.32.4/2.75.2
    * harfbuzz 6.0.0
    * libctlmgr 1.0
    * libev 4.33
@@ -123,6 +126,7 @@ Latest changes
    * libxml2 2.10.3
    * mbedTLS 2.7.19/2.28.2
    * neon 0.30.2/0.32.4
+   * pango 1.50.12
    * pcre2 10.42
    * pixman 0.42.2
 

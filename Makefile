@@ -95,6 +95,7 @@ GENERATE_IN_TOOL:=$(TOOLS_DIR)/genin
 TAR:=$(TOOLS_DIR)/tar-gnu
 SED:=sed
 MAKE1=make
+MESON=meson
 ifeq ($(FREETZ_JLEVEL),0)
 MAKE=make -j$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 else
@@ -177,7 +178,7 @@ endif
 ifneq ($(findstring menuconfig,$(MAKECMDGOALS)),menuconfig)
 ifneq ($(NO_PREREQ_CHECK),y)
 ifneq (OK,$(shell $(CHECK_PREREQ_TOOL check) >&2 && echo OK))
-$(error Some build prerequisites are missing! See '.prerequisites' for why. Please install the missing packages before trying again. See https://freetz-ng.github.io/freetz-ng/PREREQUISITES for installation hints)
+$(error Some build prerequisites are missing! See '.prerequisites' for why. Please install the missing packages with 'tools/prerequisites install'. See https://freetz-ng.github.io/freetz-ng/PREREQUISITES for installation hints)
 endif
 endif
 endif
