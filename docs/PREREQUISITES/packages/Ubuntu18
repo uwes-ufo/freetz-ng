@@ -19,7 +19,6 @@ gcc
 gcc-multilib
 gettext
 git
-gperf
 graphicsmagick
 imagemagick
 inkscape
@@ -42,7 +41,6 @@ libtool-bin
 libusb-dev
 libzstd-dev
 make
-meson
 ncftp
 netcat
 net-tools

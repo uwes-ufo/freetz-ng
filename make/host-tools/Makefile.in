@@ -28,8 +28,11 @@ TOOLS_CONDITIONAL+=avm-rle-host
 TOOLS_CONDITIONAL+=fastjar-host
 TOOLS_CONDITIONAL+=libdtc-host
 TOOLS_CONDITIONAL+=gmp-host
+TOOLS_CONDITIONAL+=gperf-host
+TOOLS_CONDITIONAL+=meson-host
 TOOLS_CONDITIONAL+=mpc-host
 TOOLS_CONDITIONAL+=mpfr-host
+TOOLS_CONDITIONAL+=ninja-host
 TOOLS_CONDITIONAL+=lzma1-host
 TOOLS_CONDITIONAL+=lzma2-host
 TOOLS_CONDITIONAL+=python2-host
@@ -62,6 +65,8 @@ TOOLS_BUILD_LOCAL+=mpfr-host
 #TOOLS_BUILD_LOCAL+=...
 
 
+TOOLS_SUBPYTHON3=cmd() { $(PYTHON3) "$$@" $(SILENT) || { $(call ERROR,1,$(BUILD_FAIL_MSG)) } }; $(call _ECHO,building) cmd
+TOOLS_SUBCMAKE=cmd() { $(CMAKE) "$$@" $(SILENT) || { $(call ERROR,1,$(BUILD_FAIL_MSG)) } }; $(call _ECHO,building) cmd
 TOOLS_SUBMAKE=cmd() { $(MAKE) $(QUIET) "$$@" $(SILENT) || { $(call ERROR,1,$(BUILD_FAIL_MSG)) } }; $(call _ECHO,building) cmd
 CONFIGURE=conf_cmd() { ./configure $(QUIET) "$$$$@" $(SILENT) || { $(call ERROR,1,$(BUILD_FAIL_MSG)) } };
 AUTORECONF=autoreconf -f -i $(SILENT) || { $(call ERROR,1,autoreconf failed) };

@@ -52,10 +52,13 @@ Latest changes
    * busybox 1.36.0
    * fakeroot 1.30.1
    * fastjar 0.98
+   * gperf 3.1
    * kconfig 6.1
+   * meson 1.0.0
    * mklibs 0.1.45
    * ncurses 6.4
-   * precompiled host-tools 2023-01-18
+   * ninja 1.11.1
+   * precompiled host-tools 2023-01-25
    * prelink 20130503
    * pseudo 1.9.0 oe-core c9670c2
    * python 3.11.1

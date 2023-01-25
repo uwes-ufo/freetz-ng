@@ -94,8 +94,10 @@ CHECK_PREREQ_TOOL:=$(TOOLS_DIR)/prerequisites
 GENERATE_IN_TOOL:=$(TOOLS_DIR)/genin
 TAR:=$(TOOLS_DIR)/tar-gnu
 SED:=sed
-MAKE1=make
+PYTHON3=python3
 MESON=meson
+CMAKE=cmake
+MAKE1=make
 ifeq ($(FREETZ_JLEVEL),0)
 MAKE=make -j$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 else
@@ -177,7 +179,7 @@ endif
 # kconfig checks them in its .mk-file to be able to disable items always
 ifneq ($(findstring menuconfig,$(MAKECMDGOALS)),menuconfig)
 ifneq ($(NO_PREREQ_CHECK),y)
-ifneq (OK,$(shell $(CHECK_PREREQ_TOOL check) >&2 && echo OK))
+ifneq (OK,$(shell $(CHECK_PREREQ_TOOL) check >&2 && echo OK))
 $(error Some build prerequisites are missing! See '.prerequisites' for why. Please install the missing packages with 'tools/prerequisites install'. See https://freetz-ng.github.io/freetz-ng/PREREQUISITES for installation hints)
 endif
 endif
