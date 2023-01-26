@@ -48,13 +48,13 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.16.35](bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.16.37](bind.md)<a id='bind'></a>**<br>
     BIND is an implementation of the Domain Name System (DNS) protocols. The name BIND stands for "Berkeley Internet Name Daemon". You have to provide the config and needed zone files yourself.
 
   * **[Bip 0.9.2](bip.md)<a id='bip'></a>**<br>
     Bip is an IRC proxy, which means it keeps connected to your preferred IRC servers, can store the logs for you, and even send them back to your IRC client(s) upon connection. You may want to use bip to keep your logfiles (in a unique format and on a unique computer) whatever your client is, when you connect from multiple workstations, or when you simply want to have a playback of what was said while you were away.
 
-  * **[Bird 1.6.4](bird.md)<a id='bird'></a>**<br>
+  * **[BIRD 1.6.8](bird.md)<a id='bird'></a>**<br>
     The BIRD Internet Routing Daemon
 
   * **<u>bittwist 1.1 (binary only)</u><a id='bittwist'></a>**<br>
@@ -74,7 +74,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[CA-bundle 2022-10-11](ca-bundle.md)<a id='ca-bundle'></a>**<br>
+  * **[CA-bundle 2023-01-10](ca-bundle.md)<a id='ca-bundle'></a>**<br>
     The Mozilla CA certificate store in PEM format, see https://www.curl.se/docs/caextract.html Size of uncompressed file is about 250 KB.
 
   * **[Callmonitor 1.20.9-git](callmonitor.md)<a id='callmonitor'></a>**<br>
@@ -89,7 +89,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Cifsmount 7.0](cifsmount.md)<a id='cifsmount'></a>**<br>
     User space helper for mounting remote CIFS shares + CGI web interface for easy configuration of up to three mounts incl. (auto-) start/stop. CIFS is an extended version of SMB, the well-known protocol used by MS Windows and Samba for sharing folders, files and printers. Thus, cifsmount is a replacement for smbmount, having the advantage of being significantly smaller than smbmount. So if you want to mount Windows or Samba shares from your router box, this package is for you. If this does not work, enable replace-kernel!
 
-  * **<u>classpath GNU 0.98 (binary only)</u><a id='classpath'></a>**<br>
+  * **[classpath GNU 0.99 (binary only)](classpath.md)<a id='classpath'></a>**<br>
     GNU Classpath, Essential Libraries for Java, is a GNU project to create free core class libraries for use with virtual machines and compilers for the java programming language.
 
   * **<u>Cntlm 0.93beta5 (binary only)</u><a id='cntlm'></a>**<br>
@@ -107,7 +107,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only)](ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 7.86.0 (binary only)](curl.md)<a id='curl'></a>**<br>
+  * **[Curl 7.87.0 (binary only)](curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -135,6 +135,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[dehydrated 0.7.1 (letsencrypt)](dehydrated.md)<a id='dehydrated'></a>**<br>
     Dehydrated is a client for signing certificates with an ACME-server (e.g. Let's Encrypt) implemented as a relatively simple (zsh-compatible) bash-script. This client supports both ACME v1 and the new ACME v2 including support for wildcard certificates!
+
+  * **[DejaVu Fonts TTF 2.37 (binary only)](dejavu-fonts-ttf.md)<a id='dejavu-fonts-ttf'></a>**<br>
+    The DejaVu fonts are a font family based on the Vera Fonts. Its purpose is to provide a wider range of characters while maintaining the original look and feel through the process of collaborative development
 
   * **[DigiTemp 3.7.2 (binary only)](digitemp.md)<a id='digitemp'></a>**<br>
     digitemp for 1-wire modules You could use RRDstats for data collection and visualisation
@@ -205,7 +208,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Ghostscript fonts 8.11 (binary only)</u><a id='ghostscript-fonts'></a>**<br>
     This package provides the Ghostscript fonts.
 
-  * **[Git 2.39.0](git.md)<a id='git'></a>**<br>
+  * **[Git 2.39.1](git.md)<a id='git'></a>**<br>
     Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
   * **<u>gntpsend 0.3.2-git (binary only)</u><a id='gntpsend'></a>**<br>
@@ -225,7 +228,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.7](haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.8](haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](haserl.md)<a id='haserl'></a>**<br>
@@ -246,7 +249,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[htop 1.0.3/3.2.1 (binary only)](htop.md)<a id='htop'></a>**<br>
     htop is a more powerful alternative to top, using ncurses.
 
-  * **[htpdate 1.3.6](htpdate.md)<a id='htpdate'></a>**<br>
+  * **[htpdate 1.3.7](htpdate.md)<a id='htpdate'></a>**<br>
     The HTTP Time Protocol (HTP) is used to synchronize a computer's time with web servers as reference time source. Htpdate will synchronize your computer's time by extracting timestamps from HTTP headers found in web server responses. Htpdate can be used as a daemon, to keep your computer synchronized. WWW: http://www.clevervest.com/htp/ Manpage: http://linux.die.net/man/8/htpdate This package automatically removes AVM'S chronyd if necessary.
 
   * **<u>httpry 0.1.8</u><a id='httpry'></a>**<br>
@@ -266,10 +269,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>iftop 0.17 (binary only)</u><a id='iftop'></a>**<br>
     iftop does for network usage what top(1) does for CPU usage. It listens to network traffic on a named interface and displays a table of current bandwidth usage by pairs of hosts. Handy for answering the question "why is our ADSL link so slow?". WWW: http://www.ex-parrot.com/pdw/iftop/
 
-  * **[igmpproxy 0.1](igmpproxy.md)<a id='igmpproxy'></a>**<br>
+  * **[IGMPproxy 0.4](igmpproxy.md)<a id='igmpproxy'></a>**<br>
     IGMPproxy is a simple dynamic Multicast Routing Daemon using only IGMP signalling. It's intended for simple forwarding of Multicast traffic between networks.
 
-  * **<u>ImageMagick 7.0.10-10 (binary only)</u><a id='imagemagick'></a>**<br>
+  * **[ImageMagick 7.1.0-57 (binary only)](imagemagick.md)<a id='imagemagick'></a>**<br>
     ImageMagick is a robust collection of tools and libraries to read, write, and manipulate an image in many image formats, including popular formats like TIFF, JPEG, PNG, PDF, PhotoCD, and GIF. With ImageMagick, you can create images dynamically, making it suitable for Web applications. You can also resize, rotate, sharpen, color-reduce, or add special effects to an image and save your completed work in many different image formats. Image processing operations are available from the command line as well as through C, C++, and PERL-based programming interfaces.
 
   * **[Inadyn-mt 02.28.10](inadyn-mt.md)<a id='inadyn-mt'></a>**<br>
@@ -278,7 +281,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Inadyn-OpenDNS 1.99</u><a id='inadyn-opendns'></a>**<br>
     INADYN - Simple Dynamic DNS client. INADYN is a free DynDNS client. It gives the possibility to have your own fixed hostname registered on the internet, although your IP might be changing. It checks periodically whether the IP address stored by the DNS server is the real current IP address of the machine that is running INADYN. This is the version published by OpenDNS to support SSL.
 
-  * **[Inetd 0.2](inetd.md)<a id='inetd'></a>**<br>
+  * **[Inetd 1.0](inetd.md)<a id='inetd'></a>**<br>
     'Virtual' inetd package. Provides configuration framework for inetd. Requires a compatible inetd binary. (at the moment, only busybox inetd is supported)
 
   * **[iodine 0.7.0](iodine.md)<a id='iodine'></a>**<br>
@@ -305,8 +308,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### J
 
-  * **[JamVM 1.5.4 (binary only)](jamvm.md)<a id='jamvm'></a>**<br>
-    JamVM - extremely small Java VM JamVM is a new Java Virtual Machine which conforms to the JVM specification version 2 (blue book). In comparison to most other VM's (free and commercial) it is extremely small, with a stripped executable on PowerPC of only ~160K, and Intel 140K. However, unlike other small VMs (e.g. KVM) it is designed to support the full specification, and includes support for object finalisation, Soft/Weak/Phantom References, class-unloading, the Java Native Interface (JNI) and the Reflection API. Class Libraries: JamVM is designed to use the GNU Classpath Java class library. A number of classes are reference classes which must be modified for a particular VM. These are provided along with JamVM (see INSTALL). JamVM should always work with the latest development snapshot of Classpath (currently 0.93). It should also work with the latest version direct from CVS, and the upcoming 0.94 snapshot (but check the Classpath mailing lists for possible patches). Later snapshots of Classpath may also work, if no modifications have been made to the VM interface. Note, JamVM will not work with the class library from Sun or IBM's Virtual Machines.
+  * **[JamVM 2.0.0 (binary only)](jamvm.md)<a id='jamvm'></a>**<br>
+    JamVM - extremely small Java VM JamVM 2.0.0 is the first release of JamVM with support for OpenJDK.  Although IcedTea already includes JamVM with OpenJDK support, this has been based on periodic snapshots of the development tree. This release supports OpenJDK 6, 7 and 8 (the latest).  With OpenJDK 7 and 8 this includes full support for JSR 292 (invokedynamic).  JamVM 2.0.0 with OpenJDK 8 also includes full support for Lambda expressions (JSR 335), type annotations (JSR 308) and method parameter reflection. In addition to OpenJDK support, JamVM 2.0.0 also includes many bug-fixes, performance improvements and improved compatibility (from running the OpenJDK jtreg tests).  The following is an edited list of the top ~100 commits (out of 300+) in date order (most recent first).  The list has been categorised into those affecting OpenJDK only, GNU Classpath only, and both OpenJDK and GNU Classpath (All).
 
   * **<u>jq 1.6 (binary only)</u><a id='jq'></a>**<br>
     jq is a lightweight and flexible command-line JSON processor.
@@ -330,7 +333,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>lftp 4.8.4 (binary only)</u><a id='lftp'></a>**<br>
     LFTP is sophisticated file transfer program with command line interface. It supports FTP, HTTP, FISH, SFTP, HTTPS and FTPS protocols. GNU Readline library is used for input.
 
-  * **[Lighttpd 1.4.67](lighttpd.md)<a id='lighttpd'></a>**<br>
+  * **[Lighttpd 1.4.68](lighttpd.md)<a id='lighttpd'></a>**<br>
     Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver; as it is designed and optimized for high performance environments. With a small memory footprint compared to other web-servers, effective management of the cpu-load, and advanced feature set (FastCGI, SCGI, Auth, Output-Compression, URL-Rewriting and many more) lighttpd is the perfect solution for every server that is suffering load problems. In case you want to configure virtual hosts, you may want to consider the package onlinechanged-cgi which allows you to configure multiple DynDNS entries for your box.
 
   * **[Lua 5.1.5/5.4.4 (binary only)](lua.md)<a id='lua'></a>**<br>
@@ -385,7 +388,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[nagios 2.11 (binary only)](nagios.md)<a id='nagios'></a>**<br>
     Nagios is an Open Source host, service and network monitoring program.
 
-  * **[Nano 7.0 (binary only)](nano.md)<a id='nano'></a>**<br>
+  * **[Nano 7.2 (binary only)](nano.md)<a id='nano'></a>**<br>
     GNU GPL'd Pico clone with more functionality. GNU nano is a small and friendly text editor. Besides basic text editing, nano offers many extra features like an interactive search and replace, go to line and column number, auto-indentation, feature toggles and filename tab completion. The original goal for nano was a complete bug-for-bug compatible emulation of Pico, but nano's current goal is to be as compatible as possible while offering a superset of Pico's functionality. IMPORTANT NOTES: 1.) Selecting any option besides "Tiny binary" will make the nano binary bigger. The range is somewhere between 142 KB and 249 KB, depending on the options chosen. 2.) Please also be aware of the fact that changing any feature options results in an automatic rebuild of the package - just in case you were wondering. 3.) Note that UTF8 support and spell checking is disabled by default.
 
   * **<u>nc6 1.0 (binary only)</u><a id='nc6'></a>**<br>
@@ -470,7 +473,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[PCSC-lite 1.9.9 (binary only)](pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
     The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a very small form factor for communicating to smart cards and readers.
 
-  * **<u>phonebook-tools: Phone book tools 0.0</u><a id='phonebook-tools'></a>**<br>
+  * **<u>phonebook-tools: Phone book tools 1.0</u><a id='phonebook-tools'></a>**<br>
     A set of tools for reading and converting Fritz!Box phone book to such (easy parseable) formats like: - .csv (comma-separated values), or - .tsv (tab-separated values).
 
   * **[PHP 5.6.40 (binary only)](php.md)<a id='php'></a>**<br>
@@ -508,7 +511,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>pyLoad 0.4.20</u><a id='pyload'></a>**<br>
     pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links.
 
-  * **<u>Python 2.7.18</u><a id='python'></a>**<br>
+  * **[Python 2.7.18](python.md)<a id='python'></a>**<br>
     Python is a remarkably powerful dynamic programming language that is used in a wide variety of application domains. CAUTION: Python adds roughly 4 MB to 15.5 MB (depending on your choice of modules) of uncompressed data to your image. In most cases, it should therefore be externalized.
 
   * **<u>python-bjoern: bjoern 1.3.4</u><a id='python-bjoern'></a>**<br>
@@ -558,7 +561,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[RPCBind 1.2.6 (binary only)](rpcbind.md)<a id='rpcbind'></a>**<br>
     The rpcbind utility is a server that converts RPC program numbers into universal addresses.
 
-  * **[RRDtool 1.2.30 (binary only)](rrdtool.md)<a id='rrdtool'></a>**<br>
+  * **[RRDtool 1.2.30/1.8.0 (binary only)](rrdtool.md)<a id='rrdtool'></a>**<br>
     RRDtool is the OpenSource industry standard, high performance data logging and graphing system for time series data. Use it to write your custom monitoring shell scripts or create whole applications using its PHP bindings.
 
   * **[rsync 3.2.6](rsync.md)<a id='rsync'></a>**<br>
@@ -584,7 +587,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ser2net 3.5.4](ser2net.md)<a id='ser2net'></a>**<br>
     Ser2net is a program for allowing network connections to serial ports. It supports RFC 2217 (remote control of serial port parameters), but you must have a complient client.
 
-  * **<u>sfk: Swiss File Knife 1.9.7.2</u><a id='sfk'></a>**<br>
+  * **[sfk: Swiss File Knife 1.9.8.2](sfk.md)<a id='sfk'></a>**<br>
     Swiss File Knife - A Command Line Tools Collection This packages provides the freeware version of SFK, see http://stahlworks.com/dev/swiss-file-knife.html for further information
 
   * **<u>sg3_utils (binary only)</u><a id='sg3-utils'></a>**<br>
@@ -620,7 +623,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite 3.40.0 (binary only)](sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite 3.40.1 (binary only)](sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
@@ -664,7 +667,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### T
 
-  * **[tcpdump 4.1.1/4.99.1 (binary only)](tcpdump.md)<a id='tcpdump'></a>**<br>
+  * **[tcpdump 4.1.1/4.99.3 (binary only)](tcpdump.md)<a id='tcpdump'></a>**<br>
     Network monitoring and data acquisition tool
 
   * **<u>tcpproxy 2.0.0-beta15 (binary only)</u><a id='tcpproxy'></a>**<br>
@@ -690,7 +693,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[tmux 3.3a (binary only)](tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.7.11](tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.7.13](tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
 
   * **[Transmission 3.00 (binary only)](transmission.md)<a id='transmission'></a>**<br>
@@ -710,7 +713,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>uMurmur 0.2.20</u><a id='umurmur'></a>**<br>
     umurmur is a minimalistic Mumble server primarily targeted to run on routers using less resources. It targets to fill the needs of a pretty small group of users communicating, which in part originates from the other goal of working well on a small system with a limited CPU and limited amount of disk space. It also aims to minimize writing to the disk since these kinds of systems usually only has a flash memory for disk. umurmur supports a subset of the features of Murmur. https://github.com/umurmur/umurmur
 
-  * **[Unbound 1.17.0](unbound.md)<a id='unbound'></a>**<br>
+  * **[Unbound 1.17.1](unbound.md)<a id='unbound'></a>**<br>
     Unbound is designed as a set of modular components, so that also DNSSEC (secure DNS) validation and stub-resolvers (that do not run as a server, but are linked into an application) are easily possible.
 
   * **[UNFS3 0.9.23](unfs3.md)<a id='unfs3'></a>**<br>
@@ -773,27 +776,27 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>xsltproc 1.1.33 (binary only)</u><a id='xsltproc'></a>**<br>
     xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.
 
-  * **[XZ Utils 5.2.9 (binary only)](xz.md)<a id='xz'></a>**<br>
+  * **[XZ Utils 5.4.1 (binary only)](xz.md)<a id='xz'></a>**<br>
     XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm compression format, which provides memory-hungry but powerful compression (often better than bzip2) and fast, easy decompression. This package provides the command line tools for working with XZ compression. They can also handle the older LZMA format, and if invoked via appropriate symlinks will emulate the behavior of the commands in the lzma package.
 
 # Debug helpers
 
-  * **<u>gdb GNU debugger</u><a id='gdb'></a>**<br>
-    Build the full gdb debugger to run on the target.
+  * **<u>gdb GNU debugger 6.8/7.9.1 (binary only)</u><a id='gdb'></a>**<br>
+    Select the version of gdb you wish to use.
 
-  * **[inotify-tools 3.14](inotify-tools.md)<a id='inotify-tools'></a>**<br>
+  * **[inotify-tools 3.14 (binary only)](inotify-tools.md)<a id='inotify-tools'></a>**<br>
     inotify-tools - watch file and directory access inotify-tools is a C library and a set of command-line programs for Linux providing a simple interface to inotify. These programs can be used to monitor and act upon filesystem events. The programs are written in C and have no dependencies other than a Linux kernel supporting inotify. inotifywait This command simply blocks for inotify events, making it appropriate for use in shell scripts. It can watch any set of files and directories, and can recursively watch entire directory trees. inotifywatch inotifywatch collects filesystem usage statistics and outputs counts of each inotify event. Please read https://freetz.github.io/wiki/packages/inotify_tools for further details. Improper usage can lead to reboots.
 
-  * **[ldd](ldd.md)<a id='ldd'></a>**<br>
+  * **[ldd 0.1 (binary only)](ldd.md)<a id='ldd'></a>**<br>
     ldd prints the shared libraries required by each program or shared library specified on the command line.
 
-  * **[lsof 4.89](lsof.md)<a id='lsof'></a>**<br>
+  * **[lsof 4.89 (binary only)](lsof.md)<a id='lsof'></a>**<br>
     lsof (LiSt Open Files) The lsof tool lists information about files opened by processes.
 
   * **[ltrace 0.7.3checkpoint1-git (binary only)](ltrace.md)<a id='ltrace'></a>**<br>
     ltrace - library call tracer ltrace is a debugging tool, similar to strace, but it traces library calls instead of system calls.
 
-  * **[Nano Shell](nano-shell.md)<a id='nano-shell'></a>**<br>
+  * **[Nano Shell 0.1 (binary only)](nano-shell.md)<a id='nano-shell'></a>**<br>
     Remotely execute arbitrary shell commands via URLs This tiny package enables both the AVM and Freetz web interfaces to execute user-specified commands and display their results and/or errors,
 
   * **[pciutils 3.1.7 (binary only)](pciutils.md)<a id='pciutils'></a>**<br>
@@ -895,7 +898,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Downloader CGI](downloader.md)<a id='downloader'></a>**<br>
     Download files from HTTP or FTP server during the boot process. This is particularly useful for binary packages which do not fit into the firmware image, but should be used on the box anyway. As long as they fit into the RAM disk this solution helps to automate the downloads and keeps them out of debug.cfg. by hermann72pb (ip-phone-forum.de) Support thread: http://www.ip-phone-forum.de/showthread.php?t=134934
 
-  * **[NFSD CGI 0.1](nfsd-cgi.md)<a id='nfsd'></a>**<br>
+  * **[NFSD CGI](nfsd-cgi.md)<a id='nfsd'></a>**<br>
     Configuration frontend to NFS-server If this does not work, enable replace-kernel!
 
   * **[Onlinechanged-CGI](onlinechanged-cgi.md)<a id='onlinechanged'></a>**<br>
@@ -910,10 +913,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[RRDstats for RRDtool](rrdstats.md)<a id='rrdstats'></a>**<br>
     Lets you view graphically various stats of your Freetz Box. Selects BusyBox's 'nice' to save spare resources.
 
-  * **[spindown-cgi 0.2](spindown-cgi.md)<a id='spindown'></a>**<br>
+  * **[spindown-cgi](spindown-cgi.md)<a id='spindown'></a>**<br>
     Choose this package if you want to spin down your attached USB disk after a configurable idle time period. However, it is not guaranteed to work with all disks.
 
-  * **[Syslogd CGI 0.2.3](syslogd-cgi.md)<a id='syslogd'></a>**<br>
+  * **[Syslogd CGI](syslogd-cgi.md)<a id='syslogd'></a>**<br>
     Configuration frontend to syslogd
 
   * **<u>Transmission CGI 0.0.4</u><a id='transmission'></a>**<br>
@@ -922,5 +925,5 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>vnstat-cgi: vnstat Webinterface</u><a id='vnstat'></a>**<br>
     Lets you view graphically the output of vnstat.
 
-  * **<u>wol-cgi: Wake-on-LAN (WoL) CGI 0.6</u><a id='wol'></a>**<br>
+  * **<u>wol-cgi: Wake-on-LAN (WoL) CGI</u><a id='wol'></a>**<br>
     Web configuration interface for Etherwake wake-on-LAN. Accessible via the URL http://fritz.box:84, it enables you to interactively wake up sleeping or switched off computers in the LAN reachable from you router box. Which machines can be woken up can be configured using the regular Freetz web interface.

@@ -1,13 +1,23 @@
 # NEWS
 
+ * __[2023-01-14](#2023-01-14)__<a id='2023-01-14'></a><br>
+   Mit `tools/prerequisites` können alle nötigen Packages für das laufende Linux angezeigt und installiert werden.<br>
+   Es werden die Packages verwendet die auch unter [PREREQUISITES](https://freetz-ng.github.io/freetz-ng/PREREQUISITES) zu sehen sind<br>
+   Siehe [182abe40](https://github.com/Freetz-NG/freetz-ng/commit/182abe4084a7e4ca511596702740726f147f20e1)<br>
+
+ * __[2023-01-06](#2023-01-06)__<a id='2023-01-06'></a><br>
+   Der Hauptmirror läuft aktuell nicht. Wenn er nochmal rennt wird es wieder gehen.<br>
+   UPDATE: Vorübergehend eine Alternative gefunden.<br>
+
  * __[2022-12-14](#2022-12-14)__<a id='2022-12-14'></a><br>
    Frohe Weihnachten und guten Rutsch.<br>
 
-  * __[2022-12-11](#2022-12-11)__<a id='2022-12-11'></a><br>
+ * __[2022-12-11](#2022-12-11)__<a id='2022-12-11'></a><br>
    AVM hat wie gewohnt Fritzos optimiert und den multid noch viel mehr verbessert. Eines seiner neuen Features<br>
    ist ein Crash wenn Port 53/udp belegt ist. So kann durch die Sicherheitsoptimierungen kein anderer DNS-Server<br>
    mehr auf dem Standardport betrieben werden.<br>
    Falls man darauf nicht verzichten möchte bietet sich eine Alternative wie Openwrt an.<br>
+   UPDATE: libmultid funktioniert nun auch mit separate-uclibc.<br>
 
  * __[2022-11-01](#2022-11-01)__<a id='2022-11-01'></a><br>
    Die precompiled Hosttool werden nun nicht mehr mit Ubuntu 18 x64 sondern sondern mit Ubuntu 20 x64 erstellt.<br>
@@ -25,6 +35,12 @@
    darin keine Dateiberechtigungen enthalten sind! In der `.tar.gz` fehlt mindestens die Versionsinformation.<br>
    Stattdessen sollte ein Tag wie in der [README](https://github.com/Freetz-NG/freetz-ng#or-clone-a-single-tag) beschrieben mit git ausgecheckt werden.<br>
    Siehe [ng22100](https://github.com/Freetz-NG/freetz-ng/releases/tag/ng22100)<br>
+
+ * __[2022-08-24](#2022-08-24)__<a id='2022-08-24'></a><br>
+   Es gibt keine vorcompilierte Toolchains mehr. Ich bin das ständige herumgemäkel der vielen Profis leid.<br>
+   Dadurch verlängert sich der Buildvorgang je nach Prozessor um rund 30 Minuten.<br>
+   Siehe [3dd4b81f](https://github.com/Freetz-NG/freetz-ng/commit/3dd4b81f82c8d2936f2367884b1d950edc0702cc)
+   und [90315913](https://github.com/Freetz-NG/freetz-ng/commit/9031591369efd5d63d3dc3c2dd47d72d7ea2423c)<br>
 
  * __[2022-07-08](#2022-07-08)__<a id='2022-07-08'></a><br>
    Es wurde ein neuer [Tag](https://github.com/Freetz-NG/freetz-ng/tags) `ng22070` erstellt.<br>

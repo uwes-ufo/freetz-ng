@@ -171,7 +171,7 @@ Currently supported devices and firmwares
   - 252.07.39 rev00000 {GER} [MOVE21] (Labor)
 * __Fritz!Box 6690 Cable__
   - 267.07.29 rev92355 {GER} [PSQ19P2NL4]
-  - 267.07.39 rev00000 {GER} [MOVE21] (Labor)
+  - 267.07.50 rev102488 {GER} [MOVE21]
 
 ### Fritz!Box LTE (68xx)
 
@@ -203,11 +203,9 @@ Currently supported devices and firmwares
 * __Fritz!Box 6850 LTE (UNTESTED)__
   - 262.07.21 rev82687 {ALL} [PSQ19]
   - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
-  - 262.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 262.07.39 rev00000 {ALL} [MOVE21] (Labor)
 * __Fritz!Box 6850 5G (UNTESTED)__
   - 258.07.30 rev94600 {ALL} [PSQ19P2NL4]
-  - 258.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 258.07.39 rev00000 {ALL} [MOVE21] (Labor)
 
 * __Fritz!Box 6890 LTE__
@@ -216,7 +214,6 @@ Currently supported devices and firmwares
   - 162.07.13 rev73668 {ALL} [MESH18 NL3]
   - 162.07.21 rev82271 {ALL} [PSQ19]
   - 162.07.29 rev93213 {ALL} [PSQ19P2NL4]
-  - 162.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 162.07.39 rev00000 {ALL} [MOVE21] (Labor)
 
 ### Fritz!Box Fon WLAN (70xx)
@@ -374,7 +371,7 @@ Currently supported devices and firmwares
   - 113.07.12 rev70401 {INT} [MESH18 NL2]
   - 113.07.21 rev81779 {ALL} [PSQ19]
   - 113.07.29 rev92201 {ALL} [PSQ19P2NL4]
-  - 113.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
+  - 113.07.51 rev102539 {ALL} [MOVE21NL1] (Labor)
 
 ### Fritz!Box Fon WLAN (75xx)
 
@@ -384,16 +381,16 @@ Currently supported devices and firmwares
 
 * __Fritz!Box Fon WLAN 7510__
   - 271.07.30 rev94120 {ALL} [PSQ19P2NL4]
-  - 271.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
+  - 271.07.39 rev102302 {ALL} [MOVE21] (Labor)
 * __Fritz!Box Fon WLAN 7520__
   - 175.07.14 rev73182 {GER} [MESH18 NL4]
   - 175.07.21 rev82822 {ALL} [PSQ19]
   - 175.07.29 rev92061 {ALL} [PSQ19P2NL4]
-  - 175.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
+  - 175.07.50 rev102451 {ALL} [MOVE21]
   - Alien 7530 {GER}
 * __Fritz!Box Fon WLAN 7520 B (UNTESTED)__
   - 276.07.31 rev98652 {ALL} [PSQ19P2NL4]
-  - 276.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
+  - 276.07.50 rev102679 {ALL} [MOVE21]
 * __Fritz!Box Fon WLAN 7530__
   - 164.07.02 rev62311 {GER}
   - 164.07.14 rev73183 {GER} [MESH18 NL4]
@@ -401,12 +398,10 @@ Currently supported devices and firmwares
   - 164.07.13 rev75481 {INT} [MESH18 NL3]
   - 164.07.21 rev82823 {ALL} [PSQ19]
   - 164.07.29 rev92062 {ALL} [PSQ19P2NL4]
-  - 164.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
-  - 164.07.39 rev00000 {ALL} [MOVE21] (Labor)
+  - 164.07.50 rev102401 {ALL} [MOVE21]
 * __Fritz!Box Fon WLAN 7530 AX__
   - 256.07.22 rev85878 {ALL} [PSQ19]
   - 256.07.31 rev94779 {ALL} [PSQ19P2NL4]
-  - 256.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 256.07.39 rev00000 {ALL} [MOVE21] (Labor)
 * __Fritz!Box Fon WLAN 7560__
   - 149.06.53 rev41227 {GER}
@@ -451,7 +446,6 @@ Currently supported devices and firmwares
   - 154.07.50 rev101716 {ALL} [MOVE21]
 * __Fritz!Box Fon WLAN 7590 AX__
   - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
-  - 259.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 259.07.39 rev00000 {ALL} [MOVE21] (Labor)
 
 ### Fritz!Powerline
@@ -512,26 +506,22 @@ Currently supported devices and firmwares
   - 172.07.29 rev93267 {ALL} [PSQ19P2NL4]
 * __Fritz!Repeater 1200 AX__
   - 268.07.30 rev93528 {ALL} [PSQ19P2NL4]
-  - 268.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 268.07.39 rev00000 {ALL} [MOVE21] (Labor)
 * __Fritz!Repeater 2400__
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.21 rev83013 {ALL} [PSQ19]
   - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
-  - 169.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
-  - 169.07.39 rev00000 {ALL} [MOVE21] (Labor)
+  - 169.07.50 rev102232 {ALL} [MOVE21]
 * __Fritz!Repeater 3000__
   - 174.07.04 rev66458 {ALL}
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
   - 174.07.21 rev83015 {ALL} [PSQ19]
   - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
-  - 174.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 174.07.39 rev00000 {ALL} [MOVE21] (Labor)
 * __Fritz!Repeater 3000 AX (UNTESTED)__
   - 270.07.41 rev00000 {ALL} [MOVE21] (Inhaus)
 * __Fritz!Repeater 6000__
   - 253.07.30 rev98407 {ALL} [PSQ19P2NL4]
-  - 253.07.39 rev00000 {ALL} [MOVE21] (Inhaus)
   - 253.07.39 rev00000 {ALL} [MOVE21] (Labor)
 
 ### T-Com derivatives

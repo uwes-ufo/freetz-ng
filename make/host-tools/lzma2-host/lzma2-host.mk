@@ -1,12 +1,10 @@
-$(call TOOLS_INIT, 5.2.9)
+$(call TOOLS_INIT, 5.4.1)
 $(PKG)_SOURCE:=xz-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=287ef163e7e57561e9de590b2a9037457af24f03a46bbd12bf84f3263679e8d2
+$(PKG)_HASH:=5d9827aa1875b21c288f78864bb26d2650b436ea8d2cad364e4921eb6266a5a5
 $(PKG)_SITE:=https://tukaani.org/xz
 ### WEBSITE:=https://tukaani.org/xz/
 ### CHANGES:=https://git.tukaani.org/?p=xz.git;a=blob_plain;f=NEWS;hb=HEAD
 ### CVSREPO:=https://git.tukaani.org/?p=xz.git
-
-$(PKG)_DIR:=$(TOOLS_SOURCE_DIR)/xz-$($(PKG)_VERSION)
 
 $(PKG)_ALONE_DIR:=$($(PKG)_DIR)/src/xz
 $(PKG)_LIB_DIR:=$($(PKG)_DIR)/src/liblzma/.libs

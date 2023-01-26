@@ -18,6 +18,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[bluez-libs (libbluetooth.so) 2.25](bluez-libs.md)<a id='bluez-libs'></a>**<br>
     The overall goal of the bluez project is to make an implementation of the Bluetooth wireless standards specifications for Linux.
 
+### C
+
+  * **[Cairo (libcairo.so) 1.17.4](cairo.md)<a id='cairo'></a>**<br>
+    Cairo is a 2D graphics library with support for multiple output devices. Cairo is designed to produce consistent output on all output media while taking advantage of display hardware acceleration when available.
+
 ### D
 
   * **[db: Berkeley DB library (libdb.so) 4.8.30](db.md)<a id='db'></a>**<br>
@@ -36,15 +41,21 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FLAC (libFLAC.so) 1.3.2](flac.md)<a id='flac'></a>**<br>
     Free Lossless Audio Codec library.
 
+  * **[Fontconfig (libfontconfig.so) 2.14.1](fontconfig.md)<a id='fontconfig'></a>**<br>
+    Fontconfig is a library for configuring and customizing font access.
+
   * **[FreeType (freetype.so) 2.12.1](freetype.md)<a id='freetype'></a>**<br>
     FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well.
 
+  * **[FriBidi (libfribidi.so) 1.0.12](fribidi.md)<a id='fribidi'></a>**<br>
+    The Free Implementation of the Unicode Bidirectional Algorithm.
+
 ### G
 
-  * **[gettext: libintl (libintl.so) 0.18.1.1](gettext.md)<a id='gettext'></a>**<br>
+  * **[gettext (libintl.so) 0.21.1](gettext.md)<a id='gettext'></a>**<br>
     GNU Internationalization library
 
-  * **[GLib2 libglib (libglib-2.0.so) 2.32.4](glib2.md)<a id='glib2'></a>**<br>
+  * **[GLib2 libglib (libglib-2.0.so) 2.32.4/2.75.2](glib2.md)<a id='glib2'></a>**<br>
     GLib is a library containing many useful C routines for things such as trees, hashes, and lists.
 
   * **[gmp: GNU MP Bignum Library (libgmp.so) 6.1.2](gmp.md)<a id='gmp'></a>**<br>
@@ -52,6 +63,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[gsasl: libgsasl (libgsasl.so) 1.10.0](gsasl.md)<a id='gsasl'></a>**<br>
     GNU SASL is an implementation of the Simple Authentication and Security Layer framework and a few common SASL mechanisms. SASL is used by network servers (e.g., IMAP, SMTP, XMPP) to request authentication from clients, and in clients to authenticate against servers.
+
+### H
+
+  * **[HarfBuzz (libharfbuzz.so) 6.0.0](harfbuzz.md)<a id='harfbuzz'></a>**<br>
+    HarfBuzz is a text shaping engine. It primarily supports OpenType, but also Apple Advanced Typography.
 
 ### I
 
@@ -94,7 +110,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libconfig (libconfig.so) 1.5](libconfig.md)<a id='libconfig'></a>**<br>
     Libconfig is a simple library for processing structured configuration files. Libconfig is very compact - just 46K for the stripped C shared library. This makes it well-suited for memory-constrained systems.
 
-  * **[libctlmgr (libctlmgr.so) 0.6.9](libctlmgr.md)<a id='libctlmgr'></a>**<br>
+  * **[libctlmgr (libctlmgr.so) 1.0](libctlmgr.md)<a id='libctlmgr'></a>**<br>
     This is Freetz compatibility library which overwrites functions of AVM's libraries, e.g. write_etc_passwd.
 
   * **[libdaemon (libdaemon.so) 0.14](libdaemon.md)<a id='libdaemon'></a>**<br>
@@ -109,7 +125,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libelf (libelf.so) 0.8.13](libelf.md)<a id='libelf'></a>**<br>
     libelf - ELF object file access library
 
-  * **[libev (libev.so) 4.15](libev.md)<a id='libev'></a>**<br>
+  * **[libev (libev.so) 4.33](libev.md)<a id='libev'></a>**<br>
     libev provides a full-featured and high-performance event loop that is loosely modelled after libevent. It includes relative timers, absolute timers with customized rescheduling, synchronous signals, process status change events, event watchers dealing with the event loop itself, file watchers, and even limited support for fork events. It uses a priority queue to manage timers and uses arrays as fundamental data structure. It has no artificial limitations on the number of watchers waiting for the same event.
 
   * **[libevent (libevent.so) 2.1.12-stable](libevent.md)<a id='libevent'></a>**<br>
@@ -118,7 +134,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libexif: EXIF library (libexif.so) 0.6.24](libexif.md)<a id='libexif'></a>**<br>
     libexif is a library for parsing, editing, and saving EXIF data.
 
-  * **[libffi (libffi.so) 3.2.1](libffi.md)<a id='libffi'></a>**<br>
+  * **[libffi (libffi.so) 3.4.4](libffi.md)<a id='libffi'></a>**<br>
     libffi is a library that really only provides the lowest, machine dependent layer of a fully featured foreign function interface. A layer must exist above libffi that handles type conversions for values passed between the two languages. ffi stands for Foreign Function Interface. A foreign function interface is the popular name for the interface that allows code written in one language to call code written in another language.
 
   * **[libftdi (libftdi.so) 0.20](libftdi.md)<a id='libftdi'></a>**<br>
@@ -154,7 +170,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libmnl (libmnl.so) 1.0.4](libmnl.md)<a id='libmnl'></a>**<br>
     libmnl is a minimalistic user-space library oriented to Netlink developers. There are a lot of common tasks in parsing, validating, constructing of both the Netlink header and TLVs that are repetitive and easy to get wrong. This library aims to provide simple helpers that allows you to re-use code and to avoid re-inventing the wheel.
 
-  * **[libmultid (libmultid.so) 0.5](libmultid.md)<a id='libmultid'></a>**<br>
+  * **[libmultid (libmultid.so) 1.0](libmultid.md)<a id='libmultid'></a>**<br>
     If this library is preloaded to multid, some portbindings will be remapped.
 
   * **[libnet (libnet.so) 1.1.4](libnet.md)<a id='libnet'></a>**<br>
@@ -175,10 +191,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libosip2 (libosip2.so) 3.5.0](libosip2.md)<a id='libosip2'></a>**<br>
     GNU oSIP library, a Session Initiation Protocol (SIP) implementation.
 
-  * **[libpcap (libpcap.so) 1.1.1/1.10.1](libpcap.md)<a id='libpcap'></a>**<br>
+  * **[libpcap (libpcap.so) 1.1.1/1.10.3](libpcap.md)<a id='libpcap'></a>**<br>
     libpcap is a system-independent interface for user-level packet capture. libpcap provides a portable framework for low-level network monitoring. Applications include network statistics collection, security monitoring, network debugging, etc.
 
-  * **[libpng: PNG library (libpng.so) 1.2.59](libpng.md)<a id='libpng'></a>**<br>
+  * **[libpng: PNG library (libpng.so) 1.6.39](libpng.md)<a id='libpng'></a>**<br>
     libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 12 years. The home site for development versions (i.e., may be buggy or subject to change or include experimental features) is http://libpng.sourceforge.net/, and the place to go for questions about the library is the png-mng-implement mailing list.
 
   * **[libssh2 (libssh2.so) 1.10.0](libssh2.md)<a id='libssh2'></a>**<br>
@@ -227,7 +243,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### M
 
-  * **[mbedtls: mbed crypto (libmbedcrypto.so) 2.7.19/2.28.1](mbedtls.md)<a id='mbedtls'></a>**<br>
+  * **[mbedtls: mbedCrypto (libmbedcrypto.so) 2.7.19/2.28.2](mbedtls.md)<a id='mbedtls'></a>**<br>
     Enables support for the Blowfish block cipher.
 
   * **[mpc: GNU MPC Library (libmpc.so) 1.1.0](mpc.md)<a id='mpc'></a>**<br>
@@ -238,10 +254,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### N
 
-  * **[ncurses (libncurses.so) 6.3](ncurses.md)<a id='ncurses'></a>**<br>
+  * **[ncurses (libncurses.so) 6.4](ncurses.md)<a id='ncurses'></a>**<br>
     ncurses is a programming library providing an API, allowing the programmer to write text user interfaces in a terminal-independent manner. It also optimizes screen changes, in order to reduce the latency experienced when using remote shells. Ncurses stands for "new curses", and is a replacement for the discontinued 4.4 BSD classic curses.
 
-  * **[ncursesw (libncursesw.so) 6.3](ncursesw.md)<a id='ncursesw'></a>**<br>
+  * **[ncursesw (libncursesw.so) 6.4](ncursesw.md)<a id='ncursesw'></a>**<br>
     ncurses is a programming library providing an API, allowing the programmer to write text user interfaces in a terminal-independent manner. It also optimizes screen changes, in order to reduce the latency experienced when using remote shells. Ncurses stands for "new curses", and is a replacement for the discontinued 4.4 BSD classic curses. Ncursesw has additional wide-character (unicode) support. Ncurses and Ncursesw libraries are source-compatible, but not binary-compatible.
 
   * **[neon: libneon (libneon.so) 0.30.2/0.32.4](neon.md)<a id='neon'></a>**<br>
@@ -263,11 +279,17 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### P
 
+  * **[Pango (libpango-1.0.so) 1.50.12](pango.md)<a id='pango'></a>**<br>
+    Pango is a library for layout and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed; however, most of the work on Pango so far has been done using the GTK widget toolkit as a test platform. Pango forms the core of text and font handling for GTK.
+
   * **[pcre: libpcre (libpcre.so) 8.45](pcre.md)<a id='pcre'></a>**<br>
     A Perl Compatible Regular Expression library
 
   * **[pcre2: libpcre2 (libpcre2-8.so) 10.42](pcre2.md)<a id='pcre2'></a>**<br>
     A Perl Compatible Regular Expression library
+
+  * **[Pixman (libpixman-1.so) 0.42.2](pixman.md)<a id='pixman'></a>**<br>
+    Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization.
 
   * **[pjproject2: libpj (libpj.so) 2.2.1](pjproject2.md)<a id='pjproject2'></a>**<br>
 

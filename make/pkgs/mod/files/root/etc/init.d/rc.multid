@@ -10,7 +10,7 @@ TMPFILE="/tmp/.multid."
 
 [ -r /etc/options.cfg ] && . /etc/options.cfg
 # include environment required for multid restart
-. /bin/env.mod.rcconf
+. /bin/env.mod.rcconf avm
 
 start() {
 	echo -n "Starting ${DAEMON_LONG_NAME} ... "
@@ -63,7 +63,7 @@ start() {
 		local _bind_enabled="$(modconf value BIND_ENABLED bind 2>/dev/null)"
 		local _dnsmasq_enabled="$(modconf value DNSMASQ_ENABLED dnsmasq 2>/dev/null)"
 		local _dnsmasq_port="$(modconf value DNSMASQ_DNS_PORT dnsmasq 2>/dev/null)"
-		local _dnsmasq_dns_enabled=$([ "$_dnsmasq_enabled" = yes -a "$_dnsmasq_port" -eq 53 2>/dev/null ] && echo yes || echo no)
+		local _dnsmasq_dns_enabled=$([ "$_dnsmasq_enabled" = yes -a "$_dnsmasq_port" -eq 53 ] 2>/dev/null && echo yes || echo no)
 		local _unbound_enabled="$(modconf value UNBOUND_ENABLED unbound 2>/dev/null)"
 		if [ "$_resolv_conf_dns" == "127.0.0.1" -a "$_bind_enabled" != yes -a "$_dnsmasq_dns_enabled" != yes -a "$_unbound_enabled" != yes ]; then
 			echo -n "discarded libmultid, no enabled dns server ... "
@@ -71,8 +71,13 @@ start() {
 			export LD_PRELOAD=libmultid.so
 		fi
 	fi
-	$DAEMON_BIN $DAEMON_CMD_IGD $DAEMON_CMD_NTP $DAEMON_CMD_069 $DAEMON_CMD_IGM 2>/dev/null
-	exitval=$?
+	if modlib_check_supervisor; then
+		nohup $DAEMON_BIN $DAEMON_CMD_IGD $DAEMON_CMD_NTP $DAEMON_CMD_069 $DAEMON_CMD_IGM 0</dev/null 1>/dev/null 2>&1 &
+		exitval=0
+	else
+		$DAEMON_BIN $DAEMON_CMD_IGD $DAEMON_CMD_NTP $DAEMON_CMD_069 $DAEMON_CMD_IGM 2>/dev/null
+		exitval=$?
+	fi
 	unset LD_PRELOAD
 	sleep 1
 	[ -f /tmp/flash/mod/multid.start ] && . /tmp/flash/mod/multid.start

@@ -46,14 +46,26 @@ Latest changes
 
  - Build system:
    * Ccache 4.7.4
+   * Meson support
 
  - Host tools:
+   * busybox 1.36.0
    * fakeroot 1.30.1
+   * fastjar 0.98
+   * gperf 3.1
    * kconfig 6.1
-   * precompiled host-tools 2022-12-10
+   * meson 1.0.0
+   * mklibs 0.1.45
+   * ncurses 6.4
+   * ninja 1.11.1
+   * precompiled host-tools 2023-01-25
+   * prelink 20130503
    * pseudo 1.9.0 oe-core c9670c2
+   * python 3.11.1
    * sed 4.9
-   * xz 5.2.9
+   * sfk 1.9.8.2
+   * u-boot 2023.01
+   * xz 5.4.1
 
  - Patches:
    * remove AVMCOUNTERD: collects some data for you
@@ -62,36 +74,65 @@ Latest changes
 
  - Packages:
    * ACME.sh 3.0.5 (letsencrypt)
-   * BIND 9.11.37/9.16.35
+   * BIND 9.11.37/9.16.37
+   * BIRD 1.6.8
+   * BusyBox 1.36.0
+   * CA-bundle 2023-01-10
    * CCID 1.5.1
-   * Curl 7.86.0
+   * classpath 0.99
+   * Curl 7.87.0
    * dehydrated 0.7.1 (letsencrypt)
+   * DejaVu Fonts TTF 2.37
    * Dnsmasq 2.80/2.88
    * Dropbear 2022.83
-   * Git 2.39.0
-   * HAProxy 2.6.7
+   * Git 2.39.1
+   * HAProxy 2.6.8
+   * htpdate 1.3.7
+   * IGMPproxy 0.4
+   * ImageMagick 7.1.0-57
+   * jamvm 2.0.0
    * Knock 0.8
+   * libffi 3.4.4
+   * libpcap 1.1.1/1.10.3
+   * Lighttpd 1.4.68
    * Lua 5.1.5/5.4.4
-   * Nano 7.0
+   * Nano 7.2
+   * ncurses 6.4
+   * ncursesw 6.4
    * OpenSSH 9.1p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7
    * OpenVPN 2.4.12/2.5.8
    * PCSC-lite 1.9.9
    * RPCBind 1.2.6
+   * RRDtool 1.2.30/1.8.0
+   * Swiss File Knife 1.9.8.2
    * strace 4.9/5.0/6.1
-   * SQLite 3.40.0
-   * Tor 0.4.7.11
-   * Unbound 1.17.0
-   * XZ Utils 5.2.9
+   * SQLite 3.40.1
+   * tcpdump 4.1.1/4.99.3
+   * Tor 0.4.7.13
+   * Unbound 1.17.1
+   * XZ Utils 5.4.1
 
  - Libraries:
+   * cairo 1.17.4
    * expat 2.5.0
+   * fontconfig 2.14.1
+   * fribidi 1.0.12
+   * glib2 2.32.4/2.75.2
+   * harfbuzz 6.0.0
+   * libctlmgr 1.0
+   * libev 4.33
    * libidn 1.41
    * libgpg-error 1.46
+   * libmultid 1.0
+   * libpng 1.6.39
    * libusb-compat 0.1.8
    * libxml2 2.10.3
+   * mbedTLS 2.7.19/2.28.2
    * neon 0.30.2/0.32.4
+   * pango 1.50.12
    * pcre2 10.42
+   * pixman 0.42.2
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
@@ -119,6 +160,7 @@ Latest changes
    * FFmpeg 5.1.2
    * FreeType 2.12.1
    * FUSE 2.9.9
+   * gettext 0.21.1
    * Git 2.38.0
    * GnuTLS 3.7.8
    * HAProxy 2.6.6

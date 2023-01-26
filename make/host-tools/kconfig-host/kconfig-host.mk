@@ -1,5 +1,5 @@
 $(call TOOLS_INIT, v6.1)
-## patches/300-main_makefile.patch contains also the version
+## patches/100-main_makefile.patch contains also the version
 $(PKG)_SOURCE:=kconfig-$($(PKG)_VERSION).tar.xz
 $(PKG)_HASH:=18dc09c3261d25c3c911e28003bde49d5450a8b85813231bd425bd0f6e22504a
 $(PKG)_SITE:=git_archive@git://repo.or.cz/linux.git,scripts/basic,scripts/kconfig,scripts/Kbuild.include,scripts/Makefile.compiler,scripts/Makefile.build,scripts/Makefile.host,scripts/Makefile.lib,Documentation/kbuild/kconfig-language.rst,Documentation/kbuild/kconfig-macro-language.rst,Documentation/kbuild/kconfig.rst
@@ -10,7 +10,9 @@ $(PKG)_TARGET_PRG := conf   mconf      nconf   gconf   gconf.glade qconf
 $(PKG)_TARGET_ARG := config menuconfig nconfig gconfig gconfig     xconfig
 $(PKG)_TARGET_ALL := $(join $(KCONFIG_HOST_TARGET_ARG),$(patsubst %,--%,$(KCONFIG_HOST_TARGET_PRG)))
 
-$(PKG)_BUILD_PREREQ:=bison flex
+$(PKG)_BUILD_PREREQ += bison flex
+$(PKG)_BUILD_PREREQ_HINT := You have to install the bison and flex packages
+
 $(PKG)_DEPENDS_ON:=
 
 $(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_MENUCONFIG_BUTTONS),buttons)
@@ -26,7 +28,9 @@ $(TOOLS_UNPACKED)
 $(TOOLS_CONFIGURED_NOP)
 
 $($(PKG)_TARGET_PRG:%=$($(PKG)_DIR)/scripts/kconfig/%): $($(PKG)_DIR)/.unpacked
-	$(TOOLS_SUBMAKE) -C $(KCONFIG_HOST_DIR) $(subst --$(notdir $@),,$(filter %--$(notdir $@),$(KCONFIG_HOST_TARGET_ALL)))
+	$(TOOLS_SUBMAKE) -C $(KCONFIG_HOST_DIR) \
+		HOSTPKG_CONFIG="pkgconf" \
+		$(subst --$(notdir $@),,$(filter %--$(notdir $@),$(KCONFIG_HOST_TARGET_ALL)))
 
 $(patsubst %,$($(PKG)_TARGET_DIR)/%,$($(PKG)_TARGET_PRG)): $($(PKG)_TARGET_DIR)/% : $($(PKG)_DIR)/scripts/kconfig/%
 	$(INSTALL_FILE)

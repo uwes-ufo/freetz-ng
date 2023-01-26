@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mklibs() {
+freetz_mklibs() {
 	local HOST_TOOLS_DIR="${FREETZ_BASE_DIR}/tools/build"
 	local TARGET_TOOLCHAIN_STAGING_DIR="${FREETZ_BASE_DIR}/toolchain/target"
 	local GNU_TARGET_NAME=${FREETZ_TARGET_ARCH_ENDIANNESS_DEPENDENT}-linux
@@ -22,7 +22,10 @@ mklibs() {
 		file -r -N -F '' {} + | \
 		awk ' /shared object/ { print $1 }' >> "${MOD_DIR}/mklibs-progs"
 	# Run mklibs script, needs path to mklibs-readelf and objcopy
-	PATH="${HOST_TOOLS_DIR}/bin:${HOST_TOOLS_DIR}/usr/bin:${TARGET_TOOLCHAIN_STAGING_DIR}/bin:${PATH}" \
+	[ "$FREETZ_TOOLCHAIN_CCACHE" == "y" ] \
+	  && BINS_PATH="${TARGET_TOOLCHAIN_STAGING_DIR}/bin:${TARGET_TOOLCHAIN_STAGING_DIR}/bin-ccache" \
+	  || BINS_PATH="${TARGET_TOOLCHAIN_STAGING_DIR}/bin-ccache:${TARGET_TOOLCHAIN_STAGING_DIR}/bin"
+	PATH="${HOST_TOOLS_DIR}/path:${HOST_TOOLS_DIR}/bin:${HOST_TOOLS_DIR}/usr/bin:${BINS_PATH}:${PATH}" \
 		"${HOST_TOOLS_DIR}/bin/mklibs" \
 		-vvv \
 		-D \
@@ -46,6 +49,7 @@ mklibs() {
 		done
 		[ -n "$DEST" ] || error 1 "${FUNCNAME}: failed to determine the destination of ${LIB##*/}"
 		if cp "$LIB" "$DEST"; then
+			chmod +x "$DEST"
 			echo2 "Successfully copied mklibs-processed version of ${LIB##*/} to ${DEST#${FILESYSTEM_MOD_DIR}}"
 		else
 			error 1 "${FUNCNAME}: failed to copy ${LIB##*/} to the destination directory"

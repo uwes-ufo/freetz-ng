@@ -115,6 +115,9 @@ config FREETZ_AVM_HAS_DTRACE
 config FREETZ_AVM_HAS_PRINTSERV
 	def_bool y
 
+config FREETZ_AVM_HAS_PCPD
+	def_bool y
+
 config FREETZ_AVM_HAS_MEDIASRV
 	def_bool y
 
@@ -155,6 +158,9 @@ config FREETZ_AVM_PROP_ARCH_MIPS
 	def_bool y
 
 config FREETZ_AVM_PROP_GCC_4_8
+	def_bool y
+
+config FREETZ_AVM_PROP_LIBC_UCLIBC
 	def_bool y
 
 config FREETZ_AVM_PROP_UCLIBC_0_9_33

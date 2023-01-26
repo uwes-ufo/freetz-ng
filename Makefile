@@ -43,7 +43,7 @@ ifneq ($(shell grep -q "$$($(ENVIRA_REV_TOOL))" $(ENVIRA_LAST_REV) 2>/dev/null &
 endif
 endif
 	@$(ENVIRA_REV_TOOL) make
-	@umask $(ENVIRA_UMASK) && PATH="$(ENVIRA_PATH_ABS):$(PATH)" $(MAKE) $(MAKECMDGOALS) $(ENVIRA_MAKE_VARS) || kill $$$$
+	@umask $(ENVIRA_UMASK) && PATH="$(ENVIRA_PATH_ABS):$(PATH):/usr/sbin" $(MAKE) $(MAKECMDGOALS) $(ENVIRA_MAKE_VARS) || kill $$$$
 .PHONY: envira
 
 $(MAKECMDGOALS): envira
@@ -94,10 +94,16 @@ CHECK_PREREQ_TOOL:=$(TOOLS_DIR)/prerequisites
 GENERATE_IN_TOOL:=$(TOOLS_DIR)/genin
 TAR:=$(TOOLS_DIR)/tar-gnu
 SED:=sed
+PYTHON3=python3
+MESON=meson
+CMAKE=cmake
+NINJA1=ninja
 MAKE1=make
 ifeq ($(FREETZ_JLEVEL),0)
+NINJA=ninja -j$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 MAKE=make -j$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 else
+NINJA=ninja -j$(FREETZ_JLEVEL)
 MAKE=make -j$(FREETZ_JLEVEL)
 endif
 
@@ -176,8 +182,8 @@ endif
 # kconfig checks them in its .mk-file to be able to disable items always
 ifneq ($(findstring menuconfig,$(MAKECMDGOALS)),menuconfig)
 ifneq ($(NO_PREREQ_CHECK),y)
-ifneq (OK,$(shell $(CHECK_PREREQ_TOOL) >&2 && echo OK))
-$(error Some build prerequisites are missing! See '.prerequisites' for why. Please install the missing packages before trying again. See https://freetz-ng.github.io/freetz-ng/PREREQUISITES for installation hints)
+ifneq (OK,$(shell $(CHECK_PREREQ_TOOL) check >&2 && echo OK))
+$(error Some build prerequisites are missing! See '.prerequisites' for why. Please install the missing packages with 'tools/prerequisites install'. See https://freetz-ng.github.io/freetz-ng/PREREQUISITES for installation hints)
 endif
 endif
 endif
@@ -229,7 +235,7 @@ $(info You have no CPU with AVX2 support, precompiled (download) host-tools auto
 endif
 endif
 # check debian for <11
-ifeq ($([ "$(sed 's/\..*//' /etc/debian_version 2>/dev/null)" -lt 11 2>/dev/null ] && echo n),n)
+ifeq ($([ "$(sed 's/\..*//' /etc/debian_version 2>/dev/null)" -lt 11 ] 2>/dev/null && echo n),n)
 ifeq ($(FREETZ_DOWNLOAD_TOOLCHAIN),y)
 DLCHG:=$(shell echo 'y' ; sed 's/^\# FREETZ_BUILD_TOOLCHAIN .*/FREETZ_BUILD_TOOLCHAIN=y/' -i $(TOPDIR)/.config)
 DLCHG:=$(shell echo 'y' ; sed 's/^FREETZ_DOWNLOAD_TOOLCHAIN=.*/\# FREETZ_DOWNLOAD_TOOLCHAIN is not set/' -i $(TOPDIR)/.config)

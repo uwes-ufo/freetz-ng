@@ -66,6 +66,9 @@ config FREETZ_AVM_HAS_LEDPAGE
 config FREETZ_AVM_HAS_MEDIASRV
 	def_bool y
 
+config FREETZ_AVM_HAS_MESHD
+	def_bool y
+
 config FREETZ_AVM_HAS_MULTIPLE_LANGUAGES
 	def_bool y
 
@@ -91,6 +94,9 @@ config FREETZ_AVM_HAS_OPENSSL
 	def_bool y
 
 config FREETZ_AVM_HAS_OPENSSL_VERSION_1
+	def_bool y
+
+config FREETZ_AVM_HAS_PCPD
 	def_bool y
 
 config FREETZ_AVM_HAS_PHONE
@@ -156,6 +162,9 @@ config FREETZ_AVM_PROP_GCC_5
 config FREETZ_AVM_PROP_HWREV
 	string
 	default "231"
+
+config FREETZ_AVM_PROP_LIBC_UCLIBC
+	def_bool y
 
 config FREETZ_AVM_PROP_MAJOR
 	string

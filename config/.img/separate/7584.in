@@ -160,6 +160,12 @@ config FREETZ_AVM_HAS_PRINTSERV
 config FREETZ_AVM_HAS_NEXUS
 	def_bool y
 
+config FREETZ_AVM_HAS_MESHD
+	def_bool y
+
+config FREETZ_AVM_HAS_PCPD
+	def_bool y
+
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 
@@ -215,6 +221,9 @@ config FREETZ_AVM_PROP_ARCH_MIPS
 	def_bool y
 
 config FREETZ_AVM_PROP_GCC_8
+	def_bool y
+
+config FREETZ_AVM_PROP_LIBC_MUSL
 	def_bool y
 
 config FREETZ_AVM_PROP_UCLIBC_SEPARATE

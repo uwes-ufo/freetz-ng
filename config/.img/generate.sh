@@ -439,7 +439,7 @@ determine_() {
 	#ANNEX_SELECT (avme is ignored by patch, just for consolodation)
 	X="$(grep -c "get_annex_checked" "$unpacked/usr/www/avm/internet/dsl_line_settings.lua" 2>/dev/null)"
 	[ -z "$X" ] && X="$(grep -c "get_annex_checked" "$unpacked/usr/www/avme/internet/dsl_line_settings.lua" 2>/dev/null)"
-	[ "$X" -gt 1 2>/dev/null ] && X="available" || X="%"
+	[ "$X" -gt 1 ] 2>/dev/null && X="available" || X="%"
 	[ "$X" == "available" ] && in_b "FREETZ_AVM_HAS_ANNEX_SELECTION"
 	[ $DOSHOW -ge 2 ] && outp "annsel" "$X"
 
@@ -694,6 +694,11 @@ determine_() {
 	[ -e "$unpacked/sbin/avmcounterd" ] && X="available" && in_b "FREETZ_AVM_HAS_AVMCOUNTERD"
 	[ $DOSHOW -ge 2 ] && outp "avmcounterd" "$X"
 
+	#RRDTOOL
+	X="%"
+	[ -e "$unpacked/usr/bin/rrdtool" ] && X="available" && in_b "FREETZ_AVM_HAS_RRDTOOL"
+	[ $DOSHOW -ge 2 ] && outp "rrdtool" "$X"
+
 	#WEBSRV
 	X="%"
 	[ -e "$unpacked/sbin/websrv" ] && X="available" && in_b "FREETZ_AVM_HAS_WEBSRV"
@@ -713,6 +718,16 @@ determine_() {
 	X="%"
 	[ -e "$unpacked/bin/avmnexusd" -o -e "$unpacked/sbin/avmnexusd" ] && X="available" && in_b "FREETZ_AVM_HAS_NEXUS"
 	[ $DOSHOW -ge 2 ] && outp "nexus" "$X"
+
+	#MESHD
+	X="%"
+	[ -e "$unpacked/sbin/meshd" -o -e "$unpacked/usr/sbin/meshd" ] && X="available" && in_b "FREETZ_AVM_HAS_MESHD"
+	[ $DOSHOW -ge 2 ] && outp "meshd" "$X"
+
+	#PCPD
+	X="%"
+	[ -e "$unpacked/sbin/pcpd" ] && X="available" && in_b "FREETZ_AVM_HAS_PCPD"
+	[ $DOSHOW -ge 2 ] && outp "pcpd" "$X"
 
 	#UNTRUSTEDD
 	X="%"
@@ -869,7 +884,7 @@ determine_() {
 	#if [ "${X:0:1}" == "3" ]; then
 	#	P=RAMSIZE
 	#	X="$(sed -rn "s/^export CONFIG_$P=\"?([^\"]*)\"?.*$/\1/p" "$unpacked/etc/init.d/rc.conf" | head -n1)"
-	#	[ "$X" -gt 0 2>/dev/null ] || X="%"
+	#	[ "$X" -gt 0 ] 2>/dev/null || X="%"
 	#	in_s "FREETZ_AVM_PROP_${P^^}" "$X"
 	#	[ $DOSHOW -ge 2 ] && outp "${P,,}" "$X"
 	#fi
@@ -946,7 +961,7 @@ determine_() {
 		X="${X#lib}"
 		Y="$(echo -n "${X#uClibc-}" | sed 's/\(......\).*/\1/')"
 		case $Y in
-			0.9.*)		Z=0  ;;
+			0.9.*)	Z=0  ;;
 			1.0.14)	Z=0  ;;
 		esac
 	# glibc
@@ -963,6 +978,7 @@ determine_() {
 	fi
 #	in_b "FREETZ_AVM_PROP_$(echo -n ${X^^} | sed 's/-.*//')_${Y//\./_}"
 	[ $DOSHOW -ge 1 ] && outp "${X%-*}" "${X#*-}"
+	in_b "FREETZ_AVM_PROP_LIBC_$(echo -n ${X^^} | sed 's/-.*//')"
 
 	if [ "$Z" == "0" ]; then
 in_b "FREETZ_AVM_PROP_UCLIBC_${Y//\./_}"

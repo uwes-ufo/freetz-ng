@@ -717,7 +717,7 @@ choice
 
 
 	config FREETZ_TYPE_FIRMWARE_07_5X_INHAUS
-		bool "FRITZ!OS 07.39 Inhaus - UNTESTED"
+		bool "FRITZ!OS 07.39/41/51 Inhaus - UNTESTED"
 		select FREETZ_AVM_VERSION_07_5X
 		select FREETZ_TYPE_FIRMWARE_DETECT_LATEST
 		depends on FREETZ_AVM_HAS_FIRMWARE_07_5X_INHAUS && FREETZ_SHOW_EXPERT
@@ -725,7 +725,7 @@ choice
 			Enable this to use an AVM Inhaus firmware as base for modding.
 
 	config FREETZ_TYPE_FIRMWARE_07_5X_LABOR
-		bool "FRITZ!OS 07.39 Labor - UNTESTED"
+		bool "FRITZ!OS 07.39/51 Labor - UNTESTED"
 		select FREETZ_AVM_VERSION_07_5X
 		depends on FREETZ_AVM_HAS_FIRMWARE_07_5X_LABOR && FREETZ_SHOW_EXPERT
 		help
@@ -765,7 +765,6 @@ config FREETZ_TYPE_FIRMWARE_DETECT_LATEST
 	bool "Detect the latest firmware version"
 	depends on FREETZ_SHOW_EXPERT
 	depends on FREETZ_AVM_HAS_JUIS_SUPPORT
-	depends on !FREETZ_TYPE_ALIEN_HARDWARE
 	depends on !FREETZ_TYPE_FIRMWARE_FINAL || FREETZ_AVM_VERSION_LATEST_MAJOR
 	select FREETZ_DL_DETECT_IMAGE_NAME
 	default n
@@ -808,7 +807,7 @@ config FREETZ_TYPE_FIRMWARE_LABOR
 ###
 
 if !FREETZ_REAL_DEVELOPER_ONLY__KCONF && \
-	( FREETZ_TYPE_FIRMWARE_UNTESTED || !FREETZ_TYPE_FIRMWARE_FINAL || FREETZ_SYSTEM_TYPE_GRX5||FREETZ_KERNEL_VERSION_4_MIN || FREETZ_REPLACE_KERNEL )
+	( FREETZ_TYPE_FIRMWARE_UNTESTED || !FREETZ_TYPE_FIRMWARE_FINAL || FREETZ_REPLACE_KERNEL )
 
 	comment "WARNINGS -------------------------------------------------"
 if FREETZ_TYPE_FIRMWARE_UNTESTED
@@ -820,10 +819,6 @@ if !FREETZ_TYPE_FIRMWARE_FINAL
 	comment " - there is a higher probability to face stability issues"
 	comment " - some remove/AVM-web-interface patches are not working"
 	comment "   even if selectable in menuconfig"
-endif
-if FREETZ_SYSTEM_TYPE_GRX5||FREETZ_KERNEL_VERSION_4_MIN
-	comment " - replace-kernel is not (yet) available because of changed"
-	comment "   bootloader format. Examine it or ask fritzbox_info@avm.de"
 endif
 if FREETZ_REPLACE_KERNEL
 	comment " - replace-kernel might not work at all"

@@ -1,8 +1,12 @@
-$(call PKG_INIT_BIN, 0.98)
+$(call PKG_INIT_BIN, 0.99)
 $(PKG)_LIB_VERSION:=0.0.0
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.gz
-$(PKG)_HASH:=501b5acd4dff79b6100da22cef15080f31071821ce3cea6f1b739bc1b56fac3f
+$(PKG)_HASH:=f929297f8ae9b613a1a167e231566861893260651d913ad9b6c11933895fecc8
 $(PKG)_SITE:=@GNU/$(pkg)
+### WEBSITE:=https://www.gnu.org/software/classpath/
+### MANPAGE:=https://developer.classpath.org/mediation/
+### CHANGES:=https://www.gnu.org/software/classpath/downloads/downloads.html
+### CVSREPO:=http://savannah.gnu.org/cvs/?group=classpath
 
 $(PKG)_CLASSES_FILE_FULL:=glibj.zip
 $(PKG)_CLASSES_FILE_MINI:=mini.jar
@@ -18,8 +22,7 @@ $(PKG)_LIBS_BUILD_DIR:=$(join $(CLASSPATH_LIBS_BUILD_DIR_SHORT:%=$($(PKG)_DIR)/n
 $(PKG)_LIBS_STAGING_DIR:=$(CLASSPATH_LIBNAMES_LONG:%=$(TARGET_TOOLCHAIN_STAGING_DIR)$(CLASSPATH_LIBRARY_DIR)/%)
 $(PKG)_LIBS_TARGET_DIR:=$(CLASSPATH_LIBNAMES_LONG:%=$($(PKG)_DEST_DIR)$(CLASSPATH_LIBRARY_DIR)/%)
 
-$(PKG)_BUILD_PREREQ += fastjar javac
-$(PKG)_BUILD_PREREQ_HINT := Hint: on Debian-like systems fastjar is provided by the package of the same name, whereas javac (Java compiler) is provided by many packages. You could use either of them interchangeably.
+$(PKG)_HOST_DEPENDS_ON += fastjar-host
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_TARGET_IPV6_SUPPORT
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_CLASSPATH_MINI
@@ -29,7 +32,7 @@ $(PKG)_DEPENDS_ON += iconv
 endif
 
 $(PKG)_CONFIGURE_ENV += HAVE_INET6_I_KNOW_IT_BETTER=$(if $(FREETZ_TARGET_IPV6_SUPPORT),yes,no)
-$(PKG)_CONFIGURE_ENV += JAVAC=javac
+$(PKG)_CONFIGURE_ENV += JAVAC=ecj
 
 $(PKG)_CONFIGURE_OPTIONS += --disable-alsa
 $(PKG)_CONFIGURE_OPTIONS += --disable-gconf-peer
@@ -42,6 +45,7 @@ $(PKG)_CONFIGURE_OPTIONS += --disable-qt-peer
 $(PKG)_CONFIGURE_OPTIONS += --disable-rpath
 $(PKG)_CONFIGURE_OPTIONS += --without-libiconv-prefix
 $(PKG)_CONFIGURE_OPTIONS += --disable-Werror
+
 
 $(PKG_SOURCE_DOWNLOAD)
 $(PKG_UNPACKED)
@@ -70,6 +74,7 @@ $($(PKG)_LIBS_TARGET_DIR): $($(PKG)_DEST_DIR)$(CLASSPATH_LIBRARY_DIR)/%: $(TARGE
 $(pkg):
 
 $(pkg)-precompiled: $($(PKG)_TARGET_CLASSES_FILE) $($(PKG)_LIBS_TARGET_DIR)
+
 
 $(pkg)-clean:
 	-$(SUBMAKE) -C $(CLASSPATH_DIR) clean

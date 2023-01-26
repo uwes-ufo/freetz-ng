@@ -177,6 +177,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Remove mediasrv (UPnP/DLNA)](REMOVE_MEDIASRV.md)<a id='remove-mediasrv'></a>**<br>
     Remove the MediaServer-daemon (mediasrv) and some other related files. This patch hides also the MediaServer options in the Web UI, so you must disable it before flashing the new image. Saves compressed 230 KB on a 7270_V2 and 40 KB on a 7170.
 
+  * **<u>Remove MESHD (Settings Synchronize)</u><a id='remove-meshd'></a>**<br>
+    Removes "meshd" and "meshd_config" services and related files like the daemon and some scripts. This prevents log-spam when PLCD is removed too. Even AVM calles it "mesh" it is used to synchronize telephone and wlan settings from the master device to its authenticated slaves. There are NO changes of the avm-webif!
+
   * **<u>REMOVE_MICROVOIP_DSL: Remove microvoip-dsl.bin</u><a id='remove-microvoip-dsl'></a>**<br>
     Remove the files lib/modules/microvoip-dsl.bin and lib/modules/2.6.13.1-*/kernel/drivers/atm/avm_atm/tiatm.ko This saves about 590-700 KB of uncompressed data size.
 
@@ -200,8 +203,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Remove NAS](REMOVE_NAS.md)<a id='remove-nas'></a>**<br>
     Removes the AVM NAS Webinterface and internal memory file (saves about 390 KB in compressed image).
 
-  * **<u>Remove NEXUS (AVM mesh)</u><a id='remove-nexus'></a>**<br>
-    Removes "mesh" related files like the nexus daemon and some scripts.
+  * **<u>Remove NEXUS - EXPERIMENTAL</u><a id='remove-nexus'></a>**<br>
+    Removes "nexus" related files like the daemon, service and some scripts. AVM's begin of the "mesh" promotion campaign to share AHA data with all network devices. There are NO changes of the avm-webif!
 
   * **<u>Remove NLS</u><a id='remove-nls'></a>**<br>
     Remove NLS support This patch will remove all the nls_*.ko kernel module from the firmware. This may affect mounting FAT, NTFS and other filesystems. You can add some of the Freetz kernel nls modules if you need them.
@@ -210,6 +213,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Remove NTFS support This patch will remove ntfs-3g dependent files from the firmware. Be careful, mounting volumes with this filesystem will not work. It saves about 118K compressed space in kernel.image.
 
 ### P
+
+  * **<u>Remove PCPD (Port Control Protocol)</u><a id='remove-pcpd'></a>**<br>
+    Removes "pcpd" service and related files like the daemon and some of the tools. PCP is used for dynamic port-forwardings and does not work without MESHD (don't ask). There are NO changes of the avm-webif!
 
   * **<u>REMOVE_PIGLET_ISDN: Remove ISDN piglet file(s)</u><a id='remove-piglet-isdn'></a>**<br>
     The firmware of this model contains separate piglet files for ISDN and POTS. Depending on your type of fixed line usage you can safely remove the unneeded bitfile(s). Hint: If you are using POTS fixed line you can try to select this patch. Be careful! Sometimes even POTS models are using the ISDN files and not the POTS ones. If your box ends up in a reboot cycle, you should deselect this patch and maybe want to try the other one, even
@@ -223,7 +229,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[REMOVE_PIGLET_V2: Remove v2 piglet file(s)](REMOVE_PIGLET_V2.md)<a id='remove-piglet-v2'></a>**<br>
     The firmware of this model contains double piglet files. Which instance is needed depends on the hardware version (v1 or v2) of your box. You can safely remove the unneeded instance. Hint: If "echo $HWRevision_BitFileCount" returns "" (nothing) you could select this patch.
 
-  * **<u>Remove PLCD (powerline)</u><a id='remove-plcd'></a>**<br>
+  * **<u>Remove PLCD (AVM Powerline)</u><a id='remove-plcd'></a>**<br>
     This removes the plcd daemon (44-76kB uncompressed) and related start script. Known so far: It is used to scan the network for PLC devices and show them on the webinterface in mesh/network.
 
   * **[Remove printserv](REMOVE_PRINTSERV.md)<a id='remove-printserv'></a>**<br>
@@ -419,8 +425,47 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Enable LED deactivation page</u><a id='enable-led-deactivation'></a>**<br>
     Re-enables access to the LED deactivation page in expert mode.
 
-  * **<u>ENFORCE_FIRMWARE_VERSION_VIA_RCCONF: Enforce firmware_version via rc.conf</u><a id='enforce-firmware-version-via-rcconf'></a>**<br>
-    This option enforces branding by hardcoding it in /etc/init.d/rc.conf This method is useful on some recently produced boxes (since 2017), which do not allow to change the value of the urlader variable 'firmware_version' in a non-volatile way. Affected boxes (known so far): all boxes with the following bootloaderVersion - 1.3179 - 1.3229 use "cat /proc/sys/urlader/environment | grep bootloaderVersion" or EVA to check the value Choose the value wisely. Your image must support it.
+  * **<u>ENFORCE_BRANDING_1und1: 1und1</u><a id='enforce-branding-1und1'></a>**<br>
+    1&1 branding
+
+  * **<u>ENFORCE_BRANDING_aol: aol</u><a id='enforce-branding-aol'></a>**<br>
+    AOL branding
+
+  * **<u>ENFORCE_BRANDING_avm: avm</u><a id='enforce-branding-avm'></a>**<br>
+    AVM (german) branding
+
+  * **<u>ENFORCE_BRANDING_avme: avme</u><a id='enforce-branding-avme'></a>**<br>
+    AVME (international) branding
+
+  * **<u>ENFORCE_BRANDING_ewetel: ewetel</u><a id='enforce-branding-ewetel'></a>**<br>
+    EWE TEL branding
+
+  * **<u>ENFORCE_BRANDING_freenet: freenet</u><a id='enforce-branding-freenet'></a>**<br>
+    Freenet branding
+
+  * **<u>ENFORCE_BRANDING_kabelbw: kabelbw</u><a id='enforce-branding-kabelbw'></a>**<br>
+    Kabel Baden-Württemberg branding
+
+  * **<u>ENFORCE_BRANDING_kdg: kdg</u><a id='enforce-branding-kdg'></a>**<br>
+    Kabel Deutschland GmbH branding
+
+  * **<u>ENFORCE_BRANDING_lgi: lgi</u><a id='enforce-branding-lgi'></a>**<br>
+    Liberty Global Incorporated branding
+
+  * **<u>ENFORCE_BRANDING_none: none</u><a id='enforce-branding-none'></a>**<br>
+    Don't touch it
+
+  * **<u>ENFORCE_BRANDING_otwo: otwo</u><a id='enforce-branding-otwo'></a>**<br>
+    O2 branding
+
+  * **<u>ENFORCE_BRANDING_tcom: tcom</u><a id='enforce-branding-tcom'></a>**<br>
+    Deutsche Telekom AG branding
+
+  * **<u>ENFORCE_BRANDING_unity: unity</u><a id='enforce-branding-unity'></a>**<br>
+    Unitymedia GmbH branding
+
+  * **<u>ENFORCE_BRANDING_versatel: versatel</u><a id='enforce-branding-versatel'></a>**<br>
+    Versatel branding
 
   * **<u>ENFORCE_URLADER_SETTING_FIRMWARE_VERSION: Enforce firmware_version variable</u><a id='enforce-urlader-setting-firmware-version'></a>**<br>
     Choose wisely. Your image beeing built must support this. Typical settings are eg.: avm, avme, tcom, 1und1, ... If this is empty the urlader setting won't be touched.
