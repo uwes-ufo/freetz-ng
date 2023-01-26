@@ -97,10 +97,13 @@ SED:=sed
 PYTHON3=python3
 MESON=meson
 CMAKE=cmake
+NINJA1=ninja
 MAKE1=make
 ifeq ($(FREETZ_JLEVEL),0)
+NINJA=ninja -j$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 MAKE=make -j$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 else
+NINJA=ninja -j$(FREETZ_JLEVEL)
 MAKE=make -j$(FREETZ_JLEVEL)
 endif
 
@@ -232,7 +235,7 @@ $(info You have no CPU with AVX2 support, precompiled (download) host-tools auto
 endif
 endif
 # check debian for <11
-ifeq ($([ "$(sed 's/\..*//' /etc/debian_version 2>/dev/null)" -lt 11 2>/dev/null ] && echo n),n)
+ifeq ($([ "$(sed 's/\..*//' /etc/debian_version 2>/dev/null)" -lt 11 ] 2>/dev/null && echo n),n)
 ifeq ($(FREETZ_DOWNLOAD_TOOLCHAIN),y)
 DLCHG:=$(shell echo 'y' ; sed 's/^\# FREETZ_BUILD_TOOLCHAIN .*/FREETZ_BUILD_TOOLCHAIN=y/' -i $(TOPDIR)/.config)
 DLCHG:=$(shell echo 'y' ; sed 's/^FREETZ_DOWNLOAD_TOOLCHAIN=.*/\# FREETZ_DOWNLOAD_TOOLCHAIN is not set/' -i $(TOPDIR)/.config)

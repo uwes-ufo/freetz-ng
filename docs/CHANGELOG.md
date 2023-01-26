@@ -74,7 +74,7 @@ Latest changes
 
  - Packages:
    * ACME.sh 3.0.5 (letsencrypt)
-   * BIND 9.11.37/9.16.36
+   * BIND 9.11.37/9.16.37
    * BIRD 1.6.8
    * BusyBox 1.36.0
    * CA-bundle 2023-01-10
@@ -82,10 +82,11 @@ Latest changes
    * classpath 0.99
    * Curl 7.87.0
    * dehydrated 0.7.1 (letsencrypt)
+   * DejaVu Fonts TTF 2.37
    * Dnsmasq 2.80/2.88
    * Dropbear 2022.83
    * Git 2.39.1
-   * HAProxy 2.6.7
+   * HAProxy 2.6.8
    * htpdate 1.3.7
    * IGMPproxy 0.4
    * ImageMagick 7.1.0-57
@@ -107,8 +108,8 @@ Latest changes
    * Swiss File Knife 1.9.8.2
    * strace 4.9/5.0/6.1
    * SQLite 3.40.1
-   * tcpdump 4.1.1/4.99.2
-   * Tor 0.4.7.12
+   * tcpdump 4.1.1/4.99.3
+   * Tor 0.4.7.13
    * Unbound 1.17.1
    * XZ Utils 5.4.1
 
