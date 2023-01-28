@@ -22,6 +22,8 @@ check "$RRDSTATS_SAVEBACKUP" yes:savebackup
 check "$RRDSTATS_END_BACKUP" yes:b_stop "*":b_start
 check "$RRDSTATS_START_RESTORE" yes:start_restore
 check "$RRDSTATS_DELBACKUP"  yes:delbackup
+check "$RRDSTATS_TOBITAG" yes:tobitag
+check "$RRDSTATS_DARKMODE" yes:darkmode
 check "$RRDSTATS_CPU100PERC" yes:cpu100perc
 check "$RRDSTATS_UPTIME_ENB" yes:uptime_enb
 check "$RRDSTATS_POWER_ENB" yes:power_enb
@@ -132,6 +134,20 @@ $(lang de:"Graphen immer neu generieren (not lazy)" en:"Always generate new grap
 <input type="hidden" name="notlazys" value="no">
 <input id="l2" type="checkbox" name="notlazys" value="yes"$notlazys_chk><label for="l2">$(lang de:"Unterseiten" en:"Sub-pages")</label>
 </p>
+EOF
+if [ "$FREETZ_PACKAGE_RRDTOOL_VERSION_CURRENT" == "y" ]; then
+cat << EOF
+<p>
+<input type="hidden" name="tobitag" value="no">
+<input id="tt" type="checkbox" name="tobitag" value="yes"$tobitag_chk>
+<label for="tt">$(lang de:"Zeige den Namen des Authors von rrdtool auf allen Graphen" en:"Show the name of the author of rrdtool on all graphs")</label></p>
+EOF
+fi
+cat << EOF
+<p>
+<input type="hidden" name="darkmode" value="no">
+<input id="dm" type="checkbox" name="darkmode" value="yes"$darkmode_chk>
+<label for="dm">$(lang de:"Aktiviere Dark-Mode f&uuml;r die Graphen" en:"Enable dark-mode for the graphs")</label></p>
 <p>
 <input type="hidden" name="cpu100perc" value="no">
 <input id="c1" type="checkbox" name="cpu100perc" value="yes"$cpu100perc_chk>
@@ -145,12 +161,14 @@ $(lang de:"Graphen immer neu generieren (not lazy)" en:"Always generate new grap
 <input id="u2" type="checkbox" name="power_enb" value="yes"$power_enb_chk>
 <label for="u2">$(lang de:"Energieverbrauch aufzeichnen und anzeigen" en:"Power Consumption logging and graphs")</label></p>
 EOF
-[ "$RRDSTATS_POWER_ENB" == "yes" ] && cat << EOF
+if [ "$RRDSTATS_POWER_ENB" == "yes" ]; then
+cat << EOF
 <p>$(lang de:"Diese Verbraucher &uuml;berwachen" en:"Observe these consumers"):&nbsp;<input type="text" name="power_cfg" size="45" maxlength="255" value="$(html "$RRDSTATS_POWER_CFG")">
 EOF
 for x in $(ctlmgr_ctl -v u power 2>/dev/null | sed -rn 's/.*rate_(.*)act=.*/\1/p'); do PIT="$PIT $x=$(ctlmgr_ctl r power status/rate_${x}act 2>/dev/null)"; done
-[ -n "$PIT" ] && echo "<br /><font size='-2'>$(lang de:"Verf&uuml;gabr" en:"Available"): $PIT</font>"
+[ -n "$PIT" ] && echo "<br /><font size='-2'>$(lang de:"Verf&uuml;gbar" en:"Available"): $PIT</font>"
 echo "</p>"
+fi
 
 
 if [ "$FREETZ_PACKAGE_RRDSTATS_TEMPERATURE_SENSOR" == "y" ]; then

@@ -104,7 +104,7 @@ Latest changes
    * ncursesw 6.4
    * OpenSSH 9.1p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7
-   * OpenVPN 2.4.12/2.5.8
+   * OpenVPN 2.4.12/2.6.0
    * PCSC-lite 1.9.9
    * RPCBind 1.2.6
    * RRDtool 1.2.30/1.8.0
@@ -114,6 +114,7 @@ Latest changes
    * tcpdump 4.1.1/4.99.3
    * Tor 0.4.7.13
    * Unbound 1.17.1
+   * xsltproc 1.1.37
    * XZ Utils 5.4.1
 
  - Libraries:
@@ -123,6 +124,7 @@ Latest changes
    * fribidi 1.0.12
    * glib2 2.32.4/2.75.2
    * harfbuzz 6.0.0
+   * libcap-ng 0.8.3
    * libctlmgr 1.0
    * libev 4.33
    * libidn 1.41
@@ -133,6 +135,7 @@ Latest changes
    * libxml2 2.10.3
    * mbedTLS 2.7.19/2.28.2
    * neon 0.30.2/0.32.4
+   * openjp2 2.5.0
    * pango 1.50.12
    * pcre2 10.42
    * pixman 0.42.2
@@ -189,7 +192,7 @@ Latest changes
    * Screen 4.9.0
    * SQLite 3.39.4
    * strace 4.9/5.0/5.19
-   * Stunnel 5.66
+   * Stunnel 5.67
    * Tor 0.4.7.9
    * uClibc-ng 1.0.42
    * Unbound 1.16.6

@@ -13,7 +13,7 @@ $(PKG)_SITE:=https://github.com/oetiker/rrdtool-1.x/releases/download/v$($(PKG)_
 $(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_PACKAGE_RRDTOOL_VERSION_ABANDON),abandon,current)
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/src/.libs/rrdtool
-$(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/rrdtool
+$(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/rrdtool-freetz
 
 $(PKG)_LIBS_SELECTED:=librrd.so.$($(PKG)_LIB_VERSION)
 ifeq ($(strip $(FREETZ_LIB_librrd_th)),y)
@@ -58,6 +58,8 @@ $(PKG)_EXTRA_CPPFLAGS += "-I$(TARGET_TOOLCHAIN_STAGING_DIR)/include/pango-1.0"
 
 $(PKG)_EXCLUDED += usr/share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
 endif
+
+$(PKG)_EXCLUDED += $(if $(FREETZ_AVM_HAS_RRDTOOL),usr/bin/rrdtool)
 
 $(PKG)_CONFIGURE_OPTIONS += --sysconfdir=/mod/etc
 $(PKG)_CONFIGURE_OPTIONS += --enable-shared

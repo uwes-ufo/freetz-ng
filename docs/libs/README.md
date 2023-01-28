@@ -107,6 +107,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libcapi: CAPI 2.0 (libcapi20.so) avm-7390.05.50](libcapi.md)<a id='libcapi'></a>**<br>
     COMMON-ISDN-API (CAPI) 2.0 Library
 
+  * **[libcap-ng (libcap-ng.so) 0.8.3](libcap-ng.md)<a id='libcap-ng'></a>**<br>
+    The libcap-ng library should make programming with posix capabilities easier. The library has some utilities to help you analyse a system for apps that may have too much privileges.
+
   * **[libconfig (libconfig.so) 1.5](libconfig.md)<a id='libconfig'></a>**<br>
     Libconfig is a simple library for processing structured configuration files. Libconfig is very compact - just 46K for the stripped C shared library. This makes it well-suited for memory-constrained systems.
 
@@ -267,6 +270,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     A low level cryptographic library (symmetric and one-way cryptos)
 
 ### O
+
+  * **[openjp2: libopenjp2 (libopenjp2.so) 2.5.0](openjp2.md)<a id='openjp2'></a>**<br>
+    OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of JPEG 2000, a still-image compression standard from the Joint Photographic Experts Group (JPEG). Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a JPEG 2000 Reference Software.
 
   * **[openjpeg: libopenjpeg (libopenjpeg.so) 1.5.2](openjpeg.md)<a id='openjpeg'></a>**<br>
     JPEG 2000 image compression/decompression library
