@@ -8,7 +8,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ACME.sh 3.0.5 (letsencrypt)](acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
-  * **[apache2: Apache HTTP Server 2.4.54 (binary only)](apache2.md)<a id='apache2'></a>**<br>
+  * **[Apache2 2.4.55 (binary only)](apache2.md)<a id='apache2'></a>**<br>
     The Apache httpd server
 
   * **<u>asterisk-chan-capi: chan_capi: ISDN API 2.0 module for asterisk</u><a id='asterisk-chan-capi'></a>**<br>
@@ -188,6 +188,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FFmpeg 5.1.2](ffmpeg.md)<a id='ffmpeg'></a>**<br>
     FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video.
 
+  * **[Fontconfig 2.14.1 (binary only)](fontconfig.md)<a id='fontconfig'></a>**<br>
+    Fontconfig is a library for configuring and customizing font access. This package adds /etc/fontsfonts.conf
+
   * **[fortune 1.2](fortune.md)<a id='fortune'></a>**<br>
     Fortune is a small game that is meant to lighten up your life. It can be used to display a random entry from a cookie file. After having installed the package, just put some fortune- files into a directory and create a symbolic link to /var/media/fortunes like this: ln -s /var/media/ftp/ExternalDisk/fortunes/ /var/media/fortunes For your convenience I have packed some fortune-files up and uploaded them here: http://homepages.tu-darmstadt.de/~pkrueger/fortunes.7z If you'd rather get your own files, you could start looking here: http://www.freebsd.org/cgi/cvsweb.cg...tune/datfiles/
 
@@ -202,7 +205,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### G
 
-  * **[getdns 1.5.2](getdns.md)<a id='getdns'></a>**<br>
+  * **[getdns 1.7.3](getdns.md)<a id='getdns'></a>**<br>
     getdns/Stubby is an application that acts as a local DNS Privacy stub resolver (using DNS-over-TLS). Stubby encrypts DNS queries sent from a client machine (desktop or laptop) to a DNS Privacy resolver increasing end user privacy.
 
   * **<u>Ghostscript fonts 8.11 (binary only)</u><a id='ghostscript-fonts'></a>**<br>
@@ -459,7 +462,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7 (binary only)](openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
-  * **[OpenVPN 2.4.12/2.5.8](openvpn.md)<a id='openvpn'></a>**<br>
+  * **[OpenVPN 2.4.12/2.5.8/2.6.0](openvpn.md)<a id='openvpn'></a>**<br>
     VPN Server
 
   * **[owfs 2.7p32 (binary only)](owfs.md)<a id='owfs'></a>**<br>
@@ -644,7 +647,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Streamripper 1.64.6](streamripper.md)<a id='streamripper'></a>**<br>
     Streamripper records mp3 and ogg streams. For shoutcast style streams it finds the "meta data" or track separation data, and uses that as a marker for where the track should be separated.
 
-  * **[Stunnel 5.66](stunnel.md)<a id='stunnel'></a>**<br>
+  * **[Stunnel 5.67](stunnel.md)<a id='stunnel'></a>**<br>
     Stunnel universal SSL proxy
 
   * **[Subversion 1.9.12/1.14.2](subversion.md)<a id='subversion'></a>**<br>
@@ -719,7 +722,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UNFS3 0.9.23](unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **[UnRAR 6.1.7 (binary only)](unrar.md)<a id='unrar'></a>**<br>
+  * **[UnRAR 6.1.7/6.2.5 (binary only)](unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **[usbids: usb.ids a5edeafb60](usbids.md)<a id='usbids'></a>**<br>
@@ -773,7 +776,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Xrelayd 0.2.1pre2](xrelayd.md)<a id='xrelayd'></a>**<br>
     SSL tunnel based on PolarSSL. Xrelayd is a stripped down version of stunnel based on PolarSSL library. Essentially, this package makes your router's websrv or httpd SSL-enabled, offering you the option of remote configuration via WWW or secure remote use of features like Rudi-Shell.
 
-  * **<u>xsltproc 1.1.33 (binary only)</u><a id='xsltproc'></a>**<br>
+  * **[xsltproc 1.1.37 (binary only)](xsltproc.md)<a id='xsltproc'></a>**<br>
     xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.
 
   * **[XZ Utils 5.4.1 (binary only)](xz.md)<a id='xz'></a>**<br>

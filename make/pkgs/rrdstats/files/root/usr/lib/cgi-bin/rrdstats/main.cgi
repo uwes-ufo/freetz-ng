@@ -6,7 +6,7 @@
 . /mod/etc/conf/rrdstats.cfg
 [ -r /etc/options.cfg ] && . /etc/options.cfg
 
-RRDTOOL="rrdtool"
+RRDTOOL="rrdtool-freetz"
 
 DATESTRING=$(date -R)
 [ -n "$_cgi_width" ] && let WIDTH=_cgi_width-145 || let WIDTH=500
@@ -34,6 +34,21 @@ while [ $# -gt 0 ]; do
 done
 [ -z "$ALL_GRAPHS" ] && ALL_GRAPHS="mainpage"
 
+if [ "$FREETZ_PACKAGE_RRDTOOL_VERSION_ABANDON" == "y" ]; then
+	NBSP="$(echo -e  '\240')"
+	GRAD="$(echo -en '\260')"
+	IMAGETYPE='png'
+	GRAPHARGS=''
+	[ "$RRDSTATS_TOBITAG" != "yes" ] && GRAPHARGS="$GRAPHARGS --disable-rrdtool-tag"
+	HTMLWIDTH=''
+else
+	NBSP="$(echo -e  '\xC2\xA0')"
+	GRAD="$(echo -en '\xC2\xB0')"
+	IMAGETYPE='svg'
+	GRAPHARGS='--imgformat SVG'
+	[ "$RRDSTATS_TOBITAG" != "yes" ] && GRAPHARGS="$GRAPHARGS --disable-rrdtool-tag"
+	HTMLWIDTH="width=\"$(( $WIDTH + 100 ))\""
+fi
 let HEIGHT=$WIDTH*$RRDSTATS_DIMENSIONY/$RRDSTATS_DIMENSIONX
 PERIODE="24h"
 RED=#EA644A
@@ -52,16 +67,13 @@ ORANGE_D=#CC7016
 BLACK=#000000
 GREY=#7F7F7F
 AUML="$(echo -e '\344')"
-if [ "$FREETZ_PACKAGE_RRDTOOL_VERSION_ABANDON" == "y" ]; then
-	NBSP="$(echo -e  '\240')"
-	GRAD="$(echo -en '\260')"
-else
-	NBSP="$(echo -e  '\xC2\xA0')"
-	GRAD="$(echo -en '\xC2\xB0')"
-fi
+GRD="$(echo -en '\260')"
 NOCACHE="?nocache=$(date -Iseconds | sed 's/T/_/g;s/+.*$//g;s/:/-/g')"
 _NICE=$(which nice)
-DEFAULT_COLORS="--color SHADEA#ffffff --color SHADEB#ffffff --color BACK#ffffff --color CANVAS#eeeeee80"
+[ "$RRDSTATS_DARKMODE" != "yes" ] \
+  && DEFAULT_COLORS="-c SHADEA#cccccc -c SHADEB#7f7f7f -c BACK#ffffff -c CANVAS#eeeeee80" \
+  || DEFAULT_COLORS="-c SHADEA#181818 -c SHADEB#555555 -c BACK#333333 -c CANVAS#222222 -c FONT#DDDDDD -c GRID#AAAAAA77 -c MGRID#AAAAAA77 -c AXIS#00000000 -c ARROW#00000000 -c FRAME#111111"
+[ "$RRDSTATS_SHOWFRAME" != "yes" ] && DEFAULT_COLORS="$DEFAULT_COLORS --border 0"
 
 generate_graph() {
 	TITLE=""
@@ -74,8 +86,8 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/cpu_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				[ "$RRDSTATS_CPU100PERC" = "yes" ] && CPU100PERC=" -u 100 -r "
-				$_NICE $RRDTOOL graph                            \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                 \
+				$_NICE $RRDTOOL graph $GRAPHARGS                 \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE          \
 				--title "$TITLE"                                 \
 				--start now-$PERIODE                             \
 				--width $WIDTH --height $HEIGHT                  \
@@ -108,8 +120,8 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/mem_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				let RAM=$(grep MemTotal /proc/meminfo | tr -s [:blank:] " " | cut -d " " -f 2)*1024
-				$_NICE $RRDTOOL graph                                               \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                                    \
+				$_NICE $RRDTOOL graph $GRAPHARGS                                    \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                             \
 				--title "$TITLE"                                                    \
 				--start now-$PERIODE -u $RAM -r -l 0 $LAZY                          \
 				--width $WIDTH --height $HEIGHT                                     \
@@ -152,8 +164,8 @@ generate_graph() {
 		upt)
 			FILE=$RRDSTATS_RRDDATA/upt_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                     \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                          \
+				$_NICE $RRDTOOL graph $GRAPHARGS                          \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                   \
 				--title "$TITLE"                                          \
 				--start -1-$PERIODE -l 0 -r                               \
 				--width $WIDTH --height $HEIGHT $LAZY                     \
@@ -162,7 +174,7 @@ generate_graph() {
 				-W "Generated on: $DATESTRING"                            \
 				                                                          \
 				DEF:uptime=$FILE:uptime:MAX                               \
-                                                                          \
+                                                                                          \
 				AREA:uptime$YELLOW:"Uptime (min/avg/max/cur)[hours]\:   " \
 				GPRINT:uptime:MIN:"%3.2lf /"                              \
 				GPRINT:uptime:AVERAGE:"%3.2lf /"                          \
@@ -175,32 +187,32 @@ generate_graph() {
 			if [ -e $FILE ]; then
 				for sourceitem in $RRDSTATS_POWER_CFG; do
 					case $sourceitem in
-						sum)		DCOL=$DARKRED  ; DNAME="Gesamtsystem"    ;;
-						system)		DCOL=$LBLUE    ; DNAME="Hauptprozessor"  ;;
-						wlan)		DCOL=$PURPLE   ; DNAME="Funknetzwerk"    ;;
-						dsp)		DCOL=$BLUE     ; DNAME="Signalprozessor" ;;
-						ab)		DCOL=$YELLOW   ; DNAME="Analogtelefonie" ;;
-						usbhost)	DCOL=$GREEN    ; DNAME="USB-System"      ;;
-						eth)		DCOL=$ORANGE_D ; DNAME="Kabelnetzwerk"   ;;
-						dect)		DCOL=$LBLUE    ; DNAME="Funktelefonie"   ;;
-						battcharge)	DCOL=$BLACK    ; DNAME="Akkuladung"      ;;
-						lte)            DCOL=$BLACK    ; DNAME="LTE-Funkmodul"   ;;
-						*)		DCOL=$BLACK    ; DNAME="$sourceitem"     ;;
+						sum)		DCOL=$DARKRED  ; DNAME="Gesamtsystem$NBSP$NBSP$NBSP"          ;;
+						system)		DCOL=$LBLUE    ; DNAME="Hauptprozessor$NBSP"                  ;;
+						wlan)		DCOL=$PURPLE   ; DNAME="Funknetzwerk$NBSP$NBSP$NBSP"          ;;
+						dsp)		DCOL=$BLUE     ; DNAME="Signalprozessor"                      ;;
+						ab)		DCOL=$YELLOW   ; DNAME="Analogtelefonie"                      ;;
+						usbhost)	DCOL=$GREEN    ; DNAME="USB-System$NBSP$NBSP$NBSP$NBSP$NBSP"  ;;
+						eth)		DCOL=$ORANGE_D ; DNAME="Kabelnetzwerk$NBSP$NBSP"              ;;
+						dect)		DCOL=$LBLUE    ; DNAME="Funktelefonie$NBSP$NBSP"              ;;
+						battcharge)	DCOL=$BLACK    ; DNAME="Akkuladung$NBSP$NBSP$NBSP$NBSP$NBSP"  ;;
+						lte)            DCOL=$BLACK    ; DNAME="LTE-Funkmodul$NBSP$NBSP"              ;;
+						*)		DCOL=$BLACK    ; DNAME="$sourceitem"                          ;;
 					esac
 					local DSDEFS="$DSDEFS DEF:$sourceitem=$FILE:$sourceitem:MAX"
-					local LINE3S="$LINE3S LINE3:$sourceitem$DCOL:$DNAME\t$NBSP(min/avg/max/cur)\t\t \
-					GPRINT:$sourceitem:MIN:%3.0lf\t/       \
-					GPRINT:$sourceitem:AVERAGE:%3.0lf\t/   \
-					GPRINT:$sourceitem:MAX:%3.0lf\t\t      \
-					GPRINT:$sourceitem:LAST:%3.0lf\n       \
+					local LINE3S="$LINE3S LINE3:$sourceitem$DCOL:$DNAME$NBSP$NBSP(min/avg/max/cur)\:\t \
+					GPRINT:$sourceitem:MIN:%3.0lf%%$NBSP/       \
+					GPRINT:$sourceitem:AVERAGE:%3.0lf%%$NBSP/   \
+					GPRINT:$sourceitem:MAX:%3.0lf%%$NBSP/       \
+					GPRINT:$sourceitem:LAST:%3.0lf%%\n          \
 					"
 				done
-				$_NICE $RRDTOOL graph                                     \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                          \
+				$_NICE $RRDTOOL graph $GRAPHARGS                          \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                   \
 				--title "$TITLE"                                          \
 				--start -1-$PERIODE -l 0 -u 100 -r                        \
 				--width $WIDTH --height $HEIGHT $LAZY                     \
-				--vertical-label "Prozent" -X 1                           \
+				--vertical-label "Energieverbrauch [%]" -X 1              \
 				$DEFAULT_COLORS                                           \
 				-W "Generated on: $DATESTRING"                            \
 				                                                          \
@@ -212,8 +224,8 @@ generate_graph() {
 		temp)
 			FILE=$RRDSTATS_RRDDATA/temp_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                       \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                            \
+				$_NICE $RRDTOOL graph $GRAPHARGS                            \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                     \
 				--title "$TITLE"                                            \
 				--start -1-$PERIODE -l 0 -r                                 \
 				--width $WIDTH --height $HEIGHT $LAZY                       \
@@ -293,8 +305,8 @@ generate_graph() {
 						GPRINT:rxdb$count:LAST:%4.1lf\n "
 				done
 
-				$_NICE $RRDTOOL graph                                    \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                         \
+				$_NICE $RRDTOOL graph $GRAPHARGS                         \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -335,8 +347,8 @@ generate_graph() {
 						GPRINT:rxsn$count:MAX:%4.1lf\t/ \
 						GPRINT:rxsn$count:LAST:%4.1lf\n "
 				done
-				$_NICE $RRDTOOL graph                                    \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                         \
+				$_NICE $RRDTOOL graph $GRAPHARGS                         \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -346,7 +358,7 @@ generate_graph() {
 				$LAZY                                                    \
 				-A                                                       \
 				-W "Generated on: $DATESTRING"                           \
-								                                         \
+				                                                         \
 				$DS_DEF                                                  \
 				$GPRINT                                                  \
 				                                                         > /dev/null 2>&1
@@ -373,8 +385,8 @@ generate_graph() {
 						GPRINT:rxdb$count:MAX:%4.1lf\t/ \
 						GPRINT:rxdb$count:LAST:%4.1lf\n "
 				done
-				$_NICE $RRDTOOL graph                                    \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                         \
+				$_NICE $RRDTOOL graph $GRAPHARGS                         \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -382,10 +394,10 @@ generate_graph() {
 				$DEFAULT_COLORS                                          \
 				$LAZY                                                    \
 				-W "Generated on: $DATESTRING"                           \
-								                                         \
+				                                                         \
 				$DS_DEF                                                  \
 				LINE:4$GREY:"Downstream SIG Optimum 256-QAM\: 4 dBmV\t   -------------------------------\n" \
-				$GPRINT                                                   \
+				$GPRINT                                                  \
 				LINE:-2$GREY:"Downstream SIG Optimum 64-QAM\: -2 dBmV\t   -------------------------------\n" \
 				                                                                       > /dev/null 2>&1
 			fi
@@ -421,8 +433,8 @@ generate_graph() {
 						GPRINT:txfq$count:LAST:%4.1lf\n "
 				done
 
-				$_NICE $RRDTOOL graph                                    \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                         \
+				$_NICE $RRDTOOL graph $GRAPHARGS                         \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -442,8 +454,8 @@ generate_graph() {
 		epc1)
 			FILE=$RRDSTATS_RRDDATA/epc_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                  \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                       \
+				$_NICE $RRDTOOL graph $GRAPHARGS                       \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                \
 				--title "$TITLE"                                       \
 				--start now-$PERIODE                                   \
 				--width $WIDTH --height $HEIGHT                        \
@@ -481,8 +493,8 @@ generate_graph() {
 						GPRINT:rxfq$count:MAX:%3.0lf\t/ \
 						GPRINT:rxfq$count:LAST:%3.0lf\n "
 				done
-				$_NICE $RRDTOOL graph                                                  \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                                       \
+				$_NICE $RRDTOOL graph $GRAPHARGS                                       \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                                \
 				--title "$TITLE"                                                       \
 				--start now-$PERIODE                                                   \
 				--width $WIDTH --height $HEIGHT                                        \
@@ -490,7 +502,7 @@ generate_graph() {
 				$DEFAULT_COLORS                                                        \
 				$LAZY                                                                  \
 				-W "Generated on: $DATESTRING"                                         \
-								                                                       \
+								                                       \
 				$DS_DEF                                                                \
 				$GPRINT                                                                \
 				                                                                       > /dev/null 2>&1
@@ -499,8 +511,8 @@ generate_graph() {
 		thg0)
 			FILE=$RRDSTATS_RRDDATA/thg_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                    \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                         \
+				$_NICE $RRDTOOL graph $GRAPHARGS                         \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -542,8 +554,8 @@ generate_graph() {
 		thg1)
 			FILE=$RRDSTATS_RRDDATA/thg_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                  \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                       \
+				$_NICE $RRDTOOL graph $GRAPHARGS                       \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                \
 				--title "$TITLE"                                       \
 				--start now-$PERIODE                                   \
 				--width $WIDTH --height $HEIGHT                        \
@@ -563,8 +575,8 @@ generate_graph() {
 		thg2)
 			FILE=$RRDSTATS_RRDDATA/thg_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                   \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                        \
+				$_NICE $RRDTOOL graph $GRAPHARGS                        \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                 \
 				--title "$TITLE"                                        \
 				--start now-$PERIODE                                    \
 				--width $WIDTH --height $HEIGHT                         \
@@ -585,8 +597,8 @@ generate_graph() {
 		thg3)
 			FILE=$RRDSTATS_RRDDATA/thg_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                     \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                          \
+				$_NICE $RRDTOOL graph $GRAPHARGS                          \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                   \
 				--title "$TITLE"                                          \
 				--start now-$PERIODE                                      \
 				--width $WIDTH --height $HEIGHT                           \
@@ -607,8 +619,8 @@ generate_graph() {
 		arris0)
 			FILE=$RRDSTATS_RRDDATA/arris_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                    \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                         \
+				$_NICE $RRDTOOL graph $GRAPHARGS                         \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -650,8 +662,8 @@ generate_graph() {
 		arris1)
 			FILE=$RRDSTATS_RRDDATA/arris_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                  \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                       \
+				$_NICE $RRDTOOL graph $GRAPHARGS                       \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                \
 				--title "$TITLE"                                       \
 				--start now-$PERIODE                                   \
 				--width $WIDTH --height $HEIGHT                        \
@@ -671,8 +683,8 @@ generate_graph() {
 		arris2)
 			FILE=$RRDSTATS_RRDDATA/arris_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                   \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                        \
+				$_NICE $RRDTOOL graph $GRAPHARGS                        \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                 \
 				--title "$TITLE"                                        \
 				--start now-$PERIODE                                    \
 				--width $WIDTH --height $HEIGHT                         \
@@ -693,8 +705,8 @@ generate_graph() {
 		arris3)
 			FILE=$RRDSTATS_RRDDATA/arris_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                     \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                          \
+				$_NICE $RRDTOOL graph $GRAPHARGS                          \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                   \
 				--title "$TITLE"                                          \
 				--start now-$PERIODE                                      \
 				--width $WIDTH --height $HEIGHT                           \
@@ -740,8 +752,8 @@ generate_graph() {
 		swap)
 			FILE=$RRDSTATS_RRDDATA/mem_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                             \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                                  \
+				$_NICE $RRDTOOL graph $GRAPHARGS                                  \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                           \
 				--title "$TITLE"                                                  \
 				--start -1-$PERIODE -l 0 -u 100 -r                                \
 				--width $WIDTH --height $HEIGHT	$LAZY                             \
@@ -807,8 +819,8 @@ generate_graph() {
 
 			FILE=$RRDSTATS_RRDDATA/$1_$RRDSTATS_INTERVAL-$DISK.rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                          \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                               \
+				$_NICE $RRDTOOL graph $GRAPHARGS                               \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                        \
 				--title "$TITLE"                                               \
 				--start -1-$PERIODE $LOGARITHMIC $LAZY $MAXIMALBW              \
 				--width $WIDTH --height $HEIGHT                                \
@@ -884,8 +896,8 @@ generate_graph() {
 
 			FILE=$RRDSTATS_RRDDATA/$1_$RRDSTATS_INTERVAL-$(echo $IF | sed 's/\:/_/g').rrd
 			if [ -e $FILE ]; then
-				$_NICE $RRDTOOL graph                                        \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png                             \
+				$_NICE $RRDTOOL graph $GRAPHARGS                             \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                      \
 				--title "$TITLE"                                             \
 				--start -1-$PERIODE $LOGARITHMIC $LAZY $MAXIMALBW            \
 				--width $WIDTH --height $HEIGHT                              \
@@ -907,7 +919,7 @@ generate_graph() {
 				GPRINT:out:MIN:"%3.0lf%s /"                                  \
 				GPRINT:out:AVERAGE:"%3.0lf%s /"                              \
 				GPRINT:out:MAX:"%3.0lf%s /"                                  \
-				GPRINT:out:LAST:"%3.0lf%s"                                   > /dev/null
+				GPRINT:out:LAST:"%3.0lf%s\n"                                 > /dev/null
 			fi
 			;;
 
@@ -944,17 +956,17 @@ generate_graph() {
 				let _SENSOR_CUR=_SENSOR_CUR+1
 			done
 			if [ -n "$_SENSOR_GEN" ]; then
-				$_NICE $RRDTOOL graph                \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png     \
-				--title "$TITLE"                     \
-				--start now-$PERIODE                 \
-				--width $WIDTH --height $HEIGHT      \
-				--vertical-label "Grad $_SENSOR_UOM" \
-				$DEFAULT_COLORS                      \
-				--slope-mode HRULE:0#000000          \
-				$LAZY $_SENSOR_LOW                   \
-				-W "Generated on: $DATESTRING"       \
-				$_SENSOR_GEN                         > /dev/null
+				$_NICE $RRDTOOL graph $GRAPHARGS         \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE  \
+				--title "$TITLE"                         \
+				--start now-$PERIODE                     \
+				--width $WIDTH --height $HEIGHT          \
+				--vertical-label "Grad $_SENSOR_UOM"     \
+				$DEFAULT_COLORS                          \
+				--slope-mode HRULE:0#000000              \
+				$LAZY $_SENSOR_LOW                       \
+				-W "Generated on: $DATESTRING"           \
+				$_SENSOR_GEN                             > /dev/null
 			fi
 			;;
 		aha*)
@@ -978,8 +990,8 @@ generate_graph() {
 			IMAGENAME=$IMAGENAME$pdev
 			if [ -n "$pdev" ]; then
 				case $pdev in
-					s) V1="blnd"; V2="watt" ; C1=$RED; C2=$BLUE ; D1="Blindleistung"; D2="Wirkleistung" ; D3="Scheinmaximum" ;;
-					w) V1="watt"; V2="blnd" ; C1=$BLUE; C2=$RED ; D1="Wirkleistung"; D2="Blindleistung" ; D3="Wirkmaximum" ; RPN=",fact_max,*" ;;
+					s) V1="blnd"; V2="watt" ; C1=$RED; C2=$BLUE ; D1="Blindleistung\t"; D2="Wirkleistung\t" ; D3="Scheinmaximum\t" ;;
+					w) V1="watt"; V2="blnd" ; C1=$BLUE; C2=$RED ; D1="Wirkleistung\t"; D2="Blindleistung\t" ; D3="Wirkmaximum\t" ; RPN=",fact_max,*" ;;
 				esac
 				_CURRENT_HEX=$5
 				FILE=$RRDSTATS_RRDDATA/aha_${RRDSTATS_INTERVAL}-${_CURRENT_HEX//:/}.rrd
@@ -988,35 +1000,35 @@ generate_graph() {
 					[ -z "$_ALIAS" ] && _ALIAS=$_CURRENT_HEX
 					_SENSOR_GEN=" $_SENSOR_GEN \
 						DEF:volt=$FILE:volt:AVERAGE \
-						DEF:curr=$FILE:curr:AVERAGE  \
+						DEF:curr=$FILE:curr:AVERAGE \
 						DEF:fact=$FILE:fact:AVERAGE \
 						DEF:volt_max=$FILE:volt:MAX \
-						DEF:curr_max=$FILE:curr:MAX  \
-						DEF:fact_max=$FILE:fact:MAX  \
+						DEF:curr_max=$FILE:curr:MAX \
+						DEF:fact_max=$FILE:fact:MAX \
 						CDEF:sein_max=volt_max,curr_max,*$RPN \
 						CDEF:sein=volt,curr,* \
 						CDEF:watt=sein,fact,* \
 						CDEF:blnd=sein,watt,- \
-						AREA:$V1$C1:$D1\t(min/avg/max/cur)$NBSP \
-						GPRINT:$V1:MIN:\t%8.${DECMAL}lf \
-						GPRINT:$V1:AVERAGE:%8.${DECMAL}lf \
-						GPRINT:$V1:MAX:%8.${DECMAL}lf \
-						GPRINT:$V1:LAST:\t%8.${DECMAL}lf\n \
-						AREA:$V2$C2:$D2\t(min/avg/max/cur)$NBSP:STACK \
-						GPRINT:$V2:MIN:\t%8.${DECMAL}lf \
-						GPRINT:$V2:AVERAGE:%8.${DECMAL}lf \
-						GPRINT:$V2:MAX:%8.${DECMAL}lf \
-						GPRINT:$V2:LAST:\t%8.${DECMAL}lf\n \
-						COMMENT:$NBSP${NBSP}Scheinleistung\t(min/avg/max/cur)$NBSP \
-						GPRINT:sein:MIN:\t%8.${DECMAL}lf \
-						GPRINT:sein:AVERAGE:%8.${DECMAL}lf \
-						GPRINT:sein:MAX:%8.${DECMAL}lf \
-						GPRINT:sein:LAST:\t%8.${DECMAL}lf\n \
-						LINE1:sein_max$BLACK:$D3\t(min/avg/max/cur)$NBSP \
-						GPRINT:sein_max:MIN:\t%8.${DECMAL}lf \
-						GPRINT:sein_max:AVERAGE:%8.${DECMAL}lf \
-						GPRINT:sein_max:MAX:%8.${DECMAL}lf \
-						GPRINT:sein_max:LAST:\t%8.${DECMAL}lf\n "
+						AREA:$V1$C1:$D1\t(min/avg/max/cur)\:$NBSP \
+						GPRINT:$V1:MIN:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:$V1:AVERAGE:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:$V1:MAX:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:$V1:LAST:%5.${DECMAL}lf\n \
+						AREA:$V2$C2:$D2\t(min/avg/max/cur)\:$NBSP:STACK \
+						GPRINT:$V2:MIN:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:$V2:AVERAGE:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:$V2:MAX:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:$V2:LAST:%5.${DECMAL}lf\n \
+						COMMENT:$NBSP${NBSP}Scheinleistung\t(min/avg/max/cur)\:$NBSP \
+						GPRINT:sein:MIN:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:sein:AVERAGE:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:sein:MAX:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:sein:LAST:%5.${DECMAL}lf\n \
+						LINE1:sein_max$BLACK:$D3\t(min/avg/max/cur)\:$NBSP \
+						GPRINT:sein_max:MIN:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:sein_max:AVERAGE:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:sein_max:MAX:%5.${DECMAL}lf$NBSP/ \
+						GPRINT:sein_max:LAST:%5.${DECMAL}lf\n "
 				fi
 			else
 				_SENSOR_HEX=$(sed -rn 's/\|.*//p'  /tmp/flash/rrdstats/smarthome.alias 2>/dev/null)
@@ -1062,27 +1074,27 @@ generate_graph() {
 
 						_SENSOR_GEN=" $_SENSOR_GEN \
 							$_SOURCE \
-							LINE3:$kind$_SENSOR_CUR$_COLOR:${_ALIAS// /$NBSP}\t(min/avg/max/cur)$NBSP \
-							GPRINT:$kind$_SENSOR_CUR:MIN:\t%8.${DECMAL}lf \
-							GPRINT:$kind$_SENSOR_CUR:AVERAGE:%8.${DECMAL}lf \
-							GPRINT:$kind$_SENSOR_CUR:MAX:%8.${DECMAL}lf \
-							GPRINT:$kind$_SENSOR_CUR:LAST:\t%8.${DECMAL}lf\n "
+							LINE3:$kind$_SENSOR_CUR$_COLOR:${_ALIAS// /$NBSP}\t(min/avg/max/cur)\:$NBSP \
+							GPRINT:$kind$_SENSOR_CUR:MIN:%5.${DECMAL}lf$NBSP/     \
+							GPRINT:$kind$_SENSOR_CUR:AVERAGE:%5.${DECMAL}lf$NBSP/ \
+							GPRINT:$kind$_SENSOR_CUR:MAX:%5.${DECMAL}lf$NBSP/     \
+							GPRINT:$kind$_SENSOR_CUR:LAST:%5.${DECMAL}lf\n "
 					fi
 					let _SENSOR_CUR=_SENSOR_CUR+1
 				done
 			fi
 			if [ -n "$_SENSOR_GEN" ]; then
-				$_NICE $RRDTOOL graph                \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.png     \
-				--title "$TITLE"                     \
-				--start now-$PERIODE                 \
-				--width $WIDTH --height $HEIGHT      \
-				--vertical-label "$DESCR"            \
-				$DEFAULT_COLORS                      \
-				--slope-mode HRULE:0#000000          \
-				$LAZY  $RANGE                        \
-				-W "Generated on: $DATESTRING"       \
-				$_SENSOR_GEN                         > /dev/null
+				$_NICE $RRDTOOL graph $GRAPHARGS         \
+				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE  \
+				--title "$TITLE"                         \
+				--start now-$PERIODE                     \
+				--width $WIDTH --height $HEIGHT          \
+				--vertical-label "$DESCR"                \
+				$DEFAULT_COLORS                          \
+				--slope-mode HRULE:0#000000              \
+				$LAZY  $RANGE                            \
+				-W "Generated on: $DATESTRING"           \
+				$_SENSOR_GEN                             > /dev/null
 			fi
 			;;
 		*)
@@ -1204,8 +1216,8 @@ csl_graph() {
 		#LINE2:rpn_MAX$GREY
 		#LINE2:rpn_MIN$GREEN
 
-		$_NICE $RRDTOOL graph                                    \
-		$RRDSTATS_RRDTEMP/$IMAGENAME.png                         \
+		$_NICE $RRDTOOL graph $GRAPHARGS                         \
+		$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
 		--title "$TITLE"                                         \
 		--start now-$PERIODE -l 0 $MAXSPEEDP -r                  \
 		--width $WIDTH --height $HEIGHT                          \
@@ -1248,7 +1260,7 @@ gen_main() {
 	sec_begin "$FNAME"
 	generate_graph "$SNAME" "$CURRENT_PERIOD" "$SNAME" "" $GROUP $5
 	echo "<center><a href=\"$SCRIPT_NAME?graph=$SNAME$GROUP_URL\" class=\"image\">"
-	echo "<img src=\"/statpix/$SNAME$GROUP$5.png$NOCACHE\" alt=\"$FNAME stats for last $LAPSE\" border=\"0\" />"
+	echo "<img src=\"/statpix/$SNAME$GROUP$5.$IMAGETYPE$NOCACHE\" alt=\"$FNAME stats for last $LAPSE\" border=\"0\" $HTMLWIDTH />"
 	echo "</a></center>"
 	sec_end
 }
@@ -1322,7 +1334,7 @@ graphit() {
 				sec_begin "last $periodnn"
 				generate_graph "$graph" "$periodG" "$graph-$period" "" $GROUP_PERIOD
 				echo "<center><a href=\"$SCRIPT_NAME\" class=\"image\">"
-				echo "<img src=\"/statpix/$graph-$period$GROUP_PERIOD$(cgi_param pdev | tr -d .).png$NOCACHE\" alt=\"$heading stats for last $periodnn\" border=\"0\" />"
+				echo "<img src=\"/statpix/$graph-$period$GROUP_PERIOD$(cgi_param pdev | tr -d .).$IMAGETYPE$NOCACHE\" alt=\"$heading stats for last $periodnn\" border=\"0\" $HTMLWIDTH />"
 				echo "</a></center>"
 				sec_end
 			done
@@ -1409,9 +1421,9 @@ EOF
 								soll="$(echo $(( ${tsoll}0 / 2)) | sed 's/.$/,&/g')"
 								[ "$soll" == 126,5 ] && soll="AUS"
 								[ "$soll" == 127,0 ] && soll="EIN"
-								temps=" (${grad%,0}->${soll%,0})"
+								temps=" (${grad%,0}${GRD}C->${soll%,0})"
 							else
-								temps=" (${grad%,0}${GRAD}C)"
+								temps=" (${grad%,0}${GRD}C)"
 							fi
 						else
 							temps=""

@@ -8,7 +8,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ACME.sh 3.0.5 (letsencrypt)](../../docs/make/acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
-  * **[apache2: Apache HTTP Server 2.4.54 (binary only)](../../docs/make/apache2.md)<a id='apache2'></a>**<br>
+  * **[Apache2 2.4.55 (binary only)](../../docs/make/apache2.md)<a id='apache2'></a>**<br>
     The Apache httpd server
      - [apache.conf](../../docs/make/apache2.md#apacheconf)
      - [Passwortschutz mit .htaccess](../../docs/make/apache2.md#passwortschutz-mit-htaccess)
@@ -274,6 +274,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FFmpeg 5.1.2](../../docs/make/ffmpeg.md)<a id='ffmpeg'></a>**<br>
     FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video.
 
+  * **[Fontconfig 2.14.1 (binary only)](../../docs/make/fontconfig.md)<a id='fontconfig'></a>**<br>
+    Fontconfig is a library for configuring and customizing font access. This package adds /etc/fontsfonts.conf
+
   * **[fortune 1.2](../../docs/make/fortune.md)<a id='fortune'></a>**<br>
     Fortune is a small game that is meant to lighten up your life. It can be used to display a random entry from a cookie file. After having installed the package, just put some fortune- files into a directory and create a symbolic link to /var/media/fortunes like this: ln -s /var/media/ftp/ExternalDisk/fortunes/ /var/media/fortunes For your convenience I have packed some fortune-files up and uploaded them here: http://homepages.tu-darmstadt.de/~pkrueger/fortunes.7z If you'd rather get your own files, you could start looking here: http://www.freebsd.org/cgi/cvsweb.cg...tune/datfiles/
      - [Paket konfigurieren](../../docs/make/fortune.md#paket-konfigurieren)
@@ -290,7 +293,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### G
 
-  * **[getdns 1.5.2](../../docs/make/getdns.md)<a id='getdns'></a>**<br>
+  * **[getdns 1.7.3](../../docs/make/getdns.md)<a id='getdns'></a>**<br>
     getdns/Stubby is an application that acts as a local DNS Privacy stub resolver (using DNS-over-TLS). Stubby encrypts DNS queries sent from a client machine (desktop or laptop) to a DNS Privacy resolver increasing end user privacy.
 
   * **<u>Ghostscript fonts 8.11 (binary only)</u><a id='ghostscript-fonts'></a>**<br>
@@ -621,7 +624,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7 (binary only)](../../docs/make/openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
-  * **[OpenVPN 2.4.12/2.5.8](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
+  * **[OpenVPN 2.4.12/2.5.8/2.6.0](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
     VPN Server
      - [Häufige Fragen / Howto](../../docs/make/openvpn.md#häufige-fragen--howto)
      - [Konfigurationsanleitung](../../docs/make/openvpn.md#konfigurationsanleitung)
@@ -871,7 +874,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Streamripper records mp3 and ogg streams. For shoutcast style streams it finds the "meta data" or track separation data, and uses that as a marker for where the track should be separated.
      - [Verwendete Bibliotheken](../../docs/make/streamripper.md#verwendete-bibliotheken)
 
-  * **[Stunnel 5.66](../../docs/make/stunnel.md)<a id='stunnel'></a>**<br>
+  * **[Stunnel 5.67](../../docs/make/stunnel.md)<a id='stunnel'></a>**<br>
     Stunnel universal SSL proxy
      - [Konfiguration](../../docs/make/stunnel.md#konfiguration)
 
@@ -977,7 +980,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UNFS3 0.9.23](../../docs/make/unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **[UnRAR 6.1.7 (binary only)](../../docs/make/unrar.md)<a id='unrar'></a>**<br>
+  * **[UnRAR 6.1.7/6.2.5 (binary only)](../../docs/make/unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **[usbids: usb.ids a5edeafb60](../../docs/make/usbids.md)<a id='usbids'></a>**<br>
@@ -1046,7 +1049,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Konfiguration](../../docs/make/xrelayd.md#konfiguration)
      - [Zertifikate auf der Box erzeugen](../../docs/make/xrelayd.md#zertifikate-auf-der-box-erzeugen)
 
-  * **<u>xsltproc 1.1.33 (binary only)</u><a id='xsltproc'></a>**<br>
+  * **[xsltproc 1.1.37 (binary only)](../../docs/make/xsltproc.md)<a id='xsltproc'></a>**<br>
     xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.
 
   * **[XZ Utils 5.4.1 (binary only)](../../docs/make/xz.md)<a id='xz'></a>**<br>
