@@ -8,7 +8,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ACME.sh 3.0.5 (letsencrypt)](acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
-  * **[apache2: Apache HTTP Server 2.4.54 (binary only)](apache2.md)<a id='apache2'></a>**<br>
+  * **[Apache2 2.4.55 (binary only)](apache2.md)<a id='apache2'></a>**<br>
     The Apache httpd server
 
   * **<u>asterisk-chan-capi: chan_capi: ISDN API 2.0 module for asterisk</u><a id='asterisk-chan-capi'></a>**<br>
@@ -722,7 +722,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UNFS3 0.9.23](unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **[UnRAR 6.1.7 (binary only)](unrar.md)<a id='unrar'></a>**<br>
+  * **[UnRAR 6.1.7/6.2.5 (binary only)](unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **[usbids: usb.ids a5edeafb60](usbids.md)<a id='usbids'></a>**<br>

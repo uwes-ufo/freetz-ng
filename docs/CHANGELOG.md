@@ -76,6 +76,7 @@ Latest changes
 
  - Packages:
    * ACME.sh 3.0.5 (letsencrypt)
+   * Apache2 2.4.55
    * BIND 9.11.37/9.16.37
    * BIRD 1.6.8
    * BusyBox 1.36.0
@@ -142,6 +143,10 @@ Latest changes
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+
+[//]: # ( ############################################################################# )
+[//]: # (             Do not edit below this line! Update only DEVEL above.             )
+[//]: # ( ############################################################################# )
 
 ### ng22100
 
@@ -274,7 +279,7 @@ Latest changes
    * Tor 0.4.7.8
    * uClibc-ng 1.0.41
    * Unbound 1.16.0
-   * UnRAR 6.1.7
+   * UnRAR 6.1.7/6.2.5
    * Vim 8.2.5052
    * Wget GNU 1.21.3
 
