@@ -23,6 +23,7 @@ check "$RRDSTATS_END_BACKUP" yes:b_stop "*":b_start
 check "$RRDSTATS_START_RESTORE" yes:start_restore
 check "$RRDSTATS_DELBACKUP"  yes:delbackup
 check "$RRDSTATS_TOBITAG" yes:tobitag
+check "$RRDSTATS_SHOWFRAME" yes:showframe
 check "$RRDSTATS_DARKMODE" yes:darkmode
 check "$RRDSTATS_CPU100PERC" yes:cpu100perc
 check "$RRDSTATS_UPTIME_ENB" yes:uptime_enb
@@ -117,6 +118,7 @@ cat << EOF
 <p>$(lang de:"Tempor&auml;res Verzeichnis" en:"Temporary folder"):&nbsp;<input type="text" name="rrdtemp" size="45" maxlength="255" value="$(html "$RRDSTATS_RRDTEMP")"></p>
 <p>$(lang de:"Persistentes Verzeichnis" en:"Persistent folder"):&nbsp;<input type="text" name="rrddata" size="45" maxlength="255" value="$(html "$RRDSTATS_RRDDATA")"></p>
 <p>$(lang de:"Aufzeichnungsintervall in Sekunden" en:"Log interval in seconds"):&nbsp;<input type="text" name="interval" size="3" maxlength="9" value="$(html "$RRDSTATS_INTERVAL")"></p>
+<p>$(lang de:"Breite der zus&auml;tzlichen Webserver" en:"Width of additional webservers"):&nbsp;<input type="text" name="altwidth" size="4" maxlength="4" value="$(html "$RRDSTATS_ALTWIDTH")"></p>
 <p>
 $(lang de:"Dimensionsverh&auml;ltnis der Graphen" en:"Graph dimensions ratio"):
 <input type="text" name="dimensionx" size="3" maxlength="9" value="$(html "$RRDSTATS_DIMENSIONX")">
@@ -134,16 +136,14 @@ $(lang de:"Graphen immer neu generieren (not lazy)" en:"Always generate new grap
 <input type="hidden" name="notlazys" value="no">
 <input id="l2" type="checkbox" name="notlazys" value="yes"$notlazys_chk><label for="l2">$(lang de:"Unterseiten" en:"Sub-pages")</label>
 </p>
-EOF
-if [ "$FREETZ_PACKAGE_RRDTOOL_VERSION_CURRENT" == "y" ]; then
-cat << EOF
 <p>
 <input type="hidden" name="tobitag" value="no">
 <input id="tt" type="checkbox" name="tobitag" value="yes"$tobitag_chk>
-<label for="tt">$(lang de:"Zeige den Namen des Authors von rrdtool auf allen Graphen" en:"Show the name of the author of rrdtool on all graphs")</label></p>
-EOF
-fi
-cat << EOF
+<label for="tt">$(lang de:"Zeige den Namen des Autors von rrdtool auf allen Graphen" en:"Show the name of the author of rrdtool on all graphs")</label></p>
+<p>
+<input type="hidden" name="showframe" value="no">
+<input id="sf" type="checkbox" name="showframe" value="yes"$showframe_chk>
+<label for="sf">$(lang de:"Zeichne einen Rahmen um die Graphen" en:"Draw a frame around the graphs")</label></p>
 <p>
 <input type="hidden" name="darkmode" value="no">
 <input id="dm" type="checkbox" name="darkmode" value="yes"$darkmode_chk>

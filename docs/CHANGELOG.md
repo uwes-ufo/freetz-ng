@@ -87,6 +87,7 @@ Latest changes
    * DejaVu Fonts TTF 2.37
    * Dnsmasq 2.80/2.88
    * Dropbear 2022.83
+   * Fontconfig 2.14.1
    * getdns 1.7.3
    * Git 2.39.1
    * HAProxy 2.6.8
@@ -104,7 +105,7 @@ Latest changes
    * ncursesw 6.4
    * OpenSSH 9.1p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7
-   * OpenVPN 2.4.12/2.6.0
+   * OpenVPN 2.4.12/2.5.8/2.6.0
    * PCSC-lite 1.9.9
    * RPCBind 1.2.6
    * RRDtool 1.2.30/1.8.0
@@ -120,7 +121,6 @@ Latest changes
  - Libraries:
    * cairo 1.17.4
    * expat 2.5.0
-   * fontconfig 2.14.1
    * fribidi 1.0.12
    * glib2 2.32.4/2.75.2
    * harfbuzz 6.0.0
