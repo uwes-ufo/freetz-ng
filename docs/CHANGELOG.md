@@ -1,3 +1,4 @@
+[//]: # ( Do not edit any section except DEVEL. )
 # CHANGELOG
 Latest changes
 
@@ -60,7 +61,8 @@ Latest changes
    * mklibs 0.1.45
    * ncurses 6.4
    * ninja 1.11.1
-   * precompiled host-tools 2023-01-25
+   * patchelf 0.14.5/0.17.2
+   * precompiled host-tools 2023-01-30
    * prelink 20130503
    * pseudo 1.9.0 oe-core c9670c2
    * python 3.11.1
@@ -116,6 +118,7 @@ Latest changes
    * tcpdump 4.1.1/4.99.3
    * Tor 0.4.7.13
    * Unbound 1.17.1
+   * UnRAR 6.1.7/6.2.5
    * xsltproc 1.1.37
    * XZ Utils 5.4.1
 
@@ -143,10 +146,6 @@ Latest changes
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
-
-[//]: # ( ############################################################################# )
-[//]: # (             Do not edit below this line! Update only DEVEL above.             )
-[//]: # ( ############################################################################# )
 
 ### ng22100
 
@@ -279,7 +278,7 @@ Latest changes
    * Tor 0.4.7.8
    * uClibc-ng 1.0.41
    * Unbound 1.16.0
-   * UnRAR 6.1.7/6.2.5
+   * UnRAR 6.1.7
    * Vim 8.2.5052
    * Wget GNU 1.21.3
 
