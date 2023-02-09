@@ -53,7 +53,7 @@ Latest changes
  - Host tools:
    * busybox 1.36.0
    * cmake 3.25.2
-   * fakeroot 1.30.1
+   * fakeroot 1.31
    * fastjar 0.98
    * gperf 3.1
    * kconfig 6.1
@@ -65,7 +65,7 @@ Latest changes
    * precompiled host-tools 2023-01-30
    * prelink 20130503
    * pseudo 1.9.0 oe-core c9670c2
-   * python 3.11.1
+   * python 3.11.2
    * sed 4.9
    * sfk 1.9.8.2
    * u-boot 2023.01
@@ -108,7 +108,7 @@ Latest changes
    * ncurses 6.4
    * ncursesw 6.4
    * OpenSSH 9.2p1
-   * OpenSSL 0.9.8zh/1.0.2u/1.1.1s/3.0.7
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1t/3.0.8
    * OpenVPN 2.4.12/2.5.8/2.6.0
    * PCSC-lite 1.9.9
    * RPCBind 1.2.6
@@ -197,7 +197,7 @@ Latest changes
    * Screen 4.9.0
    * SQLite 3.39.4
    * strace 4.9/5.0/5.19
-   * Stunnel 5.67
+   * Stunnel 5.68
    * Tor 0.4.7.9
    * uClibc-ng 1.0.42
    * Unbound 1.16.6
