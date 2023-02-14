@@ -112,7 +112,14 @@ unpack_() {
 	line="$1"
 	file="${line%% *}"
 	image="$IMAGES/$file"
-	[ -n "$ACTIONS_FWDLURL" ] && echo "SAVING       $file" && wget -q "${ACTIONS_FWDLURL}$file" -O $image >/dev/null 2>&1 && rmdl='y'
+	if [ ! -s "${image}" ] && [ -n "$ACTIONS_TOKEN" ]; then
+		[ -z "$ASSETS" ] && ASSETS="$(curl -s  -H "Accept: application/vnd.github+json"  -H "Authorization: Bearer $ACTIONS_TOKEN"  -H "X-GitHub-Api-Version: 2022-11-28"  "https://api.github.com/repos/Freetz-NG/images/releases/tags/firmware")"
+		local ASSID="$(echo "$ASSETS" | grep -B7 "\"$file\"" | sed -rn 's/ *"id": *([^,]*),*/\1/p')"
+		echo "ASSETS       $ASSID"
+		[ -n "$ASSID" ] && curl -sLo "$image"  -H "Accept: application/octet-stream"     -H "Authorization: Bearer $ACTIONS_TOKEN"  -H "X-GitHub-Api-Version: 2022-11-28"  "https://api.github.com/repos/Freetz-NG/images/releases/assets/$ASSID"
+		rmdl='y'
+	fi
+	[ ! -s "${image}" ] && [ -n "$ACTIONS_FWDLURL" ] && echo "SAVING       $file" && wget -q "${ACTIONS_FWDLURL}$file" -O $image >/dev/null 2>&1 && rmdl='y'
 	[ ! -s "${image}" ] && image="$HOME/Desktop/$file"
 	[ ! -s "${image}" ] && echo "MISSED       ${image##*/}" && die && return 1
 	dirname="$UNPACK/${line%.image*}"
