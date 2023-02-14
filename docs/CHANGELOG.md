@@ -55,6 +55,7 @@ Latest changes
    * cmake 3.25.2
    * fakeroot 1.31
    * fastjar 0.98
+   * genext2fs 1.5.0-3b99f4a4
    * gperf 3.1
    * kconfig 6.1
    * meson 1.0.0
@@ -62,7 +63,7 @@ Latest changes
    * ncurses 6.4
    * ninja 1.11.1
    * patchelf 0.14.5/0.17.2
-   * precompiled host-tools 2023-02-09
+   * precompiled host-tools 2023-02-13
    * prelink 20130503
    * pseudo 1.9.0 oe-core c9670c2
    * python 3.11.2
@@ -102,7 +103,7 @@ Latest changes
    * Knock 0.8
    * libffi 3.4.4
    * libpcap 1.1.1/1.10.3
-   * Lighttpd 1.4.68
+   * Lighttpd 1.4.69
    * Lua 5.1.5/5.4.4
    * Nano 7.2
    * ncurses 6.4
@@ -124,11 +125,11 @@ Latest changes
    * XZ Utils 5.4.1
 
  - Libraries:
-   * cairo 1.17.4
+   * cairo 1.17.8
    * expat 2.5.0
    * fribidi 1.0.12
    * glib2 2.32.4/2.75.2
-   * harfbuzz 6.0.0
+   * harfbuzz 7.0.0
    * libcap-ng 0.8.3
    * libctlmgr 1.0
    * libev 4.33
