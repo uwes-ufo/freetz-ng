@@ -107,7 +107,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only)](ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 7.87.0 (binary only)](curl.md)<a id='curl'></a>**<br>
+  * **[Curl 7.88.0 (binary only)](curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -211,7 +211,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Ghostscript fonts 8.11 (binary only)</u><a id='ghostscript-fonts'></a>**<br>
     This package provides the Ghostscript fonts.
 
-  * **[Git 2.39.1](git.md)<a id='git'></a>**<br>
+  * **[Git 2.39.2](git.md)<a id='git'></a>**<br>
     Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
   * **<u>gntpsend 0.3.2-git (binary only)</u><a id='gntpsend'></a>**<br>
@@ -336,7 +336,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>lftp 4.8.4 (binary only)</u><a id='lftp'></a>**<br>
     LFTP is sophisticated file transfer program with command line interface. It supports FTP, HTTP, FISH, SFTP, HTTPS and FTPS protocols. GNU Readline library is used for input.
 
-  * **[Lighttpd 1.4.68](lighttpd.md)<a id='lighttpd'></a>**<br>
+  * **[Lighttpd 1.4.69](lighttpd.md)<a id='lighttpd'></a>**<br>
     Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver; as it is designed and optimized for high performance environments. With a small memory footprint compared to other web-servers, effective management of the cpu-load, and advanced feature set (FastCGI, SCGI, Auth, Output-Compression, URL-Rewriting and many more) lighttpd is the perfect solution for every server that is suffering load problems. In case you want to configure virtual hosts, you may want to consider the package onlinechanged-cgi which allows you to configure multiple DynDNS entries for your box.
 
   * **[Lua 5.1.5/5.4.4 (binary only)](lua.md)<a id='lua'></a>**<br>
@@ -350,7 +350,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[madplay 0.15.2b (binary only)](madplay.md)<a id='madplay'></a>**<br>
     MAD is a high-quality fixed-point MPEG audio decoder with 24-bit output. The implementation is entirely new, based on the ISO/IEC standards, and performs especially well on systems without native floating-point support.
 
-  * **[mc (Midnight Commander) 4.8.28 (binary only)](mc.md)<a id='mc'></a>**<br>
+  * **[mc (Midnight Commander) 4.8.29 (binary only)](mc.md)<a id='mc'></a>**<br>
     Subshell support means you can press Ctrl-O to hide the mc panels and have a real subshell. Both Bash (if package is installed) and BusyBox Ash can be used, depending which one is defined as your login shell. ATTENTION: You should *not* use CONFIG_FEATURE_BASH_IS_ASH in BusyBox or otherwise symlink /bin/bash to /bin/busybox because MC must differentiate handling between Ash and real Bash. This feature adds about 8 KB (uncompressed) to the mc binary.
 
   * **[mcabber 0.9.9](mcabber.md)<a id='mcabber'></a>**<br>
@@ -653,7 +653,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Subversion 1.9.12/1.14.2](subversion.md)<a id='subversion'></a>**<br>
     Subversion, also known as svn, is a version control system much like the Concurrent Versions System (CVS). Version control systems allow many individuals (who may be distributed geographically) to collaborate on a set of files (typically source code). Subversion has all the major features of CVS, plus certain new features that CVS users often wish they had.
 
-  * **[Sudo 1.9.11p3 (binary only)](sudo.md)<a id='sudo'></a>**<br>
+  * **[Sudo 1.9.13 (binary only)](sudo.md)<a id='sudo'></a>**<br>
     Sudo (su "do") allows a system administrator to delegate authority to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while providing an audit trail of the commands and their arguments. WWW: http://www.courtesan.com/sudo/
 
   * **[Sundtek DVB driver 130210.134617/170310.204343/210803.071224](sundtek.md)<a id='sundtek'></a>**<br>
