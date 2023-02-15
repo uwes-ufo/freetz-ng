@@ -142,7 +142,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only)](../../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 7.87.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
+  * **[Curl 7.88.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -299,7 +299,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Ghostscript fonts 8.11 (binary only)</u><a id='ghostscript-fonts'></a>**<br>
     This package provides the Ghostscript fonts.
 
-  * **[Git 2.39.1](../../docs/make/git.md)<a id='git'></a>**<br>
+  * **[Git 2.39.2](../../docs/make/git.md)<a id='git'></a>**<br>
     Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
   * **<u>gntpsend 0.3.2-git (binary only)</u><a id='gntpsend'></a>**<br>
@@ -453,7 +453,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[madplay 0.15.2b (binary only)](../../docs/make/madplay.md)<a id='madplay'></a>**<br>
     MAD is a high-quality fixed-point MPEG audio decoder with 24-bit output. The implementation is entirely new, based on the ISO/IEC standards, and performs especially well on systems without native floating-point support.
 
-  * **[mc (Midnight Commander) 4.8.28 (binary only)](../../docs/make/mc.md)<a id='mc'></a>**<br>
+  * **[mc (Midnight Commander) 4.8.29 (binary only)](../../docs/make/mc.md)<a id='mc'></a>**<br>
     Subshell support means you can press Ctrl-O to hide the mc panels and have a real subshell. Both Bash (if package is installed) and BusyBox Ash can be used, depending which one is defined as your login shell. ATTENTION: You should *not* use CONFIG_FEATURE_BASH_IS_ASH in BusyBox or otherwise symlink /bin/bash to /bin/busybox because MC must differentiate handling between Ash and real Bash. This feature adds about 8 KB (uncompressed) to the mc binary.
 
   * **[mcabber 0.9.9](../../docs/make/mcabber.md)<a id='mcabber'></a>**<br>

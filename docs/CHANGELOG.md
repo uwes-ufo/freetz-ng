@@ -86,14 +86,14 @@ Latest changes
    * CA-bundle 2023-01-10
    * CCID 1.5.1
    * classpath 0.99
-   * Curl 7.87.0
+   * Curl 7.88.0
    * dehydrated 0.7.1 (letsencrypt)
    * DejaVu Fonts TTF 2.37
    * Dnsmasq 2.80/2.89
    * Dropbear 2022.83
    * Fontconfig 2.14.1
    * getdns 1.7.3
-   * Git 2.39.1
+   * Git 2.39.2
    * HAProxy 2.6.8
    * htop 1.0.3/2.3.2
    * htpdate 1.3.7
@@ -256,7 +256,7 @@ Latest changes
    * LCD4linux 9d4e4b7-git
    * lighttpd 1.4.65
    * ltrace 0.7.3checkpoint1-git
-   * mc (Midnight Commander) 4.8.28
+   * mc (Midnight Commander) 4.8.29
    * mini-snmpd 1.6
    * MTR 0.80/0.95
    * Nano 6.3
