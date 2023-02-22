@@ -43,12 +43,22 @@ Latest changes
 
 ### devel
 
+ - Host tools:
+   * kconfig 6.2
+   * patchelf 0.14.5/0.15.0
+   * precompiled host-tools 2023-02-20
+
+ - Patches:
+   * Various Fritzos 7.5 related changes
+
  - Packages:
    * Curl 7.88.1
+   * Fontconfig 2.14.2
    * OpenVPN 2.4.12/2.5.9/2.6.0
    * Sudo 1.9.13p1
 
  - Libraries:
+   * glib2 2.32.4/2.75.3
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

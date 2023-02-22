@@ -374,7 +374,7 @@ Currently supported devices and firmwares
   - 113.07.12 rev70401 {INT} [MESH18 NL2]
   - 113.07.21 rev81779 {ALL} [PSQ19]
   - 113.07.29 rev92201 {ALL} [PSQ19P2NL4]
-  - 113.07.51 rev102849 {ALL} [MOVE21NL1] (Labor)
+  - 113.07.51 rev103186 {ALL} [MOVE21NL1] (Labor)
 
 ### Fritz!Box Fon WLAN (75xx)
 
@@ -471,7 +471,7 @@ Currently supported devices and firmwares
 * __Fritz!Powerline 1240E (UNTESTED)__
   - 150.06.92 rev47432 {ALL}
   - 150.07.01 rev63180 {ALL}
-  - 150.07.14 rev93759 {ALL} [WU21 MESH18]
+  - 150.07.15 rev103167 {ALL} [WU22 MESH18]
 * __Fritz!Powerline 1260E__
   - 157.07.01 rev63181 {ALL}
   - 157.07.12 rev70670 {ALL} [MESH18 NL2]
@@ -524,7 +524,7 @@ Currently supported devices and firmwares
   - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
   - 174.07.39 rev00000 {ALL} [MOVE21] (Labor)
 * __Fritz!Repeater 3000 AX (UNTESTED)__
-  - 270.07.41 rev101080 {ALL} [MOVE21] (Inhaus)
+  - 270.07.41 rev100749 {ALL} [MOVE21]
 * __Fritz!Repeater 6000__
   - 253.07.30 rev98407 {ALL} [PSQ19P2NL4]
   - 253.07.39 rev00000 {ALL} [MOVE21] (Labor)
