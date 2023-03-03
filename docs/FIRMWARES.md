@@ -385,7 +385,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box Fon WLAN 7510__
   - 271.07.30 rev94120 {ALL} [PSQ19P2NL4]
-  - 271.07.39 rev00000 {ALL} [MOVE21] (Labor)
+  - 271.07.50 rev102812 {ALL} [MOVE21]
 * __Fritz!Box Fon WLAN 7520__
   - 175.07.14 rev73182 {GER} [MESH18 NL4]
   - 175.07.21 rev82822 {ALL} [PSQ19]
@@ -523,7 +523,7 @@ Currently supported devices and firmwares
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
   - 174.07.21 rev83015 {ALL} [PSQ19]
   - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
-  - 174.07.39 rev00000 {ALL} [MOVE21] (Labor)
+  - 174.07.50 rev103744 {ALL} [MOVE21]
 * __Fritz!Repeater 3000 AX (UNTESTED)__
   - 270.07.41 rev100749 {ALL} [MOVE21]
 * __Fritz!Repeater 6000__
