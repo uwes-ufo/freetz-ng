@@ -56,7 +56,10 @@ Latest changes
    * Fontconfig 2.14.2
    * OpenVPN 2.4.12/2.5.9/2.6.0
    * strace 4.9/5.0/6.2
+   * Stunnel 5.69
    * Sudo 1.9.13p2
+   * SQLite 3.41.0
+   * UnRAR 6.1.7/6.2.6
 
  - Libraries:
    * glib2 2.32.4/2.75.3
