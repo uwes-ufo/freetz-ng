@@ -647,7 +647,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Streamripper 1.64.6](streamripper.md)<a id='streamripper'></a>**<br>
     Streamripper records mp3 and ogg streams. For shoutcast style streams it finds the "meta data" or track separation data, and uses that as a marker for where the track should be separated.
 
-  * **[Stunnel 5.68](stunnel.md)<a id='stunnel'></a>**<br>
+  * **[Stunnel 5.69](stunnel.md)<a id='stunnel'></a>**<br>
     Stunnel universal SSL proxy
 
   * **[Subversion 1.9.12/1.14.2](subversion.md)<a id='subversion'></a>**<br>
@@ -722,7 +722,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UNFS3 0.9.23](unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **[UnRAR 6.1.7/6.2.5 (binary only)](unrar.md)<a id='unrar'></a>**<br>
+  * **[UnRAR 6.1.7/6.2.6 (binary only)](unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **[usbids: usb.ids a5edeafb60](usbids.md)<a id='usbids'></a>**<br>
