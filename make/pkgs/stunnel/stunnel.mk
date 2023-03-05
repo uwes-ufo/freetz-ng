@@ -36,8 +36,6 @@ $(PKG)_EXTRA_LDFLAGS += -all-static
 $(PKG)_STATIC_LIBS += $(OPENSSL_LIBCRYPTO_EXTRA_LIBS)
 endif
 
-$(PKG)_EXTRA_LDFLAGS += -latomic
-
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_ptmx=no
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_ptc=no
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_urandom=yes
