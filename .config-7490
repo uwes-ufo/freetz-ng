@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 571daa21f uwe 2023-03-07
+#  freetz-ng 59bc482e4 uwe 2023-03-08
 #
 
 #
@@ -25,34 +25,13 @@ FREETZ_SHOW_EXPERT=y
 #
 # FREETZ_SERIES_0N1 is not set
 # FREETZ_SERIES_2N3 is not set
-# FREETZ_SERIES_4N5 is not set
+FREETZ_SERIES_4N5=y
 # FREETZ_SERIES_EXT is not set
-FREETZ_SERIES_ALL=y
-
-#
-# T-Com hardware
-#
-# FREETZ_TYPE_300IP is not set
-# FREETZ_TYPE_W501V is not set
-
-#
-# LAN
-#
-# FREETZ_TYPE_2170 is not set
+# FREETZ_SERIES_ALL is not set
 
 #
 # WLAN
 #
-# FREETZ_TYPE_3020 is not set
-# FREETZ_TYPE_3030 is not set
-# FREETZ_TYPE_3130 is not set
-# FREETZ_TYPE_3131 is not set
-# FREETZ_TYPE_3170 is not set
-# FREETZ_TYPE_3270_V2 is not set
-# FREETZ_TYPE_3270_V3 is not set
-# FREETZ_TYPE_3272 is not set
-# FREETZ_TYPE_3370 is not set
-# FREETZ_TYPE_3390 is not set
 # FREETZ_TYPE_3490 is not set
 
 #
@@ -61,15 +40,6 @@ FREETZ_SERIES_ALL=y
 # FREETZ_TYPE_4020 is not set
 # FREETZ_TYPE_4040 is not set
 # FREETZ_TYPE_4060 is not set
-
-#
-# Fon
-#
-# FREETZ_TYPE_FON is not set
-# FREETZ_TYPE_5010 is not set
-# FREETZ_TYPE_5050 is not set
-# FREETZ_TYPE_5124 is not set
-# FREETZ_TYPE_5140 is not set
 
 #
 # Fiber
@@ -91,12 +61,9 @@ FREETZ_SERIES_ALL=y
 #
 # LTE
 #
-# FREETZ_TYPE_6810 is not set
 # FREETZ_TYPE_6820_V1 is not set
 # FREETZ_TYPE_6820_V2 is not set
 # FREETZ_TYPE_6820_V3 is not set
-# FREETZ_TYPE_6840 is not set
-# FREETZ_TYPE_6842 is not set
 # FREETZ_TYPE_6850_4G is not set
 # FREETZ_TYPE_6850_5G is not set
 # FREETZ_TYPE_6890 is not set
@@ -104,30 +71,6 @@ FREETZ_SERIES_ALL=y
 #
 # Fon WLAN
 #
-# FREETZ_TYPE_WLAN is not set
-# FREETZ_TYPE_7050 is not set
-# FREETZ_TYPE_7112 is not set
-# FREETZ_TYPE_7113 is not set
-# FREETZ_TYPE_7140 is not set
-# FREETZ_TYPE_7141 is not set
-# FREETZ_TYPE_7150 is not set
-# FREETZ_TYPE_7170 is not set
-# FREETZ_TYPE_7240 is not set
-# FREETZ_TYPE_7270_V1 is not set
-# FREETZ_TYPE_7270_V2 is not set
-# FREETZ_TYPE_7270_V3 is not set
-# FREETZ_TYPE_7272 is not set
-# FREETZ_TYPE_7312 is not set
-# FREETZ_TYPE_7320 is not set
-# FREETZ_TYPE_7330_XL is not set
-# FREETZ_TYPE_7330_SL is not set
-# FREETZ_TYPE_7340 is not set
-# FREETZ_TYPE_7360_V1 is not set
-# FREETZ_TYPE_7360_V2 is not set
-# FREETZ_TYPE_7360_SL is not set
-# FREETZ_TYPE_7362 is not set
-# FREETZ_TYPE_7369 is not set
-# FREETZ_TYPE_7390 is not set
 # FREETZ_TYPE_7412 is not set
 # FREETZ_TYPE_7430 is not set
 FREETZ_TYPE_7490=y
@@ -137,7 +80,6 @@ FREETZ_TYPE_7490=y
 # FREETZ_TYPE_7530 is not set
 # FREETZ_TYPE_7539 is not set
 # FREETZ_TYPE_7560 is not set
-# FREETZ_TYPE_7570 is not set
 # FREETZ_TYPE_7580 is not set
 # FREETZ_TYPE_7581 is not set
 # FREETZ_TYPE_7582 is not set
@@ -145,34 +87,6 @@ FREETZ_TYPE_7490=y
 # FREETZ_TYPE_7584 is not set
 # FREETZ_TYPE_7590 is not set
 # FREETZ_TYPE_7599 is not set
-
-#
-# Powerline
-#
-# FREETZ_TYPE_0540 is not set
-# FREETZ_TYPE_0546 is not set
-# FREETZ_TYPE_1240 is not set
-# FREETZ_TYPE_1260_V1 is not set
-# FREETZ_TYPE_1260_V2 is not set
-
-#
-# Repeater
-#
-# FREETZ_TYPE_1759 is not set
-# FREETZ_TYPE_0300 is not set
-# FREETZ_TYPE_0450 is not set
-# FREETZ_TYPE_1200 is not set
-# FREETZ_TYPE_1209 is not set
-# FREETZ_TYPE_1750 is not set
-# FREETZ_TYPE_2400 is not set
-# FREETZ_TYPE_3000 is not set
-# FREETZ_TYPE_3009 is not set
-# FREETZ_TYPE_6000 is not set
-
-#
-# Smart
-#
-# FREETZ_TYPE_GATE is not set
 FREETZ_TYPE_LANG_DE=y
 # FREETZ_TYPE_LANG_EN is not set
 FREETZ_TYPE_LANGUAGE="xx"
