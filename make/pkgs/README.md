@@ -8,7 +8,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ACME.sh 3.0.5 (letsencrypt)](../../docs/make/acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
-  * **[Apache2 2.4.55 (binary only)](../../docs/make/apache2.md)<a id='apache2'></a>**<br>
+  * **[Apache2 2.4.56 (binary only)](../../docs/make/apache2.md)<a id='apache2'></a>**<br>
     The Apache httpd server
      - [apache.conf](../../docs/make/apache2.md#apacheconf)
      - [Passwortschutz mit .htaccess](../../docs/make/apache2.md#passwortschutz-mit-htaccess)
@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.16.37](../../docs/make/bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.16.38](../../docs/make/bind.md)<a id='bind'></a>**<br>
     BIND is an implementation of the Domain Name System (DNS) protocols. The name BIND stands for "Berkeley Internet Name Daemon". You have to provide the config and needed zone files yourself.
      - [named.conf](../../docs/make/bind.md#namedconf)
 
@@ -624,7 +624,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1t/3.0.8 (binary only)](../../docs/make/openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
-  * **[OpenVPN 2.4.12/2.5.9/2.6.0](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
+  * **[OpenVPN 2.4.12/2.5.9/2.6.1](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
     VPN Server
      - [Häufige Fragen / Howto](../../docs/make/openvpn.md#häufige-fragen--howto)
      - [Konfigurationsanleitung](../../docs/make/openvpn.md#konfigurationsanleitung)
@@ -852,7 +852,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite 3.41.0 (binary only)](../../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite 3.41.1 (binary only)](../../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
