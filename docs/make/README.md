@@ -80,7 +80,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Callmonitor 1.20.9-git](callmonitor.md)<a id='callmonitor'></a>**<br>
     Callmonitor enables you to perform arbitrary actions upon incoming calls on your AVM Fritz!Box (e.g., to send notifications to your favorite set-top box, to wake up your PC, or to send you a mail when you have missed a call).
 
-  * **[CCID 1.5.1](ccid.md)<a id='ccid'></a>**<br>
+  * **[CCID 1.5.2](ccid.md)<a id='ccid'></a>**<br>
     ccid provides the source code for a generic USB CCID (Chip/Smart Card Interface Devices) driver and ICCD (Integrated Circuit(s) Card Devices).
 
   * **[Checkmaild 0.4.7](checkmaild.md)<a id='checkmaild'></a>**<br>
@@ -107,7 +107,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only)](ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 7.88.1 (binary only)](curl.md)<a id='curl'></a>**<br>
+  * **[Curl 8.0.1 (binary only)](curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -231,7 +231,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.9](haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.10](haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](haserl.md)<a id='haserl'></a>**<br>
@@ -462,7 +462,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1t/3.0.8 (binary only)](openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
-  * **[OpenVPN 2.4.12/2.5.9/2.6.1](openvpn.md)<a id='openvpn'></a>**<br>
+  * **[OpenVPN 2.4.12/2.5.9/2.6.2](openvpn.md)<a id='openvpn'></a>**<br>
     VPN Server
 
   * **[owfs 2.7p32 (binary only)](owfs.md)<a id='owfs'></a>**<br>
@@ -626,7 +626,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite 3.41.1 (binary only)](sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite 3.41.2 (binary only)](sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
@@ -779,7 +779,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[xsltproc 1.1.37 (binary only)](xsltproc.md)<a id='xsltproc'></a>**<br>
     xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.
 
-  * **[XZ Utils 5.4.1 (binary only)](xz.md)<a id='xz'></a>**<br>
+  * **[XZ Utils 5.4.2 (binary only)](xz.md)<a id='xz'></a>**<br>
     XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm compression format, which provides memory-hungry but powerful compression (often better than bzip2) and fast, easy decompression. This package provides the command line tools for working with XZ compression. They can also handle the older LZMA format, and if invoked via appropriate symlinks will emulate the behavior of the commands in the lzma package.
 
 # Debug helpers
