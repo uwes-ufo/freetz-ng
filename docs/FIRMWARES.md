@@ -167,7 +167,7 @@ Currently supported devices and firmwares
 * __Fritz!Box 6660 Cable__
   - 252.07.15 rev78740 {GER} [6660 FCS]
   - 252.07.29 rev92037 {GER} [PSQ19P2NL4]
-  - 252.07.39 rev00000 {GER} [MOVE21] (Labor)
+  - 252.07.50 rev104357 {GER} [MOVE21]
 * __Fritz!Box 6690 Cable__
   - 267.07.29 rev92355 {GER} [PSQ19P2NL4]
   - 267.07.50 rev102488 {GER} [MOVE21]
@@ -437,7 +437,7 @@ Currently supported devices and firmwares
   - 154.07.50 rev101716 {ALL} [MOVE21]
 * __Fritz!Box Fon WLAN 7590 AX__
   - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
-  - 259.07.39 rev00000 {ALL} [MOVE21] (Labor)
+  - 259.07.50 rev104313 {ALL} [MOVE21]
 
 ### Fritz!Powerline
 
