@@ -48,6 +48,7 @@ Latest changes
    * uClibc-ng 1.0.43
 
  - Host tools:
+   * kconfig 6.3
    * precompiled host-tools 2023-04-06
    * precompiled toolchains r21480
    * python 3.11.3
@@ -68,6 +69,7 @@ Latest changes
  - Libraries:
    * harfbuzz 7.1.0
    * libcap 2.49/2.68
+   * libpcap 1.1.1/1.10.4
    * libxml2 2.10.4
    * pango 1.50.14
    * SQLite 3.41.2
