@@ -66,12 +66,16 @@ Latest changes
    * Curl 8.0.1
    * HAProxy 2.6.10
    * iPerf3 3.3/3.13
-   * OpenVPN 2.4.12/2.5.9/2.6.3
+   * Lighttpd 1.4.70
+   * OpenVPN 2.4.12/2.5.9/2.6.4
+   * strace 4.9/5.0/6.3
    * tcpdump 4.1.1/4.99.4
    * XZ Utils 5.4.2
 
  - Libraries:
-   * harfbuzz 7.1.0
+   * FreeType 2.13.0
+   * glib2 2.32.4/2.76.1
+   * harfbuzz 7.3.0
    * libcap 2.49/2.68
    * libpcap 1.1.1/1.10.4
    * libxml2 2.10.4

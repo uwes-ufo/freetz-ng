@@ -1,6 +1,6 @@
-$(call PKG_INIT_BIN, 1.4.69)
+$(call PKG_INIT_BIN, 1.4.70)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=16ac8db95e719629ba61949b99f8a26feba946a81d185215b28379bb4116b0b4
+$(PKG)_HASH:=921ebe1cf4b6b9897e03779ab7a23a31f4ba40a1abe2067525c33cd3ce61fe85
 $(PKG)_SITE:=https://download.lighttpd.net/lighttpd/releases-1.4.x
 ### WEBSITE:=https://www.lighttpd.net/
 ### MANPAGE:=https://redmine.lighttpd.net/projects/lighttpd/wiki
@@ -12,20 +12,18 @@ $(PKG)_BINARY_TARGET_DIR := $($(PKG)_DEST_DIR)/usr/bin/lighttpd
 
 $(PKG)_MODULES_DIR := /usr/lib/lighttpd
 $(PKG)_MODULES_ALL := \
-	access accesslog ajp13 alias \
+	accesslog ajp13 \
 	auth authn_dbi authn_file authn_gssapi authn_ldap authn_pam \
 	cgi \
 	deflate dirlisting \
-	evhost expire extforward \
-	fastcgi \
+	extforward \
 	gnutls \
-	indexfile \
 	magnet maxminddb mbedtls \
 	nss \
 	openssl \
 	proxy \
-	redirect rewrite rrdtool \
-	scgi setenv simple_vhost sockproxy ssi staticfile status \
+	rrdtool \
+	sockproxy ssi status \
 	userdir \
 	vhostdb vhostdb_dbi vhostdb_ldap vhostdb_mysql vhostdb_pgsql \
 	webdav wolfssl wstunnel
