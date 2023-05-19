@@ -48,6 +48,7 @@ Latest changes
    * uClibc-ng 1.0.43
 
  - Host tools:
+   * busybox 1.36.1
    * kconfig 6.3
    * precompiled host-tools 2023-04-06
    * precompiled toolchains r21480
@@ -62,6 +63,7 @@ Latest changes
    * patch VLAN: re-enables vlan config of voip in ata-mode
 
  - Packages:
+   * BusyBox 1.36.1
    * CCID 1.5.2
    * Curl 8.1.0
    * HAProxy 2.6.10
