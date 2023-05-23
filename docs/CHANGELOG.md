@@ -65,7 +65,7 @@ Latest changes
  - Packages:
    * BusyBox 1.36.1
    * CCID 1.5.2
-   * Curl 8.1.0
+   * Curl 8.1.1
    * HAProxy 2.6.10
    * iPerf3 3.3/3.13
    * Lighttpd 1.4.70
@@ -76,14 +76,15 @@ Latest changes
 
  - Libraries:
    * FreeType 2.13.0
-   * glib2 2.32.4/2.76.1
+   * glib2 2.32.4/2.76.2
    * harfbuzz 7.3.0
-   * libcap 2.49/2.68
+   * libcap 2.49/2.69
    * libgcrypt 1.10.2
    * libgpg-error 1.47
+   * libnettle 3.9
    * libpcap 1.1.1/1.10.4
    * libuv 1.45.0
-   * libxml2 2.10.4
+   * libxml2 2.11.4
    * pango 1.50.14
    * SQLite 3.41.2
 

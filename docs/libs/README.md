@@ -52,7 +52,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[gettext (libintl.so) 0.21.1](gettext.md)<a id='gettext'></a>**<br>
     GNU Internationalization library
 
-  * **[GLib2 libglib (libglib-2.0.so) 2.32.4/2.76.1](glib2.md)<a id='glib2'></a>**<br>
+  * **[GLib2 libglib (libglib-2.0.so) 2.32.4/2.76.2](glib2.md)<a id='glib2'></a>**<br>
     GLib is a library containing many useful C routines for things such as trees, hashes, and lists.
 
   * **[gmp: GNU MP Bignum Library (libgmp.so) 6.1.2](gmp.md)<a id='gmp'></a>**<br>
@@ -98,7 +98,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libavmhmac (libavmhmac.so) - EXPERIMENTAL 0.2](libavmhmac.md)<a id='libavmhmac'></a>**<br>
     Replaces AVM's libavmhmac. Our libavmhmac only forwards functions to openssl's libcrypto where AVM wrote their own implementations. We have no clue why they did this.
 
-  * **[libcap (libcap.so) 2.49/2.68](libcap.md)<a id='libcap'></a>**<br>
+  * **[libcap (libcap.so) 2.49/2.69](libcap.md)<a id='libcap'></a>**<br>
     A library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.
 
   * **[libcapi: CAPI 2.0 (libcapi20.so) avm-7390.05.50](libcapi.md)<a id='libcapi'></a>**<br>
@@ -227,7 +227,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libvorbis (libvorbis.so) 1.3.5](libvorbis.md)<a id='libvorbis'></a>**<br>
     Vorbis is the name of a specific audio compression scheme that's designed to be contained in Ogg. libvorbis is a BSD-style license software implementation of the Vorbis specification by the Xiph.Org Foundation.
 
-  * **[libxml2 (libxml2.so) 2.10.4](libxml2.md)<a id='libxml2'></a>**<br>
+  * **[libxml2 (libxml2.so) 2.11.4](libxml2.md)<a id='libxml2'></a>**<br>
     XML toolkit from the GNOME project
 
   * **[linux-atm (libatm.so) 2.5.2](linux-atm.md)<a id='linux-atm'></a>**<br>
@@ -263,7 +263,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[neon: libneon (libneon.so) 0.30.2/0.32.4](neon.md)<a id='neon'></a>**<br>
     neon is an HTTP and WebDAV client library, with a C language API.
 
-  * **[nettle: libnettle (libnettle.so) 3.8.1](nettle.md)<a id='nettle'></a>**<br>
+  * **[nettle: libnettle (libnettle.so) 3.9](nettle.md)<a id='nettle'></a>**<br>
     A low level cryptographic library (symmetric and one-way cryptos)
 
 ### O
