@@ -53,7 +53,7 @@ Latest changes
    * precompiled host-tools 2023-05-19
    * precompiled toolchains r21480
    * python 3.11.3
-   * xz 5.4.2
+   * xz 5.4.3
 
  - AVM sources:
    * 5530 7.50 - 4.9.276
@@ -72,7 +72,7 @@ Latest changes
    * OpenVPN 2.4.12/2.5.9/2.6.4
    * strace 4.9/5.0/6.3
    * tcpdump 4.1.1/4.99.4
-   * XZ Utils 5.4.2
+   * XZ Utils 5.4.3
 
  - Libraries:
    * FreeType 2.13.0
