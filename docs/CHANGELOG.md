@@ -4,6 +4,7 @@ Latest changes
 
 - Freetz-NG
   * [devel](#devel)
+  * [ng23030](#ng23050)
   * [ng23030](#ng23030)
   * [ng22100](#ng22100)
   * [ng22070](#ng22070)
@@ -43,6 +44,11 @@ Latest changes
 
 ### devel
 
+ - Firmware updates:
+   * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+
+### ng23050
+
  - Build system:
    * Ccache 4.8.1
    * uClibc-ng 1.0.43
@@ -51,8 +57,8 @@ Latest changes
    * busybox 1.36.1
    * cmake 3.26.4
    * kconfig 6.3
-   * meson 1.1.0
-   * precompiled host-tools 2023-05-25
+   * meson 1.1.1
+   * precompiled host-tools 2023-05-28
    * precompiled toolchains r21480
    * python 3.11.3
    * xz 5.4.3
@@ -71,7 +77,7 @@ Latest changes
    * davfs2 1.5.2/1.7.0
    * HAProxy 2.6.10
    * iPerf3 3.3/3.13
-   * Lighttpd 1.4.70
+   * Lighttpd 1.4.71
    * OpenVPN 2.4.12/2.5.9/2.6.4
    * strace 4.9/5.0/6.3
    * tcpdump 4.1.1/4.99.4
@@ -92,7 +98,7 @@ Latest changes
    * SQLite 3.41.2
 
  - Firmware updates:
-   * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+   * Please see [FIRMWARES](https://github.com/Freetz-NG/freetz-ng/blob/ng23050/docs/FIRMWARES.md) for the list of supported devices and firmwares.
 
 ### ng23030
 
