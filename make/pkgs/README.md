@@ -852,7 +852,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite 3.41.2 (binary only)](../../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite 3.42.0 (binary only)](../../docs/make/sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
@@ -1016,7 +1016,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### W
 
-  * **[Wget GNU 1.21.3 (binary only)](../../docs/make/wget.md)<a id='wget'></a>**<br>
+  * **[Wget GNU 1.21.4 (binary only)](../../docs/make/wget.md)<a id='wget'></a>**<br>
     GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals, etc.
 
   * **[wireguard-tools 1.0.20210914](../../docs/make/wireguard.md)<a id='wireguard'></a>**<br>
@@ -1049,7 +1049,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Konfiguration](../../docs/make/xrelayd.md#konfiguration)
      - [Zertifikate auf der Box erzeugen](../../docs/make/xrelayd.md#zertifikate-auf-der-box-erzeugen)
 
-  * **[xsltproc 1.1.37 (binary only)](../../docs/make/xsltproc.md)<a id='xsltproc'></a>**<br>
+  * **[xsltproc 1.1.38 (binary only)](../../docs/make/xsltproc.md)<a id='xsltproc'></a>**<br>
     xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.
 
   * **[XZ Utils 5.4.3 (binary only)](../../docs/make/xz.md)<a id='xz'></a>**<br>
