@@ -46,6 +46,7 @@ Latest changes
 
  - Build system:
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.40.x
+   * Ccache 4.8.2
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0/13.1.0
 
  - Host tools:
@@ -61,6 +62,7 @@ Latest changes
    * Curl 8.1.2
    * Git 2.41.0
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1u/3.0.9
+   * OpenVPN 2.4.12/2.5.9/2.6.5
    * SQLite 3.42.0
    * UnRAR 6.1.7/6.2.8
    * vnstat 1.18
