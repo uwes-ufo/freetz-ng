@@ -50,6 +50,7 @@ Latest changes
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0/13.1.0
 
  - Host tools:
+   * kconfig 6.4
    * python 3.11.4
 
  - AVM sources:
@@ -64,13 +65,15 @@ Latest changes
 
  - Packages:
    * ACME.sh 3.0.6 (letsencrypt)
-   * BIND 9.11.37/9.16.41
+   * BIND 9.11.37/9.16.42
    * CA-bundle 2023-05-30
    * Curl 8.1.2
    * Git 2.41.0
+   * HAProxy 2.6.14
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1u/3.0.9
    * OpenVPN 2.4.12/2.5.9/2.6.5
    * SQLite 3.42.0
+   * strace 4.9/5.0/6.4
    * UnRAR 6.1.7/6.2.8
    * vnstat 1.18
    * Wget GNU 1.21.4
