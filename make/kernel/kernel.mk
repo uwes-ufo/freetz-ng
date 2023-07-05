@@ -157,16 +157,22 @@ kernel-configured-del:
 kernel-configured-rebuild: kernel-configured-del kernel-configured-gen
 .PHONY: kernel-configured-gen kernel-configured-del kernel-configured-rebuild
 
+ifeq ($(strip $(FREETZ_MODULES_KOON)),y)
+# Force kernel rebuild if the user changed the selected modules in freetz-config and they should be automatically be enable in kernel-config.
+$(shell grep '^FREETZ_MODULE_' $(TOPDIR)/.config | diff -du --label "old" --label "new" "$(KERNEL_DIR)/.configured" - >/dev/null 2>&1 || $(RM) "$(KERNEL_DIR)/.configured" >/dev/null 2>&1)
+endif
+
 $(KERNEL_DIR)/.configured: $(KERNEL_DIR)/.unpacked $(KERNEL_CONFIG_FILE)
 	$(call _ECHO,configuring,$(KERNEL_ECHO_TYPE))
 	cp $(KERNEL_CONFIG_FILE) $(KERNEL_SOURCE_DIR)/.config
+	[ "$(FREETZ_MODULES_KOON)" != "y" ] || $(TOOLS_DIR)/kernel_modules_koon "$(KERNEL_SOURCE_DIR)" $(SILENT)
 ifeq ($(strip $(FREETZ_KERNEL_VERSION_2_MAX)),y)
 	yes '' | make $(KERNEL_COMMON_MAKE_OPTIONS) oldconfig >/dev/null
 else
 	$(SUBMAKE) $(KERNEL_COMMON_MAKE_OPTIONS) olddefconfig
 endif
 	-cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE) && \
-	touch $@
+	grep '^FREETZ_MODULE_' $(TOPDIR)/.config > $@
 
 $(KERNEL_DIR)/.prepared: $(KERNEL_DIR)/.configured
 	@$(call _ECHO,preparing,$(KERNEL_ECHO_TYPE))
@@ -188,14 +194,17 @@ $(TARGET_TOOLCHAIN_KERNEL_VERSION_HEADER): $(TOPDIR)/.config $(KERNEL_HEADERS_DE
 	@$(call COPY_KERNEL_HEADERS,$(KERNEL_HEADERS_DEVEL_DIR),$(TARGET_TOOLCHAIN_STAGING_DIR)/usr)
 	@touch $@
 
+
 ifeq ($(strip $(FREETZ_AVM_KERNEL_CONFIG_AREA_KNOWN)),y)
 KERNEL_BUILD_DEPENDENCIES += $(AVM_KERNEL_CONFIG_DIR)/avm_kernel_config_area.S
+
+DL_SOURCE_ID=$(shell echo $(DL_SOURCE_LOCAL) | md5sum | sed 's/ .*//')
 
 $(AVM_KERNEL_CONFIG_DIR): | $(KERNEL_DIR)/.unpacked
 	@mkdir -p $@
 
 $(AVM_KERNEL_CONFIG_DIR)/avm_kernel_config_area.$(DL_SOURCE_ID).bin: $(DL_FW_DIR)/$(DL_SOURCE_LOCAL) | $(KERNEL_DIR)/.unpacked $(AVM_KERNEL_CONFIG_DIR) tools
-	@$(TOOLS_DIR)/avm_kernel_config.extract.sh -s $(FREETZ_AVM_KERNEL_CONFIG_AREA_SIZE) "$<" >"$@" || { $(RM) "$@"; exit 1; }
+	@$(TOOLS_DIR)/avm_kernel_config.extract.sh -s $(FREETZ_AVM_KERNEL_CONFIG_AREA_SIZE) "$<" > "$@" || { $(RM) "$@"; exit 1; }
 
 $(AVM_KERNEL_CONFIG_DIR)/avm_kernel_config_area.$(DL_SOURCE_ID).S: $(AVM_KERNEL_CONFIG_DIR)/avm_kernel_config_area.$(DL_SOURCE_ID).bin | $(KERNEL_DIR)/.unpacked $(AVM_KERNEL_CONFIG_DIR) tools
 	@$(TOOLS_DIR)/avm_kernel_config.bin2asm "$<" >"$@" || { $(RM) "$@"; exit 1; }
@@ -212,6 +221,7 @@ $(AVM_KERNEL_CONFIG_DIR)/avm_kernel_config_area.S: $(AVM_KERNEL_CONFIG_DIR)/avm_
 .PHONY: avm_kernel_config
 avm_kernel_config: $(AVM_KERNEL_CONFIG_DIR)/avm_kernel_config_area.S
 endif
+
 
 kernel-autofix: kernel-dirclean
 	$(MAKE) AUTO_FIX_PATCHES=y kernel-unpacked
