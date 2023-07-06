@@ -425,10 +425,10 @@ Currently supported devices and firmwares
   - 167.07.12 rev70707 {GER} [MESH18 NL2]
   - 167.07.15 rev75887 {INT} [MESH18 NL2]
   - 167.07.31 rev95687 {ALL} [PSQ19P2NL4]
-  - 167.07.50 rev103079 {ALL} [MOVE21]
+  - 167.07.56 rev106782 {ALL} [MOVE21NL1]
 * __Fritz!Box Fon WLAN 7583 VDSL (UNTESTED)__
   - 260.07.31 rev95688 {ALL} [PSQ19P2NL4]
-  - 260.07.50 rev103081 {ALL} [MOVE21]
+  - 260.07.56 rev106783 {ALL} [MOVE21NL1]
 
 * __Fritz!Box Fon WLAN 7590__
   - 154.06.86 rev45533 {GER}
@@ -502,7 +502,7 @@ Currently supported devices and firmwares
   - 172.07.51 rev105209 {ALL} [MOVE21NL1] (Inhaus)
 * __Fritz!Repeater 1200 AX__
   - 268.07.30 rev93528 {ALL} [PSQ19P2NL4]
-  - 268.07.51 rev105530 {ALL} [MOVE21NL1] (Labor)
+  - 268.07.56 rev106867 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 2400__
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
@@ -515,8 +515,7 @@ Currently supported devices and firmwares
   - 174.07.50 rev103744 {ALL} [MOVE21]
   - 174.07.51 rev105215 {ALL} [MOVE21NL1] (Inhaus)
 * __Fritz!Repeater 3000 AX (UNTESTED)__
-  - 270.07.41 rev100749 {ALL} [MOVE21]
-  - 270.07.51 rev105531 {ALL} [MOVE21NL1] (Labor)
+  - 270.07.56 rev106866 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 6000__
   - 253.07.30 rev98407 {ALL} [PSQ19P2NL4]
   - 253.07.51 rev105528 {ALL} [MOVE21NL1] (Labor)
