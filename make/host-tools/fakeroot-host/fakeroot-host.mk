@@ -72,6 +72,11 @@ $($(PKG)_TARGET_BIARCH_LIB): $($(PKG)_BIARCH_DIR)/.configured
 	$(TOOLS_SUBMAKE) -C $(FAKEROOT_HOST_BIARCH_DIR) libdir="$(FAKEROOT_HOST_BIARCH_LD_PRELOAD_PATH)" install-libLTLIBRARIES
 	touch $@
 
+$(pkg)-fixhardcoded:
+	@$(SED) -i "s!/home/freetz/freetz-ng/tools/build!$(realpath tools/build/)!g" \
+		$(FAKEROOT_HOST_MAINARCH_LD_PRELOAD_PATH)/libfakeroot.la \
+		$(FAKEROOT_HOST_BIARCH_LD_PRELOAD_PATH)/libfakeroot.la
+
 $(pkg)-precompiled: $($(PKG)_TARGET_SCRIPT) $(if $(BIARCH_BUILD_SYSTEM),$($(PKG)_TARGET_BIARCH_LIB))
 
 
@@ -83,6 +88,9 @@ $(pkg)-dirclean:
 	$(RM) -r $(FAKEROOT_HOST_DIR)
 
 $(pkg)-distclean: $(pkg)-dirclean
-	$(RM) -r $(FAKEROOT_HOST_TARGET_SCRIPT) $(FAKEROOT_HOST_DESTDIR)/bin/faked $(FAKEROOT_HOST_DESTDIR)/lib*/libfakeroot*
+	$(RM) -r \
+		$(FAKEROOT_HOST_TARGET_SCRIPT) \
+		$(FAKEROOT_HOST_DESTDIR)/bin/faked \
+		$(FAKEROOT_HOST_DESTDIR)/lib*/libfakeroot*
 
 $(TOOLS_FINISH)
