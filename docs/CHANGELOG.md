@@ -65,7 +65,9 @@ Latest changes
    * 6690 7.29 - 4.9.250
    * 6690 7.56 - 4.9.279
    * 7530 7.56 - 4.4.271
+   * 7539 7.56 - 4.19.183
    * 7590 7.56 - 4.9.325
+   * GATE 7.54 - 4.4.271
 
  - Packages:
    * ACME.sh 3.0.6 (letsencrypt)
@@ -81,6 +83,7 @@ Latest changes
    * OpenVPN 2.4.12/2.5.9/2.6.5
    * SQLite 3.42.0
    * strace 4.9/5.0/6.4
+   * Transmission 3.00/4.0.3
    * UnRAR 6.1.7/6.2.8
    * vnstat 1.18
    * Wget GNU 1.21.4
