@@ -52,8 +52,11 @@ Latest changes
  - Host tools:
    * autoconf 2.71
    * automake 1.16.5
+   * fakeroot 1.32
    * kconfig 6.4
+   * libtool 2.4.7
    * m4 1.4.19
+   * make 4.4.1
    * precompiled host-tools 2023-07-08
    * python 3.11.4
 
@@ -77,6 +80,7 @@ Latest changes
    * Curl 8.1.2
    * Git 2.41.0
    * HAProxy 2.6.14
+   * iPerf3 3.3/3.14
    * minidlna 1.3.3
    * NZBGet 21.1/21.4-rc1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1u/3.0.9

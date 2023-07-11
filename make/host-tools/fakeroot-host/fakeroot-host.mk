@@ -1,6 +1,6 @@
-$(call TOOLS_INIT, 1.31)
+$(call TOOLS_INIT, 1.32)
 $(PKG)_SOURCE:=fakeroot_$($(PKG)_VERSION).orig.tar.gz
-$(PKG)_HASH:=63886d41e11c56c7170b9d9331cca086421b350d257338ef14daad98f77e202f
+$(PKG)_HASH:=a54f460202c65a4b5fbb8cd5540451972ebb89ca64d5da3541f7ba57cf3dacd9
 $(PKG)_SITE:=https://ftp.debian.org/debian/pool/main/f/fakeroot
 ### WEBSITE:=https://wiki.debian.org/FakeRoot
 ### MANPAGE:=https://man.archlinux.org/man/fakeroot.1.en
@@ -11,7 +11,7 @@ $(PKG)_SITE:=https://ftp.debian.org/debian/pool/main/f/fakeroot
 $(PKG)_MAINARCH_DIR:=$($(PKG)_DIR)/build/arch
 $(PKG)_BIARCH_DIR:=$($(PKG)_DIR)/build/biarch
 
-$(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_DIR)/build
+$(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
 $(PKG)_MAINARCH_LD_PRELOAD_PATH:=$($(PKG)_DESTDIR)/lib
 $(PKG)_BIARCH_LD_PRELOAD_PATH:=$($(PKG)_DESTDIR)/lib32
 $(PKG)_TARGET_SCRIPT:=$($(PKG)_DESTDIR)/bin/fakeroot
@@ -73,7 +73,7 @@ $($(PKG)_TARGET_BIARCH_LIB): $($(PKG)_BIARCH_DIR)/.configured
 	touch $@
 
 $(pkg)-fixhardcoded:
-	@$(SED) -i "s!/home/freetz/freetz-ng/tools/build!$(realpath tools/build/)!g" \
+	-@$(SED) -i "s!$(TOOLS_HARDCODED_DIR)!$(FAKEROOT_HOST_DESTDIR)!g" \
 		$(FAKEROOT_HOST_MAINARCH_LD_PRELOAD_PATH)/libfakeroot.la \
 		$(FAKEROOT_HOST_BIARCH_LD_PRELOAD_PATH)/libfakeroot.la
 
