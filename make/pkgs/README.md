@@ -678,7 +678,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pppd 2.4.7](../../docs/make/pppd.md)<a id='pppd'></a>**<br>
     An implementation of the Point-to-point protocol. http://www.samba.org/ppp/
 
-  * **[pptp 1.7.2](../../docs/make/pptp.md)<a id='pptp'></a>**<br>
+  * **[pptp 1.10.0](../../docs/make/pptp.md)<a id='pptp'></a>**<br>
     Linux and FreeBSD client for the proprietary Microsoft Point-to-Point tunneling protocol, PPTP, sponsored by HP.
      - [PPTP Konfiguration](../../docs/make/pptp.md#pptp-konfiguration)
      - [IP Routing](../../docs/make/pptp.md#ip-routing)
@@ -708,6 +708,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ProxyChains-NG 4.14](../../docs/make/proxychains-ng.md)<a id='proxychains-ng'></a>**<br>
     A preloader which hooks calls to sockets in dynamically linked programs and redirects it through one or more socks/http proxies, tor is also supported. Usage: proxychains4 telnet mail.example.com 25
+
+  * **[psl 0.21.2 (binary only)](../../docs/make/psl.md)<a id='psl'></a>**<br>
+    Public Suffix List library functions This includes psl binary and public_suffix_list.dat
 
   * **[pyLoad 0.4.20/9b358adf](../../docs/make/pyload.md)<a id='pyload'></a>**<br>
     pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links.

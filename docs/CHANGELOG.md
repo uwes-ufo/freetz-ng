@@ -81,6 +81,8 @@ Latest changes
    * NZBGet 21.1/21.4-rc1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1u/3.0.9
    * OpenVPN 2.4.12/2.5.9/2.6.5
+   * pptp 1.10.0
+   * psl 0.21.2
    * pyLoad 0.4.20/9b358adf
    * SQLite 3.42.0
    * strace 4.9/5.0/6.4
@@ -92,6 +94,7 @@ Latest changes
    * xsltproc 1.1.38
 
  - Libraries:
+   * libdeflate 1.18
    * libnettle 3.9.1
    * libssh2 1.11.0
    * libuv 1.44.2/1.46.0
