@@ -57,6 +57,7 @@ Latest changes
    * libtool 2.4.7
    * m4 1.4.19
    * make 4.4.1
+   * pkgconf 1.9.5
    * precompiled host-tools 2023-07-12
    * python 3.11.4
 
@@ -90,6 +91,7 @@ Latest changes
    * pyLoad 0.4.20/9b358adf
    * SQLite 3.42.0
    * strace 4.9/5.0/6.4
+   * Sudo 1.9.14p1
    * Transmission 3.00/4.0.3
    * UnRAR 6.1.7/6.2.8
    * vnstat 1.18
@@ -99,6 +101,7 @@ Latest changes
 
  - Libraries:
    * libdeflate 1.18
+   * glib2 2.32.4/2.76.4
    * libnettle 3.9.1
    * libssh2 1.11.0
    * libuv 1.44.2/1.46.0
