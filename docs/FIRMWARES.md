@@ -137,12 +137,10 @@ Currently supported devices and firmwares
 
 * __Fritz!Box 5530 Fiber (DEVELOPER, No fiber!)__
   - 257.07.30 rev99334 {ALL} [PSQ19P2NL4]
-  - 257.07.50 rev104375 {ALL} [MOVE21]
-  - 257.07.51 rev105311 {ALL} [MOVE21NL1] (Labor)
+  - 257.07.56 rev106847 {ALL} [MOVE21NL1]
 * __Fritz!Box 5590 Fiber__
   - 272.07.30 rev101793 {ALL} [PSQ19P2NL4]
-  - 272.07.50 rev104740 {ALL} [MOVE21]
-  - 272.07.51 rev105310 {ALL} [MOVE21NL1] (Labor)
+  - 272.07.56 rev106850 {ALL} [MOVE21NL1]
 
 ### Fritz!Box Cable (64xx/65xx/66xx)
 
@@ -370,7 +368,7 @@ Currently supported devices and firmwares
   - 113.07.01 rev61484 {INT}
   - 113.07.12 rev70401 {INT} [MESH18 NL2]
   - 113.07.29 rev92201 {ALL} [PSQ19P2NL4]
-  - 113.07.51 rev105646 {ALL} [MOVE21NL1] (Labor)
+  - 113.07.51 rev107029 {ALL} [MOVE21NL1] (Labor)
 
 ### Fritz!Box Fon WLAN (75xx)
 
@@ -498,27 +496,24 @@ Currently supported devices and firmwares
 * __Fritz!Repeater 1200__
   - 172.07.14 rev73941 {ALL} [MESH18 NL4]
   - 172.07.29 rev93267 {ALL} [PSQ19P2NL4]
-  - 172.07.50 rev103742 {ALL} [MOVE21]
-  - 172.07.51 rev105209 {ALL} [MOVE21NL1] (Inhaus)
+  - 172.07.56 rev106936 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 1200 AX__
   - 268.07.30 rev93528 {ALL} [PSQ19P2NL4]
   - 268.07.56 rev106867 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 2400__
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
-  - 169.07.50 rev102232 {ALL} [MOVE21]
-  - 169.07.51 rev105213 {ALL} [MOVE21NL1] (Inhaus)
+  - 169.07.56 rev106938 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 3000__
   - 174.07.04 rev66458 {ALL}
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
   - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
-  - 174.07.50 rev103744 {ALL} [MOVE21]
-  - 174.07.51 rev105215 {ALL} [MOVE21NL1] (Inhaus)
+  - 174.07.56 rev106937 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 3000 AX (UNTESTED)__
   - 270.07.56 rev106866 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 6000__
   - 253.07.30 rev98407 {ALL} [PSQ19P2NL4]
-  - 253.07.51 rev105528 {ALL} [MOVE21NL1] (Labor)
+  - 253.07.56 rev106865 {ALL} [MOVE21NL1]
 
 ### Fritz!Smart
 

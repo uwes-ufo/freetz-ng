@@ -388,7 +388,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Security](../../docs/make/iodine.md#security)
      - [Forwarding](../../docs/make/iodine.md#forwarding)
 
-  * **[iPerf3 3.3/3.13 (binary only)](../../docs/make/iperf.md)<a id='iperf'></a>**<br>
+  * **[iPerf3 3.3/3.14 (binary only)](../../docs/make/iperf.md)<a id='iperf'></a>**<br>
     iPerf3 is a tool for active measurements of the maximum achievable bandwidth on IP networks. It supports tuning of various parameters related to timing, buffers and protocols (TCP, UDP, SCTP with IPv4 and IPv6). For each test it reports the bandwidth, loss, and other parameters. S. https://github.com/esnet/iperf for more details.
 
   * **<u>IPsec-tools 0.7.2</u><a id='ipsec-tools'></a>**<br>
@@ -678,7 +678,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pppd 2.4.7](../../docs/make/pppd.md)<a id='pppd'></a>**<br>
     An implementation of the Point-to-point protocol. http://www.samba.org/ppp/
 
-  * **[pptp 1.7.2](../../docs/make/pptp.md)<a id='pptp'></a>**<br>
+  * **[pptp 1.10.0](../../docs/make/pptp.md)<a id='pptp'></a>**<br>
     Linux and FreeBSD client for the proprietary Microsoft Point-to-Point tunneling protocol, PPTP, sponsored by HP.
      - [PPTP Konfiguration](../../docs/make/pptp.md#pptp-konfiguration)
      - [IP Routing](../../docs/make/pptp.md#ip-routing)
@@ -709,7 +709,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ProxyChains-NG 4.14](../../docs/make/proxychains-ng.md)<a id='proxychains-ng'></a>**<br>
     A preloader which hooks calls to sockets in dynamically linked programs and redirects it through one or more socks/http proxies, tor is also supported. Usage: proxychains4 telnet mail.example.com 25
 
-  * **[pyLoad 0.4.20](../../docs/make/pyload.md)<a id='pyload'></a>**<br>
+  * **[psl 0.21.2 (binary only)](../../docs/make/psl.md)<a id='psl'></a>**<br>
+    Public Suffix List library functions This includes psl binary and public_suffix_list.dat
+
+  * **[pyLoad 0.4.20/9b358adf](../../docs/make/pyload.md)<a id='pyload'></a>**<br>
     pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links.
 
   * **[Python 2.7.18](../../docs/make/python.md)<a id='python'></a>**<br>
@@ -874,7 +877,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Streamripper records mp3 and ogg streams. For shoutcast style streams it finds the "meta data" or track separation data, and uses that as a marker for where the track should be separated.
      - [Verwendete Bibliotheken](../../docs/make/streamripper.md#verwendete-bibliotheken)
 
-  * **[Stunnel 5.69](../../docs/make/stunnel.md)<a id='stunnel'></a>**<br>
+  * **[Stunnel 5.70](../../docs/make/stunnel.md)<a id='stunnel'></a>**<br>
     Stunnel universal SSL proxy
      - [Konfiguration](../../docs/make/stunnel.md#konfiguration)
 
@@ -884,8 +887,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [WebIF](../../docs/make/subversion.md#webif)
      - [Konfiguration](../../docs/make/subversion.md#konfiguration)
 
-  * **[Sudo 1.9.13p3 (binary only)](../../docs/make/sudo.md)<a id='sudo'></a>**<br>
-    Sudo (su "do") allows a system administrator to delegate authority to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while providing an audit trail of the commands and their arguments. WWW: http://www.courtesan.com/sudo/
+  * **[Sudo 1.9.14p1 (binary only)](../../docs/make/sudo.md)<a id='sudo'></a>**<br>
+    Sudo (su "do") allows a system administrator to delegate authority to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while providing an audit trail of the commands and their arguments.
 
   * **[Sundtek DVB driver 130210.134617/170310.204343/210803.071224](../../docs/make/sundtek.md)<a id='sundtek'></a>**<br>
     Sundtek closed-source linux driver daemon & client. To use this driver you have to run: export LD_PRELOAD=/usr/lib/libsundtekmediaclient.so

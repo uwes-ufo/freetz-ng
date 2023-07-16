@@ -52,22 +52,29 @@ Latest changes
  - Host tools:
    * autoconf 2.71
    * automake 1.16.5
+   * fakeroot 1.32
    * kconfig 6.4
+   * libtool 2.4.7
    * m4 1.4.19
-   * precompiled host-tools 2023-07-08
+   * make 4.4.1
+   * pkgconf 1.9.5
+   * precompiled host-tools 2023-07-12
    * python 3.11.4
 
  - AVM sources:
-   * 1200 7.50 - 4.4.271
-   * 2400 7.27 - 4.4.60
-   * 2400 7.50 - 4.4.271
-   * 6591 7.56 - 4.9.279 (delta 6591 7.50)
-   * 6690 7.29 - 4.9.250
-   * 6690 7.56 - 4.9.279
-   * 7530 7.56 - 4.4.271
-   * 7539 7.56 - 4.19.183
-   * 7590 7.56 - 4.9.325
-   * GATE 7.54 - 4.4.271
+   * 1200 ac 7.50 - 4.4.271
+   * 1200 ax 7.56 - 4.4.271
+   * 2400    7.27 - 4.4.60
+   * 2400    7.50 - 4.4.271
+   * 4060    7.30 - 4.4.60
+   * 6000    7.56 - 4.4.271
+   * 6591    7.56 - 4.9.279 (delta 6591 7.50)
+   * 6690    7.29 - 4.9.250
+   * 6690    7.56 - 4.9.279
+   * 7530    7.56 - 4.4.271
+   * 7530 ax 7.56 - 4.19.183
+   * 7590    7.56 - 4.9.325
+   * Gateway 7.54 - 4.4.271
 
  - Packages:
    * ACME.sh 3.0.6 (letsencrypt)
@@ -77,12 +84,18 @@ Latest changes
    * Curl 8.1.2
    * Git 2.41.0
    * HAProxy 2.6.14
+   * iPerf3 3.3/3.14
    * minidlna 1.3.3
    * NZBGet 21.1/21.4-rc1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1u/3.0.9
    * OpenVPN 2.4.12/2.5.9/2.6.5
+   * pptp 1.10.0
+   * psl 0.21.2
+   * pyLoad 0.4.20/9b358adf
    * SQLite 3.42.0
    * strace 4.9/5.0/6.4
+   * Stunnel 5.70
+   * Sudo 1.9.14p1
    * Transmission 3.00/4.0.3
    * UnRAR 6.1.7/6.2.8
    * vnstat 1.18
@@ -91,7 +104,11 @@ Latest changes
    * xsltproc 1.1.38
 
  - Libraries:
+   * FreeType 2.13.1
+   * libdeflate 1.18
+   * glib2 2.32.4/2.76.4
    * libnettle 3.9.1
+   * libpng 1.6.40
    * libssh2 1.11.0
    * libuv 1.44.2/1.46.0
 
