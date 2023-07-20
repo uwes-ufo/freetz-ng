@@ -1,12 +1,14 @@
-$(call TOOLS_INIT, 3.26.4)
+$(call TOOLS_INIT, 3.27.0)
 $(PKG)_MAJOR_VERSION:=$(call GET_MAJOR_VERSION,$($(PKG)_VERSION))
 $(PKG)_SOURCE:=$(pkg_short)-$($(PKG)_VERSION).tar.gz
-$(PKG)_HASH:=313b6880c291bd4fe31c0aa51d6e62659282a521e695f30d5cc0d25abbd5c208
+$(PKG)_HASH:=aaeddb6b28b993d0a6e32c88123d728a17561336ab90e0bf45032383564d3cb8
 $(PKG)_SITE:=https://github.com/Kitware/CMake/releases/download/v$($(PKG)_VERSION)
 ### WEBSITE:=https://cmake.org/
 ### MANPAGE:=https://cmake.org/cmake/help/latest/
 ### CHANGES:=https://github.com/Kitware/CMake/releases
 ### CVSREPO:=https://gitlab.kitware.com/cmake/cmake
+
+$(PKG)_DEPENDS_ON+=ninja-host
 
 $(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_DIR)/build
 
@@ -15,7 +17,6 @@ $(PKG)_BINARIES_TARGET_DIR := $($(PKG)_BINARIES:%=$($(PKG)_DESTDIR)/bin/%)
 $(PKG)_SHARE_TARGET_DIR    := $($(PKG)_DESTDIR)/share/$(pkg_short)-$($(PKG)_MAJOR_VERSION)
 $(PKG)_DOC_TARGET_DIR      := $($(PKG)_DESTDIR)/doc/$(pkg_short)-$($(PKG)_MAJOR_VERSION)
 
-$(PKG)_DEPENDS_ON+=ninja-host
 
 $(PKG)_CONFIGURE_OPTIONS += --prefix=$(CMAKE_HOST_DESTDIR)
 $(PKG)_CONFIGURE_OPTIONS += --generator=Ninja

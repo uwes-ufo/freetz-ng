@@ -65,10 +65,12 @@ ifeq ($(strip $(FREETZ_KERNEL_AVMDIFF_AVAILABLE)),y)
 	  [ "$$a" == "touch" ] && touch       "$(KERNEL_SOURCE_DIR)/$${b}"; \
 	done || true
 endif
+ifneq ($(strip $(FREETZ_KERNEL_AVM_CHAOTIC_PACK)),y)
 	@echo "#kernel version specific patches: $(KERNEL_PATCHES_DIR)" $(SILENT)
 	@$(call APPLY_PATCHES,$(KERNEL_PATCHES_DIR),$(KERNEL_DIR))
 	@echo "#firmware version specific patches: $(KERNEL_PATCHES_DIR)/$(AVM_SOURCE_ID)" $(SILENT)
 	@$(call APPLY_PATCHES,$(KERNEL_PATCHES_DIR)/$(AVM_SOURCE_ID),$(KERNEL_DIR))
+endif
 	@echo "#additional generic fixes" $(SILENT)
 	@for i in $(KERNEL_LINKING_FILES); do \
 		f="$${i%%,*}"; symlink_location="$${i##*,}"; \
@@ -171,8 +173,7 @@ ifeq ($(strip $(FREETZ_KERNEL_VERSION_2_MAX)),y)
 else
 	$(SUBMAKE) $(KERNEL_COMMON_MAKE_OPTIONS) olddefconfig
 endif
-	-cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE) && \
-	grep '^FREETZ_MODULE_' $(TOPDIR)/.config > $@
+	@cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE) && grep '^FREETZ_MODULE_' $(TOPDIR)/.config > $@ || true
 
 $(KERNEL_DIR)/.prepared: $(KERNEL_DIR)/.configured
 	@$(call _ECHO,preparing,$(KERNEL_ECHO_TYPE))

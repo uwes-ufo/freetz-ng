@@ -1,6 +1,6 @@
-$(call TOOLS_INIT, 1.32)
+$(call TOOLS_INIT, 1.32.1)
 $(PKG)_SOURCE:=fakeroot_$($(PKG)_VERSION).orig.tar.gz
-$(PKG)_HASH:=a54f460202c65a4b5fbb8cd5540451972ebb89ca64d5da3541f7ba57cf3dacd9
+$(PKG)_HASH:=c072b0f65bafc4cc5b6112f7c61185f5170ce4cb0c410d1681c1af4a183e94e6
 $(PKG)_SITE:=https://ftp.debian.org/debian/pool/main/f/fakeroot
 ### WEBSITE:=https://wiki.debian.org/FakeRoot
 ### MANPAGE:=https://man.archlinux.org/man/fakeroot.1.en
@@ -8,10 +8,11 @@ $(PKG)_SITE:=https://ftp.debian.org/debian/pool/main/f/fakeroot
 ### CHANGES:=https://launchpad.net/debian/+source/fakeroot/+changelog
 ### CVSREPO:=https://github.com/openwrt/openwrt/tree/master/tools/fakeroot/patches
 
+$(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
+
 $(PKG)_MAINARCH_DIR:=$($(PKG)_DIR)/build/arch
 $(PKG)_BIARCH_DIR:=$($(PKG)_DIR)/build/biarch
 
-$(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
 $(PKG)_MAINARCH_LD_PRELOAD_PATH:=$($(PKG)_DESTDIR)/lib
 $(PKG)_BIARCH_LD_PRELOAD_PATH:=$($(PKG)_DESTDIR)/lib32
 $(PKG)_TARGET_SCRIPT:=$($(PKG)_DESTDIR)/bin/fakeroot

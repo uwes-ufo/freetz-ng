@@ -52,14 +52,16 @@ Latest changes
  - Host tools:
    * autoconf 2.71
    * automake 1.16.5
-   * fakeroot 1.32
+   * fakeroot 1.32.1
    * kconfig 6.4
    * libtool 2.4.7
    * m4 1.4.19
+   * meson 1.2.0
    * make 4.4.1
    * pkgconf 1.9.5
-   * precompiled host-tools 2023-07-12
+   * precompiled host-tools 2023-07-20
    * python 3.11.4
+   * u-boot 2023.07.02
 
  - AVM sources:
    * 1200 ac 7.50 - 4.4.271
@@ -71,8 +73,8 @@ Latest changes
    * 6591    7.56 - 4.9.279 (delta 6591 7.50)
    * 6690    7.29 - 4.9.250
    * 6690    7.56 - 4.9.279
-   * 7530    7.56 - 4.4.271
-   * 7530 ax 7.56 - 4.19.183
+   * 7530 ac 7.56 - 4.4.271
+   * 7530 ax 7.56 - 4.19.183 (corrupt)
    * 7590    7.56 - 4.9.325
    * Gateway 7.54 - 4.4.271
 
@@ -81,7 +83,7 @@ Latest changes
    * Bftpd 6.1
    * BIND 9.11.37/9.16.42
    * CA-bundle 2023-05-30
-   * Curl 8.1.2
+   * Curl 8.2.0
    * Git 2.41.0
    * HAProxy 2.6.14
    * iPerf3 3.3/3.14
@@ -95,7 +97,7 @@ Latest changes
    * SQLite 3.42.0
    * strace 4.9/5.0/6.4
    * Stunnel 5.70
-   * Sudo 1.9.14p1
+   * Sudo 1.9.14p2
    * Transmission 3.00/4.0.3
    * UnRAR 6.1.7/6.2.8
    * vnstat 1.18
@@ -123,7 +125,7 @@ Latest changes
 
  - Host tools:
    * busybox 1.36.1
-   * cmake 3.26.4
+   * cmake 3.27.0
    * kconfig 6.3
    * meson 1.1.1
    * precompiled host-tools 2023-05-28
