@@ -102,10 +102,10 @@ Currently supported devices and firmwares
   - 155.07.01 rev61489 {ALL}
   - 155.07.14 rev73181 {ALL} [MESH18 NL4]
   - 155.07.29 rev92647 {ALL} [PSQ19P2NL4]
-  - 155.07.51 rev104930 {ALL} [MOVE21NL1] (Labor)
+  - 155.07.56 rev107025 {ALL} [MOVE21NL1]
 * __Fritz!Box 4060__
   - 261.07.30 rev95826 {ALL} [PSQ19P2NL4]
-  - 261.07.51 rev105129 {ALL} [MOVE21NL1] (Labor)
+  - 261.07.56 rev107026 {ALL} [MOVE21NL1]
 
 ### Fritz!Box Fon (50xx/51xx)
 
@@ -152,14 +152,14 @@ Currently supported devices and firmwares
   - 141.07.02 rev65390 {GER}
   - 141.07.12 rev71697 {GER} [MESH18 NL2]
   - 141.07.29 rev92215 {GER} [PSQ19P2NL4]
-  - 141.07.51 rev105260 {GER} [MOVE21NL1] (Labor)
+  - 141.07.56 rev107068 {GER} [MOVE21NL1]
 
 * __Fritz!Box 6590 Cable__
   - 148.06.87 rev48411 {GER}
   - 148.07.02 rev65392 {GER}
   - 148.07.12 rev72225 {GER} [MESH18 NL2]
   - 148.07.29 rev92219 {GER} [PSQ19P2NL4]
-  - 148.07.51 rev105261 {GER} [MOVE21NL1] (Labor)
+  - 148.07.56 rev107070 {GER} [MOVE21NL1]
 * __Fritz!Box 6591 Cable__
   - 161.07.13 rev75441 {GER} [MESH18 NL3]
   - 161.07.29 rev92035 {GER} [PSQ19P2NL4]
