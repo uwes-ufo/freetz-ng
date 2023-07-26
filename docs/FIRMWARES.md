@@ -378,8 +378,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box Fon WLAN 7510__
   - 271.07.30 rev94120 {ALL} [PSQ19P2NL4]
-  - 271.07.50 rev102812 {ALL} [MOVE21]
-  - 271.07.51 rev105264 {ALL} [MOVE21NL1] (Labor)
+  - 271.07.56 rev107087 {ALL} [MOVE21NL1]
 * __Fritz!Box Fon WLAN 7520__
   - 175.07.14 rev73182 {GER} [MESH18 NL4]
   - 175.07.29 rev92061 {ALL} [PSQ19P2NL4]
@@ -465,10 +464,10 @@ Currently supported devices and firmwares
   - 157.07.01 rev63181 {ALL}
   - 157.07.12 rev70670 {ALL} [MESH18 NL2]
   - 157.07.29 rev93269 {ALL} [PSQ19P2NL4]
-  - 157.07.50 rev104995 {ALL} [MOVE21]
+  - 157.07.56 rev107038 {ALL} [MOVE21NL1]
 * __Fritz!Powerline 1260 v2 (UNTESTED)__
   - 249.07.29 rev93271 {ALL} [PSQ19P2NL4]
-  - 249.07.50 rev104996 {ALL} [MOVE21]
+  - 249.07.56 rev107039 {ALL} [MOVE21NL1]
 
 ### Fritz!Repeater
 
