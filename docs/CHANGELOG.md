@@ -52,6 +52,7 @@ Latest changes
  - Host tools:
    * autoconf 2.71
    * automake 1.16.5
+   * cmake 3.27.1
    * fakeroot 1.32.1
    * kconfig 6.4
    * libtool 2.4.7
@@ -74,6 +75,7 @@ Latest changes
    * 6591    7.56 - 4.9.279 (delta 6591 7.50)
    * 6690    7.29 - 4.9.250
    * 6690    7.56 - 4.9.279
+   * 7510    7.56 - 4.4.271
    * 7530 ac 7.56 - 4.4.271
    * 7530 ax 7.56 - 4.19.183 (corrupt)
    * 7590    7.56 - 4.9.325
@@ -84,7 +86,7 @@ Latest changes
    * Bftpd 6.1
    * BIND 9.11.37/9.16.42
    * CA-bundle 2023-05-30
-   * Curl 8.2.0
+   * Curl 8.2.1
    * Git 2.41.0
    * HAProxy 2.6.14
    * iPerf3 3.3/3.14
