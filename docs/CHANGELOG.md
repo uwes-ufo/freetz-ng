@@ -92,6 +92,7 @@ Latest changes
    * iPerf3 3.3/3.14
    * minidlna 1.3.3
    * NZBGet 21.1/21.4-rc1
+   * OpenSSH 9.3p2
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1u/3.0.9
    * OpenVPN 2.4.12/2.5.9/2.6.5
    * pptp 1.10.0
@@ -101,6 +102,7 @@ Latest changes
    * strace 4.9/5.0/6.4
    * Stunnel 5.70
    * Sudo 1.9.14p3
+   * Tor 0.4.7.14
    * Transmission 3.00/4.0.3
    * UnRAR 6.1.7/6.2.8
    * vnstat 1.18
