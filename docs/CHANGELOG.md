@@ -120,11 +120,12 @@ Latest changes
    * FreeType 2.13.1
    * libdeflate 1.18
    * glib2 2.32.4/2.76.4
-   * harfbuzz 8.1.0
+   * harfbuzz 8.1.1
    * libnettle 3.9.1
    * libpng 1.6.40
    * libssh2 1.11.0
    * libuv 1.44.2/1.46.0
+   * mbedTLS 2.7.19/2.28.4
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
