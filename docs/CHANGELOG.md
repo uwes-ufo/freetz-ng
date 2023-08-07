@@ -48,7 +48,7 @@ Latest changes
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.41.x
    * Ccache 4.8.2
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0/13.2.0
-   * uClibc-ng 1.0.44
+   * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.44
 
  - Host tools:
    * autoconf 2.71
@@ -63,7 +63,7 @@ Latest changes
    * openssl 3.0.10
    * pkgconf 1.9.5
    * precompiled host-tools 2023-08-02
-   * precompiled toolchains r22182
+   * precompiled toolchains r22199
    * python 3.11.4
    * u-boot 2023.07.02
    * xz 5.4.4
