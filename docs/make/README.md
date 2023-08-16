@@ -231,7 +231,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.14](haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.15](haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](haserl.md)<a id='haserl'></a>**<br>
@@ -462,7 +462,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1v/3.0.10 (binary only)](openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
-  * **[OpenVPN 2.4.12/2.5.9/2.6.5](openvpn.md)<a id='openvpn'></a>**<br>
+  * **[OpenVPN 2.4.12/2.5.9/2.6.6](openvpn.md)<a id='openvpn'></a>**<br>
     VPN Server
 
   * **[owfs 2.7p32 (binary only)](owfs.md)<a id='owfs'></a>**<br>
@@ -705,7 +705,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Transmission 3.00/4.0.3 (binary only)](transmission.md)<a id='transmission'></a>**<br>
     If needed, remember to change the base directory as well as the installation directory on the webif.
 
-  * **<u>tree 1.8.0 (binary only)</u><a id='tree'></a>**<br>
+  * **[Tree 1.8.0/2.1.1 (binary only)](tree.md)<a id='tree'></a>**<br>
     Tree is a recursive directory listing program that produces a depth indented listing of files, which is colorized ala dircolors if the LS_COLORS environment variable is set and output is to tty.
 
   * **[trickle 1.07 (binary only)](trickle.md)<a id='trickle'></a>**<br>

@@ -320,7 +320,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.14](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.15](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](../../docs/make/haserl.md)<a id='haserl'></a>**<br>
@@ -624,7 +624,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1v/3.0.10 (binary only)](../../docs/make/openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
-  * **[OpenVPN 2.4.12/2.5.9/2.6.5](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
+  * **[OpenVPN 2.4.12/2.5.9/2.6.6](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
     VPN Server
      - [Häufige Fragen / Howto](../../docs/make/openvpn.md#häufige-fragen--howto)
      - [Konfigurationsanleitung](../../docs/make/openvpn.md#konfigurationsanleitung)
@@ -961,7 +961,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Limit memory usage](../../docs/make/transmission.md#limit-memory-usage)
      - [Watchdog](../../docs/make/transmission.md#watchdog)
 
-  * **<u>tree 1.8.0 (binary only)</u><a id='tree'></a>**<br>
+  * **[Tree 1.8.0/2.1.1 (binary only)](../../docs/make/tree.md)<a id='tree'></a>**<br>
     Tree is a recursive directory listing program that produces a depth indented listing of files, which is colorized ala dircolors if the LS_COLORS environment variable is set and output is to tty.
 
   * **[trickle 1.07 (binary only)](../../docs/make/trickle.md)<a id='trickle'></a>**<br>

@@ -53,12 +53,12 @@ Latest changes
  - Host tools:
    * autoconf 2.71
    * automake 1.16.5
-   * cmake 3.27.1
+   * cmake 3.27.2
    * fakeroot 1.32.1
    * kconfig 6.4
    * libtool 2.4.7
    * m4 1.4.19
-   * meson 1.2.0
+   * meson 1.2.1
    * make 4.4.1
    * openssl 3.0.10
    * pkgconf 1.9.5
@@ -81,6 +81,7 @@ Latest changes
    * 6690    7.29 - 4.9.250
    * 6690    7.56 - 4.9.279
    * 6820    7.56 - 4.4.271
+   * 7490    7.56 - 3.10.107
    * 7510    7.56 - 4.4.271
    * 7530 ac 7.56 - 4.4.271
    * 7530 ax 7.56 - 4.19.183 (corrupt)
@@ -94,13 +95,13 @@ Latest changes
    * CA-bundle 2023-05-30
    * Curl 8.2.1
    * Git 2.41.0
-   * HAProxy 2.6.14
+   * HAProxy 2.6.15
    * iPerf3 3.3/3.14
    * minidlna 1.3.3
    * NZBGet 21.1/21.4-rc1
    * OpenSSH 9.3p2
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1v/3.0.10
-   * OpenVPN 2.4.12/2.5.9/2.6.5
+   * OpenVPN 2.4.12/2.5.9/2.6.6
    * pptp 1.10.0
    * psl 0.21.2
    * pyLoad 0.4.20/9b358adf
@@ -111,6 +112,7 @@ Latest changes
    * Sudo 1.9.14p3
    * Tor 0.4.7.14
    * Transmission 3.00/4.0.3
+   * Tree 1.8.0/2.1.1
    * UnRAR 6.1.7/6.2.8
    * vnstat 1.18
    * Wget GNU 1.21.4
