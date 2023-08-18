@@ -53,7 +53,7 @@ Latest changes
  - Host tools:
    * autoconf 2.71
    * automake 1.16.5
-   * cmake 3.27.2
+   * cmake 3.27.3
    * fakeroot 1.32.1
    * kconfig 6.4
    * libtool 2.4.7
@@ -62,7 +62,7 @@ Latest changes
    * make 4.4.1
    * openssl 3.0.10
    * pkgconf 2.0.1
-   * precompiled host-tools 2023-08-02
+   * precompiled host-tools 2023-08-18
    * precompiled toolchains r22199
    * python 3.11.4
    * u-boot 2023.07.02
@@ -77,6 +77,7 @@ Latest changes
    * 4060    7.30 - 4.4.60
    * 4060    7.56 - 4.4.271
    * 6000    7.56 - 4.4.271
+   * 6590    7.56 - 2.6.39.4
    * 6591    7.56 - 4.9.279 (delta 6591 7.50)
    * 6690    7.29 - 4.9.250
    * 6690    7.56 - 4.9.279
@@ -131,6 +132,7 @@ Latest changes
    * libssh2 1.11.0
    * libuv 1.44.2/1.46.0
    * mbedTLS 2.7.19/2.28.4
+   * zlib 1.3
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
