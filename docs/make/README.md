@@ -74,7 +74,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[CA-bundle 2023-05-30](ca-bundle.md)<a id='ca-bundle'></a>**<br>
+  * **[CA-bundle 2023-08-22](ca-bundle.md)<a id='ca-bundle'></a>**<br>
     The Mozilla CA certificate store in PEM format, see https://www.curl.se/docs/caextract.html Size of uncompressed file is about 250 KB.
 
   * **[Callmonitor 1.20.9-git](callmonitor.md)<a id='callmonitor'></a>**<br>
@@ -185,7 +185,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### F
 
-  * **[FFmpeg 5.1.2](ffmpeg.md)<a id='ffmpeg'></a>**<br>
+  * **[FFmpeg 5.1.3](ffmpeg.md)<a id='ffmpeg'></a>**<br>
     FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video.
 
   * **[Fontconfig 2.14.2 (binary only)](fontconfig.md)<a id='fontconfig'></a>**<br>
@@ -211,7 +211,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Ghostscript fonts 8.11 (binary only)</u><a id='ghostscript-fonts'></a>**<br>
     This package provides the Ghostscript fonts.
 
-  * **[Git 2.41.0](git.md)<a id='git'></a>**<br>
+  * **[Git 2.42.0](git.md)<a id='git'></a>**<br>
     Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
   * **<u>gntpsend 0.3.2-git (binary only)</u><a id='gntpsend'></a>**<br>
@@ -350,7 +350,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[madplay 0.15.2b (binary only)](madplay.md)<a id='madplay'></a>**<br>
     MAD is a high-quality fixed-point MPEG audio decoder with 24-bit output. The implementation is entirely new, based on the ISO/IEC standards, and performs especially well on systems without native floating-point support.
 
-  * **[mc (Midnight Commander) 4.8.29 (binary only)](mc.md)<a id='mc'></a>**<br>
+  * **[mc (Midnight Commander) 4.8.30 (binary only)](mc.md)<a id='mc'></a>**<br>
     Subshell support means you can press Ctrl-O to hide the mc panels and have a real subshell. Both Bash (if package is installed) and BusyBox Ash can be used, depending which one is defined as your login shell. ATTENTION: You should *not* use CONFIG_FEATURE_BASH_IS_ASH in BusyBox or otherwise symlink /bin/bash to /bin/busybox because MC must differentiate handling between Ash and real Bash. This feature adds about 8 KB (uncompressed) to the mc binary.
 
   * **[mcabber 0.9.9](mcabber.md)<a id='mcabber'></a>**<br>
@@ -456,7 +456,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Openntpd 3.9p1](openntpd.md)<a id='openntpd'></a>**<br>
     OpenNTPD is a FREE, easy to use implementation of the Network Time Protocol. This package automatically removes AVM'S chronyd if necessary.
 
-  * **[OpenSSH 9.4p1](openssh.md)<a id='openssh'></a>**<br>
+  * **[OpenSSH 9.3p2/9.4p1](openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1v/3.0.10 (binary only)](openssl.md)<a id='openssl'></a>**<br>
@@ -473,7 +473,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[p7zip 16.02 (binary only)](p7zip.md)<a id='p7zip'></a>**<br>
     7-Zip  is  a  file  archiver  with the highest compression ratio. The program supports 7z (that implements LZMA compression algorithm), ZIP, CAB, ARJ, GZIP, BZIP2, TAR, CPIO, RPM and DEB formats. Compression ratio in the new 7z format is 30-50% better  than ratio in ZIP format.
 
-  * **[PCSC-lite 1.9.9 (binary only)](pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
+  * **[PCSC-lite 2.0.0 (binary only)](pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
     The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a very small form factor for communicating to smart cards and readers.
 
   * **<u>phonebook-tools: Phone book tools 1.0</u><a id='phonebook-tools'></a>**<br>
@@ -587,7 +587,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Samba 3.0.37/3.6.25](samba.md)<a id='samba'></a>**<br>
     The binary with smbd and nmbd needs about 1033 kB (uncompressed).
 
-  * **[Screen 4.9.0](screen.md)<a id='screen'></a>**<br>
+  * **[Screen 4.9.1](screen.md)<a id='screen'></a>**<br>
     Screen is a full-screen window manager that multiplexes a physical terminal between several processes, typically interactive shells. Each virtual terminal provides the functions of the DEC VT100 terminal and, in addition, several control functions from the ANSI X3.64 (ISO 6429) and ISO 2022 standards (e.g., insert/delete line and support for multiple character sets). There is a scrollback history buffer for each virtual terminal and a copy-and-paste mechanism that allows the user to move text regions between windows. When screen is called, it creates a single window with a shell in it (or the specified command) and then gets out of your way so that you can use the program as you normally would. Then, at any time, you can create new (full-screen) windows with other programs in them (including more shells), kill the current window, view a list of the active windows, turn output logging on and off, copy text between windows, view the scrollback history, switch between windows, etc. All windows run their programs completely independent of each other. Programs continue to run when their window is currently not visible and even when the whole screen session is detached from the users terminal.
 
   * **[ser2net 3.5.4](ser2net.md)<a id='ser2net'></a>**<br>
@@ -725,7 +725,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UNFS3 0.9.23](unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **[UnRAR 6.1.7/6.2.8 (binary only)](unrar.md)<a id='unrar'></a>**<br>
+  * **[UnRAR 6.1.7/6.2.10 (binary only)](unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **[usbids: usb.ids a5edeafb60](usbids.md)<a id='usbids'></a>**<br>

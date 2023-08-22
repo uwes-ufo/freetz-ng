@@ -45,6 +45,16 @@ Latest changes
 
 ### devel
 
+ - Packages:
+   * CA-bundle 2023-08-22
+   * FFmpeg 5.1.3
+   * Git 2.42.0
+   * mc (Midnight Commander) 4.8.30
+   * OpenSSH 9.3p2/9.4p1
+   * PCSC-lite 2.0.0
+   * Screen 4.9.1
+   * UnRAR 6.1.7/6.2.10
+
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
 
