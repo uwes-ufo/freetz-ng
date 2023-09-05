@@ -146,7 +146,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box 6430 Cable__
   - 159.07.12 rev72224 {GER} [MESH18 NL2]
-  - 159.07.29 rev93977 {GER} [PSQ19P2NL4]
+  - 159.07.30 rev107861 {GER} [PSQ19P2NL4]
 * __Fritz!Box 6490 Cable__
   - 141.06.87 rev48327 {GER}
   - 141.07.02 rev65390 {GER}
@@ -307,10 +307,10 @@ Currently supported devices and firmwares
 * __Fritz!Box Fon WLAN 7360 v2__
   - 124.06.30 rev30889 {GER}
   - 124.06.50 rev32505 {GER}
-  - 124.06.87 rev92874 {GER}
+  - 124.06.88 rev107879 {GER}
   - 124.06.31 rev32500 {INT}
   - 124.06.52 rev33299 {INT}
-  - 124.06.86 rev70983 {INT}
+  - 124.06.88 rev107877 {INT}
 * __Fritz!Box Fon WLAN 7360 SL__
   - 109.06.34 rev38647 {GER}
   - 109.06.30 rev31156 {INT}
@@ -340,7 +340,7 @@ Currently supported devices and firmwares
 * __Fritz!Box Fon WLAN 7412__
   - 137.06.30 rev31572 {GER}
   - 137.06.50 rev32502 {GER}
-  - 137.06.87 rev92248 {GER}
+  - 137.06.88 rev107872 {GER}
   - Alien 7430 {GER} (No wlan!)
 * __Fritz!Box Fon WLAN 7430__
   - 146.06.30 rev32200 {GER}
