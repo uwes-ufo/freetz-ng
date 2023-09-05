@@ -91,7 +91,7 @@ Currently supported devices and firmwares
   - 140.06.83 rev43895 {INT}
   - 140.07.01 rev61726 {INT}
   - 140.07.12 rev70430 {INT} [MESH18 NL2]
-  - 140.07.30 rev92235 {ALL} [PSQ19P2NL4]
+  - 140.07.31 rev107855 {ALL} [PSQ19P2NL4]
 
 ### Fritz!Box WAN (4xxx)
 
@@ -319,7 +319,7 @@ Currently supported devices and firmwares
   - 131.06.50 rev32505 {GER}
   - 131.06.83 rev43615 {GER}
   - 131.07.01 rev61708 {GER}
-  - 131.07.13 rev91727 {GER} [WU21 MESH18]
+  - 131.07.14 rev107892 {GER} [WU21 MESH18]
 * __Fritz!Box Fon WLAN 7369__
   - 119.06.32 rev33419 {INT}
 
@@ -328,12 +328,12 @@ Currently supported devices and firmwares
   - 84.06.04 rev28179 {GER}
   - 84.06.30 rev30889 {GER}
   - 84.06.51 rev33001 {GER}
-  - 84.06.87 rev92934 {GER}
+  - 84.06.88 rev107876 {GER}
   - 84.05.23 rev27631 {INT}
   - 84.06.06 rev27689 {INT}
   - 84.06.30 rev31156 {INT}
   - 84.06.53 rev34469 {INT}
-  - 84.06.87 rev92938 {INT}
+  - 84.06.88 rev107875 {INT}
 
 ### Fritz!Box Fon WLAN (74xx)
 
@@ -353,7 +353,7 @@ Currently supported devices and firmwares
   - 146.06.83 rev43588 {INT}
   - 146.07.01 rev61690 {INT}
   - 146.07.12 rev70527 {INT} [MESH18 NL2]
-  - 146.07.29 rev92175 {ALL} [PSQ19P2NL4]
+  - 146.07.31 rev107856 {ALL} [PSQ19P2NL4]
 
 * __Fritz!Box Fon WLAN 7490__
   - 113.06.30 rev30889 {GER}
@@ -406,18 +406,18 @@ Currently supported devices and firmwares
   - 149.06.83 rev44010 {INT}
   - 149.07.01 rev61988 {INT}
   - 149.07.12 rev71227 {INT} [MESH18 NL2]
-  - 149.07.29 rev92246 {ALL} [PSQ19P2NL4]
+  - 149.07.30 rev107862 {ALL} [PSQ19P2NL4]
 * __Fritz!Box Fon WLAN 7580__
   - 153.06.54 rev41655 {GER}
   - 153.06.83 rev44004 {GER}
   - 153.06.92 rev47571 {GER}
   - 153.07.01 rev61517 {GER}
   - 153.07.12 rev70352 {GER} [MESH18 NL2]
-  - 153.07.29 rev92247 {GER} [PSQ19P2NL4]
+  - 153.07.30 rev107863 {GER} [PSQ19P2NL4]
 * __Fritz!Box Fon WLAN 7581__
-  - 152.07.16 rev93246 {ALL} [WU21 MESH18]
+  - 152.07.17 rev107894 {ALL} [WU21 MESH18]
 * __Fritz!Box Fon WLAN 7582 (UNTESTED)__
-  - 156.07.16 rev93247 {ALL} [WU21 MESH18]
+  - 156.07.17 rev107895 {ALL} [WU21 MESH18]
 * __Fritz!Box Fon WLAN 7583__
   - 167.07.12 rev70707 {GER} [MESH18 NL2]
   - 167.07.15 rev75887 {INT} [MESH18 NL2]
