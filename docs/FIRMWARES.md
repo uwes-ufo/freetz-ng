@@ -137,7 +137,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box 5530 Fiber (DEVELOPER, No fiber!)__
   - 257.07.30 rev99334 {ALL} [PSQ19P2NL4]
-  - 257.07.57 rev107833 {ALL} [MOVE21NL1]
+  - 257.07.58 rev108018 {ALL} [MOVE21NL1]
 * __Fritz!Box 5590 Fiber__
   - 272.07.30 rev101793 {ALL} [PSQ19P2NL4]
   - 272.07.57 rev107834 {ALL} [MOVE21NL1]
@@ -490,12 +490,12 @@ Currently supported devices and firmwares
   - 134.06.50 rev33858 {ALL}
   - 134.07.01 rev63070 {ALL}
   - 134.07.12 rev70775 {ALL} [MESH18 NL2]
-  - 134.07.30 rev101517 {ALL} [WU22 PSQ19]
+  - 134.07.31 rev107923 {ALL} [WU22 PSQ19]
 
 * __Fritz!Repeater 1200__
   - 172.07.14 rev73941 {ALL} [MESH18 NL4]
   - 172.07.29 rev93267 {ALL} [PSQ19P2NL4]
-  - 172.07.56 rev106936 {ALL} [MOVE21NL1]
+  - 172.07.57 rev107845 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 1200 AX__
   - 268.07.30 rev93528 {ALL} [PSQ19P2NL4]
   - 268.07.56 rev106867 {ALL} [MOVE21NL1]
@@ -507,7 +507,7 @@ Currently supported devices and firmwares
   - 174.07.04 rev66458 {ALL}
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
   - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
-  - 174.07.56 rev106937 {ALL} [MOVE21NL1]
+  - 174.07.57 rev107846 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 3000 AX (UNTESTED)__
   - 270.07.56 rev106866 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 6000__
