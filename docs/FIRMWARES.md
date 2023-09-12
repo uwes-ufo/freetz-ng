@@ -140,7 +140,7 @@ Currently supported devices and firmwares
   - 257.07.58 rev108018 {ALL} [MOVE21NL1]
 * __Fritz!Box 5590 Fiber__
   - 272.07.30 rev101793 {ALL} [PSQ19P2NL4]
-  - 272.07.57 rev107834 {ALL} [MOVE21NL1]
+  - 272.07.58 rev108019 {ALL} [MOVE21NL1]
 
 ### Fritz!Box Cable (64xx/65xx/66xx)
 
@@ -459,12 +459,12 @@ Currently supported devices and firmwares
 * __Fritz!Powerline 1240E (UNTESTED)__
   - 150.06.92 rev47432 {ALL}
   - 150.07.01 rev63180 {ALL}
-  - 150.07.15 rev103167 {ALL} [WU22 MESH18]
+  - 150.07.16 rev108014 {ALL} [WU22 MESH18]
 * __Fritz!Powerline 1260E__
   - 157.07.01 rev63181 {ALL}
   - 157.07.12 rev70670 {ALL} [MESH18 NL2]
   - 157.07.29 rev93269 {ALL} [PSQ19P2NL4]
-  - 157.07.56 rev107038 {ALL} [MOVE21NL1]
+  - 157.07.57 rev107853 {ALL} [MOVE21NL1]
 * __Fritz!Powerline 1260 v2 (UNTESTED)__
   - 249.07.29 rev93271 {ALL} [PSQ19P2NL4]
   - 249.07.56 rev107039 {ALL} [MOVE21NL1]
