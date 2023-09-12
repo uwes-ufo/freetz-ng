@@ -448,7 +448,7 @@ Currently supported devices and firmwares
   - 129.06.50 rev33971 {ALL}
   - 129.06.92 rev47358 {ALL}
   - 129.07.01 rev65030 {ALL}
-  - 129.07.14 rev93854 {ALL} [WU21 MESH18]
+  - 129.07.15 rev108020 {ALL} [WU21 MESH18]
 * __Fritz!Powerline 546E__
   - 118.06.32 rev31507 {GER}
   - 118.06.50 rev33971 {ALL}
@@ -467,7 +467,7 @@ Currently supported devices and firmwares
   - 157.07.57 rev107853 {ALL} [MOVE21NL1]
 * __Fritz!Powerline 1260 v2 (UNTESTED)__
   - 249.07.29 rev93271 {ALL} [PSQ19P2NL4]
-  - 249.07.56 rev107039 {ALL} [MOVE21NL1]
+  - 249.07.57 rev107850 {ALL} [MOVE21NL1]
 
 ### Fritz!Repeater
 
