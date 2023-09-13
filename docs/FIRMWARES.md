@@ -451,7 +451,7 @@ Currently supported devices and firmwares
   - 129.07.15 rev108020 {ALL} [WU21 MESH18]
 * __Fritz!Powerline 546E__
   - 118.06.32 rev31507 {GER}
-  - 118.06.50 rev33971 {ALL}
+  - 118.06.51 rev38814 {ALL}
   - 118.06.92 rev47429 {ALL}
   - 118.07.01 rev65031 {ALL}
   - 118.07.15 rev108026 {ALL} [WU21 MESH18]
@@ -472,13 +472,13 @@ Currently supported devices and firmwares
 ### Fritz!Repeater
 
 * __Fritz!WLAN Repeater 300E (UNTESTED)__
-  - 101.06.33 rev38569 {GER}
-  - 101.06.33 rev38569 {INT}
+  - 101.06.34 rev38815 {GER}
+  - 101.06.34 rev38815 {INT}
 * __Fritz!WLAN Repeater 450E__
   - 128.06.51 rev34135 {ALL}
   - 128.06.92 rev47360 {ALL}
   - 128.07.01 rev63068 {ALL}
-  - 128.07.14 rev93705 {ALL} [WU21 MESH18]
+  - 128.07.15 rev108017 {ALL} [WU21 MESH18]
 * __Fritz!WLAN Repeater DVB-C__
   - 133.06.32 rev31507 {ALL}
   - 133.06.50 rev33858 {ALL}
@@ -502,7 +502,7 @@ Currently supported devices and firmwares
 * __Fritz!Repeater 2400__
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
-  - 169.07.56 rev106938 {ALL} [MOVE21NL1]
+  - 169.07.57 rev107844 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 3000__
   - 174.07.04 rev66458 {ALL}
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
