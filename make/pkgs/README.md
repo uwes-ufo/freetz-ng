@@ -353,7 +353,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### I
 
-  * **<u>iconv 1.13.1 (binary only)</u><a id='iconv'></a>**<br>
+  * **[iconv 1.13.1 (binary only)](../../docs/make/iconv.md)<a id='iconv'></a>**<br>
     A program for converting text from one encoding to another.
 
   * **<u>ifstat 1.1 (binary only)</u><a id='ifstat'></a>**<br>
@@ -394,7 +394,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>IPsec-tools 0.7.2</u><a id='ipsec-tools'></a>**<br>
     IPsec-tools (plainrsa-gen racoon racoonctl setkey)
 
-  * **[Iptables-CGI 1.1](../../docs/make/iptables-cgi.md)<a id='iptables'></a>**<br>
+  * **[Iptables-CGI](../../docs/make/iptables-cgi.md)<a id='iptables'></a>**<br>
 
   * **<u>Iptraf 3.0.1 (binary only)</u><a id='iptraf'></a>**<br>
     IPTraf is a console-based network monitoring program for Linux that displays information about IP traffic. It returns such information as: Current TCP connections UDP, ICMP, OSPF, and other types of IP packets Packet and byte counts on TCP connections IP, TCP, UDP, ICMP, non-IP, and other packet and byte counts TCP/UDP counts by ports Packet counts by packet sizes Packet and byte counts by IP address Interface activity Flag statuses on TCP packets LAN station statistics
@@ -549,7 +549,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [One page overview](../../docs/make/netsnmp.md#one-page-overview)
      - [MGTG as a service](../../docs/make/netsnmp.md#mgtg-as-a-service)
 
-  * **<u>nfsroot: NFS-root 0.1</u><a id='nfsroot'></a>**<br>
+  * **<u>nfsroot: NFS-root 1.0</u><a id='nfsroot'></a>**<br>
     Mount a remote filesystem (fs) from an NFS server and use it as a root fs which is fully writable and basically unlimited in size. The Linux kernel will still be loaded from your box and during the first phase of the init process the SquashFS on the box is still used, but after the NFS-root is mounted, we pivot_root into it and it becomes the new root fs. The read-only fs on the box can still be accessed under /oldroot, but is absolutely not necessary anymore after pivot_root. Having said that, it should be clear that the remote folder to be mounted should contain everything necessary to run the box. Usually you just create a full copy of a target fs (e.g. from build/modified/filesystem or from an unpacked firmware image) and start modifying it as needed. The binaries (kernel modules, executables, shared libraries) used therein just have to fit the kernel installed on the box. Note: The mini_fo overlay filesystem will not be used if an NFS-root was mounted first (see mini_fo package). Still, both packages can be installed at the same time, because mini_fo is still useful if NFS-root is decativated. Note: This package needs "replace kernel" because a kernel patch is necessary to make the 'nfsroot' bootloader environment variable usable for our purpose. So, if if "replace kernel" is inactive, you will not see this package in menuconfig. Note: There currently is no web interface for this package, because an NFS-root is an expert thing anyway. The command-line interface and help screen of /etc/init.d/rc.nfs makes it pretty easy to (de-)activate and configure the functionality of this package. As configuration data are stored in bootloader environment rather than in TFFS like for other packages, this package is special anyway.
 
   * **[nfs-utils 1.3.4 (binary only)](../../docs/make/nfs-utils.md)<a id='nfs-utils'></a>**<br>
@@ -1181,7 +1181,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Mögliche Nebenwirkungen](../../docs/make/usbroot.md#mögliche-nebenwirkungen)
      - [Verbesserungsmöglichkeiten](../../docs/make/usbroot.md#verbesserungsmöglichkeiten)
 
-  * **[virtualip-cgi: Virtual IP CGI 0.4.2 (deprecated)](../../docs/make/virtualip-cgi.md)<a id='virtualip'></a>**<br>
+  * **[virtualip-cgi: Virtual IP CGI (deprecated)](../../docs/make/virtualip-cgi.md)<a id='virtualip'></a>**<br>
     Creates a virtual network interface. In former times this was used to comfortably open server ports on the Fritz!Box itself via AVM web interface. Nowadays the avm-firewall package is used for this task. The package is also equipped with a configuration interface for the Freetz web configurator which lets you choose the IP address and net mask of the virtual interface as well as toggle auto-start.
      - [Einrichtung](../../docs/make/virtualip-cgi.md#einrichtung)
      - [Bekannte Probleme und Bugs](../../docs/make/virtualip-cgi.md#bekannte-probleme-und-bugs)
@@ -1220,7 +1220,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Configuration of port forwardings to the FritzBox itself by using voip_forwardrules. Please don't use this package, but AVM-portfw! Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
      - [Deprecated?](../../docs/make/avm-rules.md#deprecated)
 
-  * **<u>Cpmaccfg CGI 1.0</u><a id='cpmaccfg'></a>**<br>
+  * **<u>Cpmaccfg CGI</u><a id='cpmaccfg'></a>**<br>
     Configuration front-end to cpmaccfg This frontend shows the current settings of the LAN ports and gives a very simple way to set VLAN, portmode and WLAN assigment. Additional to this, you can set IP addresses for the VLAN interfaces eth0-eth3 if needed.
 
   * **[dnsd-cgi](../../docs/make/dnsd-cgi.md)<a id='dnsd'></a>**<br>
@@ -1275,7 +1275,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Setup in Freetz web-interface](../../docs/make/syslogd-cgi.md#setup-in-freetz-web-interface)
      - [Usage of syslog](../../docs/make/syslogd-cgi.md#usage-of-syslog)
 
-  * **<u>Transmission CGI 0.0.4</u><a id='transmission'></a>**<br>
+  * **<u>Transmission CGI</u><a id='transmission'></a>**<br>
     Provides a simple configuration interface for transmission-daemon.
 
   * **<u>vnstat-cgi: vnstat Webinterface</u><a id='vnstat'></a>**<br>
