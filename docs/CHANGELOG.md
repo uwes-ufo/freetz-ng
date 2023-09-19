@@ -49,29 +49,44 @@ Latest changes
    * Ccache 4.8.3
 
  - Host tools:
-   * cmake 3.27.4
+   * cmake 3.27.5
    * kconfig 6.5
+   * pkgconf 2.0.3
+   * precompiled host-tools 2023-09-17
    * python 3.11.5
 
  - Packages:
    * Atop 2.9.0
    * BIND 9.11.37/9.16.43
    * CA-bundle 2023-08-22
+   * Curl 8.3.0
    * FFmpeg 5.1.3
+   * ftdi1 1.5
    * Git 2.42.0
+   * iPerf3 3.3/3.15
    * mc (Midnight Commander) 4.8.30
    * Nmap 4.76/5.51/7.94
    * OpenSSH 9.3p2/9.4p1
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.10
    * PCSC-lite 2.0.0
    * Screen 4.9.1
    * SQLite 3.43.0
    * strace 4.9/5.0/6.5
    * Tor 0.4.8.5
    * Transmission 3.00/4.0.4
+   * Unbound 1.18.0
    * UnRAR 6.1.7/6.2.10
+   * Vim 9.0.1872
 
  - Libraries:
    * glib2 2.32.4/2.76.5
+   * harfbuzz 8.2.1
+   * libconfuse 3.3
+   * fribidi 1.0.13
+   * libxml2 2.11.5
+   * neon 0.30.2/0.32.5
+   * pango 1.51.0
+   * uClibc++ 0.2.6-6687fc92
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

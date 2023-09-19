@@ -140,7 +140,7 @@ Currently supported devices and firmwares
   - 257.07.58 rev108018 {ALL} [MOVE21NL1]
 * __Fritz!Box 5590 Fiber__
   - 272.07.30 rev101793 {ALL} [PSQ19P2NL4]
-  - 272.07.57 rev107834 {ALL} [MOVE21NL1]
+  - 272.07.58 rev108019 {ALL} [MOVE21NL1]
 
 ### Fritz!Box Cable (64xx/65xx/66xx)
 
@@ -309,7 +309,7 @@ Currently supported devices and firmwares
   - 124.06.50 rev32505 {GER}
   - 124.06.88 rev107879 {GER}
   - 124.06.31 rev32500 {INT}
-  - 124.06.52 rev33299 {INT}
+  - 124.06.53 rev38801 {INT}
   - 124.06.88 rev107877 {INT}
 * __Fritz!Box Fon WLAN 7360 SL__
   - 109.06.35 rev38788 {GER}
@@ -448,37 +448,39 @@ Currently supported devices and firmwares
   - 129.06.50 rev33971 {ALL}
   - 129.06.92 rev47358 {ALL}
   - 129.07.01 rev65030 {ALL}
-  - 129.07.14 rev93854 {ALL} [WU21 MESH18]
+  - 129.07.15 rev108020 {ALL} [WU21 MESH18]
 * __Fritz!Powerline 546E__
   - 118.06.32 rev31507 {GER}
-  - 118.06.50 rev33971 {ALL}
+  - 118.06.51 rev38814 {ALL}
   - 118.06.92 rev47429 {ALL}
   - 118.07.01 rev65031 {ALL}
-  - 118.07.14 rev93758 {ALL} [WU21 MESH18]
+  - 118.07.15 rev108026 {ALL} [WU21 MESH18]
 
 * __Fritz!Powerline 1240E (UNTESTED)__
   - 150.06.92 rev47432 {ALL}
   - 150.07.01 rev63180 {ALL}
-  - 150.07.15 rev103167 {ALL} [WU22 MESH18]
+  - 150.07.16 rev108014 {ALL} [WU22 MESH18]
+* __FRITZ!Powerline 1240 AX (UNTESTED)__
+  - 275.07.57 rev108112 {ALL} [MOVE21NL1]
 * __Fritz!Powerline 1260E__
   - 157.07.01 rev63181 {ALL}
   - 157.07.12 rev70670 {ALL} [MESH18 NL2]
   - 157.07.29 rev93269 {ALL} [PSQ19P2NL4]
-  - 157.07.56 rev107038 {ALL} [MOVE21NL1]
+  - 157.07.57 rev107853 {ALL} [MOVE21NL1]
 * __Fritz!Powerline 1260 v2 (UNTESTED)__
   - 249.07.29 rev93271 {ALL} [PSQ19P2NL4]
-  - 249.07.56 rev107039 {ALL} [MOVE21NL1]
+  - 249.07.57 rev107850 {ALL} [MOVE21NL1]
 
 ### Fritz!Repeater
 
 * __Fritz!WLAN Repeater 300E (UNTESTED)__
-  - 101.06.33 rev38569 {GER}
-  - 101.06.33 rev38569 {INT}
+  - 101.06.34 rev38815 {GER}
+  - 101.06.34 rev38815 {INT}
 * __Fritz!WLAN Repeater 450E__
   - 128.06.51 rev34135 {ALL}
   - 128.06.92 rev47360 {ALL}
   - 128.07.01 rev63068 {ALL}
-  - 128.07.14 rev93705 {ALL} [WU21 MESH18]
+  - 128.07.15 rev108017 {ALL} [WU21 MESH18]
 * __Fritz!WLAN Repeater DVB-C__
   - 133.06.32 rev31507 {ALL}
   - 133.06.50 rev33858 {ALL}
@@ -498,21 +500,21 @@ Currently supported devices and firmwares
   - 172.07.57 rev107845 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 1200 AX__
   - 268.07.30 rev93528 {ALL} [PSQ19P2NL4]
-  - 268.07.56 rev106867 {ALL} [MOVE21NL1]
+  - 268.07.57 rev107840 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 2400__
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
-  - 169.07.56 rev106938 {ALL} [MOVE21NL1]
+  - 169.07.57 rev107844 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 3000__
   - 174.07.04 rev66458 {ALL}
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
   - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
   - 174.07.57 rev107846 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 3000 AX (UNTESTED)__
-  - 270.07.56 rev106866 {ALL} [MOVE21NL1]
+  - 270.07.57 rev107839 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 6000__
   - 253.07.30 rev98407 {ALL} [PSQ19P2NL4]
-  - 253.07.56 rev106865 {ALL} [MOVE21NL1]
+  - 253.07.57 rev107838 {ALL} [MOVE21NL1]
 
 ### Fritz!Smart
 

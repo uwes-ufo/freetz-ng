@@ -44,7 +44,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FreeType (freetype.so) 2.13.1](freetype.md)<a id='freetype'></a>**<br>
     FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well.
 
-  * **[FriBidi (libfribidi.so) 1.0.12](fribidi.md)<a id='fribidi'></a>**<br>
+  * **[FriBidi (libfribidi.so) 1.0.13](fribidi.md)<a id='fribidi'></a>**<br>
     The Free Implementation of the Unicode Bidirectional Algorithm.
 
 ### G
@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HarfBuzz (libharfbuzz.so) 8.1.1](harfbuzz.md)<a id='harfbuzz'></a>**<br>
+  * **[HarfBuzz (libharfbuzz.so) 8.2.1](harfbuzz.md)<a id='harfbuzz'></a>**<br>
     HarfBuzz is a text shaping engine. It primarily supports OpenType, but also Apple Advanced Typography.
 
 ### I
@@ -109,6 +109,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[libconfig (libconfig.so) 1.5](libconfig.md)<a id='libconfig'></a>**<br>
     Libconfig is a simple library for processing structured configuration files. Libconfig is very compact - just 46K for the stripped C shared library. This makes it well-suited for memory-constrained systems.
+
+  * **[libconfuse (libconfuse.so) 3.3](libconfuse.md)<a id='libconfuse'></a>**<br>
+    libConfuse is a configuration file parser library written in C. It supports sections and (lists of) values, as well as other features such as single/double quoted strings, environment variable expansion, functions and nested include statements. Values can be strings, integers, floats, booleans, and sections. The goal is not to be the configuration file parser library with a gazillion of features. Instead, it aims to be easy to use and quick to integrate with your code.
 
   * **[libctlmgr (libctlmgr.so) 1.0](libctlmgr.md)<a id='libctlmgr'></a>**<br>
     This is Freetz compatibility library which overwrites functions of AVM's libraries, e.g. write_etc_passwd.
@@ -230,7 +233,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libvorbis (libvorbis.so) 1.3.5](libvorbis.md)<a id='libvorbis'></a>**<br>
     Vorbis is the name of a specific audio compression scheme that's designed to be contained in Ogg. libvorbis is a BSD-style license software implementation of the Vorbis specification by the Xiph.Org Foundation.
 
-  * **[libxml2 (libxml2.so) 2.11.4](libxml2.md)<a id='libxml2'></a>**<br>
+  * **[libxml2 (libxml2.so) 2.11.5](libxml2.md)<a id='libxml2'></a>**<br>
     XML toolkit from the GNOME project
 
   * **[linux-atm (libatm.so) 2.5.2](linux-atm.md)<a id='linux-atm'></a>**<br>
@@ -263,7 +266,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ncursesw (libncursesw.so) 6.4](ncursesw.md)<a id='ncursesw'></a>**<br>
     ncurses is a programming library providing an API, allowing the programmer to write text user interfaces in a terminal-independent manner. It also optimizes screen changes, in order to reduce the latency experienced when using remote shells. Ncurses stands for "new curses", and is a replacement for the discontinued 4.4 BSD classic curses. Ncursesw has additional wide-character (unicode) support. Ncurses and Ncursesw libraries are source-compatible, but not binary-compatible.
 
-  * **[neon: libneon (libneon.so) 0.30.2/0.32.4](neon.md)<a id='neon'></a>**<br>
+  * **[neon: libneon (libneon.so) 0.30.2/0.32.5](neon.md)<a id='neon'></a>**<br>
     neon is an HTTP and WebDAV client library, with a C language API.
 
   * **[nettle: libnettle (libnettle.so) 3.9.1](nettle.md)<a id='nettle'></a>**<br>
@@ -285,7 +288,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### P
 
-  * **[Pango (libpango-1.0.so) 1.50.14](pango.md)<a id='pango'></a>**<br>
+  * **[Pango (libpango-1.0.so) 1.51.0](pango.md)<a id='pango'></a>**<br>
     Pango is a library for layout and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed; however, most of the work on Pango so far has been done using the GTK widget toolkit as a test platform. Pango forms the core of text and font handling for GTK.
 
   * **[pcre: libpcre (libpcre.so) 8.45](pcre.md)<a id='pcre'></a>**<br>
@@ -345,7 +348,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[uClibc (ld-uClibc-x.y.z.so) 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.44](uclibc.md)<a id='uclibc'></a>**<br>
     uClibc is a small C standard library intended for embedded Linux systems. uClibc was created to support uClinux, a version of Linux not requiring a memory management unit and thus suited for microcontrollers (hence the "uC" in the name - "u" is a replacement for the Greek character "miu" often used as an abbreviation for the prefix "micro"). uClibc is much smaller than GNU C Library (glibc), the C library normally used with Linux distributions. While glibc is intended to fully support all relevant C standards across a wide range of platforms, uClibc is specifically focused on embedded Linux. Features can be enabled or disabled according to space requirements.
 
-  * **[uclibcxx: uClibc++ (libuClibc++.so.0.2.5) 2b58f77ee27c60842054fd0e5dd67f5d00e89eb8](uclibcxx.md)<a id='uclibcxx'></a>**<br>
+  * **[uclibcxx: uClibc++ (libuClibc++.so.0.2.6) 6687fc9276fa52defaf8592f2001c19b826aec93](uclibcxx.md)<a id='uclibcxx'></a>**<br>
     An implementation of the Standard C++ Library optimized for embedded systems.
 
   * **[udns: libudns (libudns.so) 0.4](udns.md)<a id='udns'></a>**<br>
