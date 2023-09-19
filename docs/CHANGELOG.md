@@ -76,10 +76,11 @@ Latest changes
    * Transmission 3.00/4.0.4
    * Unbound 1.18.0
    * UnRAR 6.1.7/6.2.10
+   * Vim 9.0.1872
 
  - Libraries:
    * glib2 2.32.4/2.76.5
-   * harfbuzz 8.2.0
+   * harfbuzz 8.2.1
    * libconfuse 3.3
    * fribidi 1.0.13
    * libxml2 2.11.5
