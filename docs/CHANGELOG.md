@@ -72,16 +72,17 @@ Latest changes
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.11
    * PCSC-lite 2.0.0
    * Screen 4.9.1
-   * SQLite 3.43.0
+   * SQLite 3.43.1
    * strace 4.9/5.0/6.5
    * Stunnel 5.71
    * Tor 0.4.8.6
    * Transmission 3.00/4.0.4
    * Unbound 1.18.0
-   * UnRAR 6.1.7/6.2.10
+   * UnRAR 6.1.7/6.2.11
    * Vim 9.0.1872
 
  - Libraries:
+   * FreeType 2.13.2
    * glib2 2.32.4/2.76.5
    * harfbuzz 8.2.1
    * libconfuse 3.3
