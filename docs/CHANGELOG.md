@@ -75,12 +75,13 @@ Latest changes
    * PCSC-lite 2.0.0
    * Screen 4.9.1
    * SQLite 3.43.1
+   * sslh 2.0.1
    * strace 4.9/5.0/6.5
    * Stunnel 5.71
    * Tor 0.4.8.7
    * Transmission 3.00/4.0.4
    * Unbound 1.18.0
-   * UnRAR 6.1.7/6.2.11
+   * UnRAR 6.1.7/6.2.12
    * Vim 9.0.1872
 
  - Libraries:
