@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 42cfad6e6 uwe 2023-10-06
+#  freetz-ng f700e63e7 uwe 2023-10-10
 #
 
 #
@@ -1301,9 +1301,6 @@ FREETZ_LIB_libexpat=y
 FREETZ_LIB_libcap_ng=y
 # FREETZ_LIB_libconfig is not set
 # FREETZ_LIB_libconfuse is not set
-FREETZ_LIB_libctlmgr=y
-FREETZ_LIB_libctlmgr_WITH_CHMOD=y
-FREETZ_LIB_libctlmgr_WITH_RENAME=y
 # FREETZ_LIB_libdaemon is not set
 # FREETZ_LIB_libdbus is not set
 # FREETZ_LIB_libdevmapper is not set
@@ -3130,7 +3127,6 @@ FREETZ_AVM_HAS_JUIS_SUPPORT=y
 FREETZ_AVM_HAS_MULTID_LEASES_FORMAT_V2=y
 FREETZ_AVM_HAS_LIBC_FILE="libc.so.1"
 FREETZ_AVM_HAS_AVMMULTID_PRELOAD=y
-FREETZ_AVM_HAS_AVMCTLMGR_PRELOAD=y
 FREETZ_AVM_SQUASHFS_VERSION=4
 FREETZ_SQUASHFS_VERSION=4
 FREETZ_AVM_SQUASHFS_ENDIANNESS="be"
