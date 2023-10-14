@@ -54,8 +54,10 @@ Latest changes
    * kconfig 6.5
    * meson 1.2.2
    * pkgconf 2.0.3
-   * precompiled host-tools 2023-09-17
-   * python 3.11.5
+   * precompiled host-tools 2023-10-14
+   * pseudo 1.9.0 oe-core cc1f616
+   * python 3.11.6
+   * u-boot 2023.10
 
  - Packages:
    * ACME.sh 3.0.7 (letsencrypt)
@@ -67,6 +69,7 @@ Latest changes
    * FFmpeg 5.1.3
    * ftdi1 1.5
    * Git 2.42.0
+   * ImageMagick 7.1.1-20
    * iPerf3 3.3/3.15
    * Lighttpd 1.4.72
    * mc (Midnight Commander) 4.8.30
@@ -77,7 +80,7 @@ Latest changes
    * PCSC-lite 2.0.0
    * ProxyChains-NG 4.16
    * Screen 4.9.1
-   * SQLite 3.43.1
+   * SQLite 3.43.2
    * sslh 2.0.1
    * strace 4.9/5.0/6.5
    * Stunnel 5.71
