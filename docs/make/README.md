@@ -830,9 +830,6 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Collectd 4.10.3</u><a id='collectd'></a>**<br>
     Collectd collects information about the system it is running on and stores this information. The information can then be used to do find current performance bottlenecks (i. e. performance analysis) and predict future system load (i. e. capacity planning). Or if you just want pretty graphs of your private server and are fed up with some homegrown solution you're at the right place, too.
 
-  * **<u>fhem -r16562 (5.8)</u><a id='fhem'></a>**<br>
-    fhem is a perl server for house automation, see web page http://fhem.de
-
   * **<u>gptfdisk 1.0.1</u><a id='gptfdisk'></a>**<br>
     Interactive GUID partition table (GPT) manipulator
 
@@ -850,9 +847,6 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[MySQL 6.0.11-alpha](mysql.md)<a id='mysql'></a>**<br>
     MySQL is a very fast, multi-threaded, multi-user and robust SQL (Structured Query Language) database server. Unstable, as this version is quite old, but runs well on Fritzbox. Do not expose this daemon to the internet!
-
-  * **<u>Perl 5.32.1 (binary only)</u><a id='perl'></a>**<br>
-    Perl without operating-specific functions such as readdir.
 
   * **[PHP 5.6.40 (binary only)](php.md)<a id='php'></a>**<br>
     PHP: Hypertext Preprocessor PHP is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
