@@ -92,6 +92,8 @@ Latest changes
    * Vim 9.0.1872
 
  - Libraries:
+   * apr 1.7.4
+   * apr-util 1.6.3
    * FreeType 2.13.2
    * glib2 2.32.4/2.76.5
    * harfbuzz 8.2.2
@@ -101,6 +103,7 @@ Latest changes
    * mbedTLS 2.7.19/2.28.5
    * neon 0.30.2/0.32.5
    * pango 1.51.0
+   * serf 1.3.10
    * uClibc++ 0.2.6-6687fc92
 
  - Firmware updates:
