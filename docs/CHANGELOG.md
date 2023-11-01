@@ -58,6 +58,7 @@ Latest changes
    * pseudo 1.9.0 oe-core cc1f616
    * python 3.11.6
    * u-boot 2023.10
+   * xz 5.4.5
 
  - Packages:
    * ACME.sh 3.0.7 (letsencrypt)
@@ -74,6 +75,7 @@ Latest changes
    * iPerf3 3.3/3.15
    * Lighttpd 1.4.72
    * mc (Midnight Commander) 4.8.30
+   * mysql-connector 8.0.21
    * Nmap 4.76/5.51/7.94
    * NZBGet 21.1/21.4-rc2
    * OpenSSH 9.3p2/9.5p1
@@ -90,6 +92,7 @@ Latest changes
    * Unbound 1.18.0
    * UnRAR 6.1.7/6.2.12
    * Vim 9.0.1872
+   * XZ Utils 5.4.5
 
  - Libraries:
    * apr 1.7.4
