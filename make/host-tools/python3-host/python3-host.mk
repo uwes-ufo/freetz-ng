@@ -14,6 +14,7 @@ $(PKG)_CONFIGURE_OPTIONS += --host=$(GNU_HOST_NAME)
 $(PKG)_CONFIGURE_OPTIONS += --target=$(GNU_HOST_NAME)
 $(PKG)_CONFIGURE_OPTIONS += --prefix=/usr
 $(PKG)_CONFIGURE_OPTIONS += --enable-optimizations
+$(PKG)_CONFIGURE_OPTIONS += --disable-test-modules
 
 
 $(TOOLS_SOURCE_DOWNLOAD)
@@ -33,7 +34,6 @@ $($(PKG)_TARGET_BINARY): $($(PKG)_BINARY) | $(HOST_TOOLS_DIR)
 		$(TOOLS_SUBMAKE) -C $(PYTHON3_HOST_DIR) \
 		DESTDIR="$(HOST_TOOLS_DIR)" \
 		commoninstall bininstall maninstall )
-#	find $(HOST_TOOLS_DIR)/usr/lib/python$(call GET_MAJOR_VERSION,$(PYTHON3_HOST_VERSION),2) -name "*.pyc" -delete
 
 $(pkg)-precompiled: $($(PKG)_TARGET_BINARY)
 
