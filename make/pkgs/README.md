@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.16.43](../../docs/make/bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.16.44](../../docs/make/bind.md)<a id='bind'></a>**<br>
     BIND is an implementation of the Domain Name System (DNS) protocols. The name BIND stands for "Berkeley Internet Name Daemon". You have to provide the config and needed zone files yourself.
      - [named.conf](../../docs/make/bind.md#namedconf)
 
@@ -107,7 +107,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Callmonitor 1.20.9-git](../../docs/make/callmonitor.md)<a id='callmonitor'></a>**<br>
     Callmonitor enables you to perform arbitrary actions upon incoming calls on your AVM Fritz!Box (e.g., to send notifications to your favorite set-top box, to wake up your PC, or to send you a mail when you have missed a call).
 
-  * **[CCID 1.5.2](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
+  * **[CCID 1.5.4](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
     ccid provides the source code for a generic USB CCID (Chip/Smart Card Interface Devices) driver and ICCD (Integrated Circuit(s) Card Devices).
 
   * **[Checkmaild 0.4.7](../../docs/make/checkmaild.md)<a id='checkmaild'></a>**<br>
@@ -445,7 +445,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Geoblocking](../../docs/make/lighttpd.md#geoblocking)
      - [Links](../../docs/make/lighttpd.md#links)
 
-  * **[Lua 5.1.5/5.4.4 (binary only)](../../docs/make/lua.md)<a id='lua'></a>**<br>
+  * **[Lua 5.1.5/5.4.6 (binary only)](../../docs/make/lua.md)<a id='lua'></a>**<br>
     Lua Scripting Language. Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. Lua combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode with a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
   * **[Lynx 2.8.9 (binary only)](../../docs/make/lynx.md)<a id='lynx'></a>**<br>
