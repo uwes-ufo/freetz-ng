@@ -5,50 +5,7 @@ cgi --id=uimods
 
 # for x in $(ctlmgr_ctl u | sed '1,2d'); do echo; ctlmgr_ctl u $x; done | tee uimods.txt
 uimods_listing() {
-cat << EOX
-	avm_pa:enable					0|1					AVM Packet Accelerator
-	box:allow_security_report_with_manufacturer	0|1					Ihre FRITZ!Box ist f&uuml;r AVM erreichbar, um ausgew&auml;hlte Diagnosedaten oder eine Diagnosezusammenfassung abzurufen.
-	box:allow_background_comm_with_manufacturer	0|1					FRITZ!Box sucht periodisch nach Updates
-	box:allow_cross_domain_comm			0|1					Bei Aufruf von www.avm.de darf AVM ger&auml;tespezifische Daten Ihrer FRITZ!Box auslesen
-	box:button_events_disable			0|1					Tastensperre
-	box:signed_firmware				0|1					Nagt mit Link zu hilfe_nichtsigniert.html in der Diagnose und macht sonstwas damit
-	boxusers:twofactor_auth_enabled			0|1					Nervige Zwei-Faktor Authentifizierung
-	emailnotify:crashreport_mode			to_support_only|disabled_by_user	Fehlerberichte automatisch an AVM senden
-	eth_ports:eee_off_for_all_ports			0|1					Energy Efficient Ethernet DEAKTIVIEREN
-	meshd:loop_prevention_state			0|1					Netzwerkschleifenverhinderung
-	sar:gpon_ploam_password				|					GPON ONT-Installationskennung
-	sar:gpon_reg_id					|					GPON Registrierungs-ID
-	sar:gpon_serial					|					GPON Seriennummer
-	sar:Annex					A|B
-	sar:vlan_id					0|7|8					PPPoE Vlan-ID
-	sar:MaxDownstreamRate
-	sar:MaxUpstreamRate
-	sar:DownstreamMarginOffset			-4|-3|-2|-1|0|1|2|3|4
-	sar:UpstreamMarginOffset			-4|-3|-2|-1|0|1|2|3|4
-	tr369:enable					0|1					Fernadministration des LAN durch den Provider
-	tr069:LabSupportEnable				0|1
-	tr069:LabUploadReqEnable			0|1
-	tr069:ACSInitiation_enable			0|1
-	tr069:suppress_autoFWUpdate_notify		0|1
-	tr069:fwupdate_available			0|1|2
-	tr069:upload_enable				0|1
-	tr069:FWdownload_enable				0|1
-	updatecheck:auto_update_all_enabled		0|1
-	updatecheck:auto_update_enabled			0|1
-	updatecheck:auto_update_check_enabled		0|1
-	updatecheck:auto_update_mode			update_all|update_important|check	neue FRITZ!OS-Versionen automatisch installieren
-	webui:expertmode				0|1
-	webui:ata_hidden				0|1
-	webui:lanbridges_gui_hidden			0|1
-	webui:voip_2ndPVC_hidden			0|1
-	webui:country_gui_hidden			0|1
-	webui:sid_timeout_minutes			20
-	wlan:ap_enabled					0|1					Wlan AP 1 (2,4 Ghz)
-	wlan:ap_enabled_scnd				0|1					Wlan AP 2 (5 GHz)
-	wlan:ap_enabled_thrd				0|1					Wlan AP 3
-	wlan:wps_enable					0|1					Wi-Fi Protected Setup
-	wlan:guest_ap_enabled				0|1					Wlan Guest
-EOX
+	. /etc/uimods.conf
 }
 
 uimods_request() {
@@ -129,8 +86,28 @@ table_end() {
 	sec_end
 }
 
+uimods_info() {
+cat << EOX
+<br>
+$(lang \
+  de:"Hier k&ouml;nnen interne Variablen ge&auml;ndert werden die im AVM Webinterface deaktiviert oder schwer zu finden sind." \
+  en:"You could change here internal variables which are disabled or hidden on the AVM web interface." \
+)
+$(lang \
+  de:"Das kann eine schlechte Idee sein! Vor dem Experimentieren sollte man unbedingt eine Konfigurationsicherung erstellen. Siehe auch" \
+  en:"This could be a very bad idea! You should create a settings backup before you start. See also" \
+)
+<a href='https://freetz-ng.github.io/freetz-ng/wiki/60_Development/uimods' target='_blank'>Wiki: UI-Module und ctlmgr_ctl</a>,
+$(lang \
+  de:"insbesondere der Punkt 'Alle Variablen'." \
+  en:"especially 'Alle Variablen' to find more variables." \
+)
+EOX
+}
+
 
 cgi_begin "$(lang de:"FOS UI-Module" en:"FOS UI-Modules")"
+uimods_info
 uimods_table
 cgi_end
 

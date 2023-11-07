@@ -47,6 +47,7 @@ Latest changes
 ### devel
 
  - Host tools:
+   * fakeroot 1.32.2
    * meson 1.2.3
 
  - Packages:
@@ -58,6 +59,7 @@ Latest changes
 
  - Libraries:
    * cairo 1.18.0
+   * libuv 1.44.2/1.47.0
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
