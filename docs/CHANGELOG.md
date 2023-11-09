@@ -55,11 +55,15 @@ Latest changes
    * CCID 1.5.4
    * Git 2.42.1
    * Lua 5.1.5/5.4.6
+   * OpenVPN 2.4.12/2.5.9/2.6.7
    * SQLite 3.44.0
+   * Unbound 1.19.0
 
  - Libraries:
    * cairo 1.18.0
    * libuv 1.44.2/1.47.0
+   * libmaxminddb 1.8.0
+   * mbedTLS 2.7.19/2.28.6
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

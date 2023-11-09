@@ -1429,13 +1429,22 @@ if [ "$DO_MOD" -gt 0 ]; then
 		rm -f "$DEPMOD_TEMP"
 		# add plugin kernel modules for 7270v1 if plugins are not enabled
 		if [ "$FREETZ_TYPE_7270_V1" == "y" -a "$FREETZ_AVMPLUGINS_INTEGRATE" != "y" ]; then
-			echo "kernel/drivers/net/rfcntl/rfcntl.ko: kernel/drivers/char/audio/avm_audio.ko" >> $MODULES_DIR/modules.dep
-			echo "kernel/drivers/char/audio/avm_audio.ko:" >> $MODULES_DIR/modules.dep
+			echo "kernel/drivers/net/rfcntl/rfcntl.ko: kernel/drivers/char/audio/avm_audio.ko" >> "$MODULES_DIR/modules.dep"
+			echo "kernel/drivers/char/audio/avm_audio.ko:" >> "$MODULES_DIR/modules.dep"
+		fi
+		if [ "$FREETZ_REPRODUCIBLE" == "y" ]; then
+			sort "$MODULES_DIR/modules.dep" | while read -r mod dep; do
+				echo -n "$mod"
+				echo "$dep" | sed 's/ /\n/g' | sort | while read line; do echo -n " $line"; done
+				echo
+			done > "$MODULES_DIR/modules.dep.reproducible"
+			cat "$MODULES_DIR/modules.dep.reproducible" > "$MODULES_DIR/modules.dep"
+			rm -f "$MODULES_DIR/modules.dep.reproducible"
 		fi
 	fi
 
-	kolinecnt="$(cat $MODULES_DIR/modules.dep | wc -l)"
-	kofilecnt="$(find $MODULES_DIR -type f -name '*.ko' | wc -l)"
+	kolinecnt="$(cat "$MODULES_DIR/modules.dep" | wc -l)"
+	kofilecnt="$(find "$MODULES_DIR" -type f -name '*.ko' | wc -l)"
 	echo1 "kernel modules installed: $kolinecnt entries in modules.dep and $kofilecnt .ko-files found."
 	if [ "$FREETZ_KERNEL_VERSION_2_6_28" == "y" ]; then
 		if [ "$FREETZ_REPLACE_KERNEL" != "y" ];then
@@ -1450,7 +1459,7 @@ if [ "$DO_MOD" -gt 0 ]; then
 	fi
 
 	echo1 "removing empty kernel module directories"
-	for dir in $(find ${MODULES_DIR} -type d -empty -delete -printf "%P\n"); do
+	for dir in $(find "${MODULES_DIR}" -type d -empty -delete -printf "%P\n"); do
 		echo2 $dir
 	done
 
@@ -1571,7 +1580,7 @@ if [ "$DO_MOD" -gt 0 ]; then
 	fi
 	if  [ "$FREETZ_STRIP_MODULES_ALL" == "y" ]; then
 		echo0 "stripping all kernel modules"
-		for i in $(find ${MODULES_DIR} -name '*.ko'); do
+		for i in $(find "${MODULES_DIR}" -name '*.ko'); do
 			echo2 $i
 			${ABS_BASE_DIR}/toolchain/kernel/bin/${FREETZ_KERNEL_CROSS}strip -p --strip-unneeded \
 			  --remove-section={.comment,.pdr,.mdebug.abi32,.note.gnu.build-id} $i
@@ -1809,6 +1818,14 @@ if [ "$action_names" ]; then
 	modmakedate="$(date +%Y%m%d-%H%M%S)"
 	modstring="$(get_modstring)"
 
+	if [ "$FREETZ_REPRODUCIBLE" != "y" ]; then
+		export_modmakedate="$modmakedate"
+		export_modstring="$modstring"
+	else
+		export_modmakedate="reproducible"
+		export_modstring="${modstring/$modmakedate/reproducible}"
+	fi
+
 	# collect externalized files
 	externalised_files=$(find "$EXTERNAL_MOD_DIR/" -type f 2>/dev/null | sed -e "/external[.]pkg/d;/[.]external/d;s,$EXTERNAL_MOD_DIR/,,")
 
@@ -1820,8 +1837,8 @@ if [ "$action_names" ]; then
 		echo "export FREETZ_INFO_FIRMWAREVERSION='${AVM_FW_VERSION}'" >> "$freetz_info_file"
 		echo "export FREETZ_INFO_VERSION='${FREETZ_VERSION}'" >> "$freetz_info_file"
 		echo "export FREETZ_INFO_LANG='${FREETZ_TYPE_LANGUAGE}'" >> "$freetz_info_file"
-		echo "export FREETZ_INFO_MAKEDATE='${modmakedate}'" >> "$freetz_info_file"
-		echo "export FREETZ_INFO_IMAGE_NAME='${modstring}.image'" >> "$freetz_info_file"
+		echo "export FREETZ_INFO_MAKEDATE='${export_modmakedate}'" >> "$freetz_info_file"
+		echo "export FREETZ_INFO_IMAGE_NAME='${export_modstring}.image'" >> "$freetz_info_file"
 		echo "export FREETZ_INFO_COMMENT='${FREETZ_USER_DEFINED_COMMENT}'" >> "$freetz_info_file"
 		echo "export FREETZ_INFO_EXTERNAL_FILES='${externalised_files}'" >> "$freetz_info_file"
 	fi
