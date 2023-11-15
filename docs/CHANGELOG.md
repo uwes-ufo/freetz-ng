@@ -47,6 +47,7 @@ Latest changes
 ### devel
 
  - Host tools:
+   * cmake 3.27.8
    * fakeroot 1.32.2
    * meson 1.2.3
    * precompiled host-tools 2023-11-13
@@ -63,6 +64,7 @@ Latest changes
 
  - Libraries:
    * cairo 1.18.0
+   * harfbuzz 8.3.0
    * libuv 1.44.2/1.47.0
    * libmaxminddb 1.8.0
    * mbedTLS 2.7.19/2.28.6
