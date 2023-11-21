@@ -49,24 +49,26 @@ Latest changes
  - Host tools:
    * cmake 3.27.8
    * fakeroot 1.32.2
-   * meson 1.2.3
+   * meson 1.3.0
    * precompiled host-tools 2023-11-13
 
  - Packages:
    * BIND 9.11.37/9.16.44
    * CCID 1.5.4
-   * Git 2.42.1
+   * Git 2.43.0
    * Lua 5.1.5/5.4.6
-   * OpenVPN 2.4.12/2.5.9/2.6.7
+   * OpenVPN 2.4.12/2.5.9/2.6.8
    * SQLite 3.44.0
-   * Tor 0.4.8.8
+   * Tor 0.4.8.9
    * Unbound 1.19.0
+   * xsltproc 1.1.39
 
  - Libraries:
    * cairo 1.18.0
    * harfbuzz 8.3.0
-   * libuv 1.44.2/1.47.0
    * libmaxminddb 1.8.0
+   * libuv 1.44.2/1.47.0
+   * libxml2 2.11.5
    * mbedTLS 2.7.19/2.28.6
 
  - Firmware updates:
