@@ -49,7 +49,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     This package adds support for the AVM BlueFRITZ! USB stick.
 
   * **[BIND 9.11.37/9.16.45](bind.md)<a id='bind'></a>**<br>
-    BIND is an implementation of the Domain Name System (DNS) protocols. The name BIND stands for "Berkeley Internet Name Daemon". You have to provide the config and needed zone files yourself.
+    BIND is a suite of software for interacting with the Domain Name System (DNS). The name BIND stands for "Berkeley Internet Name Daemon".
 
   * **[Bip 0.9.2](bip.md)<a id='bip'></a>**<br>
     Bip is an IRC proxy, which means it keeps connected to your preferred IRC servers, can store the logs for you, and even send them back to your IRC client(s) upon connection. You may want to use bip to keep your logfiles (in a unique format and on a unique computer) whatever your client is, when you connect from multiple workstations, or when you simply want to have a playback of what was said while you were away.
@@ -514,7 +514,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[psl 0.21.2 (binary only)](psl.md)<a id='psl'></a>**<br>
     Public Suffix List library functions This includes psl binary and public_suffix_list.dat
 
-  * **[pyLoad 0.4.20/9b358adf](pyload.md)<a id='pyload'></a>**<br>
+  * **[pyLoad 0.4.20/78162d75](pyload.md)<a id='pyload'></a>**<br>
     pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links.
 
   * **[Python 2.7.18](python.md)<a id='python'></a>**<br>
