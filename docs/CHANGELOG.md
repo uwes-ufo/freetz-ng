@@ -47,13 +47,13 @@ Latest changes
 ### devel
 
  - Host tools:
-   * cmake 3.27.8
+   * cmake 3.27.9
    * fakeroot 1.32.2
    * meson 1.3.0
    * precompiled host-tools 2023-11-13
 
  - Packages:
-   * BIND 9.11.37/9.16.44
+   * BIND 9.11.37/9.16.45
    * CCID 1.5.4
    * Git 2.43.0
    * Lua 5.1.5/5.4.6
