@@ -56,6 +56,7 @@ Latest changes
  - Packages:
    * BIND 9.11.37/9.16.45
    * CCID 1.5.4
+   * Curl 8.5.0
    * Git 2.43.0
    * Lua 5.1.5/5.4.6
    * OpenVPN 2.4.12/2.5.9/2.6.8
@@ -63,6 +64,7 @@ Latest changes
    * pyLoad 0.4.20/78162d75
    * SQLite 3.44.2
    * Tor 0.4.8.9
+   * Transmission 3.00/4.0.5
    * Unbound 1.19.0
    * xsltproc 1.1.39
 
