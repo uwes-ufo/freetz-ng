@@ -65,6 +65,7 @@ Latest changes
    * Git 2.43.0
    * Lua 5.1.5/5.4.6
    * minicom 2.9
+   * OpenSSH 9.3p2/9.6p1
    * OpenVPN 2.4.12/2.5.9/2.6.8
    * PCSC-lite 2.0.1
    * pyLoad 0.4.20/78162d75
@@ -72,12 +73,14 @@ Latest changes
    * Tor 0.4.8.10
    * Transmission 3.00/4.0.5
    * Unbound 1.19.0
+   * Vim 9.1.0000
    * xsltproc 1.1.39
 
  - Libraries:
    * cairo 1.18.0
    * harfbuzz 8.3.0
    * libmaxminddb 1.8.0
+   * libtirpc 1.3.4
    * libuv 1.44.2/1.47.0
    * libxml2 2.11.5
    * mbedTLS 2.7.19/2.28.6

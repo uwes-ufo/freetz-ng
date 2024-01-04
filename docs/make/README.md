@@ -459,7 +459,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Openntpd 3.9p1](openntpd.md)<a id='openntpd'></a>**<br>
     OpenNTPD is a FREE, easy to use implementation of the Network Time Protocol. This package automatically removes AVM'S chronyd if necessary.
 
-  * **[OpenSSH 9.3p2/9.5p1](openssh.md)<a id='openssh'></a>**<br>
+  * **[OpenSSH 9.3p2/9.6p1](openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.12 (binary only)](openssl.md)<a id='openssl'></a>**<br>
@@ -739,7 +739,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### V
 
-  * **[Vim 9.0.1872 (binary only)](vim.md)<a id='vim'></a>**<br>
+  * **[Vim 9.1.0000 (binary only)](vim.md)<a id='vim'></a>**<br>
     An improved version of VI
 
   * **[vnstat 1.18 (binary only)](vnstat.md)<a id='vnstat'></a>**<br>
