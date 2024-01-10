@@ -64,6 +64,7 @@ Latest changes
    * CCID 1.5.4
    * Curl 8.5.0
    * Git 2.43.0
+   * htop 1.0.3/3.3.0
    * Lua 5.1.5/5.4.6
    * minicom 2.9
    * OpenSSH 9.3p2/9.6p1
@@ -80,7 +81,7 @@ Latest changes
  - Libraries:
    * cairo 1.18.0
    * harfbuzz 8.3.0
-   * libmaxminddb 1.8.0
+   * libmaxminddb 1.9.1
    * libtirpc 1.3.4
    * libuv 1.44.2/1.47.0
    * libxml2 2.12.3
@@ -365,7 +366,7 @@ Latest changes
    * getdns 1.7.3
    * Git 2.40.0
    * HAProxy 2.6.9
-   * htop 1.0.3/2.3.2
+   * htop 1.0.3/3.2.2
    * htpdate 1.3.7
    * IGMPproxy 0.4
    * ImageMagick 7.1.0-57
@@ -517,7 +518,7 @@ Latest changes
    * Git 2.37.0
    * HAProxy 2.6.1
    * htpdate 1.3.4
-   * htop 1.0.3/2.3.1
+   * htop 1.0.3/3.2.1
    * juis_check 1.2
    * libcap 2.49/2.64
    * libgcrypt 1.10.1
