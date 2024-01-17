@@ -72,7 +72,7 @@ Latest changes
    * PCSC-lite 2.0.1
    * pyLoad 0.4.20/78162d75
    * Subversion 1.9.12/1.14.3
-   * SQLite 3.44.2
+   * SQLite 3.45.0
    * Tor 0.4.8.10
    * Transmission 3.00/4.0.5
    * Unbound 1.19.0
@@ -85,7 +85,7 @@ Latest changes
    * libmaxminddb 1.9.1
    * libtirpc 1.3.4
    * libuv 1.44.2/1.47.0
-   * libxml2 2.12.3
+   * libxml2 2.12.4
    * mbedTLS 2.7.19/2.28.6
 
  - Firmware updates:
