@@ -229,17 +229,17 @@ image() {
 		SIZEKD="$(($SIZE_K1 - $SIZE_K2))"
 		SIZEFD="$(($SIZE_F1 - $SIZE_F2))"
 		if [ "$FLV_FIT" == "1" ]; then
-			FLV=6 # fit
+			FLV=5 # fit
 		elif [ "$FLV_IUI" == "1" ]; then
-			FLV=5 # umig
+			FLV=4 # umig
 		elif [ "$SIZE_F1" == "0" ]; then
-			FLV=2 # most
+			FLV=1 # single (+alice)
 		elif [ "$SIZEKD" == "8" -a "$SIZEFD" == "8" ]; then
-			FLV=3 # nand
+			FLV=2 # ram
 		elif [ "${SIZEKD#-}" -lt 192 -a "${SIZEFD#-}" -lt 446 ]; then
-			FLV=4 # docsis
+			FLV=3 # dual
 		else
-			FLV=1 # old
+			FLV=0 # unknown
 		fi
 		echo "firmware layout v$FLV" >> "$nfo"
 
