@@ -77,7 +77,7 @@ Latest changes
    * OpenSSH 9.3p2/9.6p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.13
    * OpenVPN 2.4.12/2.5.9/2.6.8
-   * PCSC-lite 2.0.1
+   * PCSC-lite 1.9.5/2.0.1
    * ProxyChains-NG 4.17
    * pyLoad 0.4.20/78162d75
    * socat 1.7.4.4
@@ -96,6 +96,7 @@ Latest changes
    * harfbuzz 8.3.0
    * libmaxminddb 1.9.1
    * libtirpc 1.3.4
+   * libusb1 1.0.23/1.0.27
    * libuv 1.44.2/1.47.0
    * libxml2 2.12.4
    * mbedTLS 2.7.19/2.28.7
