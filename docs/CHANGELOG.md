@@ -85,7 +85,7 @@ Latest changes
    * socat 1.7.4.4
    * Stunnel 5.72
    * Subversion 1.9.12/1.14.3
-   * SQLite 3.45.0
+   * SQLite 3.45.1
    * strace 4.9/5.0/6.7
    * Tor 0.4.8.10
    * Transmission 3.00/4.0.5
@@ -96,6 +96,7 @@ Latest changes
 
  - Libraries:
    * cairo 1.18.0
+   * expat 2.6.0
    * harfbuzz 8.3.0
    * libmaxminddb 1.9.1
    * libtirpc 1.3.4
