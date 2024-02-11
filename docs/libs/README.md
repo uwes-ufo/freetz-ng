@@ -161,7 +161,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libgsm (libgsm.so) 1.0.13](libgsm.md)<a id='libgsm'></a>**<br>
     This package contains runtime shared libraries for libgsm, an implementation of the European GSM 06.10 provisional standard for full-rate speech transcoding, prI-ETS 300 036, which uses RPE/LTP (residual pulse excitation/long term prediction) coding at 13 kbit/s.
 
-  * **[libid3tag (libid3tag.so) 0.15.1b](libid3tag.md)<a id='libid3tag'></a>**<br>
+  * **[libid3tag (libid3tag.so) 0.16.3](libid3tag.md)<a id='libid3tag'></a>**<br>
     ID3 tag manipulation library
 
   * **[libidn (libidn.so) 1.41](libidn.md)<a id='libidn'></a>**<br>
@@ -188,7 +188,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libogg (libogg.so) 1.3.2](libogg.md)<a id='libogg'></a>**<br>
     Libogg is a library for manipulating ogg bitstreams. It handles both making ogg bitstreams and getting packets from ogg bitstreams.
 
-  * **[libonig: Oniguruma (libonig.so) 6.7.1](libonig.md)<a id='libonig'></a>**<br>
+  * **[libonig: Oniguruma (libonig.so) 6.9.9](libonig.md)<a id='libonig'></a>**<br>
     Oniguruma is a modern and flexible regular expressions library. It encompasses features from different regular expression implementations that traditionally exist in different languages. It comes close to being a complete superset of all regular expression features found in other regular expression implementations.
 
   * **[liboping (liboping.so) 1.6.1](liboping.md)<a id='liboping'></a>**<br>
@@ -227,7 +227,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libusb1: libusb-1.0 (libusb-1.0.so) 1.0.23/1.0.27](libusb1.md)<a id='libusb1'></a>**<br>
     A library for accessing Linux USB devices (current API).
 
-  * **[libuv (libuv.so) 1.44.2/1.47.0](libuv.md)<a id='libuv'></a>**<br>
+  * **[libuv (libuv.so) 1.44.2/1.48.0](libuv.md)<a id='libuv'></a>**<br>
     libuv is a async IO library for various programs
 
   * **[libvorbis (libvorbis.so) 1.3.5](libvorbis.md)<a id='libvorbis'></a>**<br>

@@ -47,6 +47,7 @@ Latest changes
 ### devel
 
  - Build system:
+   * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.42.x
    * Ccache 4.9.1
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.45
 
@@ -59,9 +60,11 @@ Latest changes
    * ncftp 3.2.7
    * netkit-ftp 0.17-35
    * openssl 3.0.13
+   * patchelf 0.14.5/0.18.0
+   * pkgconf 2.1.1
    * precompiled host-tools 2024-02-06
    * precompiled toolchains r22972
-   * python 3.11.7
+   * python 3.11.8
    * tar 1.35
    * xz 5.4.6
 
@@ -70,8 +73,9 @@ Latest changes
    * CA-bundle 2023-12-12
    * CCID 1.5.4
    * Curl 8.5.0
-   * Git 2.43.0
+   * Git 2.43.1
    * htop 1.0.3/3.3.0
+   * jq 1.7.1
    * Lighttpd 1.4.73
    * Lua 5.1.5/5.4.6
    * minicom 2.9
@@ -98,10 +102,12 @@ Latest changes
    * cairo 1.18.0
    * expat 2.6.0
    * harfbuzz 8.3.0
+   * libid3tag 0.16.3
    * libmaxminddb 1.9.1
+   * libonig 6.9.9
    * libtirpc 1.3.4
    * libusb1 1.0.23/1.0.27
-   * libuv 1.44.2/1.47.0
+   * libuv 1.44.2/1.48.0
    * libxml2 2.12.5
    * mbedTLS 2.7.19/2.28.7
    * zlib 1.3.1
