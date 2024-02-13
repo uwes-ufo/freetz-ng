@@ -68,10 +68,11 @@ Latest changes
    * xz 5.4.6
 
  - Packages:
-   * BIND 9.11.37/9.16.45
+   * BIND 9.11.37/9.16.48
    * CA-bundle 2023-12-12
    * CCID 1.5.4
    * Curl 8.5.0
+   * Dnsmasq 2.80/2.90
    * Git 2.43.1
    * htop 1.0.3/3.3.0
    * jq 1.7.1
@@ -81,7 +82,7 @@ Latest changes
    * NcFTP 3.2.7
    * OpenSSH 9.3p2/9.6p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.13
-   * OpenVPN 2.4.12/2.5.9/2.6.8
+   * OpenVPN 2.4.12/2.5.9/2.6.9
    * PCSC-lite 1.9.5/2.0.1
    * ProxyChains-NG 4.17
    * pyLoad 0.4.20/78162d75
@@ -90,9 +91,10 @@ Latest changes
    * Subversion 1.9.12/1.14.3
    * SQLite 3.45.1
    * strace 4.9/5.0/6.7
+   * tmux 3.4
    * Tor 0.4.8.10
    * Transmission 3.00/4.0.5
-   * Unbound 1.19.0
+   * Unbound 1.19.1
    * Vim 9.1.0000
    * xsltproc 1.1.39
    * XZ Utils 5.4.6
