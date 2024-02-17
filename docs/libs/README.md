@@ -76,7 +76,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[jansson: libjansson (libjansson.so) 2.7](jansson.md)<a id='jansson'></a>**<br>
     A C library for encoding, decoding and manipulating JSON data.
 
-  * **[JPEG library (libjpeg.so) 9e](jpeg.md)<a id='jpeg'></a>**<br>
+  * **[JPEG library (libjpeg.so) 9f](jpeg.md)<a id='jpeg'></a>**<br>
     libjpeg is a library for handling the JPEG (JFIF) image format
 
 ### L
@@ -140,7 +140,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libexif: EXIF library (libexif.so) 0.6.24](libexif.md)<a id='libexif'></a>**<br>
     libexif is a library for parsing, editing, and saving EXIF data.
 
-  * **[libffi (libffi.so) 3.4.4](libffi.md)<a id='libffi'></a>**<br>
+  * **[libffi (libffi.so) 3.4.5](libffi.md)<a id='libffi'></a>**<br>
     libffi is a library that really only provides the lowest, machine dependent layer of a fully featured foreign function interface. A layer must exist above libffi that handles type conversions for values passed between the two languages. ffi stands for Foreign Function Interface. A foreign function interface is the popular name for the interface that allows code written in one language to call code written in another language.
 
   * **[libftdi (libftdi.so) 0.20](libftdi.md)<a id='libftdi'></a>**<br>
@@ -294,7 +294,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pcre: libpcre (libpcre.so) 8.45](pcre.md)<a id='pcre'></a>**<br>
     A Perl Compatible Regular Expression library
 
-  * **[pcre2: libpcre2 (libpcre2-8.so) 10.42](pcre2.md)<a id='pcre2'></a>**<br>
+  * **[pcre2: libpcre2 (libpcre2-8.so) 10.43](pcre2.md)<a id='pcre2'></a>**<br>
     A Perl Compatible Regular Expression library
 
   * **[Pixman (libpixman-1.so) 0.42.2](pixman.md)<a id='pixman'></a>**<br>

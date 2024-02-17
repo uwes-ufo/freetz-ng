@@ -65,6 +65,7 @@ Latest changes
    * precompiled toolchains r22972
    * python 3.11.8
    * tar 1.35
+   * u-boot 2024.01
    * xz 5.4.6
 
  - Packages:
@@ -75,7 +76,9 @@ Latest changes
    * Dnsmasq 2.80/2.90
    * Git 2.43.2
    * htop 1.0.3/3.3.0
+   * jpeg 9f
    * jq 1.7.1
+   * LCD4linux 3fce054e
    * Lighttpd 1.4.73
    * Lua 5.1.5/5.4.6
    * mc (Midnight Commander) 4.8.31
@@ -105,6 +108,7 @@ Latest changes
  - Libraries:
    * cairo 1.18.0
    * expat 2.6.0
+   * libffi 3.4.5
    * harfbuzz 8.3.0
    * libid3tag 0.16.3
    * libmaxminddb 1.9.1
@@ -114,6 +118,7 @@ Latest changes
    * libuv 1.44.2/1.48.0
    * libxml2 2.12.5
    * mbedTLS 2.7.19/2.28.7
+   * pcre2 10.43
    * zlib 1.3.1
 
  - Firmware updates:
