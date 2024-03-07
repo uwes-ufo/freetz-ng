@@ -55,7 +55,7 @@ Latest changes
    * autoconf 2.72
    * cmake 3.28.3
    * dos2unix 7.5.2
-   * fakeroot 1.33
+   * fakeroot 1.34
    * kconfig 6.7
    * meson 1.3.2
    * ncftp 3.2.7
@@ -101,7 +101,7 @@ Latest changes
    * tmux 3.4
    * Tor 0.4.8.10
    * Transmission 3.00/4.0.5
-   * Unbound 1.19.1
+   * Unbound 1.19.2
    * vermagic D1W0U
    * Vim 9.1.0000
    * xsltproc 1.1.39
