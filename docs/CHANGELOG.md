@@ -56,7 +56,7 @@ Latest changes
    * cmake 3.28.3
    * dos2unix 7.5.2
    * fakeroot 1.34
-   * kconfig 6.7
+   * kconfig 6.8
    * meson 1.3.2
    * ncftp 3.2.7
    * netkit-ftp 0.17-35
@@ -67,7 +67,7 @@ Latest changes
    * python 3.11.8
    * tar 1.35
    * u-boot 2024.01
-   * xz 5.4.6
+   * xz 5.6.1
 
  - Packages:
    * BIND 9.11.37/9.16.48
@@ -105,7 +105,7 @@ Latest changes
    * vermagic D1W0U
    * Vim 9.1.0000
    * xsltproc 1.1.39
-   * XZ Utils 5.4.6
+   * XZ Utils 5.6.1
 
  - Libraries:
    * cairo 1.18.0
