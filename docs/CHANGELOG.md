@@ -71,7 +71,8 @@ Latest changes
 
  - Packages:
    * BIND 9.11.37/9.16.48
-   * CA-bundle 2023-12-12
+   * BIRD 1.6.8/2.15
+   * CA-bundle 2024-03-11
    * CCID 1.5.4
    * Curl 8.5.0
    * Dnsmasq 2.80/2.90
@@ -109,7 +110,7 @@ Latest changes
 
  - Libraries:
    * cairo 1.18.0
-   * expat 2.6.1
+   * expat 2.6.2
    * libffi 3.4.6
    * harfbuzz 8.3.0
    * libid3tag 0.16.3

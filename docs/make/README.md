@@ -54,7 +54,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Bip 0.9.2](bip.md)<a id='bip'></a>**<br>
     Bip is an IRC proxy, which means it keeps connected to your preferred IRC servers, can store the logs for you, and even send them back to your IRC client(s) upon connection. You may want to use bip to keep your logfiles (in a unique format and on a unique computer) whatever your client is, when you connect from multiple workstations, or when you simply want to have a playback of what was said while you were away.
 
-  * **[BIRD 1.6.8](bird.md)<a id='bird'></a>**<br>
+  * **[BIRD 1.6.8/2.15](bird.md)<a id='bird'></a>**<br>
     The BIRD Internet Routing Daemon
 
   * **<u>bittwist 1.1 (binary only)</u><a id='bittwist'></a>**<br>
@@ -74,7 +74,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[CA-bundle 2023-12-12](ca-bundle.md)<a id='ca-bundle'></a>**<br>
+  * **[CA-bundle 2024-03-11](ca-bundle.md)<a id='ca-bundle'></a>**<br>
     The Mozilla CA certificate store in PEM format, see https://www.curl.se/docs/caextract.html Size of uncompressed file is about 250 KB.
 
   * **[Callmonitor 1.20.9-git](callmonitor.md)<a id='callmonitor'></a>**<br>

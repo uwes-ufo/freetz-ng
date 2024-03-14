@@ -74,7 +74,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Networks](../../docs/make/bip.md#networks)
      - [Users](../../docs/make/bip.md#users)
 
-  * **[BIRD 1.6.8](../../docs/make/bird.md)<a id='bird'></a>**<br>
+  * **[BIRD 1.6.8/2.15](../../docs/make/bird.md)<a id='bird'></a>**<br>
     The BIRD Internet Routing Daemon
 
   * **<u>bittwist 1.1 (binary only)</u><a id='bittwist'></a>**<br>
@@ -101,7 +101,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[CA-bundle 2023-12-12](../../docs/make/ca-bundle.md)<a id='ca-bundle'></a>**<br>
+  * **[CA-bundle 2024-03-11](../../docs/make/ca-bundle.md)<a id='ca-bundle'></a>**<br>
     The Mozilla CA certificate store in PEM format, see https://www.curl.se/docs/caextract.html Size of uncompressed file is about 250 KB.
 
   * **[Callmonitor 1.20.9-git](../../docs/make/callmonitor.md)<a id='callmonitor'></a>**<br>
