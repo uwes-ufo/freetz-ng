@@ -986,7 +986,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UNFS3 0.9.23](../../docs/make/unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **[UnRAR 6.1.7/6.2.12 (binary only)](../../docs/make/unrar.md)<a id='unrar'></a>**<br>
+  * **[UnRAR 6.1.7/7.0.7 (binary only)](../../docs/make/unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **[usbids: usb.ids a5edeafb60](../../docs/make/usbids.md)<a id='usbids'></a>**<br>
@@ -997,7 +997,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### V
 
-  * **[Vim 9.1.0000 (binary only)](../../docs/make/vim.md)<a id='vim'></a>**<br>
+  * **[Vim 9.1.0181 (binary only)](../../docs/make/vim.md)<a id='vim'></a>**<br>
     An improved version of VI
 
   * **[vnStat 1.18 (binary only)](../../docs/make/vnstat.md)<a id='vnstat'></a>**<br>
