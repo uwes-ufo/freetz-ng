@@ -142,7 +142,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only)](../../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 8.5.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
+  * **[Curl 8.6.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -391,7 +391,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Security](../../docs/make/iodine.md#security)
      - [Forwarding](../../docs/make/iodine.md#forwarding)
 
-  * **[iPerf3 3.3/3.15 (binary only)](../../docs/make/iperf.md)<a id='iperf'></a>**<br>
+  * **[iPerf3 3.3/3.16 (binary only)](../../docs/make/iperf.md)<a id='iperf'></a>**<br>
     iPerf3 is a tool for active measurements of the maximum achievable bandwidth on IP networks. It supports tuning of various parameters related to timing, buffers and protocols (TCP, UDP, SCTP with IPv4 and IPv6). For each test it reports the bandwidth, loss, and other parameters. S. https://github.com/esnet/iperf for more details.
 
   * **<u>IPsec-tools 0.7.2</u><a id='ipsec-tools'></a>**<br>
@@ -437,7 +437,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>lftp 4.8.4 (binary only)</u><a id='lftp'></a>**<br>
     LFTP is sophisticated file transfer program with command line interface. It supports FTP, HTTP, FISH, SFTP, HTTPS and FTPS protocols. GNU Readline library is used for input.
 
-  * **[Lighttpd 1.4.74](../../docs/make/lighttpd.md)<a id='lighttpd'></a>**<br>
+  * **[Lighttpd 1.4.75](../../docs/make/lighttpd.md)<a id='lighttpd'></a>**<br>
     Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver; as it is designed and optimized for high performance environments. With a small memory footprint compared to other web-servers, effective management of the cpu-load, and advanced feature set (FastCGI, SCGI, Auth, Output-Compression, URL-Rewriting and many more) lighttpd is the perfect solution for every server that is suffering load problems. In case you want to configure virtual hosts, you may want to consider the package onlinechanged-cgi which allows you to configure multiple DynDNS entries for your box.
      - [Einrichtung](../../docs/make/lighttpd.md#einrichtung)
      - [Perl](../../docs/make/lighttpd.md#perl)
@@ -448,7 +448,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Lua 5.1.5/5.4.6 (binary only)](../../docs/make/lua.md)<a id='lua'></a>**<br>
     Lua Scripting Language. Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. Lua combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode with a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
-  * **[Lynx 2.8.9 (binary only)](../../docs/make/lynx.md)<a id='lynx'></a>**<br>
+  * **[Lynx 2.9.0 (binary only)](../../docs/make/lynx.md)<a id='lynx'></a>**<br>
     Lynx text mode web browser Lynx is a fully-featured World Wide Web (WWW) client for users running cursor-addressable, character-cell display devices (e.g., vt100 terminals, vt100 emulators running on PCs or Macs, or any other character-cell display). It will display HTML documents containing links to files on the local system, as well as files on remote systems running http, gopher, ftp, wais, nntp, finger, or cso/ph/qi servers, and services accessible via logins to telnet, tn3270 or rlogin accounts.
 
 ### M
@@ -621,7 +621,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Fehlerbehebung](../../docs/make/openntpd.md#fehlerbehebung)
      - [Alternative](../../docs/make/openntpd.md#alternative)
 
-  * **[OpenSSH 9.3p2/9.6p1](../../docs/make/openssh.md)<a id='openssh'></a>**<br>
+  * **[OpenSSH 9.3p2/9.7p1](../../docs/make/openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.13 (binary only)](../../docs/make/openssl.md)<a id='openssl'></a>**<br>
@@ -980,7 +980,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>uMurmur 0.2.20</u><a id='umurmur'></a>**<br>
     umurmur is a minimalistic Mumble server primarily targeted to run on routers using less resources. It targets to fill the needs of a pretty small group of users communicating, which in part originates from the other goal of working well on a small system with a limited CPU and limited amount of disk space. It also aims to minimize writing to the disk since these kinds of systems usually only has a flash memory for disk. umurmur supports a subset of the features of Murmur. https://github.com/umurmur/umurmur
 
-  * **[Unbound 1.19.2](../../docs/make/unbound.md)<a id='unbound'></a>**<br>
+  * **[Unbound 1.19.3](../../docs/make/unbound.md)<a id='unbound'></a>**<br>
     Unbound is designed as a set of modular components, so that also DNSSEC (secure DNS) validation and stub-resolvers (that do not run as a server, but are linked into an application) are easily possible.
 
   * **[UNFS3 0.9.23](../../docs/make/unfs3.md)<a id='unfs3'></a>**<br>
@@ -1022,7 +1022,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### W
 
-  * **[Wget GNU 1.21.4 (binary only)](../../docs/make/wget.md)<a id='wget'></a>**<br>
+  * **[Wget 1.24.5 (binary only)](../../docs/make/wget.md)<a id='wget'></a>**<br>
     GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals, etc.
 
   * **[wireguard-tools 1.0.20210914](../../docs/make/wireguard.md)<a id='wireguard'></a>**<br>

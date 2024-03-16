@@ -57,7 +57,7 @@ Latest changes
    * dos2unix 7.5.2
    * fakeroot 1.34
    * kconfig 6.8
-   * meson 1.3.2
+   * meson 1.4.0
    * ncftp 3.2.7
    * netkit-ftp 0.17-35
    * openssl 3.0.13
@@ -74,21 +74,23 @@ Latest changes
    * BIRD 1.6.8/2.15
    * CA-bundle 2024-03-11
    * CCID 1.5.4
-   * Curl 8.5.0
+   * Curl 8.6.0
    * Dnsmasq 2.80/2.90
    * Git 2.44.0
    * HAProxy 2.6.16
    * htop 1.0.3/3.3.0
+   * iPerf3 3.3/3.16
    * jpeg 9f
    * jq 1.7.1
    * LCD4linux 3fce054e
-   * Lighttpd 1.4.74
+   * Lighttpd 1.4.75
    * Lua 5.1.5/5.4.6
+   * Lynx 2.9.0
    * mc (Midnight Commander) 4.8.31
    * minicom 2.9
    * minisatip 1.0.4/1.3.4
    * NcFTP 3.2.7
-   * OpenSSH 9.3p2/9.6p1
+   * OpenSSH 9.3p2/9.7p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.13
    * OpenVPN 2.4.12/2.5.9/2.6.9
    * PCSC-lite 1.9.5/2.0.1
@@ -102,10 +104,11 @@ Latest changes
    * tmux 3.4
    * Tor 0.4.8.10
    * Transmission 3.00/4.0.5
-   * Unbound 1.19.2
+   * Unbound 1.19.3
    * UnRAR 6.1.7/7.0.7
    * vermagic D1W0U
    * Vim 9.1.0181
+   * Wget 1.24.5
    * xsltproc 1.1.39
    * XZ Utils 5.6.1
 
