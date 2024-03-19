@@ -4,6 +4,7 @@ Latest changes
 
 - Freetz-NG
   * [devel](#devel)
+  * [ng24030](#ng24030)
   * [ng23110](#ng23110)
   * [ng23080](#ng23080)
   * [ng23050](#ng23050)
@@ -46,6 +47,11 @@ Latest changes
 
 ### devel
 
+ - Firmware updates:
+   * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+
+### ng24030
+
  - Build system:
    * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.42.x
    * Ccache 4.9.1
@@ -62,7 +68,7 @@ Latest changes
    * netkit-ftp 0.17-35
    * openssl 3.0.13
    * pkgconf 2.1.1
-   * precompiled host-tools 2024-03-07
+   * precompiled host-tools 2024-03-18
    * precompiled toolchains r23270
    * python 3.11.8
    * tar 1.35
@@ -99,7 +105,7 @@ Latest changes
    * socat 1.7.4.4
    * Stunnel 5.72
    * Subversion 1.9.12/1.14.3
-   * SQLite 3.45.1
+   * SQLite 3.45.2
    * strace 4.9/5.0/6.7
    * tmux 3.4
    * Tor 0.4.8.10
@@ -116,7 +122,7 @@ Latest changes
    * cairo 1.18.0
    * expat 2.6.2
    * libffi 3.4.6
-   * harfbuzz 8.3.0
+   * harfbuzz 8.3.1
    * libid3tag 0.16.3
    * libmaxminddb 1.9.1
    * libonig 6.9.9
@@ -130,7 +136,7 @@ Latest changes
    * zlib 1.3.1
 
  - Firmware updates:
-   * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+   * Please see [FIRMWARES](https://github.com/Freetz-NG/freetz-ng/blob/ng24030/docs/FIRMWARES.md) for the list of supported devices and firmwares.
 
 ### ng23110
 
