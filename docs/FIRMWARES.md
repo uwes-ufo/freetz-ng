@@ -170,6 +170,8 @@ Currently supported devices and firmwares
   - 252.07.15 rev78740 {GER} [6660 FCS]
   - 252.07.29 rev92037 {GER} [PSQ19P2NL4]
   - 252.07.57 rev107842 {GER} [MOVE21NL1]
+* __Fritz!Box 6670 Cable (UNTESTED)__
+  - 284.07.61 rev110965 {GER} [FCS23]
 * __Fritz!Box 6690 Cable__
   - 267.07.29 rev92355 {GER} [PSQ19P2NL4]
   - 267.07.57 rev109915 {GER} [MOVE21NL1]
@@ -205,7 +207,7 @@ Currently supported devices and firmwares
 
 * __Fritz!Box 6850 LTE__
   - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
-  - 262.07.57 rev107910 {ALL} [MOVE21NL1]
+  - 262.07.58 rev111451 {ALL} [MOVE21NL1]
 * __Fritz!Box 6850 5G (UNTESTED)__
   - 258.07.30 rev94600 {ALL} [PSQ19P2NL4]
   - 258.07.57 rev107917 {ALL} [MOVE21NL1]
@@ -496,7 +498,7 @@ Currently supported devices and firmwares
   - 134.06.50 rev33858 {ALL}
   - 134.07.01 rev63070 {ALL}
   - 134.07.12 rev70775 {ALL} [MESH18 NL2]
-  - 134.07.31 rev107923 {ALL} [WU22 PSQ19]
+  - 134.07.32 rev111816 {ALL} [WU22 PSQ19]
 
 * __Fritz!Repeater 1200__
   - 172.07.14 rev73941 {ALL} [MESH18 NL4]
