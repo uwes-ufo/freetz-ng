@@ -903,15 +903,15 @@ config FREETZ_REMOVE_TR069_FWUPDATE
 	depends on !FREETZ_AVM_HAS_PLUGINS_UPDATE || FREETZ_AVMPLUGINS_INTEGRATE
 	default n
 	help
-		Removes the file /usr/bin/tr069fwupdate, needed for
-		updating the firmware of dect devices.
+		Removes the file /usr/bin/tr069fwupdate or /usr/bin/fwupdate,
+		needed for updating the firmware of dect devices.
 
 config FREETZ_REMOVE_TR069_HTTPSDL
 	bool "Remove httpsdl"
 	depends on FREETZ_REMOVE_TR069 && FREETZ_AVM_HAS_TR069_FWUPDATE && FREETZ_REMOVE_TR069_FWUPDATE
 	default y
 	help
-		Removes the file /usr/bin/httpsdl, used by:
+		Removes the file /usr/bin/httpsdl or /usr/bin/webget, used by:
 		* tr069/fwupdate, you have removed it
 		* firmware updater, with Freetz you don't want it
 		* live-pictures from door clock (TFE)

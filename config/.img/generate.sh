@@ -535,6 +535,7 @@ determine_() {
 	#INETD
 	P=INETD
 	X="$(sed -rn "s/^export CONFIG_$P=\"?([^\"])\"?.*$/\1/p" "$unpacked/etc/init.d/rc.conf" | head -n1)"
+	[ "$X" != "y" ] && [ -e "$unpacked/usr/sbin/inetd" ] && X="y"
 	[ "$X" != "y" ] && X="%" || X="available"
 	[ "$X" == "available" ] && in_b "FREETZ_AVM_HAS_${P^^}"
 	[ $DOSHOW -ge 2 ] && outp "${P,,}" "$X"
@@ -600,7 +601,7 @@ determine_() {
 
 	#TR069_FWUPDATE
 	X="%"
-	[ -e "$unpacked/usr/bin/tr069fwupdate" ] && X="available" && in_b "FREETZ_AVM_HAS_TR069_FWUPDATE"
+	[ -e "$unpacked/usr/bin/fwupdate" -o -e "$unpacked/usr/bin/tr069fwupdate" ] && X="available" && in_b "FREETZ_AVM_HAS_TR069_FWUPDATE"
 	[ $DOSHOW -ge 2 ] && outp "tr069fwu" "$X"
 
 
@@ -792,13 +793,13 @@ determine_() {
 
 	#LIBFUSE
 	X="%"
-	[ -e "$unpacked/lib/libfuse.so" -o -L "$unpacked/lib/libfuse.so" ] && X="available" && in_b "FREETZ_AVM_HAS_LIBFUSE"
+	[ -e "$unpacked/usr/lib/libfuse.so" -o -e "$unpacked/lib/libfuse.so" -o -L "$unpacked/lib/libfuse.so" ] && X="available" && in_b "FREETZ_AVM_HAS_LIBFUSE"
 	[ $DOSHOW -ge 2 ] && outp "libfuse" "$X"
 
 
 	#OPENSSL
 	#X="$([ -e "$unpacked/lib/libssl.so" ] && realpath "$unpacked/lib/libssl.so" 2>/dev/null | sed 's/.*\/lib\/libssl\.so\.//')"
-	X="$( strings "${unpacked}/lib/libssl.so" 2>/dev/null | sed -nr 's/^@?(Open)?SSL ([013]\.[0-9a-z\.]*).*/\2/p' )"
+	X="$( strings "${unpacked}/usr/lib/libssl.so" "${unpacked}/lib/libssl.so" 2>/dev/null | sed -nr 's/^@?(Open)?SSL ([013]\.[0-9a-z\.]*).*/\2/p' )"
 	[ -z "$X" ] && X="%"
 	[ $DOSHOW -ge 2 ] && outp "openssl" "$X"
 	if [ "$X" != "%" ]; then
@@ -895,6 +896,12 @@ determine_() {
 	[ -z "$X" ] && echo "ERROR-13" 1>&2 && X=ERROR
 	in_b "FREETZ_AVM_PROP_SQUASHFS_COMPRESSION_${X^^}"
 	[ $DOSHOW -ge 1 ] && outp "SquashC" "${X/:/.}"
+
+	#SQEND
+	X="$(sed -rn "s/^(.).* endian squashfs signature found at [0-9]*$/\1/p" "$unpacked.nfo")"
+	[ "$X" != "L" -a "$X" != "B" ] && echo "ERROR-24" 1>&2 && X=ERROR
+	in_b "FREETZ_AVM_PROP_SQUASHFS_ENDIANN_${X}"
+	[ $DOSHOW -ge 1 ] && outp "SquashE" "${X}"
 
 	fi
 
