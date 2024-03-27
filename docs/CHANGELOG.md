@@ -51,12 +51,14 @@ Latest changes
    * cmake 3.28.4
 
  - Packages:
-   * OpenVPN 2.4.12/2.5.9/2.6.10
+   * Curl 8.7.1
+   * OpenVPN 2.4.12/2.5.10/2.6.10
    * iptables 1.4.11.1/1.4.21/1.6.2/1.8.10
    * strace 4.9/5.0/6.8
 
  - Libraries:
-   * libdeflate 1.19
+   * libdeflate 1.20
+   * pango 1.52.1
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
