@@ -48,17 +48,25 @@ Latest changes
 ### devel
 
  - Host tools:
-   * cmake 3.28.4
+   * cmake 3.29.0
+   * precompiled host-tools 2024-03-29
+   * xz 5.4.6
+
+ - AVM sources:
+   * 6670 7.61 - 5.15.111
 
  - Packages:
    * Curl 8.7.1
    * OpenVPN 2.4.12/2.5.10/2.6.10
    * iptables 1.4.11.1/1.4.21/1.6.2/1.8.10
    * strace 4.9/5.0/6.8
+   * XZ Utils 5.4.6
 
  - Libraries:
+   * harfbuzz 8.4.0
    * libdeflate 1.20
    * libxml2 2.12.6
+   * mbedTLS 2.7.19/2.28.8
    * pango 1.52.1
 
  - Firmware updates:

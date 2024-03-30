@@ -58,6 +58,9 @@ config FREETZ_AVM_HAS_AHA
 config FREETZ_AVM_HAS_DECT
 	def_bool y
 
+config FREETZ_AVM_HAS_ZIGBEE
+	def_bool y
+
 config FREETZ_AVM_HAS_MYFRITZ
 	def_bool y
 
@@ -110,6 +113,12 @@ config FREETZ_AVM_HAS_UMTS
 	def_bool y
 
 config FREETZ_AVM_HAS_FAX
+	def_bool y
+
+config FREETZ_AVM_HAS_BASH_FILE
+	def_bool y
+
+config FREETZ_AVM_HAS_DMESG_FILE
 	def_bool y
 
 config FREETZ_AVM_HAS_UDEV
