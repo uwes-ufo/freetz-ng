@@ -48,11 +48,16 @@ Latest changes
 ### devel
 
  - Host tools:
+   * cmake 3.29.1
    * python 3.11.9
 
  - Packages:
    * Apache2 2.4.59
    * Dropbear 2024.84
+   * ImageMagick 7.1.1-30
+
+ - Libraries:
+   * libpng 1.6.43
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
