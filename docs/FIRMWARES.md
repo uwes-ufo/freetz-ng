@@ -103,6 +103,8 @@ Currently supported devices and firmwares
   - 155.07.14 rev73181 {ALL} [MESH18 NL4]
   - 155.07.29 rev92647 {ALL} [PSQ19P2NL4]
   - 155.07.57 rev107816 {ALL} [MOVE21NL1]
+* __Fritz!Box 4050 (UNTESTED)__
+  - 287.07.57 rev110614 {ALL} [MOVE21NL1] (Inhaus)
 * __Fritz!Box 4060__
   - 261.07.30 rev95826 {ALL} [PSQ19P2NL4]
   - 261.07.57 rev109903 {ALL} [MOVE21NL1]
@@ -144,6 +146,8 @@ Currently supported devices and firmwares
   - 272.07.58 rev109907 {ALL} [MOVE21NL1]
   - 272.07.80 rev110627 {ALL} [GoFiber23]
   - 272.07.90 rev111969 {ALL} [Smart24 P1] (Inhaus)
+* __FRITZ!Box 5690 Pro (UNTESTED)__
+  - 279.07.59 rev112003 {ALL} [FCS23] (Inhaus)
 
 ### Fritz!Box Cable (64xx/65xx/66xx)
 
@@ -450,6 +454,9 @@ Currently supported devices and firmwares
   - 259.07.57 rev107809 {ALL} [MOVE21NL1]
   - 259.07.80 rev110629 {ALL} [GoFiber23]
   - 259.07.90 rev111684 {ALL} [Smart24 P1] (Inhaus)
+
+* __FRITZ!Box 7690 (UNTESTED)__
+  - 285.07.59 rev112138 {ALL} [FCS23] (Inhaus)
 
 ### Fritz!Powerline
 

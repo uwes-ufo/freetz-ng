@@ -85,6 +85,8 @@ config FREETZ_DL_SITE
 	#
 	default "@AVM/fritzbox-4040/{other,deutschland}/fritz.os,@AVM/4040"                                                if FREETZ_TYPE_4040
 	#
+	default "@AVM/fritzbox-4050/{other,deutschland}/fritz.os,@AVM/4050"                                                if FREETZ_TYPE_4050
+	#
 	default "@AVM/fritzbox-4060/{other,deutschland}/fritz.os,@AVM/4060"                                                if FREETZ_TYPE_4060
 	#
 	default "@AVM/fritzbox.fon_5010/firmware/deutsch_a-ch"                                                             if FREETZ_TYPE_5010
@@ -103,6 +105,8 @@ config FREETZ_DL_SITE
 	default "@AVM/fritzbox-5530-fiber/{other,deutschland}/fritz.os,@AVM/5530Fiber"                                     if FREETZ_TYPE_5530
 	#
 	default "@AVM/fritzbox-5590-fiber/{other,deutschland}/fritz.os,@AVM/5590Fiber,@AVM/5590"                           if FREETZ_TYPE_5590
+	#
+	default "@AVM/fritzbox-5690-pro/{other,deutschland}/fritz.os,@AVM/5690Pro"                                         if FREETZ_TYPE_5690
 	#
 	default "@AVM/fritzwlan/fritzrepeater-6000/deutschland/fritz.os"                                                   if FREETZ_TYPE_6000
 	#
@@ -249,6 +253,8 @@ config FREETZ_DL_SITE
 	#
 	default "@AVM/fritzbox-7590-ax/{deutschland,other}/fritz.os,@AVM/7590AX"                                           if FREETZ_TYPE_7599
 	#
+	default "@AVM/fritzbox-7690/{deutschland,other}/fritz.os,@AVM/7690"                                                if FREETZ_TYPE_7690
+	#
 	default "@AVM/fritzdect/fritzsmart-gateway/deutschland/fritz.os,@AVM/FRITZSmartGateway"                            if FREETZ_TYPE_GATE
 	#
 	default "@TELEKOM/Speedport/Speedport_W501V"                                                                       if FREETZ_TYPE_W501V
@@ -385,6 +391,8 @@ config FREETZ_DL_SOURCE
 	default "FRITZ.Box_4040-07.29.image"                                                   if FREETZ_TYPE_4040 && FREETZ_TYPE_FIRMWARE_07_2X
 	default "FRITZ.Box_4040-07.57.image"                                                   if FREETZ_TYPE_4040 && FREETZ_TYPE_FIRMWARE_07_5X
 	#
+	default "FRITZ.Box_4050-07.57-110614-Inhaus.image"                                     if FREETZ_TYPE_4050 && FREETZ_TYPE_FIRMWARE_07_5X_INHAUS
+	#
 	default "FRITZ.Box_4060-07.30.image"                                                   if FREETZ_TYPE_4060 && FREETZ_TYPE_FIRMWARE_07_2X
 	default "FRITZ.Box_4060-07.57-V2.image/FRITZ.Box_4060-07.57.image"                     if FREETZ_TYPE_4060 && FREETZ_TYPE_FIRMWARE_07_5X
 	#
@@ -413,6 +421,8 @@ config FREETZ_DL_SOURCE
 	default "FRITZ.Box_5590_Fiber-07.58-V2.image/FRITZ.Box_5590_Fiber-07.58.image"         if FREETZ_TYPE_5590 && FREETZ_TYPE_FIRMWARE_07_5X
 	default "FRITZ.Box_5590_Fiber-07.80.image"                                             if FREETZ_TYPE_5590 && FREETZ_TYPE_FIRMWARE_07_8X
 	default "FRITZ.Box_5590_Fiber-07.90-111969-Inhaus.image"                               if FREETZ_TYPE_5590 && FREETZ_TYPE_FIRMWARE_08_0X_INHAUS
+	#
+	default "FRITZ.Box_5690_Pro-07.59-112003-Inhaus.image"                                 if FREETZ_TYPE_5690 && FREETZ_TYPE_FIRMWARE_07_5X_INHAUS
 	#
 	default "FRITZ.Repeater_6000-07.31-V2.image/FRITZ.Repeater_6000-07.31.image"           if FREETZ_TYPE_6000 && FREETZ_TYPE_FIRMWARE_07_2X
 	default "FRITZ.Repeater_6000-07.57-V2.image/FRITZ.Repeater_6000-07.57.image"           if FREETZ_TYPE_6000 && FREETZ_TYPE_FIRMWARE_07_5X
@@ -672,6 +682,8 @@ config FREETZ_DL_SOURCE
 	default "FRITZ.Box_7590_AX-07.57.image"                                                if FREETZ_TYPE_7599 &&                        FREETZ_TYPE_FIRMWARE_07_5X
 	default "FRITZ.Box_7590_AX-07.80.image"                                                if FREETZ_TYPE_7599 &&                        FREETZ_TYPE_FIRMWARE_07_8X
 	default "FRITZ.Box_7590_AX-07.90-111684-Inhaus.image"                                  if FREETZ_TYPE_7599 &&                        FREETZ_TYPE_FIRMWARE_08_0X_INHAUS
+	#
+	default "FRITZ.Box_7690-07.59-112138-Inhaus.image"                                     if FREETZ_TYPE_7690 &&                        FREETZ_TYPE_FIRMWARE_07_5X_INHAUS
 	#
 	default "FRITZ.Smart_Gateway-07.60-Release.image"                                      if FREETZ_TYPE_GATE &&                        FREETZ_TYPE_FIRMWARE_07_5X
 	#
