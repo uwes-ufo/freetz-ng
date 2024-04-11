@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 881dd1c36 uwe 2024-04-10
+#  freetz-ng d9d2dfd29 uwe 2024-04-11
 #
 
 #
@@ -39,6 +39,7 @@ FREETZ_SERIES_4N5=y
 #
 # FREETZ_TYPE_4020 is not set
 # FREETZ_TYPE_4040 is not set
+# FREETZ_TYPE_4050 is not set
 # FREETZ_TYPE_4060 is not set
 
 #
@@ -47,6 +48,7 @@ FREETZ_SERIES_4N5=y
 # FREETZ_TYPE_5490 is not set
 # FREETZ_TYPE_5491 is not set
 # FREETZ_TYPE_5590 is not set
+# FREETZ_TYPE_5690 is not set
 
 #
 # Cable
@@ -88,6 +90,7 @@ FREETZ_TYPE_7490=y
 # FREETZ_TYPE_7584 is not set
 # FREETZ_TYPE_7590 is not set
 # FREETZ_TYPE_7599 is not set
+# FREETZ_TYPE_7690 is not set
 FREETZ_TYPE_LANG_DE=y
 # FREETZ_TYPE_LANG_EN is not set
 FREETZ_TYPE_LANGUAGE="xx"
