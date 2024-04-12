@@ -57,9 +57,12 @@ Latest changes
    * Dropbear 2024.84
    * ImageMagick 7.1.1-30
    * Tor 0.4.8.11
+   * Whois 5.5.22
 
  - Libraries:
+   * libidn 1.42
    * libpng 1.6.43
+   * pixman 0.43.4
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

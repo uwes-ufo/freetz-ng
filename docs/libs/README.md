@@ -164,7 +164,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libid3tag (libid3tag.so) 0.16.3](libid3tag.md)<a id='libid3tag'></a>**<br>
     ID3 tag manipulation library
 
-  * **[libidn (libidn.so) 1.41](libidn.md)<a id='libidn'></a>**<br>
+  * **[libidn (libidn.so) 1.42](libidn.md)<a id='libidn'></a>**<br>
     GNU Libidn is a fully documented implementation of the Stringprep, Punycode and IDNA 2003 specifications. Libidn's purpose is to encode and decode internationalized domain names.
 
   * **[libmad (libmad.so) 0.15.1b](libmad.md)<a id='libmad'></a>**<br>
@@ -297,7 +297,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pcre2: libpcre2 (libpcre2-8.so) 10.43](pcre2.md)<a id='pcre2'></a>**<br>
     A Perl Compatible Regular Expression library
 
-  * **[Pixman (libpixman-1.so) 0.42.2](pixman.md)<a id='pixman'></a>**<br>
+  * **[Pixman (libpixman-1.so) 0.43.4](pixman.md)<a id='pixman'></a>**<br>
     Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization.
 
   * **[pjproject2: libpj (libpj.so) 2.2.1](pjproject2.md)<a id='pjproject2'></a>**<br>
