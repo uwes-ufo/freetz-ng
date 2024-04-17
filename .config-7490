@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 9bb10c6fc uwe 2024-04-16
+#  freetz-ng 97cb4e362 uwe 2024-04-17
 #
 
 #
@@ -798,7 +798,7 @@ FREETZ_PACKAGE_STUNNEL=y
 # FREETZ_PACKAGE_SYNCE_DCCM is not set
 
 #
-# SynCE serial (not available, needs kernel modules)
+# SynCE serial (not available, needs replace kernel)
 #
 # end of S
 
