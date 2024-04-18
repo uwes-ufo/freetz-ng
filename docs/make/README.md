@@ -48,7 +48,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.16.48](bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.18.24](bind.md)<a id='bind'></a>**<br>
     BIND is a suite of software for interacting with the Domain Name System (DNS). The name BIND stands for "Berkeley Internet Name Daemon".
 
   * **[Bip 0.9.2](bip.md)<a id='bip'></a>**<br>
@@ -371,7 +371,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[minidlna 1.3.3](minidlna.md)<a id='minidlna'></a>**<br>
     The MiniDLNA daemon is an UPnP-A/V and DLNA service which serves multimedia content to compatible clients on the network.
 
-  * **[minisatip 1.0.4/1.3.4 (binary only)](minisatip.md)<a id='minisatip'></a>**<br>
+  * **[minisatip 1.0.4/1.3.5 (binary only)](minisatip.md)<a id='minisatip'></a>**<br>
     Minisatip is a multi-threaded satip server version 1.2 that runs under Linux and it was tested with DVB-S, DVB-S2, DVB-T, DVB-T2, DVB-C, DVB-C2, ATSC and ISDB-T cards.
 
   * **[mini-snmpd 1.6 (binary only)](mini-snmpd.md)<a id='mini-snmpd'></a>**<br>

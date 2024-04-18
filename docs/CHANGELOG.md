@@ -52,11 +52,17 @@ Latest changes
    * ninja 1.12.0
    * python 3.11.9
 
+ - Patches:
+   * Enforce /tmp/ permissions: Changes /var/tmp/ permissions back to 1777 after AVM sets 755.
+   * Various Fritzos 8.0 related changes
+
  - Packages:
    * Apache2 2.4.59
+   * BIND 9.11.37/9.18.24
    * Dropbear 2024.84
    * ImageMagick 7.1.1-30
    * Lighttpd 1.4.76
+   * minisatip 1.0.4/1.3.5
    * rsync 3.3.0
    * Sudo 1.9.15p5
    * Tor 0.4.8.11
