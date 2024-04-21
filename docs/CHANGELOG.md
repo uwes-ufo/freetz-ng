@@ -62,9 +62,10 @@ Latest changes
    * Dropbear 2024.84
    * ImageMagick 7.1.1-30
    * Lighttpd 1.4.76
-   * minisatip 1.0.4/1.3.5
+   * minisatip 1.0.4/1.3.6
    * rsync 3.3.0
    * Sudo 1.9.15p5
+   * SQLite 3.45.3
    * Tor 0.4.8.11
    * Whois 5.5.22
 
