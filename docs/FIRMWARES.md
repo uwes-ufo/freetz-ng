@@ -175,6 +175,7 @@ Currently supported devices and firmwares
   - 252.07.15 rev78740 {GER} [6660 FCS]
   - 252.07.29 rev92037 {GER} [PSQ19P2NL4]
   - 252.07.57 rev107842 {GER} [MOVE21NL1]
+  - 252.07.90 rev112441 {GER} [Smart24 P1] (Inhaus)
 * __Fritz!Box 6670 Cable (UNTESTED)__
   - 284.07.62 rev112288 {GER} [FCS23]
 * __Fritz!Box 6690 Cable__
@@ -458,7 +459,7 @@ Currently supported devices and firmwares
   - 259.07.90 rev111684 {ALL} [Smart24 P1] (Inhaus)
 
 * __FRITZ!Box 7690 (UNTESTED)__
-  - 285.07.59 rev112138 {ALL} [FCS23] (Inhaus)
+  - 285.07.60 rev112616 {ALL} [FCS23] (Inhaus)
 
 ### Fritz!Powerline
 

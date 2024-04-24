@@ -116,20 +116,20 @@ config FREETZ_DL_SITE
 	default "@AVM/firmware/6490/78434061"                                                                              if FREETZ_TYPE_6490 && FREETZ_TYPE_FIRMWARE_06_8X
 	default "@AVM/firmware/6490/59088767"                                                                              if FREETZ_TYPE_6490 && FREETZ_TYPE_FIRMWARE_07_0X
 	default "@AVM/firmware/6490/758467098"                                                                             if FREETZ_TYPE_6490 && FREETZ_TYPE_FIRMWARE_07_1X
-	default "@AVM/fritzbox-6490-cable/{deutschland,other}/fritz.os"                                                    if FREETZ_TYPE_6490
+	default "@AVM/fritzbox-6490-cable/{deutschland,other}/fritz.os,@AVM/6490Cable"                                     if FREETZ_TYPE_6490
 	#
 	default "@AVM/firmware/6590/89043528"                                                                              if FREETZ_TYPE_6590 && FREETZ_TYPE_FIRMWARE_06_8X
 	default "@AVM/firmware/6590/67447023"                                                                              if FREETZ_TYPE_6590 && FREETZ_TYPE_FIRMWARE_07_0X
 	default "@AVM/firmware/6590/89754687"                                                                              if FREETZ_TYPE_6590 && FREETZ_TYPE_FIRMWARE_07_1X
-	default "@AVM/fritzbox-6590-cable/{deutschland,other}/fritz.os"                                                    if FREETZ_TYPE_6590
+	default "@AVM/fritzbox-6590-cable/{deutschland,other}/fritz.os,@AVM/6590Cable"                                     if FREETZ_TYPE_6590
 	#
 	default "@AVM/firmware/6591/213215464"                                                                             if FREETZ_TYPE_6591 && FREETZ_TYPE_FIRMWARE_07_1X
 	default "@AVM/fritzbox-6591-cable/{deutschland,other}/fritz.os,@AVM/6591Cable"                                     if FREETZ_TYPE_6591
 	#
 	default "@AVM/firmware/6660/89746785"                                                                              if FREETZ_TYPE_6660 && FREETZ_TYPE_FIRMWARE_07_1X
-	default "@AVM/fritzbox-6660-cable/{deutschland,other}/fritz.os"                                                    if FREETZ_TYPE_6660
+	default "@AVM/fritzbox-6660-cable/{deutschland,other}/fritz.os,@AVM/6660Cable"                                     if FREETZ_TYPE_6660
 	#
-	default "@AVM/fritzbox-6670-cable/{deutschland,other}/fritz.os,@AVM/6670"                                          if FREETZ_TYPE_6670
+	default "@AVM/fritzbox-6670-cable/{deutschland,other}/fritz.os,@AVM/6670Cable,@AVM/6670"                           if FREETZ_TYPE_6670
 	#
 	default "@AVM/fritzbox-6690-cable/{deutschland,other}/fritz.os,@AVM/FRITZ%21Box%206690%20Cable/other/fritz.os"     if FREETZ_TYPE_6690
 	#
@@ -450,6 +450,7 @@ config FREETZ_DL_SOURCE
 	default "FRITZ.Box_6660_Cable-07.15.image"                                             if FREETZ_TYPE_6660 && FREETZ_TYPE_FIRMWARE_07_1X
 	default "FRITZ.Box_6660_Cable-07.29.image"                                             if FREETZ_TYPE_6660 && FREETZ_TYPE_FIRMWARE_07_2X
 	default "FRITZ.Box_6660_Cable-07.57.image"                                             if FREETZ_TYPE_6660 && FREETZ_TYPE_FIRMWARE_07_5X
+	default "FRITZ.Box_6660_Cable-07.90-112441-Inhaus.image"                               if FREETZ_TYPE_6660 && FREETZ_TYPE_FIRMWARE_08_0X_INHAUS
 	#
 	default "FRITZ.Box_6670_Cable-07.62.image"                                             if FREETZ_TYPE_6670 && FREETZ_TYPE_FIRMWARE_07_5X
 	#
@@ -685,7 +686,7 @@ config FREETZ_DL_SOURCE
 	default "FRITZ.Box_7590_AX-07.80.image"                                                if FREETZ_TYPE_7599 &&                        FREETZ_TYPE_FIRMWARE_07_8X
 	default "FRITZ.Box_7590_AX-07.90-111684-Inhaus.image"                                  if FREETZ_TYPE_7599 &&                        FREETZ_TYPE_FIRMWARE_08_0X_INHAUS
 	#
-	default "FRITZ.Box_7690-07.59-112138-Inhaus.image"                                     if FREETZ_TYPE_7690 &&                        FREETZ_TYPE_FIRMWARE_07_5X_INHAUS
+	default "FRITZ.Box_7690-07.60-112616-Inhaus.image"                                     if FREETZ_TYPE_7690 &&                        FREETZ_TYPE_FIRMWARE_07_5X_INHAUS
 	#
 	default "FRITZ.Smart_Gateway-07.60-Release.image"                                      if FREETZ_TYPE_GATE &&                        FREETZ_TYPE_FIRMWARE_07_5X
 	#
