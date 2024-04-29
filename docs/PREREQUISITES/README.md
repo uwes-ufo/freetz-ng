@@ -53,12 +53,12 @@ sudo dnf -y update && sudo systemctl daemon-reload
 ```
 sudo dnf -y install \
   bc binutils bison bzip2 ccache cmake cpio curl ecj elfutils-libelf-devel flex gcc gcc-c++ \
-  gettext git glib2-devel glibc-devel.i686 gnutls-devel ImageMagick inkscape javapackages-tools \
-  kmod libacl-devel libattr-devel libcap-devel libgcc.i686 libglade2-devel \
-  libstdc++-devel.i686 libstdc++-devel.x86_64 libtool libuuid-devel libxml2-devel libzstd-devel.x86_64 make \
-  ncurses-devel ncurses-devel.i686 ncurses-term netcat net-tools openssl openssl-devel patch patchutils \
-  perl perl-String-CRC32 pkgconfig pv qt5-qtbase-devel readline-devel rpcgen rsync sharutils \
-  sqlite-devel sqlite.i686 subversion texinfo unar util-linux wget2 xz zlib-devel
+  gettext git glib2-devel glibc-devel gnutls-devel ImageMagick inkscape javapackages-tools kmod \
+  libacl-devel libattr-devel libcap-devel libgcc libglade2-devel libstdc++-devel libtool \
+  libuuid-devel libxml2-devel libzstd-devel make ncurses ncurses-devel ncurses-term netcat net-tools \
+  openssl openssl-devel patch patchutils perl perl-String-CRC32 pkgconfig pv qt5-qtbase-devel \
+  readline-devel rpcgen rsync sharutils sqlite sqlite-devel subversion texinfo unar util-linux wget xz \
+  zlib-devel
 ```
 
  - Fedora 37/38/39 64-Bit:
@@ -184,7 +184,7 @@ sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
 ```
 
- - Ubuntu 23 64-Bit:
+ - Ubuntu 23/24 64-Bit:
 ```
 sudo apt-get -y install \
   autopoint bc binutils bison bsdmainutils bzip2 ccache cmake cpio curl ecj flex ftp g++ gawk gcc \
