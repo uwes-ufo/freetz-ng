@@ -302,7 +302,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Ghostscript fonts 8.11 (binary only)</u><a id='ghostscript-fonts'></a>**<br>
     This package provides the Ghostscript fonts.
 
-  * **[Git 2.44.0](../../docs/make/git.md)<a id='git'></a>**<br>
+  * **[Git 2.45.0](../../docs/make/git.md)<a id='git'></a>**<br>
     Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
   * **<u>gntpsend 0.3.2-git (binary only)</u><a id='gntpsend'></a>**<br>
@@ -323,7 +323,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.16](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.17](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](../../docs/make/haserl.md)<a id='haserl'></a>**<br>
@@ -512,7 +512,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Nagios is an Open Source host, service and network monitoring program.
      - [Weiterführende Informationen](../../docs/make/nagios.md#weiterführende-informationen)
 
-  * **[Nano 7.2 (binary only)](../../docs/make/nano.md)<a id='nano'></a>**<br>
+  * **[Nano 8.0 (binary only)](../../docs/make/nano.md)<a id='nano'></a>**<br>
     GNU GPL'd Pico clone with more functionality. GNU nano is a small and friendly text editor. Besides basic text editing, nano offers many extra features like an interactive search and replace, go to line and column number, auto-indentation, feature toggles and filename tab completion. The original goal for nano was a complete bug-for-bug compatible emulation of Pico, but nano's current goal is to be as compatible as possible while offering a superset of Pico's functionality. IMPORTANT NOTES: 1.) Selecting any option besides "Tiny binary" will make the nano binary bigger. The range is somewhere between 142 KB and 249 KB, depending on the options chosen. 2.) Please also be aware of the fact that changing any feature options results in an automatic rebuild of the package - just in case you were wondering. 3.) Note that UTF8 support and spell checking is disabled by default.
 
   * **<u>nc6 1.0 (binary only)</u><a id='nc6'></a>**<br>
@@ -980,7 +980,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>uMurmur 0.2.20</u><a id='umurmur'></a>**<br>
     umurmur is a minimalistic Mumble server primarily targeted to run on routers using less resources. It targets to fill the needs of a pretty small group of users communicating, which in part originates from the other goal of working well on a small system with a limited CPU and limited amount of disk space. It also aims to minimize writing to the disk since these kinds of systems usually only has a flash memory for disk. umurmur supports a subset of the features of Murmur. https://github.com/umurmur/umurmur
 
-  * **[Unbound 1.19.3](../../docs/make/unbound.md)<a id='unbound'></a>**<br>
+  * **[Unbound 1.20.0](../../docs/make/unbound.md)<a id='unbound'></a>**<br>
     Unbound is designed as a set of modular components, so that also DNSSEC (secure DNS) validation and stub-resolvers (that do not run as a server, but are linked into an application) are easily possible.
 
   * **[UNFS3 0.9.23](../../docs/make/unfs3.md)<a id='unfs3'></a>**<br>

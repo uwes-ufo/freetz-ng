@@ -47,11 +47,15 @@ Latest changes
 
 ### devel
 
+ - Build system:
+   * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.48
+
  - Host tools:
-   * cmake 3.29.2
+   * cmake 3.29.3
    * cpio 2.15
    * ninja 1.12.0
    * precompiled host-tools 2024-05-01
+   * precompiled toolchains r23647
    * python 3.11.9
 
  - Patches:
@@ -62,14 +66,18 @@ Latest changes
    * Apache2 2.4.59
    * BIND 9.11.37/9.18.26
    * Dropbear 2024.85
+   * Git 2.45.0
+   * HAProxy 2.6.17
    * ImageMagick 7.1.1-30
    * Lighttpd 1.4.76
    * minisatip 1.0.4/1.3.6
+   * Nano 8.0
    * Nmap 4.76/5.51/7.95
    * rsync 3.3.0
    * Sudo 1.9.15p5
    * SQLite 3.45.3
    * Tor 0.4.8.11
+   * Unbound 1.20.0
    * Whois 5.5.22
 
  - Libraries:
