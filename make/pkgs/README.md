@@ -28,10 +28,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>asterisk-gui: #Asterisk GUI 2.1.0-rc1</u><a id='asterisk-gui'></a>**<br>
     Asterisk GUI is a framework for the creation of graphical interfaces for configuring Asterisk. Please read https://wiki.asterisk.org/wiki/display/AST/Asterisk+GUI for configuration instructions.
 
-  * **[Atop 2.9.0 (binary only)](../../docs/make/atop.md)<a id='atop'></a>**<br>
+  * **[Atop 2.10.0 (binary only)](../../docs/make/atop.md)<a id='atop'></a>**<br>
     The program atop is an interactive monitor to view the load on a Linux system. It shows the occupation of the most critical hardware resources (from a performance point of view) on system level, i.e. cpu, memory, disk and network.
 
-  * **[AutoFS 5.0.5/5.1.8](../../docs/make/autofs.md)<a id='autofs'></a>**<br>
+  * **[AutoFS 5.0.5/5.1.9](../../docs/make/autofs.md)<a id='autofs'></a>**<br>
     Autofs is a kernel-based automounter for Linux. It performs a job similar to amd(8) but relies on a small stub of kernel code instead of pretending to be an NFS server. The result is simpler code, better reliability, and much faster operation in the common case (everything already mounted).
      - [Optionale Aufrufparameter](../../docs/make/autofs.md#optionale-aufrufparameter)
      - [Beispielkonfigurationen der auto.conf](../../docs/make/autofs.md#beispielkonfigurationen-der-autoconf)
@@ -55,7 +55,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Bash is an sh-compatible command language interpreter that executes commands read from the standard input or from a file. Bash also incorporates useful features from the Korn and C shells (ksh and csh).(roundabout 540K minimal and 840K full featured)
      - [Bash als Loginshell](../../docs/make/bash.md#bash-als-loginshell)
 
-  * **[Bftpd 6.1](../../docs/make/bftpd.md)<a id='bftpd'></a>**<br>
+  * **[Bftpd 6.2](../../docs/make/bftpd.md)<a id='bftpd'></a>**<br>
     Small FTP Server
      - [Zusätzliche Benutzer einrichten](../../docs/make/bftpd.md#zusätzliche-benutzer-einrichten)
      - [Bestehende (persistente) Benutzer modifizieren](../../docs/make/bftpd.md#bestehende-persistente-benutzer-modifizieren)
@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.18.26](../../docs/make/bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.18.27](../../docs/make/bind.md)<a id='bind'></a>**<br>
     BIND is a suite of software for interacting with the Domain Name System (DNS). The name BIND stands for "Berkeley Internet Name Daemon".
      - [named.conf](../../docs/make/bind.md#namedconf)
 
@@ -142,7 +142,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only)](../../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 8.7.1 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
+  * **[Curl 8.8.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
@@ -448,7 +448,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Lua 5.1.5/5.4.6 (binary only)](../../docs/make/lua.md)<a id='lua'></a>**<br>
     Lua Scripting Language. Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. Lua combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode with a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
-  * **[Lynx 2.9.0 (binary only)](../../docs/make/lynx.md)<a id='lynx'></a>**<br>
+  * **[Lynx 2.9.1 (binary only)](../../docs/make/lynx.md)<a id='lynx'></a>**<br>
     Lynx text mode web browser Lynx is a fully-featured World Wide Web (WWW) client for users running cursor-addressable, character-cell display devices (e.g., vt100 terminals, vt100 emulators running on PCs or Macs, or any other character-cell display). It will display HTML documents containing links to files on the local system, as well as files on remote systems running http, gopher, ftp, wais, nntp, finger, or cso/ph/qi servers, and services accessible via logins to telnet, tn3270 or rlogin accounts.
 
 ### M
@@ -852,7 +852,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>smusbutil 1.1 (binary only)</u><a id='smusbutil'></a>**<br>
     Linux software for setting up the frequency and resetpolarity on WB Electronics ftdi devices. This utility is written and maintained by Carsten Sprung. WB Electronics does not currently provide official support for Linux, please contact the author directly for any support issues.
 
-  * **[socat 1.7.4.4 (binary only)](../../docs/make/socat.md)<a id='socat'></a>**<br>
+  * **[socat 1.8.0.0 (binary only)](../../docs/make/socat.md)<a id='socat'></a>**<br>
     socat is an extended netcat-like utility
 
   * **<u>spawn-fcgi 1.6.3 (binary only)</u><a id='spawn-fcgi'></a>**<br>
@@ -873,7 +873,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>sshfs-fuse 2.4 (binary only)</u><a id='sshfs-fuse'></a>**<br>
     This is a filesystem client based on the SSH File Transfer Protocol. Since most SSH servers already support this protocol it is very easy to set up: i.e. on the server side there's nothing to do. On the client side mounting the filesystem is as easy as logging into the server with ssh.
 
-  * **[sslh 2.0.1](../../docs/make/sslh.md)<a id='sslh'></a>**<br>
+  * **[sslh 2.1.2](../../docs/make/sslh.md)<a id='sslh'></a>**<br>
     sslh accepts HTTPS, SSH and OpenVPN connections on the same port. This makes it possible to connect to an SSH server or an OpenVPN on port 443 (e.g. from inside a corporate firewall, which almost never block port 443) while still serving HTTPS on that port.
 
   * **[Streamripper 1.64.6](../../docs/make/streamripper.md)<a id='streamripper'></a>**<br>
@@ -986,7 +986,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UNFS3 0.9.23](../../docs/make/unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **[UnRAR 6.1.7/7.0.7 (binary only)](../../docs/make/unrar.md)<a id='unrar'></a>**<br>
+  * **[UnRAR 6.1.7/7.0.9 (binary only)](../../docs/make/unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **[usbids: usb.ids a5edeafb60](../../docs/make/usbids.md)<a id='usbids'></a>**<br>

@@ -58,6 +58,7 @@ Latest changes
    * precompiled host-tools 2024-05-10
    * precompiled toolchains r23647
    * python 3.11.9
+   * wget 1.24.5
 
  - Patches:
    * Enforce /tmp/ permissions: Changes /var/tmp/ permissions back to 1777 after AVM sets 755.
@@ -65,22 +66,29 @@ Latest changes
 
  - Packages:
    * Apache2 2.4.59
-   * BIND 9.11.37/9.18.26
+   * Atop 2.10.0
+   * AutoFS 5.0.5/5.1.9
+   * BIND 9.11.37/9.18.27
+   * Bftpd 6.2
    * Dropbear 2024.85
    * Git 2.45.1
    * HAProxy 2.6.17
    * ImageMagick 7.1.1-30
    * iPerf3 3.3/3.17.1
    * Lighttpd 1.4.76
+   * Lynx 2.9.1
    * minisatip 1.0.4/1.3.6
    * Nano 8.0
    * Nmap 4.76/5.51/7.95
+   * socat 1.8.0.0
+   * sslh 2.1.2
    * rsync 3.3.0
    * strace 4.9/5.0/6.9
    * Sudo 1.9.15p5
    * SQLite 3.45.3
    * Tor 0.4.8.11
    * Unbound 1.20.0
+   * UnRAR 6.1.7/7.0.9
    * Whois 5.5.22
 
  - Libraries:
@@ -126,7 +134,7 @@ Latest changes
    * BIRD 1.6.8/2.15
    * CA-bundle 2024-03-11
    * CCID 1.5.4
-   * Curl 8.7.1
+   * Curl 8.8.0
    * Dnsmasq 2.80/2.90
    * Git 2.44.0
    * HAProxy 2.6.16
