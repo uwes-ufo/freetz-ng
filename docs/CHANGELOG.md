@@ -49,11 +49,13 @@ Latest changes
 
  - Build system:
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.48
+   * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0/13.3.0
 
  - Host tools:
    * cmake 3.29.3
    * cpio 2.15
    * kconfig 6.9
+   * meson 1.4.1
    * ninja 1.12.1
    * precompiled host-tools 2024-05-10
    * precompiled toolchains r23647
@@ -88,6 +90,7 @@ Latest changes
    * Sudo 1.9.15p5
    * SQLite 3.45.3
    * Tor 0.4.8.11
+   * Transmission 3.00/4.0.6
    * Unbound 1.20.0
    * UnRAR 6.1.7/7.0.9
    * Whois 5.5.22
