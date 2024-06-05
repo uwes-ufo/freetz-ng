@@ -52,7 +52,7 @@ Latest changes
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0/13.3.0
 
  - Host tools:
-   * cmake 3.29.3
+   * cmake 3.29.4
    * cpio 2.15
    * kconfig 6.9
    * meson 1.4.1
@@ -93,7 +93,7 @@ Latest changes
    * Transmission 3.00/4.0.6
    * Unbound 1.20.0
    * UnRAR 6.1.7/7.0.9
-   * Whois 5.5.22
+   * Whois 5.5.23
 
  - Libraries:
    * harfbuzz 8.5.0
