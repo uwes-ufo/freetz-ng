@@ -1,6 +1,6 @@
 --- configure
 +++ configure
-@@ -28193,7 +28193,7 @@
+@@ -28827,7 +28827,7 @@
  
    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for OpenSSL" >&5
  printf %s "checking for OpenSSL... " >&6; }
@@ -8,4 +8,4 @@
 +if false
  then :
    printf %s "(cached) " >&6
- else $as_nop
+ else case e in #(

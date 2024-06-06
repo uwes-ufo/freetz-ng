@@ -1,6 +1,6 @@
-$(call TOOLS_INIT, 2023-09-17)
+$(call TOOLS_INIT, 2024-05-10)
 $(PKG)_SOURCE:=tools-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=b5862756fb7556230315436f10d1a6ed4d7979a432eaa0c9a5bfe9fff5d32387
+$(PKG)_HASH:=acec8baa97e04a1a87c3314de1a94e24727d1b820fb9cbddfd92083a29aa1ad6
 $(PKG)_SITE:=@MIRROR/
 
 $(PKG)_DEPENDS_ON:=kconfig-host
@@ -34,6 +34,7 @@ $(pkg)-precompiled: $($(PKG)_DIR)/.fixhardcoded
 
 
 $(pkg)-clean:
+	-$(RM) $(TOOLS_HOST_DIR)/.{configured,compiled,installed,fixhardcoded}
 
 $(pkg)-dirclean:
 	$(RM) -r $(TOOLS_HOST_DIR)

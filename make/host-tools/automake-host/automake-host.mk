@@ -10,7 +10,7 @@ $(PKG)_SITE:=@GNU/$(pkg_short)
 
 $(PKG)_DEPENDS_ON+=autoconf-host
 
-$(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
+$(PKG)_DESTDIR             := $(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
 
 $(PKG)_LINKS                 := aclocal automake
 $(PKG)_BINARIES              := $(patsubst %, %-$($(PKG)_MAJOR_VERSION), $($(PKG)_LINKS))
@@ -50,8 +50,8 @@ $(pkg)-precompiled: $($(PKG)_LINKS_TARGET_DIR)
 
 
 $(pkg)-clean:
-	-$(MAKE) -C $(AUTOMAKE_HOST_DIR) uninstall
-	-$(RM) $(AUTOMAKE_HOST_DIR)/.{configured,compiled,installed}
+	-$(MAKE) -C $(AUTOMAKE_HOST_DIR) clean
+	-$(RM) $(AUTOMAKE_HOST_DIR)/.{configured,compiled,installed,fixhardcoded}
 
 $(pkg)-dirclean:
 	$(RM) -r $(AUTOMAKE_HOST_DIR)

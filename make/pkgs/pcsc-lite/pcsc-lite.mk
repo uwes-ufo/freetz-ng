@@ -1,7 +1,9 @@
-$(call PKG_INIT_BIN, 2.0.0)
+$(call PKG_INIT_BIN, $(if $(FREETZ_LIB_libpcsclite_WITH_ABANDON),1.9.5,2.0.1))
 $(PKG)_LIB_VERSION:=1.0.0
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.bz2
-$(PKG)_HASH:=d6c3e2b64510e5ed6fcd3323febf2cc2a8e5fda5a6588c7671f2d77f9f189356
+$(PKG)_HASH_ABANDON:=9ee3f9b333537562177893559ad4f7b8d5c23ebe828eef53056c02db14049d08
+$(PKG)_HASH_CURRENT:=5edcaf5d4544403bdab6ee2b5d6c02c6f97ea64eebf0825b8d0fa61ba417dada
+$(PKG)_HASH:=$($(PKG)_HASH_$(if $(FREETZ_LIB_libpcsclite_WITH_ABANDON),ABANDON,CURRENT))
 $(PKG)_SITE:=https://pcsclite.apdu.fr/files
 ### WEBSITE:=https://pcsclite.apdu.fr/
 ### MANPAGE:=https://salsa.debian.org/rousseau/PCSC/blob/master/README
@@ -17,6 +19,8 @@ $(PKG)_LIB:=$($(PKG)_DIR)/src/.libs/libpcsclite.so.$($(PKG)_LIB_VERSION)
 $(PKG)_STAGING_LIB:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libpcsclite.so.$($(PKG)_LIB_VERSION)
 $(PKG)_TARGET_LIB:=$($(PKG)_TARGET_LIBDIR)/libpcsclite.so.$($(PKG)_LIB_VERSION)
 
+$(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_LIB_libpcsclite_WITH_ABANDON),abandon,current)
+
 $(PKG)_CONFIGURE_PRE_CMDS += $(call PKG_PREVENT_RPATH_HARDCODING,./configure)
 
 $(PKG)_DEPENDS_ON += libusb1
@@ -29,6 +33,7 @@ $(PKG)_CONFIGURE_OPTIONS += --enable-scf
 $(PKG)_CONFIGURE_OPTIONS += --disable-libhal
 $(PKG)_CONFIGURE_OPTIONS += --disable-libudev
 $(PKG)_CONFIGURE_OPTIONS += --disable-libsystemd
+$(PKG)_CONFIGURE_OPTIONS += --disable-polkit
 $(PKG)_CONFIGURE_OPTIONS += --enable-embedded
 $(PKG)_CONFIGURE_OPTIONS += --enable-usbdropdir=$(PCSC_LITE_USBDROPDIR)
 

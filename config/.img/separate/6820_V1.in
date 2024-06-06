@@ -12,7 +12,13 @@ config FREETZ_AVM_HAS_CTLMGR_CTL
 config FREETZ_AVM_HAS_DDNSD
 	def_bool y
 
+config FREETZ_AVM_HAS_DMESG_FILE
+	def_bool y
+
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+
+config FREETZ_AVM_HAS_FWLAYOUT_2
 	def_bool y
 
 config FREETZ_AVM_HAS_INETD
@@ -109,6 +115,9 @@ config FREETZ_AVM_PROP_NAME
 	default "FRITZ!Box 6820 LTE"
 
 config FREETZ_AVM_PROP_SEPARATE_FILESYSTEM_IMAGE
+	def_bool y
+
+config FREETZ_AVM_PROP_SQUASHFS_ENDIANN_BE
 	def_bool y
 
 config FREETZ_AVM_SERIAL_CONSOLE_DEVICE

@@ -1,7 +1,8 @@
-$(call TOOLS_INIT, v2023.07.02)
-$(PKG)_SOURCE:=uboot-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=932cc24331086e902d4e4ff2a215b1f88b7d6b39ddffd1dfed3639f7749321e5
-$(PKG)_SITE:=git@https://github.com/u-boot/u-boot.git
+$(call TOOLS_INIT, 2024.01)
+$(PKG)_SOURCE_DOWNLOAD_NAME:=v$($(PKG)_VERSION).tar.gz
+$(PKG)_SOURCE:=$(pkg_short)-$($(PKG)_VERSION).tar.gz
+$(PKG)_HASH:=a03c3c2ba9d2bea5176c6406f1f3429a79e1147be242f5a07dbd9e89b3cc83c4
+$(PKG)_SITE:=https://github.com/u-boot/u-boot/archive/refs/tags
 ### CHANGES:=https://github.com/u-boot/u-boot/tags
 ### CVSREPO:=https://github.com/u-boot/u-boot
 
@@ -41,6 +42,7 @@ $(pkg)-precompiled: $($(PKG)_BINARIES_TARGET_DIR)
 
 $(pkg)-clean:
 	-$(MAKE) -C $(UBOOT_HOST_DIR) clean
+	-$(RM) $(UBOOT_HOST_DIR)/.{configured,compiled}
 
 $(pkg)-dirclean:
 	$(RM) -r $(UBOOT_HOST_DIR)

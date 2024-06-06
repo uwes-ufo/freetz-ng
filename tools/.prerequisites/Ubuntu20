@@ -6,10 +6,10 @@ bsdmainutils
 bzip2
 ccache
 cmake
-cpio
 curl
 ecj
 flex
+ftp
 g++
 gawk
 gcc

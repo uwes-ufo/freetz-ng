@@ -8,6 +8,8 @@ $(PKG)_SITE:=git_sparse@https://github.com/PeterPawn/YourFritz.git,fit_tools
 ### CHANGES:=https://github.com/PeterPawn/YourFritz/commits/main/fit_tools
 ### CVSREPO:=https://github.com/PeterPawn/YourFritz/tree/main/fit_tools
 
+$(PKG)_DESTDIR             := $(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
+
 
 $(TOOLS_SOURCE_DOWNLOAD)
 $(TOOLS_UNPACKED)
@@ -22,6 +24,7 @@ $(pkg)-precompiled: $($(PKG)_DIR)/.installed
 
 
 $(pkg)-clean:
+	-$(RM) $(YF_FIT_TOOLS_HOST_DIR)/.{configured,compiled,installed}
 
 $(pkg)-dirclean:
 	$(RM) -r $(YF_FIT_TOOLS_HOST_DIR)

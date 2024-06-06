@@ -1,14 +1,19 @@
-$(call PKG_INIT_LIB, 1.3.9)
+$(call PKG_INIT_LIB, 1.3.10)
 $(PKG)_LIB_VERSION:=1.3.0
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.bz2
-$(PKG)_HASH:=549c2d21c577a8a9c0450facb5cca809f26591f048e466552240947bdf7a87cc
+$(PKG)_HASH:=be81ef08baa2516ecda76a77adf7def7bc3227eeb578b9a33b45f7b41dc064e6
 $(PKG)_SITE:=@APACHE/serf
+### WEBSITE:=https://serf.apache.org/
+### MANPAGE:=https://serf.apache.org/abi/timeline/serf/index.html
+### CHANGES:=https://svn.apache.org/viewvc/serf/trunk/CHANGES?view=markup
+### CVSREPO:=https://svn.apache.org/viewvc/serf/
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/libserf-1.so.$($(PKG)_LIB_VERSION)
 $(PKG)_STAGING_BINARY:=$(TARGET_TOOLCHAIN_STAGING_DIR)/lib/libserf-1.so.$($(PKG)_LIB_VERSION)
 $(PKG)_TARGET_BINARY:=$($(PKG)_TARGET_DIR)/libserf-1.so.$($(PKG)_LIB_VERSION)
 
 $(PKG)_DEPENDS_ON += apr apr-util openssl zlib
+$(PKG)_DEPENDS_ON += scons-host
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_OPENSSL_SHLIB_VERSION
 
@@ -21,19 +26,21 @@ $(PKG)_SCONS_OPTIONS += APR="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
 $(PKG)_SCONS_OPTIONS += APU="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
 $(PKG)_SCONS_OPTIONS += OPENSSL="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
 $(PKG)_SCONS_OPTIONS += ZLIB="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
+$(PKG)_SCONS_OPTIONS += $(SILENT)
+
 
 $(PKG_SOURCE_DOWNLOAD)
 $(PKG_UNPACKED)
 $(PKG_CONFIGURED_NOP)
 
-$($(PKG)_BINARY): $($(PKG)_DIR)/.configured | scons-host
+$($(PKG)_BINARY): $($(PKG)_DIR)/.configured
 	$(SCONS_HOST_TARGET_BINARY) -C $(SERF_DIR) $(SERF_SCONS_OPTIONS)
 
 $($(PKG)_STAGING_BINARY): $($(PKG)_BINARY)
 	$(SUBMAKE) serf-clean-staging
 	$(SCONS_HOST_TARGET_BINARY) -C $(SERF_DIR) \
 		--install-sandbox="$(TARGET_TOOLCHAIN_STAGING_DIR)" \
-		install
+		install $(SILENT)
 	$(call PKG_FIX_LIBTOOL_LA,prefix libdir) \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/pkgconfig/serf-1.pc
 	touch -c $@
@@ -44,6 +51,7 @@ $($(PKG)_TARGET_BINARY): $($(PKG)_STAGING_BINARY)
 $(pkg): $($(PKG)_STAGING_BINARY)
 
 $(pkg)-precompiled: $($(PKG)_TARGET_BINARY)
+
 
 $(pkg)-clean: $(pkg)-clean-staging
 	-$(SCONS_HOST_TARGET_BINARY) -C $(SERF_DIR) -c

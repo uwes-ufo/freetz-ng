@@ -1,8 +1,8 @@
-$(call PKG_INIT_LIB, v1.18)
+$(call PKG_INIT_LIB, 1.20)
 $(PKG)_SHLIB_VERSION:=0
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.gz
-$(PKG)_HASH:=4d1a576809e6d00d2ca94f8aebde84540446f42ebd074bf5a02b67b82fe6d61a
-$(PKG)_SITE:=git@https://github.com/ebiggers/libdeflate.git
+$(PKG)_HASH:=c52cf0239fd644d71c9e88613dd7431a5306ebee1280c5791c71ca264869250a
+$(PKG)_SITE:=https://github.com/ebiggers/libdeflate/releases/download/v$($(PKG)_VERSION)
 ### WEBSITE:=https://github.com/ebiggers/libdeflate#readme
 ### MANPAGE:=https://github.com/ebiggers/libdeflate/blob/master/NEWS.md
 ### CHANGES:=https://github.com/ebiggers/libdeflate/releases

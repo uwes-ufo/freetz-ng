@@ -1,6 +1,6 @@
-$(call PKG_INIT_BIN, 4.8.30)
+$(call PKG_INIT_BIN, 4.8.31)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=5ebc3cb2144b970c5149fda556c4ad50b78780494696cdf2d14a53204c95c7df
+$(PKG)_HASH:=24191cf8667675b8e31fc4a9d18a0a65bdc0598c2c5c4ea092494cd13ab4ab1a
 $(PKG)_SITE:=http://ftp.midnight-commander.org,ftp://ftp.midnight-commander.org/pub/midnightcommander
 ### WEBSITE:=http://midnight-commander.org/
 ### MANPAGE:=http://midnight-commander.org/wiki/doc
@@ -11,6 +11,7 @@ $(PKG)_BINARY:=$($(PKG)_DIR)/src/mc
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/mc
 $(PKG)_TARGET_CONS_SAVER_BINARY:=$($(PKG)_DEST_DIR)/usr/lib/mc/cons.saver
 
+$(PKG)_DEPENDS_ON += wget-host
 $(PKG)_DEPENDS_ON += ncurses-terminfo glib2
 
 $(PKG)_CONFIGURE_ENV += fu_cv_sys_stat_statfs2_bsize=yes

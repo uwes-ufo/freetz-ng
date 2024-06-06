@@ -9,7 +9,7 @@ $(PKG)_SITE:=@GNU/$(pkg_short)
 
 $(PKG)_DEPENDS_ON+=autoconf-host
 
-$(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
+$(PKG)_DESTDIR             := $(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
 
 $(PKG)_BINARIES            := libtool libtoolize
 $(PKG)_BINARIES_TARGET_DIR := $($(PKG)_BINARIES:%=$($(PKG)_DESTDIR)/bin/%)
@@ -40,8 +40,8 @@ $(pkg)-precompiled: $($(PKG)_DIR)/.installed
 
 
 $(pkg)-clean:
-	-$(MAKE) -C $(LIBTOOL_HOST_DIR) uninstall
-	-$(RM) $(LIBTOOL_HOST_DIR)/.{configured,compiled,installed}
+	-$(MAKE) -C $(LIBTOOL_HOST_DIR) clean
+	-$(RM) $(LIBTOOL_HOST_DIR)/.{configured,compiled,installed,fixhardcoded}
 
 $(pkg)-dirclean:
 	$(RM) -r $(LIBTOOL_HOST_DIR)

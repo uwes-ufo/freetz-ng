@@ -1,5 +1,31 @@
 # NEWS
 
+ * __[2024-04-01](#2024-04-01)__<a id='2024-04-01'></a><br>
+   Es wurde ein neuer [Tag](https://github.com/Freetz-NG/freetz-ng/tags) `ng24040` erstellt.<br>
+   Die automatisch angebotene und nicht deaktivierbare `.zip`-Datei darf auf keinen Fall verwendet werden, da<br>
+   darin keine Dateiberechtigungen enthalten sind! In der `.tar.gz` fehlt mindestens die Versionsinformation.<br>
+   Stattdessen sollte ein Tag wie in der [README](https://github.com/Freetz-NG/freetz-ng#or-clone-a-single-tag) beschrieben mit git ausgecheckt werden.<br>
+   Siehe [ng24040](https://github.com/Freetz-NG/freetz-ng/releases/tag/ng24040)<br>
+
+ * __[2024-03-18](#2024-03-18)__<a id='2024-03-18'></a><br>
+   UPDATE: Der Tag wurde wegen [CVE-2024-3094](https://nvd.nist.gov/vuln/detail/CVE-2024-3094) gelöscht.<br>
+   Es wurde ein neuer [Tag](https://github.com/Freetz-NG/freetz-ng/tags) `ng24030` erstellt.<br>
+   Die automatisch angebotene und nicht deaktivierbare `.zip`-Datei darf auf keinen Fall verwendet werden, da<br>
+   darin keine Dateiberechtigungen enthalten sind! In der `.tar.gz` fehlt mindestens die Versionsinformation.<br>
+   Stattdessen sollte ein Tag wie in der [README](https://github.com/Freetz-NG/freetz-ng#or-clone-a-single-tag) beschrieben mit git ausgecheckt werden.<br>
+   Siehe [ng24030](https://github.com/Freetz-NG/freetz-ng/releases/tag/ng24030)<br>
+
+ * __[2024-01-30](#2024-01-30)__<a id='2024-01-30'></a><br>
+   Freetz-NG gibt es nun seit 5 Jahren!<br>
+   Siehe [eaf06dbb](https://github.com/Freetz-NG/freetz-ng/commit/eaf06dbb153d8ee2eabeedb827f1c8d80e409744)<br>
+
+ * __[2023-11-03](#2023-11-03)__<a id='2023-11-03'></a><br>
+   Es wurde ein neuer [Tag](https://github.com/Freetz-NG/freetz-ng/tags) `ng23110` erstellt.<br>
+   Die automatisch angebotene und nicht deaktivierbare `.zip`-Datei darf auf keinen Fall verwendet werden, da<br>
+   darin keine Dateiberechtigungen enthalten sind! In der `.tar.gz` fehlt mindestens die Versionsinformation.<br>
+   Stattdessen sollte ein Tag wie in der [README](https://github.com/Freetz-NG/freetz-ng#or-clone-a-single-tag) beschrieben mit git ausgecheckt werden.<br>
+   Siehe [ng23110](https://github.com/Freetz-NG/freetz-ng/releases/tag/ng23110)<br>
+
  * __[2023-09-10](#2023-09-10)__<a id='2023-09-10'></a><br>
    Der Aufruf der `fwmod_custom` Scriptes hat sich geändert, es wird jetzt aus dem Basisverzeichnis des Checkouts<br>
    heraus aufgerufen. Möglicherweise müssen in bestehenden Scripten die Verzeichnisse mit `build/modified/`<br>

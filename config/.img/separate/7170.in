@@ -6,6 +6,9 @@ config FREETZ_AVM_HAS_AURA_USB
 config FREETZ_AVM_HAS_CTLMGR_CTL
 	def_bool y
 
+config FREETZ_AVM_HAS_DMESG_LINK
+	def_bool y
+
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 
@@ -16,6 +19,9 @@ config FREETZ_AVM_HAS_EXT2_MODULE
 	def_bool y
 
 config FREETZ_AVM_HAS_FAT_MODULE
+	def_bool y
+
+config FREETZ_AVM_HAS_FWLAYOUT_1
 	def_bool y
 
 config FREETZ_AVM_HAS_ISOFS_MODULE
@@ -100,6 +106,9 @@ config FREETZ_AVM_PROP_LIBC_UCLIBC
 	def_bool y
 
 config FREETZ_AVM_PROP_SQUASHFS_COMPRESSION_LZMA
+	def_bool y
+
+config FREETZ_AVM_PROP_SQUASHFS_ENDIANN_LE
 	def_bool y
 
 config FREETZ_AVM_PROP_SQUASHFS_VERSION_2

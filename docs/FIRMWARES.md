@@ -103,9 +103,11 @@ Currently supported devices and firmwares
   - 155.07.14 rev73181 {ALL} [MESH18 NL4]
   - 155.07.29 rev92647 {ALL} [PSQ19P2NL4]
   - 155.07.57 rev107816 {ALL} [MOVE21NL1]
+* __Fritz!Box 4050 (UNTESTED)__
+  - 287.07.57 rev110614 {ALL} [MOVE21NL1] (Inhaus)
 * __Fritz!Box 4060__
   - 261.07.30 rev95826 {ALL} [PSQ19P2NL4]
-  - 261.07.57 rev107817 {ALL} [MOVE21NL1]
+  - 261.07.57 rev109903 {ALL} [MOVE21NL1]
 
 ### Fritz!Box Fon (50xx/51xx)
 
@@ -138,9 +140,14 @@ Currently supported devices and firmwares
 * __Fritz!Box 5530 Fiber (DEVELOPER, No fiber!)__
   - 257.07.30 rev99334 {ALL} [PSQ19P2NL4]
   - 257.07.58 rev108018 {ALL} [MOVE21NL1]
+  - 257.07.81 rev113241 {ALL} [GoFiber23NL1]
 * __Fritz!Box 5590 Fiber__
   - 272.07.30 rev101793 {ALL} [PSQ19P2NL4]
-  - 272.07.58 rev108019 {ALL} [MOVE21NL1]
+  - 272.07.58 rev109907 {ALL} [MOVE21NL1]
+  - 272.07.81 rev113243 {ALL} [GoFiber23NL1]
+  - 272.07.90 rev113227 {ALL} [Smart24 P1] (Labor)
+* __FRITZ!Box 5690 Pro (UNTESTED)__
+  - 279.07.59 rev112003 {ALL} [FCS23] (Inhaus)
 
 ### Fritz!Box Cable (64xx/65xx/66xx)
 
@@ -164,13 +171,18 @@ Currently supported devices and firmwares
   - 161.07.13 rev75441 {GER} [MESH18 NL3]
   - 161.07.29 rev92035 {GER} [PSQ19P2NL4]
   - 161.07.57 rev107841 {GER} [MOVE21NL1]
+  - 161.07.90 rev113091 {GER} [Smart24 P1] (Labor)
 * __Fritz!Box 6660 Cable__
   - 252.07.15 rev78740 {GER} [6660 FCS]
   - 252.07.29 rev92037 {GER} [PSQ19P2NL4]
   - 252.07.57 rev107842 {GER} [MOVE21NL1]
+  - 252.07.90 rev113092 {GER} [Smart24 P1] (Labor)
+* __Fritz!Box 6670 Cable (UNTESTED)__
+  - 284.07.62 rev112288 {GER} [FCS23]
 * __Fritz!Box 6690 Cable__
   - 267.07.29 rev92355 {GER} [PSQ19P2NL4]
-  - 267.07.57 rev107843 {GER} [MOVE21NL1]
+  - 267.07.57 rev109915 {GER} [MOVE21NL1]
+  - 267.07.90 rev113093 {GER} [Smart24 P1] (Labor)
 
 ### Fritz!Box LTE (68xx)
 
@@ -201,12 +213,14 @@ Currently supported devices and firmwares
 * __Fritz!Box 6842 LTE (UNTESTED)__
   - 123.06.35 rev38809 {GER}
 
-* __Fritz!Box 6850 LTE (UNTESTED)__
+* __Fritz!Box 6850 LTE__
   - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
-  - 262.07.57 rev107910 {ALL} [MOVE21NL1]
+  - 262.07.58 rev111451 {ALL} [MOVE21NL1]
+  - 262.07.90 rev112171 {ALL} [Smart24 P1] (Inhaus)
 * __Fritz!Box 6850 5G (UNTESTED)__
   - 258.07.30 rev94600 {ALL} [PSQ19P2NL4]
-  - 258.07.57 rev107917 {ALL} [MOVE21NL1]
+  - 258.07.57 rev109330 {ALL} [MOVE21NL1]
+  - 258.07.90 rev112170 {ALL} [Smart24 P1] (Inhaus)
 
 * __Fritz!Box 6890 LTE__
   - 162.06.87 rev59283 {ALL}
@@ -396,7 +410,9 @@ Currently supported devices and firmwares
   - 164.07.57 rev107823 {ALL} [MOVE21NL1]
 * __Fritz!Box Fon WLAN 7530 AX__
   - 256.07.31 rev94779 {ALL} [PSQ19P2NL4]
-  - 256.07.57 rev107818 {ALL} [MOVE21NL1]
+  - 256.07.57 rev109901 {ALL} [MOVE21NL1]
+  - 256.07.80 rev110628 {ALL} [GoFiber23]
+  - 256.07.90 rev113462 {ALL} [Smart24 P1] (Labor)
 * __Fritz!Box Fon WLAN 7560__
   - 149.06.53 rev41227 {GER}
   - 149.06.83 rev43670 {GER}
@@ -436,10 +452,16 @@ Currently supported devices and firmwares
   - 154.07.01 rev61989 {INT}
   - 154.07.13 rev74390 {INT} [MESH18 NL3]
   - 154.07.29 rev92051 {ALL} [PSQ19P2NL4]
-  - 154.07.57 rev107893 {ALL} [MOVE21NL1]
+  - 154.07.59 rev113250 {ALL} [MOVE21NL2]
+  - 154.07.90 rev112649 {ALL} [Smart24 P1] (Labor)
 * __Fritz!Box Fon WLAN 7590 AX__
   - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
   - 259.07.57 rev107809 {ALL} [MOVE21NL1]
+  - 259.07.81 rev113242 {ALL} [GoFiber23NL1]
+  - 259.07.90 rev112650 {ALL} [Smart24 P1] (Labor)
+
+* __FRITZ!Box 7690 (UNTESTED)__
+  - 285.07.61 rev113413 {ALL} [FCS23]
 
 ### Fritz!Powerline
 
@@ -460,16 +482,16 @@ Currently supported devices and firmwares
   - 150.06.92 rev47432 {ALL}
   - 150.07.01 rev63180 {ALL}
   - 150.07.16 rev108014 {ALL} [WU22 MESH18]
-* __FRITZ!Powerline 1240 AX (UNTESTED)__
-  - 275.07.57 rev108112 {ALL} [MOVE21NL1]
+* __FRITZ!Powerline 1240 AX__
+  - 275.07.58 rev113257 {ALL} [MOVE21NL1]
 * __Fritz!Powerline 1260E__
   - 157.07.01 rev63181 {ALL}
   - 157.07.12 rev70670 {ALL} [MESH18 NL2]
   - 157.07.29 rev93269 {ALL} [PSQ19P2NL4]
-  - 157.07.57 rev107853 {ALL} [MOVE21NL1]
+  - 157.07.58 rev113255 {ALL} [MOVE21NL1]
 * __Fritz!Powerline 1260 v2 (UNTESTED)__
   - 249.07.29 rev93271 {ALL} [PSQ19P2NL4]
-  - 249.07.57 rev107850 {ALL} [MOVE21NL1]
+  - 249.07.58 rev113256 {ALL} [MOVE21NL1]
 
 ### Fritz!Repeater
 
@@ -492,50 +514,52 @@ Currently supported devices and firmwares
   - 134.06.50 rev33858 {ALL}
   - 134.07.01 rev63070 {ALL}
   - 134.07.12 rev70775 {ALL} [MESH18 NL2]
-  - 134.07.31 rev107923 {ALL} [WU22 PSQ19]
+  - 134.07.32 rev111816 {ALL} [WU22 PSQ19]
 
 * __Fritz!Repeater 1200__
   - 172.07.14 rev73941 {ALL} [MESH18 NL4]
   - 172.07.29 rev93267 {ALL} [PSQ19P2NL4]
-  - 172.07.57 rev107845 {ALL} [MOVE21NL1]
+  - 172.07.58 rev111616 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 1200 AX__
   - 268.07.31 rev108167 {ALL} [PSQ19P2NL4]
-  - 268.07.57 rev107840 {ALL} [MOVE21NL1]
+  - 268.07.58 rev113012 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 2400__
   - 169.07.12 rev71975 {ALL} [MESH18 NL2]
   - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
-  - 169.07.57 rev107844 {ALL} [MOVE21NL1]
+  - 169.07.58 rev111615 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 3000__
   - 174.07.04 rev66458 {ALL}
   - 174.07.14 rev73940 {ALL} [MESH18 NL4]
   - 174.07.29 rev93268 {ALL} [PSQ19P2NL4]
-  - 174.07.57 rev107846 {ALL} [MOVE21NL1]
+  - 174.07.58 rev111617 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 3000 AX (UNTESTED)__
   - 270.07.42 rev108161 {ALL} [MOVE21]
-  - 270.07.57 rev107839 {ALL} [MOVE21NL1]
+  - 270.07.58 rev113013 {ALL} [MOVE21NL1]
 * __Fritz!Repeater 6000__
-  - 253.07.31 rev108162 {ALL} [PSQ19P2NL4]
-  - 253.07.57 rev107838 {ALL} [MOVE21NL1]
+  - 253.07.31 rev109964 {ALL} [PSQ19P2NL4]
+  - 253.07.58 rev113014 {ALL} [MOVE21NL1]
 
 ### Fritz!Smart
 
 * __Fritz!Smart Gateway__
-  - 265.07.54 rev106830 {ALL} [MOVE21NL1]
+  - 265.07.60 rev112185 {ALL} [MOVE21NL1]
 
 ### T-Com derivatives
 
 * __Eumex 300IP__
-  - Alien Fritz!Box Fon {GER}
-
+  - Fritz!Box Fon 06.04.33 {GER}
 * __Speedport W501V__
-  - T-Com 28.04.38 & 7141 40.04.37 {GER}
+  - Fritz!Box 7141 40.04.37 {GER} & T-Com 28.04.38
+
+* __Speedport W504V MK__
+  - Alien 7270 v3 {INT} & dump 92.05.04
 * __Speedport W701V__
-  - Alien 7170 & T-Com 33.04.57 {GER}
+  - Alien 7170 {GER} & T-Com 33.04.57
 * __Speedport W900V__
-  - Alien 7170 & T-Com 34.04.57 {GER}
+  - Alien 7170 {GER} & T-Com 34.04.57
 * __Speedport W920V__
-  - Alien 7270 v2 {GER+INT}
-  - Alien 7570 & T-Com 65.04.79 rev27472 {GER}
+  - Alien 7270 v2 {GER+INT} (No vdsl!)
+  - Alien 7570 {GER} & T-Com 65.04.79
 
 ### Alice derivatives
 
@@ -543,7 +567,7 @@ Currently supported devices and firmwares
   - Alien 7170 {GER}
 
 * __Alice IAD 7570 VDSL__
-  - Alien 7270 v2 {GER+INT}
+  - Alien 7270 v2 {GER+INT} (No vdsl!)
   - Alien 7570 {INT}
 
 ```

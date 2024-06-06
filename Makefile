@@ -43,7 +43,10 @@ ifneq ($(shell grep -q "$$($(ENVIRA_REV_TOOL))" $(ENVIRA_LAST_REV) 2>/dev/null &
 endif
 endif
 	@$(ENVIRA_REV_TOOL) make
-	@umask $(ENVIRA_UMASK) && PATH="$(ENVIRA_PATH_ABS):$(PATH):/usr/sbin" $(MAKE) $(MAKECMDGOALS) $(ENVIRA_MAKE_VARS) || kill $$$$
+ifeq ($(strip $(MAKECMDGOALS)),)
+	@$(MAKE) olddefconfig > /dev/null
+endif
+	@umask $(ENVIRA_UMASK) && LANG=C PATH="$(ENVIRA_PATH_ABS):$(PATH):/usr/sbin" $(MAKE) $(MAKECMDGOALS) $(ENVIRA_MAKE_VARS) || kill $$$$
 .PHONY: envira
 
 $(MAKECMDGOALS): envira
@@ -99,11 +102,15 @@ PYTHON3=python3
 MESON=meson
 CMAKE=cmake
 NINJA=ninja
+PERL=perl
 MAKE1=make
 ifeq ($(FREETZ_JLEVEL),0)
 MAKE=make -j$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 else
 MAKE=make -j$(FREETZ_JLEVEL)
+endif
+ifeq ($(FREETZ_REPRODUCIBLE),y)
+export SOURCE_DATE_EPOCH:=$(shell tools/freetz_revision ticks)
 endif
 
 # Don't go parallel
@@ -419,7 +426,7 @@ ifneq ($(strip $(FREETZ_FWMOD_SKIP_ALL)),y)
 		$(if $(filter firmware-nocompile,$(MAKECMDGOALS)),-n)                                \
 		$(if $(call is-y,$(FREETZ_FWMOD_FORCE_PACK)),-f)                                     \
 		-d $(BUILD_DIR)                                                                      \
-		$(DL_IMAGE)
+		"$(DL_IMAGE)"
 endif
 
 ifneq ($(strip $(FREETZ_FWMOD_SKIP_MODIFY)),y)
@@ -487,9 +494,11 @@ tools-distclean-local: $(patsubst %,%-distclean,$(filter-out $(TOOLS_TARXZBUNDLE
 tools-dirclean: $(TOOLS_DIRCLEAN)
 tools-distclean: $(TOOLS_DISTCLEAN)
 
-push_firmware push-firmware:
+.PHONY: push_firmware push-firmware pf pfp tools-push_firmware
+pfp tools-push_firmware: netkit-ftp-host ncftp-host dos2unix-host tichksum-host dtc-host uimg-host
+push_firmware push-firmware pf: tools-push_firmware
 	@if [ ! -e "images/latest.image" ]; then \
-		echo "Please run 'make' first."; exit 1; \
+		echo "Please run 'make' first to build an image."; exit 1; \
 	else \
 		$(TOOLS_DIR)/push_firmware; exit $?; \
 	fi
@@ -561,6 +570,11 @@ config-compress: .config.compressed
 
 listnewconfig: config-cache kconfig-host-conf
 	@$(CONFIG)/conf --listnewconfig $(CONFIG_IN_CACHE)
+
+config-flush-invalid:
+	-@$(SED) '/^FREETZ_TARGET_CFLAGS=/d' -i .config 2>/dev/null
+
+oldconfig olddefconfig: config-flush-invalid
 
 oldconfig olddefconfig allnoconfig allyesconfig randconfig: config-cache kconfig-host-conf
 	@$(CONFIG)/conf --$@ $(CONFIG_IN_CACHE) && touch .config
@@ -688,7 +702,7 @@ check-dot-config-uptodateness: $(CONFIG_IN_CACHE)
 help:
 	@sed 's/^# /\n/;/```/d' docs/wiki/20_Advanced/make_targets.en.md
 
-.PHONY: all world step $(KCONFIG_TARGETS) config-cache config-cache-clean config-cache-refresh tools recover \
+.PHONY: all world step $(KCONFIG_TARGETS) config-flush-invalid config-cache config-cache-clean config-cache-refresh tools recover \
 	config-clean-deps-modules config-clean-deps-libs config-clean-deps-busybox config-clean-deps-terminfo config-clean-deps config-clean-deps-keep-busybox \
 	cacheclean clean dirclean distclean common-cacheclean common-clean common-dirclean common-distclean release \
 	$(TOOLS) $(TOOLS_CACHECLEAN) $(TOOLS_CLEAN) $(TOOLS_DIRCLEAN) $(TOOLS_DISTCLEAN) $(TOOLS_SOURCE) $(TOOLS_PRECOMPILED) $(TOOLS_RECOMPILE) $(TOOLS_FIXHARDCODED) $(TOOLS_AUTOFIX) \

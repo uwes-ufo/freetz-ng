@@ -1,13 +1,13 @@
-$(call TOOLS_INIT, 2.0.3)
+$(call TOOLS_INIT, 2.1.1)
 $(PKG)_SOURCE:=$(pkg_short)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=cabdf3c474529854f7ccce8573c5ac68ad34a7e621037535cbc3981f6b23836c
+$(PKG)_HASH:=3a224f2accf091b77a5781316e27b9ee3ba82c083cc2e539e08940b68a44fec5
 $(PKG)_SITE:=https://distfiles.ariadne.space/pkgconf
 ### WEBSITE:=http://pkgconf.org/
 ### MANPAGE:=http://pkgconf.org/features.html
 ### CHANGES:=https://github.com/pkgconf/pkgconf/blob/master/NEWS
 ### CVSREPO:=https://github.com/pkgconf/pkgconf/tags
 
-$(PKG)_DESTDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
+$(PKG)_DESTDIR             := $(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
 
 $(PKG)_BINARIES            := pkgconf bomtool
 $(PKG)_BINARIES_TARGET_DIR := $($(PKG)_BINARIES:%=$($(PKG)_DESTDIR)/bin/%)
@@ -40,7 +40,7 @@ $(pkg)-precompiled: $($(PKG)_DIR)/.installed $($(PKG)_WRAPPER_TARGET)
 
 
 $(pkg)-clean:
-	-$(MAKE) -C $(PKGCONF_HOST_DIR) uninstall
+	-$(MAKE) -C $(PKGCONF_HOST_DIR) clean
 	-$(RM) $(PKGCONF_HOST_DIR)/.{configured,compiled,installed}
 
 $(pkg)-dirclean:

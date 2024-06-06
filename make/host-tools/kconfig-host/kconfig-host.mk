@@ -1,7 +1,7 @@
-$(call TOOLS_INIT, v6.5)
+$(call TOOLS_INIT, v6.9)
 ## patches/100-main_makefile.patch contains also the version
 $(PKG)_SOURCE:=kconfig-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=768d9b87cc688cb6f93e29b8b39d13c76e843f99803fe045e2449278e12de5f8
+$(PKG)_HASH:=48a0e5e5ce72f0b23a868e2ce784033fadfdc7b3b199be5ef6efbfca02e0be70
 $(PKG)_SITE:=git_archive@git://repo.or.cz/linux.git,scripts/basic,scripts/kconfig,scripts/Kbuild.include,scripts/Makefile.compiler,scripts/Makefile.build,scripts/Makefile.host,scripts/Makefile.lib,Documentation/kbuild/kconfig-language.rst,Documentation/kbuild/kconfig-macro-language.rst,Documentation/kbuild/kconfig.rst
 
 $(PKG)_DEPENDS_ON:=
@@ -61,6 +61,7 @@ $(pkg)-clean:
 		$(KCONFIG_HOST_DIR)/scripts/kconfig/gconf \
 		$(KCONFIG_HOST_DIR)/scripts/kconfig/nconf \
 		$(KCONFIG_HOST_DIR)/scripts/kconfig/mconf
+	-$(RM) $(KCONFIG_HOST_DIR)/.{configured,compiled}
 
 $(pkg)-dirclean:
 	$(RM) -r $(KCONFIG_HOST_DIR)

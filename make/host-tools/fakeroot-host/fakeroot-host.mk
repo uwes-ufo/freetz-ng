@@ -1,6 +1,6 @@
-$(call TOOLS_INIT, 1.32.1)
+$(call TOOLS_INIT, 1.35)
 $(PKG)_SOURCE:=fakeroot_$($(PKG)_VERSION).orig.tar.gz
-$(PKG)_HASH:=c072b0f65bafc4cc5b6112f7c61185f5170ce4cb0c410d1681c1af4a183e94e6
+$(PKG)_HASH:=e5a427b4ab1eb4a2158b3312547a4155aede58735cd5c2910421988834b440a4
 $(PKG)_SITE:=https://ftp.debian.org/debian/pool/main/f/fakeroot
 ### WEBSITE:=https://wiki.debian.org/FakeRoot
 ### MANPAGE:=https://man.archlinux.org/man/fakeroot.1.en
@@ -85,6 +85,9 @@ $(pkg)-precompiled: $($(PKG)_TARGET_SCRIPT) $(if $(HOST_BIARCH),$($(PKG)_TARGET_
 $(pkg)-clean:
 	-$(MAKE) -C $(FAKEROOT_HOST_MAINARCH_DIR) clean
 	-$(MAKE) -C $(FAKEROOT_HOST_BIARCH_DIR) clean
+	-$(RM) $(FAKEROOT_HOST_DIR)/.{compiled,fixhardcoded}
+	-$(RM) $(FAKEROOT_HOST_MAINARCH_DIR)/.{configured,compiled}
+	-$(RM) $(FAKEROOT_HOST_BIARCH_DIR)/.{configured,compiled}
 
 $(pkg)-dirclean:
 	$(RM) -r $(FAKEROOT_HOST_DIR)

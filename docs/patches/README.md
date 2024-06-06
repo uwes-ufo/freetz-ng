@@ -289,10 +289,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Removes libtr069 to save space.
 
   * **<u>REMOVE_TR069_FWUPDATE: Remove fwupdate</u><a id='remove-tr069-fwupdate'></a>**<br>
-    Removes the file /usr/bin/tr069fwupdate, needed for updating the firmware of dect devices.
+    Removes the file /usr/bin/tr069fwupdate or /usr/bin/fwupdate, needed for updating the firmware of dect devices.
 
   * **<u>REMOVE_TR069_HTTPSDL: Remove httpsdl</u><a id='remove-tr069-httpsdl'></a>**<br>
-    Removes the file /usr/bin/httpsdl, used by: * tr069/fwupdate, you have removed it * firmware updater, with Freetz you don't want it * live-pictures from door clock (TFE) * some more ? This saves 15-45 KB of uncompressed data size.
+    Removes the file /usr/bin/httpsdl or /usr/bin/webget, used by: * tr069/fwupdate, you have removed it * firmware updater, with Freetz you don't want it * live-pictures from door clock (TFE) * some more ? This saves 15-45 KB of uncompressed data size.
 
   * **<u>REMOVE_TR069_PROVIDERS: Remove ISP db</u><a id='remove-tr069-providers'></a>**<br>
     Removes /etc/default.${BOX}/${OEM}/providers-${ALC}.tar  files containing the defaults for many ISPs. Every branding has such a file with up to 310 KB of uncompressed data size for each. WARNING: Enable this patch only if - you already have configured your internet connection, and - don't use any predefined ISP.
@@ -329,6 +329,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[Remove WLAN](REMOVE_WLAN.md)<a id='remove-wlan'></a>**<br>
     Radically remove a lot of wlan-related files. This patch saves about 700 kb of uncomrpessed data size in the firmware image. WARNING: Do not enable Wlan, you will get a reboot loop!
+
+### Z
+
+  * **<u>Remove zram.ko</u><a id='remove-zram'></a>**<br>
+    Remove zram.ko (about 30 kB uncompressed).
 
 # Other patches
 
@@ -422,6 +427,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>DROP_NOEXEC_EXTERNAL: Drop noexec for (external) storages</u><a id='drop-noexec-external'></a>**<br>
     Allows to execute files on external storages like USB sticks and HDDs.
 
+  * **<u>Enable GPON serial textbox</u><a id='enable-gpon-serial'></a>**<br>
+    Re-enables access to the GPON serial textbox on support page.
+
   * **<u>Enable LED deactivation page</u><a id='enable-led-deactivation'></a>**<br>
     Re-enables access to the LED deactivation page in expert mode.
 
@@ -469,6 +477,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **<u>ENFORCE_BRANDING_versatel: versatel</u><a id='enforce-branding-versatel'></a>**<br>
     Versatel branding
+
+  * **<u>ENFORCE_TMP_PERMISSIONS: Enforce /tmp/ permissions</u><a id='enforce-tmp-permissions'></a>**<br>
+    Changes /var/tmp/ permissions back to 1777 after AVM sets 755.
 
   * **<u>ENFORCE_URLADER_SETTING_FIRMWARE_VERSION: Enforce firmware_version variable</u><a id='enforce-urlader-setting-firmware-version'></a>**<br>
     Choose wisely. Your image beeing built must support this. Typical settings are eg.: avm, avme, tcom, 1und1, ... If this is empty the urlader setting won't be touched.
@@ -554,6 +565,12 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **<u>PATCH_SECURE_2fa: Caused by twofactor_disabled</u><a id='patch-secure-2fa'></a>**<br>
     twofactor_disabled does not trigger the message.
+
+  * **<u>PATCH_SECURE_nau: Caused by noAutoupdate</u><a id='patch-secure-nau'></a>**<br>
+    noAutoupdate does not trigger the message.
+
+  * **<u>PATCH_SECURE_nus: Caused by noUpdateSearch</u><a id='patch-secure-nus'></a>**<br>
+    noUpdateSearch does not trigger the message.
 
   * **<u>PATCH_SECURE_sip: Caused by ipphone_from_outside</u><a id='patch-secure-sip'></a>**<br>
     ipphone_from_outside does not trigger the message.

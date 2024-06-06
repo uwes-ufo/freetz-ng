@@ -4,11 +4,11 @@ bison
 bzip2
 ccache
 cmake
-cpio
 curl
 ecj
 elfutils-libelf-devel
 flex
+ftp
 gcc
 gcc-c++
 gettext
