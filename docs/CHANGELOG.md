@@ -95,7 +95,7 @@ Latest changes
    * strace 4.9/5.0/6.9
    * Sudo 1.9.15p5
    * SQLite 3.45.3
-   * Tor 0.4.8.11
+   * Tor 0.4.8.12
    * Transmission 3.00/4.0.6
    * Unbound 1.20.0
    * UnRAR 6.1.7/7.0.9
@@ -106,6 +106,7 @@ Latest changes
    * libidn 1.42
    * libpng 1.6.43
    * libxml2 2.12.7
+   * pcre2 10.44
    * pixman 0.43.4
 
  - Firmware updates:
