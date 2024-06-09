@@ -83,7 +83,7 @@ quit
 #		grep -q "^ProductID" "$tmpenv" && break
 #		grep -q "^226 " "$tmpout" && break  # Transfer complete
 		grep -q "^221 " "$tmpout" && break  # Thank you for using the FTP service on ADAM2
-		[ $count -gt 15 ] && echo "Timeout!" && break
+		[ $count -gt 15 ] && echo "Timeout!!!!!!!!!!!!!!!!!!" && break
 	done
 	kill $log_pid >/dev/null 2>&1  # cant get (simply) correct ftp/ppid in pipe if using tee
 	kill $ftp_pid >/dev/null 2>&1  # this is needed as the FTP client freezes at the end of the file transfer
@@ -124,7 +124,7 @@ function push_fw() {
 	local HWR_ENV="$( echo "$env_ProductID" | sed -nr 's/.*_HW(...).*/\1/p')"
 	local HWR_IMG="$( echo "$PRODUCT"       | sed -nr 's/.*_HW(...).*/\1/p')"
 	if [ -n "$PRODUCT" ] && [ "$HWR_IMG" != "$HWR_ENV" ]; then
-		echo "Error, ProductID of image does not match device!"
+		echo "Error, ProductID of image ($HWR_IMG) does not match device ($HWR_ENV)!"
 		echo -n "Type 'c' to ignore and continue: "
 		read -n1 -t9 c
 		[ "$?" != "0" ] && echo -e "¿\nTimeout" && exit 1
