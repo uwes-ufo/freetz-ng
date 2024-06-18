@@ -80,7 +80,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Callmonitor 1.20.9-git](callmonitor.md)<a id='callmonitor'></a>**<br>
     Callmonitor enables you to perform arbitrary actions upon incoming calls on your AVM Fritz!Box (e.g., to send notifications to your favorite set-top box, to wake up your PC, or to send you a mail when you have missed a call).
 
-  * **[CCID 1.5.4](ccid.md)<a id='ccid'></a>**<br>
+  * **[CCID 1.5.5 - DEPRECATED](ccid.md)<a id='ccid'></a>**<br>
     ccid provides the source code for a generic USB CCID (Chip/Smart Card Interface Devices) driver and ICCD (Integrated Circuit(s) Card Devices).
 
   * **[Checkmaild 0.4.7](checkmaild.md)<a id='checkmaild'></a>**<br>
@@ -234,7 +234,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.17](haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.17 - DEPRECATED](haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](haserl.md)<a id='haserl'></a>**<br>
@@ -383,7 +383,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[module-init-tools 3.12 (binary only)](module-init-tools.md)<a id='module-init-tools'></a>**<br>
     The module-init-tools (m-i-t) package provides many of the utilities needed by Linux systems for managing loadable Linux Kernel Modules. This includes depmod, insmod, rmmod, modprobe and tools like modinfo.
 
-  * **[Mosquitto 1.6.15](mosquitto.md)<a id='mosquitto'></a>**<br>
+  * **[Mosquitto 1.6.15 - DEPRECATED](mosquitto.md)<a id='mosquitto'></a>**<br>
     Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers like the Arduino.
 
   * **[MTR 0.80/0.95 (binary only)](mtr.md)<a id='mtr'></a>**<br>
@@ -476,7 +476,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[p7zip 16.02 (binary only)](p7zip.md)<a id='p7zip'></a>**<br>
     7-Zip  is  a  file  archiver  with the highest compression ratio. The program supports 7z (that implements LZMA compression algorithm), ZIP, CAB, ARJ, GZIP, BZIP2, TAR, CPIO, RPM and DEB formats. Compression ratio in the new 7z format is 30-50% better  than ratio in ZIP format.
 
-  * **[PCSC-lite 1.9.5/2.0.1 (binary only)](pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
+  * **[PCSC-lite 1.9.5/2.1.0 (binary only) - DEPRECATED](pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
     The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a very small form factor for communicating to smart cards and readers.
 
   * **<u>phonebook-tools: Phone book tools 1.0</u><a id='phonebook-tools'></a>**<br>
@@ -696,7 +696,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Tinc 1.0.36/1.1pre18](tinc.md)<a id='tinc'></a>**<br>
     Tinc is a Virtual Private Network (VPN) daemon that uses tunneling and encryption to create a secure private network between hosts on the Internet.
 
-  * **[Tinyproxy 1.11.1](tinyproxy.md)<a id='tinyproxy'></a>**<br>
+  * **[Tinyproxy 1.11.2](tinyproxy.md)<a id='tinyproxy'></a>**<br>
     Tinyproxy is a lightweight HTTP and HTTPS proxy.
 
   * **[tmux 3.4 (binary only)](tmux.md)<a id='tmux'></a>**<br>
@@ -742,7 +742,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Vim 9.1.0181 (binary only)](vim.md)<a id='vim'></a>**<br>
     An improved version of VI
 
-  * **[vnStat 1.18 (binary only)](vnstat.md)<a id='vnstat'></a>**<br>
+  * **[vnStat 1.18 (binary only) - DEPRECATED](vnstat.md)<a id='vnstat'></a>**<br>
     vnStat is a console-based network traffic monitor. It keeps a log of hourly, daily and monthly network traffic for the selected interface(s). However, it isn't a packet sniffer. The traffic information is analyzed from the proc(5) filesystem. That way vnStat can be used even without root permissions.
 
   * **[Vpnc 0.5.3](vpnc.md)<a id='vpnc'></a>**<br>
@@ -872,7 +872,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[usbroot: USB root 0.2](usbroot.md)<a id='usbroot'></a>**<br>
     Mount an ext{2,3} filesystem (fs) from an USB stick and use it as root fs which may be fully writable and basically unlimited in size. The Linux kernel will still be loaded from your box and during the first phase of the init process the SquashFS on the box is still used, but after the USB root is mounted, we pivot_root into it and it becomes the new root fs. The default is to unmount the read-only fs on the box to conserve memory, but if desired, it can be still be accessed under /oldroot (though this is absolutely not necessary anymore after pivot_root). Having said that, it should be clear that the usb stick should contain everything necessary to run the box. Usually you just create a full copy of a target filesystem (e.g. from build/modified/filesystem or from an unpacked firmware image) and start modifying it as needed. The binaries (kernel modules, executables, shared libraries) used therein just have to fit the kernel installed on the box. Note: The webinterface makes it pretty easy to (de-)activate and configure the functionality of this package. However, USB root is an expert thing! See also the help screen of /etc/init.d/rc.usbroot for further description. As some config data is stored in bootloader environment, this package is special anyway.
 
-  * **[virtualip-cgi: Virtual IP CGI (deprecated)](virtualip-cgi.md)<a id='virtualip'></a>**<br>
+  * **[virtualip-cgi: Virtual IP CGI - DEPRECATED](virtualip-cgi.md)<a id='virtualip'></a>**<br>
     Creates a virtual network interface. In former times this was used to comfortably open server ports on the Fritz!Box itself via AVM web interface. Nowadays the avm-firewall package is used for this task. The package is also equipped with a configuration interface for the Freetz web configurator which lets you choose the IP address and net mask of the virtual interface as well as toggle auto-start.
 
   * **<u>Zabbix 2.4.6 (binary only)</u><a id='zabbix'></a>**<br>
@@ -887,16 +887,16 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     This frontend allows the management of the authorized_keys file used by either Dropbear or OpenSSH to allow a key-based authentication. The key-based authentication is much more secure than password-based authentication.
 
   * **[AVM-firewall](avm-firewall.md)<a id='avm-firewall'></a>**<br>
-    Configuration front-end for AVM-firewall. This front-end is used for managing firewall rules for the AVM standard firewall. You can also modify the ar7.cfg file manually. But a better way is to use this GUI.
+    For FritzOS 4.xx - 5.5x only. Configuration front-end for AVM-firewall. This front-end is used for managing firewall rules for the AVM standard firewall. You can also modify the ar7.cfg file manually. But a better way is to use this GUI.
 
   * **<u>AVM-forwarding</u><a id='avm-forwarding'></a>**<br>
-    Configuration of forwardings to FB itself (open ports). Requires an existing forwarding in the configuration, e.g. HTTPS to box is allowed in the regular AVM GUI.
+    For FritzOS 6.0x - 6.5x only. Configuration of forwardings to FB itself (open ports). Requires an existing forwarding in the configuration, e.g. HTTPS to box is allowed in the regular AVM GUI.
 
   * **[AVM-portfw](avm-portfw.md)<a id='avm-portfw'></a>**<br>
-    Configuration of port forwardings to the FritzBox itself by using internet_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
+    For FritzOS 6.8x - 7.5x only. Configuration of port forwardings to the FritzBox itself by using internet_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
 
-  * **[AVM-rules (deprecated)](avm-rules.md)<a id='avm-rules'></a>**<br>
-    Configuration of port forwardings to the FritzBox itself by using voip_forwardrules. Please don't use this package, but AVM-portfw! Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
+  * **[AVM-rules - DEVELOPER](avm-rules.md)<a id='avm-rules'></a>**<br>
+    For FritzOS since v8.0x only. Configuration of port forwardings to the FritzBox itself by using voip_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
 
   * **<u>Cpmaccfg CGI</u><a id='cpmaccfg'></a>**<br>
     Configuration front-end to cpmaccfg This frontend shows the current settings of the LAN ports and gives a very simple way to set VLAN, portmode and WLAN assigment. Additional to this, you can set IP addresses for the VLAN interfaces eth0-eth3 if needed.

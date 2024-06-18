@@ -107,7 +107,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Callmonitor 1.20.9-git](../../docs/make/callmonitor.md)<a id='callmonitor'></a>**<br>
     Callmonitor enables you to perform arbitrary actions upon incoming calls on your AVM Fritz!Box (e.g., to send notifications to your favorite set-top box, to wake up your PC, or to send you a mail when you have missed a call).
 
-  * **[CCID 1.5.4](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
+  * **[CCID 1.5.5 - DEPRECATED](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
     ccid provides the source code for a generic USB CCID (Chip/Smart Card Interface Devices) driver and ICCD (Integrated Circuit(s) Card Devices).
 
   * **[Checkmaild 0.4.7](../../docs/make/checkmaild.md)<a id='checkmaild'></a>**<br>
@@ -323,7 +323,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.17](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.17 - DEPRECATED](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](../../docs/make/haserl.md)<a id='haserl'></a>**<br>
@@ -500,7 +500,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[module-init-tools 3.12 (binary only)](../../docs/make/module-init-tools.md)<a id='module-init-tools'></a>**<br>
     The module-init-tools (m-i-t) package provides many of the utilities needed by Linux systems for managing loadable Linux Kernel Modules. This includes depmod, insmod, rmmod, modprobe and tools like modinfo.
 
-  * **[Mosquitto 1.6.15](../../docs/make/mosquitto.md)<a id='mosquitto'></a>**<br>
+  * **[Mosquitto 1.6.15 - DEPRECATED](../../docs/make/mosquitto.md)<a id='mosquitto'></a>**<br>
     Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers like the Arduino.
 
   * **[MTR 0.80/0.95 (binary only)](../../docs/make/mtr.md)<a id='mtr'></a>**<br>
@@ -650,7 +650,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[p7zip 16.02 (binary only)](../../docs/make/p7zip.md)<a id='p7zip'></a>**<br>
     7-Zip  is  a  file  archiver  with the highest compression ratio. The program supports 7z (that implements LZMA compression algorithm), ZIP, CAB, ARJ, GZIP, BZIP2, TAR, CPIO, RPM and DEB formats. Compression ratio in the new 7z format is 30-50% better  than ratio in ZIP format.
 
-  * **[PCSC-lite 1.9.5/2.0.1 (binary only)](../../docs/make/pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
+  * **[PCSC-lite 1.9.5/2.1.0 (binary only) - DEPRECATED](../../docs/make/pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
     The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a very small form factor for communicating to smart cards and readers.
 
   * **<u>phonebook-tools: Phone book tools 1.0</u><a id='phonebook-tools'></a>**<br>
@@ -934,7 +934,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Features](../../docs/make/tinc.md#features)
      - [Verwendete Bibliotheken](../../docs/make/tinc.md#verwendete-bibliotheken)
 
-  * **[Tinyproxy 1.11.1](../../docs/make/tinyproxy.md)<a id='tinyproxy'></a>**<br>
+  * **[Tinyproxy 1.11.2](../../docs/make/tinyproxy.md)<a id='tinyproxy'></a>**<br>
     Tinyproxy is a lightweight HTTP and HTTPS proxy.
      - [Proxy auto-config (pac)](../../docs/make/tinyproxy.md#proxy-auto-config-pac)
      - [URL blocking](../../docs/make/tinyproxy.md#url-blocking)
@@ -1000,7 +1000,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Vim 9.1.0181 (binary only)](../../docs/make/vim.md)<a id='vim'></a>**<br>
     An improved version of VI
 
-  * **[vnStat 1.18 (binary only)](../../docs/make/vnstat.md)<a id='vnstat'></a>**<br>
+  * **[vnStat 1.18 (binary only) - DEPRECATED](../../docs/make/vnstat.md)<a id='vnstat'></a>**<br>
     vnStat is a console-based network traffic monitor. It keeps a log of hourly, daily and monthly network traffic for the selected interface(s). However, it isn't a packet sniffer. The traffic information is analyzed from the proc(5) filesystem. That way vnStat can be used even without root permissions.
 
   * **[Vpnc 0.5.3](../../docs/make/vpnc.md)<a id='vpnc'></a>**<br>
@@ -1185,7 +1185,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Mögliche Nebenwirkungen](../../docs/make/usbroot.md#mögliche-nebenwirkungen)
      - [Verbesserungsmöglichkeiten](../../docs/make/usbroot.md#verbesserungsmöglichkeiten)
 
-  * **[virtualip-cgi: Virtual IP CGI (deprecated)](../../docs/make/virtualip-cgi.md)<a id='virtualip'></a>**<br>
+  * **[virtualip-cgi: Virtual IP CGI - DEPRECATED](../../docs/make/virtualip-cgi.md)<a id='virtualip'></a>**<br>
     Creates a virtual network interface. In former times this was used to comfortably open server ports on the Fritz!Box itself via AVM web interface. Nowadays the avm-firewall package is used for this task. The package is also equipped with a configuration interface for the Freetz web configurator which lets you choose the IP address and net mask of the virtual interface as well as toggle auto-start.
      - [Einrichtung](../../docs/make/virtualip-cgi.md#einrichtung)
      - [Bekannte Probleme und Bugs](../../docs/make/virtualip-cgi.md#bekannte-probleme-und-bugs)
@@ -1206,7 +1206,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     This frontend allows the management of the authorized_keys file used by either Dropbear or OpenSSH to allow a key-based authentication. The key-based authentication is much more secure than password-based authentication.
 
   * **[AVM-firewall](../../docs/make/avm-firewall.md)<a id='avm-firewall'></a>**<br>
-    Configuration front-end for AVM-firewall. This front-end is used for managing firewall rules for the AVM standard firewall. You can also modify the ar7.cfg file manually. But a better way is to use this GUI.
+    For FritzOS 4.xx - 5.5x only. Configuration front-end for AVM-firewall. This front-end is used for managing firewall rules for the AVM standard firewall. You can also modify the ar7.cfg file manually. But a better way is to use this GUI.
      - [Feature-Übersicht](../../docs/make/avm-firewall.md#feature-übersicht)
      - [Anwendung der geänderten Regeln](../../docs/make/avm-firewall.md#anwendung-der-geänderten-regeln)
      - [Die Gefahr von Reboot-Schleifen und wie man da wieder herauskommt](../../docs/make/avm-firewall.md#die-gefahr-von-reboot-schleifen-und-wie-man-da-wieder-herauskommt)
@@ -1215,13 +1215,13 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Verweise](../../docs/make/avm-firewall.md#verweise)
 
   * **<u>AVM-forwarding</u><a id='avm-forwarding'></a>**<br>
-    Configuration of forwardings to FB itself (open ports). Requires an existing forwarding in the configuration, e.g. HTTPS to box is allowed in the regular AVM GUI.
+    For FritzOS 6.0x - 6.5x only. Configuration of forwardings to FB itself (open ports). Requires an existing forwarding in the configuration, e.g. HTTPS to box is allowed in the regular AVM GUI.
 
   * **[AVM-portfw](../../docs/make/avm-portfw.md)<a id='avm-portfw'></a>**<br>
-    Configuration of port forwardings to the FritzBox itself by using internet_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
+    For FritzOS 6.8x - 7.5x only. Configuration of port forwardings to the FritzBox itself by using internet_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
 
-  * **[AVM-rules (deprecated)](../../docs/make/avm-rules.md)<a id='avm-rules'></a>**<br>
-    Configuration of port forwardings to the FritzBox itself by using voip_forwardrules. Please don't use this package, but AVM-portfw! Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
+  * **[AVM-rules - DEVELOPER](../../docs/make/avm-rules.md)<a id='avm-rules'></a>**<br>
+    For FritzOS since v8.0x only. Configuration of port forwardings to the FritzBox itself by using voip_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
      - [Deprecated?](../../docs/make/avm-rules.md#deprecated)
 
   * **<u>Cpmaccfg CGI</u><a id='cpmaccfg'></a>**<br>

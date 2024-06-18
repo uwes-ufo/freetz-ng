@@ -53,7 +53,7 @@ Latest changes
 
  - Host tools:
    * ca-bundle 2024-03-11
-   * cmake 3.29.5
+   * cmake 3.29.6
    * cpio 2.15
    * fakeroot 1.35
    * kconfig 6.9
@@ -78,6 +78,7 @@ Latest changes
    * AutoFS 5.0.5/5.1.9
    * BIND 9.11.37/9.18.27
    * Bftpd 6.2
+   * CCID 1.5.5
    * Dropbear 2024.85
    * FFmpeg 5.1.4
    * Git 2.45.2
@@ -90,12 +91,14 @@ Latest changes
    * Nano 8.0
    * Nmap 4.76/5.51/7.95
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
+   * PCSC-lite 1.9.5/2.1.0
    * socat 1.8.0.0
    * sslh 2.1.2
    * rsync 3.3.0
    * strace 4.9/5.0/6.9
    * Sudo 1.9.15p5
    * SQLite 3.45.3
+   * Tinyproxy 1.11.2
    * Tor 0.4.8.12
    * Transmission 3.00/4.0.6
    * Unbound 1.20.0
@@ -105,6 +108,7 @@ Latest changes
  - Libraries:
    * harfbuzz 8.5.0
    * libidn 1.42
+   * libmaxminddb 1.10.0
    * libpng 1.6.43
    * libxml2 2.12.7
    * pcre2 10.44
