@@ -508,7 +508,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### N
 
-  * **[nagios 2.11 (binary only)](../../docs/make/nagios.md)<a id='nagios'></a>**<br>
+  * **[nagios 2.11 (binary only) - DEPRECATED](../../docs/make/nagios.md)<a id='nagios'></a>**<br>
     Nagios is an Open Source host, service and network monitoring program.
      - [Weiterführende Informationen](../../docs/make/nagios.md#weiterführende-informationen)
 
@@ -807,7 +807,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [einhängen/attach](../../docs/make/screen.md#einhängenattach)
      - [PuTTY-Tip: Änderung der Fensterbreite beim Screen-Start verhindern](../../docs/make/screen.md#putty-tip-änderung-der-fensterbreite-beim-screen-start-verhindern)
 
-  * **[ser2net 3.5.4](../../docs/make/ser2net.md)<a id='ser2net'></a>**<br>
+  * **[ser2net 3.5.4 - DEPRECATED](../../docs/make/ser2net.md)<a id='ser2net'></a>**<br>
     Ser2net is a program for allowing network connections to serial ports. It supports RFC 2217 (remote control of serial port parameters), but you must have a complient client.
 
   * **[sfk: Swiss File Knife 1.9.8.2](../../docs/make/sfk.md)<a id='sfk'></a>**<br>
@@ -1168,7 +1168,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>scanbuttond cvs</u><a id='scanbuttond'></a>**<br>
     Scanner button daemon. It allows you to invoke actions such as shell scripts whenever one of the scanner front panel buttons is pressed.
 
-  * **<u>Squid 3.0.STABLE26</u><a id='squid'></a>**<br>
+  * **<u>Squid 3.0.STABLE26 - DEPRECATED</u><a id='squid'></a>**<br>
     Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator.
 
   * **[usbip: USB/IP 0.1.8](../../docs/make/usbip.md)<a id='usbip'></a>**<br>

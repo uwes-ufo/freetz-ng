@@ -391,7 +391,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### N
 
-  * **[nagios 2.11 (binary only)](nagios.md)<a id='nagios'></a>**<br>
+  * **[nagios 2.11 (binary only) - DEPRECATED](nagios.md)<a id='nagios'></a>**<br>
     Nagios is an Open Source host, service and network monitoring program.
 
   * **[Nano 8.0 (binary only)](nano.md)<a id='nano'></a>**<br>
@@ -593,7 +593,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Screen 4.9.1](screen.md)<a id='screen'></a>**<br>
     Screen is a full-screen window manager that multiplexes a physical terminal between several processes, typically interactive shells. Each virtual terminal provides the functions of the DEC VT100 terminal and, in addition, several control functions from the ANSI X3.64 (ISO 6429) and ISO 2022 standards (e.g., insert/delete line and support for multiple character sets). There is a scrollback history buffer for each virtual terminal and a copy-and-paste mechanism that allows the user to move text regions between windows. When screen is called, it creates a single window with a shell in it (or the specified command) and then gets out of your way so that you can use the program as you normally would. Then, at any time, you can create new (full-screen) windows with other programs in them (including more shells), kill the current window, view a list of the active windows, turn output logging on and off, copy text between windows, view the scrollback history, switch between windows, etc. All windows run their programs completely independent of each other. Programs continue to run when their window is currently not visible and even when the whole screen session is detached from the users terminal.
 
-  * **[ser2net 3.5.4](ser2net.md)<a id='ser2net'></a>**<br>
+  * **[ser2net 3.5.4 - DEPRECATED](ser2net.md)<a id='ser2net'></a>**<br>
     Ser2net is a program for allowing network connections to serial ports. It supports RFC 2217 (remote control of serial port parameters), but you must have a complient client.
 
   * **[sfk: Swiss File Knife 1.9.8.2](sfk.md)<a id='sfk'></a>**<br>
@@ -863,7 +863,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>scanbuttond cvs</u><a id='scanbuttond'></a>**<br>
     Scanner button daemon. It allows you to invoke actions such as shell scripts whenever one of the scanner front panel buttons is pressed.
 
-  * **<u>Squid 3.0.STABLE26</u><a id='squid'></a>**<br>
+  * **<u>Squid 3.0.STABLE26 - DEPRECATED</u><a id='squid'></a>**<br>
     Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator.
 
   * **[usbip: USB/IP 0.1.8](usbip.md)<a id='usbip'></a>**<br>
