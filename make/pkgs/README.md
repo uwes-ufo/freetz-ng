@@ -600,8 +600,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ObexFTP 0.23 (binary only)](../../docs/make/obexftp.md)<a id='obexftp'></a>**<br>
     This package contains an ObexFTP server.
 
-  * **<u>oidentd 2.0.8</u><a id='oidentd'></a>**<br>
-    From the README: "oidentd is an ident (rfc1413 compliant) daemon that runs on Linux, FreeBSD, OpenBSD and Solaris.  oidentd can handle IP masqueraded/NAT connections on Linux, FreeBSD (ipf only) and OpenBSD.  oidentd has a flexible mechanism for specifying ident responses.  Users can be granted permission to specify their own ident responses. Responses can be specified according to host and port pairs." WWW: http://ojnk.sourceforge.net/
+  * **[oidentd 2.0.8 - DEPRECATED](../../docs/make/oidentd.md)<a id='oidentd'></a>**<br>
+    oidentd is an ident (rfc1413 compliant) daemon that runs on Linux, FreeBSD, OpenBSD and Solaris. oidentd can handle IP masqueraded/NAT connections on Linux, FreeBSD (ipf only) and OpenBSD. oidentd has a flexible mechanism for specifying ident responses. Users can be granted permission to specify their own ident responses. Responses can be specified according to host and port pairs.
 
   * **<u>OpenConnect 7.04 (binary only)</u><a id='openconnect'></a>**<br>
     Cisco AnyConnect VPN Client
@@ -613,7 +613,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Account](../../docs/make/opendd.md#account)
      - [E-Mail](../../docs/make/opendd.md#e-mail)
 
-  * **[Openntpd 3.9p1](../../docs/make/openntpd.md)<a id='openntpd'></a>**<br>
+  * **[Openntpd 3.9p1 - DEPRECATED](../../docs/make/openntpd.md)<a id='openntpd'></a>**<br>
     OpenNTPD is a FREE, easy to use implementation of the Network Time Protocol. This package automatically removes AVM'S chronyd if necessary.
      - [Vorteile:](../../docs/make/openntpd.md#vorteile)
      - [Ubuntu client setup](../../docs/make/openntpd.md#ubuntu-client-setup)
@@ -714,7 +714,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pyLoad 0.4.20/78162d75](../../docs/make/pyload.md)<a id='pyload'></a>**<br>
     pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links.
 
-  * **[Python 2.7.18](../../docs/make/python.md)<a id='python'></a>**<br>
+  * **[Python 2.7.18 - DEPRECATED](../../docs/make/python.md)<a id='python'></a>**<br>
     Python is a remarkably powerful dynamic programming language that is used in a wide variety of application domains. CAUTION: Python adds roughly 4 MB to 15.5 MB (depending on your choice of modules) of uncompressed data to your image. In most cases, it should therefore be externalized.
 
   * **<u>python-bjoern: bjoern 1.3.4</u><a id='python-bjoern'></a>**<br>
@@ -792,7 +792,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>sablevm-sdk: sablevm 1.13 (binary only)</u><a id='sablevm-sdk'></a>**<br>
     SableVM is a robust, extremely portable, efficient, and specifications-compliant Java virtual machine that aims to be easy to maintain and to extend. It features a state-of-the-art and efficient interpreter engine. Its source code is very accessible and easy to understand. It also has many robustness features that have been the object of careful design.
 
-  * **[Samba 3.0.37/3.6.25](../../docs/make/samba.md)<a id='samba'></a>**<br>
+  * **[Samba 3.0.37/3.6.25 - DEPRECATED](../../docs/make/samba.md)<a id='samba'></a>**<br>
     The binary with smbd and nmbd needs about 1033 kB (uncompressed).
      - [Package ins Image einbinden](../../docs/make/samba.md#package-ins-image-einbinden)
      - [Verwandte Themen](../../docs/make/samba.md#verwandte-themen)
