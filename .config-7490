@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng d7ad35635 uwe 2024-06-20
+#  freetz-ng 936b0b1ba uwe 2024-06-20
 #
 
 #
@@ -969,7 +969,7 @@ FREETZ_PACKAGE_LDD=y
 # Addhole (needs dnsmasq)
 #
 FREETZ_PACKAGE_AUTHORIZED_KEYS=y
-FREETZ_PACKAGE_AVM_PORTFW=y
+# FREETZ_PACKAGE_AVM_PORTFW is not set
 # FREETZ_PACKAGE_DNSD_CGI is not set
 # FREETZ_PACKAGE_DOWNLOADER is not set
 # FREETZ_PACKAGE_NFSD_CGI is not set
