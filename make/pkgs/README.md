@@ -16,16 +16,16 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Geoblocking](../../docs/make/apache2.md#geoblocking)
      - [Sonstiges](../../docs/make/apache2.md#sonstiges)
 
-  * **<u>asterisk-chan-capi: chan_capi: ISDN API 2.0 module for asterisk</u><a id='asterisk-chan-capi'></a>**<br>
+  * **<u>asterisk-chan-capi: chan_capi: ISDN API 2.0 module for asterisk - DEPRECATED</u><a id='asterisk-chan-capi'></a>**<br>
     Common ISDN API 2.0 module for asterisk
 
-  * **<u>asterisk-chan-dongle: chan_dongle: Channel driver for Huawei UMTS 3G dongle</u><a id='asterisk-chan-dongle'></a>**<br>
+  * **<u>asterisk-chan-dongle: chan_dongle: Channel driver for Huawei UMTS 3G dongle - DEPRECATED</u><a id='asterisk-chan-dongle'></a>**<br>
     Asterisk channel driver for Huawei UMTS 3G dongle
 
-  * **<u>asterisk-chan-sccp: chan_sccp: SCCP channel provider for asterisk</u><a id='asterisk-chan-sccp'></a>**<br>
+  * **<u>asterisk-chan-sccp: chan_sccp: SCCP channel provider for asterisk - DEPRECATED</u><a id='asterisk-chan-sccp'></a>**<br>
     SCCP channel provider for asterisk. It delivers extended functionality for SCCP phones over chan_skinny delivered by asterisk by default.
 
-  * **<u>asterisk-gui: #Asterisk GUI 2.1.0-rc1</u><a id='asterisk-gui'></a>**<br>
+  * **<u>asterisk-gui: #Asterisk GUI 2.1.0-rc1 - DEPRECATED</u><a id='asterisk-gui'></a>**<br>
     Asterisk GUI is a framework for the creation of graphical interfaces for configuring Asterisk. Please read https://wiki.asterisk.org/wiki/display/AST/Asterisk+GUI for configuration instructions.
 
   * **[Atop 2.10.0 (binary only)](../../docs/make/atop.md)<a id='atop'></a>**<br>
@@ -41,17 +41,17 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [CurlFtpFS](../../docs/make/autofs.md#curlftpfs)
      - [SSHfs](../../docs/make/autofs.md#sshfs)
 
-  * **<u>autossh 1.4g (binary only)</u><a id='autossh'></a>**<br>
+  * **<u>autossh 1.4g (binary only) - DEPRECATED</u><a id='autossh'></a>**<br>
     autossh is a program to start a copy of ssh and monitor it, restarting it as necessary should it die or stop passing traffic.
 
-  * **<u>Avahi 0.6.31</u><a id='avahi'></a>**<br>
+  * **<u>Avahi 0.6.31 - DEPRECATED</u><a id='avahi'></a>**<br>
     An mDNS/DNS-SD (aka RendezVous/Bonjour/ZeroConf) implementation (library).  Avahi is a system which facilitates service discovery on a local network -- this means that you can plug your laptop or computer into a network and instantly be able to view other people who you can chat with, find printers to print to or find files being shared. This kind of technology is already found in MacOS X (branded 'Rendezvous', 'Bonjour' and sometimes 'ZeroConf') and is very convenient.
 
   * **<u>AVM Services</u><a id='avm'></a>**<br>
 
 ### B
 
-  * **[bash 3.2.57 (binary only)](../../docs/make/bash.md)<a id='bash'></a>**<br>
+  * **[bash 3.2.57 (binary only) - DEPRECATED](../../docs/make/bash.md)<a id='bash'></a>**<br>
     Bash is an sh-compatible command language interpreter that executes commands read from the standard input or from a file. Bash also incorporates useful features from the Korn and C shells (ksh and csh).(roundabout 540K minimal and 840K full featured)
      - [Bash als Loginshell](../../docs/make/bash.md#bash-als-loginshell)
 
@@ -67,36 +67,36 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     BIND is a suite of software for interacting with the Domain Name System (DNS). The name BIND stands for "Berkeley Internet Name Daemon".
      - [named.conf](../../docs/make/bind.md#namedconf)
 
-  * **[Bip 0.9.2](../../docs/make/bip.md)<a id='bip'></a>**<br>
+  * **[Bip 0.9.2 - DEPRECATED](../../docs/make/bip.md)<a id='bip'></a>**<br>
     Bip is an IRC proxy, which means it keeps connected to your preferred IRC servers, can store the logs for you, and even send them back to your IRC client(s) upon connection. You may want to use bip to keep your logfiles (in a unique format and on a unique computer) whatever your client is, when you connect from multiple workstations, or when you simply want to have a playback of what was said while you were away.
      - [Auswahl](../../docs/make/bip.md#auswahl)
      - [Konfiguration](../../docs/make/bip.md#konfiguration)
      - [Networks](../../docs/make/bip.md#networks)
      - [Users](../../docs/make/bip.md#users)
 
-  * **[BIRD 1.6.8/2.15](../../docs/make/bird.md)<a id='bird'></a>**<br>
+  * **[BIRD 1.6.8/2.15.1](../../docs/make/bird.md)<a id='bird'></a>**<br>
     The BIRD Internet Routing Daemon
 
-  * **<u>bittwist 1.1 (binary only)</u><a id='bittwist'></a>**<br>
+  * **<u>bittwist 1.1 (binary only) - DEPRECATED</u><a id='bittwist'></a>**<br>
     bittwist is designed to complement tcpdump, which by itself has done a great job in capturing network traffic. bittwist can regenerate the captured traffic onto a live network (the packets are generated from tcpdump trace file, generating a .pcap file). bittwist also comes with a comprehensive trace file editor to allow to change the contents of a trace file on the fly. Generally, a packet generator is useful in simulating networking traffic or scenario, testing firewall, IDS, and IPS, and troubleshooting various network problems. http://bittwist.sourceforge.net/doc.html
 
-  * **[bluez-utils 2.25 (binary only, incl. Pin-Change and NAP)](../../docs/make/bluez-utils.md)<a id='bluez-utils'></a>**<br>
+  * **[bluez-utils 2.25 (binary only, incl. Pin-Change and NAP) - DEPRECATED](../../docs/make/bluez-utils.md)<a id='bluez-utils'></a>**<br>
     This package contains utilities for configuring bluetooth connections.
      - [General](../../docs/make/bluez-utils.md#general)
      - [DBUS](../../docs/make/bluez-utils.md#dbus)
      - [Sizes](../../docs/make/bluez-utils.md#sizes)
 
-  * **[br2684ctl (binary only)](../../docs/make/br2684ctl.md)<a id='br2684ctl'></a>**<br>
+  * **[br2684ctl (binary only) - DEPRECATED](../../docs/make/br2684ctl.md)<a id='br2684ctl'></a>**<br>
     ATM Ethernet bridging configuration utility
      - [Creating a Freetz Image with br2684ctl](../../docs/make/br2684ctl.md#creating-a-freetz-image-with-br2684ctl)
      - [Configuring br2684ctl](../../docs/make/br2684ctl.md#configuring-br2684ctl)
      - [Obtain IP configuration via DHCP](../../docs/make/br2684ctl.md#obtain-ip-configuration-via-dhcp)
      - [Debuging the DHCP process](../../docs/make/br2684ctl.md#debuging-the-dhcp-process)
 
-  * **[bridge-utils 1.4 (binary only)](../../docs/make/bridge-utils.md)<a id='bridge-utils'></a>**<br>
+  * **[bridge-utils 1.4 (binary only) - DEPRECATED](../../docs/make/bridge-utils.md)<a id='bridge-utils'></a>**<br>
     This package contains utilities for configuring the Linux ethernet bridge. The Linux ethernet bridge can be used for connecting multiple ethernet devices together. The connection is fully transparent: hosts connected to one ethernet device see hosts connected to the other ethernet devices directly. Authors: Lennert Buytenhek <buytenh@gnu.org>
 
-  * **<u>bvi/bmore 1.4.0 (binary only) </u><a id='bvi'></a>**<br>
+  * **[bvi/bmore 1.4.2 (binary only)](../../docs/make/bvi.md)<a id='bvi'></a>**<br>
     A hex editor/viewer for binary files
 
 ### C
@@ -110,7 +110,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[CCID 1.5.5 - DEPRECATED](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
     ccid provides the source code for a generic USB CCID (Chip/Smart Card Interface Devices) driver and ICCD (Integrated Circuit(s) Card Devices).
 
-  * **[Checkmaild 0.4.7](../../docs/make/checkmaild.md)<a id='checkmaild'></a>**<br>
+  * **[Checkmaild 0.4.7 - DEPRECATED](../../docs/make/checkmaild.md)<a id='checkmaild'></a>**<br>
     Checkmaild checks pop3/smtp mail accounts for new mails on a given interval. A configurable shell script starts the desired actions when new mails arrive.
      - [Konfiguration](../../docs/make/checkmaild.md#konfiguration)
      - [Skript-Funktion](../../docs/make/checkmaild.md#skript-funktion)
@@ -123,29 +123,29 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Konfiguration cifsmount](../../docs/make/cifsmount.md#konfiguration-cifsmount)
      - [Fehlersuche](../../docs/make/cifsmount.md#fehlersuche)
 
-  * **[classpath GNU 0.99 (binary only)](../../docs/make/classpath.md)<a id='classpath'></a>**<br>
+  * **[classpath GNU 0.99 (binary only) - DEPRECATED](../../docs/make/classpath.md)<a id='classpath'></a>**<br>
     GNU Classpath, Essential Libraries for Java, is a GNU project to create free core class libraries for use with virtual machines and compilers for the java programming language.
 
-  * **<u>Cntlm 0.93beta5 (binary only)</u><a id='cntlm'></a>**<br>
+  * **<u>Cntlm 0.93beta5 (binary only) - DEPRECATED</u><a id='cntlm'></a>**<br>
     Cntlm is an NTLM / NTLM Session Response / NTLMv2 authenticating HTTP proxy.
 
-  * **<u>comgt 0.32 (binary only)</u><a id='comgt'></a>**<br>
+  * **<u>comgt 0.32 (binary only) - DEPRECATED</u><a id='comgt'></a>**<br>
     Option GlobeTrotter GPRS/EDGE/3G/HSDPA and Vodafone 3G/GPRS datacard control tool. comgt is a scripting language interpreter useful for establishing communications on serial lines and through PCMCIA modems as well as GPRS and 3G datacards.
 
   * **[Cpmaccfg 0.6 (binary only)](../../docs/make/cpmaccfg.md)<a id='cpmaccfg'></a>**<br>
     With a patched kernel and this tool it is possible to configure the ADM6996L switch (at least FB 7170, maybe other FBs with 4 LAN ports work too) to support VLANs and/or to split the LAN ports into different subnets. It is also possible to view or set each ports power configuration and to disable auto media detection and to force a given media type for each port (10/100 Mbit, Half-/Full-Duplex). Some features are only available when Replace Kernel is selected. Since version 0.6 cpmaccfg detects the tantos switches used i.e. in F!B 7270. However, since there is not enough documentation (freely) available yet, it is not yet possible to configure this chipset.
      - [cpmaccfg-cgi](../../docs/make/cpmaccfg.md#cpmaccfg-cgi)
 
-  * **<u>cryptsetup 1.7.5 (binary only)</u><a id='cryptsetup'></a>**<br>
+  * **<u>cryptsetup 1.7.5 (binary only) - DEPRECATED</u><a id='cryptsetup'></a>**<br>
     cryptsetup is used to conveniently setup dm-crypt managed block devices under Linux. Hint: Don't forget to insmod all selected modules.
 
-  * **[Ctorrent dnh3.3.2 (binary only)](../../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
+  * **[Ctorrent dnh3.3.2 (binary only) - DEPRECATED](../../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
   * **[Curl 8.8.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
-  * **<u>CurlFtpFS 0.9.2</u><a id='curlftpfs'></a>**<br>
+  * **<u>CurlFtpFS 0.9.2 - DEPRECATED</u><a id='curlftpfs'></a>**<br>
     CurlFtpFS is a filesystem for accessing FTP hosts based on FUSE and libcurl. Website: http://curlftpfs.sourceforge.net/ Features: - SSLv3 and TLSv1 support - connecting through tunneling HTTP proxies - automatically reconnection if the server times out - transform absolute symlinks to point back into the ftp file system
 
 ### D
@@ -164,15 +164,15 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Einstellungen/ Optionen](../../docs/make/davfs2.md#einstellungen-optionen)
      - [Weiterführende Threads im IPPF](../../docs/make/davfs2.md#weiterführende-threads-im-ippf)
 
-  * **<u>dbus: D-Bus 1.13.18</u><a id='dbus'></a>**<br>
+  * **<u>dbus: D-Bus 1.13.18 - DEPRECATED</u><a id='dbus'></a>**<br>
     D-Bus is a message bus system, a simple way for applications to talk to one another. In addition to interprocess communication, D-Bus helps coordinate process lifecycle; it makes it simple and reliable to code a "single instance" application or daemon, and to launch applications and daemons on demand when their services are needed.
 
-  * **[Debootstrap (binary only)](../../docs/make/debootstrap.md)<a id='debootstrap'></a>**<br>
+  * **[Debootstrap (binary only) - DEPRECATED](../../docs/make/debootstrap.md)<a id='debootstrap'></a>**<br>
     debootstrap is used to create a Debian base system from scratch, without requiring the availability of dpkg or apt. It does this by downloading .deb files from a mirror site, and carefully unpacking them into a directory which can eventually be chrooted into.
      - [Debian in wenigen Schritten nutzen](../../docs/make/debootstrap.md#debian-in-wenigen-schritten-nutzen)
      - [Erfahrungswerte](../../docs/make/debootstrap.md#erfahrungswerte)
 
-  * **[Deco 1.3.9 (binary only)](../../docs/make/deco.md)<a id='deco'></a>**<br>
+  * **[Deco 1.3.9 (binary only) - DEPRECATED](../../docs/make/deco.md)<a id='deco'></a>**<br>
     Norton commander clone. Compared with Midnight Commander (mc) it is considerably smaller, but also significantly less powerful and less fancy-looking. Use it if you want to trade power for file and memory footprint, but still feel like requiring a file manager instead of a plain UNIX shell. Uses about 149K uncompressed space.
 
   * **[decrypt-fritzos-cfg: decrypt FRITZ!OS configs 0.2](../../docs/make/decrypt-fritzos-cfg.md)<a id='decrypt-fritzos-cfg'></a>**<br>
@@ -193,7 +193,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Tipp bei Verwendung mehrerer USB-RS232-Adapter an einer Fritzbox](../../docs/make/digitemp.md#tipp-bei-verwendung-mehrerer-usb-rs232-adapter-an-einer-fritzbox)
      - [Datenbank](../../docs/make/digitemp.md#datenbank)
 
-  * **[dns2tcp 0.5.2](../../docs/make/dns2tcp.md)<a id='dns2tcp'></a>**<br>
+  * **[dns2tcp 0.5.2 - DEPRECATED](../../docs/make/dns2tcp.md)<a id='dns2tcp'></a>**<br>
     Dns2tcp is a network tool designed to relay TCP connections through DNS traffic. Encapsulation is done on the TCP level, thus no specific driver is needed (i.e: TUN/TAP).
      - [Using with FreeDNS](../../docs/make/dns2tcp.md#using-with-freedns)
 
@@ -215,7 +215,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Beispiel](../../docs/make/dnsmasq.md#beispiel)
      - [Komplett eigene Konfiguration](../../docs/make/dnsmasq.md#komplett-eigene-konfiguration)
 
-  * **<u>dosfstools 3.0.28 (binary only)</u><a id='dosfstools'></a>**<br>
+  * **<u>dosfstools 3.0.28 (binary only) - DEPRECATED</u><a id='dosfstools'></a>**<br>
     utilities to create, check and label MS-DOS FAT filesystems
 
   * **[Dropbear 2024.85](../../docs/make/dropbear.md)<a id='dropbear'></a>**<br>
@@ -235,35 +235,35 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [mögliche Probleme](../../docs/make/dropbear.md#mögliche-probleme)
      - [Verbindungsaufbau beschleunigen](../../docs/make/dropbear.md#verbindungsaufbau-beschleunigen)
 
-  * **[dtach 0.8 (binary only)](../../docs/make/dtach.md)<a id='dtach'></a>**<br>
+  * **[dtach 0.9 (binary only)](../../docs/make/dtach.md)<a id='dtach'></a>**<br>
     dtach is a tiny program that emulates the detach feature of screen, allowing you to run a program in an environment that is protected from the controlling terminal and attach to it later.
      - [Bedienung](../../docs/make/dtach.md#bedienung)
 
   * **[dtc 1.7.0](../../docs/make/dtc.md)<a id='dtc'></a>**<br>
     Device  Tree  Compiler,  dtc, takes as input a device-tree in a given format and outputs a device-tree in another format for booting kernels on  embedded  systems.   Typically,  the input  format  is  "dts",  a  human readable source format, and creates a "dtb", or binary format as output.
 
-  * **<u>dvbsnoop 1.4.50 (binary only)</u><a id='dvbsnoop'></a>**<br>
+  * **<u>dvbsnoop 1.4.50 (binary only) - DEPRECATED</u><a id='dvbsnoop'></a>**<br>
     DVB analyzer / MPEG analyzer program to monitor, analyze, debug, dump or view dvb/mpeg/dsm-cc/mhp stream information (TS, PES, SECTION) (e.g. digital television) send via satellite, cable or terrestrial.
 
-  * **<u>dvbstream 0.5 (binary only)</u><a id='dvbstream'></a>**<br>
+  * **<u>dvbstream 0.5 (binary only) - DEPRECATED</u><a id='dvbstream'></a>**<br>
     DVB tools is a set of command-line tools for DVB cards such as the Hauppauge DVB-S and Nova-t. Includes RTP multicast streaming server. This package contains only dvbstream.
 
-  * **<u>dvbtune 0.5 (binary only)</u><a id='dvbtune'></a>**<br>
+  * **<u>dvbtune 0.5 (binary only) - DEPRECATED</u><a id='dvbtune'></a>**<br>
     DVB tools is a set of command-line tools for DVB cards such as the Hauppauge DVB-S and Nova-t. Includes RTP multicast streaming server. This package contains dvbtune.
 
 ### E
 
-  * **[e2fsprogs 1.42.13 (binary only)](../../docs/make/e2fsprogs.md)<a id='e2fsprogs'></a>**<br>
+  * **[e2fsprogs 1.42.13 (binary only) - DEPRECATED](../../docs/make/e2fsprogs.md)<a id='e2fsprogs'></a>**<br>
     This package contains essential ext2, ext3 and ext4 filesystem utilities which consists of e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2 filesystem utilities. Homepage: http://e2fsprogs.sourceforge.net/
 
-  * **[emailrelay: E-MailRelay 1.9](../../docs/make/emailrelay.md)<a id='emailrelay'></a>**<br>
+  * **[emailrelay: E-MailRelay 1.9 - DEPRECATED](../../docs/make/emailrelay.md)<a id='emailrelay'></a>**<br>
     E-MailRelay is a simple store-and-forward message transfer agent and proxy server. It runs on Unix-like operating systems (including Linux), and on Windows. When used as proxy server the E-MailRelay program (emailrelay) runs in the background and accepts e-mail from local e-mail client programs (KMail, Outlook etc.) or from the outside world, using the SMTP protocol. As soon as an e-mail message is received it is forwarded on to the next SMTP server for onward delivery. This becomes more useful when you add in your own message processing: as each message is received it can be passed one of your programs for editing, filtering, encrypting etc. When used as a store-and-forward transfer agent E-Mail- Relay runs in two modes: the storage daemon part, and the forwarding agent. The storage daemon waits for incoming mail and stores anything it receives in a spool directory. As a forwarding agent E-MailRelay pulls messages out of the	spool directory and passes them on to a remote server -- perhaps your ISP mail server. E-MailRelay can also run as a POP3 server so that e-mail client programs can read the spooled messages.
      - [Hilfe für die Konfiguration](../../docs/make/emailrelay.md#hilfe-für-die-konfiguration)
 
-  * **[Empty 0.6.15b (binary only)](../../docs/make/empty.md)<a id='empty'></a>**<br>
+  * **[Empty 0.6.15b (binary only) - DEPRECATED](../../docs/make/empty.md)<a id='empty'></a>**<br>
     empty is an utility that provides an interface to execute and/or interact with processes under pseudo-terminal sessions (PTYs). This tool is definitely useful in programming of shell scripts designed to communicate with interactive programs like telnet, ssh, ftp, etc. In some cases, empty can be the simplest replacement for TCL/expect or other similar programming tools.
 
-  * **[eSpeak 1.48.04 (binary only)](../../docs/make/espeak.md)<a id='espeak'></a>**<br>
+  * **[eSpeak 1.48.04 (binary only) - DEPRECATED](../../docs/make/espeak.md)<a id='espeak'></a>**<br>
     eSpeak is a compact open source software speech synthesizer for English and other languages.
      - [Installation](../../docs/make/espeak.md#installation)
      - [Aufruf](../../docs/make/espeak.md#aufruf)
@@ -271,27 +271,27 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### F
 
-  * **[FFmpeg 5.1.4](../../docs/make/ffmpeg.md)<a id='ffmpeg'></a>**<br>
+  * **[FFmpeg 5.1.4 - DEPRECATED](../../docs/make/ffmpeg.md)<a id='ffmpeg'></a>**<br>
     FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video.
 
-  * **[Fontconfig 2.14.2 (binary only)](../../docs/make/fontconfig.md)<a id='fontconfig'></a>**<br>
+  * **[Fontconfig 2.15.0 (binary only)](../../docs/make/fontconfig.md)<a id='fontconfig'></a>**<br>
     Fontconfig is a library for configuring and customizing font access. This package adds /etc/fontsfonts.conf
 
-  * **[fortune 1.2](../../docs/make/fortune.md)<a id='fortune'></a>**<br>
+  * **[fortune 1.2 - DEPRECATED](../../docs/make/fortune.md)<a id='fortune'></a>**<br>
     Fortune is a small game that is meant to lighten up your life. It can be used to display a random entry from a cookie file. After having installed the package, just put some fortune- files into a directory and create a symbolic link to /var/media/fortunes like this: ln -s /var/media/ftp/ExternalDisk/fortunes/ /var/media/fortunes For your convenience I have packed some fortune-files up and uploaded them here: http://homepages.tu-darmstadt.de/~pkrueger/fortunes.7z If you'd rather get your own files, you could start looking here: http://www.freebsd.org/cgi/cvsweb.cg...tune/datfiles/
      - [Paket konfigurieren](../../docs/make/fortune.md#paket-konfigurieren)
      - [Anzeigen von fortunes beim Konsolen-Login](../../docs/make/fortune.md#anzeigen-von-fortunes-beim-konsolen-login)
 
-  * **<u>fowsr 1.0-20110904 (binary only)</u><a id='fowsr'></a>**<br>
+  * **<u>fowsr 1.0-20110904 (binary only) - DEPRECATED</u><a id='fowsr'></a>**<br>
     fowsr is a USB Data Collector application for WH1080 compatible weather stations. Output formats includes XML, Wunderground.com and pywws. See http://fowsr.googlecode.com for further information.
 
-  * **[fstyp 0.1 (binary only)](../../docs/make/fstyp.md)<a id='fstyp'></a>**<br>
+  * **[fstyp 0.1 (binary only) - DEPRECATED](../../docs/make/fstyp.md)<a id='fstyp'></a>**<br>
     fstyp can be used to heuristically detect which filesystem type a block device contains.
 
   * **[ftdi1 1.5](../../docs/make/ftdi1.md)<a id='ftdi1'></a>**<br>
     ftdi_eeprom of libftdi1 is a small tool for reading/erasing/flashing FTDI USB chip eeproms. It uses libftdi1 to access the chip, so you will need to have the required permissions on the device. The ftdi_sio module should not be loaded. You have to unplug and replug your device to get the new values to be read. Otherwise, you will still get the old values.
 
-  * **[FUSE 2.9.9 (binary only)](../../docs/make/fuse.md)<a id='fuse'></a>**<br>
+  * **[FUSE 2.9.9 (binary only) - DEPRECATED](../../docs/make/fuse.md)<a id='fuse'></a>**<br>
     Filesystem in Userspace (FUSE) is a free Unix kernel module that allows non-privileged users to create their own file systems without the need to write any kernel code. This is achieved by running the file systemcode in user space, while the FUSE module only provides a "bridge" to the actual kernel interfaces. FUSE was officially merged into the mainstream Linux kernel tree in kernel version 2.6.14. FUSE is particularly useful for writing virtual file systems. Unlike traditional filesystems which essentially save data to and retrieve data from disk, virtual filesystems do not actually store data themselves. They act as a view or translation of an existing filesystem or storage device. In principle, any resource available to FUSE implementation can be exported as a file system. In Freetz, the NTFS package depends on fuse, for example.
 
 ### G
@@ -299,25 +299,25 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[getdns 1.7.3](../../docs/make/getdns.md)<a id='getdns'></a>**<br>
     getdns/Stubby is an application that acts as a local DNS Privacy stub resolver (using DNS-over-TLS). Stubby encrypts DNS queries sent from a client machine (desktop or laptop) to a DNS Privacy resolver increasing end user privacy.
 
-  * **<u>Ghostscript fonts 8.11 (binary only)</u><a id='ghostscript-fonts'></a>**<br>
+  * **<u>Ghostscript fonts 8.11 (binary only) - DEPRECATED</u><a id='ghostscript-fonts'></a>**<br>
     This package provides the Ghostscript fonts.
 
   * **[Git 2.45.2](../../docs/make/git.md)<a id='git'></a>**<br>
     Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
-  * **<u>gntpsend 0.3.2-git (binary only)</u><a id='gntpsend'></a>**<br>
+  * **<u>gntpsend 0.3.2-git (binary only) - DEPRECATED</u><a id='gntpsend'></a>**<br>
     Growl is a notification system for the Mac OS X. Applications can use Growl to display small notifications about events which the user deems important, in a consistent manner. This package provides a tool 'gntp-send' which allows to send notifications to Growl.
 
-  * **<u>GNU Make 4.2.1 (binary only)</u><a id='gnu-make'></a>**<br>
+  * **<u>GNU Make 4.2.1 (binary only) - DEPRECATED</u><a id='gnu-make'></a>**<br>
     Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
 
-  * **[GnuTLS 3.7.8 (binary only)](../../docs/make/gnutls.md)<a id='gnutls'></a>**<br>
+  * **[GnuTLS 3.7.8 (binary only) - DEPRECATED](../../docs/make/gnutls.md)<a id='gnutls'></a>**<br>
     GnuTLS is a project that aims to develop a library which provides a secure layer, over a reliable transport layer. Currently the GnuTLS library implements TLS 1.3, 1.2, 1.1, 1.0 protocols and SSL 3.0.
 
-  * **<u>gocr 0.49 (binary only)</u><a id='gocr'></a>**<br>
+  * **<u>gocr 0.49 (binary only) - DEPRECATED</u><a id='gocr'></a>**<br>
     GOCR is an optical character recognition program, released under the GNU General Public License. It reads images in many formats and outputs a text file.
 
-  * **[gw6: Gateway6 client 5.1](../../docs/make/gw6.md)<a id='gw6'></a>**<br>
+  * **[gw6: Gateway6 client 5.1 - DEPRECATED](../../docs/make/gw6.md)<a id='gw6'></a>**<br>
     Client to build a tunnel to the ipv6 network (see http://go6.net). The binary will be installed as /usr/sbin/gw6c and CGI frontend will be provided for a simple configuration. A sample can be found in /usr/share/gw6/.
      - [Alternativen](../../docs/make/gw6.md#alternativen)
 
@@ -330,16 +330,16 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     Haserl is a small program that uses shell or Lua script to create cgi web scripts. It is intended for environments where PHP or ruby are too big. A typical use is to run cgi scripts in an embedded environment, using a small web server, such as mini-httpd, lighty, or the server built into busybox. This package is mandatory
      - [Using busybox httpd / inet](../../docs/make/haserl.md#using-busybox-httpd--inet)
 
-  * **[hd-idle 0.99](../../docs/make/hd-idle.md)<a id='hd-idle'></a>**<br>
+  * **[hd-idle 0.99 - DEPRECATED](../../docs/make/hd-idle.md)<a id='hd-idle'></a>**<br>
     Another idle-daemon for attached hard drives if sg3utils doesn't work as expected. This can happen with most low-cost USB drives.
 
-  * **<u>hdparm 9.58 (binary only)</u><a id='hdparm'></a>**<br>
+  * **<u>hdparm 9.58 (binary only) - DEPRECATED</u><a id='hdparm'></a>**<br>
     Hdparm can be used to show and set parameters of ATA-drives (e.g. hard disk drives).
 
-  * **[hol: Halt-On-Lan 0.1](../../docs/make/hol.md)<a id='hol'></a>**<br>
+  * **[hol: Halt-On-Lan 1.0 - DEPRECATED](../../docs/make/hol.md)<a id='hol'></a>**<br>
     Halt-On-Lan is a package to run predefined actions on a remote host: shutdown, reboot, logoff, lock For successfull action poweroff.exe from http://users.telenet.be/jbosman/poweroff/poweroff.htm or similar compatible script or binary must be installed and run as service on the remote host. Moreover, in case of requested interaction this service should understand the syntax of poweroff.exe
 
-  * **<u>html2text 1.3.2a (binary only)</u><a id='html2text'></a>**<br>
+  * **<u>html2text 1.3.2a (binary only) - DEPRECATED</u><a id='html2text'></a>**<br>
     html2text is a command line utility, written in C++, that converts HTML documents into plain text.
 
   * **[htop 1.0.3/3.3.0 (binary only)](../../docs/make/htop.md)<a id='htop'></a>**<br>
@@ -348,21 +348,21 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[htpdate 1.3.7](../../docs/make/htpdate.md)<a id='htpdate'></a>**<br>
     The HTTP Time Protocol (HTP) is used to synchronize a computer's time with web servers as reference time source. Htpdate will synchronize your computer's time by extracting timestamps from HTTP headers found in web server responses. Htpdate can be used as a daemon, to keep your computer synchronized. WWW: http://www.clevervest.com/htp/ Manpage: http://linux.die.net/man/8/htpdate This package automatically removes AVM'S chronyd if necessary.
 
-  * **<u>httpry 0.1.8</u><a id='httpry'></a>**<br>
+  * **<u>httpry 0.1.8 - DEPRECATED</u><a id='httpry'></a>**<br>
     httpry is a specialized packet sniffer designed for displaying and logging HTTP traffic. It is not intended to perform analysis itself, but to capture, parse, and log the traffic for later analysis. It can be run in real-time displaying the traffic as it is parsed, or as a daemon process that logs to an output file. It is written to be as lightweight and flexible as possible, so that it can be easily adaptable to different applications. http://dumpsterventures.com/jason/httpry/
 
-  * **[httptunnel 3.3 (binary only)](../../docs/make/httptunnel.md)<a id='httptunnel'></a>**<br>
+  * **[httptunnel 3.3 (binary only) - DEPRECATED](../../docs/make/httptunnel.md)<a id='httptunnel'></a>**<br>
     httptunnel is a utility that provides a HTTP tunnel server.
 
 ### I
 
-  * **[iconv 1.13.1 (binary only)](../../docs/make/iconv.md)<a id='iconv'></a>**<br>
+  * **[iconv 1.13.1 (binary only) - DEPRECATED](../../docs/make/iconv.md)<a id='iconv'></a>**<br>
     A program for converting text from one encoding to another.
 
-  * **<u>ifstat 1.1 (binary only)</u><a id='ifstat'></a>**<br>
+  * **<u>ifstat 1.1 (binary only) - DEPRECATED</u><a id='ifstat'></a>**<br>
     ifstat is a tool to report network interfaces bandwith just like vmstat/iostat do for other system counters. ifstat gathers these statistics from the kernel internal counters, which is highly operating system dependent. If the net-snmp (or ucd-snmp) library is available, ifstat can use it to gather statistics from remote equipments (hosts, routers, switches...) or even the local host if a SNMP daemon is running. ifstat's functionnalities can also be included in a static library for use in other applications. To use it, you just have to pass --enable-library while configuring ifstat WWW: http://gael.roualland.free.fr/ifstat/
 
-  * **<u>iftop 0.17 (binary only)</u><a id='iftop'></a>**<br>
+  * **<u>iftop 0.17 (binary only) - DEPRECATED</u><a id='iftop'></a>**<br>
     iftop does for network usage what top(1) does for CPU usage. It listens to network traffic on a named interface and displays a table of current bandwidth usage by pairs of hosts. Handy for answering the question "why is our ADSL link so slow?". WWW: http://www.ex-parrot.com/pdw/iftop/
 
   * **[IGMPproxy 0.4](../../docs/make/igmpproxy.md)<a id='igmpproxy'></a>**<br>
@@ -371,12 +371,12 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ImageMagick 7.1.1-30 (binary only)](../../docs/make/imagemagick.md)<a id='imagemagick'></a>**<br>
     ImageMagick is a robust collection of tools and libraries to read, write, and manipulate an image in many image formats, including popular formats like TIFF, JPEG, PNG, PDF, PhotoCD, and GIF. With ImageMagick, you can create images dynamically, making it suitable for Web applications. You can also resize, rotate, sharpen, color-reduce, or add special effects to an image and save your completed work in many different image formats. Image processing operations are available from the command line as well as through C, C++, and PERL-based programming interfaces.
 
-  * **[Inadyn-mt 02.28.10](../../docs/make/inadyn-mt.md)<a id='inadyn-mt'></a>**<br>
+  * **[Inadyn-mt 02.28.10 - DEPRECATED](../../docs/make/inadyn-mt.md)<a id='inadyn-mt'></a>**<br>
     INADYN-MT - Simple Dynamic DNS client. INADYN-MT is a free DynDNS client. It gives the possibility to have your own fixed hostname registered on the internet, although your IP might be changing. It checks periodically whether the IP address stored by the DNS server is the real current IP address of the machine that is running INADYN.
      - [Creating a Feetz Image with Inadyn](../../docs/make/inadyn-mt.md#creating-a-feetz-image-with-inadyn)
      - [Setup in Freetz web-interface](../../docs/make/inadyn-mt.md#setup-in-freetz-web-interface)
 
-  * **<u>Inadyn-OpenDNS 1.99</u><a id='inadyn-opendns'></a>**<br>
+  * **<u>Inadyn-OpenDNS 1.99 - DEPRECATED</u><a id='inadyn-opendns'></a>**<br>
     INADYN - Simple Dynamic DNS client. INADYN is a free DynDNS client. It gives the possibility to have your own fixed hostname registered on the internet, although your IP might be changing. It checks periodically whether the IP address stored by the DNS server is the real current IP address of the machine that is running INADYN. This is the version published by OpenDNS to support SSL.
 
   * **[Inetd 1.0](../../docs/make/inetd.md)<a id='inetd'></a>**<br>
@@ -385,7 +385,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Konfiguration](../../docs/make/inetd.md#konfiguration)
      - [Für Entwickler](../../docs/make/inetd.md#für-entwickler)
 
-  * **[iodine 0.7.0](../../docs/make/iodine.md)<a id='iodine'></a>**<br>
+  * **[iodine 0.7.0 - DEPRECATED](../../docs/make/iodine.md)<a id='iodine'></a>**<br>
     iodine lets you tunnel IPv4 data through a DNS server. This can be usable in different situations where internet access is firewalled, but DNS queries are allowed.
      - [Using with FreeDNS](../../docs/make/iodine.md#using-with-freedns)
      - [Security](../../docs/make/iodine.md#security)
@@ -394,31 +394,29 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[iPerf3 3.3/3.17.1 (binary only)](../../docs/make/iperf.md)<a id='iperf'></a>**<br>
     iPerf3 is a tool for active measurements of the maximum achievable bandwidth on IP networks. It supports tuning of various parameters related to timing, buffers and protocols (TCP, UDP, SCTP with IPv4 and IPv6). For each test it reports the bandwidth, loss, and other parameters. S. https://github.com/esnet/iperf for more details.
 
-  * **<u>IPsec-tools 0.7.2</u><a id='ipsec-tools'></a>**<br>
+  * **<u>IPsec-tools 0.7.2 - DEPRECATED</u><a id='ipsec-tools'></a>**<br>
     IPsec-tools (plainrsa-gen racoon racoonctl setkey)
 
-  * **[Iptables-CGI](../../docs/make/iptables-cgi.md)<a id='iptables'></a>**<br>
-
-  * **<u>Iptraf 3.0.1 (binary only)</u><a id='iptraf'></a>**<br>
+  * **<u>Iptraf 3.0.1 (binary only) - DEPRECATED</u><a id='iptraf'></a>**<br>
     IPTraf is a console-based network monitoring program for Linux that displays information about IP traffic. It returns such information as: Current TCP connections UDP, ICMP, OSPF, and other types of IP packets Packet and byte counts on TCP connections IP, TCP, UDP, ICMP, non-IP, and other packet and byte counts TCP/UDP counts by ports Packet counts by packet sizes Packet and byte counts by IP address Interface activity Flag statuses on TCP packets LAN station statistics
 
-  * **<u>iputils' traceroute6 s20071127 (binary only)</u><a id='iputils'></a>**<br>
+  * **<u>iputils' traceroute6 s20071127 (binary only) - DEPRECATED</u><a id='iputils'></a>**<br>
 
-  * **[Irssi 0.8.15](../../docs/make/irssi.md)<a id='irssi'></a>**<br>
+  * **[Irssi 0.8.15 - DEPRECATED](../../docs/make/irssi.md)<a id='irssi'></a>**<br>
     Irssi - the client of the future - is a terminal based IRC client for UNIX systems. It also supports SILC and ICB protocols via plugins. Features: * Autologging: Irssi will automatically log any channels, queries or special windows that you want. * Formats and Themes: irssi has an easy yet powerful way to customize your client's look and feel. * Configurable keybindings: Irssi allows you to modify the default keybindings and create your own so you can customize your client. * Paste detection: Irssi tries to detect when you are pasting large amounts of text, by looking at the speed that characters are entered; if such pasting is detected [TAB]-characters are sent as-is instead of being tab-completed and eventually ending up in a wrong destination window.
 
-  * **<u>ISC dhcp 4.3.6-P1 (binary only)</u><a id='isc-dhcp'></a>**<br>
+  * **<u>ISC dhcp 4.3.6-P1 (binary only) - DEPRECATED</u><a id='isc-dhcp'></a>**<br>
     ISC DHCP is open source software that implements the Dynamic Host Configuration Protocol for connection to an IP network. It is production-grade software that offers a complete solution for implementing DHCP servers, relay agents, and clients for small local networks to large enterprises. ISC DHCP solution supports both IPv4 and IPv6, and is suitable for use in high-volume and high-reliability applications.
 
 ### J
 
-  * **[JamVM 2.0.0 (binary only)](../../docs/make/jamvm.md)<a id='jamvm'></a>**<br>
+  * **[JamVM 2.0.0 (binary only) - DEPRECATED](../../docs/make/jamvm.md)<a id='jamvm'></a>**<br>
     JamVM - extremely small Java VM JamVM 2.0.0 is the first release of JamVM with support for OpenJDK.  Although IcedTea already includes JamVM with OpenJDK support, this has been based on periodic snapshots of the development tree. This release supports OpenJDK 6, 7 and 8 (the latest).  With OpenJDK 7 and 8 this includes full support for JSR 292 (invokedynamic).  JamVM 2.0.0 with OpenJDK 8 also includes full support for Lambda expressions (JSR 335), type annotations (JSR 308) and method parameter reflection. In addition to OpenJDK support, JamVM 2.0.0 also includes many bug-fixes, performance improvements and improved compatibility (from running the OpenJDK jtreg tests).  The following is an edited list of the top ~100 commits (out of 300+) in date order (most recent first).  The list has been categorised into those affecting OpenJDK only, GNU Classpath only, and both OpenJDK and GNU Classpath (All).
 
   * **[jq 1.7.1 (binary only)](../../docs/make/jq.md)<a id='jq'></a>**<br>
     jq is a lightweight and flexible command-line JSON processor.
 
-  * **<u>js OSSP 1.6.20070208 (binary only)</u><a id='js'></a>**<br>
+  * **<u>js OSSP 1.6.20070208 (binary only) - DEPRECATED</u><a id='js'></a>**<br>
     OSSP js is a stand-alone distribution of the JavaScript (JS) programming language reference implementation from Mozilla.
 
   * **[juis_check 1.3](../../docs/make/juis_check.md)<a id='juis-check'></a>**<br>
@@ -426,7 +424,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### K
 
-  * **[Knock 0.8](../../docs/make/knock.md)<a id='knock'></a>**<br>
+  * **[Knock 0.8 - DEPRECATED](../../docs/make/knock.md)<a id='knock'></a>**<br>
     Knockd is a port-knock server. It listens to all traffic on an ethernet (or PPP) interface, looking for special "knock" sequences of port-hits.
 
 ### L
@@ -434,7 +432,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[LCD4linux 3fce054e](../../docs/make/lcd4linux.md)<a id='lcd4linux'></a>**<br>
     LCD4Linux is a small program that grabs information from the kernel and some subsystems and displays it on an external liquid crystal display.
 
-  * **<u>lftp 4.8.4 (binary only)</u><a id='lftp'></a>**<br>
+  * **<u>lftp 4.8.4 (binary only) - DEPRECATED</u><a id='lftp'></a>**<br>
     LFTP is sophisticated file transfer program with command line interface. It supports FTP, HTTP, FISH, SFTP, HTTPS and FTPS protocols. GNU Readline library is used for input.
 
   * **[Lighttpd 1.4.76](../../docs/make/lighttpd.md)<a id='lighttpd'></a>**<br>
@@ -453,19 +451,19 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### M
 
-  * **[madplay 0.15.2b (binary only)](../../docs/make/madplay.md)<a id='madplay'></a>**<br>
+  * **[madplay 0.15.2b (binary only) - DEPRECATED](../../docs/make/madplay.md)<a id='madplay'></a>**<br>
     MAD is a high-quality fixed-point MPEG audio decoder with 24-bit output. The implementation is entirely new, based on the ISO/IEC standards, and performs especially well on systems without native floating-point support.
 
   * **[mc (Midnight Commander) 4.8.31 (binary only)](../../docs/make/mc.md)<a id='mc'></a>**<br>
     Subshell support means you can press Ctrl-O to hide the mc panels and have a real subshell. Both Bash (if package is installed) and BusyBox Ash can be used, depending which one is defined as your login shell. ATTENTION: You should *not* use CONFIG_FEATURE_BASH_IS_ASH in BusyBox or otherwise symlink /bin/bash to /bin/busybox because MC must differentiate handling between Ash and real Bash. This feature adds about 8 KB (uncompressed) to the mc binary.
 
-  * **[mcabber 0.9.9](../../docs/make/mcabber.md)<a id='mcabber'></a>**<br>
+  * **[mcabber 0.9.9 - DEPRECATED](../../docs/make/mcabber.md)<a id='mcabber'></a>**<br>
     mcabber is a small Jabber console client. http://www.lilotux.net/~mikael/mcabber/
 
-  * **[mediatomb 0.12.1 (binary only)](../../docs/make/mediatomb.md)<a id='mediatomb'></a>**<br>
+  * **[mediatomb 0.12.1 (binary only) - DEPRECATED](../../docs/make/mediatomb.md)<a id='mediatomb'></a>**<br>
     MediaTomb is an open source (GPL) UPnP MediaServer with a nice web user interface, it allows you to stream your digital media through your home network and listen to/watch it on a variety of UPnP compatible devices.
 
-  * **[microperl 5.10.1 (binary only)](../../docs/make/microperl.md)<a id='microperl'></a>**<br>
+  * **[microperl 5.10.1 (binary only) - DEPRECATED](../../docs/make/microperl.md)<a id='microperl'></a>**<br>
     Perl without operating-specific functions such as readdir.
 
   * **[minicom 2.9 (binary only)](../../docs/make/minicom.md)<a id='minicom'></a>**<br>
@@ -497,7 +495,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [shutdown](../../docs/make/mod.md#shutdown)
      - [udev_first / udev_final](../../docs/make/mod.md#udev-first--udev-final)
 
-  * **[module-init-tools 3.12 (binary only)](../../docs/make/module-init-tools.md)<a id='module-init-tools'></a>**<br>
+  * **[module-init-tools 3.12 (binary only) - DEPRECATED](../../docs/make/module-init-tools.md)<a id='module-init-tools'></a>**<br>
     The module-init-tools (m-i-t) package provides many of the utilities needed by Linux systems for managing loadable Linux Kernel Modules. This includes depmod, insmod, rmmod, modprobe and tools like modinfo.
 
   * **[Mosquitto 1.6.15 - DEPRECATED](../../docs/make/mosquitto.md)<a id='mosquitto'></a>**<br>
@@ -515,7 +513,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Nano 8.0 (binary only)](../../docs/make/nano.md)<a id='nano'></a>**<br>
     GNU GPL'd Pico clone with more functionality. GNU nano is a small and friendly text editor. Besides basic text editing, nano offers many extra features like an interactive search and replace, go to line and column number, auto-indentation, feature toggles and filename tab completion. The original goal for nano was a complete bug-for-bug compatible emulation of Pico, but nano's current goal is to be as compatible as possible while offering a superset of Pico's functionality. IMPORTANT NOTES: 1.) Selecting any option besides "Tiny binary" will make the nano binary bigger. The range is somewhere between 142 KB and 249 KB, depending on the options chosen. 2.) Please also be aware of the fact that changing any feature options results in an automatic rebuild of the package - just in case you were wondering. 3.) Note that UTF8 support and spell checking is disabled by default.
 
-  * **<u>nc6 1.0 (binary only)</u><a id='nc6'></a>**<br>
+  * **<u>nc6 1.0 (binary only) - DEPRECATED</u><a id='nc6'></a>**<br>
     A netcat clone with ipv6 support.
 
   * **[NcFTP 3.2.7 (binaries only)](../../docs/make/ncftp.md)<a id='ncftp'></a>**<br>
@@ -528,19 +526,19 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Wie sieht der Befehl für ein download.sh Skript aus?](../../docs/make/ncftp.md#wie-sieht-der-befehl-für-ein-downloadsh-skript-aus)
      - [Wie kann ich einen abweichenden Port nutzen?](../../docs/make/ncftp.md#wie-kann-ich-einen-abweichenden-port-nutzen)
 
-  * **[ndas](../../docs/make/ndas.md)<a id='ndas'></a>**<br>
+  * **[ndas - DEPRECATED](../../docs/make/ndas.md)<a id='ndas'></a>**<br>
     Network Direct Attached Storage (NDAS)
      - [Creating a Feetz Image with NDAS](../../docs/make/ndas.md#creating-a-feetz-image-with-ndas)
      - [Setup in Freetz](../../docs/make/ndas.md#setup-in-freetz)
      - [Usages](../../docs/make/ndas.md#usages)
 
-  * **<u>Netatalk 2.2.5</u><a id='netatalk'></a>**<br>
+  * **<u>Netatalk 2.2.5 - DEPRECATED</u><a id='netatalk'></a>**<br>
     Netatalk is a kernel level implementation of the AppleTalk Protocol Suite which contains the AppleShare file server (AFP).
 
-  * **[netcat 0.7.1 (binary only)](../../docs/make/netcat.md)<a id='netcat'></a>**<br>
+  * **[netcat 0.7.1 (binary only) - DEPRECATED](../../docs/make/netcat.md)<a id='netcat'></a>**<br>
     A feature-rich network debugging and exploration tool.
 
-  * **<u>Netpbm-tools 10.35.85 (binary only)</u><a id='netpbm'></a>**<br>
+  * **<u>Netpbm-tools 10.35.85 (binary only) - DEPRECATED</u><a id='netpbm'></a>**<br>
     Provides the following tools from netpbm-suite: bmptopnm, giftopnm, jpegtopnm, pngtopnm, pnmtojpeg, pnmtopng
 
   * **[netsnmp: Net-SNMP 5.9.4](../../docs/make/netsnmp.md)<a id='netsnmp'></a>**<br>
@@ -552,44 +550,26 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [One page overview](../../docs/make/netsnmp.md#one-page-overview)
      - [MGTG as a service](../../docs/make/netsnmp.md#mgtg-as-a-service)
 
-  * **<u>nfsroot: NFS-root 1.0</u><a id='nfsroot'></a>**<br>
+  * **<u>nfsroot: NFS-root 1.0 - DEPRECATED</u><a id='nfsroot'></a>**<br>
     Mount a remote filesystem (fs) from an NFS server and use it as a root fs which is fully writable and basically unlimited in size. The Linux kernel will still be loaded from your box and during the first phase of the init process the SquashFS on the box is still used, but after the NFS-root is mounted, we pivot_root into it and it becomes the new root fs. The read-only fs on the box can still be accessed under /oldroot, but is absolutely not necessary anymore after pivot_root. Having said that, it should be clear that the remote folder to be mounted should contain everything necessary to run the box. Usually you just create a full copy of a target fs (e.g. from build/modified/filesystem or from an unpacked firmware image) and start modifying it as needed. The binaries (kernel modules, executables, shared libraries) used therein just have to fit the kernel installed on the box. Note: The mini_fo overlay filesystem will not be used if an NFS-root was mounted first (see mini_fo package). Still, both packages can be installed at the same time, because mini_fo is still useful if NFS-root is decativated. Note: This package needs "replace kernel" because a kernel patch is necessary to make the 'nfsroot' bootloader environment variable usable for our purpose. So, if if "replace kernel" is inactive, you will not see this package in menuconfig. Note: There currently is no web interface for this package, because an NFS-root is an expert thing anyway. The command-line interface and help screen of /etc/init.d/rc.nfs makes it pretty easy to (de-)activate and configure the functionality of this package. As configuration data are stored in bootloader environment rather than in TFFS like for other packages, this package is special anyway.
 
-  * **[nfs-utils 1.3.4 (binary only)](../../docs/make/nfs-utils.md)<a id='nfs-utils'></a>**<br>
+  * **[nfs-utils 1.3.4 (binary only) - DEPRECATED](../../docs/make/nfs-utils.md)<a id='nfs-utils'></a>**<br>
     Linux NFS utility package Select nfsd-cgi if you want a configuration web interface. If this does not work, enable replace-kernel!
      - [Hinweise](../../docs/make/nfs-utils.md#hinweise)
      - [Referenzen](../../docs/make/nfs-utils.md#referenzen)
 
-  * **<u>ngircd 22</u><a id='ngircd'></a>**<br>
+  * **<u>ngircd 22 - DEPRECATED</u><a id='ngircd'></a>**<br>
     ngIRCd is an Open Source server for the Internet Relay Chat (IRC), which is developed and published under the terms of the GNU General Public Licence (URL: http://www.gnu.org/licenses/gpl.html). ngIRCd means "next generation IRC daemon", it's written from scratch and not deduced from the "grandfather of IRC daemons", the daemon of the IRCNet. For documentation see: http://ngircd.barton.de/documentation.php.de
-
-  * **[NHIPT Iptables CGI 0.8.3a - EXPERIMENTAL](../../docs/make/nhipt.md)<a id='nhipt'></a>**<br>
-    New Iptables configuration interface.
-     - [MOTIVATION](../../docs/make/nhipt.md#motivation)
-     - [VORAUSSETZUNGEN:](../../docs/make/nhipt.md#voraussetzungen)
-     - [ES STEHEN 3 PAKETE ZUR AUSWAHL:](../../docs/make/nhipt.md#es-stehen-3-pakete-zur-auswahl)
-     - [nhipt.cgi.(version).tar.gz](../../docs/make/nhipt.md#nhiptcgiversiontargz)
-     - [ipt.(version).tar.gz](../../docs/make/nhipt.md#iptversiontargz)
-     - [Über *make menuconfig*](../../docs/make/nhipt.md#über-make-menuconfig)
-     - [ARBEITSWEISE:](../../docs/make/nhipt.md#arbeitsweise)
-     - [Tipps & Literatur:](../../docs/make/nhipt.md#tipps--literatur)
-     - [Bootprozess](../../docs/make/nhipt.md#bootprozess)
-     - [Konfigurationsdatei](../../docs/make/nhipt.md#konfigurationsdatei)
-     - [Dateien im freetz Paket](../../docs/make/nhipt.md#dateien-im-freetz-paket)
-     - [GUT GEMEINTE RATSCHLÄGE:](../../docs/make/nhipt.md#gut-gemeinte-ratschläge)
-     - [DOWNLOAD](../../docs/make/nhipt.md#download)
-     - [BEKANNTE PROBLEME](../../docs/make/nhipt.md#bekannte-probleme)
-     - [SCREENSHOTS](../../docs/make/nhipt.md#screenshots)
 
   * **[Nmap 4.76/5.51/7.95 (binary only)](../../docs/make/nmap.md)<a id='nmap'></a>**<br>
     Nmap ("Network Mapper") is a free and open source (license) utility for network exploration or security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. It was designed to rapidly scan large networks, but works fine against single hosts. Nmap runs on all major computer operating systems, and both console and graphical versions are available.
      - [Example](../../docs/make/nmap.md#example)
      - [Known open ports](../../docs/make/nmap.md#known-open-ports)
 
-  * **<u>noip 2.1.9-1 (binary only)</u><a id='noip'></a>**<br>
+  * **<u>noip 2.1.9-1 (binary only) - DEPRECATED</u><a id='noip'></a>**<br>
     This is No-IP.com's dynamic DNS update client. When configured correctly, the client will check the local IP address at a given time interval for any changes. If the local IP address has changed it will notify the DNS servers at No-IP.com and update the IP corresponding to your No-IP/No-IP+ hostname.
 
-  * **[NTFS-3G 2017.3.23 (binary only)](../../docs/make/ntfs.md)<a id='ntfs'></a>**<br>
+  * **[NTFS-3G 2017.3.23 (binary only) - DEPRECATED](../../docs/make/ntfs.md)<a id='ntfs'></a>**<br>
     The NTFS-3G driver is an open source, freely available read/write NTFS driver for Linux, FreeBSD, OS X, and NetBSD. It provides safe and fast handling of the Windows XP, Windows Server 2003, Windows 2000 and Windows Vista file systems. Most POSIX file system operations are supported, with the exception of full file ownership and access right support. This binary is needed for ntfs automount feature thus there is no webinterface.
 
   * **[NZBGet 21.1/21.4-rc2](../../docs/make/nzbget.md)<a id='nzbget'></a>**<br>
@@ -597,16 +577,16 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### O
 
-  * **[ObexFTP 0.23 (binary only)](../../docs/make/obexftp.md)<a id='obexftp'></a>**<br>
+  * **[ObexFTP 0.23 (binary only) - DEPRECATED](../../docs/make/obexftp.md)<a id='obexftp'></a>**<br>
     This package contains an ObexFTP server.
 
   * **[oidentd 2.0.8 - DEPRECATED](../../docs/make/oidentd.md)<a id='oidentd'></a>**<br>
     oidentd is an ident (rfc1413 compliant) daemon that runs on Linux, FreeBSD, OpenBSD and Solaris. oidentd can handle IP masqueraded/NAT connections on Linux, FreeBSD (ipf only) and OpenBSD. oidentd has a flexible mechanism for specifying ident responses. Users can be granted permission to specify their own ident responses. Responses can be specified according to host and port pairs.
 
-  * **<u>OpenConnect 7.04 (binary only)</u><a id='openconnect'></a>**<br>
+  * **<u>OpenConnect 7.04 (binary only) - DEPRECATED</u><a id='openconnect'></a>**<br>
     Cisco AnyConnect VPN Client
 
-  * **[OpenDD 0.7.9](../../docs/make/opendd.md)<a id='opendd'></a>**<br>
+  * **[OpenDD 0.7.9 - DEPRECATED](../../docs/make/opendd.md)<a id='opendd'></a>**<br>
     opendd is a DynDNS client, written in C, and especially designed for small gateway machines, like a Soekris box. Its main feature is that it does not require any Perl or Python interpreter. It supports HTTPS, can send a mail report, and can run as daemon. It is also very easy to deploy. WWW: http://www.bsdmon.com/wakka/OpenDD
      - [nach 25 Tagen Updaten](../../docs/make/opendd.md#nach-25-tagen-updaten)
      - [get_ip Parameter](../../docs/make/opendd.md#get-ip-parameter)
@@ -627,7 +607,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14 (binary only)](../../docs/make/openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
-  * **[OpenVPN 2.4.12/2.5.10/2.6.10](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
+  * **[OpenVPN 2.4.12/2.5.10/2.6.11](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
     VPN Server
      - [Häufige Fragen / Howto](../../docs/make/openvpn.md#häufige-fragen--howto)
      - [Konfigurationsanleitung](../../docs/make/openvpn.md#konfigurationsanleitung)
@@ -642,7 +622,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Neue, simple GUI (GUI2)](../../docs/make/openvpn.md#neue-simple-gui-gui2)
      - [Weitere Konfigs anlegen](../../docs/make/openvpn.md#weitere-konfigs-anlegen)
 
-  * **[owfs 2.7p32 (binary only)](../../docs/make/owfs.md)<a id='owfs'></a>**<br>
+  * **[owfs 2.7p32 (binary only) - DEPRECATED](../../docs/make/owfs.md)<a id='owfs'></a>**<br>
     OWFS - 1-Wire Filesystem This package includes: - owserver for easy, world wide access to serial and USB 1-wire bus masters and attached devices - httpd and ftpd to control owserver over http or ftp - shellprograms like owdir, owwrite, owread, owpresent to control owserver via shell scripts
 
 ### P
@@ -1066,7 +1046,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 # Debug helpers
 
-  * **<u>gdb GNU debugger 6.8/7.9.1 (binary only)</u><a id='gdb'></a>**<br>
+  * **<u>gdb GNU debugger 6.8/7.9.1 (binary only) - DEPRECATED</u><a id='gdb'></a>**<br>
     Select the version of gdb you wish to use.
 
   * **[inotify-tools 3.14 (binary only)](../../docs/make/inotify-tools.md)<a id='inotify-tools'></a>**<br>
@@ -1118,7 +1098,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Collectd 4.10.3</u><a id='collectd'></a>**<br>
     Collectd collects information about the system it is running on and stores this information. The information can then be used to do find current performance bottlenecks (i. e. performance analysis) and predict future system load (i. e. capacity planning). Or if you just want pretty graphs of your private server and are fed up with some homegrown solution you're at the right place, too.
 
-  * **<u>gptfdisk 1.0.1</u><a id='gptfdisk'></a>**<br>
+  * **<u>gptfdisk 1.0.1 - DEPRECATED</u><a id='gptfdisk'></a>**<br>
     Interactive GUID partition table (GPT) manipulator
 
   * **[HPLIP 3.14.6 (binary only)](../../docs/make/hplip.md)<a id='hplip'></a>**<br>
@@ -1234,6 +1214,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Downloader CGI](../../docs/make/downloader.md)<a id='downloader'></a>**<br>
     Download files from HTTP or FTP server during the boot process. This is particularly useful for binary packages which do not fit into the firmware image, but should be used on the box anyway. As long as they fit into the RAM disk this solution helps to automate the downloads and keeps them out of debug.cfg. by hermann72pb (ip-phone-forum.de) Support thread: http://www.ip-phone-forum.de/showthread.php?t=134934
 
+  * **[Iptables-CGI - DEPRECATED](../../docs/make/iptables-cgi.md)<a id='iptables'></a>**<br>
+
   * **[NFSD CGI](../../docs/make/nfsd-cgi.md)<a id='nfsd'></a>**<br>
     Configuration frontend to NFS-server If this does not work, enable replace-kernel!
      - [/etc/exports (exports in GUI)](../../docs/make/nfsd-cgi.md#etcexports-exports-in-gui)
@@ -1242,6 +1224,24 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Verification on Server:](../../docs/make/nfsd-cgi.md#verification-on-server)
      - [rsize and wsize buffers](../../docs/make/nfsd-cgi.md#rsize-and-wsize-buffers)
      - [References](../../docs/make/nfsd-cgi.md#references)
+
+  * **[NHIPT Iptables CGI 0.8.3a - DEPRECATED](../../docs/make/nhipt.md)<a id='nhipt'></a>**<br>
+    New Iptables configuration interface.
+     - [MOTIVATION](../../docs/make/nhipt.md#motivation)
+     - [VORAUSSETZUNGEN:](../../docs/make/nhipt.md#voraussetzungen)
+     - [ES STEHEN 3 PAKETE ZUR AUSWAHL:](../../docs/make/nhipt.md#es-stehen-3-pakete-zur-auswahl)
+     - [nhipt.cgi.(version).tar.gz](../../docs/make/nhipt.md#nhiptcgiversiontargz)
+     - [ipt.(version).tar.gz](../../docs/make/nhipt.md#iptversiontargz)
+     - [Über *make menuconfig*](../../docs/make/nhipt.md#über-make-menuconfig)
+     - [ARBEITSWEISE:](../../docs/make/nhipt.md#arbeitsweise)
+     - [Tipps & Literatur:](../../docs/make/nhipt.md#tipps--literatur)
+     - [Bootprozess](../../docs/make/nhipt.md#bootprozess)
+     - [Konfigurationsdatei](../../docs/make/nhipt.md#konfigurationsdatei)
+     - [Dateien im freetz Paket](../../docs/make/nhipt.md#dateien-im-freetz-paket)
+     - [GUT GEMEINTE RATSCHLÄGE:](../../docs/make/nhipt.md#gut-gemeinte-ratschläge)
+     - [DOWNLOAD](../../docs/make/nhipt.md#download)
+     - [BEKANNTE PROBLEME](../../docs/make/nhipt.md#bekannte-probleme)
+     - [SCREENSHOTS](../../docs/make/nhipt.md#screenshots)
 
   * **[Onlinechanged-CGI](../../docs/make/onlinechanged-cgi.md)<a id='onlinechanged'></a>**<br>
     When the online-status changes (e.g. a forced re-connect) this CGI allows you to specify arbitrary commands which are executed at that event. The following different change events are considered: initial start of the box, going online (IPv4), going onlineipv6 (IPv6), going offline (IPv4) and going offlineipv6 (IPv6).

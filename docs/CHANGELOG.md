@@ -77,10 +77,14 @@ Latest changes
    * Atop 2.10.0
    * AutoFS 5.0.5/5.1.9
    * BIND 9.11.37/9.18.27
+   * BIRD 1.6.8/2.15.1
    * Bftpd 6.2
+   * bvi 1.4.2
    * CCID 1.5.5
+   * dtach 0.9
    * Dropbear 2024.85
    * FFmpeg 5.1.4
+   * Fontconfig 2.15.0
    * Git 2.45.2
    * HAProxy 2.6.17
    * ImageMagick 7.1.1-30
@@ -91,6 +95,7 @@ Latest changes
    * Nano 8.0
    * Nmap 4.76/5.51/7.95
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
+   * OpenVPN 2.4.12/2.5.10/2.6.11
    * PCSC-lite 1.9.5/2.1.0
    * socat 1.8.0.0
    * sslh 2.1.2
