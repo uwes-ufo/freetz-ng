@@ -686,7 +686,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ProxyChains-NG 4.17](../../docs/make/proxychains-ng.md)<a id='proxychains-ng'></a>**<br>
     A preloader which hooks calls to sockets in dynamically linked programs and redirects it through one or more socks/http proxies, tor is also supported. Usage: proxychains4 telnet mail.example.com 25
 
-  * **[psl 0.21.2 (binary only)](../../docs/make/psl.md)<a id='psl'></a>**<br>
+  * **[psl 0.21.5 (binary only)](../../docs/make/psl.md)<a id='psl'></a>**<br>
     Public Suffix List library functions This includes psl binary and public_suffix_list.dat
 
   * **[pyLoad 0.4.20/78162d75](../../docs/make/pyload.md)<a id='pyload'></a>**<br>
@@ -967,7 +967,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UnRAR 6.1.7/7.0.9 (binary only)](../../docs/make/unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
-  * **[usbids: usb.ids a5edeafb60](../../docs/make/usbids.md)<a id='usbids'></a>**<br>
+  * **[usbids: usb.ids c70eea490a](../../docs/make/usbids.md)<a id='usbids'></a>**<br>
     This package provides up-to-date version of the usb.ids file needed by many usb related packages.
 
   * **<u>util-linux (binary only) - DEPRECATED</u><a id='util-linux'></a>**<br>
