@@ -14,6 +14,7 @@ GCC_HASH_8.3.0  := 64baadfe6cc0f4947a84cb12d7f0dfaf45bb58b7e92461639596c21e02d97
 GCC_HASH_8.4.0  := e30a6e52d10e1f27ed55104ad233c30bd1e99cfb5ff98ab022dc941edd1b2dd4
 GCC_HASH_9.3.0  := 71e197867611f6054aa1119b13a0c0abac12834765fe2d81f35ac57f84f742d1
 GCC_HASH_13.3.0 := 0845e9621c9543a13f484e94584a49ffc0129970e9914624235fc1d061a0c083
+GCC_HASH_14.1.0 := e283c654987afe3de9d8080bc0bd79534b5ca0d681a73a11ff2b5d3767426840
 GCC_HASH:=$(GCC_HASH_$(GCC_VERSION))
 
 GCC_ECHO_TYPE:=TTC
@@ -120,6 +121,9 @@ $(GCC_DIR)/.unpacked: $(DL_DIR)/$(GCC_SOURCE) | $(TARGET_TOOLCHAIN_DIR) $(UNPACK
 	$(call APPLY_PATCHES,$(GCC_PATCHES_ROOT_DIR) $(addprefix $(GCC_PATCHES_ROOT_DIR)/,$(strip $(GCC_CONDITIONAL_PATCHES))),$(GCC_DIR))
 	for f in $$(find $(GCC_DIR) \( -name "configure" -o -name "config.rpath" \)); do $(call PKG_PREVENT_RPATH_HARDCODING1,$$f) done
 	touch $@
+
+gcc-autofix: gcc-dirclean
+	$(MAKE) AUTO_FIX_PATCHES=y gcc-unpacked
 
 ##############################################################################
 #
@@ -338,7 +342,7 @@ gcc_target-dirclean: gcc_target-clean gcc-dirclean
 gcc_target-distclean: gcc_target-dirclean
 
 
-.PHONY: gcc-source gcc-unpacked
+.PHONY: gcc-source gcc-unpacked gcc-autofix
 .PHONY: gcc_initial gcc_initial-configured gcc_initial-uninstall gcc_initial-clean gcc_initial-dirclean gcc_initial-distclean
 .PHONY: gcc         gcc-configured         gcc-uninstall         gcc-clean         gcc-dirclean         gcc-distclean
 .PHONY: gcc_target  gcc_target-configured  gcc_target-uninstall  gcc_target-clean  gcc_target-dirclean  gcc_target-distclean

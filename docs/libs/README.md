@@ -206,7 +206,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libssh2 (libssh2.so) 1.11.0](libssh2.md)<a id='libssh2'></a>**<br>
     libssh2 is a client-side C library implementing the SSH2 protocol.
 
-  * **[libstdcxx: libstdc++ (libstdc++-6.0.x.so) 6.0.16/6.0.17/6.0.19/6.0.20/6.0.21/6.0.25/6.0.28/6.0.32](libstdcxx.md)<a id='libstdcxx'></a>**<br>
+  * **[libstdcxx: libstdc++ (libstdc++-6.0.x.so) 6.0.16/6.0.17/6.0.19/6.0.20/6.0.21/6.0.25/6.0.28/6.0.32/6.0.33](libstdcxx.md)<a id='libstdcxx'></a>**<br>
     GNU implementation of the Standard C++ Library.
 
   * **[libsynce (libsynce.so) 0.10.0](libsynce.md)<a id='libsynce'></a>**<br>
@@ -233,7 +233,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libvorbis (libvorbis.so) 1.3.5](libvorbis.md)<a id='libvorbis'></a>**<br>
     Vorbis is the name of a specific audio compression scheme that's designed to be contained in Ogg. libvorbis is a BSD-style license software implementation of the Vorbis specification by the Xiph.Org Foundation.
 
-  * **[libxml2 (libxml2.so) 2.12.7](libxml2.md)<a id='libxml2'></a>**<br>
+  * **[libxml2 (libxml2.so) 2.13.1](libxml2.md)<a id='libxml2'></a>**<br>
     XML toolkit from the GNOME project
 
   * **[linux-atm (libatm.so) 2.5.2](linux-atm.md)<a id='linux-atm'></a>**<br>
