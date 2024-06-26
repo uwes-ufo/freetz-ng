@@ -48,18 +48,19 @@ Latest changes
 ### devel
 
  - Build system:
-   * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.48
-   * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/9.3.0/13.3.0
+   * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.49
+   * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0//8.4.0/9.3.0/13.3.0/14.1.0
 
  - Host tools:
-   * cmake 3.29.4
+   * ca-bundle 2024-03-11
+   * cmake 3.29.6
    * cpio 2.15
    * fakeroot 1.35
    * kconfig 6.9
    * meson 1.4.1
    * ninja 1.12.1
    * openssl 3.0.14
-   * precompiled host-tools 2024-05-10
+   * precompiled host-tools 2024-06-11
    * precompiled toolchains r23751
    * python 3.11.9
    * wget 1.24.5
@@ -76,9 +77,14 @@ Latest changes
    * Atop 2.10.0
    * AutoFS 5.0.5/5.1.9
    * BIND 9.11.37/9.18.27
+   * BIRD 1.6.8/2.15.1
    * Bftpd 6.2
+   * bvi 1.4.2
+   * CCID 1.5.5
+   * dtach 0.9
    * Dropbear 2024.85
    * FFmpeg 5.1.4
+   * Fontconfig 2.15.0
    * Git 2.45.2
    * HAProxy 2.6.17
    * ImageMagick 7.1.1-30
@@ -89,23 +95,32 @@ Latest changes
    * Nano 8.0
    * Nmap 4.76/5.51/7.95
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
+   * OpenVPN 2.4.12/2.5.10/2.6.11
+   * PCSC-lite 1.9.5/2.1.0
+   * psl 0.21.5
    * socat 1.8.0.0
    * sslh 2.1.2
    * rsync 3.3.0
    * strace 4.9/5.0/6.9
    * Sudo 1.9.15p5
    * SQLite 3.45.3
-   * Tor 0.4.8.11
+   * Tinyproxy 1.11.2
+   * Tor 0.4.8.12
    * Transmission 3.00/4.0.6
    * Unbound 1.20.0
    * UnRAR 6.1.7/7.0.9
+   * usb.ids c70eea490a
    * Whois 5.5.23
+   * xsltproc 1.1.41
 
  - Libraries:
+   * attr 2.5.2
    * harfbuzz 8.5.0
    * libidn 1.42
+   * libmaxminddb 1.10.0
    * libpng 1.6.43
-   * libxml2 2.12.7
+   * libxml2 2.13.1
+   * pcre2 10.44
    * pixman 0.43.4
 
  - Firmware updates:

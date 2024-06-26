@@ -10,15 +10,29 @@ $(PKG)_SITE:=@GNU/wget
 $(PKG)_BINARY:=$($(PKG)_DIR)/src/wget
 $(PKG)_TARGET_BINARY:=$(TOOLS_DIR)/wget
 
+$(PKG)_DEPENDS_ON+=$(if $(FREETZ_TOOLS_WGET_STATIC),openssl-host)
+$(PKG)_DEPENDS_ON+=ca-bundle-host
+
+$(PKG)_REBUILD_SUBOPTS += FREETZ_TOOLS_WGET_STATIC
+
 $(PKG)_CONFIGURE_OPTIONS += --prefix=/usr
-$(PKG)_CONFIGURE_OPTIONS += --with-ssl=openssl
-$(PKG)_CONFIGURE_OPTIONS += --without-libgnutls-prefix
 $(PKG)_CONFIGURE_OPTIONS += --disable-debug
 $(PKG)_CONFIGURE_OPTIONS += --disable-iri
 $(PKG)_CONFIGURE_OPTIONS += --disable-pcre
+$(PKG)_CONFIGURE_OPTIONS += --disable-pcre2
 $(PKG)_CONFIGURE_OPTIONS += --disable-rpath
 $(PKG)_CONFIGURE_OPTIONS += --without-libuuid
+$(PKG)_CONFIGURE_OPTIONS += --without-libpsl
 $(PKG)_CONFIGURE_OPTIONS += --without-zlib
+
+ifeq ($(strip $(FREETZ_TOOLS_WGET_STATIC)),y)
+$(PKG)_CONFIGURE_OPTIONS += --with-included-libunistring
+$(PKG)_CONFIGURE_OPTIONS += --with-ssl=openssl
+$(PKG)_CONFIGURE_OPTIONS += --without-libgnutls-prefix
+$(PKG)_CONFIGURE_ENV += OPENSSL_CFLAGS="-I$(OPENSSL_HOST_DIR)/include"
+$(PKG)_CONFIGURE_ENV += OPENSSL_LIBS="-L$(OPENSSL_HOST_DIR)  -Wl,-Bstatic -l:libssl.a -l:libcrypto.a  -Wl,-Bdynamic -ldl -pthread"
+#$(PKG)_CONFIGURE_ENV += LDFLAGS="-static  -lssl -lcrypto"
+endif
 
 
 ifneq ($($(PKG)_SOURCE),$(WGET_HOST_SOURCE))

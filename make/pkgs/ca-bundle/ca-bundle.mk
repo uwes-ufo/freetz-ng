@@ -3,6 +3,7 @@ $(PKG)_SOURCE:=cacert-$($(PKG)_VERSION).pem
 $(PKG)_HASH:=1794c1d4f7055b7d02c2170337b61b48a2ef6c90d77e95444fd2596f4cac609f
 $(PKG)_SITE:=https://www.curl.se/ca,https://curl.haxx.se/ca
 ### WEBSITE:=https://www.curl.se/ca
+### SUPPORT:=fda77
 
 $(PKG)_BINARY:=$(DL_DIR)/$($(PKG)_SOURCE)
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/etc/ssl/certs/ca-bundle.crt
@@ -10,7 +11,9 @@ $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/etc/ssl/certs/ca-bundle.crt
 $(PKG)_STARTLEVEL=30
 
 
+ifneq ($(strip $(DL_DIR)/$(CA_BUNDLE_SOURCE)), $(strip $(DL_DIR)/$(CA_BUNDLE_HOST_SOURCE)))
 $(PKG_SOURCE_DOWNLOAD)
+endif
 $(PKG_UNPACKED)
 
 $($(PKG)_TARGET_BINARY): $($(PKG)_BINARY)
