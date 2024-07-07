@@ -48,6 +48,10 @@ if FREETZ_PACKAGE_OPENSSH
 		select FREETZ_LIB_libz                    if !FREETZ_PACKAGE_OPENSSH_STATIC
 		select FREETZ_PACKAGE_OPENSSH_sshd_session
 		default n
+	if FREETZ_PACKAGE_OPENSSH_sshd
+		config FREETZ_PACKAGE_OPENSSH_sshd_session
+			bool
+	endif # FREETZ_PACKAGE_OPENSSH_sshd
 
 	comment "SSH client (ssh) (not available, provided by dropbear)"
 		depends on FREETZ_PACKAGE_DROPBEAR && !FREETZ_PACKAGE_DROPBEAR_SERVER_ONLY
