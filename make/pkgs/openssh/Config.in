@@ -46,11 +46,7 @@ if FREETZ_PACKAGE_OPENSSH
 		bool "SSH server (sshd, sshd-session)"
 		select FREETZ_LIB_libcrypto               if !FREETZ_PACKAGE_OPENSSH_STATIC && !FREETZ_PACKAGE_OPENSSH_INTERNAL_CRYPTO
 		select FREETZ_LIB_libz                    if !FREETZ_PACKAGE_OPENSSH_STATIC
-<<<<<<< HEAD
-		select FREETZ_PACKAGE_OPENSSH_sshd_session
-=======
 		select FREETZ_PACKAGE_OPENSSH_sshd_session if FREETZ_PACKAGE_OPENSSH_VERSION_CURRENT
->>>>>>> e558d2e82cd03c887e30c1ecf5fc867c873372d7
 		default n
 	if FREETZ_PACKAGE_OPENSSH_sshd
 		config FREETZ_PACKAGE_OPENSSH_sshd_session
