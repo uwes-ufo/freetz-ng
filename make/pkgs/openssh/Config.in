@@ -105,6 +105,10 @@ if FREETZ_PACKAGE_OPENSSH
 		bool "SFTP server (sftp-server)"
 		default n
 
+	config FREETZ_PACKAGE_OPENSSH_sshd_session
+		bool "SSHD session (sshd-session)"
+		default n
+
 	comment "Configuration ---"
 
 	config FREETZ_PACKAGE_OPENSSH_INTERNAL_CRYPTO
