@@ -22,7 +22,11 @@ $(PKG)_SBIN_BINARIES_INCLUDED   := $(call PKG_SELECTED_SUBOPTIONS,$($(PKG)_SBIN_
 $(PKG)_SBIN_BINARIES_BUILD_DIR  := $(addprefix $($(PKG)_DIR)/,$($(PKG)_SBIN_BINARIES))
 $(PKG)_SBIN_BINARIES_TARGET_DIR := $(addprefix $($(PKG)_DEST_DIR)/usr/sbin/,$($(PKG)_SBIN_BINARIES))
 
+<<<<<<< HEAD
 $(PKG)_LIB_BINARIES             := sftp-server sshd-session
+=======
+$(PKG)_LIB_BINARIES             := sftp-server $(if $(FREETZ_PACKAGE_OPENSSH_VERSION_ABANDON),,sshd-session)
+>>>>>>> 19c5a2ab114d4f18e9303c4b8eb359ef71235e05
 $(PKG)_LIB_BINARIES_INCLUDED    := $(call PKG_SELECTED_SUBOPTIONS,$($(PKG)_LIB_BINARIES))
 $(PKG)_LIB_BINARIES_BUILD_DIR   := $(addprefix $($(PKG)_DIR)/,$($(PKG)_LIB_BINARIES))
 $(PKG)_LIB_BINARIES_TARGET_DIR  := $(addprefix $($(PKG)_DEST_DIR)/usr/lib/,$($(PKG)_LIB_BINARIES))
