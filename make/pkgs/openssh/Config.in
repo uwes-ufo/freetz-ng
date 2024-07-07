@@ -49,6 +49,10 @@ if FREETZ_PACKAGE_OPENSSH
 		select FREETZ_PACKAGE_OPENSSH_sshd_session
 		default n
 
+	config FREETZ_PACKAGE_OPENSSH_sshd_session
+		bool "SSHD session (sshd-session)"
+		default n
+
 	comment "SSH client (ssh) (not available, provided by dropbear)"
 		depends on FREETZ_PACKAGE_DROPBEAR && !FREETZ_PACKAGE_DROPBEAR_SERVER_ONLY
 	config FREETZ_PACKAGE_OPENSSH_ssh
@@ -103,10 +107,6 @@ if FREETZ_PACKAGE_OPENSSH
 
 	config FREETZ_PACKAGE_OPENSSH_sftp_server
 		bool "SFTP server (sftp-server)"
-		default n
-
-	config FREETZ_PACKAGE_OPENSSH_sshd_session
-		bool "SSHD session (sshd-session)"
 		default n
 
 	comment "Configuration ---"
