@@ -43,14 +43,9 @@ if FREETZ_PACKAGE_OPENSSH
 			key-based authentication and private keys.
 
 	config FREETZ_PACKAGE_OPENSSH_sshd
-		bool "SSH server (sshd)"
+		bool "SSH server (sshd, sshd-session)"
 		select FREETZ_LIB_libcrypto               if !FREETZ_PACKAGE_OPENSSH_STATIC && !FREETZ_PACKAGE_OPENSSH_INTERNAL_CRYPTO
 		select FREETZ_LIB_libz                    if !FREETZ_PACKAGE_OPENSSH_STATIC
-		select FREETZ_PACKAGE_OPENSSH_sshd_session
-		default n
-
-	config FREETZ_PACKAGE_OPENSSH_sshd_session
-		bool "SSHD session (sshd-session)"
 		default n
 
 	comment "SSH client (ssh) (not available, provided by dropbear)"
