@@ -46,6 +46,7 @@ if FREETZ_PACKAGE_OPENSSH
 		bool "SSH server (sshd, sshd-session)"
 		select FREETZ_LIB_libcrypto               if !FREETZ_PACKAGE_OPENSSH_STATIC && !FREETZ_PACKAGE_OPENSSH_INTERNAL_CRYPTO
 		select FREETZ_LIB_libz                    if !FREETZ_PACKAGE_OPENSSH_STATIC
+		select FREETZ_PACKAGE_OPENSSH_sshd_session
 		default n
 
 	comment "SSH client (ssh) (not available, provided by dropbear)"
