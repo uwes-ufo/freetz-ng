@@ -52,8 +52,8 @@ Latest changes
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0//8.4.0/9.3.0/13.3.0/14.1.0
 
  - Host tools:
-   * ca-bundle 2024-03-11
-   * cmake 3.29.6
+   * ca-bundle 2024-07-02
+   * cmake 3.30.0
    * cpio 2.15
    * fakeroot 1.35
    * kconfig 6.9
@@ -73,7 +73,7 @@ Latest changes
    * Various Fritzos 8.0 related changes
 
  - Packages:
-   * Apache2 2.4.59
+   * Apache2 2.4.61
    * Atop 2.10.0
    * AutoFS 5.0.5/5.1.9
    * BIND 9.11.37/9.18.27
@@ -94,6 +94,7 @@ Latest changes
    * minisatip 1.0.4/1.3.6
    * Nano 8.0
    * Nmap 4.76/5.51/7.95
+   * OpenSSH 9.3p2/9.8p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
    * OpenVPN 2.4.12/2.5.10/2.6.11
    * PCSC-lite 1.9.5/2.1.0
@@ -115,7 +116,7 @@ Latest changes
 
  - Libraries:
    * attr 2.5.2
-   * harfbuzz 8.5.0
+   * harfbuzz 9.0.0
    * libidn 1.42
    * libmaxminddb 1.10.0
    * libpng 1.6.43
