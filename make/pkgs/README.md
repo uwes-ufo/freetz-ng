@@ -1196,10 +1196,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     For FritzOS 6.0x - 6.5x only. Configuration of forwardings to FB itself (open ports). Requires an existing forwarding in the configuration, e.g. HTTPS to box is allowed in the regular AVM GUI.
 
   * **[AVM-portfw](../../docs/make/avm-portfw.md)<a id='avm-portfw'></a>**<br>
-    For FritzOS 6.8x - 7.5x only. Configuration of port forwardings to the FritzBox itself by using internet_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
+    For FritzOS 6.8x - 7.57 only (up to ar7cfg_version=24). Configuration of port forwardings to the FritzBox itself by using internet_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
 
   * **[AVM-rules - DEVELOPER](../../docs/make/avm-rules.md)<a id='avm-rules'></a>**<br>
-    For FritzOS since v8.0x only. Configuration of port forwardings to the FritzBox itself by using voip_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
+    For FritzOS since v7.5x only. Configuration of port forwardings to the FritzBox itself by using voip_forwardrules. The packets are tagged with DiffServ/DSCP and some devices may route it different, eg Telekrom Hybrid always via dsl because Telefon ohne Kabel gibts nicht. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
      - [Deprecated?](../../docs/make/avm-rules.md#deprecated)
 
   * **<u>Cpmaccfg CGI</u><a id='cpmaccfg'></a>**<br>
