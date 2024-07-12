@@ -63,7 +63,7 @@ Latest changes
    * ninja 1.12.1
    * openssl 3.0.14
    * pkgconf 2.2.0
-   * precompiled host-tools 2024-07-10
+   * precompiled host-tools 2024-07-12
    * precompiled toolchains r23751
    * python 3.12.4
    * wget 1.24.5
@@ -91,12 +91,14 @@ Latest changes
    * Fontconfig 2.15.0
    * Git 2.45.2
    * HAProxy 2.6.17
-   * ImageMagick 7.1.1-30
+   * ImageMagick 7.1.1-34
    * iPerf3 3.3/3.17.1
    * Lighttpd 1.4.76
    * Lynx 2.9.2
    * minisatip 1.0.4/1.3.6
    * Nano 8.0
+   * ncurses 6.5
+   * ncursesw 6.5
    * Nmap 4.76/5.51/7.95
    * OpenSSH 9.3p2/9.8p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
