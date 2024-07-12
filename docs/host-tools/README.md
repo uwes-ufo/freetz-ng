@@ -6,7 +6,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[autoconf 2.72](autoconf-host.md)<a id='autoconf-host'></a>**<br>
 
-  * **[automake 1.16.5](automake-host.md)<a id='automake-host'></a>**<br>
+  * **[automake 1.17](automake-host.md)<a id='automake-host'></a>**<br>
 
   * **[avm-rle 0](avm-rle-host.md)<a id='avm-rle-host'></a>**<br>
 
@@ -16,7 +16,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[ca-bundle 2024-03-11](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
+  * **[ca-bundle 2024-07-02](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
   * **[cmake 3.30.0](cmake-host.md)<a id='cmake-host'></a>**<br>
 
@@ -82,7 +82,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ncftp 3.2.7](ncftp-host.md)<a id='ncftp-host'></a>**<br>
 
-  * **[ncurses 6.4](ncurses-host.md)<a id='ncurses-host'></a>**<br>
+  * **[ncurses 6.5](ncurses-host.md)<a id='ncurses-host'></a>**<br>
 
   * **[netkit-ftp 0.17-35](netkit-ftp-host.md)<a id='netkit-ftp-host'></a>**<br>
 
@@ -96,7 +96,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[patchelf 0.14.5/0.15.0](patchelf-host.md)<a id='patchelf-host'></a>**<br>
 
-  * **[pkgconf 2.1.1](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
+  * **[pkgconf 2.2.0](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
 
   * **[prelink 20130503](prelink-host.md)<a id='prelink-host'></a>**<br>
 
@@ -104,7 +104,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python2 2.7.18](python2-host.md)<a id='python2-host'></a>**<br>
 
-  * **[python3 3.11.9](python3-host.md)<a id='python3-host'></a>**<br>
+  * **[python3 3.12.4](python3-host.md)<a id='python3-host'></a>**<br>
 
 ### S
 

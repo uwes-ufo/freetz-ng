@@ -52,17 +52,20 @@ Latest changes
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0//8.4.0/9.3.0/13.3.0/14.1.0
 
  - Host tools:
+   * automake 1.17
    * ca-bundle 2024-07-02
    * cmake 3.30.0
    * cpio 2.15
    * fakeroot 1.35
    * kconfig 6.9
    * meson 1.5.0
+   * ncurses 6.5
    * ninja 1.12.1
    * openssl 3.0.14
+   * pkgconf 2.2.0
    * precompiled host-tools 2024-07-10
    * precompiled toolchains r23751
-   * python 3.11.9
+   * python 3.12.4
    * wget 1.24.5
 
  - AVM sources:
@@ -80,6 +83,7 @@ Latest changes
    * BIRD 1.6.8/2.15.1
    * Bftpd 6.2
    * bvi 1.4.2
+   * CA-bundle 2024-07-02
    * CCID 1.5.5
    * dtach 0.9
    * Dropbear 2024.85
