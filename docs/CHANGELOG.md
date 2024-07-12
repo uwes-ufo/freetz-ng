@@ -52,17 +52,20 @@ Latest changes
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0//8.4.0/9.3.0/13.3.0/14.1.0
 
  - Host tools:
+   * automake 1.17
    * ca-bundle 2024-07-02
    * cmake 3.30.0
    * cpio 2.15
    * fakeroot 1.35
    * kconfig 6.9
-   * meson 1.4.1
+   * meson 1.5.0
+   * ncurses 6.5
    * ninja 1.12.1
    * openssl 3.0.14
-   * precompiled host-tools 2024-06-11
+   * pkgconf 2.2.0
+   * precompiled host-tools 2024-07-12
    * precompiled toolchains r23751
-   * python 3.11.9
+   * python 3.12.4
    * wget 1.24.5
 
  - AVM sources:
@@ -80,6 +83,7 @@ Latest changes
    * BIRD 1.6.8/2.15.1
    * Bftpd 6.2
    * bvi 1.4.2
+   * CA-bundle 2024-07-02
    * CCID 1.5.5
    * dtach 0.9
    * Dropbear 2024.85
@@ -87,16 +91,19 @@ Latest changes
    * Fontconfig 2.15.0
    * Git 2.45.2
    * HAProxy 2.6.17
-   * ImageMagick 7.1.1-30
+   * ImageMagick 7.1.1-34
    * iPerf3 3.3/3.17.1
    * Lighttpd 1.4.76
    * Lynx 2.9.2
    * minisatip 1.0.4/1.3.6
    * Nano 8.0
+   * ncurses 6.5
+   * ncursesw 6.5
    * Nmap 4.76/5.51/7.95
    * OpenSSH 9.3p2/9.8p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
    * OpenVPN 2.4.12/2.5.10/2.6.11
+   * PCP client 1c783fb 
    * PCSC-lite 1.9.5/2.1.0
    * psl 0.21.5
    * socat 1.8.0.0
