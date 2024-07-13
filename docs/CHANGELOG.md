@@ -66,6 +66,7 @@ Latest changes
    * precompiled host-tools 2024-07-12
    * precompiled toolchains r23751
    * python 3.12.4
+   * python3-packaging 24.1
    * wget 1.24.5
 
  - AVM sources:
@@ -123,6 +124,7 @@ Latest changes
 
  - Libraries:
    * attr 2.5.2
+   * glib2 2.32.4/2.81.0
    * harfbuzz 9.0.0
    * libidn 1.42
    * libmaxminddb 1.10.0
