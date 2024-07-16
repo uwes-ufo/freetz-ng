@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 099cd8ff8 uwe 2024-07-16
+#  freetz-ng 651b17e25 uwe 2024-07-16
 #
 
 #
@@ -422,6 +422,7 @@ FREETZ_PACKAGE_CALLMONITOR_monitor=y
 #
 # FREETZ_PACKAGE_EMAILRELAY is not set
 # FREETZ_PACKAGE_EMPTY is not set
+# FREETZ_PACKAGE_ENDLESSH is not set
 # FREETZ_PACKAGE_ESPEAK is not set
 # end of E
 
