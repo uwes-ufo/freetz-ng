@@ -54,7 +54,7 @@ Latest changes
  - Host tools:
    * automake 1.17
    * ca-bundle 2024-07-02
-   * cmake 3.30.0
+   * cmake 3.30.1
    * cpio 2.15
    * fakeroot 1.35
    * kconfig 6.9
@@ -98,13 +98,13 @@ Latest changes
    * Lighttpd 1.4.76
    * Lynx 2.9.2
    * minisatip 1.0.4/1.3.6
-   * Nano 8.0
+   * Nano 8.1
    * ncurses 6.5
    * ncursesw 6.5
    * Nmap 4.76/5.51/7.95
    * OpenSSH 9.3p2/9.8p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
-   * OpenVPN 2.4.12/2.5.10/2.6.12
+   * OpenVPN 2.4.12/2.5.11/2.6.12
    * PCP client 1c783fb 
    * PCSC-lite 1.9.5/2.1.0
    * psl 0.21.5
