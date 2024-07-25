@@ -57,7 +57,7 @@ Latest changes
    * cmake 3.30.1
    * cpio 2.15
    * fakeroot 1.35
-   * kconfig 6.9
+   * kconfig 6.10
    * meson 1.5.0
    * ncurses 6.5
    * ninja 1.12.1
@@ -80,12 +80,13 @@ Latest changes
    * Apache2 2.4.62
    * Atop 2.10.0
    * AutoFS 5.0.5/5.1.9
-   * BIND 9.11.37/9.18.27
+   * BIND 9.11.37/9.18.28
    * BIRD 1.6.8/2.15.1
    * Bftpd 6.2
    * bvi 1.4.2
    * CA-bundle 2024-07-02
    * CCID 1.5.5
+   * Curl 8.9.0
    * dtach 0.9
    * Dropbear 2024.85
    * endlessh 1.0
