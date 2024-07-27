@@ -44,7 +44,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FreeType (freetype.so) 2.13.2](freetype.md)<a id='freetype'></a>**<br>
     FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well.
 
-  * **[FriBidi (libfribidi.so) 1.0.13](fribidi.md)<a id='fribidi'></a>**<br>
+  * **[FriBidi (libfribidi.so) 1.0.15](fribidi.md)<a id='fribidi'></a>**<br>
     The Free Implementation of the Unicode Bidirectional Algorithm.
 
 ### G
@@ -233,7 +233,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libvorbis (libvorbis.so) 1.3.5](libvorbis.md)<a id='libvorbis'></a>**<br>
     Vorbis is the name of a specific audio compression scheme that's designed to be contained in Ogg. libvorbis is a BSD-style license software implementation of the Vorbis specification by the Xiph.Org Foundation.
 
-  * **[libxml2 (libxml2.so) 2.13.1](libxml2.md)<a id='libxml2'></a>**<br>
+  * **[libxml2 (libxml2.so) 2.13.3](libxml2.md)<a id='libxml2'></a>**<br>
     XML toolkit from the GNOME project
 
   * **[linux-atm (libatm.so) 2.5.2](linux-atm.md)<a id='linux-atm'></a>**<br>

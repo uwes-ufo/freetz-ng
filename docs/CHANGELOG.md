@@ -58,7 +58,7 @@ Latest changes
    * cpio 2.15
    * fakeroot 1.35
    * kconfig 6.10
-   * meson 1.5.0
+   * meson 1.5.1
    * ncurses 6.5
    * ninja 1.12.1
    * openssl 3.0.14
@@ -127,12 +127,13 @@ Latest changes
 
  - Libraries:
    * attr 2.5.2
+   * fribidi 1.0.15
    * glib2 2.32.4/2.81.0
    * harfbuzz 9.0.0
    * libidn 1.42
    * libmaxminddb 1.10.0
    * libpng 1.6.43
-   * libxml2 2.13.1
+   * libxml2 2.13.3
    * pcre2 10.44
    * pixman 0.43.4
 
