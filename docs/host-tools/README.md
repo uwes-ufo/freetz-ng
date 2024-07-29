@@ -34,7 +34,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### F
 
-  * **[fakeroot 1.35](fakeroot-host.md)<a id='fakeroot-host'></a>**<br>
+  * **[fakeroot 1.35.1](fakeroot-host.md)<a id='fakeroot-host'></a>**<br>
 
   * **[fastjar 0.98](fastjar-host.md)<a id='fastjar-host'></a>**<br>
 
@@ -62,7 +62,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[lzma2eva 1.0](lzma2eva-host.md)<a id='lzma2eva-host'></a>**<br>
 
-  * **[lzma2 5.4.6](lzma2-host.md)<a id='lzma2-host'></a>**<br>
+  * **[lzma2 5.6.2](lzma2-host.md)<a id='lzma2-host'></a>**<br>
 
 ### M
 
@@ -130,13 +130,13 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2024-07-13](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2024-07-29](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
-  * **[uboot 2024.01](uboot-host.md)<a id='uboot-host'></a>**<br>
+  * **[uboot 2024.07](uboot-host.md)<a id='uboot-host'></a>**<br>
 
-  * **[uimg 871930df297e3a03bc315be75ecfc8c5c7a809ab](uimg-host.md)<a id='uimg-host'></a>**<br>
+  * **[uimg 871930d](uimg-host.md)<a id='uimg-host'></a>**<br>
 
 ### W
 
@@ -152,4 +152,4 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[yf-bootmanager 0.8.6](yf-bootmanager-host.md)<a id='yf-bootmanager-host'></a>**<br>
 
-  * **[yf-fit_tools 0.2](yf-fit_tools-host.md)<a id='yf-fit-tools-host'></a>**<br>
+  * **[yf-fit_tools 0.2 24011d3](yf-fit_tools-host.md)<a id='yf-fit-tools-host'></a>**<br>

@@ -56,18 +56,20 @@ Latest changes
    * ca-bundle 2024-07-02
    * cmake 3.30.1
    * cpio 2.15
-   * fakeroot 1.35
+   * fakeroot 1.35.1
    * kconfig 6.10
    * meson 1.5.1
    * ncurses 6.5
    * ninja 1.12.1
    * openssl 3.0.14
    * pkgconf 2.2.0
-   * precompiled host-tools 2024-07-13
+   * precompiled host-tools 2024-07-29
    * precompiled toolchains r23751
    * python 3.12.4
    * python3-packaging 24.1
+   * u-boot 2024.07
    * wget 1.24.5
+   * xz 5.6.2
 
  - AVM sources:
    * 7690 7.61 - 5.4.213
@@ -124,6 +126,7 @@ Latest changes
    * usb.ids c70eea490a
    * Whois 5.5.23
    * xsltproc 1.1.41
+   * XZ 5.6.2
 
  - Libraries:
    * attr 2.5.2
@@ -133,6 +136,7 @@ Latest changes
    * libidn 1.42
    * libmaxminddb 1.10.0
    * libpng 1.6.43
+   * libtirpc 1.3.5
    * libxml2 2.13.3
    * pango 1.54.0
    * pcre2 10.44
