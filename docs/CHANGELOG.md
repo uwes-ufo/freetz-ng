@@ -4,6 +4,7 @@ Latest changes
 
 - Freetz-NG
   * [devel](#devel)
+  * [ng24080](#ng24080)
   * [ng24040](#ng24040)
   * [ng23110](#ng23110)
   * [ng23080](#ng23080)
@@ -46,6 +47,14 @@ Latest changes
 <br>
 
 ### devel
+
+ - Packages:
+   * RRDtool 1.2.30/1.9.0
+
+ - Firmware updates:
+   * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+
+### ng24080
 
  - Build system:
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.49
@@ -143,7 +152,7 @@ Latest changes
    * pixman 0.43.4
 
  - Firmware updates:
-   * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+   * Please see [FIRMWARES](https://github.com/Freetz-NG/freetz-ng/blob/ng24080/docs/FIRMWARES.md) for the list of supported devices and firmwares.
 
 ### ng24040
 
