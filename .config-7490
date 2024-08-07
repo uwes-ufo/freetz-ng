@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 225d624c3 uwe 2024-08-02
+#  freetz-ng 8ecb18166 uwe 2024-08-07
 #
 
 #
@@ -1160,9 +1160,15 @@ FREETZ_LIB_libgcc_s=y
 # FREETZ_LIB_libgd is not set
 FREETZ_LIB_libopenjpeg=y
 # FREETZ_LIB_libopenjp2 is not set
+
+#
+# pango
+#
 # FREETZ_LIB_libpango_1 is not set
 # FREETZ_LIB_libpangoft2_1 is not set
 # FREETZ_LIB_libpangocairo_1 is not set
+# end of pango
+
 # FREETZ_LIB_libpixman_1 is not set
 # FREETZ_LIB_libtesseract is not set
 # FREETZ_LIB_libtiff is not set
@@ -1357,13 +1363,14 @@ FREETZ_LIB_libuClibc=y
 # end of uClibc
 
 #
-# USB & FTDI
+# USB & related
 #
-# FREETZ_LIB_libusb_0 is not set
-# FREETZ_LIB_libusb_1 is not set
 # FREETZ_LIB_libftdi is not set
 # FREETZ_LIB_libftdi1 is not set
-# end of USB & FTDI
+# FREETZ_LIB_libpcsclite is not set
+# FREETZ_LIB_libusb_0 is not set
+# FREETZ_LIB_libusb_1 is not set
+# end of USB & related
 
 #
 # Web and WebDAV
@@ -1391,6 +1398,13 @@ FREETZ_LIB_libexpat=y
 # FREETZ_LIB_libexslt is not set
 # end of XML & XSLT
 
+#
+#  ---
+#
+
+#
+# Other
+#
 # FREETZ_LIB_libattr is not set
 # FREETZ_LIB_libcap is not set
 FREETZ_LIB_libcap_ng=y
@@ -1405,7 +1419,6 @@ FREETZ_LIB_libconfig=y
 FREETZ_LIB_libffi=y
 # FREETZ_LIB_liblua is not set
 # FREETZ_LIB_libnfsidmap is not set
-# FREETZ_LIB_libpcsclite is not set
 FREETZ_LIB_libpopt=y
 FREETZ_LIB_libprivatekeypassword=y
 # FREETZ_LIB_libprotobuf_c is not set
@@ -1415,8 +1428,23 @@ FREETZ_LIB_libpython2=y
 # FREETZ_LIB_libsynce is not set
 # FREETZ_LIB_libsysfs is not set
 # FREETZ_LIB_libltdl is not set
+
+#
+# liburcu
+#
+# FREETZ_LIB_liburcu is not set
+# FREETZ_LIB_liburcu_bp is not set
+# FREETZ_LIB_liburcu_cds is not set
+# FREETZ_LIB_liburcu_common is not set
+# FREETZ_LIB_liburcu_mb is not set
+# FREETZ_LIB_liburcu_memb is not set
+# FREETZ_LIB_liburcu_qsbr is not set
+# FREETZ_LIB_liburcu_signal is not set
+# end of liburcu
+
 # FREETZ_LIB_libuv is not set
 # FREETZ_LIB_libyaml is not set
+# end of Other
 # end of Shared libraries
 
 #
