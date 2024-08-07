@@ -48,8 +48,16 @@ Latest changes
 
 ### devel
 
+ - Host tools:
+   * cmake 3.30.2
+
  - Packages:
+   * BIND 9.11.37/9.20.0
    * RRDtool 1.2.30/1.9.0
+
+ - Libraries:
+   * libdeflate 1.21
+   * liburcu 0.14.0
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

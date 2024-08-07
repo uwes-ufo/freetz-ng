@@ -119,7 +119,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libdaemon (libdaemon.so) 0.14](libdaemon.md)<a id='libdaemon'></a>**<br>
     Libdaemon is a lightweight C library that eases the writing of UNIX daemons.
 
-  * **[libdeflate (libdeflate.so) 1.20](libdeflate.md)<a id='libdeflate'></a>**<br>
+  * **[libdeflate (libdeflate.so) 1.21](libdeflate.md)<a id='libdeflate'></a>**<br>
     Heavily optimized library for DEFLATE/zlib/gzip compression and decompression
 
   * **[libdnet (libdnet.so) 665](libdnet.md)<a id='libdnet'></a>**<br>
@@ -220,6 +220,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[libtool (libltdl.so) 1.5.26](libtool.md)<a id='libtool'></a>**<br>
     A generic dynamic object loading library
+
+  * **[liburcu (liburcu.so) 0.14.0](liburcu.md)<a id='liburcu'></a>**<br>
+    liburcu is a LGPLv2.1 userspace RCU (read-copy-update) library. This data synchronization library provides read-side access which scales linearly with the number of cores.
 
   * **[libusb-0.1 (libusb-0.1.so) 0.1.8/0.1.12](libusb.md)<a id='libusb'></a>**<br>
     A library for accessing Linux USB devices (legacy API).
