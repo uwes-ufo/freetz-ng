@@ -198,7 +198,6 @@ function push_fw() {
 		if [ $ISALICE ]; then
 			basename=$(basename $0)
 			echo "$basename: Trying to flash an image to an \"Alice\" 7570 FritzBox."
-			[ $(command -v telnet) ] || { echo "$basename: Error finding required binary \"telnet\"." ; exit 1 ;}
 			VALUES="$(telnet_hn | telnet 2>/dev/null| grep -e '^mtd[1\|5]\|^HWRevision')" || { echo "$basename: Error trying to get values from \"Alice\" FritzBox."; exit 1; }
 			HWR=$(echo "$VALUES" | sed -n '/^HWRev/ s/HWRevision[^0-9]*//p')
 			[ "153" = "$HWR" ] || { echo "$basename: Error veryfing HWRevision=153 as required for \"Alice\" FritzBox. Found: HWRevision=$HWR." ; exit 1 ;}
@@ -618,19 +617,21 @@ if [ -z "$ISSINGLE$ISDUAL$ISRAM$ISUIMG$ISFIT" ]; then
 		[ "$N" == "1" -a "$S" == "0" ] && ISSINGLE=true
 	fi
 fi
-[ -z "$ISSINGLE$ISDUAL$ISRAM$ISUIMG$ISFIT" ]   && echo "Can not recognize image format, use a valid one."                  && exit 1
+[ -z "$ISSINGLE$ISDUAL$ISRAM$ISUIMG$ISFIT" ]     && echo "Can not recognize image format, use a valid one."                  && exit 1
 # arg check
-[ ! $ISSINGLE ] && [ $ISALICE ]                && echo "Parameter '-hn' is only allowed for single-boot mode."             && exit 1
-[ $ISSINGLE ]   && [ $LFS ]                    && echo "Parameter '-lfs' is not allowed for single-boot mode."             && exit 1
-[ ! $ISFIT ]    && [ $NOAFU ]                  && echo "Parameter '-afu' is only allowed for fit-boot mode."               && exit 1
-[ $ISFIT ]      && [ $LFS ]                    && echo "Parameter '-lfs' is not allowed for fit-boot mode."                && exit 1
-[ $ISFIT ]      && [ ! $LFS ]                  && LFS="9"
-[ $ISUIMG ]     && [ ! -x $UIMG_TOOL ]         && echo "File $UIMG_TOOL missing. Run 'make uimg-host' first."              && exit 1
-[ $ISRAM ]      && [ ! -x $TSUM_TOOL ]         && echo "File $TSUM_TOOL missing. Run 'make tichksum-host' first."          && exit 1
-[ $ISFIT ]      && [ ! -x $FDTD_TOOL ]         && echo "File $FDTD_TOOL missing. Run 'make dtc-host' first."               && exit 1
-[ ! $ISRAM ] && [ ! $ISFIT ] && [ $FULLSIZE ]  && echo "Parameter '-ram' is only allowed for ram-boot and fit-boot mode."  && exit 1
-[ ! $ISRAM ] && [ ! $ISFIT ] && [ $MAPSTART ]  && echo "Parameter '-map' is only allowed for ram-boot and fit-boot mode."  && exit 1
-[ ! $ISRAM ] && [ ! $ISFIT ] && [ $ALIBYTES ]  && echo "Parameter '-ali' is only allowed for ram-boot and fit-boot mode."  && exit 1
+[ ! $ISSINGLE ] && [ $ISALICE ]                  && echo "Parameter '-hn' is only allowed for single-boot mode."             && exit 1
+[ $ISSINGLE ]   && [ $LFS ]                      && echo "Parameter '-lfs' is not allowed for single-boot mode."             && exit 1
+[ ! $ISFIT ]    && [ $NOAFU ]                    && echo "Parameter '-afu' is only allowed for fit-boot mode."               && exit 1
+[ $ISFIT ]      && [ $LFS ]                      && echo "Parameter '-lfs' is not allowed for fit-boot mode."                && exit 1
+[ $ISFIT ]      && [ ! $LFS ]                    && LFS="9"
+[ ! $ISRAM ] && [ ! $ISFIT ] && [ $FULLSIZE ]    && echo "Parameter '-ram' is only allowed for ram-boot and fit-boot mode."  && exit 1
+[ ! $ISRAM ] && [ ! $ISFIT ] && [ $MAPSTART ]    && echo "Parameter '-map' is only allowed for ram-boot and fit-boot mode."  && exit 1
+[ ! $ISRAM ] && [ ! $ISFIT ] && [ $ALIBYTES ]    && echo "Parameter '-ali' is only allowed for ram-boot and fit-boot mode."  && exit 1
+[ $ISUIMG ]     && [ ! -x $UIMG_TOOL ]           && echo "File $UIMG_TOOL missing. Run 'make uimg-host' first."              && exit 1
+[ $ISRAM ]      && [ ! -x $TSUM_TOOL ]           && echo "File $TSUM_TOOL missing. Run 'make tichksum-host' first."          && exit 1
+[ $ISFIT ]      && [ ! -x $FDTD_TOOL ]           && echo "File $FDTD_TOOL missing. Run 'make dtc-host' first."               && exit 1
+[ ! -x "$(command -v dos2unix)" ]                && echo "Tool 'dos2unix' missing. Run 'make dos2unix-host' first."          && exit 1
+[ ! -x "$(command -v telnet)" ] && [ $ISALICE ]  && echo "Tool 'telnet' missing. Run 'make busybox-host' first."             && exit 1
 
 prepare_image
 
@@ -696,7 +697,7 @@ fi
 [ -x "$(command -v ncftpput)" ] && FOUND_NCFTP=true
 [ "$(uname -s)" == "Linux" -a -x "$(command -v ftp)" ] && FOUND_FTP=true
 if [ -z "$FOUND_NCFTP" -a -z "$FOUND_FTP" ]; then
-	echo "You have to install 'ncftp' or 'ftp' in order to use this script.	Run 'make netkit-ftp-host' first."
+	echo "You have to install 'ncftp' or 'ftp' in order to use this script. Run 'make netkit-ftp-host' first."
 	exit 1
 fi
 if [ -z "$FOUND_FTP" ]; then
