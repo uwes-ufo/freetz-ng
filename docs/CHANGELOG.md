@@ -65,12 +65,15 @@ Latest changes
  - Packages:
    * Atop 2.11.0
    * BIND 9.11.37/9.20.0
+   * mc (Midnight Commander) 4.8.32
+   * RPCBind 1.2.7
    * RRDtool 1.2.30/1.9.0
    * SQLite 3.46.1
    * Unbound 1.21.0
 
  - Libraries:
    * libdeflate 1.21
+   * libmaxminddb 1.11.0
    * liburcu 0.14.0
    * lz4 1.10.0
 

@@ -457,7 +457,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[madplay 0.15.2b (binary only) - DEPRECATED](../../docs/make/madplay.md)<a id='madplay'></a>**<br>
     MAD is a high-quality fixed-point MPEG audio decoder with 24-bit output. The implementation is entirely new, based on the ISO/IEC standards, and performs especially well on systems without native floating-point support.
 
-  * **[mc (Midnight Commander) 4.8.31 (binary only)](../../docs/make/mc.md)<a id='mc'></a>**<br>
+  * **[mc (Midnight Commander) 4.8.32 (binary only)](../../docs/make/mc.md)<a id='mc'></a>**<br>
     Subshell support means you can press Ctrl-O to hide the mc panels and have a real subshell. Both Bash (if package is installed) and BusyBox Ash can be used, depending which one is defined as your login shell. ATTENTION: You should *not* use CONFIG_FEATURE_BASH_IS_ASH in BusyBox or otherwise symlink /bin/bash to /bin/busybox because MC must differentiate handling between Ash and real Bash. This feature adds about 8 KB (uncompressed) to the mc binary.
 
   * **[mcabber 0.9.9 - DEPRECATED](../../docs/make/mcabber.md)<a id='mcabber'></a>**<br>
@@ -754,7 +754,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>ripmime 1.2.16.21 (binary only) - DEPRECATED</u><a id='ripmime'></a>**<br>
     ripmime is an utility to decode and extract the parts of mime-formatted mails.
 
-  * **[RPCBind 1.2.6 (binary only)](../../docs/make/rpcbind.md)<a id='rpcbind'></a>**<br>
+  * **[RPCBind 1.2.7 (binary only)](../../docs/make/rpcbind.md)<a id='rpcbind'></a>**<br>
     The rpcbind utility is a server that converts RPC program numbers into universal addresses.
 
   * **[RRDtool 1.2.30/1.9.0 (binary only)](../../docs/make/rrdtool.md)<a id='rrdtool'></a>**<br>
