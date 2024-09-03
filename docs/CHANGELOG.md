@@ -49,10 +49,12 @@ Latest changes
 ### devel
 
  - Build system:
+   * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.43.x
    * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0//8.4.0/9.3.0/9.4.0/13.3.0/14.2.0
+   * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.50
 
  - Host tools:
-   * cmake 3.30.2
+   * cmake 3.30.3
    * fakeroot 1.36
    * python 3.12.5
 
@@ -65,6 +67,7 @@ Latest changes
  - Packages:
    * Atop 2.11.0
    * BIND 9.11.37/9.20.0
+   * htpdate 2.0.0
    * mc (Midnight Commander) 4.8.32
    * RPCBind 1.2.7
    * RRDtool 1.2.30/1.9.0
@@ -76,6 +79,7 @@ Latest changes
    * libmaxminddb 1.11.0
    * liburcu 0.14.0
    * lz4 1.10.0
+   * mbedTLS 2.7.19/2.28.9
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
