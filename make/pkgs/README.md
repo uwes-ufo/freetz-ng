@@ -457,8 +457,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[madplay 0.15.2b (binary only) - DEPRECATED](../../docs/make/madplay.md)<a id='madplay'></a>**<br>
     MAD is a high-quality fixed-point MPEG audio decoder with 24-bit output. The implementation is entirely new, based on the ISO/IEC standards, and performs especially well on systems without native floating-point support.
 
-  * **[mc (Midnight Commander) 4.8.32 (binary only)](../../docs/make/mc.md)<a id='mc'></a>**<br>
-    Subshell support means you can press Ctrl-O to hide the mc panels and have a real subshell. Both Bash (if package is installed) and BusyBox Ash can be used, depending which one is defined as your login shell. ATTENTION: You should *not* use CONFIG_FEATURE_BASH_IS_ASH in BusyBox or otherwise symlink /bin/bash to /bin/busybox because MC must differentiate handling between Ash and real Bash. This feature adds about 8 KB (uncompressed) to the mc binary.
+  * **[mc (Midnight Commander) 4.8.31/4.8.32 (binary only)](../../docs/make/mc.md)<a id='mc'></a>**<br>
+    For devices with older glib2.
 
   * **[mcabber 0.9.9 - DEPRECATED](../../docs/make/mcabber.md)<a id='mcabber'></a>**<br>
     mcabber is a small Jabber console client. http://www.lilotux.net/~mikael/mcabber/
@@ -817,7 +817,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Bekannte Bugs](../../docs/make/sispmctl.md#bekannte-bugs)
      - [Weitere Screenshots](../../docs/make/sispmctl.md#weitere-screenshots)
 
-  * **<u>slang: S-Lang 2.3.1a (binary only) - DEPRECATED</u><a id='slang'></a>**<br>
+  * **[slang: S-Lang 2.3.3 (binary only)](../../docs/make/slang.md)<a id='slang'></a>**<br>
     S-Lang is a powerful interpreted language that may be embedded into an application to make the application extensible. Note: at the moment this options causes only libslang to be included in the image, i.e. S-Lang shell support is disabled.
 
   * **<u>Slurm 0.3.3 (binary only) - DEPRECATED</u><a id='slurm'></a>**<br>
