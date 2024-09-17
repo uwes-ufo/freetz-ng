@@ -49,8 +49,10 @@ Latest changes
 ### devel
 
  - Build system:
-   * binutils 2.24.x/2.25.x/2.26.x/2.31.x/2.36.x/2.43.x
-   * gcc 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0//8.4.0/9.3.0/9.4.0/13.3.0/14.2.0
+   * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1
+   * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.43.1
+   * gcc (kernel) 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/8.4.0/9.3.0/9.4.0
+   * gcc (target) 4.6.4/4.7.4/4.8.5/4.9.4/5.5.0/8.3.0/8.4.0/9.3.0/13.3.0/13.4.0/14.2.0
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.50
 
  - Host tools:
@@ -66,8 +68,11 @@ Latest changes
    * Various Fritzos 8.0 related changes
 
  - Packages:
+   * ACME.sh 3.0.8
    * Atop 2.11.0
-   * BIND 9.11.37/9.20.0
+   * BIND 9.11.37/9.20.1
+   * Curl 8.10.0
+   * Git 2.46.1
    * htpdate 2.0.0
    * mc (Midnight Commander) 4.8.31/4.8.32
    * Nano 8.2
@@ -75,6 +80,7 @@ Latest changes
    * RPCBind 1.2.7
    * RRDtool 1.2.30/1.9.0
    * S-Lang 2.3.3
+   * strace 4.9/5.0/6.11
    * SQLite 3.46.1
    * Unbound 1.21.0
 
