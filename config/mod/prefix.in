@@ -11,18 +11,18 @@ config FREETZ_TYPE_PREFIX
 	default "450E"              if FREETZ_TYPE_0450
 	default "540E"              if FREETZ_TYPE_0540
 	default "546E"              if FREETZ_TYPE_0546
-	default "1200"              if FREETZ_TYPE_1200
-	default "1200_AX"           if FREETZ_TYPE_1209
-	default "1240E"             if FREETZ_TYPE_1240
-	default "1240_AX"           if FREETZ_TYPE_1249
+	default "1200"              if FREETZ_TYPE_1200_W5
+	default "1200_AX"           if FREETZ_TYPE_1209_W6
+	default "1240E"             if FREETZ_TYPE_1240_W5
+	default "1240_AX"           if FREETZ_TYPE_1240_W6
 	default "1260E"             if FREETZ_TYPE_1260_V1
 	default "1260_v2"           if FREETZ_TYPE_1260_V2
 	default "1750E"             if FREETZ_TYPE_1750
 	default "DVB-C"             if FREETZ_TYPE_1759
 	default "2170"              if FREETZ_TYPE_2170
 	default "2400"              if FREETZ_TYPE_2400_W5
-	default "3000"              if FREETZ_TYPE_3000
-	default "3000_AX"           if FREETZ_TYPE_3009
+	default "3000"              if FREETZ_TYPE_3000_W5
+	default "3000_AX"           if FREETZ_TYPE_3009_W6
 	default "3020"              if FREETZ_TYPE_3020
 	default "3030"              if FREETZ_TYPE_3030
 	default "3130"              if FREETZ_TYPE_3130
@@ -60,8 +60,8 @@ config FREETZ_TYPE_PREFIX
 	default "6820_v2"           if FREETZ_TYPE_6820_V2
 	default "6820_v3"           if FREETZ_TYPE_6820_V3
 	default "6840"              if FREETZ_TYPE_6840
-	default "6850_4G"           if FREETZ_TYPE_6850_4G
-	default "6850_5G"           if FREETZ_TYPE_6850_5G
+	default "6850_4G"           if FREETZ_TYPE_6850_V1
+	default "6850_5G"           if FREETZ_TYPE_6850_V2
 	default "6842"              if FREETZ_TYPE_6842
 	default "6890"              if FREETZ_TYPE_6890
 	default "7050"              if FREETZ_TYPE_7050
@@ -101,8 +101,8 @@ config FREETZ_TYPE_PREFIX
 	default "7580"              if FREETZ_TYPE_7580
 	default "7581"              if FREETZ_TYPE_7581
 	default "7582"              if FREETZ_TYPE_7582
-	default "7583"              if FREETZ_TYPE_7583
-	default "7583_VDSL"         if FREETZ_TYPE_7584
+	default "7583"              if FREETZ_TYPE_7583_V1
+	default "7583_VDSL"         if FREETZ_TYPE_7583_V2
 	default "7590"              if FREETZ_TYPE_7590_W5
 	default "7590_AX"           if FREETZ_TYPE_7590_W6
 	default "7690"              if FREETZ_TYPE_7690
