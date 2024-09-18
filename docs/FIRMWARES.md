@@ -106,7 +106,7 @@ Currently supported devices and firmwares
   - 155.07.59 rev113615 {ALL} [MOVE21NL2]
   - 155.07.90 rev115550 {ALL} [Smart24 P1] (Labor)
 * __Fritz!Box 4050 (UNTESTED)__
-  - 287.07.90 rev114548 {ALL} [Smart24 P1 FCS] (Inhaus)
+  - 287.07.90 rev115691 {ALL} [Smart24 P1 FCS] (Labor)
 * __Fritz!Box 4060__
   - 261.07.30 rev95826 {ALL} [PSQ19P2NL4]
   - 261.07.59 rev113614 {ALL} [MOVE21NL2]
@@ -222,11 +222,11 @@ Currently supported devices and firmwares
 * __Fritz!Box 6850 LTE__
   - 262.07.29 rev92911 {ALL} [PSQ19P2NL4]
   - 262.07.59 rev114651 {ALL} [MOVE21NL2]
-  - 262.07.90 rev112171 {ALL} [Smart24 P1] (Inhaus)
+  - 262.07.90 rev114968 {ALL} [Smart24 P1] (Labor)
 * __Fritz!Box 6850 5G (UNTESTED)__
   - 258.07.30 rev94600 {ALL} [PSQ19P2NL4]
   - 258.07.59 rev114650 {ALL} [MOVE21NL2]
-  - 258.07.90 rev112170 {ALL} [Smart24 P1] (Inhaus)
+  - 258.07.90 rev114965 {ALL} [Smart24 P1] (Labor)
 
 * __Fritz!Box 6890 LTE__
   - 162.06.87 rev59283 {ALL}
@@ -399,14 +399,17 @@ Currently supported devices and firmwares
 * __Fritz!Box Fon WLAN 7510__
   - 271.07.30 rev94120 {ALL} [PSQ19P2NL4]
   - 271.07.59 rev113715 {ALL} [MOVE21NL2]
+  - 271.07.90 rev115664 {ALL} [Smart24 P1] (Labor)
 * __Fritz!Box Fon WLAN 7520__
   - 175.07.14 rev73182 {GER} [MESH18 NL4]
   - 175.07.29 rev92061 {ALL} [PSQ19P2NL4]
   - 175.07.59 rev113612 {ALL} [MOVE21NL2]
+  - 175.07.90 rev115667 {ALL} [Smart24 P1] (Labor)
   - Alien 7530 {GER}
 * __Fritz!Box Fon WLAN 7520 B (UNTESTED)__
   - 276.07.31 rev98652 {ALL} [PSQ19P2NL4]
   - 276.07.59 rev113613 {ALL} [MOVE21NL2]
+  - 276.07.90 rev115670 {ALL} [Smart24 P1] (Labor)
 * __Fritz!Box Fon WLAN 7530__
   - 164.07.02 rev62311 {GER}
   - 164.07.14 rev73183 {GER} [MESH18 NL4]
@@ -420,6 +423,8 @@ Currently supported devices and firmwares
   - 256.07.57 rev109901 {ALL} [MOVE21NL1]
   - 256.07.81 rev113240 {ALL} [GoFiber23NL1]
   - 256.07.90 rev114682 {ALL} [Smart24 P1] (Labor)
+* __Fritz!Box Fon WLAN 7530 AX B__
+  - 278.07.90 rev115731 {ALL} [Smart24 P1 FCS] (Inhaus)
 * __Fritz!Box Fon WLAN 7560__
   - 149.06.53 rev41227 {GER}
   - 149.06.83 rev43670 {GER}
@@ -465,7 +470,7 @@ Currently supported devices and firmwares
   - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
   - 259.07.57 rev107809 {ALL} [MOVE21NL1]
   - 259.07.81 rev113242 {ALL} [GoFiber23NL1]
-  - 259.07.90 rev114803 {ALL} [Smart24 P1] (Labor)
+  - 259.08.00 rev115746 {ALL} [Smart24 P1]
 
 ### Fritz!Box Fon WLAN (76xx)
 
