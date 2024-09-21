@@ -10,9 +10,9 @@ config FREETZ_LIB_libsqlite3
 
 if FREETZ_LIB_libsqlite3
 
-	choice
+#	choice
 
-		prompt "uwe"
+#		prompt "uwe"
 
 		config FREETZ_LIB_liblua_WITH_VERSION_ABANDON
 			bool "3.40.1"
@@ -22,7 +22,7 @@ if FREETZ_LIB_libsqlite3
 			bool "3.46.1"
 			depends on FREETZ_PACKAGE_SQLITE_VERSION_CURRENT
 
-	endchoice
+#	endchoice
 
 endif # FREETZ_LIB_libsqlite3
 
