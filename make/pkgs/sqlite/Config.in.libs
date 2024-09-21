@@ -12,6 +12,8 @@ if FREETZ_LIB_libsqlite3
 
 	choice
 
+		prompt "uwe"
+
 		config FREETZ_LIB_liblua_WITH_VERSION_ABANDON
 			bool "3.40.1"
 			depends on FREETZ_PACKAGE_SQLITE_VERSION_ABANDON
