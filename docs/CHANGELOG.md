@@ -51,6 +51,7 @@ Latest changes
  - Build system:
    * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1
    * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.43.1
+   * ca-bundle 2024-09-24
    * gcc (kernel) 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/8.4.0/9.3.0/9.4.0
    * gcc (target) 4.6.4/4.7.4/4.8.5/4.9.4/5.5.0/8.3.0/8.4.0/9.3.0/13.3.0/13.4.0/14.2.0
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.50
@@ -58,6 +59,7 @@ Latest changes
  - Host tools:
    * cmake 3.30.3
    * fakeroot 1.36
+   * meson 1.5.2
    * openssl 3.0.15
    * python 3.12.6
 
@@ -68,12 +70,14 @@ Latest changes
    * Various Fritzos 8.0 related changes
 
  - Packages:
-   * ACME.sh 3.0.8
+   * ACME.sh 3.0.9
    * Atop 2.11.0
    * BIND 9.11.37/9.20.1
+   * CA-bundle 2024-09-24
    * Curl 8.10.1
-   * Git 2.46.1
+   * Git 2.46.2
    * htpdate 2.0.0
+   * ImageMagick 7.1.1-38
    * mc (Midnight Commander) 4.8.31/4.8.32
    * Nano 8.2
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.15
@@ -89,9 +93,11 @@ Latest changes
    * expat 2.6.3
    * FreeType 2.13.3
    * glib2 2.32.4/2.81.2
+   * harfbuzz 10.0.1
    * libdeflate 1.21
    * libmaxminddb 1.11.0
    * liburcu 0.14.0
+   * libuv 1.44.2/1.49.0
    * libxml2 2.13.4
    * lz4 1.10.0
    * mbedTLS 2.7.19/2.28.9
