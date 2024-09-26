@@ -50,7 +50,7 @@ Latest changes
 
  - Build system:
    * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1
-   * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.43.1
+   * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.41/2.43.1
    * ca-bundle 2024-09-24
    * gcc (kernel) 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/8.4.0/9.3.0/9.4.0
    * gcc (target) 4.6.4/4.7.4/4.8.5/4.9.4/5.5.0/8.3.0/8.4.0/9.3.0/13.3.0/13.4.0/14.2.0
@@ -88,20 +88,23 @@ Latest changes
    * Stunnel 5.73
    * SQLite 3.40.1/3.46.1
    * Unbound 1.21.0
+   * UnRAR 6.1.7/6.2.12/7.0.9
 
  - Libraries:
    * expat 2.6.3
    * FreeType 2.13.3
    * glib2 2.32.4/2.81.2
    * harfbuzz 10.0.1
+   * libcap 2.49/2.70
+   * libcap-ng 0.8.5
    * libdeflate 1.21
    * libmaxminddb 1.11.0
+   * libnettle 3.10
    * liburcu 0.14.0
    * libuv 1.44.2/1.49.0
    * libxml2 2.13.4
    * lz4 1.10.0
    * mbedTLS 2.7.19/2.28.9
-   * libnettle 3.10
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

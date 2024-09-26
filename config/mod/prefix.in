@@ -12,7 +12,7 @@ config FREETZ_TYPE_PREFIX
 	default "540E"              if FREETZ_TYPE_0540
 	default "546E"              if FREETZ_TYPE_0546
 	default "1200"              if FREETZ_TYPE_1200_W5
-	default "1200_AX"           if FREETZ_TYPE_1209_W6
+	default "1200_AX"           if FREETZ_TYPE_1200_W6
 	default "1240E"             if FREETZ_TYPE_1240_W5
 	default "1240_AX"           if FREETZ_TYPE_1240_W6
 	default "1260E"             if FREETZ_TYPE_1260_V1
@@ -22,7 +22,7 @@ config FREETZ_TYPE_PREFIX
 	default "2170"              if FREETZ_TYPE_2170
 	default "2400"              if FREETZ_TYPE_2400_W5
 	default "3000"              if FREETZ_TYPE_3000_W5
-	default "3000_AX"           if FREETZ_TYPE_3009_W6
+	default "3000_AX"           if FREETZ_TYPE_3000_W6
 	default "3020"              if FREETZ_TYPE_3020
 	default "3030"              if FREETZ_TYPE_3030
 	default "3130"              if FREETZ_TYPE_3130
