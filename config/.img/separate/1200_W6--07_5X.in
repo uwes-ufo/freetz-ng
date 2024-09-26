@@ -1,16 +1,16 @@
-if FREETZ_TYPE_3009_W6 && FREETZ_AVM_VERSION_07_5X
+if FREETZ_TYPE_1200_W6 && FREETZ_AVM_VERSION_07_5X
 
 config FREETZ_AVM_PROP_NAME
 	string
-	default "FRITZ!Repeater 3000 AX"
+	default "FRITZ!Repeater 1200 AX"
 
 config FREETZ_AVM_PROP_MAJOR
 	string
-	default "270"
+	default "268"
 
 config FREETZ_AVM_PROP_HWREV
 	string
-	default "270"
+	default "268"
 
 config FREETZ_AVM_HAS_SIGNATURE
 	def_bool y
