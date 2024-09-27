@@ -57,14 +57,16 @@ Latest changes
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.50
 
  - Host tools:
-   * cmake 3.30.3
+   * cmake 3.30.4
    * fakeroot 1.36
    * meson 1.5.2
    * openssl 3.0.15
+   * precompiled host-tools 2024-09-27
    * python 3.12.6
 
  - AVM sources:
-   * 5690-pro 7.62 - 5.4.213
+   * 5690 pro 7.62 - 5.4.213
+   * 7590 ax  8.00 - 4.9.325
 
  - Patches:
    * Various Fritzos 8.0 related changes
@@ -87,6 +89,7 @@ Latest changes
    * strace 4.9/5.0/6.11
    * Stunnel 5.73
    * SQLite 3.40.1/3.46.1
+   * tmux 3.5
    * Unbound 1.21.0
    * UnRAR 6.1.7/6.2.12/7.0.9
 
