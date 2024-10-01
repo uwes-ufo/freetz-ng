@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 8b19510459 uwe 2024-10-01
+#  freetz-ng 3d9fac9bc2 uwe 2024-10-01
 #
 
 #
@@ -3250,6 +3250,7 @@ FREETZ_TARGET_UCLIBC_PROVIDES_SSP=y
 #
 # Host-tools options ----------------------------------
 #
+FREETZ_TOOLS_PATCHELF_VERSION_CURRENT=y
 # FREETZ_TOOLS_KCONFIG_BUTTONS is not set
 # FREETZ_ROOTEMU_FAKEROOT is not set
 FREETZ_ROOTEMU_PSEUDO=y
