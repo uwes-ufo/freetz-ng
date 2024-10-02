@@ -62,7 +62,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[lzma2eva 1.0](lzma2eva-host.md)<a id='lzma2eva-host'></a>**<br>
 
-  * **[lzma2 5.6.2](lzma2-host.md)<a id='lzma2-host'></a>**<br>
+  * **[lzma2 5.6.3](lzma2-host.md)<a id='lzma2-host'></a>**<br>
 
 ### M
 
@@ -104,7 +104,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python2 2.7.18](python2-host.md)<a id='python2-host'></a>**<br>
 
-  * **[python3 3.12.6](python3-host.md)<a id='python3-host'></a>**<br>
+  * **[python3 3.12.7](python3-host.md)<a id='python3-host'></a>**<br>
 
   * **[python3-packaging 24.1](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
 
