@@ -58,20 +58,21 @@ Latest changes
 
  - Host tools:
    * busybox 1.37.0
-   * cmake 3.30.4
+   * cmake 3.30.5
    * fakeroot 1.36
    * kconfig 6.11
    * lzma2 5.6.3
-   * meson 1.5.2
+   * meson 1.6.0
    * openssl 3.0.15
    * precompiled host-tools 2024-09-28
    * python 3.12.7
 
  - AVM sources:
    * 5690 pro 7.62 - 5.4.213
-   * 6591     8.00 - 5.15.153 (corrupt)
+   * 6591     8.00 - 5.15.153
+   * 5530     8.00 - 4.9.276
    * 7530 ax  8.00 - 4.19.183 (corrupt)
-   * 7590 ax  8.00 - 4.9.325 (corrupt)
+   * 7590 ax  8.00 - 4.9.325
 
  - Patches:
    * Various Fritzos 8.0 related changes
