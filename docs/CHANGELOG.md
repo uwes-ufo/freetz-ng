@@ -71,6 +71,7 @@ Latest changes
    * 5690 pro 7.62 - 5.4.213
    * 6591     8.00 - 5.15.153
    * 5530     8.00 - 4.9.276
+   * 7530     8.00 - 4.4.271
    * 7530 ax  8.00 - 4.19.183 (corrupt)
    * 7590 ax  8.00 - 4.9.325
 
@@ -84,9 +85,10 @@ Latest changes
    * BusyBox 1.27.2/1.37.0
    * CA-bundle 2024-09-24
    * Curl 8.10.1
-   * Git 2.46.2
+   * Dropbear 2024.86
+   * Git 2.47.0
    * htpdate 2.0.0
-   * ImageMagick 7.1.1-38
+   * ImageMagick 7.1.1-39
    * mc (Midnight Commander) 4.8.31/4.8.32
    * Nano 8.2
    * OpenSSH 9.3p2/9.9p1
@@ -97,8 +99,8 @@ Latest changes
    * strace 4.9/5.0/6.11
    * Stunnel 5.73
    * SQLite 3.40.1/3.46.1
-   * tmux 3.5
-   * Unbound 1.21.1
+   * tmux 3.5a
+   * Unbound 1.22.0
    * XZ 5.6.3
 
  - Libraries:
@@ -108,12 +110,12 @@ Latest changes
    * harfbuzz 10.0.1
    * libcap 2.49/2.70
    * libcap-ng 0.8.5
-   * libdeflate 1.21
+   * libdeflate 1.22
    * libmaxminddb 1.11.0
    * libnettle 3.10
    * libpng 1.6.44
    * liburcu 0.14.0
-   * libuv 1.44.2/1.49.0
+   * libuv 1.44.2/1.49.2
    * libxml2 2.13.4
    * lz4 1.10.0
    * mbedTLS 2.7.19/2.28.9
