@@ -68,10 +68,14 @@ Latest changes
    * python 3.12.7
 
  - AVM sources:
+   * 3000 ax  7.41 - 4.4.271
+   * 4040     8.00 - 4.4.271
    * 4050     7.58 - 4.4.271
+   * 5530     8.00 - 4.9.276
    * 5690 pro 7.62 - 5.4.213
    * 6591     8.00 - 5.15.153
-   * 5530     8.00 - 4.9.276
+   * 7510     7.30 - 4.4.60 (corrupt)
+   * 7510     8.00 - 4.4.271
    * 7530     8.00 - 4.4.271
    * 7530 ax  8.00 - 4.19.183 (corrupt)
    * 7590 ax  8.00 - 4.9.325
@@ -79,7 +83,10 @@ Latest changes
  - Patches:
    * Various Fritzos 8.0 related changes
    * New Patch: Hide unsecure settings from cockpit
-   * New Patch: Hide internet connection from cockpit
+   * New Patch: Hide internet visualisation from cockpit
+   * New Patch: Hide internet details from cockpit
+   * New Patch: Hide homenet details from cockpit
+   * New Patch: Hide update check from cockpit
 
  - Packages:
    * ACME.sh 3.0.9
