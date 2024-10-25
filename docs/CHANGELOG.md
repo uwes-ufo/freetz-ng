@@ -91,7 +91,7 @@ Latest changes
  - Packages:
    * ACME.sh 3.0.9
    * Atop 2.11.0
-   * BIND 9.11.37/9.20.2
+   * BIND 9.11.37/9.20.3
    * BusyBox 1.27.2/1.37.0
    * CA-bundle 2024-09-24
    * Curl 8.10.1
@@ -110,6 +110,7 @@ Latest changes
    * Stunnel 5.73
    * SQLite 3.40.1/3.46.1
    * tmux 3.5a
+   * Tor 0.4.8.13
    * Unbound 1.22.0
    * XZ 5.6.3
 

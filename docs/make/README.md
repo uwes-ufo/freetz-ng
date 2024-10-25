@@ -48,7 +48,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.20.2](bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.20.3](bind.md)<a id='bind'></a>**<br>
     BIND is a suite of software for interacting with the Domain Name System (DNS). The name BIND stands for "Berkeley Internet Name Daemon".
 
   * **[Bip 0.9.2 - DEPRECATED](bip.md)<a id='bip'></a>**<br>
@@ -701,7 +701,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[tmux 3.5a (binary only)](tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.8.12](tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.8.13](tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
 
   * **[Transmission 3.00/4.0.6 (binary only)](transmission.md)<a id='transmission'></a>**<br>
