@@ -100,6 +100,7 @@ Latest changes
    * htpdate 2.0.0
    * ImageMagick 7.1.1-39
    * mc (Midnight Commander) 4.8.31/4.8.32
+   * Mosquitto 2.0.20
    * Nano 8.2
    * OpenSSH 9.3p2/9.9p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.15
@@ -108,7 +109,7 @@ Latest changes
    * S-Lang 2.3.3
    * strace 4.9/5.0/6.11
    * Stunnel 5.73
-   * SQLite 3.40.1/3.46.1
+   * SQLite 3.40.1/3.47.0
    * tmux 3.5a
    * Tor 0.4.8.13
    * Unbound 1.22.0
@@ -125,7 +126,7 @@ Latest changes
    * libmaxminddb 1.11.0
    * libnettle 3.10
    * libpng 1.6.44
-   * liburcu 0.14.0
+   * liburcu 0.14.1
    * libuv 1.44.2/1.49.2
    * libxml2 2.13.4
    * lz4 1.10.0
