@@ -448,9 +448,11 @@ Currently supported devices and firmwares
   - 167.07.15 rev75887 {INT} [MESH18 NL2]
   - 167.07.31 rev95687 {ALL} [PSQ19P2NL4]
   - 167.07.59 rev113714 {ALL} [MOVE21NL2]
+  - 167.08.00 rev116672 {ALL} [Smart24 P1]
 * __Fritz!Box Fon WLAN 7583 VDSL (UNTESTED)__
   - 260.07.31 rev95688 {ALL} [PSQ19P2NL4]
   - 260.07.59 rev113700 {ALL} [MOVE21NL2]
+  - 260.08.00 rev116673 {ALL} [Smart24 P1]
 
 * __Fritz!Box Fon WLAN 7590__
   - 154.06.86 rev45533 {GER}
@@ -462,7 +464,7 @@ Currently supported devices and firmwares
   - 154.07.13 rev74390 {INT} [MESH18 NL3]
   - 154.07.29 rev92051 {ALL} [PSQ19P2NL4]
   - 154.07.59 rev113250 {ALL} [MOVE21NL2]
-  - 154.07.90 rev115685 {ALL} [Smart24 P1] (Labor)
+  - 154.08.00 rev116612 {ALL} [Smart24 P1]
 * __Fritz!Box Fon WLAN 7590 AX__
   - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
   - 259.07.57 rev107809 {ALL} [MOVE21NL1]
