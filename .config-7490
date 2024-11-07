@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 5272019bd5 uwe 2024-11-06
+#  freetz-ng 6df58be895 uwe 2024-11-07
 #
 
 #
@@ -180,6 +180,7 @@ FREETZ_TYPE_FIRMWARE_FINAL=y
 #
 #    or cause stability issues
 #
+# FREETZ_TYPE_ALIEN_HARDWARE is not set
 
 #
 # Original components --------------------------------------
