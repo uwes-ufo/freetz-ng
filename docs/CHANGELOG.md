@@ -107,7 +107,7 @@ Latest changes
    * RPCBind 1.2.7
    * RRDtool 1.2.30/1.9.0
    * S-Lang 2.3.3
-   * SQLite 3.40.1/3.47.0
+   * SQLite 3.40.1/3.47.1
    * strace 4.9/5.0/6.12
    * Stunnel 5.73
    * Subversion 1.9.12/1.14.3
@@ -121,7 +121,7 @@ Latest changes
    * FreeType 2.13.3
    * glib2 2.32.4/2.81.2
    * harfbuzz 10.1.0
-   * libcap 2.49/2.70
+   * libcap 2.49/2.72
    * libcap-ng 0.8.5
    * libdeflate 1.22
    * libmaxminddb 1.11.0
@@ -129,7 +129,7 @@ Latest changes
    * libpng 1.6.44
    * liburcu 0.14.1
    * libuv 1.44.2/1.49.2
-   * libxml2 2.13.4
+   * libxml2 2.13.5
    * lz4 1.10.0
    * mbedTLS 2.7.19/2.28.9
 
