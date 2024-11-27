@@ -114,6 +114,7 @@ Latest changes
    * tmux 3.5a
    * Tor 0.4.8.13
    * Unbound 1.22.0
+   * xsltproc 1.1.42
    * XZ 5.6.3
 
  - Libraries:
@@ -127,6 +128,7 @@ Latest changes
    * libmaxminddb 1.11.0
    * libnettle 3.10
    * libpng 1.6.44
+   * libssh2 1.11.1
    * liburcu 0.14.1
    * libuv 1.44.2/1.49.2
    * libxml2 2.13.5
