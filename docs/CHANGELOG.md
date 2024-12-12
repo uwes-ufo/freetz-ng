@@ -58,7 +58,7 @@ Latest changes
  - Host tools:
    * busybox 1.37.0
    * ca-bundle 2024-11-26
-   * cmake 3.31.1
+   * cmake 3.31.2
    * fakeroot 1.36
    * kconfig 6.12
    * lzma2 5.6.3
@@ -94,7 +94,7 @@ Latest changes
    * BIND 9.11.37/9.20.3
    * BusyBox 1.27.2/1.37.0
    * CA-bundle 2024-11-26
-   * Curl 8.11.0
+   * Curl 8.11.1
    * Dropbear 2024.86
    * Git 2.47.0
    * htpdate 2.0.0
