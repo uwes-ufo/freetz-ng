@@ -131,7 +131,7 @@ $($(PKG)_STAGING_BINARY): $($(PKG)_DIR)/.installed
 $($(PKG)_TARGET_BINARY): $($(PKG)_DIR)/.installed
 	@$(call COPY_USING_TAR,$(PYTHON_LOCAL_INSTALL_DIR),$(PYTHON_DEST_DIR),--exclude='libpython$(PYTHON_MAJOR_VERSION).so*' .) \
 	(cd $(PYTHON_DEST_DIR); \
-		echo -n > usr/lib/python$(PYTHON_MAJOR_VERSION)/config/Makefile; \
+		echo -n > usr/lib/python$(PYTHON_MAJOR_VERSION)/config-$(PYTHON_MAJOR_VERSION)/Makefile; \
 		find usr/include/python$(PYTHON_MAJOR_VERSION)/ -name "*.h" \! -name "pyconfig.h" \! -name "Python.h" -delete; \
 		$(RM) -r $(call newline2space,$(Python/development/files)); \
 	); \
