@@ -1,5 +1,5 @@
-config EXTERNAL_FREETZ_LIB_libpython3
-	depends on EXTERNAL_ENABLED && FREETZ_LIB_libpython3
+config EXTERNAL_FREETZ_LIB_libpython
+	depends on EXTERNAL_ENABLED && FREETZ_LIB_libpython
 	bool "libpython2"
 	default n
 	help
