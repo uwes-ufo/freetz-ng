@@ -1,7 +1,7 @@
 config FREETZ_PACKAGE_PYTHON_PYCRYPTO
 	bool "pycrypto 2.6.1 - DEPRECATED"
 	depends on FREETZ_PACKAGE_PYTHON
-	select FREETZ_LIB_libpython2 if !FREETZ_PACKAGE_PYTHON_STATIC
+	select FREETZ_LIB_libpython3 if !FREETZ_PACKAGE_PYTHON_STATIC
 	select FREETZ_LIB_libgmp
 	default n
 	help

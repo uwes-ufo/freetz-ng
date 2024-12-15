@@ -1,4 +1,4 @@
-config FREETZ_LIB_libpython2
+config FREETZ_LIB_libpython3
 	bool "libpython2 (libpython2.so)"
 	depends on FREETZ_PACKAGE_PYTHON && !FREETZ_PACKAGE_PYTHON_STATIC
 	select FREETZ_LIB_libdl       if FREETZ_TARGET_UCLIBC_HAS_multiple_libs
