@@ -58,6 +58,7 @@ $(PKG)_CONFIGURE_ENV += ac_cv_buggy_getaddrinfo=no
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_ptmx=no
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_ptc=no
 $(PKG)_CONFIGURE_ENV += OPT="-fno-inline"
+$(PKG)_CONFIGURE_ENV += HAVE_MEMFD_CREATE="0"
 
 $(PKG)_CONFIGURE_OPTIONS += --with-system-expat
 $(PKG)_CONFIGURE_OPTIONS += --with-system-ffi
