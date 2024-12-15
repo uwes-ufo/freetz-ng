@@ -1,4 +1,4 @@
-$(call PKG_INIT_BIN, 3.12.7)
+$(call PKG_INIT_BIN, 2.7.18)
 $(PKG)_MAJOR_VERSION:=$(call GET_MAJOR_VERSION,$($(PKG)_VERSION))
 $(PKG)_SOURCE:=Python-$($(PKG)_VERSION).tar.xz
 $(PKG)_HASH:=b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43
@@ -62,7 +62,6 @@ $(PKG)_CONFIGURE_ENV += OPT="-fno-inline"
 $(PKG)_CONFIGURE_OPTIONS += --with-system-expat
 $(PKG)_CONFIGURE_OPTIONS += --with-system-ffi
 $(PKG)_CONFIGURE_OPTIONS += --with-threads
-$(PKG)_CONFIGURE_OPTIONS += --with-build-python
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_TARGET_IPV6_SUPPORT),--enable-ipv6,--disable-ipv6)
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_PYTHON_STATIC),--disable-shared,--enable-shared)
 
@@ -131,7 +130,7 @@ $($(PKG)_STAGING_BINARY): $($(PKG)_DIR)/.installed
 $($(PKG)_TARGET_BINARY): $($(PKG)_DIR)/.installed
 	@$(call COPY_USING_TAR,$(PYTHON_LOCAL_INSTALL_DIR),$(PYTHON_DEST_DIR),--exclude='libpython$(PYTHON_MAJOR_VERSION).so*' .) \
 	(cd $(PYTHON_DEST_DIR); \
-		echo -n > usr/lib/python$(PYTHON_MAJOR_VERSION)/config-$(PYTHON_MAJOR_VERSION)/Makefile; \
+		echo -n > usr/lib/python$(PYTHON_MAJOR_VERSION)/config/Makefile; \
 		find usr/include/python$(PYTHON_MAJOR_VERSION)/ -name "*.h" \! -name "pyconfig.h" \! -name "Python.h" -delete; \
 		$(RM) -r $(call newline2space,$(Python/development/files)); \
 	); \
