@@ -1,6 +1,6 @@
 config EXTERNAL_FREETZ_LIB_libpython2
 	depends on EXTERNAL_ENABLED && FREETZ_LIB_libpython2
-	bool "libpython2"
+	bool "libpython3"
 	default n
 	help
 		externals the following file(s):
