@@ -175,19 +175,19 @@ Currently supported devices and firmwares
   - 161.07.13 rev75441 {GER} [MESH18 NL3]
   - 161.07.29 rev92035 {GER} [PSQ19P2NL4]
   - 161.07.57 rev107841 {GER} [MOVE21NL1]
-  - 161.08.00 rev116067 {GER} [Smart24 P1]
+  - 161.08.01 rev117719 {GER} [Smart24 P1 NL1]
 * __Fritz!Box 6660 Cable__
   - 252.07.15 rev78740 {GER} [6660 FCS]
   - 252.07.29 rev92037 {GER} [PSQ19P2NL4]
   - 252.07.57 rev107842 {GER} [MOVE21NL1]
-  - 252.08.00 rev116240 {GER} [Smart24 P1]
+  - 252.08.01 rev117720 {GER} [Smart24 P1 NL1]
 * __Fritz!Box 6670 Cable (UNTESTED)__
   - 284.07.63 rev113732 {GER} [FCS23]
   - 284.08.01 rev117514 {GER} [Smart24 P1 FCS]
 * __Fritz!Box 6690 Cable__
   - 267.07.29 rev92355 {GER} [PSQ19P2NL4]
   - 267.07.57 rev109915 {GER} [MOVE21NL1]
-  - 267.08.00 rev117139 {GER} [Smart24 P1]
+  - 267.08.01 rev117721 {GER} [Smart24 P1 NL1]
 
 ### Fritz!Box LTE (68xx)
 
@@ -478,7 +478,7 @@ Currently supported devices and firmwares
 
 * __FRITZ!Box 7690__
   - 285.07.62 rev115134 {ALL} [FCS23]
-  - 285.07.90 rev115840 {ALL} [Smart24 P1 FCS] (Labor)
+  - 285.08.01 rev117690 {ALL} [Smart24 P1 FCS]
 
 ### Fritz!Powerline
 

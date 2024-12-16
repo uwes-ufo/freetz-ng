@@ -99,6 +99,7 @@ Latest changes
    * Git 2.47.0
    * htpdate 2.0.0
    * ImageMagick 7.1.1-39
+   * iPerf3 3.3/3.18
    * mc (Midnight Commander) 4.8.31/4.8.32
    * Mosquitto 2.0.20
    * Nano 8.2
@@ -109,7 +110,7 @@ Latest changes
    * S-Lang 2.3.3
    * SQLite 3.40.1/3.47.1
    * strace 4.9/5.0/6.12
-   * Stunnel 5.73
+   * Stunnel 5.74
    * Subversion 1.9.12/1.14.3
    * tmux 3.5a
    * Tor 0.4.8.13
@@ -125,7 +126,7 @@ Latest changes
    * harfbuzz 10.1.0
    * libcap 2.49/2.72
    * libcap-ng 0.8.5
-   * libdeflate 1.22
+   * libdeflate 1.23
    * libmaxminddb 1.11.0
    * libnettle 3.10
    * libpng 1.6.44
