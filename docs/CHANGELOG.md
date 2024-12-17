@@ -62,7 +62,7 @@ Latest changes
    * fakeroot 1.36
    * kconfig 6.12
    * lzma2 5.6.3
-   * meson 1.6.0
+   * meson 1.6.1
    * openssl 3.0.15
    * precompiled host-tools 2024-11-08
    * python 3.12.7
@@ -72,6 +72,7 @@ Latest changes
    * 4040     8.00 - 4.4.271
    * 4050     7.58 - 4.4.271
    * 5530     8.00 - 4.9.276
+   * 5590     8.00 - 4.4.271
    * 5690 pro 7.62 - 5.4.213
    * 6591     8.00 - 5.15.153
    * 7510     7.30 - 4.4.60 (corrupt)
@@ -108,10 +109,11 @@ Latest changes
    * RPCBind 1.2.7
    * RRDtool 1.2.30/1.9.0
    * S-Lang 2.3.3
+   * Screen 4.9.1/5.0.0
    * SQLite 3.40.1/3.47.1
    * strace 4.9/5.0/6.12
    * Stunnel 5.74
-   * Subversion 1.9.12/1.14.3
+   * Subversion 1.9.12/1.14.5
    * tmux 3.5a
    * Tor 0.4.8.13
    * Unbound 1.22.0
