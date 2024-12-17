@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 39553a3ede py3 2024-12-16
+#  freetz-ng fdefa9aea9 uwe 2024-12-17
 #
 
 #
@@ -435,7 +435,7 @@ FREETZ_PACKAGE_CALLMONITOR_monitor=y
 #
 FREETZ_PACKAGE_FFMPEG=y
 FREETZ_PACKAGE_FFMPEG_ffmpeg=y
-# FREETZ_PACKAGE_FFMPEG_ffprobe is not set
+FREETZ_PACKAGE_FFMPEG_ffprobe=y
 FREETZ_PACKAGE_FFMPEG_LZMA=y
 FREETZ_PACKAGE_FFMPEG_SSL=y
 # FREETZ_PACKAGE_FFMPEG_SSL_OPENSSL is not set
@@ -782,25 +782,6 @@ FREETZ_PACKAGE_PYTHON_MOD_UNICODEDATA=y
 # FREETZ_PACKAGE_PYTHON_MOD_UNITTEST is not set
 # FREETZ_PACKAGE_PYTHON_MOD_WSGIREF is not set
 # end of Python binary modules (extensions)
-
-#
-# 3rd-party modules
-#
-# FREETZ_PACKAGE_PYTHON_BJOERN is not set
-# FREETZ_PACKAGE_PYTHON_CHEETAH is not set
-# FREETZ_PACKAGE_PYTHON_IMAGING_LIBRARY is not set
-# FREETZ_PACKAGE_PYTHON_MECHANIZE is not set
-# FREETZ_PACKAGE_PYTHON_MYSQL_CONNECTOR is not set
-# FREETZ_PACKAGE_PYTHON_PYCRYPTO is not set
-# FREETZ_PACKAGE_PYTHON_PYCURL is not set
-
-#
-# pyopenssl (not available, needs OpenSSL 1.0 or older)
-#
-# FREETZ_PACKAGE_PYTHON_PYRRD is not set
-# FREETZ_PACKAGE_PYTHON_PYSERIAL is not set
-# FREETZ_PACKAGE_PYTHON_YENC is not set
-# end of 3rd-party modules
 # end of P
 
 #
@@ -1419,7 +1400,7 @@ FREETZ_LIB_libffi=y
 FREETZ_LIB_libpopt=y
 FREETZ_LIB_libprivatekeypassword=y
 # FREETZ_LIB_libprotobuf_c is not set
-FREETZ_LIB_libpython2=y
+FREETZ_LIB_libpython3=y
 # FREETZ_LIB_librrd is not set
 # FREETZ_LIB_libslang is not set
 # FREETZ_LIB_libsynce is not set
@@ -3045,6 +3026,7 @@ EXTERNAL_OWN_FILES=""
 #
 # EXTERNAL_FREETZ_PACKAGE_CA_BUNDLE is not set
 EXTERNAL_FREETZ_PACKAGE_FFMPEG_ffmpeg=y
+EXTERNAL_FREETZ_PACKAGE_FFMPEG_ffprobe=y
 EXTERNAL_FREETZ_PACKAGE_GIT=y
 # EXTERNAL_FREETZ_PACKAGE_NANO is not set
 # EXTERNAL_FREETZ_PACKAGE_OPENSSH is not set
@@ -3087,7 +3069,7 @@ EXTERNAL_FREETZ_LIB_libogg=y
 EXTERNAL_FREETZ_LIB_libopenjpeg=y
 # EXTERNAL_FREETZ_LIB_libpcre2 is not set
 # EXTERNAL_FREETZ_LIB_libpopt is not set
-# EXTERNAL_FREETZ_LIB_libpython2 is not set
+EXTERNAL_FREETZ_LIB_libpython3=y
 EXTERNAL_FREETZ_LIB_libvorbis=y
 EXTERNAL_FREETZ_LIB_libvorbisenc=y
 EXTERNAL_FREETZ_LIB_libvorbisfile=y
