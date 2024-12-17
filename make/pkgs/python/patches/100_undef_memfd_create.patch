@@ -1,0 +1,11 @@
+--- pyconfig.h
++++ pyconfig.h
+@@ -792,7 +792,7 @@
+ #define HAVE_MBRTOWC 1
+ 
+ /* Define if you have the 'memfd_create' function. */
+-#define HAVE_MEMFD_CREATE 1
++/* #undef HAVE_MEMFD_CREATE */
+ 
+ /* Define to 1 if you have the `memrchr' function. */
+ #define HAVE_MEMRCHR 1
