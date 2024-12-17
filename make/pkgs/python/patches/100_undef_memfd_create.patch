@@ -1,11 +1,11 @@
---- pyconfig.h.in
-+++ pyconfig.h.in
-@@ -791,7 +791,7 @@
- #undef HAVE_MBRTOWC
+--- configure
++++ configure
+@@ -19216,7 +19216,7 @@
+   if test "x$ac_cv_func_memfd_create" = xyes
+ then :
  
- /* Define if you have the 'memfd_create' function. */
--#undef HAVE_MEMFD_CREATE
-+#define HAVE_MEMFD_CREATE no
+-printf "%s\n" "#define HAVE_MEMFD_CREATE 1" >>confdefs.h
++# printf "%s\n" "#define HAVE_MEMFD_CREATE 1" >>confdefs.h
  
- /* Define to 1 if you have the `memrchr' function. */
- #undef HAVE_MEMRCHR
+ fi
+ 
