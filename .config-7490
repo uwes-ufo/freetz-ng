@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 19360bafb6 uwe 2024-12-19
+#  freetz-ng 15d49e87cc uwe 2024-12-19
 #
 
 #
@@ -121,6 +121,7 @@ FREETZ_TYPE_7490=y
 # FREETZ_TYPE_7583_V2 is not set
 # FREETZ_TYPE_7590_W5 is not set
 # FREETZ_TYPE_7590_W6 is not set
+# FREETZ_TYPE_7682 is not set
 # FREETZ_TYPE_7690 is not set
 
 #
