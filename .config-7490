@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 06bc26ef0a uwe 2024-12-26
+#  freetz-ng 119ce8ea96 uwe 2024-12-27
 #
 
 #
@@ -1383,7 +1383,6 @@ FREETZ_LIB_libprivatekeypassword=y
 # FREETZ_LIB_liburcu_mb is not set
 # FREETZ_LIB_liburcu_memb is not set
 # FREETZ_LIB_liburcu_qsbr is not set
-# FREETZ_LIB_liburcu_signal is not set
 # end of liburcu
 
 # FREETZ_LIB_libuv is not set
