@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng a4bb976ec6 uwe 2024-12-27
+#  freetz-ng 01e5f8fcd9 uwe 2024-12-29
 #
 
 #
@@ -839,6 +839,7 @@ FREETZ_PACKAGE_STUNNEL=y
 # V
 #
 # FREETZ_PACKAGE_VIM is not set
+# FREETZ_PACKAGE_VLMCSD is not set
 # FREETZ_PACKAGE_VNSTAT is not set
 # FREETZ_PACKAGE_VPNC is not set
 # FREETZ_PACKAGE_VSFTPD is not set
