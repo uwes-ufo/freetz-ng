@@ -16,7 +16,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[ca-bundle 2024-11-26](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
+  * **[ca-bundle 2024-12-31](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
   * **[cmake 3.31.3](cmake-host.md)<a id='cmake-host'></a>**<br>
 
@@ -98,7 +98,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[pkgconf 2.2.0](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
 
-  * **[prelink 20130503](prelink-host.md)<a id='prelink-host'></a>**<br>
+  * **[prelink 20131005](prelink-host.md)<a id='prelink-host'></a>**<br>
 
   * **[pseudo 1.9.0 oe-core cc1f616](pseudo-host.md)<a id='pseudo-host'></a>**<br>
 
@@ -130,11 +130,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2024-11-08](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-01-02](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
-  * **[uboot 2024.07](uboot-host.md)<a id='uboot-host'></a>**<br>
+  * **[uboot 2024.10](uboot-host.md)<a id='uboot-host'></a>**<br>
 
   * **[uimg 871930d](uimg-host.md)<a id='uimg-host'></a>**<br>
 

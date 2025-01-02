@@ -57,15 +57,17 @@ Latest changes
 
  - Host tools:
    * busybox 1.37.0
-   * ca-bundle 2024-11-26
+   * ca-bundle 2024-12-31
    * cmake 3.31.3
    * fakeroot 1.36.2
    * kconfig 6.12
    * lzma2 5.6.3
    * meson 1.6.1
    * openssl 3.0.15
-   * precompiled host-tools 2024-11-08
+   * precompiled host-tools 2025-01-02
+   * prelink 20131005
    * python 3.12.8
+   * u-boot 2024.10
 
  - AVM sources:
    * 3000 ax  7.41 - 4.4.271
@@ -96,18 +98,19 @@ Latest changes
    * Atop 2.11.0
    * BIND 9.11.37/9.20.4
    * BusyBox 1.27.2/1.37.0
-   * CA-bundle 2024-11-26
+   * CA-bundle 2024-12-31
    * Curl 8.11.1
    * Dropbear 2024.86
    * Git 2.47.0
    * htpdate 2.0.0
-   * ImageMagick 7.1.1-39
+   * ImageMagick 7.1.1-43
    * iPerf3 3.3/3.18
    * mc (Midnight Commander) 4.8.31/4.8.32
    * Mosquitto 2.0.20
-   * Nano 8.2
+   * Nano 8.3
    * OpenSSH 9.3p2/9.9p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.15
+   * radvd 1.9.3/2.20
    * RPCBind 1.2.7
    * RRDtool 1.2.30/1.9.0
    * S-Lang 2.3.3
