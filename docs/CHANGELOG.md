@@ -58,13 +58,14 @@ Latest changes
  - Host tools:
    * busybox 1.37.0
    * ca-bundle 2024-12-31
+   * Ccache 4.10.2
    * cmake 3.31.3
    * fakeroot 1.36.2
    * kconfig 6.12
    * lzma2 5.6.3
    * meson 1.6.1
    * openssl 3.0.15
-   * precompiled host-tools 2025-01-02
+   * precompiled host-tools 2025-01-08
    * prelink 20131005
    * python 3.12.8
    * u-boot 2024.10
