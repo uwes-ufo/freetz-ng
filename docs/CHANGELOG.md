@@ -66,6 +66,7 @@ Latest changes
    * meson 1.6.1
    * openssl 3.0.15
    * precompiled host-tools 2025-01-08
+   * precompiled toolchains r25112
    * prelink 20131005
    * python 3.12.8
    * u-boot 2024.10
@@ -137,7 +138,7 @@ Latest changes
    * libcap-ng 0.8.5
    * libdeflate 1.23
    * libmaxminddb 1.11.0
-   * libnettle 3.10
+   * libnettle 3.10.1
    * libpng 1.6.44
    * libssh2 1.11.1
    * libtirpc 1.3.6
