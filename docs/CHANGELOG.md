@@ -65,11 +65,11 @@ Latest changes
    * lzma2 5.6.3
    * meson 1.6.1
    * openssl 3.0.15
-   * precompiled host-tools 2025-01-08
+   * precompiled host-tools 2025-01-13
    * precompiled toolchains r25112
    * prelink 20131005
    * python 3.12.8
-   * u-boot 2024.10
+   * u-boot 2025.01
 
  - AVM sources:
    * 3000 ax  7.41 - 4.4.271

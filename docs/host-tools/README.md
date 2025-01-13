@@ -130,11 +130,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2025-01-08](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-01-13](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
-  * **[uboot 2024.10](uboot-host.md)<a id='uboot-host'></a>**<br>
+  * **[uboot 2025.01](uboot-host.md)<a id='uboot-host'></a>**<br>
 
   * **[uimg 871930d](uimg-host.md)<a id='uimg-host'></a>**<br>
 
