@@ -59,7 +59,7 @@ Latest changes
    * busybox 1.37.0
    * ca-bundle 2024-12-31
    * Ccache 4.10.2
-   * cmake 3.31.3
+   * cmake 3.31.4
    * fakeroot 1.36.2
    * kconfig 6.12
    * lzma2 5.6.3
@@ -107,6 +107,7 @@ Latest changes
    * htpdate 2.0.0
    * ImageMagick 7.1.1-43
    * iPerf3 3.3/3.18
+   * Lighttpd 1.4.77
    * mc (Midnight Commander) 4.8.31/4.8.32
    * Mosquitto 2.0.20
    * Nano 8.3
@@ -133,11 +134,11 @@ Latest changes
    * expat 2.6.4
    * FreeType 2.13.3
    * glib2 2.32.4/2.81.2
-   * harfbuzz 10.1.0
+   * harfbuzz 10.2.0
    * libcap 2.49/2.73
    * libcap-ng 0.8.5
    * libdeflate 1.23
-   * libmaxminddb 1.11.0
+   * libmaxminddb-1.12.2
    * libnettle 3.10.1
    * libpng 1.6.44
    * libssh2 1.11.1
