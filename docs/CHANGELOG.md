@@ -66,7 +66,7 @@ Latest changes
    * meson 1.6.1
    * openssl 3.0.15
    * precompiled host-tools 2025-01-13
-   * precompiled toolchains r25112
+   * precompiled toolchains r25112/r25157
    * prelink 20131005
    * python 3.12.8
    * u-boot 2025.01
@@ -75,6 +75,7 @@ Latest changes
    * 3000 ax  7.41 - 4.4.271
    * 4040     8.00 - 4.4.271
    * 4050     7.58 - 4.4.271
+   * 4060     8.02 - 4.4.271
    * 5530     8.00 - 4.9.276
    * 5590     8.00 - 4.4.271
    * 5690 pro 7.62 - 5.4.213
@@ -114,6 +115,7 @@ Latest changes
    * OpenSSH 9.3p2/9.9p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.15
    * radvd 1.9.3/2.20
+   * rsync 3.4.0
    * RPCBind 1.2.7
    * RRDtool 1.2.30/1.9.0
    * S-Lang 2.3.3
