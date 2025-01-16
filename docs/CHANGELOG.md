@@ -115,7 +115,7 @@ Latest changes
    * OpenSSH 9.3p2/9.9p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.15
    * radvd 1.9.3/2.20
-   * rsync 3.4.0
+   * rsync 3.4.1
    * RPCBind 1.2.7
    * RRDtool 1.2.30/1.9.0
    * S-Lang 2.3.3
@@ -146,7 +146,7 @@ Latest changes
    * libssh2 1.11.1
    * libtirpc 1.3.6
    * liburcu 0.15.0
-   * libuv 1.44.2/1.49.2
+   * libuv 1.44.2/1.50.0
    * libxml2 2.13.5
    * lz4 1.10.0
    * mbedTLS 2.7.19/2.28.9
@@ -217,7 +217,7 @@ Latest changes
    * Nmap 4.76/5.51/7.95
    * OpenSSH 9.3p2/9.8p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
-   * OpenVPN 2.4.12/2.5.11/2.6.12
+   * OpenVPN 2.4.12/2.5.11/2.6.13
    * PCP client 1c783fb 
    * PCSC-lite 1.9.5/2.1.0
    * psl 0.21.5

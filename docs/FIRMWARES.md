@@ -468,7 +468,7 @@ Currently supported devices and firmwares
   - 154.07.13 rev74390 {INT} [MESH18 NL3]
   - 154.07.29 rev92051 {ALL} [PSQ19P2NL4]
   - 154.07.59 rev113250 {ALL} [MOVE21NL2]
-  - 154.08.00 rev116612 {ALL} [Smart24 P1]
+  - 154.08.02 rev117975 {ALL} [Smart24 P1 NL1]
 * __Fritz!Box Fon WLAN 7590 AX__
   - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
   - 259.07.57 rev107809 {ALL} [MOVE21NL1]
@@ -480,7 +480,7 @@ Currently supported devices and firmwares
   - 286.08.01 rev117722 {ALL} [Smart24 P1 FCS]
 * __FRITZ!Box 7690__
   - 285.07.62 rev115134 {ALL} [FCS23]
-  - 285.08.01 rev117690 {ALL} [Smart24 P1 FCS]
+  - 285.08.02 rev117971 {ALL} [Smart24 P1 FCS]
 
 ### Fritz!Powerline
 
