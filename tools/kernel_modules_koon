@@ -108,6 +108,7 @@ main() {
 			msdos)				koon  MSDOS_FS				 ;;
 			reiserfs)			koon  REISERFS_FS			 ;;
 			udf)				koon  UDF_FS				 ;;
+			crc_itu_t)			koon  CRC_ITU_T				 ;;
 			unionfs)			koon  UNION_FS				 ;;
 
 			autofs4)			koon  AUTOFS4_FS			 ;;
@@ -115,6 +116,8 @@ main() {
 			des_generic)			koon  CRYPTO_DES			 ;;
 			cmac)				koon  CRYPTO_CMAC			 ;;
 			ecb)				koon  CRYPTO_ECB			 ;;
+			ecc)				koon  CRYPTO_ECC			 ;;
+			ecdh_generic)			koon  CRYPTO_ECDH			 ;;
 			hmac)				koon  CRYPTO_HMAC			 ;;
 			md4)				koon  CRYPTO_MD4			 ;;
 			md5)				koon  CRYPTO_MD5			 ;;
