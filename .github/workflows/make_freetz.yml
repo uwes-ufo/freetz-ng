@@ -6,7 +6,7 @@ on:
 #   paths:
 #     - '.github/workflows/make_freetz.yml'
   schedule:
-    - cron: '00 16 * * 1'
+    - cron: '00 15 * * 6'
   workflow_dispatch:
 
 jobs:
@@ -41,6 +41,12 @@ jobs:
 #
 #     - name: locale
 #       run: locale-gen en_US.utf8 && locale-gen de_DE.UTF-8 && update-locale
+
+      - name: sleep
+        run: |
+          SLEEP="$((1 + $(od -A n -t d -N 2 /dev/urandom | tr -d ' ') % 60))"
+          echo "Sleeping $SLEEP seconds ..."
+          sleep $SLEEP
 
       - name: myips
         run: |
@@ -80,9 +86,10 @@ jobs:
           echo 'FREETZ_USER_LEVEL_DEVELOPER=y'                                                        >> .config
           echo '# FREETZ_MODULES_TEST in not set'                                                     >> .config
           echo 'FREETZ_DL_SITE_USER="https://raw.githubusercontent.com/Freetz-NG/dl-mirror/master"'   >> .config
+          echo 'FREETZ_REAL_DEVELOPER_ONLY__DLIMG="${{ secrets.ACTIONS_IMAGE }}"'                     >> .config
           echo 'FREETZ_REAL_DEVELOPER_ONLY__DLURL="${{ secrets.ACTIONS_DLTCS }}"'                     >> .config
-          echo 'FREETZ_DOWNLOAD_TOOLCHAIN=y'                                                          >> .config
-          echo 'FREETZ_HOSTTOOLS_DOWNLOAD=y'                                                          >> .config
+          echo '# FREETZ_DOWNLOAD_TOOLCHAIN is not set'                                               >> .config
+          echo '# FREETZ_HOSTTOOLS_DOWNLOAD is not set'                                               >> .config
           wget -q "${{ secrets.ACTIONS_CUSTOM }}cfg" -O cfg 2>/dev/null && mv cfg .config || rm -f cfg
           grep -q '^FREETZ_TYPE_' .config || echo 'FREETZ_TYPE_7530_W6_V1=y'                          >> .config
           grep -q '^FREETZ_TYPE_FIRMWARE_' .config || echo 'FREETZ_TYPE_FIRMWARE_08_0X_LABOR=y'       >> .config
@@ -152,19 +159,22 @@ jobs:
 #         draft: true
 
       - name: cache_clear
+        if: github.repository == 'freetz-ng/freetz-ng'
         env:
           ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         run: |
           ASSETS="$(curl -s  -H "Accept: application/vnd.github+json"  -H "Authorization: Bearer $ACTIONS_TOKEN"  -H "X-GitHub-Api-Version: 2022-11-28"  "https://api.github.com/repos/${{ github.repository }}/actions/caches")"
           ASSID="$(echo "$ASSETS" | grep -B7 "\"key\": *\"${{ env.CACHE_KEY }}\"" | sed -rn 's/ *"id": *([^,]*),*/\1/p')"
-          curl -sL -X DELETE -H "Accept: application/vnd.github+json"  -H "Authorization: Bearer $ACTIONS_TOKEN"  -H "X-GitHub-Api-Version: 2022-11-28"  "https://api.github.com/repos/${{ github.repository }}/actions/caches/$ASSID" && echo "Deleted ASSID=$ASSID ..." || true
+          curl -sL -X DELETE -H "Accept: application/vnd.github+json"  -H "Authorization: Bearer $ACTIONS_TOKEN"  -H "X-GitHub-Api-Version: 2022-11-28"  "https://api.github.com/repos/${{ github.repository }}/actions/caches/$ASSID" && echo "Deleted ASSID=${ASSID:-null} ..." || true
       - name: cache_save
         uses: actions/cache/save@v4
         if: always()
         with:
           path: |
             dl/*
-            !dl/fw/*
+            !dl/tools-*.tar.xz
+            !dl/linux-*.tar.xz
+            !dl/fw/*.zip
           key: ${{ env.CACHE_KEY }}
 
 
