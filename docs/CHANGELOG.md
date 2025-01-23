@@ -100,11 +100,13 @@ Latest changes
  - Packages:
    * ACME.sh 3.1.0
    * Atop 2.11.0
+   * AVM-rules 1.00
    * BIND 9.11.37/9.20.4
    * BusyBox 1.27.2/1.37.0
    * CA-bundle 2024-12-31
    * Curl 8.11.1
    * Dropbear 2024.86
+   * Fontconfig 2.16.0
    * Git 2.47.0
    * htpdate 2.0.0
    * ImageMagick 7.1.1-43
@@ -137,6 +139,7 @@ Latest changes
    * cairo 1.18.2
    * expat 2.6.4
    * FreeType 2.13.3
+   * fribidi 1.0.16
    * glib2 2.32.4/2.81.2
    * harfbuzz 10.2.0
    * libcap 2.49/2.73
@@ -145,7 +148,7 @@ Latest changes
    * libexif 0.6.25
    * libmaxminddb-1.12.2
    * libnettle 3.10.1
-   * libpng 1.6.44
+   * libpng 1.6.45
    * libssh2 1.11.1
    * libtirpc 1.3.6
    * liburcu 0.15.0
@@ -153,6 +156,7 @@ Latest changes
    * libxml2 2.13.5
    * lz4 1.10.0
    * mbedTLS 2.7.19/2.28.9
+   * pango 1.56.1
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

@@ -191,7 +191,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FFmpeg 5.1.4 - DEPRECATED](ffmpeg.md)<a id='ffmpeg'></a>**<br>
     FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video.
 
-  * **[Fontconfig 2.15.0 (binary only)](fontconfig.md)<a id='fontconfig'></a>**<br>
+  * **[Fontconfig 2.16.0 (binary only)](fontconfig.md)<a id='fontconfig'></a>**<br>
     Fontconfig is a library for configuring and customizing font access. This package adds /etc/fontsfonts.conf
 
   * **[fortune 1.2 - DEPRECATED](fortune.md)<a id='fortune'></a>**<br>
@@ -897,8 +897,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[AVM-portfw](avm-portfw.md)<a id='avm-portfw'></a>**<br>
     For FritzOS 6.8x - 7.57 only (up to ar7cfg_version=24). Configuration of port forwardings to the FritzBox itself by using internet_forwardrules. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
 
-  * **[AVM-rules - DEVELOPER](avm-rules.md)<a id='avm-rules'></a>**<br>
-    For FritzOS since v7.5x only. Configuration of port forwardings to the FritzBox itself by using voip_forwardrules. The packets are tagged with DiffServ/DSCP and some devices may route it different, eg Telekrom Hybrid always via dsl because Telefon ohne Kabel gibts nicht. Warning: This package changes the ar7.cfg. On syntax errors AVM will reset the whole file to default, including default password and default ip. Backup you config before!
+  * **[AVM-rules](avm-rules.md)<a id='avm-rules'></a>**<br>
+    For FritzOS since v7.5x only. Configuration of port forwardings to the FritzBox itself by using pcplisten. This avm tool can open ports for not more than 120 seconds. The steady renewal is managed by this package.
 
   * **<u>Cpmaccfg CGI</u><a id='cpmaccfg'></a>**<br>
     Configuration front-end to cpmaccfg This frontend shows the current settings of the LAN ports and gives a very simple way to set VLAN, portmode and WLAN assigment. Additional to this, you can set IP addresses for the VLAN interfaces eth0-eth3 if needed.

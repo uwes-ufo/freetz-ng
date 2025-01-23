@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        fritz: [ 0450,0540,0546,1240_W5,7490,7560,7580,7590_W5 ]
+        fritz: [ "0450","0540","0546","1240_W5","7490","7560","7580","7590_W5" ]
     runs-on: ubuntu-latest
 #   if: github.repository == 'freetz-ng/freetz-ng'
 
@@ -74,7 +74,8 @@ jobs:
       - name: config
         run: |
           truncate -s0 .config
-          for x in  ftdi_sio  usbserial                               ; do echo "FREETZ_MODULE_$x=y"  >> .config; done
+          echo 'FREETZ_MODULES_OWN="freetz"'                                                          >> .config
+          for x in  dummy loop usbserial                   ; do echo "# FREETZ_MODULE_$x is not set"  >> .config; done
           for x in  DROPBEAR                              ; do echo "# FREETZ_PACKAGE_$x is not set"  >> .config; done
           for x in  LDD                                              ; do echo "FREETZ_PACKAGE_$x=y"  >> .config; done
           for x in  COMPRESSED  UNCOMPRESSED                        ; do echo "FREETZ_SIZEINFO_$x=y"  >> .config; done
