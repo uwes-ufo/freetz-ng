@@ -18,7 +18,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ca-bundle 2024-12-31](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 3.31.4](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 3.31.5](cmake-host.md)<a id='cmake-host'></a>**<br>
 
   * **[cpio 2.15](cpio-host.md)<a id='cpio-host'></a>**<br>
 
@@ -34,7 +34,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### F
 
-  * **[fakeroot 1.36.2](fakeroot-host.md)<a id='fakeroot-host'></a>**<br>
+  * **[fakeroot 1.37](fakeroot-host.md)<a id='fakeroot-host'></a>**<br>
 
   * **[fastjar 0.98](fastjar-host.md)<a id='fastjar-host'></a>**<br>
 
@@ -62,7 +62,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[lzma2eva 1.0](lzma2eva-host.md)<a id='lzma2eva-host'></a>**<br>
 
-  * **[lzma2 5.6.3](lzma2-host.md)<a id='lzma2-host'></a>**<br>
+  * **[lzma2 5.6.4](lzma2-host.md)<a id='lzma2-host'></a>**<br>
 
 ### M
 
@@ -130,7 +130,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2025-01-13](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-01-26](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 

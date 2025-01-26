@@ -59,13 +59,13 @@ Latest changes
    * busybox 1.37.0
    * ca-bundle 2024-12-31
    * Ccache 4.10.2
-   * cmake 3.31.4
-   * fakeroot 1.36.2
+   * cmake 3.31.5
+   * fakeroot 1.37
    * kconfig 6.12
-   * lzma2 5.6.3
+   * lzma2 5.6.4
    * meson 1.6.1
    * openssl 3.0.15
-   * precompiled host-tools 2025-01-13
+   * precompiled host-tools 2025-01-26
    * precompiled toolchains r25112/r25157
    * prelink 20131005
    * python 3.12.8
@@ -98,6 +98,7 @@ Latest changes
    * New Patch: Hide update check from cockpit
 
  - Packages:
+   * Apache2 2.4.62
    * ACME.sh 3.1.0
    * Atop 2.11.0
    * AVM-rules 1.00
@@ -124,7 +125,7 @@ Latest changes
    * S-Lang 2.3.3
    * Screen 4.9.1/5.0.0
    * SQLite 3.40.1/3.47.1
-   * strace 4.9/5.0/6.12
+   * strace 4.9/5.0/6.13
    * Stunnel 5.74
    * Subversion 1.9.12/1.14.5
    * tmux 3.5a
@@ -133,7 +134,7 @@ Latest changes
    * Unbound 1.22.0
    * VLMCSD svn1113
    * xsltproc 1.1.42
-   * XZ 5.6.3
+   * XZ 5.6.4
 
  - Libraries:
    * cairo 1.18.2
