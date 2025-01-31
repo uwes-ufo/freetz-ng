@@ -63,7 +63,7 @@ Latest changes
    * fakeroot 1.37
    * kconfig 6.12
    * lzma2 5.6.4
-   * meson 1.6.1
+   * meson 1.7.0
    * openssl 3.0.15
    * precompiled host-tools 2025-01-26
    * precompiled toolchains r25112/r25157
@@ -132,6 +132,7 @@ Latest changes
    * tmux 3.5a
    * Tor 0.4.8.13
    * Tree 1.8.0/2.2.1
+   * uMurmur 0.2.20/0.3.0
    * Unbound 1.22.0
    * VLMCSD svn1113
    * xsltproc 1.1.42
