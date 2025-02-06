@@ -643,6 +643,7 @@ fi
 [ $ISFIT ]      && [ ! -x $FDTD_TOOL ]           && echo "File $FDTD_TOOL missing. Run 'make dtc-host' first."               && exit 1
 [ ! -x "$(command -v dos2unix)" ]                && echo "Tool 'dos2unix' missing. Run 'make dos2unix-host' first."          && exit 1
 [ ! -x "$(command -v telnet)" ] && [ $ISALICE ]  && echo "Tool 'telnet' missing. Run 'make busybox-host' first."             && exit 1
+[ ! -x "$(command -v ftp)" ]                     && echo "Tool 'ftp' missing. Run 'make netkit-ftp-host' first."             && exit 1
 
 prepare_image
 
@@ -791,7 +792,7 @@ if [ -n "$ISRAM$ISFIT" ]; then
 #			Fritz_Box_HW249*)	FULLSIZE=0x??000000 ;;  # 1260 V2   (??? MB)
 			Fritz_Box_HW254*)	FULLSIZE=0x08000000 ;;  # 6820 V3   (128 MB of 128 MB)
 			Fritz_Box_HW258*)	FULLSIZE=0x20000000 ;;  # 6850 5G   (512 MB)
-			Fritz_Box_HW259*)	FULLSIZE=0x0C000000 ;;  # 7590 AX   (192 MB of 512 MB)
+#			Fritz_Box_HW259*)	FULLSIZE=0x0C000000 ;;  # 7590 AX   (192 MB of 512 MB)
 #			Fritz_Box_HW260*)	FULLSIZE=0x08000000 ;;  # 7583 VDSL (??? MB of 512 MB)
 			Fritz_Box_HW262*)	FULLSIZE=0x20000000 ;;  # 6850 LTE  (512 MB)
 			Fritz_Box_HW276*)	FULLSIZE=0x10000000 ;;  # 7520 B    (256 MB)
@@ -812,8 +813,9 @@ if [ -n "$ISRAM$ISFIT" ]; then
 #			Fritz_Box_HW287*)	FULLSIZE=0x??000000 ;;  # 4050      (??? MB)
 			# defaults
 			*)
-				[ $ISRAM ] &&   FULLSIZE=0x0D000000     #           (208 MB)
-				[ $ISFIT ] &&   FULLSIZE=0x18000000     #           (384 MB)
+#				[ $ISRAM ] &&   FULLSIZE=0x0D000000     #           (208 MB)
+#				[ $ISFIT ] &&   FULLSIZE=0x18000000     #           (384 MB)
+				FULLSIZE=x
 			;;
 		esac
 	fi

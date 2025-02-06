@@ -48,7 +48,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.20.4](bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.20.5](bind.md)<a id='bind'></a>**<br>
     BIND is a suite of software for interacting with the Domain Name System (DNS). The name BIND stands for "Berkeley Internet Name Daemon".
 
   * **[Bip 0.9.2 - DEPRECATED](bip.md)<a id='bip'></a>**<br>
@@ -107,7 +107,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only) - DEPRECATED](ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 8.11.1 (binary only)](curl.md)<a id='curl'></a>**<br>
+  * **[Curl 8.12.0 (binary only)](curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2 - DEPRECATED</u><a id='curlftpfs'></a>**<br>
@@ -701,7 +701,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[tmux 3.5a (binary only)](tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.8.13](tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.8.14](tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
 
   * **[Transmission 3.00/4.0.6 (binary only)](transmission.md)<a id='transmission'></a>**<br>
@@ -735,6 +735,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[util-linux 2.27.1 (binary only) - DEPRECATED](util-linux.md)<a id='util-linux'></a>**<br>
     Provides blkid util from util-linux project
+
+  * **[uvncrepeater: UltraVNC Repeater 014 - DEPRECATED](uvncrepeater.md)<a id='uvncrepeater'></a>**<br>
+    UltraVNC Repeater has two unique functions: Mode 1: Allows for connection to multiple servers (in listen mode), using only one port. All connection data flows through the repeater, allowing connection to multiple servers through a single port forward or tunnel. Mode 2: Allows both a Viewer and Server to connect together using the repeater as a PROXY. All connection data flows through the repeater, allowing both the server and viewer to be behind firewalls or routers.
 
 ### V
 

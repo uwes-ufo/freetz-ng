@@ -65,10 +65,10 @@ Latest changes
    * lzma2 5.6.4
    * meson 1.7.0
    * openssl 3.0.15
-   * precompiled host-tools 2025-01-26
+   * precompiled host-tools 2025-02-06
    * precompiled toolchains r25112/r25157
    * prelink 20131005
-   * python 3.12.8
+   * python 3.12.9
    * u-boot 2025.01
 
  - AVM sources:
@@ -102,10 +102,10 @@ Latest changes
    * ACME.sh 3.1.0
    * Atop 2.11.0
    * AVM-rules 1.00
-   * BIND 9.11.37/9.20.4
+   * BIND 9.11.37/9.20.5
    * BusyBox 1.27.2/1.37.0
    * CA-bundle 2024-12-31
-   * Curl 8.11.1
+   * Curl 8.12.0
    * Dropbear 2024.86
    * Fontconfig 2.16.0
    * Git 2.47.0
@@ -130,8 +130,9 @@ Latest changes
    * Stunnel 5.74
    * Subversion 1.9.12/1.14.5
    * tmux 3.5a
-   * Tor 0.4.8.13
+   * Tor 0.4.8.14
    * Tree 1.8.0/2.2.1
+   * UltraVNC Repeater 014
    * uMurmur 0.2.20/0.3.0
    * Unbound 1.22.0
    * VLMCSD svn1113
@@ -160,6 +161,7 @@ Latest changes
    * lz4 1.10.0
    * mbedTLS 2.7.19/2.28.9
    * pango 1.56.1
+   * pcre2 10.45
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
