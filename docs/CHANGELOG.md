@@ -64,8 +64,8 @@ Latest changes
    * kconfig 6.13
    * lzma2 5.6.4
    * meson 1.7.0
-   * openssl 3.0.15
-   * precompiled host-tools 2025-02-06
+   * openssl 3.0.16
+   * precompiled host-tools 2025-02-13
    * precompiled toolchains r25112/r25157
    * prelink 20131005
    * python 3.12.9
@@ -105,7 +105,7 @@ Latest changes
    * BIND 9.11.37/9.20.5
    * BusyBox 1.27.2/1.37.0
    * CA-bundle 2024-12-31
-   * Curl 8.12.0
+   * Curl 8.12.1
    * Dropbear 2024.86
    * Fontconfig 2.16.0
    * Git 2.47.0
@@ -117,7 +117,7 @@ Latest changes
    * Mosquitto 2.0.20
    * Nano 8.3
    * OpenSSH 9.3p2/9.9p1
-   * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.15
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.16
    * radvd 1.9.3/2.20
    * rsync 3.4.1
    * RPCBind 1.2.7
@@ -150,6 +150,7 @@ Latest changes
    * libcap-ng 0.8.5
    * libdeflate 1.23
    * libexif 0.6.25
+   * libffi 3.4.7
    * libmaxminddb-1.12.2
    * libnettle 3.10.1
    * libpng 1.6.46
