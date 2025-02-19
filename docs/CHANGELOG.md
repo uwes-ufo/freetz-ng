@@ -65,7 +65,7 @@ Latest changes
    * lzma2 5.6.4
    * meson 1.7.0
    * openssl 3.0.16
-   * precompiled host-tools 2025-02-18
+   * precompiled host-tools 2025-02-19
    * precompiled toolchains r25112/r25157
    * prelink 20131005
    * python 3.12.9
@@ -85,7 +85,7 @@ Latest changes
    * 7510     7.30 - 4.4.60 (corrupt)
    * 7510     8.00 - 4.4.271
    * 7530     8.00 - 4.4.271
-   * 7530 ax  8.00 - 4.19.183 (corrupt)
+   * 7530 ax  8.03 - 4.19.183
    * 7590 ax  8.00 - 4.9.325
    * 7690     8.01 - 5.4.213
 
