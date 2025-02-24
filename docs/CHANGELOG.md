@@ -59,7 +59,7 @@ Latest changes
    * busybox 1.37.0
    * ca-bundle 2024-12-31
    * Ccache 4.10.2
-   * cmake 3.31.5
+   * cmake 3.31.6
    * fakeroot 1.37
    * kconfig 6.13
    * lzma2 5.6.4
@@ -110,7 +110,7 @@ Latest changes
    * Fontconfig 2.16.0
    * Git 2.47.0
    * htpdate 2.0.0
-   * ImageMagick 7.1.1-43
+   * ImageMagick 7.1.1-44
    * iPerf3 3.3/3.18
    * Lighttpd 1.4.77
    * mc (Midnight Commander) 4.8.31/4.8.32
@@ -145,7 +145,7 @@ Latest changes
    * FreeType 2.13.3
    * fribidi 1.0.16
    * glib2 2.32.4/2.81.2
-   * harfbuzz 10.2.0
+   * harfbuzz 10.3.0
    * libcap 2.49/2.73
    * libcap-ng 0.8.5
    * libdeflate 1.23
