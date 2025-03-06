@@ -70,6 +70,7 @@ Latest changes
    * prelink 20131005
    * python 3.12.9
    * u-boot 2025.01
+   * wget 1.25.0
 
  - AVM sources:
    * 3000 ax  7.41 - 4.4.271
@@ -106,7 +107,7 @@ Latest changes
    * BusyBox 1.27.2/1.37.0
    * CA-bundle 2024-12-31
    * Curl 8.12.1
-   * Dropbear 2024.86
+   * Dropbear 2025.87
    * Fontconfig 2.16.0
    * Git 2.47.0
    * htpdate 2.0.0
@@ -136,6 +137,7 @@ Latest changes
    * uMurmur 0.2.20/0.3.0
    * Unbound 1.22.0
    * VLMCSD svn1113
+   * Wget 1.25.0
    * xsltproc 1.1.42
    * XZ 5.6.4
 
