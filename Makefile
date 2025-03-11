@@ -26,7 +26,9 @@ ENVIRA_LAST_REV:=.envira.log
 ENVIRA_REV_TOOL:=tools/freetz_revision
 ENVIRA_PATH_REL:=tools/path
 ENVIRA_PATH_ABS:=$(shell realpath $(ENVIRA_PATH_REL))
+ENVIRA_SYS_LANG:=$(shell locale | sed -n 's/^LANG=//p')
 ENVIRA_MAKE_VARS:=$(ENVIRA_MARK)=y
+ENVIRA_MAKE_VARS+=SYS_LANG=$(ENVIRA_SYS_LANG)
 
 envira:
 ifneq ($(shell umask),$(ENVIRA_UMASK))
@@ -705,16 +707,15 @@ check-dot-config-uptodateness: $(CONFIG_IN_CACHE)
 	fi
 
 help:
-	@sed 's/^# /\n/;/```/d' docs/wiki/20_Advanced/make_targets.en.md
-
-hilfe:
-	@sed 's/^# /\n/;/```/d' docs/wiki/20_Advanced/make_targets.de.md
+	@lang=$$(echo $(SYS_LANG) | sed 's/[-\.].*//;s/_.*//' ) ;\
+	[ -e "docs/wiki/20_Advanced/make_targets.$${lang}.md" ] || lang="en" ;\
+	sed 's/^# /\n/;/```/d' "docs/wiki/20_Advanced/make_targets.$${lang}.md"
 
 .PHONY: all world step $(KCONFIG_TARGETS) config-flush-invalid config-cache config-cache-clean config-cache-refresh tools recover \
 	config-clean-deps-modules config-clean-deps-libs config-clean-deps-busybox config-clean-deps-terminfo config-clean-deps config-clean-deps-keep-busybox \
 	cacheclean clean dirclean distclean common-cacheclean common-clean common-dirclean common-distclean release \
 	$(TOOLS) $(TOOLS_CACHECLEAN) $(TOOLS_CLEAN) $(TOOLS_DIRCLEAN) $(TOOLS_DISTCLEAN) $(TOOLS_SOURCE) $(TOOLS_PRECOMPILED) $(TOOLS_RECOMPILE) $(TOOLS_FIXHARDCODED) $(TOOLS_AUTOFIX) \
-	clear-echo-temporary check-dot-config-uptodateness help hilfe
+	clear-echo-temporary check-dot-config-uptodateness help
 
 endif # Envira
 

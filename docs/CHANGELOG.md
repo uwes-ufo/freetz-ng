@@ -50,16 +50,36 @@ Latest changes
 ### devel
 
  - Build system:
+   * Ccache 4.11
 
  - Host tools:
+   * ca-bundle 2025-02-25
+   * dtc 1.7.2
 
  - AVM sources:
 
  - Patches:
 
  - Packages:
+   * BIND 9.11.37/9.20.6
+   * CA-bundle 2025-02-25
+   * Dante 1.4.4
+   * dtc 1.7.2
+   * Git 2.48.1
+   * htop 1.0.3/3.4.0
+   * ImageMagick 7.1.1-45
+   * iptables 1.4.11.1/1.4.21/1.6.2/1.8.11
+   * Lua 5.1.5/5.4.7
+   * mc (Midnight Commander) 4.8.31/4.8.33
+   * Minicom 2.10
+   * Mosquitto 2.0.21
+   * Privoxy 4.0.0
+   * socat 1.8.0.3
+   * tcpdump 4.1.1/4.99.4
+   * UnRAR 6.1.7/7.1.5
 
  - Libraries:
+   * libpcap 1.1.1/1.10.5
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
