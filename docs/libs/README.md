@@ -291,7 +291,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### P
 
-  * **[Pango (libpango-1.0.so) 1.56.1](pango.md)<a id='pango'></a>**<br>
+  * **[Pango (libpango-1.0.so) 1.56.2](pango.md)<a id='pango'></a>**<br>
     Pango is a library for layout and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed; however, most of the work on Pango so far has been done using the GTK widget toolkit as a test platform. Pango forms the core of text and font handling for GTK.
 
   * **[pcre: libpcre (libpcre.so) 8.45](pcre.md)<a id='pcre'></a>**<br>
@@ -300,7 +300,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pcre2: libpcre2 (libpcre2-8.so) 10.45](pcre2.md)<a id='pcre2'></a>**<br>
     A Perl Compatible Regular Expression library
 
-  * **[Pixman (libpixman-1.so) 0.43.4](pixman.md)<a id='pixman'></a>**<br>
+  * **[Pixman (libpixman-1.so) 0.44.2](pixman.md)<a id='pixman'></a>**<br>
     Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization.
 
   * **[pjproject2: libpj (libpj.so) 2.2.1](pjproject2.md)<a id='pjproject2'></a>**<br>

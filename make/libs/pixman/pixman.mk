@@ -1,7 +1,7 @@
-$(call PKG_INIT_LIB, 0.43.4)
+$(call PKG_INIT_LIB, 0.44.2)
 $(PKG)_LIB_VERSION:=$($(PKG)_VERSION)
 $(PKG)_SOURCE:=pixman-$($(PKG)_VERSION).tar.gz
-$(PKG)_HASH:=a0624db90180c7ddb79fc7a9151093dc37c646d8c38d3f232f767cf64b85a226
+$(PKG)_HASH:=6349061ce1a338ab6952b92194d1b0377472244208d47ff25bef86fc71973466
 $(PKG)_SITE:=https://www.cairographics.org/releases/
 ### WEBSITE:=http://www.pixman.org/
 ### CHANGES:=https://www.cairographics.org/releases/
