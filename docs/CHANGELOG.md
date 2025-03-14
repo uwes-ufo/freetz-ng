@@ -80,6 +80,7 @@ Latest changes
 
  - Libraries:
    * cairo 1.18.4
+   * expat 2.7.0
    * libpcap 1.1.1/1.10.5
    * libpng 1.6.47
 
