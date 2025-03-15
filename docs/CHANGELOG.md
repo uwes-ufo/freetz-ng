@@ -77,6 +77,7 @@ Latest changes
    * socat 1.8.0.3
    * tcpdump 4.1.1/4.99.4
    * UnRAR 6.1.7/7.1.5
+   * xsltproc 1.1.43
 
  - Libraries:
    * cairo 1.18.4
