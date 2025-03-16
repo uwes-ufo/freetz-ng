@@ -1,14 +1,18 @@
-name: generate_ftp
+name: postcommit_diffs
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/generate_ftp.yml'
-      - 'docs/ftp/generate.sh'
-  schedule:
-    - cron: '00 15 * * 1-5'
+      - '.github/workflows/postcommit_diffs.yml'
+      - 'make/kernel/configs/generate.sh'
+      - 'make/kernel/configs/avm/*'
+      - 'make/kernel/configs/freetz/*'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -27,7 +31,7 @@ jobs:
 #     - name: install
 #       run: |
 #         DEBIAN_FRONTEND=noninteractive apt-get -y install \
-#           git locales wget
+#           git locales
 #
 #     - name: locale
 #       run: locale-gen en_US.utf8 && locale-gen de_DE.UTF-8 && update-locale
@@ -43,7 +47,7 @@ jobs:
       - name: generate
         run: |
           export LANG=en_US.utf8
-          docs/ftp/generate.sh
+          make/kernel/configs/generate.sh
 
       - name: commit
         env:
@@ -55,7 +59,7 @@ jobs:
           git status
           git config --local user.name github-actions
           git config --local user.email github-actions@github.com
-          git diff --cached --quiet && exit 0 || git commit -m "ftp: automatic update"
+          git diff --cached --quiet && exit 0 || git commit -m "diffs: automatic update"
           git config --local credential.helper '!x() { echo "password=$GITHUB_TOKEN"; };x'
           git push origin $GITHUB_REF_NAME
 

@@ -2,7 +2,7 @@ name: generate_pages
 
 on:
   workflow_run:
-    workflows: [ generate_docs,generate_ftp,generate_osp,generate_juis,generate_juis-recache ]
+    workflows: [ generate_docs,avm_ftp,avm_osp,avm_juis,avm_juis-recache ]
     types:
       - completed
   push:
@@ -15,16 +15,14 @@ on:
       - 'docs/**/*.gif'
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 permissions:
   contents: read
   pages: write
   id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   build:

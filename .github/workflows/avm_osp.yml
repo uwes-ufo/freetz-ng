@@ -1,14 +1,18 @@
-name: generate_osp
+name: avm_osp
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/generate_osp.yml'
+      - '.github/workflows/avm_osp.yml'
       - 'docs/osp/generate.sh'
   schedule:
     - cron: '30 05 * * 1-6'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   build:

@@ -1,14 +1,18 @@
-name: generate_img
+name: postcommit_img
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/generate_img.yml'
+      - '.github/workflows/postcommit_img.yml'
       - 'config/.img/generate.sh'
       - 'config/mod/dl-firmware.in'
       - 'docs/FIRMWARES.md'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   build:

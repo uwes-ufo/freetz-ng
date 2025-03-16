@@ -1,14 +1,18 @@
-name: generate_juis
+name: avm_juis
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/generate_juis.yml'
+      - '.github/workflows/avm_juis.yml'
       - 'docs/juis/generate.sh'
   schedule:
     - cron: '30 16 * * 1-5'
   workflow_dispatch:
+
+concurrency:
+  group: avm_juis
+  cancel-in-progress: false
 
 jobs:
   build:

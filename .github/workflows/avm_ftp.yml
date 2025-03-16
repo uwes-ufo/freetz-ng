@@ -1,13 +1,18 @@
-name: generate_kos
+name: avm_ftp
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/generate_kos.yml'
-      - 'config/.kos/generate.sh'
-      - 'make/kernel/configs/avm/*'
+      - '.github/workflows/avm_ftp.yml'
+      - 'docs/ftp/generate.sh'
+  schedule:
+    - cron: '00 15 * * 1-5'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -26,7 +31,7 @@ jobs:
 #     - name: install
 #       run: |
 #         DEBIAN_FRONTEND=noninteractive apt-get -y install \
-#           git locales
+#           git locales wget
 #
 #     - name: locale
 #       run: locale-gen en_US.utf8 && locale-gen de_DE.UTF-8 && update-locale
@@ -42,7 +47,7 @@ jobs:
       - name: generate
         run: |
           export LANG=en_US.utf8
-          config/.kos/generate.sh
+          docs/ftp/generate.sh
 
       - name: commit
         env:
@@ -54,7 +59,7 @@ jobs:
           git status
           git config --local user.name github-actions
           git config --local user.email github-actions@github.com
-          git diff --cached --quiet && exit 0 || git commit -m "kos: automatic update"
+          git diff --cached --quiet && exit 0 || git commit -m "ftp: automatic update"
           git config --local credential.helper '!x() { echo "password=$GITHUB_TOKEN"; };x'
           git push origin $GITHUB_REF_NAME
 

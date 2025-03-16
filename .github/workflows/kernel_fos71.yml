@@ -1,13 +1,17 @@
-name: make_matrix71
+name: kernel_fos71
 
 on:
 # push:
 #   branches: [ master ]
 #   paths:
-#     - '.github/workflows/make_matrix71.yml'
+#     - '.github/workflows/kernel_fos71.yml'
 # schedule:
 #   - cron: '00 15 28 * *'
   workflow_dispatch:
+
+concurrency:
+  group: kernel_fos
+  cancel-in-progress: false
 
 jobs:
   build:
