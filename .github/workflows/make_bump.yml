@@ -53,7 +53,7 @@ jobs:
           "_6670        _FIRMWARE_08_0X",
          ]
     runs-on: ubuntu-latest
-    if: github.repository == 'freetz-ng/freetz-ng'
+#   if: github.repository == 'freetz-ng/freetz-ng'
 
     env:
       CACHE_KEY: "make_freetz"
@@ -130,26 +130,6 @@ jobs:
           grep -q '^FREETZ_TYPE_FIRMWARE_' .config || echo 'FREETZ_TYPE_FIRMWARE_08_0X=y'             >> .config
           echo "################################################################" && du .config && wc -l .config
 
-      - name: precompiled
-        id: precompiled
-        run: |
-          PKG="$(git log --format=%B -n1 ${{ github.sha }} | sed -nr 's/^(add|bump|test) ([^ ,]*).*/\2/p')"
-          [ -z "$PKG" ] && echo "No add, bump or test." && exit
-          PKG="$(echo "$PKG" | tr '[:lower:]' '[:upper:]')"
-          pkg="$(echo "$PKG" | tr '[:upper:]' '[:lower:]')"
-          echo "pkg=$pkg" >> $GITHUB_OUTPUT
-          TYPE=""
-          for x in pkgs libs host-tools; do [ -d make/$x/$pkg ] && TYPE=$x; done
-          [ -z "$TYPE" ] && echo -n 'Waiting ' && for x in $(seq 60); do echo -n '.' && sleep 1; done && echo ' done.' && git pull
-          for x in pkgs libs host-tools; do [ -d make/$x/$pkg ] && TYPE=$x; done
-          [ -z "$TYPE" ] && echo "No directory." && exit
-          sed "/_$pkg/d;/_$PKG/d"                                                                                                      -i .config
-          [ "$TYPE" = "pkgs" ] && echo "FREETZ_PACKAGE_$PKG=y"                                                                         >> .config
-          [ "$TYPE" = "libs" ] && echo "FREETZ_LIB_$pkg=y"                                                                             >> .config
-          [ "$TYPE" = "libs" ] && echo "FREETZ_LIB_lib$pkg=y"                                                                          >> .config
-          [ "$TYPE" = "libs" ] && for x in $(sed -n 's/\t *config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do echo "FREETZ_LIB_$x=y" >> .config; done
-          echo "################################################################" && bash -c "echo pkg=$pkg" && bash -c "echo PKG=$PKG"
-
       - name: addon
         run: |
           echo "################################################################"
@@ -162,18 +142,47 @@ jobs:
           echo "################################################################" && ls -l .signature/
 
       - name: generate
+        id: generate
         run: |
+          PKG="$(git log --format=%B -n1 ${{ github.sha }} | sed -nr 's/^(add|bump|fix|test) ([^ ,]*).*/\2/p')"
+          [ -z "$PKG" ] && echo "No add, bump, fix or test." && exit
+          PKG="$(echo "$PKG" | tr '[:lower:]' '[:upper:]')"
+          pkg="$(echo "$PKG" | tr '[:upper:]' '[:lower:]')"
+          echo "pkg=$pkg" >> $GITHUB_OUTPUT
+          TYPE=""
+          for x in pkgs libs host-tools; do [ -d make/$x/$pkg ] && TYPE=$x; done
+          [ -z "$TYPE" ] && echo -n 'Waiting ' && for x in $(seq 60); do echo -n '.' && sleep 1; done && echo ' done.' && git pull
+          for x in pkgs libs host-tools; do [ -d make/$x/$pkg ] && TYPE=$x; done
+          [ -z "$TYPE" ] && echo "No directory." && exit
+          [ "$TYPE" = "pkgs" ] && sed "/[^ ]FREETZ_PACKAGE_${PKG}[ =]/d"                                                                              -i .config
+          [ "$TYPE" = "pkgs" ] && echo     "FREETZ_PACKAGE_$PKG=y"                                                                                    >> .config
+          [ "$TYPE" = "pkgs" ] && sed "/[^ ]FREETZ_LIB_lib${pkg}[ =]/d"                                                                               -i .config
+          [ "$TYPE" = "pkgs" ] && echo     "FREETZ_LIB_lib$pkg=y"                                                                                     >> .config
+          [ "$TYPE" = "libs" ] && for x in $(sed -n 's/^[\tmenu]*config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do sed "/[^ ]FREETZ_LIB_$x[ =]/d"  -i .config; done
+          [ "$TYPE" = "libs" ] && for x in $(sed -n 's/^[\tmenu]*config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do echo     "FREETZ_LIB_$x=y"      >> .config; done
+          echo "################################################################" && bash -c "echo pkg=$pkg" && bash -c "echo PKG=$PKG"
           mkdir -p dl/ 2>/dev/null || true
           useradd freetz -s $(which bash) -d $(pwd) -M && chown freetz . -R
-          su freetz -c "umask 0022 && make olddefconfig && make tools ${{ steps.precompiled.outputs.pkg }}-precompiled ${{ steps.precompiled.outputs.pkg }}"
+          su freetz -c "umask 0022 && make olddefconfig"
+          BAD=y
+          case "$TYPE" in
+          pkgs) grep -q "^FREETZ_PACKAGE_$PKG=y" .config && BAD=n ;;
+          libs) for x in $(sed -n 's/^[\tmenu]*config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do grep -q "^FREETZ_LIB_$x=y" .config && BAD=n ; done ;;
+          host-tools) BAD=n ;;
+          esac
+          echo "bad=$BAD" >> $GITHUB_OUTPUT
+          [ "$BAD" = "y" ] && echo "Could not enable precompiled" && exit
+          [ "$BAD" = "n" ] && su freetz -c "umask 0022 && make ${pkg}-precompiled"
 
       - name: result
+        if: steps.generate.outputs.bad == 'n'
         run: |
-          pkg="$(echo ${{ steps.precompiled.outputs.pkg }} | sed 's/lib//')"
+          pkg="$(echo ${{ steps.generate.outputs.pkg }} | sed 's/lib//')"
           p="$(find packages/target-*/${pkg}-*/root/                      ! -type d 2>/dev/null || true)"
           l="$(find packages/target-*/root/usr/lib/freetz/ -name "*${pkg}*" -type f 2>/dev/null || true)"
-          [ -z "$p$l" ] && echo "No add, bump or test." && exit
-          echo "################################################################" && ls -al $p $l
+          echo "################################################################"
+          [ -z "$p$l" ] && echo "No binary output found." && exit
+          [ -n "$p$l" ] && ls -al $p $l
 
 #     - name: vars
 #       id: vars

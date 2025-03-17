@@ -601,7 +601,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[sfk: Swiss File Knife 1.9.8.2](sfk.md)<a id='sfk'></a>**<br>
     Swiss File Knife - A Command Line Tools Collection This packages provides the freeware version of SFK, see http://stahlworks.com/dev/swiss-file-knife.html for further information
 
-  * **<u>sg3_utils (binary only) - DEPRECATED</u><a id='sg3-utils'></a>**<br>
+  * **<u>sg3_utils 1.26 (binary only) - DEPRECATED</u><a id='sg3-utils'></a>**<br>
     The sg3_utils package contains utilities that send SCSI commands to devices. As well as devices on transports traditionally associated with SCSI (e.g. Fibre Channel (FCP), Serial Attached SCSI (SAS) and the SCSI Parallel Interface(SPI)) many other devices use SCSI command sets. ATAPI cd/dvd drives and SATA disks that connect via a translation layer or a bridge device are examples of devices that use SCSI command sets. This package is primarly used by the spindown cgi package. Note also that currently only sg_start is built and used, other tools may follow as needed.
 
   * **[shellinabox 2.21](shellinabox.md)<a id='shellinabox'></a>**<br>

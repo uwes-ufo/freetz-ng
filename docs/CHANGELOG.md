@@ -82,6 +82,7 @@ Latest changes
  - Libraries:
    * cairo 1.18.4
    * expat 2.7.0
+   * libcap 2.49/2.75
    * libpcap 1.1.1/1.10.5
    * libpng 1.6.47
    * pango 1.56.2
@@ -3473,6 +3474,4 @@ See svn log for more details.
 
 Latest change of this file: $Id$
 ```
-
-
 
