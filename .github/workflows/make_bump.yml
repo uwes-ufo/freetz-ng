@@ -5,6 +5,8 @@ on:
     branches: [ master ]
     paths:
       - 'docs/CHANGELOG.md'
+      - 'make/pkgs/'
+      - 'make/libs/'
 # workflow_dispatch:
 
 concurrency:
@@ -150,9 +152,9 @@ jobs:
           pkg="$(echo "$PKG" | tr '[:upper:]' '[:lower:]')"
           echo "pkg=$pkg" >> $GITHUB_OUTPUT
           TYPE=""
-          for x in pkgs libs host-tools; do [ -d make/$x/$pkg ] && TYPE=$x; done
+          for x in pkgs libs; do [ -d make/$x/$pkg ] && TYPE=$x; done
           [ -z "$TYPE" ] && echo -n 'Waiting ' && for x in $(seq 60); do echo -n '.' && sleep 1; done && echo ' done.' && git pull
-          for x in pkgs libs host-tools; do [ -d make/$x/$pkg ] && TYPE=$x; done
+          for x in pkgs libs; do [ -d make/$x/$pkg ] && TYPE=$x; done
           [ -z "$TYPE" ] && echo "No directory." && exit
           [ "$TYPE" = "pkgs" ] && sed "/[^ ]FREETZ_PACKAGE_${PKG}[ =]/d"                                                                              -i .config
           [ "$TYPE" = "pkgs" ] && echo     "FREETZ_PACKAGE_$PKG=y"                                                                                    >> .config
@@ -165,11 +167,8 @@ jobs:
           useradd freetz -s $(which bash) -d $(pwd) -M && chown freetz . -R
           su freetz -c "umask 0022 && make olddefconfig"
           BAD=y
-          case "$TYPE" in
-          pkgs) grep -q "^FREETZ_PACKAGE_$PKG=y" .config && BAD=n ;;
-          libs) for x in $(sed -n 's/^[\tmenu]*config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do grep -q "^FREETZ_LIB_$x=y" .config && BAD=n ; done ;;
-          host-tools) BAD=n ;;
-          esac
+          [ "$TYPE" = "pkgs" ] && grep -q "^FREETZ_PACKAGE_$PKG=y" .config && BAD=n
+          [ "$TYPE" = "libs" ] && for x in $(sed -n 's/^[\tmenu]*config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do grep -q "^FREETZ_LIB_$x=y" .config && BAD=n ; done
           echo "bad=$BAD" >> $GITHUB_OUTPUT
           [ "$BAD" = "y" ] && echo "Could not enable precompiled" && exit
           [ "$BAD" = "n" ] && su freetz -c "umask 0022 && make ${pkg}-precompiled"
