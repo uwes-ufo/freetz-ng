@@ -25,14 +25,12 @@ $(PKG)_CONFIGURE_OPTIONS += -D tests=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D libpng=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D openmp=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D gnuplot=false
-$(PKG)_CONFIGURE_OPTIONS += -D iwmmxt2=false
 $(PKG)_CONFIGURE_OPTIONS += -D timers=false
 $(PKG)_CONFIGURE_OPTIONS += -D mmx=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D sse2=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D ssse3=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D mips-dspr2=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D arm-simd=disabled
-$(PKG)_CONFIGURE_OPTIONS += -D iwmmxt=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D neon=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D a64-neon=disabled
 

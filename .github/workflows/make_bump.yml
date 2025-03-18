@@ -5,8 +5,8 @@ on:
     branches: [ master ]
     paths:
       - 'docs/CHANGELOG.md'
-      - 'make/pkgs/'
-      - 'make/libs/'
+      - 'make/pkgs/**'
+      - 'make/libs/**'
   workflow_dispatch:
     inputs:
       bump:
@@ -143,11 +143,11 @@ jobs:
           echo "################################################################"
           wget -q "${{ secrets.ACTIONS_CUSTOM }}add" -O - 2>/dev/null | tar xj 2>/dev/null && echo Done || echo Null
 
-      - name: signature
-        run: |
-          mkdir -p .signature/ 2>/dev/null || true
-          for x in prv pub; do wget -q "${{ secrets.ACTIONS_CUSTOM }}$x" -O .signature/$x >/dev/null 2>&1 || rm -f .signature/$x; done
-          echo "################################################################" && ls -l .signature/
+#     - name: signature
+#       run: |
+#         mkdir -p .signature/ 2>/dev/null || true
+#         for x in prv pub; do wget -q "${{ secrets.ACTIONS_CUSTOM }}$x" -O .signature/$x >/dev/null 2>&1 || rm -f .signature/$x; done
+#         echo "################################################################" && ls -l .signature/
 
       - name: generate
         id: generate
