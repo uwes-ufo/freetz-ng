@@ -83,6 +83,7 @@ Latest changes
  - Libraries:
    * cairo 1.18.4
    * expat 2.7.0
+   * gettext 0.24
    * libcap 2.49/2.75
    * libpcap 1.1.1/1.10.5
    * libpng 1.6.47
