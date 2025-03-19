@@ -25,7 +25,7 @@ jobs:
 #     image: freetzng/firmware
       image: ghcr.io/freetz-ng/firmware
     strategy:
-      max-parallel: 10
+      max-parallel: 15
       fail-fast: false
       matrix:
         fritz: [ 

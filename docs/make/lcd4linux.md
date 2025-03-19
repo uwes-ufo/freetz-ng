@@ -1,4 +1,4 @@
-# LCD4linux 3fce054e
+# LCD4linux eadf4603
  - Manpage: [https://wiki.vuplus-support.org/index.php?title=LCD4Linux](https://wiki.vuplus-support.org/index.php?title=LCD4Linux)
  - Changelog: [https://github.com/TangoCash/lcd4linux/commits/master/](https://github.com/TangoCash/lcd4linux/commits/master/)
  - Repository: [https://github.com/TangoCash/lcd4linux](https://github.com/TangoCash/lcd4linux)

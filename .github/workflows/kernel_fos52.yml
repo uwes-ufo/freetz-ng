@@ -20,6 +20,7 @@ jobs:
 #     image: freetzng/firmware
       image: ghcr.io/freetz-ng/firmware
     strategy:
+      max-parallel: 15
       fail-fast: false
       matrix:
         fritz: [ "7270_V2","7340","7390" ]

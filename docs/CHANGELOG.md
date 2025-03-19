@@ -50,7 +50,7 @@ Latest changes
 ### devel
 
  - Build system:
-   * Ccache 4.11
+   * Ccache 4.11.1
 
  - Host tools:
    * ca-bundle 2025-02-25
@@ -68,8 +68,9 @@ Latest changes
    * dtc 1.7.2
    * Git 2.49.0
    * htop 1.0.3/3.4.0
-   * ImageMagick 7.1.1-45
+   * ImageMagick 7.1.0-62/7.1.1-46
    * iptables 1.4.11.1/1.4.21/1.6.2/1.8.11
+   * LCD4linux eadf4603
    * Lua 5.1.5/5.4.7
    * mc (Midnight Commander) 4.8.31/4.8.33
    * Minicom 2.10
@@ -86,6 +87,7 @@ Latest changes
    * gettext 0.24
    * libcap 2.49/2.75
    * libpcap 1.1.1/1.10.5
+   * libusb1 1.0.23/1.0.28
    * libpng 1.6.47
    * pango 1.56.3
    * pixman 0.44.2

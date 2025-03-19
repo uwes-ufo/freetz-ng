@@ -22,6 +22,7 @@ jobs:
       image: ghcr.io/freetz-ng/dl-packs
     strategy:
       fail-fast: false
+      max-parallel: 15
       matrix:
         fritz: [ 
           "_WLAN        _FIRMWARE_04_XX",
