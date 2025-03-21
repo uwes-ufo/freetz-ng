@@ -62,7 +62,7 @@ $($(PKG)_TRUST_ANCHORS): $($(PKG)_DIR)/.unpacked
 	@touch -c $@
 
 $($(PKG)_TARGET_TRUST_ANCHORS): $($(PKG)_TRUST_ANCHORS)
-	@mkdir -p $(dir $@); cat $< | grep "^trust-anchor" > $@
+	@mkdir -p $(dir $@); grep "^trust-anchor" $< > $@
 
 $(pkg):
 
