@@ -50,12 +50,13 @@ Latest changes
 ### devel
 
  - Build system:
-   * Ccache 4.11.1
+   * Ccache 4.11.2
 
  - Host tools:
    * ca-bundle 2025-02-25
    * dtc 1.7.2
    * fakeroot 1.37.1
+   * ncftp 3.2.8
 
  - AVM sources:
 
@@ -76,6 +77,7 @@ Latest changes
    * mc (Midnight Commander) 4.8.31/4.8.33
    * Minicom 2.10
    * Mosquitto 2.0.21
+   * NcFTP 3.2.8
    * Privoxy 4.0.0
    * socat 1.8.0.3
    * tcpdump 4.1.1/4.99.4

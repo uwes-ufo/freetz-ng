@@ -1,7 +1,7 @@
-# NcFTP 3.2.7 (binaries only)
+# NcFTP 3.2.8 (binaries only)
  - Homepage: [https://www.ncftp.com/ncftp/](https://www.ncftp.com/ncftp/)
  - Manpage: [https://www.ncftp.com/ncftp/doc/faq.html](https://www.ncftp.com/ncftp/doc/faq.html)
- - Changelog: [https://www.ncftp.com/ncftp/doc/changelog.html](https://www.ncftp.com/ncftp/doc/changelog.html)
+ - Changelog: [https://www.ncftp.com/download/](https://www.ncftp.com/download/)
  - Package: [master/make/pkgs/ncftp/](https://github.com/Freetz-NG/freetz-ng/tree/master/make/pkgs/ncftp/)
  - Maintainer: [@fda77](https://github.com/fda77)
 
