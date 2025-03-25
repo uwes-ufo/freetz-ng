@@ -64,7 +64,7 @@ Latest changes
  - Patches:
 
  - Packages:
-   * BIND 9.11.37/9.20.6
+   * BIND 9.11.37/9.20.7
    * CA-bundle 2025-02-25
    * Dante 1.4.4
    * Dnsmasq 2.80/2.91
@@ -74,6 +74,7 @@ Latest changes
    * ImageMagick 7.1.0-62/7.1.1-46
    * iptables 1.4.11.1/1.4.21/1.6.2/1.8.11
    * LCD4linux eadf4603
+   * Lighttpd 1.4.78
    * Lua 5.1.5/5.4.7
    * mc (Midnight Commander) 4.8.31/4.8.33
    * Minicom 2.10
@@ -81,8 +82,9 @@ Latest changes
    * NcFTP 3.2.8
    * Privoxy 4.0.0
    * socat 1.8.0.3
+   * strace 4.9/5.0/6.14
    * tcpdump 4.1.1/4.99.4
-   * Tor 0.4.8.15
+   * Tor 0.4.8.16
    * UnRAR 6.1.7/7.1.6
    * xsltproc 1.1.43
 
@@ -90,6 +92,7 @@ Latest changes
    * cairo 1.18.4
    * expat 2.7.0
    * gettext 0.24
+   * harfbuzz 11.0.0
    * libcap 2.49/2.75
    * libpcap 1.1.1/1.10.5
    * libusb1 1.0.23/1.0.28
