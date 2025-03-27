@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 8ac66d1110 uwe 2025-03-26
+#  freetz-ng 6a0f7eef71 uwe 2025-03-27
 #
 
 #
@@ -65,6 +65,7 @@ FREETZ_SERIES_3=y
 # FREETZ_TYPE_5491 is not set
 # FREETZ_TYPE_5530 is not set
 # FREETZ_TYPE_5590 is not set
+# FREETZ_TYPE_5690_NIX is not set
 # FREETZ_TYPE_5690_PRO is not set
 
 #
