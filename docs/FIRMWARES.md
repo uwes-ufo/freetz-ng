@@ -154,6 +154,8 @@ Currently supported devices and firmwares
   - 272.07.30 rev101793 {ALL} [PSQ19P2NL4]
   - 272.07.58 rev109907 {ALL} [MOVE21NL1]
   - 272.08.02 rev117989 {ALL} [Smart24 P1 NL1]
+* __FRITZ!Box 5690 (UNTESTED)__
+  - 298.08.04 rev119423 {ALL} [Smart24 P1 FCS]
 * __FRITZ!Box 5690 Pro__
   - 279.07.62 rev115017 {ALL} [FCS23]
   - 279.08.03 rev118508 {ALL} [Smart24 P1 FCS]
@@ -475,7 +477,7 @@ Currently supported devices and firmwares
   - 154.07.13 rev74390 {INT} [MESH18 NL3]
   - 154.07.29 rev92051 {ALL} [PSQ19P2NL4]
   - 154.07.59 rev113250 {ALL} [MOVE21NL2]
-  - 154.08.02 rev117975 {ALL} [Smart24 P1 NL1]
+  - 154.08.03 rev119633 {ALL} [Smart24 P1 NL1]
 * __Fritz!Box Fon WLAN 7590 AX__
   - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
   - 259.07.57 rev107809 {ALL} [MOVE21NL1]
