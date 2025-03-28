@@ -60,6 +60,7 @@ Latest changes
    * ncftp 3.2.8
 
  - AVM sources:
+   * 3000 ax  8.02 - 4.4.271
 
  - Patches:
 
