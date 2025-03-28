@@ -468,6 +468,7 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
    - [source-files-FRITZ.Box_7590-grx5-07.59.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7590/source-files-FRITZ.Box_7590-grx5-07.59.tar.gz)
    - [source-files-FRITZ.Box_7590-grx5-08.00.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7590/source-files-FRITZ.Box_7590-grx5-08.00.tar.gz)
    - [source-files-FRITZ.Box_7590-grx5-08.02.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7590/source-files-FRITZ.Box_7590-grx5-08.02.tar.gz)
+   - [source-files-FRITZ.Box_7590-grx5-08.03.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7590/source-files-FRITZ.Box_7590-grx5-08.03.tar.gz)
  * fritzbox-7590-ax/
    - [source-files-FRITZ.Box_7590_AX-grx5-07.50.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7590-ax/source-files-FRITZ.Box_7590_AX-grx5-07.50.tar.gz)
    - [source-files-FRITZ.Box_7590_AX-grx5-07.56.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7590-ax/source-files-FRITZ.Box_7590_AX-grx5-07.56.tar.gz)
@@ -502,6 +503,8 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
    - [source-files-FRITZ.Powerline_540E-wasp-07.14.tar.gz](https://osp.avm.de/fritzpowerline/fritzpowerline-540e/source-files-FRITZ.Powerline_540E-wasp-07.14.tar.gz)
 
 ### FritzWlan
+ * fritzmesh-set-4200/
+   - [source-files-FRITZ.Repeater_3000_AX-08.02.tar.gz](https://osp.avm.de/fritzwlan/fritzmesh-set-4200/source-files-FRITZ.Repeater_3000_AX-08.02.tar.gz)
  * fritzrepeater-1200/
    - [source-files-FRITZ.Repeater_1200-07.58.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-1200/source-files-FRITZ.Repeater_1200-07.58.tar.gz)
  * fritzrepeater-1200-ax/
