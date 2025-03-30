@@ -91,7 +91,7 @@ Latest changes
 
  - Libraries:
    * cairo 1.18.4
-   * expat 2.7.0
+   * expat 2.7.1
    * gettext 0.24
    * harfbuzz 11.0.0
    * libcap 2.49/2.75
