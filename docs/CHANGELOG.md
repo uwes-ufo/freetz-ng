@@ -57,7 +57,7 @@ Latest changes
    * dtc 1.7.2
    * fakeroot 1.37.1
    * kconfig 6.14
-   * meson 1.7.1
+   * meson 1.7.2
    * ncftp 3.2.8
 
  - AVM sources:
@@ -76,7 +76,7 @@ Latest changes
    * ImageMagick 7.1.0-62/7.1.1-46
    * iptables 1.4.11.1/1.4.21/1.6.2/1.8.11
    * LCD4linux eadf4603
-   * Lighttpd 1.4.78
+   * Lighttpd 1.4.79
    * Lua 5.1.5/5.4.7
    * mc (Midnight Commander) 4.8.31/4.8.33
    * Minicom 2.10
@@ -95,7 +95,7 @@ Latest changes
    * cairo 1.18.4
    * expat 2.7.1
    * gettext 0.24
-   * harfbuzz 11.0.0
+   * harfbuzz 11.0.1
    * libcap 2.49/2.75
    * libpcap 1.1.1/1.10.5
    * libusb1 1.0.23/1.0.28
