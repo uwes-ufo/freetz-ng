@@ -57,6 +57,7 @@ Latest changes
    * dtc 1.7.2
    * fakeroot 1.37.1
    * kconfig 6.14
+   * meson 1.7.1
    * ncftp 3.2.8
 
  - AVM sources:
@@ -81,6 +82,7 @@ Latest changes
    * Minicom 2.10
    * Mosquitto 2.0.21
    * NcFTP 3.2.8
+   * OpenVPN 2.4.12/2.5.11/2.6.14
    * Privoxy 4.0.0
    * socat 1.8.0.3
    * strace 4.9/5.0/6.14
