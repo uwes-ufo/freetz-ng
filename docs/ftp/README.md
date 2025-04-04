@@ -179,7 +179,7 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
 
 ### FritzDect
  * fritzsmart-gateway/
-   - deutschland: [FRITZ.Smart_Gateway-08.01-Release.image](https://download.avm.de/fritzdect/fritzsmart-gateway/deutschland/fritz.os/FRITZ.Smart_Gateway-08.01-Release.image)
+   - deutschland: [FRITZ.Smart_Gateway-08.02-Release.image](https://download.avm.de/fritzdect/fritzsmart-gateway/deutschland/fritz.os/FRITZ.Smart_Gateway-08.02-Release.image)
 
 ### FritzPowerline
  * fritzpowerline-1000e/
