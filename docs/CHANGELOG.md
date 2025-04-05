@@ -58,7 +58,7 @@ Latest changes
    * fakeroot 1.37.1
    * kconfig 6.14
    * meson 1.7.2
-   * ncftp 3.2.8
+   * ncftp 3.2.9
 
  - AVM sources:
    * 3000 ax  8.02 - 4.4.271
@@ -81,7 +81,7 @@ Latest changes
    * mc (Midnight Commander) 4.8.31/4.8.33
    * Minicom 2.10
    * Mosquitto 2.0.21
-   * NcFTP 3.2.8
+   * NcFTP 3.2.9
    * OpenVPN 2.4.12/2.5.11/2.6.14
    * Privoxy 4.0.0
    * socat 1.8.0.3

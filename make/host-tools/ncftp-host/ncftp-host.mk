@@ -1,6 +1,6 @@
-$(call TOOLS_INIT, 3.2.8)
+$(call TOOLS_INIT, 3.2.9)
 $(PKG)_SOURCE:=ncftp-$($(PKG)_VERSION)-src.tar.gz
-$(PKG)_HASH:=db7da662458a1643209d6869465c38ec811f8975a6ac54fd20c63a3349f7dbf4
+$(PKG)_HASH:=1d79348dd78e148f6a2491c9dab37d554d5fbce3a3b2bc2edd71b06d54ef97c1
 $(PKG)_SITE:=https://www.ncftp.com/downloads/ncftp,https://www.ncftp.com/public_ftp/ncftp/older_versions,https://www.ncftp.com/public_ftp/ncftp
 ### WEBSITE:=https://www.ncftp.com/ncftp/
 ### MANPAGE:=https://www.ncftp.com/ncftp/doc/faq.html
