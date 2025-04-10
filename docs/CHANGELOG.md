@@ -59,6 +59,7 @@ Latest changes
    * kconfig 6.14
    * meson 1.7.2
    * ncftp 3.2.9
+   * python 3.12.10
 
  - AVM sources:
    * 3000 ax  8.02 - 4.4.271
@@ -81,6 +82,7 @@ Latest changes
    * mc (Midnight Commander) 4.8.31/4.8.33
    * Minicom 2.10
    * Mosquitto 2.0.21
+   * Nano 8.4
    * NcFTP 3.2.9
    * OpenVPN 2.4.12/2.5.11/2.6.14
    * Privoxy 4.0.0
@@ -97,6 +99,7 @@ Latest changes
    * gettext 0.24
    * harfbuzz 11.0.1
    * libcap 2.49/2.75
+   * libffi 3.4.8
    * libpcap 1.1.1/1.10.5
    * libusb1 1.0.23/1.0.28
    * libpng 1.6.47

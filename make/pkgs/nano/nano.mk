@@ -1,6 +1,6 @@
-$(call PKG_INIT_BIN, 8.3)
+$(call PKG_INIT_BIN, 8.4)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=551b717b2e28f7e90f749323686a1b5bbbd84cfa1390604d854a3ca3778f111e
+$(PKG)_HASH:=5ad29222bbd55624d87ea677928b3106a743114d6c6f9b41f36c97be2a8e628d
 $(PKG)_SITE:=https://www.nano-editor.org/dist/v8
 ### WEBSITE:=https://www.nano-editor.org/
 ### MANPAGE:=https://www.nano-editor.org/docs.php
@@ -49,6 +49,8 @@ $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_NANO_MULTIBUFFER),--enable-mul
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_NANO_COLOR_SYNTAX),--enable-color,--disable-color)
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_NANO_NANORC),--enable-nanorc,--disable-nanorc)
 
+$(PKG)_CONFIGURE_ENV += ac_cv_func_strcasecmp=no
+$(PKG)_CONFIGURE_ENV += ac_cv_func_strncasecmp=no
 $(PKG)_CONFIGURE_ENV += ac_cv_header_libintl_h=no
 
 $(PKG)_SYNTAX_FILES_LIST:=
