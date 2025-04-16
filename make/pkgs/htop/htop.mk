@@ -13,6 +13,9 @@ $(PKG)_SITE:=https://github.com/htop-dev/htop/releases/download/$($(PKG)_VERSION
 $(PKG)_BINARY:=$($(PKG)_DIR)/htop
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/htop
 
+ifeq ($(FREETZ_PACKAGE_HTOP_VERSION_ABANDON),y)
+$(PKG)_DEPENDS_ON += python2-host
+endif
 $(PKG)_DEPENDS_ON += ncurses
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_HTOP_VERSION_ABANDON
