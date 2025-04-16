@@ -73,7 +73,7 @@ Latest changes
    * Dnsmasq 2.80/2.91
    * dtc 1.7.2
    * Git 2.49.0
-   * htop 1.0.3/3.4.0
+   * htop 1.0.3/3.4.1
    * ImageMagick 7.1.0-62/7.1.1-46
    * iptables 1.4.11.1/1.4.21/1.6.2/1.8.11
    * LCD4linux eadf4603
@@ -84,12 +84,14 @@ Latest changes
    * Mosquitto 2.0.21
    * Nano 8.4
    * NcFTP 3.2.9
+   * OpenSSH 9.3p2/10.0p1
    * OpenVPN 2.4.12/2.5.11/2.6.14
    * Privoxy 4.0.0
    * socat 1.8.0.3
    * strace 4.9/5.0/6.14
    * tcpdump 4.1.1/4.99.4
    * Tor 0.4.8.16
+   * uMurmur 0.2.20/0.3.1
    * UnRAR 6.1.7/7.1.6
    * xsltproc 1.1.43
 
@@ -97,7 +99,7 @@ Latest changes
    * cairo 1.18.4
    * expat 2.7.1
    * gettext 0.24
-   * harfbuzz 11.0.1
+   * harfbuzz 11.1.0
    * libcap 2.49/2.75
    * libffi 3.4.8
    * libpcap 1.1.1/1.10.5
@@ -123,7 +125,7 @@ Latest changes
    * busybox 1.37.0
    * ca-bundle 2024-12-31
    * Ccache 4.10.2
-   * cmake 3.31.6
+   * cmake 3.31.7
    * fakeroot 1.37
    * kconfig 6.13
    * lzma2 5.6.4

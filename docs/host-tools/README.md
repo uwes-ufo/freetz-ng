@@ -18,7 +18,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ca-bundle 2025-02-25](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 3.31.6](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 3.31.7](cmake-host.md)<a id='cmake-host'></a>**<br>
 
   * **[cpio 2.15](cpio-host.md)<a id='cpio-host'></a>**<br>
 

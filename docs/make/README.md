@@ -258,7 +258,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>html2text 1.3.2a (binary only) - DEPRECATED</u><a id='html2text'></a>**<br>
     html2text is a command line utility, written in C++, that converts HTML documents into plain text.
 
-  * **[htop 1.0.3/3.4.0 (binary only)](htop.md)<a id='htop'></a>**<br>
+  * **[htop 1.0.3/3.4.1 (binary only)](htop.md)<a id='htop'></a>**<br>
     htop is a more powerful alternative to top, using ncurses.
 
   * **[htpdate 2.0.0](htpdate.md)<a id='htpdate'></a>**<br>
@@ -460,7 +460,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Openntpd 3.9p1 - DEPRECATED](openntpd.md)<a id='openntpd'></a>**<br>
     OpenNTPD is a FREE, easy to use implementation of the Network Time Protocol. This package automatically removes AVM'S chronyd if necessary.
 
-  * **[OpenSSH 9.3p2/9.9p2](openssh.md)<a id='openssh'></a>**<br>
+  * **[OpenSSH 9.3p2/10.0p1](openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.16 (binary only)](openssl.md)<a id='openssl'></a>**<br>
@@ -721,7 +721,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>udpxy 1.0.23-9 (binary only) - DEPRECATED</u><a id='udpxy'></a>**<br>
     Small-footprint UNIX/Linux daemon to relay multicast UDP traffic to client's TCP (HTTP) connection.
 
-  * **[uMurmur 0.2.20/0.3.0](umurmur.md)<a id='umurmur'></a>**<br>
+  * **[uMurmur 0.2.20/0.3.1](umurmur.md)<a id='umurmur'></a>**<br>
     umurmur is a minimalistic Mumble server primarily targeted to run on routers using less resources. It targets to fill the needs of a pretty small group of users communicating, which in part originates from the other goal of working well on a small system with a limited CPU and limited amount of disk space. It also aims to minimize writing to the disk since these kinds of systems usually only has a flash memory for disk. umurmur supports a subset of the features of Murmur. https://github.com/umurmur/umurmur
 
   * **[Unbound 1.22.0](unbound.md)<a id='unbound'></a>**<br>
