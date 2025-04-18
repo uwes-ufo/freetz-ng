@@ -49,6 +49,7 @@ sudo dnf -y update && sudo systemctl daemon-reload
 ```
 
  - Fedora 42 64-Bit:
+   NOT recommended currently !!!
 ```
 sudo dnf -y install %%Fedora42%%
 ```
