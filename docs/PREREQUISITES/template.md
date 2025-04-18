@@ -97,6 +97,11 @@ sudo apt -y upgrade
 sudo apt -y dist-upgrade
 ```
 
+ - Debian 13 64-Bit:
+```
+sudo apt -y install %%Debian13%%
+```
+
  - Debian 12 64-Bit:
 ```
 sudo apt -y install %%Debian12%%
