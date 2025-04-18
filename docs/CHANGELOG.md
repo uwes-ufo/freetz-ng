@@ -51,15 +51,24 @@ Latest changes
 
  - Build system:
    * Ccache 4.11.2
+   * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.52
 
  - Host tools:
    * ca-bundle 2025-02-25
    * dtc 1.7.2
    * fakeroot 1.37.1.1
+   * gperf 3.2
    * kconfig 6.14
+   * libtool 2.5.4
    * meson 1.7.2
    * ncftp 3.2.9
+   * openssl 3.5.0
+   * pkgconf 2.4.3
+   * precompiled host-tools 2025-04-18
    * python 3.12.10
+   * python3-packaging 24.2
+   * sfk 2.0.0.3
+   * u-boot 2025.04
 
  - AVM sources:
    * 3000 ax  8.02 - 4.4.271
@@ -85,8 +94,10 @@ Latest changes
    * Nano 8.4
    * NcFTP 3.2.9
    * OpenSSH 9.3p2/10.0p1
+   * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.16/3.5.0
    * OpenVPN 2.4.12/2.5.11/2.6.14
    * Privoxy 4.0.0
+   * SFK 2.0.0.3
    * socat 1.8.0.3
    * strace 4.9/5.0/6.14
    * tcpdump 4.1.1/4.99.4

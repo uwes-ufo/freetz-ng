@@ -610,7 +610,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSH 9.3p2/10.0p1](../../docs/make/openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
-  * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.16 (binary only)](../../docs/make/openssl.md)<a id='openssl'></a>**<br>
+  * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.16/3.5.0 (binary only)](../../docs/make/openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
   * **[OpenVPN 2.4.12/2.5.11/2.6.14](../../docs/make/openvpn.md)<a id='openvpn'></a>**<br>
@@ -797,7 +797,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ser2net 3.5.4 - DEPRECATED](../../docs/make/ser2net.md)<a id='ser2net'></a>**<br>
     Ser2net is a program for allowing network connections to serial ports. It supports RFC 2217 (remote control of serial port parameters), but you must have a complient client.
 
-  * **[sfk: Swiss File Knife 1.9.8.2](../../docs/make/sfk.md)<a id='sfk'></a>**<br>
+  * **[SFK 2.0.0.3](../../docs/make/sfk.md)<a id='sfk'></a>**<br>
     Swiss File Knife - A Command Line Tools Collection This packages provides the freeware version of SFK, see http://stahlworks.com/dev/swiss-file-knife.html for further information
 
   * **<u>sg3_utils 1.26 (binary only) - DEPRECATED</u><a id='sg3-utils'></a>**<br>

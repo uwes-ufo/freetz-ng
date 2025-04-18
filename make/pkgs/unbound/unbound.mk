@@ -30,7 +30,7 @@ $(PKG)_LIBRARIES_TARGET_DIR:=$($(PKG)_LIBRARIES:%=$($(PKG)_TARGET_LIBDIR)/%)
 $(PKG)_LIBRARIES_STAGING_DIR:=$($(PKG)_LIBRARIES:%=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/%)
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_LIB_libcrypto_WITH_EC
-$(PKG)_REBUILD_SUBOPTS += FREETZ_OPENSSL_VERSION_1_MAX
+$(PKG)_REBUILD_SUBOPTS += FREETZ_OPENSSL_VERSION_10_MAX
 
 $(PKG)_CONFIGURE_PRE_CMDS += $(call PKG_PREVENT_RPATH_HARDCODING,./configure)
 
@@ -44,7 +44,7 @@ $(PKG)_CONFIGURE_OPTIONS += --without-pythonmodule
 $(PKG)_CONFIGURE_OPTIONS += --without-libevent
 $(PKG)_CONFIGURE_OPTIONS += --with-pthreads
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_LIB_libcrypto_WITH_EC),--enable-ecdsa,--disable-ecdsa)
-$(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_OPENSSL_VERSION_1_MAX),--enable-gost,--disable-gost)
+$(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_OPENSSL_VERSION_10_MAX),--enable-gost,--disable-gost)
 
 $(PKG)_EXCLUDED += $(if $(FREETZ_PACKAGE_UNBOUND_DAEMON)        ,,usr/bin/unbound)
 $(PKG)_EXCLUDED += $(if $(FREETZ_PACKAGE_UNBOUND_ANCHOR)        ,,usr/bin/unbound-anchor)

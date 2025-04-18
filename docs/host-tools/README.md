@@ -46,7 +46,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[gmp 6.1.2](gmp-host.md)<a id='gmp-host'></a>**<br>
 
-  * **[gperf 3.1](gperf-host.md)<a id='gperf-host'></a>**<br>
+  * **[gperf 3.2](gperf-host.md)<a id='gperf-host'></a>**<br>
 
 ### K
 
@@ -56,7 +56,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[libdtc 1.6.1](libdtc-host.md)<a id='libdtc-host'></a>**<br>
 
-  * **[libtool 2.4.7](libtool-host.md)<a id='libtool-host'></a>**<br>
+  * **[libtool 2.5.4](libtool-host.md)<a id='libtool-host'></a>**<br>
 
   * **[lzma1 465](lzma1-host.md)<a id='lzma1-host'></a>**<br>
 
@@ -90,13 +90,13 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### O
 
-  * **[openssl 3.0.16](openssl-host.md)<a id='openssl-host'></a>**<br>
+  * **[openssl 3.5.0](openssl-host.md)<a id='openssl-host'></a>**<br>
 
 ### P
 
   * **[patchelf 0.14.5/0.15.0](patchelf-host.md)<a id='patchelf-host'></a>**<br>
 
-  * **[pkgconf 2.2.0](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
+  * **[pkgconf 2.4.3](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
 
   * **[prelink 20131005](prelink-host.md)<a id='prelink-host'></a>**<br>
 
@@ -106,7 +106,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python3 3.12.10](python3-host.md)<a id='python3-host'></a>**<br>
 
-  * **[python3-packaging 24.1](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
+  * **[python3-packaging 24.2](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
 
 ### S
 
@@ -114,7 +114,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[sed 4.9](sed-host.md)<a id='sed-host'></a>**<br>
 
-  * **[sfk 1.9.8.2](sfk-host.md)<a id='sfk-host'></a>**<br>
+  * **[sfk 2.0.0.3](sfk-host.md)<a id='sfk-host'></a>**<br>
 
   * **[squashfs2 2.2-r2](squashfs2-host.md)<a id='squashfs2-host'></a>**<br>
 
@@ -130,11 +130,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2025-03-06](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-04-18](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
-  * **[uboot 2025.01](uboot-host.md)<a id='uboot-host'></a>**<br>
+  * **[uboot 2025.04](uboot-host.md)<a id='uboot-host'></a>**<br>
 
   * **[uimg 871930d](uimg-host.md)<a id='uimg-host'></a>**<br>
 
