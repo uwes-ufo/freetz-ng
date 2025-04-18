@@ -55,7 +55,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[GLib2 libglib (libglib-2.0.so) 2.32.4/2.81.2](glib2.md)<a id='glib2'></a>**<br>
     GLib is a library containing many useful C routines for things such as trees, hashes, and lists.
 
-  * **[gmp: GNU MP Bignum Library (libgmp.so) 6.1.2](gmp.md)<a id='gmp'></a>**<br>
+  * **[gmp: GNU MP Bignum Library (libgmp.so) 6.3.0](gmp.md)<a id='gmp'></a>**<br>
     GNU MP Bignum Library The GMP library provides arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating point numbers. It can be used to implement cryptographic algorithms.
 
   * **[gsasl: libgsasl (libgsasl.so) 1.10.0](gsasl.md)<a id='gsasl'></a>**<br>

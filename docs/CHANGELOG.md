@@ -57,6 +57,7 @@ Latest changes
    * ca-bundle 2025-02-25
    * dtc 1.7.2
    * fakeroot 1.37.1.1
+   * gmp 6.3.0
    * gperf 3.2
    * kconfig 6.14
    * libtool 2.5.4
@@ -65,6 +66,7 @@ Latest changes
    * openssl 3.5.0
    * pkgconf 2.4.3
    * precompiled host-tools 2025-04-18
+   * precompiled toolchains r25866
    * python 3.12.10
    * python3-packaging 24.2
    * sfk 2.0.0.3
@@ -110,6 +112,7 @@ Latest changes
    * cairo 1.18.4
    * expat 2.7.1
    * gettext 0.24
+   * gmp 6.3.0
    * harfbuzz 11.1.0
    * libcap 2.49/2.75
    * libffi 3.4.8
