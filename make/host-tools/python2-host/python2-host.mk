@@ -19,7 +19,10 @@ $(PKG)_CONFIGURE_OPTIONS += --host=$(GNU_HOST_NAME)
 $(PKG)_CONFIGURE_OPTIONS += --target=$(GNU_HOST_NAME)
 $(PKG)_CONFIGURE_OPTIONS += --prefix=/usr
 #
+#
 
+$(PKG)_CFLAGS := $(TOOLS_CFLAGS)
+$(PKG)_CFLAGS += -std=gnu17
 
 
 $(TOOLS_SOURCE_DOWNLOAD)
@@ -29,6 +32,7 @@ $(TOOLS_CONFIGURED_CONFIGURE)
 $($(PKG)_BINARY): $($(PKG)_DIR)/.configured
 	(PATH=$(TARGET_PATH); \
 		$(TOOLS_SUBMAKE) -C $(PYTHON2_HOST_DIR) \
+		CFLAGS="$(PYTHON2_HOST_CFLAGS)" \
 		all Parser/pgen )
 	@touch -c $@
 

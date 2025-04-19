@@ -21,6 +21,9 @@ $(PKG)_CONFIGURE_OPTIONS += --prefix=/usr
 $(PKG)_CONFIGURE_OPTIONS += --enable-optimizations
 $(PKG)_CONFIGURE_OPTIONS += --disable-test-modules
 
+$(PKG)_CFLAGS := $(TOOLS_CFLAGS)
+#
+
 
 $(TOOLS_SOURCE_DOWNLOAD)
 $(TOOLS_UNPACKED)
@@ -29,6 +32,7 @@ $(TOOLS_CONFIGURED_CONFIGURE)
 $($(PKG)_BINARY): $($(PKG)_DIR)/.configured
 	(PATH=$(TARGET_PATH); \
 		$(TOOLS_SUBMAKE) -C $(PYTHON3_HOST_DIR) \
+		CFLAGS="$(PYTHON3_HOST_CFLAGS)" \
 		all )
 	@touch -c $@
 
