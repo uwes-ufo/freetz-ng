@@ -66,7 +66,7 @@ define $(PKG)_CUSTOM_UNPACK
 	$(TAR) xzf $(1) --strip-components=1 -C $($(PKG)_DIR)
 endef
 
-ifneq ($(strip $(DL_DIR)/$(NCURSESW_SOURCE)), $(strip $(DL_DIR)/$(NCURSES_HOST_SOURCE)))
+ifneq ($(strip $(DL_DIR)/$(NCURSESW_SOURCE)), $(strip $(DL_DIR)/$(NCURSES_SOURCE)))
 $(PKG_SOURCE_DOWNLOAD)
 endif
 $(PKG_UNPACKED)

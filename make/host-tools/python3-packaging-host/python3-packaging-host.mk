@@ -28,6 +28,7 @@ $(pkg)-precompiled: $($(PKG)_DIR)/.installed
 $(pkg)-clean:
 
 $(pkg)-dirclean:
+	$(RM) -r $(PYTHON3_PACKAGING_HOST_DIR)
 
 $(pkg)-distclean: $(pkg)-dirclean
 	$(RM) -r $(PYTHON3_PACKAGING_HOST_TARGET_DIRECTORY)
