@@ -63,6 +63,7 @@ Latest changes
    * libtool 2.5.4
    * meson 1.7.2
    * ncftp 3.2.9
+   * ncurses 6.5-20250419
    * openssl 3.5.0
    * pkgconf 2.4.3
    * precompiled host-tools 2025-04-18
