@@ -1,5 +1,10 @@
 # NEWS
 
+ * __[2025-04-21](#2025-04-21)__<a id='2025-04-21'></a><br>
+   Warnung vor GCC 15! Damit kann momentan nicht alles funktionierend compiliert werden.<br>
+   Obwohl diese Version noch nicht veröffentlich wurde ist sie in `Fedora 42` bereits Standard.<br>
+   Siehe [GCC 15 Release Series](https://gcc.gnu.org/gcc-15/changes.html)<br>
+
  * __[2025-06-03](#2025-06-03)__<a id='2025-06-03'></a><br>
    Es wurde ein neuer [Tag](https://github.com/Freetz-NG/freetz-ng/tags) `ng25030` erstellt.<br>
    Ein Tag sollte wie in der [README](https://github.com/Freetz-NG/freetz-ng#or-clone-a-single-tag) beschrieben mit git ausgecheckt werden.<br>
