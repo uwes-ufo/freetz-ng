@@ -269,9 +269,11 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
  * fritzbox-6842-lte/
    - [fritz_box_6842_source_files.06.21.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6842-lte/fritz_box_6842_source_files.06.21.tar.gz)
  * fritzbox-6850-5g/
-   - [source-files-FRITZ.Box_6850_5G-cortexa9-08.00.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6850-5g/source-files-FRITZ.Box_6850_5G-cortexa9-08.00.tar.gz)
+   - [source-files-FRITZ.Box_6850_5G-cortexa9-08.03.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6850-5g/source-files-FRITZ.Box_6850_5G-cortexa9-08.03.tar.gz)
  * fritzbox-6850-lte/
-   - [source-files-FRITZ.Box_6850_LTE-cortexa9-08.00.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6850-lte/source-files-FRITZ.Box_6850_LTE-cortexa9-08.00.tar.gz)
+   - [source-files-FRITZ.Box_6850_LTE-cortexa9-08.03.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6850-lte/source-files-FRITZ.Box_6850_LTE-cortexa9-08.03.tar.gz)
+ * fritzbox-6860-5g/
+   - [source-files-FRITZ.Box_6860_5G-maple-08.03.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6860-5g/source-files-FRITZ.Box_6860_5G-maple-08.03.tar.gz)
  * fritzbox-6890-lte/
    - [source-files-FRITZ.Box_6890_LTE-07.56.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6890-lte/source-files-FRITZ.Box_6890_LTE-07.56.tar.gz)
  * fritzbox-7112/
@@ -461,6 +463,7 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
    - [source-files-FRITZ.Box_7583-grx5-07.50.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7583/source-files-FRITZ.Box_7583-grx5-07.50.tar.gz)
    - [source-files-FRITZ.Box_7583-grx5-07.56.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7583/source-files-FRITZ.Box_7583-grx5-07.56.tar.gz)
    - [source-files-FRITZ.Box_7583-grx5-07.59.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7583/source-files-FRITZ.Box_7583-grx5-07.59.tar.gz)
+   - [source-files-FRITZ.Box_7583-grx5-08.03.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7583/source-files-FRITZ.Box_7583-grx5-08.03.tar.gz)
  * fritzbox-7583-vdsl/
    - [source-files-FRITZ.Box_7583_VDSL-grx5-07.50.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7583-vdsl/source-files-FRITZ.Box_7583_VDSL-grx5-07.50.tar.gz)
    - [source-files-FRITZ.Box_7583_VDSL-grx5-07.56.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7583-vdsl/source-files-FRITZ.Box_7583_VDSL-grx5-07.56.tar.gz)
