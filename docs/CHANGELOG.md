@@ -79,6 +79,7 @@ Latest changes
  - Patches:
 
  - Packages:
+   * ACME.sh 3.1.1
    * BIND 9.11.37/9.20.7
    * CA-bundle 2025-02-25
    * Dante 1.4.4
@@ -106,6 +107,7 @@ Latest changes
    * tcpdump 4.1.1/4.99.4
    * Tor 0.4.8.16
    * uMurmur 0.2.20/0.3.1
+   * Unbound 1.23.0
    * UnRAR 6.1.7/7.1.6
    * xsltproc 1.1.43
 

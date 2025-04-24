@@ -14,7 +14,7 @@ $(PKG)_CONFIGURE_OPTIONS += --host=$(GNU_HOST_NAME)
 $(PKG)_CONFIGURE_OPTIONS += --disable-shared
 $(PKG)_CONFIGURE_OPTIONS += --enable-static
 
-$(PKG)_CONFIGURE_PRE_CMDS += autoreconf -i;
+$(PKG)_CONFIGURE_PRE_CMDS += $(AUTORECONF)
 
 
 $(TOOLS_SOURCE_DOWNLOAD)
