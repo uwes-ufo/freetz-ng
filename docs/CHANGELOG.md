@@ -61,7 +61,7 @@ Latest changes
    * gperf 3.2
    * kconfig 6.14
    * libtool 2.5.4
-   * meson 1.7.2
+   * meson 1.8.0
    * ncftp 3.2.9
    * ncurses 6.5-20250419
    * openssl 3.5.0
@@ -116,11 +116,12 @@ Latest changes
    * expat 2.7.1
    * gettext 0.24
    * gmp 6.3.0
-   * harfbuzz 11.1.0
+   * harfbuzz 11.2.0
    * libcap 2.49/2.75
    * libffi 3.4.8
    * libpcap 1.1.1/1.10.5
    * libusb1 1.0.23/1.0.28
+   * libuv 1.44.2/1.51.0
    * libpng 1.6.47
    * mbedTLS 2.7.19/2.28.10
    * pango 1.56.3
