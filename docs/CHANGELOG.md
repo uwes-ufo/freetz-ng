@@ -80,6 +80,7 @@ Latest changes
 
  - Packages:
    * ACME.sh 3.1.1
+   * Atop 2.11.1
    * BIND 9.11.37/9.20.7
    * CA-bundle 2025-02-25
    * Dante 1.4.4
