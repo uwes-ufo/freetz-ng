@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HarfBuzz (libharfbuzz.so) 11.2.0](harfbuzz.md)<a id='harfbuzz'></a>**<br>
+  * **[HarfBuzz (libharfbuzz.so) 11.2.1](harfbuzz.md)<a id='harfbuzz'></a>**<br>
     HarfBuzz is a text shaping engine. It primarily supports OpenType, but also Apple Advanced Typography.
 
 ### I
@@ -119,7 +119,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libdaemon (libdaemon.so) 0.14](libdaemon.md)<a id='libdaemon'></a>**<br>
     Libdaemon is a lightweight C library that eases the writing of UNIX daemons.
 
-  * **[libdeflate (libdeflate.so) 1.23](libdeflate.md)<a id='libdeflate'></a>**<br>
+  * **[libdeflate (libdeflate.so) 1.24](libdeflate.md)<a id='libdeflate'></a>**<br>
     Heavily optimized library for DEFLATE/zlib/gzip compression and decompression
 
   * **[libdnet (libdnet.so) 665](libdnet.md)<a id='libdnet'></a>**<br>
@@ -200,7 +200,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libpcap (libpcap.so) 1.1.1/1.10.5](libpcap.md)<a id='libpcap'></a>**<br>
     libpcap is a system-independent interface for user-level packet capture. libpcap provides a portable framework for low-level network monitoring. Applications include network statistics collection, security monitoring, network debugging, etc.
 
-  * **[libpng: PNG library (libpng.so) 1.6.47](libpng.md)<a id='libpng'></a>**<br>
+  * **[libpng: PNG library (libpng.so) 1.6.48](libpng.md)<a id='libpng'></a>**<br>
     libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 12 years. The home site for development versions (i.e., may be buggy or subject to change or include experimental features) is http://libpng.sourceforge.net/, and the place to go for questions about the library is the png-mng-implement mailing list.
 
   * **[libssh2 (libssh2.so) 1.11.1](libssh2.md)<a id='libssh2'></a>**<br>

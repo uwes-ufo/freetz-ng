@@ -80,7 +80,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### N
 
-  * **[ncftp 3.2.9](ncftp-host.md)<a id='ncftp-host'></a>**<br>
+  * **[ncftp 3.3.0](ncftp-host.md)<a id='ncftp-host'></a>**<br>
 
   * **[ncurses 6.5-20250419](ncurses-host.md)<a id='ncurses-host'></a>**<br>
 

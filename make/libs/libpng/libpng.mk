@@ -1,11 +1,13 @@
-$(call PKG_INIT_LIB, 1.6.47)
-$(PKG)_LIB_VERSION:=16.47.0
+$(call PKG_INIT_LIB, 1.6.48)
+$(PKG)_LIB_VERSION:=16.48.0
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=b213cb381fbb1175327bd708a77aab708a05adde7b471bc267bd15ac99893631
+$(PKG)_HASH:=46fd06ff37db1db64c0dc288d78a3f5efd23ad9ac41561193f983e20937ece03
 $(PKG)_SITE:=@SF/libpng
-### WEBSITE:=http://www.libpng.org/pub/png/libpng.html
-### CHANGES:=https://libpng.sourceforge.io/index.html
+### WEBSITE:=https://libpng.sf.net
+### MANPAGE:=http://www.libpng.org/pub/png/
+### CHANGES:=https://github.com/pnggroup/libpng/tags
 ### CVSREPO:=https://github.com/glennrp/libpng
+### SUPPORT:=fda77
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/.libs/libpng16.so.$($(PKG)_LIB_VERSION)
 $(PKG)_STAGING_BINARY:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libpng16.so.$($(PKG)_LIB_VERSION)

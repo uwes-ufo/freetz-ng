@@ -221,7 +221,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>dosfstools 3.0.28 (binary only) - DEPRECATED</u><a id='dosfstools'></a>**<br>
     utilities to create, check and label MS-DOS FAT filesystems
 
-  * **[Dropbear 2025.87](../../docs/make/dropbear.md)<a id='dropbear'></a>**<br>
+  * **[Dropbear 2025.88](../../docs/make/dropbear.md)<a id='dropbear'></a>**<br>
     Dropbear SSH server and client Dropbear is a relatively small SSH 2 server and client. It runs on a variety of POSIX-based platforms. Dropbear is open source software, distributed under a MIT-style license. Dropbear is particularly useful for "embedded"-type Linux (or other Unix) systems, such as wireless routers. Features - A small memory footprint suitable for memory-constrained environments - Dropbear can compile to a 110kB statically linked binary with uClibc on x86 (only minimal options selected) - Dropbear server implements X11 forwarding, and authentication-agent forwarding for OpenSSH clients - Can run from inetd or standalone - Compatible with OpenSSH ~/.ssh/authorized_keys public key authentication - The server, client, keygen, and key converter can be compiled into a single binary (a la busybox) - Features can easily be disabled when compiling to save space TCP forwarding support
      - [Grundbegriffe](../../docs/make/dropbear.md#grundbegriffe)
      - [Web-Config](../../docs/make/dropbear.md#web-config)
@@ -522,7 +522,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>nc6 1.0 (binary only) - DEPRECATED</u><a id='nc6'></a>**<br>
     A netcat clone with ipv6 support.
 
-  * **[NcFTP 3.2.9 (binaries only)](../../docs/make/ncftp.md)<a id='ncftp'></a>**<br>
+  * **[NcFTP 3.3.0 (binaries only)](../../docs/make/ncftp.md)<a id='ncftp'></a>**<br>
     NcFTP is a free program that use the File Transfer Protocol. The purpose of ncftp is to provide a powerful and flexible interface to the Internet standard File Transfer Protocol. Although the program appears to be rather spartan, you'll find that ncftp has a wealth of valuable performance and usage features. The program was designed with an emphasis on usability, and it does as much as it can for you automatically so you can do what you expect to do with a file transfer program, which is transfer files between two interconnected systems.
      - [Was ist NcFTP?](../../docs/make/ncftp.md#was-ist-ncftp)
      - [Wozu kann NcFTP benutzt werden?](../../docs/make/ncftp.md#wozu-kann-ncftp-benutzt-werden)
@@ -707,6 +707,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>python-bjoern: bjoern 1.3.4 - DEPRECATED</u><a id='python-bjoern'></a>**<br>
     A screamingly fast Python WSGI server written in C.
 
+  * **<u>python-cffi: Cffi 1.15.1</u><a id='python-cffi'></a>**<br>
+    A Foreign Function Interface package for calling C libraries from Python.
+
   * **<u>python-cheetah: cheetah 2.4.4 - DEPRECATED</u><a id='python-cheetah'></a>**<br>
 
   * **<u>python-imaging-library: Imaging Library 1.1.7 - DEPRECATED</u><a id='python-imaging-library'></a>**<br>
@@ -718,8 +721,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>python-mysql-connector: mysql-connector 8.0.21 - DEPRECATED</u><a id='python-mysql-connector'></a>**<br>
     Python MySQL Connector.
 
-  * **<u>python-pycrypto: pycrypto 2.6.1 - DEPRECATED</u><a id='python-pycrypto'></a>**<br>
+  * **[python-pycrypto: PyCrypto 2.7a1 - DEPRECATED](../../docs/make/python-pycrypto.md)<a id='python-pycrypto'></a>**<br>
     A collection of both secure hash functions (such as MD5 and SHA), and various encryption algorithms (AES, DES, IDEA, RSA, ElGamal, etc.).
+
+  * **<u>python-pycryptodome: PyCryptodome 3.22.0</u><a id='python-pycryptodome'></a>**<br>
+    PyCryptodome is a self-contained Python package of low-level cryptographic primitives. It's a fork of PyCrypto that has been enhanced for modern systems.
 
   * **[python-pycurl: pycurl 7.43.0 - DEPRECATED](../../docs/make/python-pycurl.md)<a id='python-pycurl'></a>**<br>
     PycURL is a Python interface to libcurl. PycURL can be used to fetch objects identified by a URL from a Python program.
@@ -826,7 +832,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Slurm 0.3.3 (binary only) - DEPRECATED</u><a id='slurm'></a>**<br>
     slurm - yet another network load monitor slurm started as a FreeBSD port of the Linux ppp link monitor called pppstatus by Gabriel Montenegro. features: - "realtime" traffic statistics - three graph modes: combined RX and TX and two split views - can monitor any network device - curses ascii graphics
 
-  * **[Smartmontools 7.4](../../docs/make/smartmontools.md)<a id='smartmontools'></a>**<br>
+  * **[Smartmontools 7.5](../../docs/make/smartmontools.md)<a id='smartmontools'></a>**<br>
     Smartmontools contains utility programs (smartctl, smartd) to control/monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) built into most modern ATA and SCSI disks. It is derived from smartsuite.
 
   * **[smstools3 3.1.21](../../docs/make/smstools3.md)<a id='smstools3'></a>**<br>

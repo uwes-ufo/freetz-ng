@@ -154,7 +154,7 @@ jobs:
         id: generate
         run: |
           PKG="${{ github.event.inputs.bump }}"
-          [ -z "$PKG" ] && PKG="$(git log --format=%B -n1 ${{ github.sha }} | sed -nr 's/^(add|bump|fix|test) ([^ ,:]*).*/\2/p')"
+          [ -z "$PKG" ] && PKG="$(git log --format=%B -n1 ${{ github.sha }} | sed -nr 's/^(add|bump|fix|test) ([^ ,:]*).*/\2/pI')"
           [ -z "$PKG" ] && echo "No add, bump, fix or test." && exit
           PKG="$(echo "$PKG" | tr '[:lower:]' '[:upper:]')"
           pkg="$(echo "$PKG" | tr '[:upper:]' '[:lower:]')"

@@ -50,7 +50,7 @@ Latest changes
 ### devel
 
  - Build system:
-   * Ccache 4.11.2
+   * Ccache 4.11.3
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.52
 
  - Host tools:
@@ -62,7 +62,7 @@ Latest changes
    * kconfig 6.14
    * libtool 2.5.4
    * meson 1.8.0
-   * ncftp 3.2.9
+   * ncftp 3.3.0
    * ncurses 6.5-20250419
    * openssl 3.5.0
    * pkgconf 2.4.3
@@ -85,6 +85,7 @@ Latest changes
    * CA-bundle 2025-02-25
    * Dante 1.4.4
    * Dnsmasq 2.80/2.91
+   * Dropbear 2025.88
    * dtc 1.7.2
    * Git 2.49.0
    * htop 1.0.3/3.4.1
@@ -97,12 +98,16 @@ Latest changes
    * Minicom 2.10
    * Mosquitto 2.0.21
    * Nano 8.4
-   * NcFTP 3.2.9
+   * NcFTP 3.3.0
    * OpenSSH 9.3p2/10.0p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.16/3.5.0
    * OpenVPN 2.4.12/2.5.11/2.6.14
    * Privoxy 4.0.0
+   * python-Cffi 1.15.1
+   * python-PyCrypto 2.7a1
+   * python-PyCryptodome 3.22.0
    * SFK 2.0.0.3
+   * Smartmontools 7.5
    * socat 1.8.0.3
    * strace 4.9/5.0/6.14
    * tcpdump 4.1.1/4.99.4
@@ -117,13 +122,14 @@ Latest changes
    * expat 2.7.1
    * gettext 0.24
    * gmp 6.3.0
-   * harfbuzz 11.2.0
+   * harfbuzz 11.2.1
    * libcap 2.49/2.75
+   * libdeflate 1.24
    * libffi 3.4.8
    * libpcap 1.1.1/1.10.5
    * libusb1 1.0.23/1.0.28
    * libuv 1.44.2/1.51.0
-   * libpng 1.6.47
+   * libpng 1.6.48
    * mbedTLS 2.7.19/2.28.10
    * pango 1.56.3
    * pixman 0.44.2
