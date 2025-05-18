@@ -327,8 +327,6 @@ if FREETZ_PACKAGE_PYTHON
 
 	endmenu
 
-<<<<<<< HEAD
-=======
 	menu "3rd-party modules"
 		source "make/pkgs/python-bjoern/Config.in"
 		source "make/pkgs/python-cffi/Config.in"
@@ -345,6 +343,5 @@ if FREETZ_PACKAGE_PYTHON
 		source "make/pkgs/python-yenc/Config.in"
 	endmenu
 
->>>>>>> 63d0d18f7e69cba8aaee568e0a8425a04007141f
 endif # FREETZ_PACKAGE_PYTHON
 
