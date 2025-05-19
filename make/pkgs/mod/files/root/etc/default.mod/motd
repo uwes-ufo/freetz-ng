@@ -8,7 +8,7 @@ EOX
 	echo -e "\e[0m"
 }
 echo_booster(){
-	echo -e "\e[36m"
+	echo -e "\e[35m"
 	cat << EOX
     |__   ___   ___   ___ _|__  ___   ___
     |  \ /   \ /   \ (___  |   /___) |   \ 
