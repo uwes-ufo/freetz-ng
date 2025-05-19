@@ -1,11 +1,24 @@
+echo_toaster(){
+	echo -e "\e[33m"
+	cat << EOX
+    _|__  ___   ___   ___ _|__  ___   ___
+     |   /   \  ___| (___  |   /___) |   \ 
+      \_ \___/ (___| ____)  \_ \___  |
+	EOX
+	echo -e "\e[0m"
+}
+echo_booster(){
+	echo -e "\e[36m"
+	cat << EOX
+    |__   ___   ___   ___ _|__  ___   ___
+    |  \ /   \ /   \ (___  |   /___) |   \ 
+   _|__/ \___/ \___/ ____)  \_ \___  |
+	EOX
+	echo -e "\e[0m"
+}
+
 echo -n 'Welcome at '
 hostname
 uname -a
 echo
-echo -e "\e[33m"
-cat << EOX
-    _|__  ___   ___   ___ _|__  ___   ___
-     |   /   \  ___| (___  |   /___) |   \ 
-      \_ \___/ (___| ____)  \_ \___  |
-EOX
-echo -e "\e[0m"
+[ $(hostname) == 'booster' ] && echo_booster || echo_toaster
