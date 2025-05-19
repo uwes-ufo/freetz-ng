@@ -1,4 +1,4 @@
-toaster(){
+echo_toaster(){
 	echo -e "\e[33m"
 	cat << EOX
     _|__  ___   ___   ___ _|__  ___   ___
@@ -7,7 +7,7 @@ toaster(){
 	EOX
 	echo -e "\e[0m"
 }
-booster(){
+echo_booster(){
 	echo -e "\e[36m"
 	cat << EOX
     |__   ___   ___   ___ _|__  ___   ___
@@ -21,4 +21,4 @@ echo -n 'Welcome at '
 hostname
 uname -a
 echo
-[ $(hostname) == 'booster' ] && booster || toaster
+[ $(hostname) == 'booster' ] && echo_booster || echo_toaster
