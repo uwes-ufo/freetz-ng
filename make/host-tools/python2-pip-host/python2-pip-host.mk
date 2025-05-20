@@ -19,7 +19,7 @@ $(TOOLS_SOURCE_DOWNLOAD)
 $(TOOLS_UNPACKED)
 
 $($(PKG)_DIR)/.installed: $($(PKG)_DIR)/.unpacked
-	cp -fa $(PYTHON2_PIP_HOST_DIRECTORY) $(PYTHON2_PIP_HOST_TARGET_DIRECTORY)
+	cp -fa $(PYTHON2_PIP_HOST_DIRECTORY) $(PYTHON2_PIP_HOST_TARGET_DIRECTORY)/
 	@touch $@
 
 $(pkg)-precompiled: $($(PKG)_DIR)/.installed
@@ -31,6 +31,6 @@ $(pkg)-dirclean:
 	$(RM) -r $(PYTHON2_PIP_HOST_DIR)
 
 $(pkg)-distclean: $(pkg)-dirclean
-	$(RM) -r $(PYTHON2_PIP_HOST_TARGET_DIRECTORY)/pip
+	$(RM) -r $(PYTHON2_PIP_HOST_TARGET_DIRECTORY)/pip/
 
 $(TOOLS_FINISH)

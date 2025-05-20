@@ -19,7 +19,7 @@ $(TOOLS_SOURCE_DOWNLOAD)
 $(TOOLS_UNPACKED)
 
 $($(PKG)_DIR)/.installed: $($(PKG)_DIR)/.unpacked
-	cp -fa $(PYTHON3_PACKAGING_HOST_DIRECTORY) $(PYTHON3_PACKAGING_HOST_TARGET_DIRECTORY)
+	cp -fa $(PYTHON3_PACKAGING_HOST_DIRECTORY) $(PYTHON3_PACKAGING_HOST_TARGET_DIRECTORY)/
 	@touch $@
 
 $(pkg)-precompiled: $($(PKG)_DIR)/.installed
@@ -31,6 +31,6 @@ $(pkg)-dirclean:
 	$(RM) -r $(PYTHON3_PACKAGING_HOST_DIR)
 
 $(pkg)-distclean: $(pkg)-dirclean
-	$(RM) -r $(PYTHON3_PACKAGING_HOST_TARGET_DIRECTORY)/packaging
+	$(RM) -r $(PYTHON3_PACKAGING_HOST_TARGET_DIRECTORY)/packaging/
 
 $(TOOLS_FINISH)
