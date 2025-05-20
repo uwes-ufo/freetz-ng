@@ -18,7 +18,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ca-bundle 2025-02-25](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 3.31.7](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 4.0.2](cmake-host.md)<a id='cmake-host'></a>**<br>
 
   * **[cpio 2.15](cpio-host.md)<a id='cpio-host'></a>**<br>
 
@@ -34,7 +34,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### F
 
-  * **[fakeroot 1.37.1.1](fakeroot-host.md)<a id='fakeroot-host'></a>**<br>
+  * **[fakeroot 1.37.1.2](fakeroot-host.md)<a id='fakeroot-host'></a>**<br>
 
   * **[fastjar 0.98](fastjar-host.md)<a id='fastjar-host'></a>**<br>
 
@@ -66,7 +66,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### M
 
-  * **[m4 1.4.19](m4-host.md)<a id='m4-host'></a>**<br>
+  * **[m4 1.4.20](m4-host.md)<a id='m4-host'></a>**<br>
 
   * **[make 4.4.1](make-host.md)<a id='make-host'></a>**<br>
 
@@ -104,9 +104,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python2 2.7.18](python2-host.md)<a id='python2-host'></a>**<br>
 
+  * **[python2-setuptools 44.1.1](python2-setuptools-host.md)<a id='python2-setuptools-host'></a>**<br>
+
   * **[python3 3.12.10](python3-host.md)<a id='python3-host'></a>**<br>
 
-  * **[python3-packaging 24.2](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
+  * **[python3-packaging 25.0](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
 
 ### S
 
@@ -130,7 +132,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2025-04-18](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-05-19](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 

@@ -8,9 +8,8 @@ $(PKG)_SITE:=https://www.pycrypto.org/pub/dlitz/crypto/pycrypto/,https://ftp.dli
 ### CVSREPO:=https://github.com/pycrypto/pycrypto
 ### SUPPORT:=X
 
-$(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)$(PYTHON_SITE_PKG_DIR)/Crypto/PublicKey/_fastmath.so
-
 $(PKG)_DEPENDS_ON += python gmp
+$(PKG)_DEPENDS_ON += python2-host
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_PYTHON_STATIC
 
@@ -19,15 +18,17 @@ $(PKG_SOURCE_DOWNLOAD)
 $(PKG_UNPACKED)
 $(PKG_CONFIGURED_CONFIGURE)
 
-$($(PKG)_TARGET_BINARY): $($(PKG)_DIR)/.configured
+$($(PKG)_DIR)/.compiled: $($(PKG)_DIR)/.configured
 	$(call Build/PyMod/PKG, PYTHON_PYCRYPTO, , TARGET_ARCH_BE="$(TARGET_ARCH_BE)")
+	@touch $@
 
 $(pkg):
 
-$(pkg)-precompiled: $($(PKG)_TARGET_BINARY)
+$(pkg)-precompiled: $($(PKG)_DIR)/.compiled
 
 
 $(pkg)-clean:
+	$(RM) $(PYTHON_PYCRYPTO_DIR)/{.configured,.compiled}
 	$(RM) -r $(PYTHON_PYCRYPTO_DIR)/build
 
 $(pkg)-uninstall:

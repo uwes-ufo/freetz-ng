@@ -55,21 +55,25 @@ Latest changes
 
  - Host tools:
    * ca-bundle 2025-02-25
+   * cmake 4.0.2
    * dtc 1.7.2
-   * fakeroot 1.37.1.1
+   * fakeroot 1.37.1.2
    * gmp 6.3.0
    * gperf 3.2
+   * iPerf3 3.3/3.19
    * kconfig 6.14
    * libtool 2.5.4
+   * m4 1.4.20
    * meson 1.8.0
    * ncftp 3.3.0
    * ncurses 6.5-20250419
    * openssl 3.5.0
    * pkgconf 2.4.3
-   * precompiled host-tools 2025-04-18
+   * precompiled host-tools 2025-05-19
    * precompiled toolchains r25866
    * python 3.12.10
-   * python3-packaging 24.2
+   * python2-setuptools 44.1.1
+   * python3-packaging 25.0
    * sfk 2.0.0.3
    * u-boot 2025.04
 
@@ -84,6 +88,7 @@ Latest changes
    * BIND 9.11.37/9.20.7
    * CA-bundle 2025-02-25
    * Dante 1.4.4
+   * dehydrated 0.7.2
    * Dnsmasq 2.80/2.91
    * Dropbear 2025.88
    * dtc 1.7.2
@@ -105,7 +110,7 @@ Latest changes
    * Privoxy 4.0.0
    * python-Cffi 1.15.1
    * python-PyCrypto 2.7a1
-   * python-PyCryptodome 3.22.0
+   * python-PyCryptodome 3.23.0
    * SFK 2.0.0.3
    * Smartmontools 7.5
    * socat 1.8.0.3

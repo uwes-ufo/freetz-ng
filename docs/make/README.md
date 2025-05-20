@@ -136,7 +136,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[decrypt-fritzos-cfg: decrypt FRITZ!OS configs 0.2](decrypt-fritzos-cfg.md)<a id='decrypt-fritzos-cfg'></a>**<br>
     This package provides a set of tools making it possible to decrypt encrypted parts (usually credentials) of FRITZ!OS configuration files. See https://github.com/PeterPawn/decode_passwords, http://www.ip-phone-forum.de/showthread.php?t=276183, http://www.ip-phone-forum.de/showthread.php?t=295101 for usage details and technical background. NO RESPONSIBILITY DISCLAIMER: Adding easy usable tools like these (to emphasize it once more - tools providing password decryption capabilities) decreases the SECURITY of your box. Use it on YOUR OWN RISK, Freetz is not responsible for any potential losses or damages resulting/arising from adding these tools to your firmware.
 
-  * **[dehydrated 0.7.1 (letsencrypt)](dehydrated.md)<a id='dehydrated'></a>**<br>
+  * **[dehydrated 0.7.2](dehydrated.md)<a id='dehydrated'></a>**<br>
     Dehydrated is a client for signing certificates with an ACME-server (e.g. Let's Encrypt) implemented as a relatively simple (zsh-compatible) bash-script. This client supports both ACME v1 and the new ACME v2 including support for wildcard certificates!
 
   * **[DejaVu Fonts TTF 2.37 (binary only)](dejavu-fonts-ttf.md)<a id='dejavu-fonts-ttf'></a>**<br>
@@ -299,7 +299,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[iodine 0.7.0 - DEPRECATED](iodine.md)<a id='iodine'></a>**<br>
     iodine lets you tunnel IPv4 data through a DNS server. This can be usable in different situations where internet access is firewalled, but DNS queries are allowed.
 
-  * **[iPerf3 3.3/3.18 (binary only)](iperf.md)<a id='iperf'></a>**<br>
+  * **[iPerf3 3.3/3.19 (binary only)](iperf.md)<a id='iperf'></a>**<br>
     iPerf3 is a tool for active measurements of the maximum achievable bandwidth on IP networks. It supports tuning of various parameters related to timing, buffers and protocols (TCP, UDP, SCTP with IPv4 and IPv6). For each test it reports the bandwidth, loss, and other parameters. S. https://github.com/esnet/iperf for more details.
 
   * **<u>IPsec-tools 0.7.2 - DEPRECATED</u><a id='ipsec-tools'></a>**<br>
@@ -525,7 +525,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>python-bjoern: bjoern 1.3.4 - DEPRECATED</u><a id='python-bjoern'></a>**<br>
     A screamingly fast Python WSGI server written in C.
 
-  * **<u>python-cffi: Cffi 1.15.1</u><a id='python-cffi'></a>**<br>
+  * **[python-cffi: Cffi 1.15.1](python-cffi.md)<a id='python-cffi'></a>**<br>
     A Foreign Function Interface package for calling C libraries from Python.
 
   * **<u>python-cheetah: cheetah 2.4.4 - DEPRECATED</u><a id='python-cheetah'></a>**<br>
@@ -542,7 +542,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[python-pycrypto: PyCrypto 2.7a1 - DEPRECATED](python-pycrypto.md)<a id='python-pycrypto'></a>**<br>
     A collection of both secure hash functions (such as MD5 and SHA), and various encryption algorithms (AES, DES, IDEA, RSA, ElGamal, etc.).
 
-  * **<u>python-pycryptodome: PyCryptodome 3.22.0</u><a id='python-pycryptodome'></a>**<br>
+  * **[python-pycryptodome: PyCryptodome 3.23.0](python-pycryptodome.md)<a id='python-pycryptodome'></a>**<br>
     PyCryptodome is a self-contained Python package of low-level cryptographic primitives. It's a fork of PyCrypto that has been enhanced for modern systems.
 
   * **[python-pycurl: pycurl 7.43.0 - DEPRECATED](python-pycurl.md)<a id='python-pycurl'></a>**<br>
