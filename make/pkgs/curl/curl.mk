@@ -1,7 +1,7 @@
-$(call PKG_INIT_BIN, 8.12.1)
+$(call PKG_INIT_BIN, 8.13.0)
 $(PKG)_LIB_VERSION:=4.8.0
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=0341f1ed97a26c811abaebd37d62b833956792b7607ea3f15d001613c76de202
+$(PKG)_HASH:=4a093979a3c2d02de2fbc00549a32771007f2e78032c6faa5ecd2f7a9e152025
 $(PKG)_SITE:=https://curl.se/download,https://curl.haxx.se/download
 ### WEBSITE:=https://curl.se/
 ### MANPAGE:=https://curl.se/docs/manpage.html

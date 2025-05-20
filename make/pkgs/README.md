@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.20.7](../../docs/make/bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.20.8](../../docs/make/bind.md)<a id='bind'></a>**<br>
     BIND is a suite of software for interacting with the Domain Name System (DNS). The name BIND stands for "Berkeley Internet Name Daemon".
      - [named.conf](../../docs/make/bind.md#namedconf)
 
@@ -74,7 +74,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Networks](../../docs/make/bip.md#networks)
      - [Users](../../docs/make/bip.md#users)
 
-  * **[BIRD 1.6.8/2.15.1](../../docs/make/bird.md)<a id='bird'></a>**<br>
+  * **[BIRD 1.6.8/2.17.1](../../docs/make/bird.md)<a id='bird'></a>**<br>
     The BIRD Internet Routing Daemon
 
   * **<u>bittwist 1.1 (binary only) - DEPRECATED</u><a id='bittwist'></a>**<br>
@@ -101,7 +101,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[CA-bundle 2025-02-25](../../docs/make/ca-bundle.md)<a id='ca-bundle'></a>**<br>
+  * **[CA-bundle 2025-05-20](../../docs/make/ca-bundle.md)<a id='ca-bundle'></a>**<br>
     The Mozilla CA certificate store in PEM format, see https://www.curl.se/docs/caextract.html Size of uncompressed file is about 250 KB.
 
   * **[Callmonitor 1.20.9-git](../../docs/make/callmonitor.md)<a id='callmonitor'></a>**<br>
@@ -145,7 +145,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Ctorrent dnh3.3.2 (binary only) - DEPRECATED](../../docs/make/ctorrent.md)<a id='ctorrent'></a>**<br>
     CTorrent is a BitTorrent client written in the C programming language, known to be a very robust and mature programming language, which produces fast and optimized application.
 
-  * **[Curl 8.12.1 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
+  * **[Curl 8.13.0 (binary only)](../../docs/make/curl.md)<a id='curl'></a>**<br>
     Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, http proxy tunneling and a busload of other useful tricks.
 
   * **<u>CurlFtpFS 0.9.2 - DEPRECATED</u><a id='curlftpfs'></a>**<br>
@@ -329,7 +329,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.17 - DEPRECATED](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.22 - DEPRECATED](../../docs/make/haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](../../docs/make/haserl.md)<a id='haserl'></a>**<br>
@@ -567,7 +567,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>ngircd 22 - DEPRECATED</u><a id='ngircd'></a>**<br>
     ngIRCd is an Open Source server for the Internet Relay Chat (IRC), which is developed and published under the terms of the GNU General Public Licence (URL: http://www.gnu.org/licenses/gpl.html). ngIRCd means "next generation IRC daemon", it's written from scratch and not deduced from the "grandfather of IRC daemons", the daemon of the IRCNet. For documentation see: http://ngircd.barton.de/documentation.php.de
 
-  * **[Nmap 4.76/5.51/7.95 (binary only)](../../docs/make/nmap.md)<a id='nmap'></a>**<br>
+  * **[Nmap 4.76/5.51/7.97 (binary only)](../../docs/make/nmap.md)<a id='nmap'></a>**<br>
     Nmap ("Network Mapper") is a free and open source (license) utility for network exploration or security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. It was designed to rapidly scan large networks, but works fine against single hosts. Nmap runs on all major computer operating systems, and both console and graphical versions are available.
      - [Example](../../docs/make/nmap.md#example)
      - [Known open ports](../../docs/make/nmap.md#known-open-ports)
@@ -793,7 +793,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [AVM Konfiguration](../../docs/make/samba.md#avm-konfiguration)
      - [Freetz Konfiguration](../../docs/make/samba.md#freetz-konfiguration)
 
-  * **[Screen 4.9.1/5.0.0](../../docs/make/screen.md)<a id='screen'></a>**<br>
+  * **[Screen 4.9.1/5.0.1](../../docs/make/screen.md)<a id='screen'></a>**<br>
     Screen is a full-screen window manager that multiplexes a physical terminal between several processes, typically interactive shells. Each virtual terminal provides the functions of the DEC VT100 terminal and, in addition, several control functions from the ANSI X3.64 (ISO 6429) and ISO 2022 standards (e.g., insert/delete line and support for multiple character sets). There is a scrollback history buffer for each virtual terminal and a copy-and-paste mechanism that allows the user to move text regions between windows. When screen is called, it creates a single window with a shell in it (or the specified command) and then gets out of your way so that you can use the program as you normally would. Then, at any time, you can create new (full-screen) windows with other programs in them (including more shells), kill the current window, view a list of the active windows, turn output logging on and off, copy text between windows, view the scrollback history, switch between windows, etc. All windows run their programs completely independent of each other. Programs continue to run when their window is currently not visible and even when the whole screen session is detached from the users terminal.
      - [Bedienung](../../docs/make/screen.md#bedienung)
      - [aushängen/detach](../../docs/make/screen.md#aushängendetach)
@@ -866,7 +866,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>sshfs-fuse 2.4 (binary only) - DEPRECATED</u><a id='sshfs-fuse'></a>**<br>
     This is a filesystem client based on the SSH File Transfer Protocol. Since most SSH servers already support this protocol it is very easy to set up: i.e. on the server side there's nothing to do. On the client side mounting the filesystem is as easy as logging into the server with ssh.
 
-  * **[sslh 2.1.4](../../docs/make/sslh.md)<a id='sslh'></a>**<br>
+  * **[sslh 2.2.3](../../docs/make/sslh.md)<a id='sslh'></a>**<br>
     sslh accepts HTTPS, SSH and OpenVPN connections on the same port. This makes it possible to connect to an SSH server or an OpenVPN on port 443 (e.g. from inside a corporate firewall, which almost never block port 443) while still serving HTTPS on that port.
 
   * **[Streamripper 1.64.6 - DEPRECATED](../../docs/make/streamripper.md)<a id='streamripper'></a>**<br>
@@ -982,7 +982,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UnRAR 6.1.7/7.1.6 (binary only)](../../docs/make/unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
-  * **[usbids: usb.ids c70eea490a](../../docs/make/usbids.md)<a id='usbids'></a>**<br>
+  * **[usbids: usb.ids 635738b64e](../../docs/make/usbids.md)<a id='usbids'></a>**<br>
     This package provides up-to-date version of the usb.ids file needed by many usb related packages.
 
   * **[util-linux 2.27.1 (binary only) - DEPRECATED](../../docs/make/util-linux.md)<a id='util-linux'></a>**<br>
@@ -993,7 +993,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### V
 
-  * **[Vim 9.1.0181 (binary only)](../../docs/make/vim.md)<a id='vim'></a>**<br>
+  * **[Vim 9.1.1275 (binary only)](../../docs/make/vim.md)<a id='vim'></a>**<br>
     An improved version of VI
 
   * **[VLMCSD svn1113](../../docs/make/vlmcsd.md)<a id='vlmcsd'></a>**<br>
@@ -1024,7 +1024,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Wget 1.25.0 (binary only)](../../docs/make/wget.md)<a id='wget'></a>**<br>
     GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals, etc.
 
-  * **[Whois 5.5.23 (binary only)](../../docs/make/whois.md)<a id='whois'></a>**<br>
+  * **[Whois 5.6.1 (binary only)](../../docs/make/whois.md)<a id='whois'></a>**<br>
     Whois - client for the whois directory service.
 
   * **[wireguard-tools 1.0.20210914](../../docs/make/wireguard.md)<a id='wireguard'></a>**<br>

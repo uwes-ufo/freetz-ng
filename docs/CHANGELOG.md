@@ -54,7 +54,7 @@ Latest changes
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.52
 
  - Host tools:
-   * ca-bundle 2025-02-25
+   * ca-bundle 2025-05-20
    * cmake 4.0.2
    * dtc 1.7.2
    * fakeroot 1.37.1.2
@@ -69,9 +69,10 @@ Latest changes
    * ncurses 6.5-20250419
    * openssl 3.5.0
    * pkgconf 2.4.3
-   * precompiled host-tools 2025-05-19
+   * precompiled host-tools 2025-05-20
    * precompiled toolchains r25866
-   * python 3.12.10
+   * python 3.13.3
+   * python2-pip 20.3.4
    * python2-setuptools 44.1.1
    * python3-packaging 25.0
    * sfk 2.0.0.3
@@ -85,14 +86,16 @@ Latest changes
  - Packages:
    * ACME.sh 3.1.1
    * Atop 2.11.1
-   * BIND 9.11.37/9.20.7
+   * BIND 9.11.37/9.20.8
    * CA-bundle 2025-02-25
+   * Curl 8.13.0
    * Dante 1.4.4
    * dehydrated 0.7.2
    * Dnsmasq 2.80/2.91
    * Dropbear 2025.88
    * dtc 1.7.2
    * Git 2.49.0
+   * HAProxy 2.6.22
    * htop 1.0.3/3.4.1
    * ImageMagick 7.1.0-62/7.1.1-46
    * iptables 1.4.11.1/1.4.21/1.6.2/1.8.11
@@ -104,6 +107,7 @@ Latest changes
    * Mosquitto 2.0.21
    * Nano 8.4
    * NcFTP 3.3.0
+   * Nmap 4.76/5.51/7.97
    * OpenSSH 9.3p2/10.0p1
    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.16/3.5.0
    * OpenVPN 2.4.12/2.5.11/2.6.14
@@ -111,15 +115,19 @@ Latest changes
    * python-Cffi 1.15.1
    * python-PyCrypto 2.7a1
    * python-PyCryptodome 3.23.0
+   * Screen 4.9.1/5.0.1
    * SFK 2.0.0.3
    * Smartmontools 7.5
    * socat 1.8.0.3
+   * sslh 2.2.3
    * strace 4.9/5.0/6.14
    * tcpdump 4.1.1/4.99.4
    * Tor 0.4.8.16
    * uMurmur 0.2.20/0.3.1
    * Unbound 1.23.0
    * UnRAR 6.1.7/7.1.6
+   * usb.ids 635738b64e
+   * Vim 9.1.1275
    * xsltproc 1.1.43
 
  - Libraries:
@@ -234,6 +242,7 @@ Latest changes
    * Unbound 1.22.0
    * VLMCSD svn1113
    * Wget 1.25.0
+   * Whois 5.6.1
    * xsltproc 1.1.42
    * XZ 5.6.4
 
@@ -303,7 +312,7 @@ Latest changes
    * Atop 2.10.0
    * AutoFS 5.0.5/5.1.9
    * BIND 9.11.37/9.18.28
-   * BIRD 1.6.8/2.15.1
+   * BIRD 1.6.8/2.17.1
    * Bftpd 6.2
    * bvi 1.4.2
    * CA-bundle 2024-07-02

@@ -9,20 +9,16 @@ $(PKG)_SITE:=https://distfiles.macports.org/py-setuptools,https://files.pythonho
 ### CVSREPO:=https://github.com/pypa/setuptools
 ### SUPPORT:=X
 
-$(PKG)_DEPENDS_ON+=python2-host
+$(PKG)_DEPENDS_ON+=python2-pip-host
 
-$(PKG)_SUBDIRS:=pkg_resources setuptools
-$(PKG)_DIRECTORIES:=$(addprefix $($(PKG)_DIR)/,$($(PKG)_SUBDIRS))
-$(PKG)_TARGET_DIRECTORY:=$(HOST_TOOLS_DIR)/usr/lib/python$(call GET_MAJOR_VERSION,$(PYTHON2_HOST_VERSION))/site-packages/setuptools
+$(PKG)_TARGET_DIRECTORY:=$(HOST_TOOLS_DIR)/usr/lib/python$(call GET_MAJOR_VERSION,$(PYTHON2_HOST_VERSION))/site-packages
 
 
 $(TOOLS_SOURCE_DOWNLOAD)
 $(TOOLS_UNPACKED)
 
 $($(PKG)_DIR)/.installed: $($(PKG)_DIR)/.unpacked
-	for x in $(PYTHON2_SETUPTOOLS_HOST_DIRECTORIES); do \
-	cp -fa $${x} $(dir $(PYTHON2_SETUPTOOLS_HOST_TARGET_DIRECTORY)); \
-	done
+	$(HOST_TOOLS_DIR)/usr/bin/python2 -m pip install --no-cache-dir $(PYTHON2_SETUPTOOLS_HOST_DIR)/ $(SILENT)
 	@touch $@
 
 $(pkg)-precompiled: $($(PKG)_DIR)/.installed
@@ -34,6 +30,7 @@ $(pkg)-dirclean:
 	$(RM) -r $(PYTHON2_SETUPTOOLS_HOST_DIR)
 
 $(pkg)-distclean: $(pkg)-dirclean
-	$(RM) -r $(PYTHON2_SETUPTOOLS_HOST_TARGET_DIRECTORY)
+	$(RM) -r $(PYTHON2_SETUPTOOLS_HOST_TARGET_DIRECTORY)/setuptools/
+	$(RM) -r $(PYTHON2_SETUPTOOLS_HOST_TARGET_DIRECTORY)/setuptools-*.egg-info/
 
 $(TOOLS_FINISH)
