@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 2493a8fb9e uwe 2025-05-21
+#  freetz-ng f4648745a1 uwe 2025-05-21
 #
 
 #
@@ -174,13 +174,25 @@ FREETZ_TYPE_FIRMWARE_07_5X=y
 FREETZ_AVM_VERSION_LATEST_MAJOR=y
 FREETZ_TYPE_FIRMWARE_DETECT_LATEST=y
 FREETZ_TYPE_FIRMWARE_FINAL=y
+
+#
+# WARNINGS -------------------------------------------------
+#
+
+#
+#  - replace-kernel might not work at all
+#
+
+#
+#    or cause stability issues
+#
 # FREETZ_TYPE_ALIEN_HARDWARE is not set
 
 #
 # Original components --------------------------------------
 #
 FREETZ_TARGET_IPV6_SUPPORT=y
-# FREETZ_REPLACE_KERNEL is not set
+FREETZ_REPLACE_KERNEL=y
 
 #
 # Removal patches
@@ -667,10 +679,7 @@ FREETZ_PACKAGE_NANO_SYNTAX_FILE_XML=y
 # FREETZ_PACKAGE_NETPBM is not set
 # FREETZ_PACKAGE_NETSNMP is not set
 # FREETZ_PACKAGE_NFS_UTILS is not set
-
-#
-# NFS-root (not available, needs replace kernel)
-#
+# FREETZ_PACKAGE_NFSROOT is not set
 # FREETZ_PACKAGE_NGIRCD is not set
 # FREETZ_PACKAGE_NMAP is not set
 # FREETZ_PACKAGE_NOIP is not set
@@ -854,10 +863,7 @@ FREETZ_PACKAGE_WGET_CA_BUNDLE=y
 # FREETZ_PACKAGE_WGET_STATIC is not set
 FREETZ_WGET=y
 # FREETZ_PACKAGE_WHOIS is not set
-
-#
-# wireguard-tools (not available, needs replace kernel)
-#
+# FREETZ_PACKAGE_WIREGUARD is not set
 # FREETZ_PACKAGE_WOL is not set
 # FREETZ_PACKAGE_WPUT is not set
 # end of W
@@ -1399,8 +1405,9 @@ FREETZ_LIB_libprivatekeypassword=y
 #
 # Kernel modules
 #
-FREETZ_MODULES_KOON=y
+# FREETZ_MODULES_KOON is not set
 FREETZ_MODULES_OWN=""
+# FREETZ_MODULES_ALL is not set
 
 #
 # crypto
@@ -3239,6 +3246,10 @@ FREETZ_FWMOD_VALIDATE=y
 #
 # FREETZ_SQUASHFS_BLOCKSIZE_ORIG is not set
 FREETZ_SQUASHFS_BLOCKSIZE_65536=y
+# FREETZ_SQUASHFS_BLOCKSIZE_131072 is not set
+# FREETZ_SQUASHFS_BLOCKSIZE_262144 is not set
+# FREETZ_SQUASHFS_BLOCKSIZE_524288 is not set
+# FREETZ_SQUASHFS_BLOCKSIZE_1048576 is not set
 FREETZ_SQUASHFS_BLOCKSIZE=65536
 # end of SquashFS options
 
