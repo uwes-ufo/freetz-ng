@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 6bf6f51570 uwe 2025-05-21
+#  freetz-ng 9bbe837bad uwe 2025-05-21
 #
 
 #
@@ -933,9 +933,9 @@ FREETZ_OPENSSL_VERSION_35_MAX=y
 # Data compression
 #
 # FREETZ_LIB_libdeflate is not set
-FREETZ_LIB_liblz4=y
+# FREETZ_LIB_liblz4 is not set
 # FREETZ_LIB_liblzo2 is not set
-FREETZ_LIB_liblzma=y
+# FREETZ_LIB_liblzma is not set
 FREETZ_LIB_libz=y
 # end of Data compression
 
@@ -1003,7 +1003,7 @@ FREETZ_LIB_libgcc_s=y
 # FREETZ_LIB_liblept is not set
 # FREETZ_LIB_libpng16 is not set
 # FREETZ_LIB_libgd is not set
-FREETZ_LIB_libopenjpeg=y
+# FREETZ_LIB_libopenjpeg is not set
 # FREETZ_LIB_libopenjp2 is not set
 
 #
@@ -1043,7 +1043,7 @@ FREETZ_LIB_libopenjpeg=y
 #
 # FREETZ_LIB_libFLAC is not set
 # FREETZ_LIB_libmad is not set
-FREETZ_LIB_libogg=y
+# FREETZ_LIB_libogg is not set
 # FREETZ_LIB_libopus is not set
 # FREETZ_LIB_libspeex is not set
 # FREETZ_LIB_libspeexdsp is not set
@@ -1052,14 +1052,14 @@ FREETZ_LIB_libogg=y
 #
 # FFmpeg libraries
 #
-FREETZ_LIB_libavcodec=y
-FREETZ_LIB_libavdevice=y
-FREETZ_LIB_libavfilter=y
-FREETZ_LIB_libavformat=y
-FREETZ_LIB_libavutil=y
-FREETZ_LIB_libpostproc=y
-FREETZ_LIB_libswresample=y
-FREETZ_LIB_libswscale=y
+# FREETZ_LIB_libavcodec is not set
+# FREETZ_LIB_libavdevice is not set
+# FREETZ_LIB_libavfilter is not set
+# FREETZ_LIB_libavformat is not set
+# FREETZ_LIB_libavutil is not set
+# FREETZ_LIB_libpostproc is not set
+# FREETZ_LIB_libswresample is not set
+# FREETZ_LIB_libswscale is not set
 # end of FFmpeg libraries
 
 #
@@ -1069,9 +1069,9 @@ FREETZ_LIB_libswscale=y
 #
 # Vorbis video codec ---------------------
 #
-FREETZ_LIB_libvorbis=y
-FREETZ_LIB_libvorbisenc=y
-FREETZ_LIB_libvorbisfile=y
+# FREETZ_LIB_libvorbis is not set
+# FREETZ_LIB_libvorbisenc is not set
+# FREETZ_LIB_libvorbisfile is not set
 # end of Video codecs
 # end of Audio and video codecs
 
@@ -1261,10 +1261,10 @@ FREETZ_LIB_libconfig=y
 # FREETZ_LIB_libelf is not set
 # FREETZ_LIB_libev is not set
 # FREETZ_LIB_libevent is not set
-FREETZ_LIB_libffi=y
+# FREETZ_LIB_libffi is not set
 # FREETZ_LIB_liblua is not set
 # FREETZ_LIB_libnfsidmap is not set
-FREETZ_LIB_libpopt=y
+# FREETZ_LIB_libpopt is not set
 FREETZ_LIB_libprivatekeypassword=y
 # FREETZ_LIB_libprotobuf_c is not set
 # FREETZ_LIB_librrd is not set
@@ -2905,35 +2905,18 @@ EXTERNAL_FREETZ_PACKAGE_WGET=y
 #
 # libraries
 #
-EXTERNAL_FREETZ_LIB_libavcodec=y
-EXTERNAL_FREETZ_LIB_libavdevice=y
-EXTERNAL_FREETZ_LIB_libavfilter=y
-EXTERNAL_FREETZ_LIB_libavformat=y
-EXTERNAL_FREETZ_LIB_libavutil=y
-EXTERNAL_FREETZ_LIB_libpostproc=y
-EXTERNAL_FREETZ_LIB_libswresample=y
-EXTERNAL_FREETZ_LIB_libswscale=y
 # EXTERNAL_FREETZ_LIB_libconfig is not set
 # EXTERNAL_FREETZ_LIB_libcrypto is not set
 # EXTERNAL_FREETZ_LIB_libssl is not set
 # EXTERNAL_FREETZ_LIB_libcurl is not set
 # EXTERNAL_FREETZ_LIB_libcap_ng is not set
 # EXTERNAL_FREETZ_LIB_libexpat is not set
-# EXTERNAL_FREETZ_LIB_libffi is not set
 # EXTERNAL_FREETZ_LIB_libncurses is not set
 # EXTERNAL_FREETZ_LIB_libncursesw is not set
-# EXTERNAL_FREETZ_LIB_liblz4 is not set
-# EXTERNAL_FREETZ_LIB_liblzma is not set
 # EXTERNAL_FREETZ_LIB_libmbedcrypto is not set
 # EXTERNAL_FREETZ_LIB_libmbedtls is not set
 # EXTERNAL_FREETZ_LIB_libmbedx509 is not set
-EXTERNAL_FREETZ_LIB_libogg=y
-EXTERNAL_FREETZ_LIB_libopenjpeg=y
 # EXTERNAL_FREETZ_LIB_libpcre2 is not set
-# EXTERNAL_FREETZ_LIB_libpopt is not set
-EXTERNAL_FREETZ_LIB_libvorbis=y
-EXTERNAL_FREETZ_LIB_libvorbisenc=y
-EXTERNAL_FREETZ_LIB_libvorbisfile=y
 # EXTERNAL_FREETZ_LIB_libz is not set
 
 #
