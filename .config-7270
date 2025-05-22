@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng d5f21211c8 uwe 2025-05-22
+#  freetz-ng afafbc4b58 uwe 2025-05-22
 #
 
 #
@@ -1226,9 +1226,7 @@ FREETZ_MODULES_OWN=""
 #
 # fs
 #
-FREETZ_MODULE_ext4=y
-FREETZ_MODULE_crc16=y
-FREETZ_MODULE_jbd2=y
+# FREETZ_MODULE_ext4 is not set
 FREETZ_MODULE_fat=y
 FREETZ_MODULE_vfat=y
 # FREETZ_MODULE_hfs is not set
