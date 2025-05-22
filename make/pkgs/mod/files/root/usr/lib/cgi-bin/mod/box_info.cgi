@@ -184,6 +184,51 @@ fi
 
 sec_end
 
+
+sec_begin "$(lang de:"Firmware" en:"Firmware")"
+
+echo "<dl class='info'>"
+echo "<dt>Firmware$(lang de:"" en:" ")version</dt><dd>${CONFIG_VERSION_MAJOR}.${CONFIG_VERSION}"
+echo "<dt>AVM-Revision</dt><dd>$avm_revision</dd>"
+echo "<dt>$(lang de:"Sprache" en:"Language")</dt><dd>$Language</dd>"
+echo "</dl>"
+
+echo "<dl class='info'>"
+echo "<dt>$(lang de:"Erstellungsdatum" en:"Compilation date") (AVM)</dt><dd>$avm_date</dd>"
+echo "</dl>"
+
+sec_end
+
+
+sec_begin "$(lang de:"MTDs" en:"MTDs
+echo "<dl class='info'>"
+echo "<pre class='log ${class:-small}'>"
+(
+mlen() { local x=$3; while [ ${#x} -lt $1 ]; do x="$2$x"; done; echo "$x"; }
+echo "Device   Bytes       Kilobytes     Megabytes   Name"
+mlen 69 '='
+grep ^mtd /proc/mtd | while read a b c d; do
+x="$(mlen 9 ' ' $((0x$b/1024)) )";
+y="$((0x$b*1000/1024/1024))";
+r="$(mlen 3 '0' ${y:0-3} )";
+l="${y::-3}";
+l="$(mlen 5 ' ' ${l:-0} )";
+echo "$a   $b  $x KB  ${l:-x},${r:-0} MB   ${d//\"/}";
+done
+) | html
+echo '</pre>'
+echo "</dl>"
+sec_end
+
+
+avsar_ver=/proc/avalanche/avsar_ver
+if [ -r "$avsar_ver" ]; then
+	sec_begin "$(lang de:"DSL-Treiber und -Hardware" en:"DSL drivers and hardware")"
+		echo "<pre class='plain'>$(cat "$avsar_ver")</pre>"
+	sec_end
+fi
+
+
 donet_val="$(cgi_param net)"
 if [ "$donet_val" != "0" ]; then
 sec_begin "$(lang de:"Netzwerk" en:"Network")"
@@ -236,26 +281,6 @@ fi
 sec_end
 fi
 
-avsar_ver=/proc/avalanche/avsar_ver
-if [ -r "$avsar_ver" ]; then
-	sec_begin "$(lang de:"DSL-Treiber und -Hardware" en:"DSL drivers and hardware")"
-		echo "<pre class='plain'>$(cat "$avsar_ver")</pre>"
-	sec_end
-fi
-
-sec_begin "$(lang de:"Firmware" en:"Firmware")"
-
-echo "<dl class='info'>"
-echo "<dt>Firmware$(lang de:"" en:" ")version</dt><dd>${CONFIG_VERSION_MAJOR}.${CONFIG_VERSION}"
-echo "<dt>AVM-Revision</dt><dd>$avm_revision</dd>"
-echo "<dt>$(lang de:"Sprache" en:"Language")</dt><dd>$Language</dd>"
-echo "</dl>"
-
-echo "<dl class='info'>"
-echo "<dt>$(lang de:"Erstellungsdatum" en:"Compilation date") (AVM)</dt><dd>$avm_date</dd>"
-echo "</dl>"
-
-sec_end
 
 sec_begin "$(lang de:"Eigenschaften" en:"Properties")"
 	echo -n '<div class="textwrapper"><textarea style="margin-top:6px;" name="content" rows="5" cols="10" wrap="off" readonly>'
