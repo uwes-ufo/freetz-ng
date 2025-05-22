@@ -200,7 +200,7 @@ echo "</dl>"
 sec_end
 
 
-sec_begin "$(lang de:"MTDs" en:"MTDs
+sec_begin "$(lang de:"MTDs" en:"MTDs")"
 echo "<dl class='info'>"
 echo "<pre class='log ${class:-small}'>"
 (
