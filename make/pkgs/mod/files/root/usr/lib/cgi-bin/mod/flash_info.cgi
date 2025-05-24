@@ -27,6 +27,15 @@ echo "</dl>"
 sec_end
 
 
+sec_begin "$(lang de:"Dateisysteme" en:"Filesystems")"
+echo "<dl class='info'>"
+echo "<pre class='log.unlimited'>"
+df -h | html
+echo '</pre>'
+echo "</dl>"
+sec_end
+
+
 if which ubinfo >/dev/null; then
 sec_begin "$(lang de:"UBI-Info" en:"UBI info")"
 echo "<dl class='info'>"
@@ -36,14 +45,5 @@ echo '</pre>'
 echo "</dl>"
 sec_end
 fi
-
-
-sec_begin "$(lang de:"Dateisysteme" en:"Filesystems")"
-echo "<dl class='info'>"
-echo "<pre class='log.unlimited'>"
-df -h | html
-echo '</pre>'
-echo "</dl>"
-sec_end
 
 

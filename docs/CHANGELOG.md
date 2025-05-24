@@ -86,7 +86,7 @@ Latest changes
  - Packages:
    * ACME.sh 3.1.1
    * Atop 2.11.1
-   * BIND 9.11.37/9.20.8
+   * BIND 9.11.37/9.20.9
    * CA-bundle 2025-02-25
    * Dante 1.4.4
    * dehydrated 0.7.2
