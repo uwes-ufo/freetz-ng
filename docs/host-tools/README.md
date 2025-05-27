@@ -50,7 +50,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### K
 
-  * **[kconfig 6.14](kconfig-host.md)<a id='kconfig-host'></a>**<br>
+  * **[kconfig 6.15](kconfig-host.md)<a id='kconfig-host'></a>**<br>
 
 ### L
 
@@ -70,7 +70,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[make 4.4.1](make-host.md)<a id='make-host'></a>**<br>
 
-  * **[meson 1.8.0](meson-host.md)<a id='meson-host'></a>**<br>
+  * **[meson 1.8.1](meson-host.md)<a id='meson-host'></a>**<br>
 
   * **[mklibs 0.1.45](mklibs-host.md)<a id='mklibs-host'></a>**<br>
 

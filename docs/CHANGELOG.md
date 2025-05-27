@@ -61,10 +61,10 @@ Latest changes
    * gmp 6.3.0
    * gperf 3.2
    * iPerf3 3.3/3.19
-   * kconfig 6.14
+   * kconfig 6.15
    * libtool 2.5.4
    * m4 1.4.20
-   * meson 1.8.0
+   * meson 1.8.1
    * ncftp 3.3.0
    * ncurses 6.5-20250419
    * openssl 3.5.0
@@ -119,7 +119,7 @@ Latest changes
    * Smartmontools 7.5
    * socat 1.8.0.3
    * sslh 2.2.3
-   * strace 4.9/5.0/6.14
+   * strace 4.9/5.0/6.15
    * tcpdump 4.1.1/4.99.4
    * Tor 0.4.8.16
    * uMurmur 0.2.20/0.3.1
