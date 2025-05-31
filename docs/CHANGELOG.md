@@ -128,6 +128,7 @@ Latest changes
    * UnRAR 6.1.7/7.1.6
    * usb.ids 635738b64e
    * Vim 9.1.1275
+   * wireguard-tools 1.0.20250521
    * xsltproc 1.1.43
 
  - Libraries:
