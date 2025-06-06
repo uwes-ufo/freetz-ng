@@ -337,6 +337,7 @@ config FREETZ_DL_SOURCE
 	default "FRITZ.Repeater_2400-07.12.image"                                                     if FREETZ_TYPE_2400_W5                         && FREETZ_TYPE_FIRMWARE_07_1X
 	default "FRITZ.Repeater_2400-07.29.image"                                                     if FREETZ_TYPE_2400_W5                         && FREETZ_TYPE_FIRMWARE_07_2X
 	default "FRITZ.Repeater_2400-07.58.image"                                                     if FREETZ_TYPE_2400_W5                         && FREETZ_TYPE_FIRMWARE_07_5X
+	default "FRITZ.Repeater_2400-08.10-120721-LabBETA.image"                                      if FREETZ_TYPE_2400_W5                         && FREETZ_TYPE_FIRMWARE_08_2X_LABOR
 	#
 	default "fritz.box_sl_wlan.09.04.34.image"                                                    if FREETZ_TYPE_3020                            && FREETZ_TYPE_FIRMWARE_04_XX
 	#
@@ -766,6 +767,7 @@ config FREETZ_DL_SOURCE_CONTAINER
 	string "Downloaded container file"                                                            if FREETZ_DL_OVERRIDE
 	depends                                                                                       on (FREETZ_TYPE_FIRMWARE_LABOR || FREETZ_TYPE_FIRMWARE_PLUS) && !FREETZ_TYPE_FIRMWARE_DETECT_LATEST
 	#
+	default "fritzrepeater-2400-labor-120721.zip"                                                 if FREETZ_TYPE_2400_W5
 	default "fritzbox-6591-labor-120711.zip"                                                      if FREETZ_TYPE_6591
 	default "fritzbox-6660-labor-120807.zip"                                                      if FREETZ_TYPE_6660
 	default "fritzbox-6690-labor-120808.zip"                                                      if FREETZ_TYPE_6690

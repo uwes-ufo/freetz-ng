@@ -71,7 +71,7 @@ Latest changes
    * pkgconf 2.4.3
    * precompiled host-tools 2025-05-20
    * precompiled toolchains r25866
-   * python 3.13.3
+   * python 3.13.4
    * python2-pip 20.3.4
    * python2-setuptools 44.1.1
    * python3-packaging 25.0
@@ -99,6 +99,7 @@ Latest changes
    * htop 1.0.3/3.4.1
    * ImageMagick 7.1.0-62/7.1.1-46
    * iptables 1.4.11.1/1.4.21/1.6.2/1.8.11
+   * jq 1.8.0
    * LCD4linux eadf4603
    * Lighttpd 1.4.79
    * Lua 5.1.5/5.4.7
@@ -141,7 +142,7 @@ Latest changes
    * libdeflate 1.24
    * libffi 3.4.8
    * libpcap 1.1.1/1.10.5
-   * libusb1 1.0.23/1.0.28
+   * libusb1 1.0.23/1.0.29
    * libuv 1.44.2/1.51.0
    * libpng 1.6.48
    * mbedTLS 2.7.19/2.28.10
