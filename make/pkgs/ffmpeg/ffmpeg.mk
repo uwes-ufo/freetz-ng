@@ -94,7 +94,7 @@ endif
 
 ifeq ($(strip $(FREETZ_PACKAGE_FFMPEG_SSL_MBEDTLS)),y)
 $(PKG)_DEPENDS_ON += mbedtls
-$(PKG)_CONFIGURE_OPTIONS += --disable-mbedtls
+$(PKG)_CONFIGURE_OPTIONS += --enable-mbedtls
 endif
 
 ifeq ($(strip $(FREETZ_PACKAGE_FFMPEG_SSL_GNUTLS)),y)
