@@ -1,7 +1,7 @@
-$(call PKG_INIT_BIN, 3.12.7)
+$(call PKG_INIT_BIN, 3.13.4)
 $(PKG)_MAJOR_VERSION:=$(call GET_MAJOR_VERSION,$($(PKG)_VERSION))
 $(PKG)_SOURCE:=Python-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=24887b92e2afd4a2ac602419ad4b596372f67ac9b077190f459aba390faf5550
+$(PKG)_HASH:=27b15a797562a2971dce3ffe31bb216042ce0b995b39d768cf15f784cc757365
 $(PKG)_SITE:=https://www.python.org/ftp/python/$($(PKG)_VERSION)
 ### WEBSITE:=https://www.python.org/
 ### MANPAGE:=https://docs.python.org/2/
