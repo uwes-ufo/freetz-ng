@@ -1553,7 +1553,7 @@ FREETZ_MODULES_OWN=""
 #
 # net
 #
-FREETZ_MODULE_yf_patchkernel=y
+#### FREETZ_MODULE_yf_patchkernel=y
 
 #
 #  bt
