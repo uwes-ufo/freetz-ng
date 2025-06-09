@@ -30,4 +30,4 @@ echo -n 'Welcome at '
 hostname
 uname -a
 echo
-[ $(hostname) == 'booster' ] && echo_booster || { [ $(hostname) == 'booster' ] && echo_toaster || echo_freetz_ng ; }
+[ $(hostname) == 'booster' ] && echo_booster || { [ $(hostname) == 'toaster' ] && echo_toaster || echo_freetz_ng ; }
