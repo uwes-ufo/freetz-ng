@@ -1,3 +1,12 @@
+echo_freetz_ng(){
+	cat << EOX
+   _____              _            _   _  ____
+  |  ___| __ ___  ___| |_ ____    | \ | |/ ___|
+  | |_ | '__/ _ \/ _ \ __|_  /____|  \| | |  _
+  |  _|| | |  __/  __/ |_ / /_____| |\  | |_| |
+  |_|  |_|  \___|\___|\__/___|    |_| \_|\____|
+EOX
+}
 echo_toaster(){
 	echo -e "\e[33m"
 	cat << EOX
@@ -21,4 +30,4 @@ echo -n 'Welcome at '
 hostname
 uname -a
 echo
-[ $(hostname) == 'booster' ] && echo_booster || echo_toaster
+[ $(hostname) == 'booster' ] && echo_booster || { [ $(hostname) == 'booster' ] && echo_toaster || echo_freetz_ng ; }
