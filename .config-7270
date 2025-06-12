@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 9110dc1ca3 uwe 2025-06-12
+#  freetz-ng 77bd3dd37b uwe 2025-06-12
 #
 
 #
@@ -2776,12 +2776,10 @@ FREETZ_TARGET_UCLIBC_REDUCED_LOCALE_SET=y
 #
 # Host-tools options ----------------------------------
 #
-# FREETZ_HOSTTOOLS_DOWNLOAD is not set
-FREETZ_HOSTTOOLS_BUILD=y
+FREETZ_HOSTTOOLS_DOWNLOAD=y
 # FREETZ_ROOTEMU_FAKEROOT is not set
 FREETZ_ROOTEMU_PSEUDO=y
 # FREETZ_TOOLS_KCONFIG_OLDSCHOOL is not set
-FREETZ_TOOLS_PATCHELF_VERSION_CURRENT=y
 # end of Toolchain options
 
 #
