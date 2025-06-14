@@ -32,7 +32,7 @@ choice
 		depends on  FREETZ_TARGET_GCC_4_MAX
 
 	config FREETZ_MBEDTLS_VERSION_CURRENT
-		bool "2.28"
+		bool "2.28 - DEPRECATED"
 		depends on !FREETZ_TARGET_GCC_4_MAX
 
 endchoice # "mbedTLS version"

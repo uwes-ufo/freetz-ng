@@ -55,7 +55,7 @@ Latest changes
 
  - Host tools:
    * ca-bundle 2025-05-20
-   * cmake 4.0.2
+   * cmake 4.0.3
    * dtc 1.7.2
    * fakeroot 1.37.1.2
    * gmp 6.3.0
@@ -64,14 +64,14 @@ Latest changes
    * kconfig 6.15
    * libtool 2.5.4
    * m4 1.4.20
-   * meson 1.8.1
+   * meson 1.8.2
    * ncftp 3.3.0
    * ncurses 6.5-20250419
    * openssl 3.5.0
    * pkgconf 2.4.3
    * precompiled host-tools 2025-05-20
    * precompiled toolchains r25866
-   * python 3.13.4
+   * python 3.13.5
    * python2-pip 20.3.4
    * python2-setuptools 44.1.1
    * python3-packaging 25.0
@@ -142,7 +142,7 @@ Latest changes
    * harfbuzz 11.2.1
    * libcap 2.49/2.75
    * libdeflate 1.24
-   * libffi 3.4.8
+   * libffi 3.5.1
    * libpcap 1.1.1/1.10.5
    * libusb1 1.0.23/1.0.29
    * libuv 1.44.2/1.51.0

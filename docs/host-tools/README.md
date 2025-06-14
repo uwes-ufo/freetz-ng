@@ -18,7 +18,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ca-bundle 2025-02-25](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 4.0.2](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 4.0.3](cmake-host.md)<a id='cmake-host'></a>**<br>
 
   * **[cpio 2.15](cpio-host.md)<a id='cpio-host'></a>**<br>
 
@@ -70,7 +70,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[make 4.4.1](make-host.md)<a id='make-host'></a>**<br>
 
-  * **[meson 1.8.1](meson-host.md)<a id='meson-host'></a>**<br>
+  * **[meson 1.8.2](meson-host.md)<a id='meson-host'></a>**<br>
 
   * **[mklibs 0.1.45](mklibs-host.md)<a id='mklibs-host'></a>**<br>
 
@@ -108,7 +108,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python2-setuptools 44.1.1](python2-setuptools-host.md)<a id='python2-setuptools-host'></a>**<br>
 
-  * **[python3 3.13.4](python3-host.md)<a id='python3-host'></a>**<br>
+  * **[python3 3.13.5](python3-host.md)<a id='python3-host'></a>**<br>
 
   * **[python3-packaging 25.0](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
 
