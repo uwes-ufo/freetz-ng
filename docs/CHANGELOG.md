@@ -147,7 +147,7 @@ Latest changes
    * libusb1 1.0.23/1.0.29
    * libuv 1.44.2/1.51.0
    * libpng 1.6.48
-   * mbedTLS 2.7.19/2.28.10
+   * mbedTLS 2.7.19/3.6.3.1
    * pango 1.56.3
    * pixman 0.44.2
 
