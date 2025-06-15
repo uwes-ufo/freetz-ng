@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 1a60be7fdf uwe 2025-06-15
+#  freetz-ng 07e6416a6b uwe 2025-06-15
 #
 
 #
@@ -762,7 +762,7 @@ FREETZ_PACKAGE_SYSLOGD_CGI=y
 # FREETZ_LIB_libmbedcrypto is not set
 # FREETZ_LIB_libmbedtls is not set
 # FREETZ_LIB_libmbedx509 is not set
-FREETZ_MBEDTLS_VERSION_ABANDON=y
+FREETZ_MBEDTLS_VERSION_207=y
 
 #
 # Nettle ---------------------------------
