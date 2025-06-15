@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 314f24c832 uwe 2025-06-15
+#  freetz-ng 1a7308c670 uwe 2025-06-15
 #
 
 #
@@ -1047,7 +1047,8 @@ FREETZ_LIB_libmbedcrypto=y
 # FREETZ_LIB_libmbedcrypto_WITH_GENRSA is not set
 FREETZ_LIB_libmbedtls=y
 FREETZ_LIB_libmbedx509=y
-FREETZ_MBEDTLS_VERSION_CURRENT=y
+FREETZ_MBEDTLS_VERSION_228=y
+# FREETZ_MBEDTLS_VERSION_306 is not set
 
 #
 # Nettle ---------------------------------
