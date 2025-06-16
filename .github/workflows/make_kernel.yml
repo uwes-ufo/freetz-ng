@@ -15,6 +15,13 @@ on:
         default: "08_2X_LABOR"
         type: choice
         options:
+          - "freetz_org"
+          - "freetz-ng"
+          - "Fos04"
+          - "Fos05"
+          - "Fos06"
+          - "Fos07"
+          - "Fos08"
           - "04_XX"
           - "05_2X"
           - "05_5X"
@@ -47,39 +54,39 @@ jobs:
       matrix: ${{ steps.parse.outputs.matrix }}
 
     steps:
-#     - name: clone
-#       uses: actions/checkout@v4
+
       - name: parse
         id: parse
         run: |
           FOS="${{ github.event.inputs.fos }}"
           [ -z "$FOS" ] && FOS="08_2X_LABOR"
-          echo "fos=$FOS" >> $GITHUB_OUTPUT
-          case "$FOS" in
-          04_XX) box='["FON","WLAN","300IP","W501V","2170","3020","3030","3130","3131","3170","5010","5050","5124","5140","7050","7112","7113","7140","7141","7150","7170","7270_V1","7570"]' ;;
-          05_2X) box='["7270_V2","7340","7390"]' ;;
-          05_5X) box='["3270_V2","3270_V3","7240","7270_V2"]' ;;
-          06_0X) box='["7240","7270_V2","7340","7390"]' ;;
-          06_2X) box='["0300","0540","0546","1750","1759","3272","3370","3390","3490","6810","6840","6842","7272","7312","7320","7330_SL","7330_XL","7360_SL","7360_V1","7360_V2","7362","7369","7390","7412","7430","7490"]' ;;
-          06_5X) box='["0450","0540","0546","1750","1759","3272","3370","3390","3490","6840","7272","7312","7330_SL","7330_XL","7360_V2","7362","7390","7412","7430","7490","7560","7580"]' ;;
-          06_8X) box='["3272","3490","4020","6490","6590","6820_V1","6840","6890","7272","7360_V2","7362","7390","7412","7430","7490","7560","7580","7590_W5"]' ;;
-          06_9X) box='["0450","0540","0546","1240_W5","7490","7560","7580","7590_W5"]' ;;
-          07_0X) box='["0450","0540","0546","1240_W5","1260_V1","1750","1759","3000_W5","3490","4020","4040","5490","5491","6490","6590","6591","6820_V1","6890","7362","7430","7490","7530_W5","7560","7580","7590_W5"]' ;;
-          07_1X) box='["0450","0540","0546","1200_W5","1240_W5","1260_V1","1750","2400_W5","3000_W5","3490","4040","5490","5491","6430","6490","6590","6591","6660","6820_V1","6820_V2","6890","7362","7430","7490","7520_V1","7530_W5","7560","7580","7581","7582","7583_V1","7590_W5"]' ;;
-          07_2X) box='["1200_W5","1200_W6","1260_V1","1260_V2","1750","2400_W5","3000_W5","3000_W6","3490","4040","4060","5490","5491","5530","5590","6000","6850_V1","6850_V2","6890","7430","7490","7510","7520_V1","7520_V2","7530_W5","7530_W6_V1","7560","7583_V1","7583_V2","7590_W5","7590_W6","6430","6490","6590","6591","6660","6690","6820_V1","6820_V3","7580","6820_V2"]' ;;
-          07_5X) box='["1200_W5","1200_W6","1240_W6","1260_V1","1260_V2","2400_W5","3000_W5","3000_W6","4040","4050","4060","5530","5590","5690_PRO","6000","6490","6590","6850_V1","6850_V2","6890","7490","7510","7520_V1","7520_V2","7530_W5","7530_W6_V1","7583_V1","7583_V2","7590_W5","7590_W6","7690","GATE","6820_V2","6820_V4","6591","6660","6670","6690","6820_V3"]' ;;
-          08_0X) box='["3000_W6","4040","4050","4060","4690","5530","5590","5690_NIX","5690_PRO","6591","6660","6670","6690","6850_V1","6850_V2","6860","7510","7520_V1","7520_V2","7530_W5","7530_W6_V1","7583_V1","7583_V2","7590_W5","7590_W6","7682","7690","GATE"]' ;;
-          08_2X_LABOR) box='["2400_W5","6591","6660","6690","7590_W5","7590_W6"]' ;;
-          esac
-          [ -z "$box" ] && echo "No devices for this fos version!" && exit 1
-          echo "matrix=$box" >> $GITHUB_OUTPUT
+          wget -q https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY/raw/refs/heads/$GITHUB_REF_NAME/config/avm/availability.in -O "$RUNNER_TEMP/availability.in"
+          [ "$FOS" = "alles" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_//p" "$RUNNER_TEMP/availability.in")"
+          [ "$FOS" = "freetz_org" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[456])/\1/p" "$RUNNER_TEMP/availability.in") 07_0X 07_1X"
+          [ "$FOS" = "freetz-ng" ] && FOS="07_2X 07_5X $(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[89])/\1/p" "$RUNNER_TEMP/availability.in")"
+          [ "$FOS" != "${FOS#Fos}" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(${FOS#Fos})/\1/p" "$RUNNER_TEMP/availability.in")"
+          for fos in $FOS; do \
+            cat "$RUNNER_TEMP/availability.in" | \
+              grep -A999 -m1 "^config FREETZ_AVM_HAS_FIRMWARE_$fos$" | grep -B999 -m2 "^config FREETZ_AVM_HAS_" | \
+              sed "s/[&| \t\\()]//g" | sed -rn "s/^FREETZ_TYPE_//p" | grep -vE "^(LANG_|xxxx$)" | sort | \
+              while read -r box; do echo -n "$matrix{fos:\"$fos\",box:\"$box\"},"; done; \
+          done | sed 's/^{/[&/;s/},$/}]/' > "$RUNNER_TEMP/availability.matrix"
+          [ ! -s "$RUNNER_TEMP/availability.matrix" ] && echo "No devices for this fos version!" && exit 1
+          echo "matrix=$(cat "$RUNNER_TEMP/availability.matrix")" >> $GITHUB_OUTPUT
 #         echo "matrix=$(jq -c . < ./some.json)" >> $GITHUB_OUTPUT
 #         echo "matrix=$(ls ./dir/file.* | jq -R -s -c 'split("\n")[:-1]')" >> "$GITHUB_OUTPUT"
+#
+#         #https://github.com/Freetz-NG/freetz-ng/raw/refs/heads/master/config/avm/availability.in
+#         #GITHUB_TOKEN=gehaim
+#         #GITHUB_SERVER_URL=http://github.com
+#         #GITHUB_REPOSITORY=Freetz-NG/freetz-ng
+#         #GITHUB_REF_NAME=master
+#         RUNNER_TEMP=config/avm
+#         FOS=08_2X_LABOR
 
       - name: vars
         run: |
           echo "################################################################"
-          echo "FOS=${{ steps.parse.outputs.fos }}"
           echo "BOX=${{ steps.parse.outputs.matrix }}"
 
   build:
@@ -93,12 +100,12 @@ jobs:
       fail-fast: false
       matrix:
         fritz: ${{ fromJson(needs.matrizifizieren.outputs.matrix) }}
-    name: ${{ github.event.inputs.fos }}${{ github.event.inputs.fos != '' && ' - ' || '' }}${{ matrix.fritz }}
+    name: "${{ matrix.fritz.fos }} - ${{ matrix.fritz.box }}"
     runs-on: ubuntu-latest
 #   if: github.repository == 'freetz-ng/freetz-ng'
 
     env:
-      CACHE_KEY: "${{ github.workflow }}--${{ matrix.fritz }}"
+      CACHE_KEY: "${{ github.workflow }}--${{ matrix.fritz.fos }}--${{ matrix.fritz.box }}"
     steps:
 
 #     - name: update
@@ -148,8 +155,8 @@ jobs:
 
       - name: config
         run: |
-          FOS="${{ github.event.inputs.fos }}"
-          [ -z "$FOS" ] && FOS="08_2X_LABOR"
+          FOS="${{ matrix.fritz.fos }}"
+          BOX="${{ matrix.fritz.box }}"
           truncate -s0 .config
           echo 'FREETZ_MODULES_OWN="freetz"'                                                          >> .config
           for x in  UDEVMOUNT                               ; do echo "# FREETZ_PATCH_$x is not set"  >> .config; done
@@ -170,7 +177,7 @@ jobs:
           echo 'FREETZ_DOWNLOAD_TOOLCHAIN=y'                                                          >> .config
           echo 'FREETZ_HOSTTOOLS_DOWNLOAD=y'                                                          >> .config
           wget -q "${{ secrets.ACTIONS_CUSTOM }}cfg" -O cfg 2>/dev/null && mv cfg .config || rm -f cfg
-          grep -q '^FREETZ_TYPE_' .config || echo 'FREETZ_TYPE_${{ matrix.fritz }}=y'                 >> .config
+          grep -q '^FREETZ_TYPE_' .config || echo 'FREETZ_TYPE_$BOX=y'                                >> .config
           grep -q '^FREETZ_TYPE_FIRMWARE_' .config || echo "FREETZ_TYPE_FIRMWARE_$FOS=y"              >> .config
           echo "################################################################" && du .config && wc -l .config
 
