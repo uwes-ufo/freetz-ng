@@ -103,7 +103,7 @@ Latest changes
    * jq 1.8.0
    * LCD4linux eadf4603
    * Lighttpd 1.4.79
-   * Lua 5.1.5/5.4.7
+   * Lua 5.1.5/5.4.8
    * mc (Midnight Commander) 4.8.31/4.8.33
    * Minicom 2.10
    * Mosquitto 2.0.21
@@ -131,6 +131,7 @@ Latest changes
    * UnRAR 6.1.7/7.1.6
    * usb.ids 635738b64e
    * Vim 9.1.1275
+   * Whois 5.6.2
    * wireguard-tools 1.0.20250521
    * xsltproc 1.1.43
 
@@ -150,6 +151,7 @@ Latest changes
    * mbedTLS 2.7.19/2.28.10/3.6.3.1
    * pango 1.56.3
    * pixman 0.44.2
+   * readline 6.3-p8/8.2
 
  - Firmware updates:
    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

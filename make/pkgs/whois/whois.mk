@@ -1,6 +1,6 @@
-$(call PKG_INIT_BIN, 5.6.1)
+$(call PKG_INIT_BIN, 5.6.2)
 $(PKG)_SOURCE:=$(pkg)_$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=86b4d99d1ea219d2eaa20257b9c549642f101393b4b9369c391370a39341fc32
+$(PKG)_HASH:=7fbcbc00b7aa321ac1af28a85d86d3ce7b11db1d4a2317b25407be04e506ead0
 $(PKG)_SITE:=http://ftp.debian.org/debian/pool/main/w/whois
 ### WEBSITE:=https://www.linux.it/~md/software/
 ### MANPAGE:=https://manpages.debian.org/whois/whois.1.en.html

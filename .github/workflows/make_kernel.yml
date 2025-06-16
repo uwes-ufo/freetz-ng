@@ -46,8 +46,8 @@ jobs:
   matrizifizieren:
     container:
 #     image: ubuntu:20.04
-#     image: freetzng/firmware
-      image: ghcr.io/freetz-ng/firmware
+#     image: freetzng/generate
+      image: ghcr.io/freetz-ng/generate
     runs-on: ubuntu-latest
 
     outputs:
@@ -55,39 +55,35 @@ jobs:
 
     steps:
 
+      - name: clone
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          umask 0022
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git clone https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
+
       - name: parse
         id: parse
         run: |
           FOS="${{ github.event.inputs.fos }}"
           [ -z "$FOS" ] && FOS="08_2X_LABOR"
-          wget -q https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY/raw/refs/heads/$GITHUB_REF_NAME/config/avm/availability.in -O "$RUNNER_TEMP/availability.in"
-          [ "$FOS" = "alles" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_//p" "$RUNNER_TEMP/availability.in")"
-          [ "$FOS" = "freetz_org" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[456])/\1/p" "$RUNNER_TEMP/availability.in") 07_0X 07_1X"
-          [ "$FOS" = "freetz-ng" ] && FOS="07_2X 07_5X $(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[89])/\1/p" "$RUNNER_TEMP/availability.in")"
-          [ "$FOS" != "${FOS#Fos}" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(${FOS#Fos})/\1/p" "$RUNNER_TEMP/availability.in")"
+          [ "$FOS" = "alles" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_//p" config/avm/availability.in)"
+          [ "$FOS" = "freetz_org" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[456])/\1/p" config/avm/availability.in) 07_0X 07_1X"
+          [ "$FOS" = "freetz-ng" ] && FOS="07_2X 07_5X $(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[89])/\1/p" config/avm/availability.in)"
+          [ "$FOS" != "${FOS#Fos}" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(${FOS#Fos})/\1/p" config/avm/availability.in)"
           for fos in $FOS; do \
-            cat "$RUNNER_TEMP/availability.in" | \
+            cat config/avm/availability.in | \
               grep -A999 -m1 "^config FREETZ_AVM_HAS_FIRMWARE_$fos$" | grep -B999 -m2 "^config FREETZ_AVM_HAS_" | \
               sed "s/[&| \t\\()]//g" | sed -rn "s/^FREETZ_TYPE_//p" | grep -vE "^(LANG_|xxxx$)" | sort | \
               while read -r box; do echo -n "$matrix{fos:\"$fos\",box:\"$box\"},"; done; \
-          done | sed 's/^{/[&/;s/},$/}]/' > "$RUNNER_TEMP/availability.matrix"
-          [ ! -s "$RUNNER_TEMP/availability.matrix" ] && echo "No devices for this fos version!" && exit 1
-          echo "matrix=$(cat "$RUNNER_TEMP/availability.matrix")" >> $GITHUB_OUTPUT
-#         echo "matrix=$(jq -c . < ./some.json)" >> $GITHUB_OUTPUT
-#         echo "matrix=$(ls ./dir/file.* | jq -R -s -c 'split("\n")[:-1]')" >> "$GITHUB_OUTPUT"
-#
-#         #https://github.com/Freetz-NG/freetz-ng/raw/refs/heads/master/config/avm/availability.in
-#         #GITHUB_TOKEN=gehaim
-#         #GITHUB_SERVER_URL=http://github.com
-#         #GITHUB_REPOSITORY=Freetz-NG/freetz-ng
-#         #GITHUB_REF_NAME=master
-#         RUNNER_TEMP=config/avm
-#         FOS=08_2X_LABOR
+          done | \
+          sed 's/^/matrix=\[/;s/$/\]/' >> $GITHUB_OUTPUT
 
       - name: vars
         run: |
           echo "################################################################"
-          echo "BOX=${{ steps.parse.outputs.matrix }}"
+          echo "BOX=${{ steps.parse.outputs.matrix }}" | sed 's/\[{/\[\n{/;s/},{/},\n{/g;s/},\]/},\n\]/'
 
   build:
     container:
@@ -96,7 +92,7 @@ jobs:
       image: ghcr.io/freetz-ng/firmware
     needs: matrizifizieren
     strategy:
-      max-parallel: 15
+      max-parallel: 25
       fail-fast: false
       matrix:
         fritz: ${{ fromJson(needs.matrizifizieren.outputs.matrix) }}
@@ -105,7 +101,7 @@ jobs:
 #   if: github.repository == 'freetz-ng/freetz-ng'
 
     env:
-      CACHE_KEY: "${{ github.workflow }}--${{ matrix.fritz.fos }}--${{ matrix.fritz.box }}"
+      CACHE_KEY: "${{ github.workflow }}--${{ matrix.fritz.box }}"
     steps:
 
 #     - name: update
@@ -177,7 +173,7 @@ jobs:
           echo 'FREETZ_DOWNLOAD_TOOLCHAIN=y'                                                          >> .config
           echo 'FREETZ_HOSTTOOLS_DOWNLOAD=y'                                                          >> .config
           wget -q "${{ secrets.ACTIONS_CUSTOM }}cfg" -O cfg 2>/dev/null && mv cfg .config || rm -f cfg
-          grep -q '^FREETZ_TYPE_' .config || echo 'FREETZ_TYPE_$BOX=y'                                >> .config
+          grep -q '^FREETZ_TYPE_' .config || echo "FREETZ_TYPE_$BOX=y"                                >> .config
           grep -q '^FREETZ_TYPE_FIRMWARE_' .config || echo "FREETZ_TYPE_FIRMWARE_$FOS=y"              >> .config
           echo "################################################################" && du .config && wc -l .config
 

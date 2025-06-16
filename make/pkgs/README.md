@@ -449,7 +449,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Geoblocking](../../docs/make/lighttpd.md#geoblocking)
      - [Links](../../docs/make/lighttpd.md#links)
 
-  * **[Lua 5.1.5/5.4.7 (binary only)](../../docs/make/lua.md)<a id='lua'></a>**<br>
+  * **[Lua 5.1.5/5.4.8 (binary only)](../../docs/make/lua.md)<a id='lua'></a>**<br>
     Lua Scripting Language. Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. Lua combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode with a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
   * **[Lynx 2.9.2 (binary only)](../../docs/make/lynx.md)<a id='lynx'></a>**<br>
@@ -1024,7 +1024,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Wget 1.25.0 (binary only)](../../docs/make/wget.md)<a id='wget'></a>**<br>
     GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals, etc.
 
-  * **[Whois 5.6.1 (binary only)](../../docs/make/whois.md)<a id='whois'></a>**<br>
+  * **[Whois 5.6.2 (binary only)](../../docs/make/whois.md)<a id='whois'></a>**<br>
     Whois - client for the whois directory service.
 
   * **[wireguard-tools 1.0.20250521](../../docs/make/wireguard.md)<a id='wireguard'></a>**<br>

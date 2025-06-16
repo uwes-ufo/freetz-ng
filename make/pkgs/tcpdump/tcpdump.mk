@@ -6,7 +6,7 @@ $(PKG)_HASH:=$($(PKG)_HASH_$(if $(FREETZ_PACKAGE_TCPDUMP_VERSION_ABANDON),ABANDO
 $(PKG)_SITE:=https://www.tcpdump.org/release
 ### WEBSITE:=https://www.tcpdump.org
 ### MANPAGE:=https://www.tcpdump.org/manpages/tcpdump.1.html
-### CHANGES:=https://git.tcpdump.org/tcpdump/blob/HEAD:/CHANGES
+### CHANGES:=https://github.com/the-tcpdump-group/tcpdump/blob/master/CHANGES
 ### CVSREPO:=https://github.com/the-tcpdump-group/tcpdump
 ### SUPPORT:=fda77
 
