@@ -25,9 +25,23 @@ echo_booster(){
 EOX
 	echo -e "\e[0m"
 }
+echo_ancestor(){
+	echo -e "\e[34m"
+	cat << EOX
+     ___   ___   ___  ___   ___ _|__  ___   ___
+     ___| |   | /    /___) (___  |   /   \ |   \ 
+    (___| |   | \___ \___  ____)  \_ \___/ |
+EOX
+	echo -e "\e[0m"
+}
 
 echo -n 'Welcome at '
 hostname
 uname -a
 echo
-[ $(hostname) == 'booster' ] && echo_booster || { [ $(hostname) == 'toaster' ] && echo_toaster || echo_freetz_ng ; }
+case $(hostname) in
+	ancestor)	echo_ancestor	;;
+	booster)	echo_booster	;;
+	toaster)	echo_toaster	;;
+	*)			echo_freetz_ng	;;
+esac
