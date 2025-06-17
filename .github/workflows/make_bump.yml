@@ -20,7 +20,6 @@ concurrency:
 
 jobs:
 
-
   matrizifizieren:
     container:
 #     image: ubuntu:20.04
@@ -46,7 +45,7 @@ jobs:
         run: |
           pkg="${{ github.event.inputs.bump }}"
           [ -z "$pkg" ] && pkg="$(git log --format=%B -n1 ${{ github.sha }} | sed -nr 's/^(add|bump|fix|test) ([^ ,:]*).*/\2/pI')"
-          [ -z "$pkg" ] && echo "No add, bump, fix or test." && exit
+          [ -z "$pkg" ] && echo "No add, bump, fix or test." && echo 'matrix=["skip"]' >> $GITHUB_OUTPUT && exit
           sed -rn 's/.* && dltc "(.*)".*/\1/p' tools/dl-toolchains_make | \
           while read -r line; do \
           name="$(echo "$line" | sed -r 's/^FREETZ_TYPE_([^ ]*) *FREETZ_TYPE_FIRMWARE_([^ ]*).*/\1 - \2/g')"; \
@@ -151,11 +150,13 @@ jobs:
           echo "################################################################" && du .config && wc -l .config
 
       - name: addon
+        if: matrix.fritz != 'skip'
         run: |
           echo "################################################################"
           wget -q "${{ secrets.ACTIONS_CUSTOM }}add" -O - 2>/dev/null | tar xj 2>/dev/null && echo Done || echo Null
 
 #     - name: signature
+#       if: matrix.fritz != 'skip'
 #       run: |
 #         mkdir -p .signature/ 2>/dev/null || true
 #         for x in prv pub; do wget -q "${{ secrets.ACTIONS_CUSTOM }}$x" -O .signature/$x >/dev/null 2>&1 || rm -f .signature/$x; done
@@ -163,6 +164,7 @@ jobs:
 
       - name: generate
         id: generate
+        if: matrix.fritz != 'skip'
         run: |
           PKG="${{ matrix.fritz.pkg }}"
           PKG="$(echo "$PKG" | tr '[:lower:]' '[:upper:]')"
