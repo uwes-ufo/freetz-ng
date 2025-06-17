@@ -59,8 +59,9 @@ UCLIBC_HAS_FLOATS=y
 UCLIBC_HAS_FPU=y
 DO_C99_MATH=y
 # DO_XSI_MATH is not set
+# UCLIBC_HAS_FENV is not set
 UCLIBC_HAS_LONG_DOUBLE_MATH=y
-KERNEL_HEADERS="$(KERNEL_INCLUDE)"
+KERNEL_HEADERS="/home/uwe/git/freetz-ng/source/toolchain-arm_gcc-13.3.0_uClibc-1.0.52-nptl_kernel-5.4/linux-dev/5.4/include"
 HAVE_DOT_CONFIG=y
 
 #
@@ -78,6 +79,8 @@ LDSO_PRELOAD_ENV_SUPPORT=y
 # LDSO_PRELOAD_FILE_SUPPORT is not set
 # LDSO_STANDALONE_SUPPORT is not set
 # LDSO_PRELINK_SUPPORT is not set
+ARCH_VDSO_SUPPORT=y
+# VDSO_SUPPORT is not set
 # UCLIBC_STATIC_LDCONFIG is not set
 LDSO_RUNPATH=y
 # LDSO_RUNPATH_OF_EXECUTABLE is not set
