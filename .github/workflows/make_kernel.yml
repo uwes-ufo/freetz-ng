@@ -83,7 +83,7 @@ jobs:
       - name: vars
         run: |
           echo "################################################################"
-          echo "BOX=${{ steps.parse.outputs.matrix }}" | sed 's/\[{/\[\n{/;s/},{/},\n{/g;s/},\]/},\n\]/'
+          echo "matrix=${{ steps.parse.outputs.matrix }}" | sed 's/\[{/\[\n{/;s/},{/},\n{/g;s/},\]/},\n\]/'
 
   build:
     container:

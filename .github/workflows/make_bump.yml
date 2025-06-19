@@ -56,7 +56,7 @@ jobs:
       - name: vars
         run: |
           echo "################################################################"
-          echo "BOX=${{ steps.parse.outputs.matrix }}" | sed 's/\[{/\[\n{/;s/},{/},\n{/g;s/},\]/},\n\]/'
+          echo "matrix=${{ steps.parse.outputs.matrix }}" | sed 's/\[{/\[\n{/;s/},{/},\n{/g;s/},\]/},\n\]/'
 
   build:
     container:
@@ -65,7 +65,7 @@ jobs:
       image: ghcr.io/freetz-ng/firmware
     needs: matrizifizieren
     strategy:
-      max-parallel: 15
+      max-parallel: 16
       fail-fast: false
       matrix:
         fritz: ${{ fromJson(needs.matrizifizieren.outputs.matrix) }}
