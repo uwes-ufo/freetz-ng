@@ -65,6 +65,7 @@ Latest changes
    * libtool 2.5.4
    * m4 1.4.20
    * meson 1.8.2
+   * ninja 1.13.0
    * ncftp 3.3.0
    * ncurses 6.5-20250419
    * openssl 3.5.0
@@ -107,7 +108,7 @@ Latest changes
    * mc (Midnight Commander) 4.8.31/4.8.33
    * Minicom 2.10
    * Mosquitto 2.0.21
-   * Nano 8.4
+   * Nano 8.5
    * NcFTP 3.3.0
    * Nmap 4.76/5.51/7.97
    * OpenSSH 9.3p2/10.0p1
