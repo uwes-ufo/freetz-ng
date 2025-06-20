@@ -58,7 +58,7 @@ jobs:
       image: ghcr.io/freetz-ng/dl-packs
     needs: matrizifizieren
     strategy:
-      max-parallel: 16
+      max-parallel: 4
       fail-fast: false
       matrix:
         fritz: ${{ fromJson(needs.matrizifizieren.outputs.matrix) }}
