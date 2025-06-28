@@ -14,9 +14,9 @@ on:
         required: true
         default: "dropbear"
 
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: false
+#concurrency:
+# group: ${{ github.workflow }}
+# cancel-in-progress: false
 
 jobs:
 
@@ -31,6 +31,11 @@ jobs:
       matrix: ${{ steps.parse.outputs.matrix }}
 
     steps:
+
+      - uses: ahmadnassri/action-workflow-queue@v1
+        with:
+          timeout: "18000000"
+          delay: "10000"
 
       - name: clone
         env:
