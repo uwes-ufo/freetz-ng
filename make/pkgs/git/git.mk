@@ -53,7 +53,7 @@ $(PKG)_CONFIGURE_ENV += ac_cv_iconv_omits_bom=$(if $(FREETZ_TARGET_ARCH_BE),yes,
 
 $(PKG)_CONFIGURE_OPTIONS += --with-gitconfig=/tmp/flash/gitconfig
 $(PKG)_CONFIGURE_OPTIONS += --enable-pthreads
-$(PKG)_CONFIGURE_OPTIONS += --with-curl
+#$(PKG)_CONFIGURE_OPTIONS += --with-curl
 $(PKG)_CONFIGURE_OPTIONS += --with-expat
 $(PKG)_CONFIGURE_OPTIONS += --with-iconv
 $(PKG)_CONFIGURE_OPTIONS += --with-openssl
