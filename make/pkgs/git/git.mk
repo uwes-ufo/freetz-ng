@@ -18,7 +18,7 @@ $(PKG)_FILES_TO_SYMLINK := git git-shell git-upload-pack git-cvsserver $($(PKG)_
 $(PKG)_BINARY_BUILD_DIR := $($(PKG)_DIR)/git
 $(PKG)_BINARY_TARGET_DIR := $($(PKG)_DEST_DIR)/usr/bin/git
 
-$(PKG)_DEPENDS_ON += expat openssl zlib
+$(PKG)_DEPENDS_ON += curl expat openssl zlib
 ifeq ($(strip $(FREETZ_TARGET_UCLIBC_0_9_28)),y)
 $(PKG)_DEPENDS_ON += iconv
 endif
@@ -33,7 +33,7 @@ $(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_PACKAGE_GIT_VERSION_ABANDON),abandon,c
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_GIT_VERSION_ABANDON
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_GIT_WITH_PCRE
 $(PKG)_REBUILD_SUBOPTS += FREETZ_OPENSSL_SHORT_VERSION
-# $(PKG)_REBUILD_SUBOPTS += $(filter FREETZ_LIB_libcurl_%,$(CURL_REBUILD_SUBOPTS))
+$(PKG)_REBUILD_SUBOPTS += $(filter FREETZ_LIB_libcurl_%,$(CURL_REBUILD_SUBOPTS))
 
 $(PKG)_CONFIGURE_ENV += ac_cv_c_c99_format=yes
 $(PKG)_CONFIGURE_ENV += ac_cv_fread_reads_directories=no
@@ -53,7 +53,7 @@ $(PKG)_CONFIGURE_ENV += ac_cv_iconv_omits_bom=$(if $(FREETZ_TARGET_ARCH_BE),yes,
 
 $(PKG)_CONFIGURE_OPTIONS += --with-gitconfig=/tmp/flash/gitconfig
 $(PKG)_CONFIGURE_OPTIONS += --enable-pthreads
-#$(PKG)_CONFIGURE_OPTIONS += --with-curl
+$(PKG)_CONFIGURE_OPTIONS += --with-curl
 $(PKG)_CONFIGURE_OPTIONS += --with-expat
 $(PKG)_CONFIGURE_OPTIONS += --with-iconv
 $(PKG)_CONFIGURE_OPTIONS += --with-openssl
