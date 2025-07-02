@@ -95,12 +95,8 @@ Latest changes
    * Dnsmasq 2.80/2.91
    * Dropbear 2025.88
    * dtc 1.7.2
-<<<<<<< HEAD
    * ffmpeg 7.1.1
-   * Git 2.49.0
-=======
    * Git 2.50.0
->>>>>>> 6ba1804f4f35c7adee7104e5ecfa052f3c1ae03e
    * HAProxy 2.6.22
    * htop 1.0.3/3.4.1
    * ImageMagick 7.1.0-62/7.1.1-47
