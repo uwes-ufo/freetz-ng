@@ -328,19 +328,19 @@ if FREETZ_PACKAGE_PYTHON3
 	endmenu
 
 	menu "3rd-party modules"
-		source "make/pkgs/python-bjoern/Config.in"
-		source "make/pkgs/python-cffi/Config.in"
-		source "make/pkgs/python-cheetah/Config.in"
-		source "make/pkgs/python-imaging-library/Config.in"
-		source "make/pkgs/python-mechanize/Config.in"
-		source "make/pkgs/python-mysql-connector/Config.in"
-		source "make/pkgs/python-pycrypto/Config.in"
-		source "make/pkgs/python-pycryptodome/Config.in"
-		source "make/pkgs/python-pycurl/Config.in"
-		source "make/pkgs/python-pyopenssl/Config.in"
-		source "make/pkgs/python-pyrrd/Config.in"
-		source "make/pkgs/python-pyserial/Config.in"
-		source "make/pkgs/python-yenc/Config.in"
+#		source "make/pkgs/python-bjoern/Config.in"
+#		source "make/pkgs/python-cffi/Config.in"
+#		source "make/pkgs/python-cheetah/Config.in"
+#		source "make/pkgs/python-imaging-library/Config.in"
+#		source "make/pkgs/python-mechanize/Config.in"
+#		source "make/pkgs/python-mysql-connector/Config.in"
+#		source "make/pkgs/python-pycrypto/Config.in"
+#		source "make/pkgs/python-pycryptodome/Config.in"
+#		source "make/pkgs/python-pycurl/Config.in"
+#		source "make/pkgs/python-pyopenssl/Config.in"
+#		source "make/pkgs/python-pyrrd/Config.in"
+#		source "make/pkgs/python-pyserial/Config.in"
+#		source "make/pkgs/python-yenc/Config.in"
 	endmenu
 
 endif # FREETZ_PACKAGE_PYTHON3
