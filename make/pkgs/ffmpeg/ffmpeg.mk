@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-$(call PKG_INIT_BIN, 7.1.1)
-$(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=733984395e0dbbe5c046abda2dc49a5544e7e0e1e2366bba849222ae9e3a03b1
-=======
 $(call PKG_INIT_BIN, $(if $(FREETZ_PACKAGE_FFMPEG_VERSION_ABANDON),5.1.4,7.1.1))
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HASH_ABANDON:=54383bb890a1cd62580e9f1eaa8081203196ed53bde9e98fb6b0004423f49063
 $(PKG)_HASH_CURRENT:=733984395e0dbbe5c046abda2dc49a5544e7e0e1e2366bba849222ae9e3a03b1
 $(PKG)_HASH:=$($(PKG)_HASH_$(if $(FREETZ_PACKAGE_FFMPEG_VERSION_ABANDON),ABANDON,CURRENT))
->>>>>>> 3c44917fd0cf233ca3620c7f70ecd19cb89c7ab4
 $(PKG)_SITE:=https://www.ffmpeg.org/releases
 ### WEBSITE:=https://www.ffmpeg.org/
 ### MANPAGE:=https://www.ffmpeg.org/documentation.html
@@ -27,10 +21,6 @@ $(PKG)_BINARIES_BUILD_DIR  := $($(PKG)_BINARIES:%=$($(PKG)_DIR)/%)
 $(PKG)_BINARIES_TARGET_DIR := $($(PKG)_BINARIES:%=$($(PKG)_DEST_DIR)/usr/bin/%)
 
 $(PKG)_LIBNAMES_SHORT      := avcodec avdevice avfilter avformat avutil postproc swresample swscale
-<<<<<<< HEAD
-$(PKG)_LIBVERSIONS_MAJOR   := 61      61       10       61       59     58       5          8
-$(PKG)_LIBVERSIONS_MINOR   := 19.101  3.100    4.100    7.100    39.100 3.100    3.100      3.100
-=======
 
 ifeq ($(strip $(FREETZ_PACKAGE_FFMPEG_VERSION_ABANDON)),y)
 $(PKG)_LIBVERSIONS_MAJOR   := 59      59       8        59       57     56       4          6
@@ -39,7 +29,6 @@ else
 $(PKG)_LIBVERSIONS_MAJOR   := 61      61       10       61       59     58       5          8
 $(PKG)_LIBVERSIONS_MINOR   := 19.101  3.100    4.100    7.100    39.100 3.100    3.100      3.100
 endif
->>>>>>> 3c44917fd0cf233ca3620c7f70ecd19cb89c7ab4
 
 $(PKG)_LIBNAMES_LONG_MAJOR := $(join $($(PKG)_LIBNAMES_SHORT:%=lib%.so.),$($(PKG)_LIBVERSIONS_MAJOR))
 $(PKG)_LIBNAMES_LONG       := $(join $($(PKG)_LIBNAMES_LONG_MAJOR:%=%.),$($(PKG)_LIBVERSIONS_MINOR))

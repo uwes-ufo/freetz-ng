@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# FFmpeg 7.1.1
-=======
 # FFmpeg 5.1.4/7.1.1
->>>>>>> 3c44917fd0cf233ca3620c7f70ecd19cb89c7ab4
  - Homepage: [https://www.ffmpeg.org/](https://www.ffmpeg.org/)
  - Manpage: [https://www.ffmpeg.org/documentation.html](https://www.ffmpeg.org/documentation.html)
  - Changelog: [https://www.ffmpeg.org/index.html#news](https://www.ffmpeg.org/index.html#news)

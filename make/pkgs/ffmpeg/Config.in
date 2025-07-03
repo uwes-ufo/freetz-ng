@@ -1,9 +1,5 @@
 menuconfig FREETZ_PACKAGE_FFMPEG
-<<<<<<< HEAD
-	bool "FFmpeg 7.1.1"
-=======
 	bool "FFmpeg 5.1.4/7.1.1"
->>>>>>> 3c44917fd0cf233ca3620c7f70ecd19cb89c7ab4
 	default n
 	depends on !FREETZ_TARGET_UCLIBC_0_9_28 && !FREETZ_TARGET_UCLIBC_0_9_29
 	help
