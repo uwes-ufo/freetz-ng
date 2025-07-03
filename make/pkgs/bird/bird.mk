@@ -38,7 +38,7 @@ $(PKG)_REBUILD_SUBOPTS += FREETZ_TARGET_IPV6_SUPPORT
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_BIRDC),--enable-client,--disable-client)
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_BIRD_DEBUG),--enable-debug,--disable-debug)
 $(PKG)_CONFIGURE_OPTIONS += --disable-memcheck
-ifeq ($(FREETZ_PACKAGE_BIRD_VERSION_ABANDON),y)
+ifeq ($(strip $(FREETZ_PACKAGE_BIRD_VERSION_ABANDON)),y)
 #$(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_TARGET_IPV6_SUPPORT),--enable-ipv6,--disable-ipv6)
 else
 #$(PKG)_CONFIGURE_OPTIONS += --disable-pthreads

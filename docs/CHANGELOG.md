@@ -86,7 +86,7 @@ Latest changes
 
  - Packages:
    * ACME.sh 3.1.1
-   * Atop 2.12.0
+   * Atop 2.11.1
    * BIND 9.11.37/9.20.10
    * CA-bundle 2025-02-25
    * Curl 8.14.1
@@ -95,7 +95,11 @@ Latest changes
    * Dnsmasq 2.80/2.91
    * Dropbear 2025.88
    * dtc 1.7.2
+<<<<<<< HEAD
    * ffmpeg 7.1.1
+=======
+   * FFmpeg 5.1.4/7.1.1
+>>>>>>> 3c44917fd0cf233ca3620c7f70ecd19cb89c7ab4
    * Git 2.50.0
    * HAProxy 2.6.22
    * htop 1.0.3/3.4.1
@@ -126,7 +130,7 @@ Latest changes
    * sslh 2.2.3
    * strace 4.9/5.0/6.15
    * Stunnel 5.75
-   * sudo 1.9.17p1
+   * Sudo 1.9.17p1
    * tcpdump 4.1.1/4.99.4
    * Tor 0.4.8.17
    * uMurmur 0.2.20/0.3.1

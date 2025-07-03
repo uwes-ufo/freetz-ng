@@ -25,7 +25,7 @@ $(PKG)_LIB_TARGET_BINARY:=$($(PKG)_TARGET_LIBDIR)/$($(PKG)_LIBNAME)
 $(PKG)_MAKE_TARGET := linux
 
 ifeq ($(strip $(FREETZ_PACKAGE_LUA_READLINE)),y)
-ifeq ($(FREETZ_LIB_liblua_WITH_VERSION_ABANDON),y)
+ifeq ($(strip $(FREETZ_LIB_liblua_WITH_VERSION_ABANDON)),y)
 $(PKG)_DEPENDS_ON += ncurses readline
 else
 $(PKG)_DEPENDS_ON += readline
