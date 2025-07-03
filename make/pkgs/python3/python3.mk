@@ -11,7 +11,7 @@ $(PKG)_SITE:=https://www.python.org/ftp/python/$($(PKG)_VERSION)
 $(PKG)_LOCAL_INSTALL_DIR:=$($(PKG)_DIR)/_install
 
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/python$($(PKG)_MAJOR_VERSION).bin
-$(PKG)_LIB_PYTHON_TARGET_DIR:=$($(PKG)_TARGET_LIBDIR)/libpython$($(PKG)_MAJOR_VERSION).so.1.0
+$(PKG)_LIB_PYTHON3_TARGET_DIR:=$($(PKG)_TARGET_LIBDIR)/libpython$($(PKG)_MAJOR_VERSION).so.1.0
 $(PKG)_ZIPPED_PYC:=usr/lib/python$(subst .,,$($(PKG)_MAJOR_VERSION)).zip
 $(PKG)_ZIPPED_PYC_TARGET_DIR:=$($(PKG)_DEST_DIR)/$($(PKG)_ZIPPED_PYC)
 
@@ -78,124 +78,124 @@ $(PKG)_CONFIGURE_PRE_CMDS += $(RM) -r Modules/zlib;
 $(PKG)_CONFIGURE_PRE_CMDS += cp $(HOST_TOOLS_DIR)/usr/bin/pgen hostpgen;
 $(PKG)_CONFIGURE_PRE_CMDS += cp $(HOST_TOOLS_DIR)/usr/bin/python$($(PKG)_MAJOR_VERSION) hostpython;
 # Create empty pybuilddir.txt to add the directory python is built in to the list of
-# directories PYTHON_FOR_BUILD should look in for libpython while cross-compiling.
+# directories PYTHON3_FOR_BUILD should look in for libpython while cross-compiling.
 $(PKG)_CONFIGURE_PRE_CMDS += touch pybuilddir.txt;
 
 $(PKG)_MAKE_OPTIONS  := CROSS_TOOLCHAIN_SYSROOT="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
-$(PKG)_MAKE_OPTIONS  += PYTHON_FOR_COMPILE="$(abspath $(HOST_TOOLS_DIR)/usr/bin/python)"
-$(PKG)_CONFIGURE_ENV += PYTHON_INTERPRETER_FOR_BUILD="$(abspath $($(PKG)_DIR)/hostpython)"
+$(PKG)_MAKE_OPTIONS  += PYTHON3_FOR_COMPILE="$(abspath $(HOST_TOOLS_DIR)/usr/bin/python)"
+$(PKG)_CONFIGURE_ENV += PYTHON3_INTERPRETER_FOR_BUILD="$(abspath $($(PKG)_DIR)/hostpython)"
 
-ifneq ($(strip $(DL_DIR)/$(PYTHON_SOURCE)),$(strip $(DL_DIR)/$(PYTHON3_HOST_SOURCE)))
+ifneq ($(strip $(DL_DIR)/$(PYTHON3_SOURCE)),$(strip $(DL_DIR)/$(PYTHON3_HOST_SOURCE)))
 $(PKG_SOURCE_DOWNLOAD)
 endif
 $(PKG_UNPACKED)
 $(PKG_CONFIGURED_CONFIGURE)
 
 $($(PKG)_DIR)/.compiled: $($(PKG)_DIR)/.configured
-	$(SUBMAKE) -C $(PYTHON_DIR) \
-		$(PYTHON_MAKE_OPTIONS) \
+	$(SUBMAKE) -C $(PYTHON3_DIR) \
+		$(PYTHON3_MAKE_OPTIONS) \
 		all
 	touch $@
 
 $($(PKG)_DIR)/.installed: $($(PKG)_DIR)/.compiled
-	$(SUBMAKE) -C $(PYTHON_DIR) \
-		$(PYTHON_MAKE_OPTIONS) \
-		DESTDIR="$(FREETZ_BASE_DIR)/$(PYTHON_LOCAL_INSTALL_DIR)" \
+	$(SUBMAKE) -C $(PYTHON3_DIR) \
+		$(PYTHON3_MAKE_OPTIONS) \
+		DESTDIR="$(FREETZ_BASE_DIR)/$(PYTHON3_LOCAL_INSTALL_DIR)" \
 		install
-	(cd $(FREETZ_BASE_DIR)/$(PYTHON_LOCAL_INSTALL_DIR); \
+	(cd $(FREETZ_BASE_DIR)/$(PYTHON3_LOCAL_INSTALL_DIR); \
 		chmod -R u+w usr; \
 		$(RM) -r $(call newline2space,$(Python/unnecessary/files)); \
 		\
-		find usr/lib/python$(PYTHON_MAJOR_VERSION)/ -name "*.pyo" -delete; \
+		find usr/lib/python$(PYTHON3_MAJOR_VERSION)/ -name "*.pyo" -delete; \
 		\
-		[ "$(FREETZ_SEPARATE_AVM_UCLIBC)" == "y" ] && $(PATCHELF) --set-interpreter /usr/lib/freetz/ld-uClibc.so.1 usr/bin/python$(PYTHON_MAJOR_VERSION); \
+		[ "$(FREETZ_SEPARATE_AVM_UCLIBC)" == "y" ] && $(PATCHELF) --set-interpreter /usr/lib/freetz/ld-uClibc.so.1 usr/bin/python$(PYTHON3_MAJOR_VERSION); \
 		\
 		$(TARGET_STRIP) \
-			usr/bin/python$(PYTHON_MAJOR_VERSION) \
-			$(if $(FREETZ_PACKAGE_PYTHON3_STATIC),,usr/lib/libpython$(PYTHON_MAJOR_VERSION).so.1.0) \
-			usr/lib/python$(PYTHON_MAJOR_VERSION)/lib-dynload/*.so; \
+			usr/bin/python$(PYTHON3_MAJOR_VERSION) \
+			$(if $(FREETZ_PACKAGE_PYTHON3_STATIC),,usr/lib/libpython$(PYTHON3_MAJOR_VERSION).so.1.0) \
+			usr/lib/python$(PYTHON3_MAJOR_VERSION)/lib-dynload/*.so; \
 		\
-		mv usr/bin/python$(PYTHON_MAJOR_VERSION) usr/bin/python$(PYTHON_MAJOR_VERSION).bin; \
+		mv usr/bin/python$(PYTHON3_MAJOR_VERSION) usr/bin/python$(PYTHON3_MAJOR_VERSION).bin; \
 	)
 	touch $@
 
 $($(PKG)_STAGING_BINARY): $($(PKG)_DIR)/.installed
-	@$(call COPY_USING_TAR,$(PYTHON_LOCAL_INSTALL_DIR)/usr,$(TARGET_TOOLCHAIN_STAGING_DIR)/usr,--exclude='*.pyc' .) \
-	$(PKG_FIX_LIBTOOL_LA) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/pkgconfig/python-$(PYTHON_MAJOR_VERSION).pc; \
-	$(RM) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python$(PYTHON_MAJOR_VERSION).bin ; \
-	cp $(HOST_TOOLS_DIR)/usr/bin/python$(PYTHON_MAJOR_VERSION) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/hostpython; \
-	ln -sf hostpython $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python$(PYTHON_MAJOR_VERSION); \
-	$(SED) -ri -e 's,^#!.*,#!/usr/bin/env python$(PYTHON_MAJOR_VERSION),g' $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python$(PYTHON_MAJOR_VERSION)-config; \
+	@$(call COPY_USING_TAR,$(PYTHON3_LOCAL_INSTALL_DIR)/usr,$(TARGET_TOOLCHAIN_STAGING_DIR)/usr,--exclude='*.pyc' .) \
+	$(PKG_FIX_LIBTOOL_LA) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/pkgconfig/python-$(PYTHON3_MAJOR_VERSION).pc; \
+	$(RM) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python$(PYTHON3_MAJOR_VERSION).bin ; \
+	cp $(HOST_TOOLS_DIR)/usr/bin/python$(PYTHON3_MAJOR_VERSION) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/hostpython; \
+	ln -sf hostpython $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python$(PYTHON3_MAJOR_VERSION); \
+	$(SED) -ri -e 's,^#!.*,#!/usr/bin/env python$(PYTHON3_MAJOR_VERSION),g' $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python$(PYTHON3_MAJOR_VERSION)-config; \
 	touch -c $@
 
 $($(PKG)_TARGET_BINARY): $($(PKG)_DIR)/.installed
-	@$(call COPY_USING_TAR,$(PYTHON_LOCAL_INSTALL_DIR),$(PYTHON_DEST_DIR),--exclude='libpython$(PYTHON_MAJOR_VERSION).so*' .) \
-	(cd $(PYTHON_DEST_DIR); \
-		echo -n > usr/lib/python$(PYTHON_MAJOR_VERSION)/config-$(PYTHON_MAJOR_VERSION)/Makefile; \
-		find usr/include/python$(PYTHON_MAJOR_VERSION)/ -name "*.h" \! -name "pyconfig.h" \! -name "Python.h" -delete; \
+	@$(call COPY_USING_TAR,$(PYTHON3_LOCAL_INSTALL_DIR),$(PYTHON3_DEST_DIR),--exclude='libpython$(PYTHON3_MAJOR_VERSION).so*' .) \
+	(cd $(PYTHON3_DEST_DIR); \
+		echo -n > usr/lib/python$(PYTHON3_MAJOR_VERSION)/config-$(PYTHON3_MAJOR_VERSION)/Makefile; \
+		find usr/include/python$(PYTHON3_MAJOR_VERSION)/ -name "*.h" \! -name "pyconfig.h" \! -name "Python.h" -delete; \
 		$(RM) -r $(call newline2space,$(Python/development/files)); \
 	); \
 	touch -c $@
 
 ifneq ($(strip $(FREETZ_PACKAGE_PYTHON3_STATIC)),y)
-$($(PKG)_LIB_PYTHON_TARGET_DIR): $($(PKG)_DIR)/.installed
+$($(PKG)_LIB_PYTHON3_TARGET_DIR): $($(PKG)_DIR)/.installed
 	@mkdir -p $(dir $@); \
-	cp -a $(PYTHON_LOCAL_INSTALL_DIR)/usr/lib/libpython$(PYTHON_MAJOR_VERSION).so* $(dir $@); \
+	cp -a $(PYTHON3_LOCAL_INSTALL_DIR)/usr/lib/libpython$(PYTHON3_MAJOR_VERSION).so* $(dir $@); \
 	touch -c $@
 endif
 
 $(pkg): $($(PKG)_TARGET_DIR)/.exclude-extra
 
 $($(PKG)_TARGET_DIR)/py.lst $($(PKG)_TARGET_DIR)/pyc.lst: $($(PKG)_DIR)/.installed $(PACKAGES_DIR)/.$(pkg)-$($(PKG)_VERSION)
-	@(cd $(FREETZ_BASE_DIR)/$(PYTHON_LOCAL_INSTALL_DIR); \
+	@(cd $(FREETZ_BASE_DIR)/$(PYTHON3_LOCAL_INSTALL_DIR); \
 		find usr -type f -name "*.$(basename $(notdir $@))"  | sort > $(FREETZ_BASE_DIR)/$@; \
 	)
 
 $($(PKG)_TARGET_DIR)/excluded-module-files.lst: $(TOPDIR)/.config $(PACKAGES_DIR)/.$(pkg)-$($(PKG)_VERSION)
-	@(set -f; echo $(PYTHON_EXCLUDED_FILES) | tr " " "\n" | sort > $@)
+	@(set -f; echo $(PYTHON3_EXCLUDED_FILES) | tr " " "\n" | sort > $@)
 
 $($(PKG)_TARGET_DIR)/excluded-module-files-zip.lst: $($(PKG)_TARGET_DIR)/excluded-module-files.lst
-	@cat $< | sed -r 's,usr/lib/python$(PYTHON_MAJOR_VERSION)/,,g' > $@
+	@cat $< | sed -r 's,usr/lib/python$(PYTHON3_MAJOR_VERSION)/,,g' > $@
 
 $($(PKG)_ZIPPED_PYC_TARGET_DIR): $($(PKG)_TARGET_DIR)/excluded-module-files-zip.lst $($(PKG)_TARGET_BINARY)
-	@(cd $(dir $@)/python$(PYTHON_MAJOR_VERSION); \
+	@(cd $(dir $@)/python$(PYTHON3_MAJOR_VERSION); \
 		$(RM) ../$(notdir $@); \
-		$(if $(FREETZ_PACKAGE_PYTHON3_COMPRESS_PYC),zip -9qyR -x@$(FREETZ_BASE_DIR)/$(PYTHON_TARGET_DIR)/excluded-module-files-zip.lst ../$(notdir $@) . "*.pyc";) \
+		$(if $(FREETZ_PACKAGE_PYTHON3_COMPRESS_PYC),zip -9qyR -x@$(FREETZ_BASE_DIR)/$(PYTHON3_TARGET_DIR)/excluded-module-files-zip.lst ../$(notdir $@) . "*.pyc";) \
 	); \
 	touch $@
 
 $($(PKG)_TARGET_DIR)/.exclude-extra: $(TOPDIR)/.config $($(PKG)_TARGET_DIR)/py.lst $($(PKG)_TARGET_DIR)/pyc.lst $($(PKG)_TARGET_DIR)/excluded-module-files.lst
 	@echo -n "" > $@; \
-	[ "$(FREETZ_PACKAGE_PYTHON3_PY)"  != y ] && cat $(PYTHON_TARGET_DIR)/py.lst >> $@; \
-	[ "$(FREETZ_PACKAGE_PYTHON3_PYC)" != y -o "$(FREETZ_PACKAGE_PYTHON3_COMPRESS_PYC)" == y ] && cat $(PYTHON_TARGET_DIR)/pyc.lst >> $@; \
-	(set -f; echo $(PYTHON_UNNECESSARY_DIRS) | tr " " "\n" | sort >> $@); \
-	[ "$(FREETZ_PACKAGE_PYTHON3_COMPRESS_PYC)" != y ] && echo "$(PYTHON_ZIPPED_PYC)" >> $@; \
-	cat $(PYTHON_TARGET_DIR)/excluded-module-files.lst >> $@; \
+	[ "$(FREETZ_PACKAGE_PYTHON3_PY)"  != y ] && cat $(PYTHON3_TARGET_DIR)/py.lst >> $@; \
+	[ "$(FREETZ_PACKAGE_PYTHON3_PYC)" != y -o "$(FREETZ_PACKAGE_PYTHON3_COMPRESS_PYC)" == y ] && cat $(PYTHON3_TARGET_DIR)/pyc.lst >> $@; \
+	(set -f; echo $(PYTHON3_UNNECESSARY_DIRS) | tr " " "\n" | sort >> $@); \
+	[ "$(FREETZ_PACKAGE_PYTHON3_COMPRESS_PYC)" != y ] && echo "$(PYTHON3_ZIPPED_PYC)" >> $@; \
+	cat $(PYTHON3_TARGET_DIR)/excluded-module-files.lst >> $@; \
 	touch -c $@
 
-$(pkg)-precompiled: $($(PKG)_STAGING_BINARY) $($(PKG)_TARGET_BINARY) $(if $(FREETZ_PACKAGE_PYTHON3_STATIC),,$($(PKG)_LIB_PYTHON_TARGET_DIR)) $($(PKG)_ZIPPED_PYC_TARGET_DIR)
+$(pkg)-precompiled: $($(PKG)_STAGING_BINARY) $($(PKG)_TARGET_BINARY) $(if $(FREETZ_PACKAGE_PYTHON3_STATIC),,$($(PKG)_LIB_PYTHON3_TARGET_DIR)) $($(PKG)_ZIPPED_PYC_TARGET_DIR)
 
 $(pkg)-clean:
-	-$(SUBMAKE) -C $(PYTHON_DIR) clean
-	$(RM) $(PYTHON_FREETZ_CONFIG_FILE)
-	$(RM) $(PYTHON_DIR)/.configured $(PYTHON_DIR)/.compiled $(PYTHON_DIR)/.installed
-	$(RM) $(PYTHON_TARGET_DIR)/py.lst $(PYTHON_TARGET_DIR)/pyc.lst
-	$(RM) $(PYTHON_TARGET_DIR)/excluded-module-files.lst $(PYTHON_TARGET_DIR)/excluded-module-files-zip.lst $(PYTHON_TARGET_DIR)/.exclude-extra
-	$(RM) -r $(PYTHON_LOCAL_INSTALL_DIR)
+	-$(SUBMAKE) -C $(PYTHON3_DIR) clean
+	$(RM) $(PYTHON3_FREETZ_CONFIG_FILE)
+	$(RM) $(PYTHON3_DIR)/.configured $(PYTHON3_DIR)/.compiled $(PYTHON3_DIR)/.installed
+	$(RM) $(PYTHON3_TARGET_DIR)/py.lst $(PYTHON3_TARGET_DIR)/pyc.lst
+	$(RM) $(PYTHON3_TARGET_DIR)/excluded-module-files.lst $(PYTHON3_TARGET_DIR)/excluded-module-files-zip.lst $(PYTHON3_TARGET_DIR)/.exclude-extra
+	$(RM) -r $(PYTHON3_LOCAL_INSTALL_DIR)
 	$(RM) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python* $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/hostpython
-	$(RM) -r $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/python$(PYTHON_MAJOR_VERSION)
-	$(RM) -r $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/python$(PYTHON_MAJOR_VERSION)
-	$(RM) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libpython$(PYTHON_MAJOR_VERSION).*
+	$(RM) -r $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/python$(PYTHON3_MAJOR_VERSION)
+	$(RM) -r $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/python$(PYTHON3_MAJOR_VERSION)
+	$(RM) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libpython$(PYTHON3_MAJOR_VERSION).*
 	$(RM) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/pkgconfig/python*
 
 $(pkg)-uninstall:
 	$(RM) -r \
-		$(PYTHON_TARGET_BINARY) \
-		$(PYTHON_TARGET_LIBDIR)/libpython$(PYTHON_MAJOR_VERSION).so* \
-		$(PYTHON_DEST_DIR)/usr/bin/python \
-		$(PYTHON_DEST_DIR)/usr/bin/python2 \
-		$(PYTHON_DEST_DIR)/usr/lib/python$(PYTHON_MAJOR_VERSION) \
-		$(PYTHON_ZIPPED_PYC_TARGET_DIR) \
-		$(PYTHON_DEST_DIR)/usr/include/python$(PYTHON_MAJOR_VERSION)
+		$(PYTHON3_TARGET_BINARY) \
+		$(PYTHON3_TARGET_LIBDIR)/libpython$(PYTHON3_MAJOR_VERSION).so* \
+		$(PYTHON3_DEST_DIR)/usr/bin/python \
+		$(PYTHON3_DEST_DIR)/usr/bin/python3 \
+		$(PYTHON3_DEST_DIR)/usr/lib/python$(PYTHON3_MAJOR_VERSION) \
+		$(PYTHON3_ZIPPED_PYC_TARGET_DIR) \
+		$(PYTHON3_DEST_DIR)/usr/include/python$(PYTHON3_MAJOR_VERSION)
 
 $(PKG_FINISH)
