@@ -110,7 +110,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python3 3.13.5](python3-host.md)<a id='python3-host'></a>**<br>
 
+  * **[python3-jsonschema 4.24.0](python3-jsonschema-host.md)<a id='python3-jsonschema-host'></a>**<br>
+
   * **[python3-packaging 25.0](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
+
+  * **[python3-referencing 0.36.2](python3-referencing-host.md)<a id='python3-referencing-host'></a>**<br>
 
 ### S
 
