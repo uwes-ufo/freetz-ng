@@ -327,7 +327,7 @@ if FREETZ_PACKAGE_PYTHON3
 
 	endmenu
 
-	menu "3rd-party modules"
+#	menu "3rd-party modules"
 #		source "make/pkgs/python-bjoern/Config.in"
 #		source "make/pkgs/python-cffi/Config.in"
 #		source "make/pkgs/python-cheetah/Config.in"
@@ -341,7 +341,7 @@ if FREETZ_PACKAGE_PYTHON3
 #		source "make/pkgs/python-pyrrd/Config.in"
 #		source "make/pkgs/python-pyserial/Config.in"
 #		source "make/pkgs/python-yenc/Config.in"
-	endmenu
+#	endmenu
 
 endif # FREETZ_PACKAGE_PYTHON3
 
