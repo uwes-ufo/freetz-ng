@@ -72,8 +72,6 @@ $($(PKG)_LIBS_A_STAGING_DIR): $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/%: $($(PKG
 $($(PKG)_DIR)/.headers: $($(PKG)_DIR)/.configured
 	mkdir -p $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/mbedtls/
 	cp -a $(MBEDTLS_DIR)/include/mbedtls/* $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/mbedtls/
-	mkdir -p $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/psa/
-	cp -a $(MBEDTLS_DIR)/include/psa/* $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/psa/
 	@touch $@
 
 $($(PKG)_LIBS_SO_TARGET_DIR): $($(PKG)_TARGET_DIR)/%: $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/%
@@ -89,7 +87,6 @@ $(pkg)-clean:
 	$(RM) -r \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libmbed* \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/mbedtls/
-		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/psa/
 
 $(pkg)-uninstall:
 	$(RM) $(MBEDTLS_TARGET_DIR)/libmbed*.so*
