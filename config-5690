@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 6ca7d1bd54 uwe 2025-07-03
+#  freetz-ng 1fa7b7410f uwe 2025-07-03
 #
 
 #
@@ -608,7 +608,6 @@ FREETZ_PACKAGE_JUIS_CHECK=y
 # FREETZ_PACKAGE_MADPLAY is not set
 # FREETZ_PACKAGE_MC is not set
 # FREETZ_PACKAGE_MCABBER is not set
-# FREETZ_PACKAGE_MEDIATOMB is not set
 # FREETZ_PACKAGE_MICROPERL is not set
 # FREETZ_PACKAGE_MINI_SNMPD is not set
 # FREETZ_PACKAGE_MINICOM is not set
