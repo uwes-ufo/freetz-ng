@@ -1,7 +1,7 @@
-$(call PKG_INIT_BIN, 3.13.4)
+$(call PKG_INIT_BIN, 3.13.5)
 $(PKG)_MAJOR_VERSION:=$(call GET_MAJOR_VERSION,$($(PKG)_VERSION))
 $(PKG)_SOURCE:=Python-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=27b15a797562a2971dce3ffe31bb216042ce0b995b39d768cf15f784cc757365
+$(PKG)_HASH:=93e583f243454e6e9e4588ca2c2662206ad961659863277afcdb96801647d640
 $(PKG)_SITE:=https://www.python.org/ftp/python/$($(PKG)_VERSION)
 ### WEBSITE:=https://www.python.org/
 ### MANPAGE:=https://docs.python.org/2/
@@ -17,9 +17,9 @@ $(PKG)_ZIPPED_PYC_TARGET_DIR:=$($(PKG)_DEST_DIR)/$($(PKG)_ZIPPED_PYC)
 
 $(PKG)_STAGING_BINARY:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python$($(PKG)_MAJOR_VERSION)
 
-include $(MAKE_DIR)/pkgs/python/python-module-macros.mk.in
+include $(MAKE_DIR)/pkgs/python/python3-module-macros.mk.in
 
-include $(MAKE_DIR)/pkgs/python/python-filelists.mk.in
+include $(MAKE_DIR)/pkgs/python/python3-filelists.mk.in
 
 $(PKG)_MODULES_ALL := \
 	audiodev audioop bsddb cmath cprofile crypt csv ctypes curses \
