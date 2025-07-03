@@ -82,7 +82,7 @@ $(PKG)_CONFIGURE_PRE_CMDS += cp $(HOST_TOOLS_DIR)/usr/bin/python$($(PKG)_MAJOR_V
 $(PKG)_CONFIGURE_PRE_CMDS += touch pybuilddir.txt;
 
 $(PKG)_MAKE_OPTIONS  := CROSS_TOOLCHAIN_SYSROOT="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
-$(PKG)_MAKE_OPTIONS  += PYTHON3_FOR_COMPILE="$(abspath $(HOST_TOOLS_DIR)/usr/bin/python)"
+$(PKG)_MAKE_OPTIONS  += PYTHON3_FOR_COMPILE="$(abspath $(HOST_TOOLS_DIR)/usr/bin/python3)"
 $(PKG)_CONFIGURE_ENV += PYTHON3_INTERPRETER_FOR_BUILD="$(abspath $($(PKG)_DIR)/hostpython)"
 
 ifneq ($(strip $(DL_DIR)/$(PYTHON3_SOURCE)),$(strip $(DL_DIR)/$(PYTHON3_HOST_SOURCE)))
