@@ -64,6 +64,7 @@ TOOLS_CONDITIONAL+=python2-host
 TOOLS_CONDITIONAL+=python2-pip-host
 TOOLS_CONDITIONAL+=python2-setuptools-host
 TOOLS_CONDITIONAL+=python3-host
+TOOLS_CONDITIONAL+=python3-attrs-host
 TOOLS_CONDITIONAL+=python3-jsonschema-host
 TOOLS_CONDITIONAL+=python3-packaging-host
 TOOLS_CONDITIONAL+=python3-referencing-host

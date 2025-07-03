@@ -75,6 +75,7 @@ Latest changes
    * python 3.13.5
    * python2-pip 20.3.4
    * python2-setuptools 44.1.1
+   * python3-attrs 25.3.0
    * python3-jsonschema 4.24.0
    * python3-packaging 25.0
    * python3-referencing 0.36.2
