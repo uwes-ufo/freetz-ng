@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng bb84de10f5 uwe 2025-07-03
+#  freetz-ng e0232d084b uwe 2025-07-03
 #
 
 #
@@ -3040,7 +3040,7 @@ EXTERNAL_FREETZ_LIB_libogg=y
 EXTERNAL_FREETZ_LIB_libopenjpeg=y
 # EXTERNAL_FREETZ_LIB_libpcre2 is not set
 # EXTERNAL_FREETZ_LIB_libpopt is not set
-# EXTERNAL_FREETZ_LIB_libpython3 is not set
+EXTERNAL_FREETZ_LIB_libpython3=y
 EXTERNAL_FREETZ_LIB_libvorbis=y
 EXTERNAL_FREETZ_LIB_libvorbisenc=y
 EXTERNAL_FREETZ_LIB_libvorbisfile=y
