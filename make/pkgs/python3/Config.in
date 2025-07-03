@@ -50,17 +50,10 @@ if FREETZ_PACKAGE_PYTHON3
 			virtually no cost.
 
 	config FREETZ_PACKAGE_PYTHON3_STATIC
-<<<<<<< HEAD
-		bool "Link libpython statically in"
-		default n
-		help
-			Don't create shared version of libpython, link it in statically
-=======
 		bool "Link libpython3 statically in"
 		default n
 		help
 			Don't create shared version of libpython3, link it in statically
->>>>>>> be6f52c06baa02da2304d75962c77efdbf8bc727
 			instead. All other libraries Python depends on are still linked
 			in dynamically.
 
