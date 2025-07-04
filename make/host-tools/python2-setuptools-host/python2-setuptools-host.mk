@@ -12,8 +12,6 @@ $(PKG)_SITE:=https://distfiles.macports.org/py-setuptools,https://files.pythonho
 
 $(PKG)_DEPENDS_ON+=python2-pip-host
 
-$(PKG)_TARGET_DIRECTORY:=$(HOST_TOOLS_DIR)/usr/lib/python$(call GET_MAJOR_VERSION,$(PYTHON2_HOST_VERSION))/site-packages
-
 
 $(TOOLS_SOURCE_DOWNLOAD)
 $(TOOLS_UNPACKED)
@@ -31,7 +29,7 @@ $(pkg)-dirclean:
 	$(RM) -r $(PYTHON2_SETUPTOOLS_HOST_DIR)
 
 $(pkg)-distclean: $(pkg)-dirclean
-	$(RM) -r $(PYTHON2_SETUPTOOLS_HOST_TARGET_DIRECTORY)/setuptools/
-	$(RM) -r $(PYTHON2_SETUPTOOLS_HOST_TARGET_DIRECTORY)/setuptools-*.egg-info/
+	$(RM) -r $(PYTHON2_HOST_SITE_PACKAGES)/setuptools/
+	$(RM) -r $(PYTHON2_HOST_SITE_PACKAGES)/setuptools-*.egg-info/
 
 $(TOOLS_FINISH)
