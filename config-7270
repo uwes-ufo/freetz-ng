@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng d50f1aa907 uwe 2025-07-04
+#  freetz-ng cabdb815ff uwe 2025-07-04
 #
 
 #
@@ -517,7 +517,6 @@ FREETZ_BOX_CERTIFICATE_SUPPORT_AVAILABLE=y
 # FREETZ_PACKAGE_PSL is not set
 # FREETZ_PACKAGE_PYLOAD is not set
 # FREETZ_PACKAGE_PYTHON is not set
-# FREETZ_PACKAGE_PYTHON3 is not set
 # end of P
 
 #
