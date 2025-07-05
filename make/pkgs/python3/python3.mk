@@ -165,6 +165,7 @@ $(pkg)-clean:
 	$(RM) $(PYTHON3_TARGET_DIR)/py.lst $(PYTHON3_TARGET_DIR)/pyc.lst
 	$(RM) $(PYTHON3_TARGET_DIR)/excluded-module-files.lst $(PYTHON3_TARGET_DIR)/excluded-module-files-zip.lst $(PYTHON3_TARGET_DIR)/.exclude-extra
 	$(RM) -r $(PYTHON3_LOCAL_INSTALL_DIR)
+	$(RM) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/python*
 	$(RM) -r $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/python$(PYTHON3_MAJOR_VERSION)
 	$(RM) -r $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/python$(PYTHON3_MAJOR_VERSION)
 	$(RM) $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libpython$(PYTHON3_MAJOR_VERSION).*
