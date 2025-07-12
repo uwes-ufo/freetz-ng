@@ -49,9 +49,6 @@ $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_PYTHON3_MOD_SSL
 $(PKG)_REBUILD_SUBOPTS += $(OPENSSL_REBUILD_SUBOPTS)
 $(PKG)_REBUILD_SUBOPTS += FREETZ_TARGET_IPV6_SUPPORT
 
-#$(PKG)_CONFIGURE_ENV += --disable-gil
-#$(PKG)_CONFIGURE_ENV += --disable-test-modules
-
 $(PKG)_CONFIGURE_ENV += ac_cv_have_chflags=no
 $(PKG)_CONFIGURE_ENV += ac_cv_have_lchflags=no
 $(PKG)_CONFIGURE_ENV += ac_cv_py_format_size_t=no
@@ -67,6 +64,8 @@ $(PKG)_CONFIGURE_OPTIONS += --with-ensurepip=no
 $(PKG)_CONFIGURE_OPTIONS += --with-openssl=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr
 $(PKG)_CONFIGURE_OPTIONS += --enable-ipv6
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_PYTHON3_STATIC),--disable-shared,--enable-shared)
+$(PKG)_CONFIGURE_OPTIONS += --disable-gil
+$(PKG)_CONFIGURE_OPTIONS += --disable-test-modules
 
 # remove local copy of libffi, we use system one
 $(PKG)_CONFIGURE_PRE_CMDS += $(RM) -r Modules/_ctypes/libffi*;
