@@ -50,7 +50,7 @@ $(PKG)_REBUILD_SUBOPTS += $(OPENSSL_REBUILD_SUBOPTS)
 $(PKG)_REBUILD_SUBOPTS += FREETZ_TARGET_IPV6_SUPPORT
 
 #$(PKG)_CONFIGURE_ENV += --disable-gil
-$(PKG)_CONFIGURE_ENV += --disable-test-modules
+#$(PKG)_CONFIGURE_ENV += --disable-test-modules
 
 $(PKG)_CONFIGURE_ENV += ac_cv_have_chflags=no
 $(PKG)_CONFIGURE_ENV += ac_cv_have_lchflags=no
