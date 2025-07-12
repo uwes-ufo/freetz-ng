@@ -64,7 +64,7 @@ $(PKG)_CONFIGURE_OPTIONS += --with-ensurepip=no
 $(PKG)_CONFIGURE_OPTIONS += --with-openssl=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr
 $(PKG)_CONFIGURE_OPTIONS += --enable-ipv6
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_PYTHON3_STATIC),--disable-shared,--enable-shared)
-$(PKG)_CONFIGURE_OPTIONS += --disable-gil
+#$(PKG)_CONFIGURE_OPTIONS += --disable-gil
 $(PKG)_CONFIGURE_OPTIONS += --disable-test-modules
 
 # remove local copy of libffi, we use system one
