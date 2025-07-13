@@ -49,9 +49,9 @@ $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_PYTHON3_MOD_SSL
 $(PKG)_REBUILD_SUBOPTS += $(OPENSSL_REBUILD_SUBOPTS)
 $(PKG)_REBUILD_SUBOPTS += FREETZ_TARGET_IPV6_SUPPORT
 
-$(PKG)_CONFIGURE_ENV += ac_cv_py_format_size_t=no
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_ptmx=no
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_ptc=no
+$(PKG)_CONFIGURE_ENV += OPT="-fno-inline"
 
 $(PKG)_CONFIGURE_OPTIONS += --disable-test-modules
 $(PKG)_CONFIGURE_OPTIONS += --with-system-expat
