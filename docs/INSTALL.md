@@ -1,5 +1,5 @@
-# INSTALL: Freetz installieren/flashen
-Was man tun muss um Freetz auf seine Fritzbox zu bekommen.
+# INSTALL
+Was man tun muss um Freetz auf seine Fritzbox zu installieren/flashen.
 
 ### Installationswege
 Es gibt 3 Wege ein Firmware auf eine Fritzbox zu installieren:
