@@ -13,14 +13,14 @@ Freetz-NG is a fork of Freetz.
 More features - less bugs!
 
 ### Basic infos:
- * A web interface will be started on [port :81](http://fritz.box:81/), credentials: `admin`/`freetz`<br>
- * Default credentials for shell/ssh/telnet access are: `root`/`freetz`<br>
- * For more see: [freetz-ng.github.io](https://freetz-ng.github.io/)
+  * A web interface will be started on [port :81](http://fritz.box:81/), credentials: `admin`/`freetz`<br>
+  * Default credentials for shell/ssh/telnet access are: `root`/`freetz`<br>
+  * For more see: [freetz-ng.github.io](https://freetz-ng.github.io/)
 
 ### Requirements:
- * You need an up to date Linux System with some [prerequisites](docs/PREREQUISITES/README.md).
- * Or download a ready-to-use VM like Gismotro's [Freetz-Linux](https://freetz.digital-eliteboard.com/?dir=Teamserver/Freetz/Freetz-VM/VirtualBox/) (user & pass: `freetz`).
- * There are also Docker images available like [pfichtner-freetz](https://hub.docker.com/r/pfichtner/freetz) ([README](https://github.com/pfichtner/pfichtner-freetz#readme)).
+  * You need an up to date Linux System with some [prerequisites](docs/PREREQUISITES/README.md).
+  * Or download a ready-to-use VM like Gismotro's [Freetz-Linux](https://freetz.digital-eliteboard.com/?dir=Teamserver/Freetz/Freetz-VM/VirtualBox/) (user & pass: `freetz`).
+  * There are also Docker images available like [pfichtner-freetz](https://hub.docker.com/r/pfichtner/freetz) ([README](https://github.com/pfichtner/pfichtner-freetz#readme)).
 
 ### Clone the main branch:
 ```
