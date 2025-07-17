@@ -165,8 +165,8 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
    - other: [FRITZ.Box_7583_VDSL-08.03.image](https://download.avm.de/fritzbox/fritzbox-7583-vdsl/other/fritz.os/FRITZ.Box_7583_VDSL-08.03.image)
  * fritzbox-7590/
    - belgium: [FRITZ.Box_7590-07.59.image](https://download.avm.de/fritzbox/fritzbox-7590/belgium/fritz.os/FRITZ.Box_7590-07.59.image)
-   - deutschland: [FRITZ.Box_7590-08.03.image](https://download.avm.de/fritzbox/fritzbox-7590/deutschland/fritz.os/FRITZ.Box_7590-08.03.image)
-   - other: [FRITZ.Box_7590-08.03.image](https://download.avm.de/fritzbox/fritzbox-7590/other/fritz.os/FRITZ.Box_7590-08.03.image)
+   - deutschland: [FRITZ.Box_7590-08.20.image](https://download.avm.de/fritzbox/fritzbox-7590/deutschland/fritz.os/FRITZ.Box_7590-08.20.image)
+   - other: [FRITZ.Box_7590-08.20.image](https://download.avm.de/fritzbox/fritzbox-7590/other/fritz.os/FRITZ.Box_7590-08.20.image)
  * fritzbox-7590-ax/
    - deutschland: [FRITZ.Box_7590_AX-08.02.image](https://download.avm.de/fritzbox/fritzbox-7590-ax/deutschland/fritz.os/FRITZ.Box_7590_AX-08.02.image)
    - other: [FRITZ.Box_7590_AX-08.02.image](https://download.avm.de/fritzbox/fritzbox-7590-ax/other/fritz.os/FRITZ.Box_7590_AX-08.02.image)

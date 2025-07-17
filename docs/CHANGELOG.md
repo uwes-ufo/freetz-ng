@@ -54,7 +54,7 @@ Latest changes
    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.52
 
  - Host tools:
-   * ca-bundle 2025-05-20
+   * ca-bundle 2025-07-15
    * cmake 4.0.3
    * dtc 1.7.2
    * fakeroot 1.37.1.2
@@ -65,7 +65,7 @@ Latest changes
    * libtool 2.5.4
    * m4 1.4.20
    * meson 1.8.2
-   * ninja 1.13.0
+   * ninja 1.13.1
    * ncftp 3.3.0
    * ncurses 6.5-20250419
    * openssl 3.5.1
@@ -93,8 +93,8 @@ Latest changes
    * ACME.sh 3.1.1
    * Atop 2.11.1
    * BIND 9.11.37/9.20.10
-   * CA-bundle 2025-02-25
-   * Curl 8.14.1
+   * CA-bundle 2025-07-15
+   * Curl 8.15.0
    * Dante 1.4.4
    * dehydrated 0.7.2
    * Dnsmasq 2.80/2.91
@@ -135,7 +135,7 @@ Latest changes
    * tcpdump 4.1.1/4.99.4
    * Tor 0.4.8.17
    * uMurmur 0.2.20/0.3.1
-   * Unbound 1.23.0
+   * Unbound 1.23.1
    * UnRAR 6.1.7/7.1.6
    * usb.ids 635738b64e
    * Vim 9.1.1275

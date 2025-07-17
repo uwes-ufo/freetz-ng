@@ -38,7 +38,7 @@ echo -e "$CATS" | grep -v ^$ | while read c cat; do
 		new="${line%%/*}"
 		[ "$old" != "$new" ] && echo " * $new/" && old="$new"
 		file="${line#$new/}"
-		echo "   - [${file//%20/ }](https://osp.avm.de/$c/$line)"
+		echo "    - [${file//%20/ }](https://osp.avm.de/$c/$line)"
 	done
 done
 ) | sed 's/_-/-/' > $PARENT/docs/osp/README.md
