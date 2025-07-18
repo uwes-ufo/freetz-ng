@@ -280,7 +280,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FFmpeg 5.1.4/7.1.1](../../docs/make/ffmpeg.md)<a id='ffmpeg'></a>**<br>
     FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video.
 
-  * **[Fontconfig 2.16.0 (binary only)](../../docs/make/fontconfig.md)<a id='fontconfig'></a>**<br>
+  * **[Fontconfig 2.17.1 (binary only)](../../docs/make/fontconfig.md)<a id='fontconfig'></a>**<br>
     Fontconfig is a library for configuring and customizing font access. This package adds /etc/fontsfonts.conf
 
   * **[fortune 1.2 - DEPRECATED](../../docs/make/fortune.md)<a id='fortune'></a>**<br>
