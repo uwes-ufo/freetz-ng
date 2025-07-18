@@ -3,6 +3,7 @@
 # Installation der benötigten Pakete
 
 Es gibt folgende Möglichkeiten die benötigten Pakete (prerequisites) zu installieren:
+
   - Mit dem Befehl `tools/prerequisites` können die Pakete automatisch installiert werden.
   - Den Code auf dieser Seite per Copy and Paste auf der Konsole auszuführen, zB in PuTTY per Rechtsclick.
 
