@@ -1,6 +1,6 @@
 --- linux-4.9/arch/mips/Makefile
 +++ linux-4.9/arch/mips/Makefile
-@@ -331,6 +331,11 @@
+@@ -343,6 +343,11 @@
  boot-y			+= vmlinux.lzma.itb
  boot-y			+= vmlinux.lzo.itb
  

@@ -86,13 +86,14 @@ Latest changes
 
   - AVM sources:
     * 3000 ax  8.02 - 4.4.271
+    * 7590 ac  8.20 - 4.9.337
 
   - Patches:
 
   - Packages:
     * ACME.sh 3.1.1
     * Atop 2.11.1
-    * BIND 9.11.37/9.20.10
+    * BIND 9.11.37/9.20.11
     * CA-bundle 2025-07-15
     * Curl 8.15.0
     * Dante 1.4.4
@@ -155,9 +156,10 @@ Latest changes
     * libpcap 1.1.1/1.10.5
     * libusb1 1.0.23/1.0.29
     * libuv 1.44.2/1.51.0
-    * libpng 1.6.48
+    * libpng 1.6.50
     * mbedTLS 2.7.19/2.28.10/3.6.4
-    * pango 1.56.3
+    * nettle 3.10.2
+    * pango 1.56.4
     * pixman 0.44.2
     * readline 6.3-p8/8.3
 
