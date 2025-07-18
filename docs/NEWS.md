@@ -152,8 +152,8 @@
       als in 7.50 verwendet, im Konglomerat ist aber noch die Konfiguration für die alte Version enthalten.<br>
     - `source-files-FRITZ.Box_7530-cortexa9-07.55.tar.gz`: Immerhin passt die Kernelversion, vermutlich<br>
       weil sich diese nicht geändert hat. Allerdings gibt es nicht auflösbare Symbole, die Quellen passen also<br>
-      nicht zur Firmware. Die alten 7.50 Quellen passen mutmasslich besser.<br>
-    <br><br>
+      nicht zur Firmware. Die alten 7.50 Quellen passen mutmasslich besser.<br><br>
+    
     Oder kurz: Unbrauchbarer Mist.<br>
     Wenn es genügend Beschwerden an fritzbox_info@avm.de gibt, wird es vielleicht ein Updategeben. Allerdings<br>
     nur wenn es bis dahin keine "Labor" gibt, bei diesen missachtet AVM bis auf wenige Ausnahmen die GPL.<br>
@@ -181,8 +181,8 @@
     - Jemand findet ein schlimmes Problem<br>
     - Dieser sucht die Ursache dafür<br>
     - Und behebt das Problem<br>
-    - Ein Pull-Request wird erstellt<br>
-    <br><br>
+    - Ein Pull-Request wird erstellt<br><br>
+    
     Wem dies nicht gefällt darf das Problem gern für sich behalten.<br>
 
   * __[2023-03-18](#2023-03-18)__<a id='2023-03-18'></a><br>
@@ -243,8 +243,8 @@
     Alternativen:<br>
     - Die Tools selbst bauen<br>
     - Ein Docker Image verwenden<br>
-    - Das Betriebsystem aktualisieren<br>
-    <br><br>
+    - Das Betriebsystem aktualisieren<br><br>
+    
     Siehe [061da8a1](https://github.com/Freetz-NG/freetz-ng/commit/061da8a11a4ae593a98dd48d53fc2a3f0108b17a)<br>
 
   * __[2022-10-16](#2022-10-16)__<a id='2022-10-16'></a><br>
@@ -294,8 +294,8 @@
     - 4.4.271  - 3000 + 7530 + 6850-4G + 6850-5G<br>
     - 4.4.271  - 2400<br>
     - 4.9.218  - 7590(ac) + 7590ax<br>
-    - 4.19.183 - 7530ax<br>
-    <br><br>
+    - 4.19.183 - 7530ax<br><br>
+    
     Siehe [4d29c10d](https://github.com/Freetz-NG/freetz-ng/commit/4d29c10d54154be99b61cf7dc95acf751d3b4303)<br>
 
   * __[2022-05-27](#2022-05-27)__<a id='2022-05-27'></a><br>
@@ -306,8 +306,8 @@
     Alternativen:<br>
     - Die Toolchains selbst bauen, dazu im menuconfig keinen "APTguru" sondern höchstens "Experte" auswählen<br>
     - Ein Docker Image verwenden, auf [Docker-Hub](https://hub.docker.com/search?q=freetz) gibt es eine recht grosse Auswahl<br>
-    - Endlich mal das Betriebsystem aktualisieren<br>
-    <br><br>
+    - Endlich mal das Betriebsystem aktualisieren<br><br>
+    
     Siehe [8e6c52a3](https://github.com/Freetz-NG/freetz-ng/commit/8e6c52a39c8e61a869b73d0d8ad20f1a1ef3e623)<br>
 
   * __[2022-05-24](#2022-05-24)__<a id='2022-05-24'></a><br>
@@ -332,12 +332,12 @@
     lasse ich die Option lieber auf `n` da sie wohl die Fritzbox unbrauchbar machen könnte.<br>
     Zum "Glück" können Kernel der (bei AVM) neuesten Kernelversion 4 eh nicht ersetzt, sondern nur Module<br>
     hinzugefügt oder ersetzt werden. Weitere bedauerliche Einzelfälle bei denen auch "SCH_TACK" unklar ist:
-    - 1200_07.27
-    - 7530_07.25
-    - 1750_07.27
-    - 5491_07.27
-    - 7490_07.27
-    <br><br>
+    - 1200_07.27<br>
+    - 7530_07.25<br>
+    - 1750_07.27<br>
+    - 5491_07.27<br>
+    - 7490_07.27<br><br>
+    
     Siehe [94930632](https://github.com/Freetz-NG/freetz-ng/commit/9493063213ca68c42126b78347a8fab23e5cd4a2)
     und [2688d20d6](https://github.com/Freetz-NG/freetz-ng/commit/2688d20d65be847eef80fb98b593902b69ef8334)<br>
 
@@ -370,8 +370,8 @@
     - FRITZ!OS 7.25: von AVM angegebenes Veröffentlichungsdatum 25.02.2021
     - FRITZ!OS 7.27: von AVM angegebenes Veröffentlichungsdatum 11.05.2021
     - FRITZ!OS 7.01: von AVM angegebenes Veröffentlichungsdatum 12.09.2018
-    - FRITZ!OS 7.00: vom 22.11.2018 auf den 24.07.2018 umdatiert
-    <br><br>
+    - FRITZ!OS 7.00: vom 22.11.2018 auf den 24.07.2018 umdatiert<br>
+    
     Auf die heimlichen Aktualisierung ohne Versionsveränderung von
     [6820v3](https://github.com/Freetz-NG/freetz-ng/commit/9f4927aed8359f77b4cf9560c6dbafb521ee6573),
     [6850](https://github.com/Freetz-NG/freetz-ng/commit/112dbe190fc2ceff9f160d2b4e9e0595b95ad842) und
@@ -544,8 +544,8 @@
     AVM genutzt, in machen Fällen werden dadurch aber Probleme verursacht wie keine LTE-Funktionalität<br>
     mit der 6890.<br>
     - Meistens wurden neue Applets zusätzlich aktiviert<br>
-    - Die meisten Änderungen betreffen FritzOS ab 7.0<br>
-    <br><br>
+    - Die meisten Änderungen betreffen FritzOS ab 7.0<br><br>
+    
     Ich hab bislang keine Probleme festgestellt...<br>
  
   * __[2020-07-06](#2020-07-06)__<a id='2020-07-06'></a><br>
