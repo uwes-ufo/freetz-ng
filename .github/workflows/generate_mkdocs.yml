@@ -9,6 +9,7 @@ on:
     branches: [ master ]
     paths:
       - '.github/workflows/generate_mkdocs.yml'
+      - '.github/mkdocs/*'
       - 'docs/**/*.md'
       - 'docs/**/*.jpg'
       - 'docs/**/*.png'
