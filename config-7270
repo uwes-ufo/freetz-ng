@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 14b70de38f uwe 2025-07-18
+#  freetz-ng 3362b95093 uwe 2025-07-19
 #
 
 #
@@ -855,7 +855,7 @@ FREETZ_LIB_libctlmgr_WITH_RENAME=y
 # GCC
 #
 FREETZ_LIB_libgcc_s=y
-# FREETZ_LIB_libstdc__ is not set
+# FREETZ_LIB_libstdcxx is not set
 # end of GCC
 
 #
@@ -1076,7 +1076,7 @@ FREETZ_LIB_librt=y
 # FREETZ_LIB_libthread_db is not set
 FREETZ_LIB_libuClibc=y
 FREETZ_LIB_libutil=y
-# FREETZ_LIB_libuClibc__ is not set
+# FREETZ_LIB_libuClibcxx is not set
 # end of uClibc
 
 #
