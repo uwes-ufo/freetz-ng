@@ -1241,12 +1241,12 @@ config FREETZ_STDCXXLIB
 	default "libstdcxx"                      if FREETZ_STDCXXLIB_USE_GNULIBSTDCXX
 config FREETZ_LIB_STDCXXLIB
 	def_bool n
-	select FREETZ_LIB_libuClibc__            if FREETZ_STDCXXLIB_USE_UCLIBCXX
-	select FREETZ_LIB_libstdc__              if FREETZ_STDCXXLIB_USE_GNULIBSTDCXX
+	select FREETZ_LIB_libuClibcxx            if FREETZ_STDCXXLIB_USE_UCLIBCXX
+	select FREETZ_LIB_libstdcxx              if FREETZ_STDCXXLIB_USE_GNULIBSTDCXX
 	default n
 config FREETZ_LIB_STDCXXLIB_WITH_WCHAR
 	def_bool n
-	select FREETZ_LIB_libuClibc__WITH_WCHAR  if FREETZ_STDCXXLIB_USE_UCLIBCXX
+	select FREETZ_LIB_libuClibcxx_WITH_WCHAR  if FREETZ_STDCXXLIB_USE_UCLIBCXX
 	default n
 
 config FREETZ_TARGET_CFLAGS

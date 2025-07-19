@@ -138,7 +138,7 @@ Latest changes
     * Tor 0.4.8.17
     * uMurmur 0.2.20/0.3.1
     * Unbound 1.23.1
-    * UnRAR 6.1.7/7.1.6
+    * UnRAR 6.1.7/7.1.8
     * usb.ids 635738b64e
     * Vim 9.1.1275
     * Whois 5.6.2
@@ -158,6 +158,8 @@ Latest changes
     * libusb1 1.0.23/1.0.29
     * libuv 1.44.2/1.51.0
     * libpng 1.6.50
+    * liburcu 0.15.3
+    * libxml2 2.14.5
     * mbedTLS 2.7.19/2.28.10/3.6.4
     * nettle 3.10.2
     * pango 1.56.4
