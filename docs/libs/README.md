@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HarfBuzz (libharfbuzz.so) 11.2.1](harfbuzz.md)<a id='harfbuzz'></a>**<br>
+  * **[HarfBuzz (libharfbuzz.so) 11.3.2](harfbuzz.md)<a id='harfbuzz'></a>**<br>
     HarfBuzz is a text shaping engine. It primarily supports OpenType, but also Apple Advanced Typography.
 
 ### I
@@ -300,7 +300,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pcre2: libpcre2 (libpcre2-8.so) 10.45](pcre2.md)<a id='pcre2'></a>**<br>
     A Perl Compatible Regular Expression library
 
-  * **[Pixman (libpixman-1.so) 0.44.2](pixman.md)<a id='pixman'></a>**<br>
+  * **[Pixman (libpixman-1.so) 0.46.4](pixman.md)<a id='pixman'></a>**<br>
     Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization.
 
   * **[pjproject2: libpj (libpj.so) 2.2.1](pjproject2.md)<a id='pjproject2'></a>**<br>

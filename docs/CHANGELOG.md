@@ -150,7 +150,7 @@ Latest changes
     * expat 2.7.1
     * gettext 0.24
     * gmp 6.3.0
-    * harfbuzz 11.2.1
+    * harfbuzz 11.3.2
     * libcap 2.49/2.75
     * libdeflate 1.24
     * libffi 3.5.1
@@ -163,7 +163,7 @@ Latest changes
     * mbedTLS 2.7.19/2.28.10/3.6.4
     * nettle 3.10.2
     * pango 1.56.4
-    * pixman 0.44.2
+    * pixman 0.46.4
     * readline 6.3-p8/8.3
 
   - Firmware updates:
