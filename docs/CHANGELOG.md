@@ -60,7 +60,7 @@ Latest changes
     * fakeroot 1.37.1.2
     * gmp 6.3.0
     * gperf 3.2
-    * iPerf3 3.3/3.19
+    * iPerf3 3.3/3.19.1
     * kconfig 6.15
     * libtool 2.5.4
     * m4 1.4.20
@@ -92,6 +92,7 @@ Latest changes
 
   - Packages:
     * ACME.sh 3.1.1
+    * Apache2 2.4.65
     * Atop 2.11.1
     * BIND 9.11.37/9.20.11
     * CA-bundle 2025-07-15

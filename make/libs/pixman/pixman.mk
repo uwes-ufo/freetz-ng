@@ -15,12 +15,14 @@ $(PKG)_TARGET_BINARY:=$($(PKG)_TARGET_DIR)/$($(PKG)_LIBNAME_LONG)
 
 $(PKG)_DEPENDS_ON += meson-host
 
-ifeq ($(strip $(FREETZ_LIB_libpng16)),y)
+ifeq ($(strip $(FREETZ_LIB_libpixman_1_WITH_LIBPNG)),y)
 $(PKG)_DEPENDS_ON += libpng
 $(PKG)_CONFIGURE_OPTIONS += -D libpng=enabled
 else
 $(PKG)_CONFIGURE_OPTIONS += -D libpng=disabled
 endif
+
+$(PKG)_REBUILD_SUBOPTS += FREETZ_LIB_libpixman_1_WITH_LIBPNG
 
 $(PKG)_CONFIGURE_OPTIONS += -D gnu-inline-asm=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D tls=disabled
