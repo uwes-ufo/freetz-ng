@@ -114,7 +114,7 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - HWR 268: [FRITZ.Repeater_1200_AX-07.57-112910-Inhaus.image](http://download.avm.de/inhaus/MOVE21NL1/1200AX/FRITZ.Repeater_1200_AX-07.57-112910-Inhaus.image)
   - HWR 270: [FRITZ.Repeater_3000_AX-08.10-123059-Inhaus.image](http://download.avm.de/inhaus/Smart24P2/3000AX/FRITZ.Repeater_3000_AX-08.10-123059-Inhaus.image)
   - HWR 271: [FRITZ.Box_7510-08.10-123025-Inhaus.image](http://download.avm.de/inhaus/Smart24P2/7510/FRITZ.Box_7510-08.10-123025-Inhaus.image)
-  - HWR 272: [FRITZ.Box_5590_Fiber-08.10-122851-Inhaus.image](http://download.avm.de/inhaus/Smart24P2/5590Fiber/FRITZ.Box_5590_Fiber-08.10-122851-Inhaus.image)
+  - HWR 272: [FRITZ.Box_5590_Fiber-08.10-123028-Inhaus.image](http://download.avm.de/inhaus/Smart24P2/5590Fiber/FRITZ.Box_5590_Fiber-08.10-123028-Inhaus.image)
   - HWR 276: [FRITZ.Box_7520_B-08.10-123032-Inhaus.image](http://download.avm.de/inhaus/Smart24P2/7520B/FRITZ.Box_7520_B-08.10-123032-Inhaus.image)
 
 ### Dect-Release
@@ -144,8 +144,6 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
 ### Dect-Labor
   - MHW 05.01: [05.01.04.88.avm.de.upd](http://download.avm.de/dect/0501/move21/05.01.04.88.avm.de.upd)
   - MHW 06.04: [06.04.03.54.avm.de.upd](http://download.avm.de/dect/0604/p15/06.04.03.54.avm.de.upd)
-  - MHW 06.06: [06.06.05.23.avm.de.upd](http://download.avm.de/dect/0606/labor1/06.06.05.23.avm.de.upd)
-  - MHW 06.07: [06.07.05.23.avm.de.upd](http://download.avm.de/dect/0607/labor1/06.07.05.23.avm.de.upd)
   - MHW 08.01: [08.01.05.11.avm.de.upd](http://download.avm.de/dect/0801/smart24p1/08.01.05.11.avm.de.upd)
   - MHW 08.02: [08.02.05.11.avm.de.upd](http://download.avm.de/dect/0802/smart24p1/08.02.05.11.avm.de.upd)
   - MHW 08.03: [08.03.05.11.avm.de.upd](http://download.avm.de/dect/0803/smart24p1/08.03.05.11.avm.de.upd)
