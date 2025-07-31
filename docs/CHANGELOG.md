@@ -54,6 +54,7 @@ Latest changes
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.52
 
   - Host tools:
+    * automake 1.18
     * ca-bundle 2025-07-15
     * cmake 4.0.3
     * dtc 1.7.2
@@ -61,16 +62,16 @@ Latest changes
     * gmp 6.3.0
     * gperf 3.2
     * iPerf3 3.3/3.19.1
-    * kconfig 6.15
+    * kconfig 6.16
     * libtool 2.5.4
     * m4 1.4.20
-    * meson 1.8.2
+    * meson 1.8.3
     * ninja 1.13.1
     * ncftp 3.3.0
     * ncurses 6.5-20250419
     * openssl 3.5.1
-    * pkgconf 2.4.3
-    * precompiled host-tools 2025-07-04
+    * pkgconf 2.5.1
+    * precompiled host-tools 2025-07-31
     * precompiled toolchains r25866
     * python 3.13.5
     * python2-pip 20.3.4
@@ -151,7 +152,7 @@ Latest changes
     * expat 2.7.1
     * gettext 0.24
     * gmp 6.3.0
-    * harfbuzz 11.3.2
+    * harfbuzz 11.3.3
     * libcap 2.49/2.75
     * libdeflate 1.24
     * libffi 3.5.1
@@ -210,6 +211,7 @@ Latest changes
     * 7510     7.30 - 4.4.60 (corrupt)
     * 7510     8.00 - 4.4.271
     * 7530     8.00 - 4.4.271
+    * 7530 ax  7.57 - 4.19.183
     * 7530 ax  8.03 - 4.19.183
     * 7590 ax  8.00 - 4.9.325
     * 7690     8.01 - 5.4.213

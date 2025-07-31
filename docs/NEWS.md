@@ -1,5 +1,14 @@
 # Neuigkeiten
 
+  * __[2025-07-31](#2025-07-31)__<a id='2025-07-31'></a><br>
+    Für "Labor"-Firmware wird die `.zip`-Datei nicht mehr automatisch heruntergeladen. Diese Datei muss manuell<br>
+    heruntergeladen und die `.image`-Datei in das Verzeichnis `dl/fw/` gespeichert werden.<br>
+    Ob Labors in Zukunft überhaupt noch unterstützt werden ist fraglich, da es von AVM fast nie GPL-Quellcode gibt.<br>
+    Siehe<br>
+    - [Sourcecode von AVM anfordern](https://github.com/orgs/Freetz-NG/discussions/134)<br>
+    - [ad863721](https://github.com/Freetz-NG/freetz-ng/commit/ad86372180ace8e6f8a3864d11831bb5ec9b859f)<br>
+    - [b0712c52](https://github.com/Freetz-NG/freetz-ng/commit/b0712c522dd99b11c5be5078de83bef8ff932beb)<br>
+
   * __[2025-04-21](#2025-04-21)__<a id='2025-04-21'></a><br>
     Warnung vor GCC 15! Damit kann momentan nicht alles funktionierend compiliert werden.<br>
     Obwohl diese Version noch nicht veröffentlich wurde ist sie in `Fedora 42` bereits Standard.<br>

@@ -8,6 +8,7 @@ config FREETZ_DL_OVERRIDE
 config FREETZ_DL_SITE
 	string "Firmware site"                                                                                             if FREETZ_DL_OVERRIDE && !FREETZ_TYPE_FIRMWARE_DETECT_LATEST
 	default "http://localhost"                                                                                         if FREETZ_TYPE_FIRMWARE_DETECT_LATEST
+	default ""                                                                                                         if !FREETZ_TYPE_FIRMWARE_FINAL
 	#
 	default "@AVM/fritzbox.fon/firmware/deutsch"                                                                       if (FREETZ_TYPE_300IP || FREETZ_TYPE_FON) && FREETZ_TYPE_LANG_DE
 	default "@AVM/fritzbox.fon/firmware/english/annex_a"                                                               if (FREETZ_TYPE_300IP || FREETZ_TYPE_FON) && FREETZ_TYPE_LANG_EN && FREETZ_TYPE_ANNEX_A
@@ -774,18 +775,6 @@ config FREETZ_DL_SOURCE_CONTAINER
 	string "Downloaded container file"                                                            if FREETZ_DL_OVERRIDE
 	depends                                                                                       on (FREETZ_TYPE_FIRMWARE_LABOR || FREETZ_TYPE_FIRMWARE_PLUS) && !FREETZ_TYPE_FIRMWARE_DETECT_LATEST
 	#
-	default "fritzrepeater-2400-labor-120721.zip"                                                 if FREETZ_TYPE_2400_W5
-	default "fritzbox-5530-labor-122076.zip"                                                      if FREETZ_TYPE_5530
-	default "fritzbox-6591-labor-121796.zip"                                                      if FREETZ_TYPE_6591
-	default "fritzbox-6660-labor-121895.zip"                                                      if FREETZ_TYPE_6660
-	default "fritzbox-6690-labor-121896.zip"                                                      if FREETZ_TYPE_6690
-	default "fritzbox-6850_lte-labor-122255.zip"                                                  if FREETZ_TYPE_6850_4G
-	default "fritzbox-6850_5g-labor-122254.zip"                                                   if FREETZ_TYPE_6850_5G
-	default "fritzbox-6860_5g-labor-122256.zip"                                                   if FREETZ_TYPE_6860
-	default "fritzbox-7510-labor-122257.zip"                                                      if FREETZ_TYPE_7510
-	default "fritzbox-7530-labor-121911.zip"                                                      if FREETZ_TYPE_7530_W5
-	default "fritzbox-7530ax-labor-122082.zip"                                                    if FREETZ_TYPE_7530_W6_V1
-	default "fritzbox-7590AX-labor-121777.zip"                                                    if FREETZ_TYPE_7590_W6
 	default "xxxxxxxxxxxxxxxxxxxxxxxxx.zip"                                                       if FREETZ_TYPE_xxxx
 	#
 	default ""

@@ -6,7 +6,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[autoconf 2.72](autoconf-host.md)<a id='autoconf-host'></a>**<br>
 
-  * **[automake 1.17](automake-host.md)<a id='automake-host'></a>**<br>
+  * **[automake 1.18](automake-host.md)<a id='automake-host'></a>**<br>
 
   * **[avm-rle 1.0](avm-rle-host.md)<a id='avm-rle-host'></a>**<br>
 
@@ -50,7 +50,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### K
 
-  * **[kconfig 6.15](kconfig-host.md)<a id='kconfig-host'></a>**<br>
+  * **[kconfig 6.16](kconfig-host.md)<a id='kconfig-host'></a>**<br>
 
 ### L
 
@@ -70,7 +70,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[make 4.4.1](make-host.md)<a id='make-host'></a>**<br>
 
-  * **[meson 1.8.2](meson-host.md)<a id='meson-host'></a>**<br>
+  * **[meson 1.8.3](meson-host.md)<a id='meson-host'></a>**<br>
 
   * **[mklibs 0.1.45](mklibs-host.md)<a id='mklibs-host'></a>**<br>
 
@@ -96,7 +96,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[patchelf 0.14.5/0.15.0](patchelf-host.md)<a id='patchelf-host'></a>**<br>
 
-  * **[pkgconf 2.4.3](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
+  * **[pkgconf 2.5.1](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
 
   * **[prelink 20131005](prelink-host.md)<a id='prelink-host'></a>**<br>
 
@@ -144,7 +144,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2025-07-04](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-07-31](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 

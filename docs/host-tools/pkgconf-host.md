@@ -1,4 +1,4 @@
-# pkgconf 2.4.3
+# pkgconf 2.5.1
   - Homepage: [http://pkgconf.org/](http://pkgconf.org/)
   - Manpage: [http://pkgconf.org/features.html](http://pkgconf.org/features.html)
   - Changelog: [https://github.com/pkgconf/pkgconf/blob/master/NEWS](https://github.com/pkgconf/pkgconf/blob/master/NEWS)
