@@ -51,7 +51,7 @@ Latest changes
 
   - Build system:
     * Ccache 4.11.3
-    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.52
+    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.54
 
   - Host tools:
     * automake 1.18
