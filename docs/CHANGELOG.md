@@ -96,6 +96,7 @@ Latest changes
     * Apache2 2.4.65
     * Atop 2.11.1
     * BIND 9.11.37/9.20.11
+    * bvi 1.5.0
     * CA-bundle 2025-07-15
     * Curl 8.15.0
     * Dante 1.4.4
@@ -116,7 +117,7 @@ Latest changes
     * Lua 5.1.5/5.4.8
     * mc (Midnight Commander) 4.8.31/4.8.33
     * Minicom 2.10
-    * Mosquitto 2.0.21
+    * Mosquitto 2.0.22
     * Nano 8.5
     * NcFTP 3.3.0
     * Nmap 4.76/5.51/7.97
@@ -135,7 +136,7 @@ Latest changes
     * sslh 2.2.3
     * strace 4.9/5.0/6.15
     * Stunnel 5.75
-    * Sudo 1.9.17p1
+    * Sudo 1.9.17p2
     * tcpdump 4.1.1/4.99.4
     * Tor 0.4.8.17
     * uMurmur 0.2.20/0.3.1
@@ -143,7 +144,7 @@ Latest changes
     * UnRAR 6.1.7/7.1.8
     * usb.ids 635738b64e
     * Vim 9.1.1275
-    * Whois 5.6.3
+    * Whois 5.6.4
     * wireguard-tools 1.0.20250521
     * xsltproc 1.1.43
 

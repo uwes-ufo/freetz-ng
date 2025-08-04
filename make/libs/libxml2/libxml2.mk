@@ -21,27 +21,25 @@ $(PKG)_DEPENDS_ON += iconv
 endif
 $(PKG)_DEPENDS_ON += zlib
 
+$(PKG)_CONFIGURE_ENV += ac_cv_have_decl_getentropy=no
+
 $(PKG)_CONFIGURE_OPTIONS += --enable-shared
 $(PKG)_CONFIGURE_OPTIONS += --enable-static
 
-$(PKG)_CONFIGURE_OPTIONS += --enable-rebuild-docs=no
 $(PKG)_CONFIGURE_OPTIONS += --with-debug=no
-$(PKG)_CONFIGURE_OPTIONS += --with-run-debug=no
 $(PKG)_CONFIGURE_OPTIONS += --with-python=no
 
 $(PKG)_CONFIGURE_OPTIONS += --with-iso8859x=no
 $(PKG)_CONFIGURE_OPTIONS += --with-iconv=yes
 
 $(PKG)_CONFIGURE_OPTIONS += --with-threads=yes
-$(PKG)_CONFIGURE_OPTIONS += --with-zlib=yes
+$(PKG)_CONFIGURE_OPTIONS += --with-zlib="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
 $(PKG)_CONFIGURE_OPTIONS += --with-readline=no
 
 $(PKG)_CONFIGURE_OPTIONS += --with-minimum=yes
 $(PKG)_CONFIGURE_OPTIONS += --with-http=yes
-$(PKG)_CONFIGURE_OPTIONS += --with-ftp=yes
 $(PKG)_CONFIGURE_OPTIONS += --with-c14n=yes
 $(PKG)_CONFIGURE_OPTIONS += --with-catalog=no
-$(PKG)_CONFIGURE_OPTIONS += --with-docbook=no
 $(PKG)_CONFIGURE_OPTIONS += --with-html=$(if $(FREETZ_LIB_libxml2_WITH_HTML),yes,no)
 $(PKG)_CONFIGURE_OPTIONS += --with-legacy=no		#deprecated APIs for compatibility
 $(PKG)_CONFIGURE_OPTIONS += --with-lzma=no
@@ -53,7 +51,6 @@ $(PKG)_CONFIGURE_OPTIONS += --with-regexps=yes		#Regular Expressions support
 $(PKG)_CONFIGURE_OPTIONS += --with-sax1=yes		#old SAX1 interface
 $(PKG)_CONFIGURE_OPTIONS += --with-schemas=yes		#Relax-NG and Schemas support
 $(PKG)_CONFIGURE_OPTIONS += --with-schematron=no	#Schematron support
-$(PKG)_CONFIGURE_OPTIONS += --with-tree=yes		#DOM like tree manipulation APIs
 $(PKG)_CONFIGURE_OPTIONS += --with-valid=yes		#DTD validation support
 $(PKG)_CONFIGURE_OPTIONS += --with-writer=yes		#xmlWriter saving interface
 $(PKG)_CONFIGURE_OPTIONS += --with-xinclude=yes		#XInclude support
@@ -94,7 +91,7 @@ $(pkg)-precompiled: $($(PKG)_TARGET_BINARY)
 $(pkg)-clean:
 	-$(SUBMAKE) -C $(LIBXML2_DIR) clean
 	$(RM) -r \
-		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libxml2* \
+		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libxml2.* \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/xml2-config \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/libxml* \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/pkgconfig/libxml-2.0.pc

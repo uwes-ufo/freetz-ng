@@ -1,4 +1,4 @@
-# bvi/bmore 1.4.2 (binary only)
+# bvi 1.5.0 (binary only)
   - Homepage: [https://bvi.sourceforge.net/](https://bvi.sourceforge.net/)
   - Manpage: [https://bvi.sourceforge.net/quick.html](https://bvi.sourceforge.net/quick.html)
   - Changelog: [https://bvi.sourceforge.net/download.html](https://bvi.sourceforge.net/download.html)
