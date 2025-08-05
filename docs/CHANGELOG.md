@@ -90,6 +90,8 @@ Latest changes
     * 7590 ac  8.20 - 4.9.337
 
   - Patches:
+    * Various Fritzos 8.2 related changes, except: remove_aha + hide_dsl + remove_nas
+    * New Patch: homelua_symlink_fixes for Fritzos 8.2
 
   - Packages:
     * ACME.sh 3.1.1
@@ -165,7 +167,7 @@ Latest changes
     * libxml2 2.14.5
     * mbedTLS 2.7.19/2.28.10/3.6.4
     * nettle 3.10.2
-    * pango 1.56.4
+    * pango 1.56.3
     * pixman 0.46.4
     * readline 6.3-p8/8.3
 
