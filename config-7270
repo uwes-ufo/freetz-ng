@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 0324ee3dcb uwe 2025-08-05
+#  freetz-ng ce57f5b22a uwe 2025-08-06
 #
 
 #
@@ -1093,6 +1093,7 @@ FREETZ_LIB_libutil=y
 # Web and WebDAV
 #
 FREETZ_LIB_libcurl=y
+FREETZ_LIB_libcurl_WITH_VERSION_ABANDON=y
 FREETZ_LIB_libcurl_WITH_SSL=y
 FREETZ_LIB_libcurl_WITH_OPENSSL=y
 # FREETZ_LIB_libcurl_WITH_MBEDTLS is not set
