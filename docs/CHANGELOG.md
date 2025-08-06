@@ -56,7 +56,7 @@ Latest changes
   - Host tools:
     * automake 1.18
     * ca-bundle 2025-07-15
-    * cmake 4.0.3
+    * cmake 4.1.0
     * dtc 1.7.2
     * fakeroot 1.37.1.2
     * gmp 6.3.0
@@ -136,7 +136,7 @@ Latest changes
     * Smartmontools 7.5
     * socat 1.8.0.3
     * sslh 2.2.3
-    * strace 4.9/5.0/6.15
+    * strace 4.9/5.0/6.16
     * Stunnel 5.75
     * Sudo 1.9.17p2
     * tcpdump 4.1.1/4.99.4
@@ -158,7 +158,7 @@ Latest changes
     * harfbuzz 11.3.3
     * libcap 2.49/2.75
     * libdeflate 1.24
-    * libffi 3.5.1
+    * libffi 3.5.2
     * libpcap 1.1.1/1.10.5
     * libusb1 1.0.23/1.0.29
     * libuv 1.44.2/1.51.0
