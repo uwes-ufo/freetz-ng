@@ -532,7 +532,6 @@ config FREETZ_AVM_HAS_FIRMWARE_08_2X_LABOR
 		)) \
 		|| \
 		( FREETZ_TYPE_LANG_DE && ( \
-			FREETZ_TYPE_6591 || \
 			FREETZ_TYPE_6660 || \
 			FREETZ_TYPE_6690 \
 		))
@@ -543,6 +542,10 @@ config FREETZ_AVM_HAS_FIRMWARE_08_2X
 	depends on \
 		( (FREETZ_TYPE_LANG_DE||FREETZ_TYPE_LANG_EN) && ( \
 			FREETZ_TYPE_7590_W5 \
+		)) \
+		|| \
+		( FREETZ_TYPE_LANG_DE && ( \
+			FREETZ_TYPE_6591 \
 		))
 
 config FREETZ_AVM_HAS_FIRMWARE_08_2X_PLUS

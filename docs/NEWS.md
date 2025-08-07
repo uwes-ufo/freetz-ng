@@ -1,5 +1,11 @@
 # Neuigkeiten
 
+  * __[2025-08-06](#2025-08-06)__<a id='2025-08-06'></a><br>
+    AVM ist "on the fritz"<br>
+    Es werden keine "AVM FRITZ!Box"en mehr verkauft sondern "FRITZ! FRITZ!Box", "FRITZ! FRITZ!Smart",<br>
+    "FRITZ! FRITZ!Repeater", "FRITZ! FRITZ!Powerline" und "FRITZ! FRITZ!Fon"s.<br>
+    Siehe [AVM Impressum](https://avm.de/impressum/)<br>
+
   * __[2025-07-31](#2025-07-31)__<a id='2025-07-31'></a><br>
     Für "Labor"-Firmware wird die `.zip`-Datei nicht mehr automatisch heruntergeladen. Diese Datei muss manuell<br>
     heruntergeladen und die `.image`-Datei in das Verzeichnis `dl/fw/` gespeichert werden.<br>
