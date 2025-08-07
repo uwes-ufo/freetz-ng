@@ -35,7 +35,6 @@ on:
           - "07_2X"
           - "07_5X"
           - "08_0X"
-          - "08_2X_LABOR"
           - "08_2X"
 
 concurrency:
@@ -68,7 +67,7 @@ jobs:
         id: parse
         run: |
           FOS="${{ github.event.inputs.fos }}"
-          [ -z "$FOS" ] && FOS="08_2X_LABOR"
+          [ -z "$FOS" ] && FOS="08_2X"
           [ "$FOS" = "alles" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_//p" config/avm/availability.in)"
           [ "$FOS" = "freetz_org" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[456])/\1/p" config/avm/availability.in) 07_0X 07_1X"
           [ "$FOS" = "freetz-ng" ] && FOS="07_2X 07_5X $(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[89])/\1/p" config/avm/availability.in)"

@@ -87,6 +87,7 @@ Latest changes
 
   - AVM sources:
     * 3000 ax  8.02 - 4.4.271
+    * 6591     8.20 - 5.15.179
     * 7590 ac  8.20 - 4.9.337
 
   - Patches:

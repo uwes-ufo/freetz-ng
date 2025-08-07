@@ -1,5 +1,10 @@
 # Neuigkeiten
 
+  * __[2025-08-07](#2025-08-07)__<a id='2025-08-07'></a><br>
+    Neue "Sicherheitsinfos zu Updates" auf avm.de wurden heute veröffentlicht.<br>
+    Sie tragen das "Veröffentlichungsdatum" "31.01.2024", "16.09.2024" und "09.01.2025".<br>
+    Siehe [AVM Sicherheitsinfos zu Updates](https://avm.de/service/sicherheitsinfos-zu-updates/)<br>
+
   * __[2025-08-06](#2025-08-06)__<a id='2025-08-06'></a><br>
     AVM ist "on the fritz"<br>
     Es werden keine "AVM FRITZ!Box"en mehr verkauft sondern "FRITZ! FRITZ!Box", "FRITZ! FRITZ!Smart",<br>
