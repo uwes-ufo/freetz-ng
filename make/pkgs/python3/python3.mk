@@ -49,7 +49,11 @@ $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_PYTHON3_MOD_SSL
 $(PKG)_REBUILD_SUBOPTS += $(OPENSSL_REBUILD_SUBOPTS)
 $(PKG)_REBUILD_SUBOPTS += FREETZ_TARGET_IPV6_SUPPORT
 
+$(PKG)_CONFIGURE_ENV += ac_cv_have_chflags=no
+$(PKG)_CONFIGURE_ENV += ac_cv_have_lchflags=no
+$(PKG)_CONFIGURE_ENV += ac_cv_py_format_size_t=no
 $(PKG)_CONFIGURE_ENV += ac_cv_have_long_long_format=yes
+$(PKG)_CONFIGURE_ENV += ac_cv_buggy_getaddrinfo=no
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_ptmx=no
 $(PKG)_CONFIGURE_ENV += ac_cv_file__dev_ptc=no
 $(PKG)_CONFIGURE_ENV += OPT="-fno-inline"
@@ -58,7 +62,6 @@ $(PKG)_CONFIGURE_OPTIONS += --disable-test-modules
 $(PKG)_CONFIGURE_OPTIONS += --with-system-expat
 $(PKG)_CONFIGURE_OPTIONS += --with-build-python=$(abspath $(TOOLS_DIR)/path/python3)
 $(PKG)_CONFIGURE_OPTIONS += --with-ensurepip=no
-$(PKG)_CONFIGURE_OPTIONS += --with-openssl=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr
 $(PKG)_CONFIGURE_OPTIONS += --enable-ipv6
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_PYTHON3_STATIC),--disable-shared,--enable-shared)
 

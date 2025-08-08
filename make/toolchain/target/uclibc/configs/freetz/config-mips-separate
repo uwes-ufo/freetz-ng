@@ -67,7 +67,7 @@ DO_C99_MATH=y
 # DO_XSI_MATH is not set
 # UCLIBC_HAS_FENV is not set
 UCLIBC_HAS_LONG_DOUBLE_MATH=y
-KERNEL_HEADERS="/home/uwe/git/freetz-ng/source/toolchain-mips_gcc-13.3.0_uClibc-1.0.52-nptl_kernel-3.10/linux-dev/3.10/include"
+KERNEL_HEADERS="$(KERNEL_INCLUDE)"
 HAVE_DOT_CONFIG=y
 
 #
