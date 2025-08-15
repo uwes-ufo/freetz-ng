@@ -171,9 +171,9 @@ jobs:
         id: generate
         if: matrix.fritz != 'skip'
         run: |
-          PKG="${{ matrix.fritz.pkg }}"
-          PKG="$(echo "$PKG" | tr '[:lower:]' '[:upper:]')"
-          pkg="$(echo "$PKG" | tr '[:upper:]' '[:lower:]')"
+          pkg="${{ matrix.fritz.pkg }}"
+          pkg="$(echo "$pkg" | tr '[:upper:]' '[:lower:]')"
+          PKG="$(echo "$pkg" | tr '[:lower:]' '[:upper:]' | sed 's/-/_/g')"
           echo "pkg=$pkg" >> $GITHUB_OUTPUT
           TYPE=""
           for x in pkgs libs; do [ -d make/$x/$pkg ] && TYPE=$x; done

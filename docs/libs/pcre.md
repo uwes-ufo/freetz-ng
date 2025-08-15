@@ -1,4 +1,4 @@
-# pcre: libpcre (libpcre.so) 8.45
+# pcre: libpcre (libpcre.so) - DEPRECATED 8.45
   - Homepage: [https://www.pcre.org/](https://www.pcre.org/)
   - Manpage: [https://www.pcre.org/original/doc/html/](https://www.pcre.org/original/doc/html/)
   - Changelog: [https://www.pcre.org/original/changelog.txt](https://www.pcre.org/original/changelog.txt)
