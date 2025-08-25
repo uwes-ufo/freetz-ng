@@ -1,6 +1,6 @@
-$(call PKG_INIT_BIN, 8.5)
+$(call PKG_INIT_BIN, 8.6)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=000b011d339c141af9646d43288f54325ff5c6e8d39d6e482b787bbc6654c26a
+$(PKG)_HASH:=f7abfbf0eed5f573ab51bd77a458f32d82f9859c55e9689f819d96fe1437a619
 $(PKG)_SITE:=https://www.nano-editor.org/dist/v8
 ### WEBSITE:=https://www.nano-editor.org/
 ### MANPAGE:=https://www.nano-editor.org/docs.php
@@ -49,9 +49,13 @@ $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_NANO_MULTIBUFFER),--enable-mul
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_NANO_COLOR_SYNTAX),--enable-color,--disable-color)
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_NANO_NANORC),--enable-nanorc,--disable-nanorc)
 
+$(PKG)_CONFIGURE_ENV += ac_cv_header_libintl_h=no
 $(PKG)_CONFIGURE_ENV += ac_cv_func_strcasecmp=no
 $(PKG)_CONFIGURE_ENV += ac_cv_func_strncasecmp=no
-$(PKG)_CONFIGURE_ENV += ac_cv_header_libintl_h=no
+ifeq ($(strip $(FREETZ_TARGET_UCLIBC_1_0_14)),y)
+$(PKG)_CONFIGURE_ENV += ac_cv_func_getrandom=no
+$(PKG)_CONFIGURE_ENV += gl_cv_onwards_func_getrandom=yes
+endif
 
 $(PKG)_SYNTAX_FILES_LIST:=
 $(PKG)_SYNTAX_FILES_LIST += $(if $(FREETZ_PACKAGE_NANO_SYNTAX_FILE_SH),sh.nanorc)

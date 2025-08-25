@@ -65,7 +65,7 @@ Latest changes
     * kconfig 6.16
     * libtool 2.5.4
     * m4 1.4.20
-    * meson 1.8.3
+    * meson 1.8.4
     * ninja 1.13.1
     * ncftp 3.3.0
     * ncurses 6.5-20250419
@@ -112,7 +112,7 @@ Latest changes
     * Git 2.50.1
     * HAProxy 2.6.22
     * htop 1.0.3/3.4.1
-    * ImageMagick 7.1.0-62/7.1.1-47
+    * ImageMagick 7.1.0-62/7.1.2-2
     * iptables 1.4.11.1/1.4.21/1.6.2/1.8.11
     * jq 1.8.1
     * LCD4linux eadf4603
@@ -121,7 +121,7 @@ Latest changes
     * mc (Midnight Commander) 4.8.31/4.8.33
     * Minicom 2.10
     * Mosquitto 2.0.22
-    * Nano 8.5
+    * Nano 8.6
     * NcFTP 3.3.0
     * Nmap 4.76/5.51/7.97
     * OpenSSH 9.3p2/10.0p1
@@ -136,7 +136,7 @@ Latest changes
     * SFK 2.0.0.3
     * Smartmontools 7.5
     * socat 1.8.0.3
-    * sslh 2.2.3
+    * sslh 2.2.4
     * strace 4.9/5.0/6.16
     * Stunnel 5.75
     * Sudo 1.9.17p2
@@ -156,7 +156,7 @@ Latest changes
     * expat 2.7.1
     * gettext 0.24
     * gmp 6.3.0
-    * harfbuzz 11.3.3
+    * harfbuzz 11.4.3
     * libcap 2.49/2.75
     * libdeflate 1.24
     * libffi 3.5.2

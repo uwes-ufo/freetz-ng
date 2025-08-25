@@ -1,6 +1,6 @@
-$(call PKG_INIT_BIN, 2.2.3)
+$(call PKG_INIT_BIN, 2.2.4)
 $(PKG)_SOURCE:=$(pkg)-v$($(PKG)_VERSION).tar.gz
-$(PKG)_HASH:=dd7e51c90308ad24654b047bfc29b82578c8e96b872232029ce31517e90b7af7
+$(PKG)_HASH:=696edac467111d0c1353a4ff32ed8dfa33bc914036644c69a7b9506b7ee49115
 $(PKG)_SITE:=https://www.rutschle.net/tech/sslh
 ### WEBSITE:=https://www.rutschle.net/tech/sslh/README.html
 ### MANPAGE:=https://www.rutschle.net/tech/sslh/doc/config
