@@ -6,7 +6,7 @@ PATH=/bin:/usr/bin:/sbin:/usr/sbin
 
 cgi --id=freetz
 
-# (svn log --quiet | sed -rn 's/^r[^|]*.([^|]*).*/\1/p' ; echo -e 'Er4twXz\nMcBane87\nTobjasR\nL3P3\nhermann72pb\njohnbock\nM66B\nmagenbrot\nreiffert\nsf3978') | sed 's/(.*)//g;s/ //g' | sort -u | grep -vE '^(root|administrator|github-actions|dependabot\[bot\]|fda77|oliver|derheimi|sfritz|SvenLuebke)$' 
+# (svn log --quiet | sed -rn 's/^r[^|]*.([^|]*).*/\1/p' ; echo -e 'Er4twXz\nMcBane87\nTobjasR\nL3P3\nhermann72pb\njohnbock\nM66B\nmagenbrot\nreiffert\nsf3978') | sed 's/(.*)//g;s/ //g' | sort -u | grep -vE '^(root|administrator|github-actions|github-actions\[bot\]|dependabot\[bot\]|fda77|oliver|derheimi|sfritz|SvenLuebke)$' 
 cgi_begin "$(lang de:"&Uuml;ber" en:"About")"
 cat << EOF | sed -r 's/(.+[^>])$/\1<br>/g'
 <center>
@@ -42,6 +42,7 @@ fidelio-dev
 flosch-dev
 forenuser
 FriederBluemle
+GlennStrauss
 Greg57070
 GregoryAUZANNEAU
 Grische

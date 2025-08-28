@@ -63,7 +63,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HarfBuzz (libharfbuzz.so) 11.4.3](harfbuzz.md)<a id='harfbuzz'></a>**<br>
+  * **[HarfBuzz (libharfbuzz.so) 11.4.4](harfbuzz.md)<a id='harfbuzz'></a>**<br>
     HarfBuzz is a text shaping engine. It primarily supports OpenType, but also Apple Advanced Typography.
 
 ### I
@@ -206,7 +206,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libssh2 (libssh2.so) 1.11.1](libssh2.md)<a id='libssh2'></a>**<br>
     libssh2 is a client-side C library implementing the SSH2 protocol.
 
-  * **[libstdcxx: libstdc++ (libstdc++-6.0.x.so) 6.0.16/6.0.17/6.0.19/6.0.20/6.0.21/6.0.25/6.0.28/6.0.32/6.0.33](libstdcxx.md)<a id='libstdcxx'></a>**<br>
+  * **[libstdcxx: libstdc++ (libstdc++-6.0.x.so) 6.0.16/6.0.17/6.0.19/6.0.20/6.0.21/6.0.25/6.0.28/6.0.32/6.0.33/6.0.34](libstdcxx.md)<a id='libstdcxx'></a>**<br>
     GNU implementation of the Standard C++ Library.
 
   * **[libsynce (libsynce.so) 0.10.0](libsynce.md)<a id='libsynce'></a>**<br>
@@ -215,7 +215,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libtasn1: GNU ASN1 library (libtasn1.so) 4.19.0](libtasn1.md)<a id='libtasn1'></a>**<br>
     A small ASN.1 library.
 
-  * **[libtirpc (libtirpc.so) 1.3.6](libtirpc.md)<a id='libtirpc'></a>**<br>
+  * **[libtirpc (libtirpc.so) 1.3.7](libtirpc.md)<a id='libtirpc'></a>**<br>
     Libtirpc is a port of Suns Transport-Independent RPC library to Linux. It's being developed by the Bull GNU/Linux NFSv4 project.
 
   * **[libtool (libltdl.so) 1.5.26](libtool.md)<a id='libtool'></a>**<br>
@@ -297,7 +297,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pcre: libpcre (libpcre.so) - DEPRECATED 8.45](pcre.md)<a id='pcre'></a>**<br>
     A Perl Compatible Regular Expression library
 
-  * **[pcre2: libpcre2 (libpcre2-8.so) 10.45](pcre2.md)<a id='pcre2'></a>**<br>
+  * **[pcre2: libpcre2 (libpcre2-8.so) 10.46](pcre2.md)<a id='pcre2'></a>**<br>
     A Perl Compatible Regular Expression library
 
   * **[Pixman (libpixman-1.so) 0.46.4](pixman.md)<a id='pixman'></a>**<br>

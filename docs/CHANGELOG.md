@@ -51,12 +51,13 @@ Latest changes
 
   - Build system:
     * Ccache 4.11.3
+    * gcc (target) 4.6.4/4.7.4/4.8.5/4.9.4/5.5.0/8.3.0/8.4.0/9.3.0/13.4.0/14.3.0/15.2.0
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.54
 
   - Host tools:
     * automake 1.18
     * ca-bundle 2025-08-12
-    * cmake 4.1.0
+    * cmake 4.1.1
     * dtc 1.7.2
     * fakeroot 1.37.1.2
     * gmp 6.3.0
@@ -71,7 +72,7 @@ Latest changes
     * ncurses 6.5-20250419
     * openssl 3.5.2
     * pkgconf 2.5.1
-    * precompiled host-tools 2025-07-31
+    * precompiled host-tools 2025-08-27
     * precompiled toolchains r26458
     * python 3.13.7
     * python2-pip 20.3.4
@@ -156,12 +157,13 @@ Latest changes
     * expat 2.7.1
     * gettext 0.24
     * gmp 6.3.0
-    * harfbuzz 11.4.3
+    * harfbuzz 11.4.4
     * libcap 2.49/2.75
     * libdeflate 1.24
     * libffi 3.5.2
     * libpcap 1.1.1/1.10.5
     * libusb1 1.0.23/1.0.29
+    * libtirpc 1.3.7
     * libuv 1.44.2/1.51.0
     * libpng 1.6.50
     * liburcu 0.15.3
@@ -169,6 +171,7 @@ Latest changes
     * mbedTLS 2.7.19/2.28.10/3.6.4
     * nettle 3.10.2
     * pango 1.56.3
+    * pcre2 10.46
     * pixman 0.46.4
     * readline 6.3-p8/8.3
 
@@ -181,7 +184,7 @@ Latest changes
     * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1
     * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.43.1
     * gcc (kernel) 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/8.4.0/9.3.0/9.4.0
-    * gcc (target) 4.6.4/4.7.4/4.8.5/4.9.4/5.5.0/8.3.0/8.4.0/9.3.0/13.3.0/13.4.0/14.2.0
+    * gcc (target) 4.6.4/4.7.4/4.8.5/4.9.4/5.5.0/8.3.0/8.4.0/9.3.0/13.3.0/14.2.0
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.51
 
   - Host tools:
