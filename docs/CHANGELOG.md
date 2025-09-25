@@ -50,10 +50,11 @@ Latest changes
 ### devel
 
   - Build system:
+    * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.42
     * Ccache 4.11.3
     * gcc (kernel) 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/8.4.0/9.3.0/9.4.0/10.5.0
     * gcc (target) 4.6.4/4.7.4/4.8.5/4.9.4/5.5.0/8.3.0/8.4.0/9.3.0/9.4.0/13.4.0/14.3.0/15.2.0
-    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.54
+    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.55
 
   - Host tools:
     * automake 1.18
@@ -73,7 +74,7 @@ Latest changes
     * ncurses 6.5-20250419
     * openssl 3.5.3
     * pkgconf 2.5.1
-    * precompiled host-tools 2025-08-27
+    * precompiled host-tools 2025-09-25
     * precompiled toolchains r26458
     * python 3.13.7
     * python2-pip 20.3.4
