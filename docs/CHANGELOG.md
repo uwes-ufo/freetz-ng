@@ -66,11 +66,11 @@ Latest changes
     * kconfig 6.16
     * libtool 2.5.4
     * m4 1.4.20
-    * meson 1.8.4
+    * meson 1.9.1
     * ninja 1.13.1
     * ncftp 3.3.0
     * ncurses 6.5-20250419
-    * openssl 3.5.2
+    * openssl 3.5.3
     * pkgconf 2.5.1
     * precompiled host-tools 2025-08-27
     * precompiled toolchains r26458
@@ -129,7 +129,7 @@ Latest changes
     * NcFTP 3.3.0
     * Nmap 4.76/5.51/7.97
     * OpenSSH 9.3p2/10.0p1
-    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.17/3.5.2
+    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.17/3.5.3
     * OpenVPN 2.4.12/2.5.11/2.6.14
     * Privoxy 4.0.0
     * Python 3.13.7
@@ -145,9 +145,9 @@ Latest changes
     * Stunnel 5.75
     * Sudo 1.9.17p2
     * tcpdump 4.1.1/4.99.4
-    * Tor 0.4.8.17
+    * Tor tor-0.4.8.18
     * uMurmur 0.2.20/0.3.1
-    * Unbound 1.23.1
+    * Unbound 1.24.0
     * UnRAR 6.1.7/7.1.8
     * usb.ids 635738b64e
     * Vim 9.1.1275
@@ -157,7 +157,7 @@ Latest changes
 
   - Libraries:
     * cairo 1.18.4
-    * expat 2.7.1
+    * expat 2.7.3
     * gettext 0.24
     * gmp 6.3.0
     * harfbuzz 11.4.5

@@ -418,7 +418,7 @@ Currently supported devices and firmwares
     - 271.07.30 rev94120 {ALL} [PSQ19P2NL4]
     - 271.07.59 rev113715 {ALL} [MOVE21NL2]
     - 271.08.02 rev117988 {ALL} [Smart24 P1 NL1]
-    - 271.08.10 rev122257 {ALL} [Smart24 P2] (Labor)
+    - 271.08.20 rev124684 {ALL} [Smart24 P2]
   * __Fritz!Box Fon WLAN 7520__
     - 175.07.14 rev73182 {GER} [MESH18 NL4]
     - 175.07.29 rev92061 {ALL} [PSQ19P2NL4]
@@ -561,6 +561,7 @@ Currently supported devices and firmwares
     - 172.07.14 rev73941 {ALL} [MESH18 NL4]
     - 172.07.29 rev93267 {ALL} [PSQ19P2NL4]
     - 172.07.58 rev111616 {ALL} [MOVE21NL1]
+    - 172.08.20 rev124756 {ALL} [Smart24 P2]
   * __Fritz!Repeater 1200 AX__
     - 268.07.31 rev108167 {ALL} [PSQ19P2NL4]
     - 268.07.58 rev113012 {ALL} [MOVE21NL1]
