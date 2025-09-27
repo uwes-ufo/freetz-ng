@@ -75,7 +75,7 @@ Latest changes
     * openssl 3.5.3
     * pkgconf 2.5.1
     * precompiled host-tools 2025-09-25
-    * precompiled toolchains r26458
+    * precompiled toolchains r26741
     * python 3.13.7
     * python2-pip 20.3.4
     * python2-setuptools 44.1.1
@@ -153,7 +153,7 @@ Latest changes
     * Tor tor-0.4.8.18
     * uMurmur 0.2.20/0.3.1
     * Unbound 1.24.0
-    * UnRAR 6.1.7/7.1.8
+    * UnRAR 6.1.7/7.1.10
     * usb.ids 635738b64e
     * Vim 9.1.1275
     * Whois 5.6.4
@@ -163,9 +163,10 @@ Latest changes
   - Libraries:
     * cairo 1.18.4
     * expat 2.7.3
+    * FreeType 2.14.1
     * gettext 0.24
     * gmp 6.3.0
-    * harfbuzz 11.4.5
+    * harfbuzz 11.5.0
     * libcap 2.49/2.75
     * libdeflate 1.24
     * libffi 3.5.2
