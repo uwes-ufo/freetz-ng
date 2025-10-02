@@ -20,6 +20,7 @@ jobs:
 #     image: ubuntu:20.04
 #     image: freetzng/dl-packs
       image: ghcr.io/freetz-ng/dl-packs
+      options: --user 1001:1001
     runs-on: ubuntu-latest
     if: github.repository == 'freetz-ng/freetz-ng'
 
@@ -42,19 +43,21 @@ jobs:
 #       run: locale-gen en_US.utf8 && locale-gen de_DE.UTF-8 && update-locale
 
       - name: clone
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          umask 0022
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git clone https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          set-safe-directory: true
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+          path: ${{ github.workspace }}
+          fetch-depth: 0
+          clean: false
+          persist-credentials: true
 
       - name: tools
         run: |
           echo 'FREETZ_USER_LEVEL_EXPERT=y\nFREETZ_HOSTTOOLS_DOWNLOAD=y\nFREETZ_DL_SITE_USER="https://raw.githubusercontent.com/Freetz-NG/dl-mirror/master"' > .config
-          mkdir -p dl/ 2>/dev/null || true
-          useradd freetz -s $(which bash) -d $(pwd) -M && chown freetz . -R
-          su freetz -c "umask 0022 && make olddefconfig && make tools"
+          make tools
 
       - name: generate
         env:
@@ -62,8 +65,8 @@ jobs:
           ACTIONS_IMAGE: ${{ secrets.ACTIONS_IMAGE }}
         run: |
           export LANG=en_US.utf8
-          mkdir -p ~/.freetz-props/ 2>/dev/null || true
-          mkdir -p ~/.freetz-dl/fw/ 2>/dev/null || true
+          mkdir -p ~/.freetz-props/
+          mkdir -p ~/.freetz-dl/fw/
           wget -q "${{ secrets.ACTIONS_CUSTOM }}img" -O - 2>/dev/null > props.sh
           [ -s props.sh ] || cp config/.img/generate.sh props.sh
           FREETZ_ENABLEG=true bash props.sh

@@ -4,6 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
+      - '.github/workflows/make_bump.yml'
       - 'docs/CHANGELOG.md'
       - 'make/pkgs/**'
       - 'make/libs/**'
@@ -25,6 +26,7 @@ jobs:
 #     image: ubuntu:20.04
 #     image: freetzng/generate
       image: ghcr.io/freetz-ng/generate
+      options: --user 1001:1001
     runs-on: ubuntu-latest
 
     outputs:
@@ -38,12 +40,16 @@ jobs:
           delay: "10000"
 
       - name: clone
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          umask 0022
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git clone https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          set-safe-directory: true
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+          path: ${{ github.workspace }}
+          fetch-depth: 0
+          clean: false
+          persist-credentials: true
 
       - name: parse
         id: parse
@@ -68,6 +74,7 @@ jobs:
 #     image: ubuntu:20.04
 #     image: freetzng/firmware
       image: ghcr.io/freetz-ng/firmware
+      options: --user 1001:1001
     needs: matrizifizieren
     strategy:
       max-parallel: 16
@@ -111,12 +118,16 @@ jobs:
 #         echo -n "V6: " ; wget -q https://ipaddress.ai -6 -O - || echo none
 
       - name: clone
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          umask 0022
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git clone https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          set-safe-directory: true
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+          path: ${{ github.workspace }}
+          fetch-depth: 0
+          clean: false
+          persist-credentials: true
 
       - name: cache_load
         uses: actions/cache/restore@v4
@@ -163,9 +174,9 @@ jobs:
 #     - name: signature
 #       if: matrix.fritz != 'skip'
 #       run: |
-#         mkdir -p .signature/ 2>/dev/null || true
-#         for x in prv pub; do wget -q "${{ secrets.ACTIONS_CUSTOM }}$x" -O .signature/$x >/dev/null 2>&1 || rm -f .signature/$x; done
-#         echo "################################################################" && ls -l .signature/
+#         mkdir -p ~/.freetz-signature/
+#         for x in prv pub; do wget -q "${{ secrets.ACTIONS_CUSTOM }}$x" -O ~/.freetz-signature/$x >/dev/null 2>&1 || rm -f ~/.freetz-signature/$x; done
+#         echo "################################################################" && ls -l ~/.freetz-signature/
 
       - name: generate
         id: generate
@@ -187,15 +198,13 @@ jobs:
           [ "$TYPE" = "libs" ] && for x in $(sed -n 's/^[\tmenu]*config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do sed "/[^ ]FREETZ_LIB_$x[ =]/d"  -i .config; done
           [ "$TYPE" = "libs" ] && for x in $(sed -n 's/^[\tmenu]*config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do echo     "FREETZ_LIB_$x=y"      >> .config; done
           echo "################################################################" && bash -c "echo pkg=$pkg" && bash -c "echo PKG=$PKG"
-          mkdir -p dl/ 2>/dev/null || true
-          useradd freetz -s $(which bash) -d $(pwd) -M && chown freetz . -R
-          su freetz -c "umask 0022 && make olddefconfig"
+          make olddefconfig
           BAD=y
           [ "$TYPE" = "pkgs" ] && grep -q "^FREETZ_PACKAGE_$PKG=y" .config && BAD=n
           [ "$TYPE" = "libs" ] && for x in $(sed -n 's/^[\tmenu]*config FREETZ_LIB_//p' make/libs/$pkg/Config.in); do grep -q "^FREETZ_LIB_$x=y" .config && BAD=n ; done
           echo "bad=$BAD" >> $GITHUB_OUTPUT
           [ "$BAD" = "y" ] && echo "Could not enable precompiled" && exit
-          [ "$BAD" = "n" ] && su freetz -c "umask 0022 && make ${pkg}-precompiled"
+          [ "$BAD" = "n" ] && make ${pkg}-precompiled
 
       - name: result
         if: steps.generate.outputs.bad == 'n'

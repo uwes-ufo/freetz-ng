@@ -1,10 +1,10 @@
 name: make_freetz
 
 on:
-# push:
-#   branches: [ master ]
-#   paths:
-#     - '.github/workflows/make_freetz.yml'
+  push:
+    branches: [ master ]
+    paths:
+      - '.github/workflows/make_freetz.yml'
   schedule:
     - cron: '00 15 * * 6'
   workflow_dispatch:
@@ -19,6 +19,7 @@ jobs:
 #     image: ubuntu:20.04
 #     image: freetzng/firmware
       image: ghcr.io/freetz-ng/firmware
+      options: --user 1001:1001
 #   strategy:
 #     fail-fast: false
 #     max-parallel: 16
@@ -60,12 +61,16 @@ jobs:
 #         echo -n "V6: " ; wget -q https://ipaddress.ai -6 -O - || echo none
 
       - name: clone
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          umask 0022
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git clone https://github-actions:$GITHUB_TOKEN@${GITHUB_SERVER_URL##*/}/$GITHUB_REPOSITORY.git $GITHUB_WORKSPACE --branch $GITHUB_REF_NAME
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          set-safe-directory: true
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+          path: ${{ github.workspace }}
+          fetch-depth: 0
+          clean: false
+          persist-credentials: true
 
       - name: cache_load
         uses: actions/cache/restore@v4
@@ -109,15 +114,13 @@ jobs:
 
       - name: signature
         run: |
-          mkdir -p .signature/ 2>/dev/null || true
-          for x in prv pub; do wget -q "${{ secrets.ACTIONS_CUSTOM }}$x" -O .signature/$x >/dev/null 2>&1 || rm -f .signature/$x; done
-          echo "################################################################" && ls -l .signature/
+          mkdir -p ~/.freetz-signature/
+          for x in prv pub; do wget -q "${{ secrets.ACTIONS_CUSTOM }}$x" -O ~/.freetz-signature/$x >/dev/null 2>&1 || rm -f ~/.freetz-signature/$x; done
+          echo "################################################################" && ls -l ~/.freetz-signature/
 
       - name: generate
         run: |
-          mkdir -p dl/ 2>/dev/null || true
-          useradd freetz -s $(which bash) -d $(pwd) -M && chown freetz . -R
-          su freetz -c "umask 0022 && make olddefconfig && make && rm -f images/latest.image"
+          make && rm -f images/latest.image
 
       - name: result
         run: |

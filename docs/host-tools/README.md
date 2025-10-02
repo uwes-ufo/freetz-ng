@@ -18,7 +18,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ca-bundle 2025-09-09](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 4.1.1](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 4.1.2](cmake-host.md)<a id='cmake-host'></a>**<br>
 
   * **[cpio 2.15](cpio-host.md)<a id='cpio-host'></a>**<br>
 
@@ -50,7 +50,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### K
 
-  * **[kconfig 6.16](kconfig-host.md)<a id='kconfig-host'></a>**<br>
+  * **[kconfig 6.17](kconfig-host.md)<a id='kconfig-host'></a>**<br>
 
 ### L
 
@@ -90,7 +90,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### O
 
-  * **[openssl 3.5.3](openssl-host.md)<a id='openssl-host'></a>**<br>
+  * **[openssl 3.5.4](openssl-host.md)<a id='openssl-host'></a>**<br>
 
 ### P
 
@@ -144,7 +144,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2025-09-25](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-09-30](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 

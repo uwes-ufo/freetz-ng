@@ -4,6 +4,7 @@ Latest changes
 
   - Freetz-NG
     * [devel](#devel)
+    * [ng25090](#ng25090)
     * [ng25030](#ng25030)
     * [ng24080](#ng24080)
     * [ng24040](#ng24040)
@@ -50,6 +51,23 @@ Latest changes
 ### devel
 
   - Build system:
+
+  - Host tools:
+
+  - AVM sources:
+
+  - Patches:
+
+  - Packages:
+
+  - Libraries:
+
+  - Firmware updates:
+    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+
+### ng25090
+
+  - Build system:
     * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.42
     * Ccache 4.11.3
     * gcc (kernel) 3.4.6/4.6.4/4.7.4/4.8.5/5.5.0/8.3.0/8.4.0/9.3.0/9.4.0/10.5.0
@@ -59,22 +77,22 @@ Latest changes
   - Host tools:
     * automake 1.18
     * ca-bundle 2025-09-09
-    * cmake 4.1.1
+    * cmake 4.1.2
     * dtc 1.7.2
     * fakeroot 1.37.1.2
     * gmp 6.3.0
     * gperf 3.2
     * iPerf3 3.3/3.19.1
-    * kconfig 6.16
+    * kconfig 6.17
     * libtool 2.5.4
     * m4 1.4.20
     * meson 1.9.1
     * ninja 1.13.1
     * ncftp 3.3.0
     * ncurses 6.5-20250419
-    * openssl 3.5.3
+    * openssl 3.5.4
     * pkgconf 2.5.1
-    * precompiled host-tools 2025-09-25
+    * precompiled host-tools 2025-09-30
     * precompiled toolchains r26741
     * python 3.13.7
     * python2-pip 20.3.4
@@ -134,7 +152,7 @@ Latest changes
     * NcFTP 3.3.0
     * Nmap 4.76/5.51/7.97
     * OpenSSH 9.3p2/10.0p1
-    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.17/3.5.3
+    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.18/3.5.4
     * OpenVPN 2.4.12/2.5.11/2.6.14
     * Privoxy 4.0.0
     * Python 3.13.7
@@ -146,7 +164,7 @@ Latest changes
     * Smartmontools 7.5
     * socat 1.8.0.3
     * sslh 2.2.4
-    * strace 4.9/5.0/6.16
+    * strace 4.9/5.0/6.17
     * Stunnel 5.75
     * Sudo 1.9.17p2
     * tcpdump 4.1.1/4.99.4
@@ -185,7 +203,7 @@ Latest changes
     * readline 6.3-p8/8.3
 
   - Firmware updates:
-    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+    * Please see [FIRMWARES](https://github.com/Freetz-NG/freetz-ng/blob/ng25090/docs/FIRMWARES.md) for the list of supported devices and firmwares.
 
 ### ng25030
 
