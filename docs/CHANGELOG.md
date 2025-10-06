@@ -59,8 +59,11 @@ Latest changes
   - Patches:
 
   - Packages:
+    * BIND 9.11.37/9.20.13
 
   - Libraries:
+    * harfbuzz 12.1.0
+    * openjp2 2.5.4
 
   - Firmware updates:
     * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
