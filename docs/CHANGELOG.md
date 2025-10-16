@@ -57,10 +57,14 @@ Latest changes
 
   - AVM sources:
 
+  - Scripts:
+    * ssh_firmware_update.py - utility for upgrading firmware and external over SSH
+
   - Patches:
 
   - Packages:
     * BIND 9.11.37/9.20.13
+    * procps-ng 4.0.4
     * Tor 0.4.8.19
 
   - Libraries:

@@ -692,6 +692,23 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Installation](../../docs/make/privoxy.md#installation)
      - [Diskussion](../../docs/make/privoxy.md#diskussion)
 
+  * **[procps-ng 4.0.4 (binaries only)](../../docs/make/procps-ng.md)<a id='procps-ng'></a>**<br>
+    procps-ng - /proc filesystem utilities This package provides the full versions of procps utilities with the suffix "-ng" to avoid conflicts with BusyBox versions.
+     - [Process Information](../../docs/make/procps-ng.md#process-information)
+     - [Memory and System Information](../../docs/make/procps-ng.md#memory-and-system-information)
+     - [Process Management](../../docs/make/procps-ng.md#process-management)
+     - [Process Inspection](../../docs/make/procps-ng.md#process-inspection)
+     - [System Utilities](../../docs/make/procps-ng.md#system-utilities)
+     - [Basic Process Monitoring](../../docs/make/procps-ng.md#basic-process-monitoring)
+     - [Memory and System Info](../../docs/make/procps-ng.md#memory-and-system-info)
+     - [Advanced Process Analysis](../../docs/make/procps-ng.md#advanced-process-analysis)
+     - [System Configuration](../../docs/make/procps-ng.md#system-configuration)
+     - [Build Configuration](../../docs/make/procps-ng.md#build-configuration)
+     - [Known Limitations](../../docs/make/procps-ng.md#known-limitations)
+     - [Command not found](../../docs/make/procps-ng.md#command-not-found)
+     - [Permission denied](../../docs/make/procps-ng.md#permission-denied)
+     - [Externalization not working](../../docs/make/procps-ng.md#externalization-not-working)
+
   * **[ProxyChains-NG 4.17](../../docs/make/proxychains-ng.md)<a id='proxychains-ng'></a>**<br>
     A preloader which hooks calls to sockets in dynamically linked programs and redirects it through one or more socks/http proxies, tor is also supported. Usage: proxychains4 telnet mail.example.com 25
 
