@@ -66,12 +66,14 @@ Latest changes
 
   - Packages:
     * BIND 9.11.37/9.20.13
-    * procps-ng 4.0.4
+    * OpenSSH 9.3p2/10.2p1
+    * procps-ng 4.0.5
     * Tor 0.4.8.19
 
   - Libraries:
     * harfbuzz 12.1.0
     * openjp2 2.5.4
+    * libyaml 0.2.5
 
   - Firmware updates:
     * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.

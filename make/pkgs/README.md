@@ -607,7 +607,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Fehlerbehebung](../../docs/make/openntpd.md#fehlerbehebung)
      - [Alternative](../../docs/make/openntpd.md#alternative)
 
-  * **[OpenSSH 9.3p2/10.0p1](../../docs/make/openssh.md)<a id='openssh'></a>**<br>
+  * **[OpenSSH 9.3p2/10.2p1](../../docs/make/openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.18/3.5.4 (binary only)](../../docs/make/openssl.md)<a id='openssl'></a>**<br>
@@ -692,7 +692,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Installation](../../docs/make/privoxy.md#installation)
      - [Diskussion](../../docs/make/privoxy.md#diskussion)
 
-  * **[procps-ng 4.0.4 (binaries only)](../../docs/make/procps-ng.md)<a id='procps-ng'></a>**<br>
+  * **[procps-ng 4.0.5 (binaries only)](../../docs/make/procps-ng.md)<a id='procps-ng'></a>**<br>
     procps-ng - /proc filesystem utilities This package provides the full versions of procps utilities with the suffix "-ng" to avoid conflicts with BusyBox versions.
      - [Process Information](../../docs/make/procps-ng.md#process-information)
      - [Memory and System Information](../../docs/make/procps-ng.md#memory-and-system-information)
