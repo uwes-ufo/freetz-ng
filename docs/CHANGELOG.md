@@ -70,10 +70,12 @@ Latest changes
     * procps-ng 4.0.5
     * Stunnel 5.76
     * Tor 0.4.8.19
+    * Whois 5.6.5
 
   - Libraries:
     * harfbuzz 12.1.0
     * openjp2 2.5.4
+    * libxml2 2.15.1
     * libyaml 0.2.5
 
   - Firmware updates:
