@@ -1,16 +1,16 @@
-if FREETZ_TYPE_7140 && FREETZ_TYPE_LANG_EN && FREETZ_TYPE_ANNEX_A
+if FREETZ_TYPE_7170 && FREETZ_TYPE_LANG_EN && FREETZ_AVM_VERSION_04_XX && FREETZ_TYPE_ANNEX_B
 
 config FREETZ_AVM_PROP_NAME
 	string
-	default "FRITZ!Box Fon WLAN 7140 Annex A"
+	default "FRITZ!Box Fon WLAN 7170"
 
 config FREETZ_AVM_PROP_MAJOR
 	string
-	default "39"
+	default "29"
 
 config FREETZ_AVM_PROP_HWREV
 	string
-	default "107"
+	default "94"
 
 config FREETZ_AVM_HAS_SIGNATURE
 	def_bool y
@@ -68,6 +68,9 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+
+config FREETZ_AVM_HAS_VPN
 	def_bool y
 
 config FREETZ_AVM_HAS_DTRACE
