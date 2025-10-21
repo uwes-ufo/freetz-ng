@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng e2d25e915b uwe 2025-10-20
+#  freetz-ng 6478d98cc1 uwe 2025-10-21
 #
 
 #
@@ -92,6 +92,8 @@ FREETZ_TYPE_5690_PRO=y
 #
 # Cable
 #
+# FREETZ_TYPE_6320 is not set
+# FREETZ_TYPE_6360 is not set
 # FREETZ_TYPE_6430 is not set
 # FREETZ_TYPE_6490 is not set
 # FREETZ_TYPE_6590 is not set
@@ -162,6 +164,12 @@ FREETZ_TYPE_5690_PRO=y
 #
 # Repeater
 #
+# FREETZ_TYPE_WRNG is not set
+# FREETZ_TYPE_0310_V1 is not set
+# FREETZ_TYPE_0310_V2 is not set
+# FREETZ_TYPE_0600_V1 is not set
+# FREETZ_TYPE_0600_V2 is not set
+# FREETZ_TYPE_1160 is not set
 # FREETZ_TYPE_1759 is not set
 # FREETZ_TYPE_0300 is not set
 # FREETZ_TYPE_0450 is not set
@@ -918,6 +926,7 @@ FREETZ_WGET=y
 #
 # Debug helpers
 #
+# FREETZ_PACKAGE_FILE is not set
 # FREETZ_PACKAGE_GDB is not set
 # FREETZ_PACKAGE_INOTIFY_TOOLS is not set
 FREETZ_PACKAGE_LDD=y
