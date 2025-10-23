@@ -53,6 +53,7 @@ Latest changes
   - Build system:
 
   - Host tools:
+    * dos2unix 7.5.3
     * file 5.45
     * precompiled host-tools 2025-10-21
     * python 3.13.8
@@ -67,12 +68,13 @@ Latest changes
   - Patches:
 
   - Packages:
-    * BIND 9.11.37/9.20.13
+    * BIND 9.11.37/9.20.15
     * file 5.45
     * OpenSSH 9.3p2/10.2p1
     * procps-ng 4.0.5
     * Stunnel 5.76
     * Tor 0.4.8.19
+    * Unbound 1.24.1
     * Whois 5.6.5
 
   - Libraries:
