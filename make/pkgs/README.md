@@ -314,7 +314,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>gntpsend 0.3.2-git (binary only) - DEPRECATED</u><a id='gntpsend'></a>**<br>
     Growl is a notification system for the Mac OS X. Applications can use Growl to display small notifications about events which the user deems important, in a consistent manner. This package provides a tool 'gntp-send' which allows to send notifications to Growl.
 
-  * **<u>GNU Make 4.2.1 (binary only) - DEPRECATED</u><a id='gnu-make'></a>**<br>
+  * **<u>GNU Make 4.2.1/4.4.1 (binary only)</u><a id='gnu-make'></a>**<br>
     Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
 
   * **[GnuTLS 3.7.8 (binary only) - DEPRECATED](../../docs/make/gnutls.md)<a id='gnutls'></a>**<br>
@@ -344,6 +344,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[hol: Halt-On-Lan 1.0 - DEPRECATED](../../docs/make/hol.md)<a id='hol'></a>**<br>
     Halt-On-Lan is a package to run predefined actions on a remote host: shutdown, reboot, logoff, lock For successfull action poweroff.exe from http://users.telenet.be/jbosman/poweroff/poweroff.htm or similar compatible script or binary must be installed and run as service on the remote host. Moreover, in case of requested interaction this service should understand the syntax of poweroff.exe
+
+  * **[hostapd_cli 2.7/2.10/2.11 (binary only)](../../docs/make/hostapd_cli.md)<a id='hostapd-cli'></a>**<br>
+    Command line client for hostapd control interface. Useful to send BSS Transition Management (802.11v) and Neighbor Report (802.11k) commands to the running daemon.
 
   * **<u>html2text 1.3.2a (binary only) - DEPRECATED</u><a id='html2text'></a>**<br>
     html2text is a command line utility, written in C++, that converts HTML documents into plain text.
@@ -1103,7 +1106,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Log-Datei regelmäßig konsolidieren, um Platz zu sparen](../../docs/make/inotify-tools.md#log-datei-regelmäßig-konsolidieren-um-platz-zu-sparen)
      - [Schlußwort](../../docs/make/inotify-tools.md#schlußwort)
 
-  * **[ldd 0.1 (binary only) - DEPRECATED](../../docs/make/ldd.md)<a id='ldd'></a>**<br>
+  * **[ldd 0.1/1.0.55 (binary only)](../../docs/make/ldd.md)<a id='ldd'></a>**<br>
     ldd prints the shared libraries required by each program or shared library specified on the command line.
 
   * **[lsof 4.89 (binary only) - DEPRECATED](../../docs/make/lsof.md)<a id='lsof'></a>**<br>
