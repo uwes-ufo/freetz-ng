@@ -819,6 +819,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 # Debug helpers
 
+  * **[binutils-tools: Binutils 2.45 (binary only)](binutils-tools.md)<a id='binutils-tools'></a>**<br>
+    Collection of essential tools for analyzing and manipulating ELF binaries. Size of all tools: ~14MB (not available shared: ~5MB)
+
   * **[file 5.45 (binary only)](file.md)<a id='file'></a>**<br>
     file - determine file type The file command is used to identify a particular file according to the type of data contained by the file. File can identify many different file types, including ELF binaries, system libraries, RPM packages, and many different graphics formats. This utility is essential for analyzing binaries and file formats on the target system, especially useful for debugging cross-compilation issues.
 
@@ -840,11 +843,14 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Nano Shell 0.1 (binary only) - DEPRECATED](nano-shell.md)<a id='nano-shell'></a>**<br>
     Remotely execute arbitrary shell commands via URLs This tiny package enables both the AVM and Freetz web interfaces to execute user-specified commands and display their results and/or errors,
 
+  * **[PatchELF 0.18.0 (binary only)](patchelf.md)<a id='patchelf'></a>**<br>
+    Modifies existing ELF executables and libraries. Can change the interpreter, RPATH, and other ELF metadata. Useful for modifying binaries to use different dynamic linker paths or library search paths (RPATH/RUNPATH).
+
   * **[pciutils 3.1.7 (binary only) - DEPRECATED](pciutils.md)<a id='pciutils'></a>**<br>
     The PCI Utilities are a collection of programs for inspecting and manipulating configuration of PCI devices, all based on a common portable library libpci which offers access to the PCI configuration space on a variety of operating systems. lspci displays detailed information about all PCI buses and devices in the system. setpci allows reading from and writing to PCI device configuration registers. For example, you can adjust the latency timers with it.
 
   * **[strace 4.9/5.0/6.17 (binary only)](strace.md)<a id='strace'></a>**<br>
-    strace - trace system calls and signals strace is a system call tracer, i.e. a debugging tool which prints out a trace of all the system calls made by a another process/program.
+    strace - trace system calls and signals strace is a system call tracer, i.e. a debugging tool which prints out a trace of all the system calls made by another process/program.
 
   * **<u>target-tester - DEVELOPER</u><a id='target-tester'></a>**<br>
     This package is intended to be used by freetz' developers only. It allows to compile and run configure-tests which need to be run on target in a less complicated way (compared to completely manual one). Note: Simply modify target-tester.c or replace it with code taken from configure script.

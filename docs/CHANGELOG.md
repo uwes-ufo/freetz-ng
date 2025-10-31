@@ -70,12 +70,14 @@ Latest changes
 
   - Packages:
     * BIND 9.11.37/9.20.15
+    * Binutils 2.45
     * file 5.45
     * GNU Make 4.2.1/4.4.1
     * hostapd_cli 2.7/2.10/2.11
     * Info-ZIP 3.0
     * ldd 0.1/1.0.55
     * OpenSSH 9.3p2/10.2p1
+    * PatchELF 0.18.0
     * procps-ng 4.0.5
     * Stunnel 5.76
     * Tor 0.4.8.19
