@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 4462cf2e77 uwe 2025-10-30
+#  freetz-ng ff5e321635 uwe 2025-10-31
 #
 
 #
@@ -655,6 +655,7 @@ FREETZ_WGET=y
 #
 # Debug helpers
 #
+# FREETZ_PACKAGE_BINUTILS_TOOLS is not set
 # FREETZ_PACKAGE_FILE is not set
 # FREETZ_PACKAGE_GDB is not set
 # FREETZ_PACKAGE_INOTIFY_TOOLS is not set
