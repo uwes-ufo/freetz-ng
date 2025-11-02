@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng ef79d6a842 uwe 2025-11-02
+#  freetz-ng 372721f012 uwe 2025-11-02
 #
 
 #
@@ -1354,7 +1354,6 @@ FREETZ_LIB_libncursesw=y
 # FREETZ_LIB_libpcre is not set
 # FREETZ_LIB_libpcreposix is not set
 FREETZ_LIB_libpcre2=y
-# FREETZ_LIB_libpcre2_WITH_JIT is not set
 # FREETZ_LIB_libpcre2_posix is not set
 # end of Regular expressions
 
@@ -3255,10 +3254,12 @@ FREETZ_TARGET_UCLIBC_PROVIDES_SSP=y
 #
 # Host-tools options ----------------------------------
 #
-FREETZ_HOSTTOOLS_DOWNLOAD=y
+# FREETZ_HOSTTOOLS_DOWNLOAD is not set
+FREETZ_HOSTTOOLS_BUILD=y
 # FREETZ_ROOTEMU_FAKEROOT is not set
 FREETZ_ROOTEMU_PSEUDO=y
 # FREETZ_TOOLS_KCONFIG_OLDSCHOOL is not set
+FREETZ_TOOLS_PATCHELF_VERSION_CURRENT=y
 # end of Toolchain options
 
 #
