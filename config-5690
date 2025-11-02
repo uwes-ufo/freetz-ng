@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 47fc27e2ea uwe 2025-11-02
+#  freetz-ng 7465cbc4b7 uwe 2025-11-02
 #
 
 #
@@ -3291,7 +3291,7 @@ FREETZ_FWMOD_VALIDATE=y
 # FREETZ_FWMOD_SKIP_MODIFY is not set
 # FREETZ_FWMOD_SKIP_PACK is not set
 FREETZ_FWMOD_SIGN=y
-FREETZ_FWMOD_SIGN_PASSWORD="freetz"
+FREETZ_FWMOD_SIGN_PASSWORD="broT735680n.wmz#"
 # end of Firmware packaging (fwmod) options
 
 #
