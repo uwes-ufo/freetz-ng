@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng ab3075a104 uwe 2025-11-02
+#  freetz-ng 767f08737b uwe 2025-11-02
 #
 
 #
@@ -1383,6 +1383,7 @@ FREETZ_LIB_libncursesw=y
 # FREETZ_LIB_libpcre is not set
 # FREETZ_LIB_libpcreposix is not set
 FREETZ_LIB_libpcre2=y
+# FREETZ_LIB_libpcre2_WITH_JIT is not set
 # FREETZ_LIB_libpcre2_posix is not set
 # end of Regular expressions
 
