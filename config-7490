@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng f2628952a8 uwe 2025-11-05
+#  freetz-ng a39887d686 uwe 2025-11-05
 #
 
 #
@@ -1413,7 +1413,6 @@ FREETZ_LIB_libcurl=y
 FREETZ_LIB_libcurl_WITH_VERSION_CURRENT=y
 FREETZ_LIB_libcurl_WITH_SSL=y
 FREETZ_LIB_libcurl_WITH_OPENSSL=y
-# FREETZ_LIB_libcurl_WITH_MBEDTLS is not set
 # FREETZ_LIB_libcurl_WITH_SFTP is not set
 # FREETZ_LIB_libcurl_WITH_ZLIB is not set
 # FREETZ_LIB_libidn is not set
