@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 83398c343c uwe 2025-11-05
+#  freetz-ng f23ab640ab uwe 2025-11-05
 #
 
 #
@@ -1067,6 +1067,11 @@ FREETZ_LIB_libmbedtls=y
 FREETZ_LIB_libmbedx509=y
 FREETZ_MBEDTLS_VERSION_228=y
 # FREETZ_MBEDTLS_VERSION_306 is not set
+FREETZ_MBEDTLS_SHORT_VERSION="2.28"
+FREETZ_MBEDTLS_VERSION_207_MIN=y
+FREETZ_MBEDTLS_VERSION_228_MIN=y
+FREETZ_MBEDTLS_VERSION_228_MAX=y
+FREETZ_MBEDTLS_VERSION_306_MAX=y
 
 #
 # Nettle ---------------------------------
@@ -1411,6 +1416,7 @@ FREETZ_LIB_libcurl=y
 FREETZ_LIB_libcurl_WITH_VERSION_CURRENT=y
 FREETZ_LIB_libcurl_WITH_SSL=y
 FREETZ_LIB_libcurl_WITH_OPENSSL=y
+# FREETZ_LIB_libcurl_WITH_MBEDTLS is not set
 # FREETZ_LIB_libcurl_WITH_SFTP is not set
 # FREETZ_LIB_libcurl_WITH_ZLIB is not set
 # FREETZ_LIB_libidn is not set
