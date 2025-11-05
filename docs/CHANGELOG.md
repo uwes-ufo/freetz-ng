@@ -81,6 +81,7 @@ Latest changes
     * BIND 9.11.37/9.20.15
     * Binutils 2.45
     * CA-bundle 2025-11-04
+    * Curl 8.12.1/8.17.0
     * file 5.46
     * GNU Make 4.2.1/4.4.1
     * hostapd_cli 2.7/2.10/2.11
@@ -99,6 +100,7 @@ Latest changes
     * libdeflate 1.25
     * libxml2 2.15.1
     * libyaml 0.2.5
+    * MbedTLS 2.7.19/2.28.10/3.6.5
     * openjp2 2.5.4
     * pcre2 10.47
 
