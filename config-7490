@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng a7e8c5fe02 uwe 2025-11-06
+#  freetz-ng 33c0c377a1 uwe 2025-11-06
 #
 
 #
@@ -1123,6 +1123,7 @@ FREETZ_OPENSSL_VERSION_35_MAX=y
 #
 # Data compression
 #
+# FREETZ_LIB_libbz2 is not set
 # FREETZ_LIB_libdeflate is not set
 FREETZ_LIB_liblz4=y
 # FREETZ_LIB_liblzo2 is not set
@@ -3118,6 +3119,7 @@ EXTERNAL_FREETZ_PACKAGE_WGET=y
 #
 # libraries
 #
+# EXTERNAL_FREETZ_LIB_libatomic is not set
 EXTERNAL_FREETZ_LIB_libavcodec=y
 EXTERNAL_FREETZ_LIB_libavdevice=y
 EXTERNAL_FREETZ_LIB_libavfilter=y
