@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 1a2088f507 uwe 2025-11-06
+#  freetz-ng a7e8c5fe02 uwe 2025-11-06
 #
 
 #
@@ -808,7 +808,7 @@ FREETZ_PACKAGE_PYTHON3_MOD_ELEMENTTREE=y
 FREETZ_PACKAGE_PYTHON3_MOD_JSON=y
 # FREETZ_PACKAGE_PYTHON3_MOD_MULTIPROCESSING is not set
 # FREETZ_PACKAGE_PYTHON3_MOD_MMAP is not set
-# FREETZ_PACKAGE_PYTHON3_MOD_READLINE is not set
+FREETZ_PACKAGE_PYTHON3_MOD_READLINE=y
 # FREETZ_PACKAGE_PYTHON3_MOD_SPWD is not set
 # FREETZ_PACKAGE_PYTHON3_MOD_SQLITE is not set
 # FREETZ_PACKAGE_PYTHON3_MOD_SSL is not set
@@ -1375,8 +1375,9 @@ FREETZ_LIB_libncursesw=y
 #
 # Readline
 #
-# FREETZ_LIB_libreadline is not set
+FREETZ_LIB_libreadline=y
 # FREETZ_LIB_libhistory is not set
+FREETZ_LIB_libreadline_VERSION_CURRENT=y
 # end of Readline
 
 #
@@ -3134,6 +3135,7 @@ EXTERNAL_FREETZ_LIB_libswscale=y
 # EXTERNAL_FREETZ_LIB_libffi is not set
 # EXTERNAL_FREETZ_LIB_libncurses is not set
 # EXTERNAL_FREETZ_LIB_libncursesw is not set
+# EXTERNAL_FREETZ_LIB_libreadline is not set
 # EXTERNAL_FREETZ_LIB_liblz4 is not set
 # EXTERNAL_FREETZ_LIB_liblzma is not set
 # EXTERNAL_FREETZ_LIB_libmbedcrypto is not set
