@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 1b7d72d6d9 uwe 2025-11-06
+#  freetz-ng b8d0b57f11 uwe 2025-11-07
 #
 
 #
@@ -1463,7 +1463,7 @@ FREETZ_LIB_libpython3=y
 #
 # Kernel modules
 #
-FREETZ_MODULES_KOON=y
+# FREETZ_MODULES_KOON is not set
 FREETZ_MODULES_OWN=""
 
 #
