@@ -92,6 +92,7 @@ Latest changes
   - Packages:
     * BIND 9.11.37/9.20.15
     * Binutils 2.45
+    * Bzip2 1.0.8
     * CA-bundle 2025-11-04
     * Curl 8.12.1/8.17.0
     * file 5.46
