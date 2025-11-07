@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 88b3a5a61c uwe 2025-11-07
+#  freetz-ng 473691fd56 uwe 2025-11-07
 #
 
 #
@@ -559,7 +559,7 @@ FREETZ_PACKAGE_PYTHON3_PY=y
 # FREETZ_PACKAGE_PYTHON3_MOD_CPROFILE is not set
 # FREETZ_PACKAGE_PYTHON3_MOD_CRYPT is not set
 # FREETZ_PACKAGE_PYTHON3_MOD_CSV is not set
-# FREETZ_PACKAGE_PYTHON3_MOD_CTYPES is not set
+FREETZ_PACKAGE_PYTHON3_MOD_CTYPES=y
 # FREETZ_PACKAGE_PYTHON3_MOD_CURSES is not set
 # FREETZ_PACKAGE_PYTHON3_MOD_EASTERN_CODECS is not set
 FREETZ_PACKAGE_PYTHON3_MOD_ELEMENTTREE=y
@@ -1207,7 +1207,7 @@ FREETZ_LIB_libexpat=y
 # FREETZ_LIB_libelf is not set
 # FREETZ_LIB_libev is not set
 # FREETZ_LIB_libevent is not set
-# FREETZ_LIB_libffi is not set
+FREETZ_LIB_libffi=y
 # FREETZ_LIB_liblua is not set
 # FREETZ_LIB_libnfsidmap is not set
 # FREETZ_LIB_libpopt is not set
@@ -2722,6 +2722,7 @@ FREETZ_WGET_ALWAYS_AVAILABLE=y
 # EXTERNAL_FREETZ_LIB_libssl is not set
 # EXTERNAL_FREETZ_LIB_libcurl is not set
 # EXTERNAL_FREETZ_LIB_libexpat is not set
+# EXTERNAL_FREETZ_LIB_libffi is not set
 # EXTERNAL_FREETZ_LIB_libncurses is not set
 # EXTERNAL_FREETZ_LIB_libncursesw is not set
 # EXTERNAL_FREETZ_LIB_libreadline is not set
