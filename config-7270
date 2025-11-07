@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 2df9bbb7a7 uwe 2025-11-07
+#  freetz-ng 5b1b730942 uwe 2025-11-07
 #
 
 #
@@ -294,6 +294,7 @@ FREETZ_AVMDAEMON_DISABLE_TR069=y
 # FREETZ_PACKAGE_BLUEZ_UTILS is not set
 # FREETZ_PACKAGE_BRIDGE_UTILS is not set
 # FREETZ_PACKAGE_BVI is not set
+# FREETZ_PACKAGE_BZIP2 is not set
 # end of B
 
 #
