@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 60e6f35bcc uwe 2025-11-07
+#  freetz-ng edb2cf8ecf uwe 2025-11-07
 #
 
 #
@@ -2754,7 +2754,7 @@ FREETZ_WGET_ALWAYS_AVAILABLE=y
 # EXTERNAL_FREETZ_LIB_libmbedcrypto is not set
 # EXTERNAL_FREETZ_LIB_libmbedtls is not set
 # EXTERNAL_FREETZ_LIB_libmbedx509 is not set
-# EXTERNAL_FREETZ_LIB_libpython2 is not set
+EXTERNAL_FREETZ_LIB_libpython2=y
 # EXTERNAL_FREETZ_LIB_libz is not set
 
 #
