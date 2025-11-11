@@ -4,8 +4,6 @@ on:
   pull_request:
     branches: [ master ]
     paths:
-      - '.github/workflows/make_bump.yml'
-      - 'docs/CHANGELOG.md'
       - 'make/pkgs/**'
       - 'make/libs/**'
 
@@ -95,8 +93,8 @@ jobs:
     runs-on: ubuntu-latest
 #   if: github.repository == 'freetz-ng/freetz-ng'
 
-#   env:
-#     CACHE_KEY: "make_freetz"
+    env:
+      CACHE_KEY: "make_freetz"
     steps:
 
 #     - name: update
@@ -139,14 +137,14 @@ jobs:
           clean: false
           persist-credentials: true
 
-#     - name: cache_load
-#       uses: actions/cache/restore@v4
-#       if: always()
-#       with:
-#         path: |
-#           dl/*
-#           !dl/fw/*
-#         key: ${{ env.CACHE_KEY }}
+      - name: cache_load
+        uses: actions/cache/restore@v4
+        if: always()
+        with:
+          path: |
+            dl/*
+            !dl/fw/*
+          key: ${{ env.CACHE_KEY }}
 
       - name: config
         run: |
