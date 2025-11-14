@@ -101,19 +101,24 @@ Latest changes
     * Info-ZIP 3.0
     * ldd 0.1/1.0.55
     * MTR 0.80/0.96
+    * Nmap 4.76/5.51/7.98
     * OpenSSH 9.3p2/10.2p1
     * OpenVPN 2.4.12/2.5.11/2.6.15
     * PatchELF 0.18.0
     * procps-ng 4.0.5
     * Python 3.14.0
+    * sslh 2.2.4/2.3.0
     * Stunnel 5.76
     * Tor 0.4.8.20
     * Unbound 1.24.1
+    * UnRAR 6.1.7/7.2.1
     * Whois 5.6.5
 
   - Libraries:
     * harfbuzz 12.2.0
+    * libcap 2.49/2.77
     * libdeflate 1.25
+    * liburcu 0.15.4
     * libxml2 2.15.1
     * libyaml 0.2.5
     * MbedTLS 2.7.19/2.28.10/3.6.5
