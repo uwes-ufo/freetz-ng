@@ -106,7 +106,7 @@ Currently supported devices and firmwares
     - 155.07.14 rev73181 {ALL} [MESH18 NL4]
     - 155.07.29 rev92647 {ALL} [PSQ19P2NL4]
     - 155.07.59 rev113615 {ALL} [MOVE21NL2]
-    - 155.08.02 rev118220 {ALL} [Smart24 P1 NL1]
+    - 155.08.03 rev125908 {ALL} [Smart24 P1 WU25]
   * __Fritz!Box 4050__
     - 287.07.58 rev115740 {ALL} [MOVE21NL1]
     - 287.08.02 rev118032 {ALL} [Smart24 P1 FCS]
@@ -565,6 +565,8 @@ Currently supported devices and firmwares
   * __Fritz!Repeater 1200 AX__
     - 268.07.31 rev108167 {ALL} [PSQ19P2NL4]
     - 268.07.58 rev113012 {ALL} [MOVE21NL1]
+  * __Fritz!Repeater 1200 AX v2 (UNTESTED)__
+    - 296.08.03 rev120165 {ALL} [Smart24 P1 FCS]
   * __FRITZ!Repeater 1700 (UNTESTED)__
     - 290.08.06 rev123889 {ALL} [Smart24 P1 FCS]
   * __Fritz!Repeater 2400__
