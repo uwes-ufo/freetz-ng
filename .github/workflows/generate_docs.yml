@@ -7,6 +7,7 @@ on:
       - '.github/workflows/generate_docs.yml'
       - 'docs/generate.sh'
       - 'docs/*/generate.sh'
+      - '!docs/stats/generate.sh'
       - 'make/host-tools/*/*.mk'
       - 'make/pkgs/*/Config.in'
       - 'make/pkgs/*/*.mk'
@@ -21,7 +22,6 @@ on:
       - 'docs/screenshots/*.jpg'
       - 'docs/screenshots/*.gif'
       - 'tools/.prerequisites/*'
-      - 'tools/layoutGens.sh'
   workflow_dispatch:
 
 concurrency:
