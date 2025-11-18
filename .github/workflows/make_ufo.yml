@@ -21,6 +21,8 @@ jobs:
       image: ghcr.io/freetz-ng/firmware
       options: --user 1001:1001
 
+    runs-on: ubuntu-latest
+
     steps:
 
       - name: clone
