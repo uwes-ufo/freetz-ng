@@ -25,15 +25,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - box: "5690_PRO"
-            fos: "08_0X"
-            cfg: "config-5690"
-          - box: "7490"
-            fos: "07_6X"
-            cfg: "config-7490"
-          - box: "7270v3"
-            fos: "06_0X"
-            cfg: "config-7270"
+          - config: "config-5690"
+          - config: "config-7490"
+          - config: "config-7270"
     runs-on: ubuntu-latest
     
     steps:
@@ -63,9 +57,7 @@ jobs:
 
       - name: config
         run: |
-          FOS="${{ matrix.fos }}"
-          BOX="${{ matrix.box }}"
-          cp "${{ matrix.cfg }}" .config
+          cp "${{ matrix.config }}" .config
           echo "##########################################################" && echo -n "Lines=" && wc -l .config
 
       - name: generate
