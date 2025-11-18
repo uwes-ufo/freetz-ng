@@ -5,6 +5,8 @@ on:
     branches: [ master ]
     paths:
       - '.github/workflows/make_ufo.yml'
+      
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}
