@@ -71,3 +71,10 @@ jobs:
           echo "##########################################################"
           ls -l images/
           sha256sum images/*
+          
+      - name: images
+        uses: actions/upload-artifact@v4
+        with:
+          name: images
+          path: images/*
+          retention-days: 2  
