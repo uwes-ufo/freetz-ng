@@ -52,7 +52,7 @@ jobs:
         run: |
           FOS="08_0X"
           BOX="5690_PRO"
-          cp 5690-config .config
+          cp config-5690 .config
           echo "##########################################################" && echo -n "Lines=" && wc -l .config
 
       - name: generate
