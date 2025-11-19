@@ -53,8 +53,10 @@ jobs:
             !dl/linux-*.tar.xz
             !dl/*-freetz-*-shared-glibc.tar.lzma
             source/*
-          key: make_cache-${{ github.run_id }}
-          restore-keys: make_cache
+          key: cache-${{ matrix.box }}-${{ github.run_id }}
+          restore-keys: |
+            cache-${{ matrix.box }}-
+            make_cache-
 
       - name: config
         run: |
