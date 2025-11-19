@@ -48,8 +48,7 @@ jobs:
         uses: actions/cache@v4
         if: always()
         with:
-          path: |
-            *
+          path: *
 #            dl/*
 #            !dl/linux-*.tar.xz
 #            !dl/*-freetz-*-shared-glibc.tar.lzma
