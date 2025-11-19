@@ -1,11 +1,6 @@
 name: make_ufo
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - '.github/workflows/make_ufo.yml'
-      
   workflow_dispatch:
 
 concurrency:
@@ -24,10 +19,7 @@ jobs:
       max-parallel: 7
       fail-fast: false
       matrix:
-        include:
-          - box: "5690"
-          - box: "7490"
-          - box: "7270"
+        box: ["5690", "7490", "7270"]
     runs-on: ubuntu-latest
     
     steps:
@@ -49,35 +41,19 @@ jobs:
         if: always()
         with:
           path: |
-            dl/*
-            !dl/linux-*.tar.xz
-            !dl/*-freetz-*-shared-glibc.tar.lzma
-            source/*
-          key: cache-${{ matrix.box }}-${{ github.run_id }}
-          restore-keys: |
-            cache-${{ matrix.box }}-
-            make_cache-
+            ~/
+            ./
+          key: cache-${{ matrix.box }}-${{ github.sha }}
+          restore-keys: cache-${{ matrix.box }}
 
-      - name: config
-        run: |
-          cp config-${{ matrix.box }} .config
-          echo "##########################################################" && echo -n "Lines=" && wc -l .config
-
-      - name: generate
+      - name: make
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
-        run: |
-          make && rm -f images/latest.image
+        run: cp config-${{ matrix.box }} .config && make
 
-      - name: result
-        run: |
-          echo "##########################################################"
-          ls -l images/
-          sha256sum images/*
-          
       - name: images
         uses: actions/upload-artifact@v4
         with:
           name: images-${{ matrix.box }}
-          path: images/*
+          path: images
           retention-days: 2  
