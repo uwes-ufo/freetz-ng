@@ -49,7 +49,7 @@ jobs:
         if: always()
         with:
           path: |
-            *
+            !*
 #            dl/*
 #            !dl/linux-*.tar.xz
 #            !dl/*-freetz-*-shared-glibc.tar.lzma
