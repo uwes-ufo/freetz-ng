@@ -64,7 +64,7 @@ jobs:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
 #          make && rm -f images/latest.image
-           ls -al
+          ls -al
 
       - name: result
         run: |
