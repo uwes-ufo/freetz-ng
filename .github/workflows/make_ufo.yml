@@ -1,0 +1,80 @@
+name: make_ufo
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '.github/workflows/make_ufo.yml'
+      
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+
+  build:
+    permissions:
+      contents: read
+    container:
+      image: ghcr.io/freetz-ng/firmware
+      options: --user 1001:1001
+    strategy:
+      max-parallel: 7
+      fail-fast: false
+      matrix:
+        include:
+          - box: "5690"
+          - box: "7490"
+          - box: "7270"
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: clone
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          set-safe-directory: true
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+          path: ${{ github.workspace }}
+          fetch-depth: 0
+          clean: false
+          persist-credentials: true
+
+      - name: cache_load
+        uses: actions/cache/restore@v4
+        if: always()
+        with:
+          path: |
+            dl/*
+            !dl/linux-*.tar.xz
+            !dl/*-freetz-*-shared-glibc.tar.lzma
+          key: make_cache
+          restore-keys: make_cache
+
+      - name: config
+        run: |
+          cp config-${{ matrix.box }} .config
+          echo "##########################################################" && echo -n "Lines=" && wc -l .config
+
+      - name: generate
+        env:
+          FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
+        run: |
+          make && rm -f images/latest.image
+
+      - name: result
+        run: |
+          echo "##########################################################"
+          ls -l images/
+          sha256sum images/*
+          
+      - name: images
+        uses: actions/upload-artifact@v4
+        with:
+          name: images-${{ matrix.box }}
+          path: images/*
+          retention-days: 2  
