@@ -60,5 +60,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: images-${{ matrix.box }}
-          path: images/*
+          path: images
           retention-days: 2  
