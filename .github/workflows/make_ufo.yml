@@ -52,7 +52,7 @@ jobs:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
           cp config-${{ matrix.box }} .config
-          ls -al ~/
+          ls -al ~/../
 #          make && rm -f images/latest.image
 
       - name: images
