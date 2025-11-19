@@ -44,7 +44,7 @@ jobs:
         if: always()
         with:
           path: ~/*
-          key: cache-${{ matrix.box }}-${{ github.run_id }}
+          key: cache-${{ matrix.box }}-${{ github.sha }}
           restore-keys: cache-${{ matrix.box }}
 
       - name: make
