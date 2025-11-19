@@ -48,10 +48,7 @@ jobs:
         uses: actions/cache@v4
         if: always()
         with:
-          path: |
-            *
-            !dl/linux-*.tar.xz
-            !dl/*-freetz-*-shared-glibc.tar.lzma
+          path: /
           key: cache-${{ matrix.box }}-${{ github.run_id }}
           restore-keys: cache-${{ matrix.box }}
 
