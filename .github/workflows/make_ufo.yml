@@ -43,7 +43,9 @@ jobs:
         uses: actions/cache@v4
         if: always()
         with:
-          path: ~/*
+          path: |
+            ~
+            $PWD
           key: cache-${{ matrix.box }}-${{ github.sha }}
           restore-keys: cache-${{ matrix.box }}
 
@@ -52,10 +54,10 @@ jobs:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
           cp config-${{ matrix.box }} .config
-          ls -al ~/
-          ls -al *
-          pwd
           echo ~
+          ls -al ~
+          echo $PWD
+          ls -al $PWD
 #          make && rm -f images/latest.image
 
       - name: images
