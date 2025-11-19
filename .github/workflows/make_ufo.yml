@@ -52,15 +52,11 @@ jobs:
           key: cache-${{ matrix.box }}-${{ github.run_id }}
           restore-keys: cache-${{ matrix.box }}
 
-      - name: config
-        run: |
-          cp config-${{ matrix.box }} .config
-          echo "##########################################################" && echo -n "Lines=" && wc -l .config
-
-      - name: generate
+      - name: make
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
+          cp config-${{ matrix.box }} .config
           make && rm -f images/latest.image
 
       - name: images
