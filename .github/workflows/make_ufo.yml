@@ -19,10 +19,7 @@ jobs:
       max-parallel: 7
       fail-fast: false
       matrix:
-        include:
-          - box: "5690"
-          - box: "7490"
-          - box: "7270"
+        box: ["5690", "7490", "7270"]
     runs-on: ubuntu-latest
     
     steps:
@@ -52,9 +49,7 @@ jobs:
       - name: make
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
-        run: |
-          cp config-${{ matrix.box }} .config
-          make && rm -f images/latest.image
+        run: cp config-${{ matrix.box }} .config && make
 
       - name: images
         uses: actions/upload-artifact@v4
