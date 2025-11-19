@@ -21,7 +21,7 @@ jobs:
       image: ghcr.io/freetz-ng/firmware
       options: --user 1001:1001
     strategy:
-      max-parallel: 25
+      max-parallel: 7
       fail-fast: false
       matrix:
         include:
@@ -57,7 +57,7 @@ jobs:
 
       - name: config
         run: |
-          cp config-"${{ matrix.box }}" .config
+          cp config-${{ matrix.box }} .config
           echo "##########################################################" && echo -n "Lines=" && wc -l .config
 
       - name: generate
@@ -75,6 +75,6 @@ jobs:
       - name: images
         uses: actions/upload-artifact@v4
         with:
-          name: images-"${{ matrix.box }}"
+          name: images-${{ matrix.box }}
           path: images/*
           retention-days: 2  
