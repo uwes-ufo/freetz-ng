@@ -45,7 +45,7 @@ jobs:
         with:
           path: |
             ~
-            ${{ github.workspace }}
+            .
           key: cache-${{ matrix.box }}-${{ github.sha }}
           restore-keys: cache-${{ matrix.box }}
 
