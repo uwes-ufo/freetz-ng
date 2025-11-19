@@ -52,10 +52,7 @@ jobs:
             dl/*
             !dl/linux-*.tar.xz
             !dl/*-freetz-*-shared-glibc.tar.lzma
-            source/*
-            !source/host-tools
           key: cache-${{ matrix.box }}
-#          restore-keys: make_cache-
 
       - name: config
         run: |
@@ -66,7 +63,8 @@ jobs:
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
-          make && rm -f images/latest.image
+#          make && rm -f images/latest.image
+           ls -al
 
       - name: result
         run: |
