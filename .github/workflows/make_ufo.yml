@@ -49,11 +49,11 @@ jobs:
         if: always()
         with:
           path: |
-            !*
-#            dl/*
-#            !dl/linux-*.tar.xz
-#            !dl/*-freetz-*-shared-glibc.tar.lzma
-          key: cache-${{ matrix.box }}
+            *
+            !dl/linux-*.tar.xz
+            !dl/*-freetz-*-shared-glibc.tar.lzma
+          key: cache-${{ matrix.box }}-${{ github.run_id }}
+          restore-keys: cache-${{ matrix.box }}
 
       - name: config
         run: |
