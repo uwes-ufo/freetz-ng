@@ -54,6 +54,8 @@ jobs:
           cp config-${{ matrix.box }} .config
           ls -al ~/
           ls -al *
+          pwd
+          echo ~
 #          make && rm -f images/latest.image
 
       - name: images
