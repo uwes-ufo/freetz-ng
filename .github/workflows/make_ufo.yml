@@ -69,8 +69,8 @@ jobs:
       - name: result
         run: |
           echo "##########################################################"
-          ls -l images/
-          sha256sum images/*
+#          ls -l images/
+#          sha256sum images/*
           
       - name: images
         uses: actions/upload-artifact@v4
