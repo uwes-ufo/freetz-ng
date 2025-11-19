@@ -25,9 +25,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - config: "config-5690"
-          - config: "config-7490"
-          - config: "config-7270"
+          - box: "5690"
+          - box: "7490"
+          - box: "7270"
     runs-on: ubuntu-latest
     
     steps:
@@ -57,7 +57,7 @@ jobs:
 
       - name: config
         run: |
-          cp "${{ matrix.config }}" .config
+          cp config-"${{ matrix.box }}" .config
           echo "##########################################################" && echo -n "Lines=" && wc -l .config
 
       - name: generate
@@ -75,6 +75,6 @@ jobs:
       - name: images
         uses: actions/upload-artifact@v4
         with:
-          name: images
+          name: images-"${{ matrix.box }}"
           path: images/*
           retention-days: 2  
