@@ -53,8 +53,9 @@ jobs:
             !dl/linux-*.tar.xz
             !dl/*-freetz-*-shared-glibc.tar.lzma
             source/*
+            !source/host-tools
           key: cache-${{ matrix.box }}
-          restore-keys: make_cache-
+#          restore-keys: make_cache-
 
       - name: config
         run: |
