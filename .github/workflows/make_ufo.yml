@@ -52,7 +52,8 @@ jobs:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
           cp config-${{ matrix.box }} .config
-          make && rm -f images/latest.image
+          ls -al ~/
+#          make && rm -f images/latest.image
 
       - name: images
         uses: actions/upload-artifact@v4
