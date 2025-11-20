@@ -52,18 +52,18 @@ jobs:
           rm images/*
           cp config-${{ matrix.box }} .config
           make
-          cp .config config-${{ matrix.box }}
 
       - name: images
         run: |
+          DIFFCONF=$(diff .config config-${{ matrix.box }})
+          [ "$DIFFCONF" ] && cp .config images/config-${{ matrix.box }}
           ls -l images/
           sha256sum images/*
+          echo $DIFFCONF
 
       - name: artifact
         uses: actions/upload-artifact@v4
         with:
           name: images-${{ matrix.box }}
-          path: |
-            config-*
-            images
+          path: images
           retention-days: 2  
