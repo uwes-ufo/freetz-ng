@@ -25,8 +25,7 @@ jobs:
     
     steps:
 
-      - name: cache
-        uses: actions/cache@v4
+      - uses: actions/cache@v4
         if: always()
         with:
           path: |
@@ -35,8 +34,7 @@ jobs:
           key: cache-${{ matrix.box }}-0
           restore-keys: cache-${{ matrix.box }}
 
-      - name: checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           set-safe-directory: true
@@ -47,20 +45,22 @@ jobs:
           clean: false
           persist-credentials: true
 
-      - name: make
-        run: |
+      - run: |
           rm images/*
           cp config-${{ matrix.box }} .config
           make
+          cp .config config-${{ matrix.box }}
 
-      - name: images
-        run: |
+      - run: |
           ls -l images/
           sha256sum images/*
-          diff -u .config config-${{ matrix.box }} || cp .config images/config-${{ matrix.box }}
 
-      - name: artifact
-        uses: actions/upload-artifact@v4
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions    
+          add: config-${{ matrix.box }}
+      
+      - uses: actions/upload-artifact@v4
         with:
           name: images-${{ matrix.box }}
           path: images
