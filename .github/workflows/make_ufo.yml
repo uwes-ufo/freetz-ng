@@ -55,9 +55,10 @@ jobs:
 
       - name: images
         run: |
-          diff -u --color .config config-${{ matrix.box }} || cp .config images/config-${{ matrix.box }}
+          cp .config images/config-${{ matrix.box }}
           ls -l images/
           sha256sum images/*
+          diff -u .config config-${{ matrix.box }}
           exit 0
 
       - name: artifact
