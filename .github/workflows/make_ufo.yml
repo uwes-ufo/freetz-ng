@@ -52,6 +52,7 @@ jobs:
           rm images/*
           cp config-${{ matrix.box }} .config
           make
+          cp .config config-${{ matrix.box }}
 
       - name: images
         run: |
@@ -62,5 +63,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: images-${{ matrix.box }}
-          path: images
+          path: |
+            config-*
+            images
           retention-days: 2  
