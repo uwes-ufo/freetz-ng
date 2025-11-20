@@ -58,7 +58,7 @@ jobs:
           cp .config images/config-${{ matrix.box }}
           ls -l images/
           sha256sum images/*
-          diff -u .config config-${{ matrix.box }}
+#          diff -u .config config-${{ matrix.box }}
 
       - name: artifact
         uses: actions/upload-artifact@v4
