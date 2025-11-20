@@ -55,11 +55,10 @@ jobs:
 
       - name: images
         run: |
-          DIFFCONF=$(diff .config config-${{ matrix.box }})
-          [ "$DIFFCONF" ] && cp .config images/config-${{ matrix.box }}
+          cp .config images/config-${{ matrix.box }}
           ls -l images/
           sha256sum images/*
-          echo $DIFFCONF
+          diff -u .config config-${{ matrix.box }}
 
       - name: artifact
         uses: actions/upload-artifact@v4
