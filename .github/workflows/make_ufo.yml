@@ -1,6 +1,7 @@
 name: make_ufo
 
 on:
+  push:
   workflow_dispatch:
 
 concurrency:
@@ -24,7 +25,17 @@ jobs:
     
     steps:
 
-      - name: clone
+      - name: cache
+        uses: actions/cache@v4
+        if: always()
+        with:
+          path: |
+            ~/ 
+            ./
+          key: cache-${{ matrix.box }}-0
+          restore-keys: cache-${{ matrix.box }}
+
+      - name: checkout
         uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -36,19 +47,7 @@ jobs:
           clean: false
           persist-credentials: true
 
-      - name: cache
-        uses: actions/cache@v4
-        if: always()
-        with:
-          path: |
-            ~/ 
-            ./
-          key: cache-${{ matrix.box }}-${{ github.sha }}
-          restore-keys: cache-${{ matrix.box }}
-
       - name: make
-        env:
-          FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
           rm images/*
           cp config-${{ matrix.box }} .config
