@@ -13,6 +13,7 @@ jobs:
   build:
     permissions:
       contents: read
+      pages: write
     container:
       image: ghcr.io/freetz-ng/firmware
       options: --user 1001:1001
