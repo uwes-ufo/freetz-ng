@@ -1,0 +1,65 @@
+name: make_ufo
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+
+  build:
+    permissions:
+      contents: read
+    container:
+      image: ghcr.io/freetz-ng/firmware
+      options: --user 1001:1001
+    strategy:
+      max-parallel: 7
+      fail-fast: false
+      matrix:
+        box: ["5690", "7270", "7490"]
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: cache
+        uses: actions/cache@v4
+        if: always()
+        with:
+          path: |
+            ~/ 
+            ./
+          key: cache-${{ matrix.box }}-0
+          restore-keys: cache-${{ matrix.box }}
+
+      - name: checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          set-safe-directory: true
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+          path: ${{ github.workspace }}
+          fetch-depth: 0
+          clean: false
+          persist-credentials: true
+
+      - name: make
+        run: |
+          rm images/*
+          cp config-${{ matrix.box }} .config
+          make
+
+      - name: images
+        run: |
+          ls -l images/
+          sha256sum images/*
+
+      - name: artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: images-${{ matrix.box }}
+          path: images
+          retention-days: 2  
