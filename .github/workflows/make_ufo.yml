@@ -49,15 +49,10 @@ jobs:
       - name: make
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
-        run: |
-          rm images/*
-          cp config-${{ matrix.box }} .config
-          make
+        run: rm images/* && cp config-${{ matrix.box }} .config && make
 
       - name: images
-        run: |
-          ls -l images/
-          sha256sum images/*
+        run: ls -l images/ && sha256sum images/*
 
       - name: artifact
         uses: actions/upload-artifact@v4
