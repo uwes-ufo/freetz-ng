@@ -52,6 +52,9 @@ jobs:
         run: cp config-${{ matrix.box }} .config && make
 
       - name: images
+        run: ls -l images/ && sha256sum images/*
+
+      - name: artifact
         uses: actions/upload-artifact@v4
         with:
           name: images-${{ matrix.box }}
