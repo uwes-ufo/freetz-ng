@@ -9,37 +9,16 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng 02280a424b uwe 2025-11-21
+#  freetz-ng c2ba9d2069 uwe 2025-11-21
 #
 
 #
 # User competence ------------------------------------------
 #
 # FREETZ_USER_LEVEL_BEGINNER is not set
-# FREETZ_USER_LEVEL_EXPERT is not set
-FREETZ_USER_LEVEL_DEVELOPER=y
+FREETZ_USER_LEVEL_EXPERT=y
+# FREETZ_USER_LEVEL_DEVELOPER is not set
 FREETZ_SHOW_EXPERT=y
-FREETZ_SHOW_DEVELOPER=y
-
-#
-#  x                                                        x
-#
-
-#
-#  x xxxxxxxxxxxxxxxxxxxxx  WARNING  xxxxxxxxxxxxxxxxxxxxxx x
-#
-
-#
-#  x                 DO NOT USE DEVELOPER!                  x
-#
-
-#
-#  x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x
-#
-
-#
-#  x                                                        x
-#
 
 #
 # Hardware/Firmware ----------------------------------------
@@ -165,12 +144,6 @@ FREETZ_TYPE_7490=y
 #
 # Repeater
 #
-# FREETZ_TYPE_WRNG is not set
-# FREETZ_TYPE_0310_V1 is not set
-# FREETZ_TYPE_0310_V2 is not set
-# FREETZ_TYPE_0600_V1 is not set
-# FREETZ_TYPE_0600_V2 is not set
-# FREETZ_TYPE_1160 is not set
 # FREETZ_TYPE_1759 is not set
 # FREETZ_TYPE_0300 is not set
 # FREETZ_TYPE_0450 is not set
@@ -240,7 +213,6 @@ FREETZ_REMOVE_LEFTOVER=y
 # FREETZ_REMOVE_DSLD is not set
 # FREETZ_REMOVE_SHOWDSLDSTAT is not set
 # FREETZ_REMOVE_ASSISTANT is not set
-# FREETZ_REMOVE_UNTRUSTEDD is not set
 # FREETZ_REMOVE_PCPD is not set
 # FREETZ_REMOVE_PLCD is not set
 # FREETZ_REMOVE_MESHD is not set
@@ -356,7 +328,6 @@ FREETZ_ENFORCE_BRANDING_none=y
 # Misc patches ---------------------------------------------
 #
 # FREETZ_DISABLE_SERIAL_CONSOLE is not set
-# FREETZ_PATCH_DISABLE_AVM_WATCHDOG is not set
 # FREETZ_RUN_TELEFON_IN_INHAUS_MODE is not set
 
 #
@@ -983,8 +954,6 @@ FREETZ_PACKAGE_LDD_VERSION_CURRENT=y
 # FREETZ_PACKAGE_GPTFDISK is not set
 # FREETZ_PACKAGE_HP_UTILS is not set
 # FREETZ_PACKAGE_HPLIP is not set
-FREETZ_PACKAGE_IPTABLES_IS_SELECTABLE=y
-# FREETZ_PACKAGE_IPTABLES is not set
 # FREETZ_PACKAGE_MINI_FO is not set
 # FREETZ_PACKAGE_MYSQL is not set
 # FREETZ_PACKAGE_PHP is not set
@@ -1643,7 +1612,6 @@ FREETZ_BUSYBOX__IPV6_UTILS=y
 # FREETZ_BUSYBOX__NETWORK is not set
 # FREETZ_BUSYBOX__TERMINAL is not set
 # FREETZ_BUSYBOX__DEVELOPER is not set
-# FREETZ_BUSYBOX__ADDITIONAL is not set
 
 #
 # 
@@ -2803,7 +2771,6 @@ FREETZ_BUSYBOX___V137_MICROCOM=y
 # FREETZ_BUSYBOX___V137_MIM is not set
 # FREETZ_BUSYBOX___V137_MT is not set
 # FREETZ_BUSYBOX___V137_NANDWRITE is not set
-# FREETZ_BUSYBOX___V137_NANDDUMP is not set
 # FREETZ_BUSYBOX___V137_PARTPROBE is not set
 # FREETZ_BUSYBOX___V137_RAIDAUTORUN is not set
 # FREETZ_BUSYBOX___V137_READAHEAD is not set
@@ -2818,13 +2785,6 @@ FREETZ_BUSYBOX___V137_TIME=y
 # FREETZ_BUSYBOX___V137_TREE is not set
 FREETZ_BUSYBOX___V137_TS=y
 # FREETZ_BUSYBOX___V137_TTYSIZE is not set
-# FREETZ_BUSYBOX___V137_UBIATTACH is not set
-# FREETZ_BUSYBOX___V137_UBIDETACH is not set
-# FREETZ_BUSYBOX___V137_UBIMKVOL is not set
-# FREETZ_BUSYBOX___V137_UBIRMVOL is not set
-# FREETZ_BUSYBOX___V137_UBIRSVOL is not set
-# FREETZ_BUSYBOX___V137_UBIUPDATEVOL is not set
-# FREETZ_BUSYBOX___V137_UBIRENAME is not set
 # FREETZ_BUSYBOX___V137_VOLNAME is not set
 # FREETZ_BUSYBOX___V137_WATCHDOG is not set
 # end of Miscellaneous Utilities
@@ -3178,7 +3138,6 @@ EXTERNAL_OWN_MODULES=""
 # FREETZ_BACKUP_EXPORT is not set
 FREETZ_LANG_DE=y
 # FREETZ_LANG_EN is not set
-# FREETZ_LANG_XX is not set
 FREETZ_LANG_STRING="de"
 FREETZ_SECURITY_LEVEL=0
 FREETZ_STYLE_GREY=y
@@ -3231,7 +3190,6 @@ FREETZ_DOT_CONFIG_STRIPPED=y
 #
 # Toolchain options
 #
-# FREETZ_DOWNLOAD_TOOLCHAIN is not set
 FREETZ_BUILD_TOOLCHAIN=y
 # FREETZ_TOOLCHAIN_CCACHE is not set
 FREETZ_TOOLCHAIN_MINIMIZE_REQUIRED_GLIBC_VERSION=y
@@ -3331,7 +3289,6 @@ FREETZ_MENUCONFIG_REVISION=y
 # FREETZ_VERBOSITY_FWMOD_0 is not set
 # FREETZ_VERBOSITY_FWMOD_1 is not set
 FREETZ_VERBOSITY_FWMOD_2=y
-# FREETZ_VERBOSITY_FWMOD_3 is not set
 FREETZ_VERBOSITY_FWMOD=2
 # FREETZ_VERBOSITY_LEVEL_0 is not set
 # FREETZ_VERBOSITY_LEVEL_1 is not set
@@ -3341,8 +3298,6 @@ FREETZ_SIZEINFO_COMPRESSED=y
 # FREETZ_SIZEINFO_UNCOMPRESSED is not set
 FREETZ_JLEVEL=0
 FREETZ_CHECK_CHANGED=y
-# FREETZ_REPRODUCIBLE is not set
-# FREETZ_MODULES_TEST is not set
 # end of Build system options
 
 #
