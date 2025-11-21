@@ -12,7 +12,7 @@ jobs:
 
   build:
     permissions:
-      contents: read
+      contents: write
     container:
       image: ghcr.io/freetz-ng/firmware
       options: --user 1001:1001
@@ -25,18 +25,16 @@ jobs:
     
     steps:
 
-      - name: cache
-        uses: actions/cache@v4
+      - uses: actions/cache@v4
         if: always()
         with:
           path: |
             ~/ 
             ./
-          key: cache-${{ matrix.box }}-0
+          key: cache-${{ matrix.box }}-1
           restore-keys: cache-${{ matrix.box }}
 
-      - name: checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           set-safe-directory: true
@@ -47,19 +45,27 @@ jobs:
           clean: false
           persist-credentials: true
 
-      - name: make
+      - shell: bash 
         run: |
-          rm images/*
           cp config-${{ matrix.box }} .config
-          make
+          make olddefconfig
+          cp_config(){
+            local P='(#  freetz-ng )([0-9a-f]{10})( ufo .*)'
+            local H=$(sed -rn "s/$P/\2/p" $1)
+            diff -q <(sed -r "s/$P/\1\3/" .config) <(sed -r "s/$P/\1\3/" $1) && sed -r "s/$P/\1$H\3/" .config > $1 || cp .config $1
+          }
+          cp_config config-${{ matrix.box }}
+          rm images/*
 
-      - name: images
-        run: |
+      - uses: EndBug/add-and-commit@v9
+
+      - run: make
+
+      - run: |
           ls -l images/
           sha256sum images/*
 
-      - name: artifact
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: images-${{ matrix.box }}
           path: images
