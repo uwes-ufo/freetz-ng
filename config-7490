@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng c2ba9d2069 uwe 2025-11-21
+#  freetz-ng 75139a8a74 uwe 2025-11-21
 #
 
 #
@@ -67,7 +67,6 @@ FREETZ_SERIES_3=y
 # FREETZ_TYPE_5590 is not set
 # FREETZ_TYPE_5690_NIX is not set
 # FREETZ_TYPE_5690_PRO is not set
-# FREETZ_TYPE_5690_XGS is not set
 
 #
 # Cable
