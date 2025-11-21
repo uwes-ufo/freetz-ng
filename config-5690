@@ -9,7 +9,7 @@ FREETZ_HAVE_DOT_CONFIG=y
 #
 
 #
-#  freetz-ng bed04d0e27 uwe 2025-11-21
+#  freetz-ng 17d5be59e2 ufo 2025-11-21
 #
 
 #
@@ -67,6 +67,7 @@ FREETZ_SERIES_3=y
 # FREETZ_TYPE_5590 is not set
 # FREETZ_TYPE_5690_NIX is not set
 FREETZ_TYPE_5690_PRO=y
+# FREETZ_TYPE_5690_XGS is not set
 
 #
 # Cable
@@ -143,6 +144,12 @@ FREETZ_TYPE_5690_PRO=y
 #
 # Repeater
 #
+# FREETZ_TYPE_WRNG is not set
+# FREETZ_TYPE_0310_V1 is not set
+# FREETZ_TYPE_0310_V2 is not set
+# FREETZ_TYPE_0600_V1 is not set
+# FREETZ_TYPE_0600_V2 is not set
+# FREETZ_TYPE_1160 is not set
 # FREETZ_TYPE_1759 is not set
 # FREETZ_TYPE_0300 is not set
 # FREETZ_TYPE_0450 is not set
