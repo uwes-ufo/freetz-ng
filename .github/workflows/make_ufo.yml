@@ -28,8 +28,7 @@ jobs:
       - uses: actions/cache@v4
         if: always()
         with:
-          path: |
-            ~/ 
+          path: ~/ 
             ./
           key: cache-${{ matrix.box }}-1
           restore-keys: cache-${{ matrix.box }}
@@ -45,23 +44,21 @@ jobs:
           clean: false
           persist-credentials: true
 
-      - run: |
+      - run: C=config-${{ matrix.box }}
+          cp $C .config
+          make olddefconfig
+          P='(#  freetz-ng )([0-9a-f]{10})( ufo .*)'
+          H=$(sed -rn "s/$P/\2/p" $C)
+          [ "$(diff -q <(sed -r "s/$P/\1\3/" .config) <(sed -r "s/$P/\1\3/" $C))" ] && cp .config $C || sed -r "s/$P/\1$H\3/" .config > $C
           rm images/*
-          cp config-${{ matrix.box }} .config
-          make
-          cp_config(){
-            local P='(#  freetz-ng )([0-9a-f]{10})( ufo .*)'
-            local H=$(sed -rn "s/$P/\2/p" $1)
-            [ "$(diff -q <(sed -r "s/$P/\1\3/" .config) <(sed -r "s/$P/\1\3/" $1))" ] && cp .config $1 || sed -r "s/$P/\1$H\3/" .config > $1
-          }
-          cp_config config-${{ matrix.box }}
-
-      - run: |
-          ls -l images/
-          sha256sum images/*
 
       - uses: EndBug/add-and-commit@v9
-      
+
+      - run: make
+
+      - run: ls -l images/
+          sha256sum images/*
+
       - uses: actions/upload-artifact@v4
         with:
           name: images-${{ matrix.box }}
