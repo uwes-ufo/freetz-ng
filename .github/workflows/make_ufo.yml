@@ -46,7 +46,6 @@ jobs:
           persist-credentials: true
 
       - run: |
-          set +o posix
           cp_config(){
             local P='(#  freetz-ng )([0-9a-f]{10})( ufo .*)'
             local H=$(sed -rn "s/$P/\2/p" $1)
