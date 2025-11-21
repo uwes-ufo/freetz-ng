@@ -26,7 +26,7 @@ jobs:
     steps:
 
       - run: |
-          $DATE=& Get-Date -format yyyy-MM-dd
+          DATE=$(date +%F)
           echo "DATE=$DATE" >> $env:GITHUB_ENV
         
       - uses: actions/cache@v4
