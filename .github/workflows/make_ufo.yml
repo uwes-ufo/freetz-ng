@@ -25,13 +25,16 @@ jobs:
     
     steps:
 
+      - id: date
+        run: echo "::set-output name=date::$(date +%F)"
+
       - uses: actions/cache@v4
         if: always()
         with:
           path: |
             ~/ 
             ./
-          key: cache-${{ matrix.box }}-0
+          key: cache-${{ matrix.box }}-${{ steps.date.outputs.date }}
           restore-keys: cache-${{ matrix.box }}
 
       - uses: actions/checkout@v5
