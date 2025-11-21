@@ -80,7 +80,7 @@ Latest changes
     * python3-jsonschema 4.25.1
     * python3-pip 25.3
     * python3-referencing 0.37.0
-    * tools 2025-11-05
+    * tools 2025-11-21
     * uboot 2025.10
 
   - AVM sources:
@@ -95,7 +95,7 @@ Latest changes
 
   - Packages:
     * BIND 9.11.37/9.20.15
-    * Binutils 2.45
+    * Binutils 2.45.1
     * Bzip2 1.0.8
     * CA-bundle 2025-11-04
     * Curl 8.12.1/8.17.0
