@@ -45,7 +45,8 @@ jobs:
           clean: false
           persist-credentials: true
 
-      - run: |
+      - shell: bash 
+        run: |
           cp_config(){
             local P='(#  freetz-ng )([0-9a-f]{10})( ufo .*)'
             local H=$(sed -rn "s/$P/\2/p" $1)
