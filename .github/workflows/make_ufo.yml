@@ -28,7 +28,8 @@ jobs:
       - uses: actions/cache@v4
         if: always()
         with:
-          path: ~/ 
+          path: |
+            ~/ 
             ./
           key: cache-${{ matrix.box }}-1
           restore-keys: cache-${{ matrix.box }}
@@ -44,7 +45,8 @@ jobs:
           clean: false
           persist-credentials: true
 
-      - run: C=config-${{ matrix.box }}
+      - run: |
+          C=config-${{ matrix.box }}
           cp $C .config
           make olddefconfig
           cp .config $C
@@ -54,7 +56,8 @@ jobs:
 
       - run: make
 
-      - run: ls -l images/
+      - run: |
+          ls -l images/
           sha256sum images/*
 
       - uses: actions/upload-artifact@v4
