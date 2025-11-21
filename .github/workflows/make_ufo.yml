@@ -31,7 +31,7 @@ jobs:
           path: |
             ~/ 
             ./
-          key: cache-${{ matrix.box }}-1
+          key: cache-${{ matrix.box }}-$(date +%F)
           restore-keys: cache-${{ matrix.box }}
 
       - uses: actions/checkout@v5
