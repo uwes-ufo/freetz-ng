@@ -1,6 +1,10 @@
 config FREETZ_LIB_libpython3
+<<<<<<< HEAD
 	bool "libpython3 (libpython3.so) - DEVELOPER"
 #	depends on FREETZ_SHOW_DEVELOPER
+=======
+	bool "libpython3 (libpython3.so) - EXPERIMENTAL"
+>>>>>>> db37bf9576515b8924cfa3131932d2e6ad6661b2
 	depends on FREETZ_PACKAGE_PYTHON3 && !FREETZ_PACKAGE_PYTHON3_STATIC
 	select FREETZ_LIB_libdl       if FREETZ_TARGET_UCLIBC_HAS_multiple_libs
 	select FREETZ_LIB_libm        if FREETZ_TARGET_UCLIBC_HAS_multiple_libs
