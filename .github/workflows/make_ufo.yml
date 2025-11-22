@@ -26,13 +26,13 @@ jobs:
     steps:
 
       - run: echo "DATE=$(date +%F-%H)" >> $GITHUB_ENV
-        
+
       - uses: actions/cache@v4
         with:
           path: |
-            ~/ 
+            ~/
             ./
-          key: cache-${{ matrix.box }}-${{ env.DATE }}-1
+          key: cache-${{ matrix.box }}-${{ env.DATE }}
           restore-keys: cache-${{ matrix.box }}
 
       - uses: actions/checkout@v6
@@ -46,7 +46,7 @@ jobs:
           clean: false
           persist-credentials: true
 
-      - shell: bash 
+      - shell: bash
         run: |
           cp config-${{ matrix.box }} .config
           rm images/*
@@ -61,4 +61,4 @@ jobs:
         with:
           name: images-${{ matrix.box }}
           path: images
-          retention-days: 2  
+          retention-days: 2
