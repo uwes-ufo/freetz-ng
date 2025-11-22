@@ -49,17 +49,13 @@ jobs:
       - shell: bash 
         run: |
           cp config-${{ matrix.box }} .config
-          make olddefconfig
-          diff -q <(grep -v '#  freetz-ng ' .config) <(grep -v '#  freetz-ng ' config-${{ matrix.box }}) || cp .config config-${{ matrix.box }}
           rm images/*
+          make
+          diff -q <(grep -v '#  freetz-ng ' .config) <(grep -v '#  freetz-ng ' config-${{ matrix.box }}) || cp .config config-${{ matrix.box }}
 
       - uses: EndBug/add-and-commit@v9
 
-      - run: make
-
-      - run: |
-          ls -l images/
-          sha256sum images/*
+      - run: ls -l images/
 
       - uses: actions/upload-artifact@v4
         with:
