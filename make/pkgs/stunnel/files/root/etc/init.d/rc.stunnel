@@ -5,7 +5,7 @@ DAEMON=stunnel
 
 config() {
 	modlib_config
-	[ -r "/tmp/flash/stunnel/svcs" ] && cat /tmp/flash/stunnel/svcs >> $DAEMON_CONFIG
+	[ -r "/tmp/flash/stunnel/svcs" ] && cat /tmp/flash/stunnel/svcs > $DAEMON_CONFIG
 }
 
 start() {
