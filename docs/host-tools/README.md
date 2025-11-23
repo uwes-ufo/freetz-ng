@@ -20,6 +20,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[cmake 4.1.3](cmake-host.md)<a id='cmake-host'></a>**<br>
 
+  * **[config a2287c3](config-host.md)<a id='config-host'></a>**<br>
+
   * **[cpio 2.15](cpio-host.md)<a id='cpio-host'></a>**<br>
 
 ### D
@@ -148,7 +150,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2025-11-21](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-11-23](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 

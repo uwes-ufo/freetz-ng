@@ -71,6 +71,7 @@ Latest changes
 
   - Host tools:
     * ca-bundle 2025-11-04
+    * config a2287c3
     * cmake 4.1.3
     * dos2unix 7.5.3
     * file 5.46
@@ -83,7 +84,7 @@ Latest changes
     * python3-jsonschema 4.25.1
     * python3-pip 25.3
     * python3-referencing 0.37.0
-    * tools 2025-11-21
+    * tools 2025-11-23
     * uboot 2025.10
 
   - AVM sources:
