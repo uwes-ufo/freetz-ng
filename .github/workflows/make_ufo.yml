@@ -27,7 +27,8 @@ jobs:
 
       - run: echo CLEAN=false >> $GITHUB_ENV
 
-      - env:
+      - shell: bash
+        env:
           CLEAN: ${{ env.CLEAN }}
         run: |
           [ $CLEAN == 'false' ] && DATE=$(date +%F) || DATE=$(date +%F_%R)
