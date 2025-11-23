@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
 
-  build:
+  ufo:
     permissions:
       contents: write
     container:
