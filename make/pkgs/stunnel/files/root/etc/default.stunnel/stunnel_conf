@@ -5,7 +5,7 @@ cat << EOF
 
 foreground = no
 pid = /var/run/stunnel.pid
-# client = yes
+client = yes
 
 RNDbytes = 1024
 RNDfile = /var/tmp/.stunnel_rnd
@@ -17,9 +17,9 @@ EOF
 if [ "$STUNNEL_USE_BOX_CERT" = "yes" ]; then
 	echo "cert = /var/flash/websrv_ssl_cert.pem"
 	echo "key = /var/flash/websrv_ssl_key.pem"
-# else
-#	echo "cert = /tmp/flash/stunnel/certs.pem"
-#	echo "key = /tmp/flash/stunnel/key.pem"
+else
+	echo "cert = /tmp/flash/stunnel/certs.pem"
+	echo "key = /tmp/flash/stunnel/key.pem"
 fi
 
 if [ ! -z "$STUNNEL_SSLOPTIONS" ]; then
