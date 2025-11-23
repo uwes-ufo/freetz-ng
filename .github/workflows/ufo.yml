@@ -1,4 +1,4 @@
-name: make_ufo
+name: ufo
 
 on:
   push:
