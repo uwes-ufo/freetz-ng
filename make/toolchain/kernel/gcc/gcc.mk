@@ -22,15 +22,30 @@ GCC_KERNEL_ECHO_TYPE:=KTC
 GCC_KERNEL_ECHO_MAKE:=gcc
 
 
+# g++ -v --help 2>/dev/null | grep ' -std='
+GCC_KERNEL_CFLAGS:=$(TOOLCHAIN_HOST_CFLAGS)
+GCC_KERNEL_CXXFLAGS:=$(TOOLCHAIN_HOST_CFLAGS)
+# gcc4 compatibility with gcc14
+ifeq ($(strip $(FREETZ_KERNEL_GCC_4_MAX)),y)
+GCC_KERNEL_CFLAGS+=-Wno-error=incompatible-pointer-types
+GCC_KERNEL_CXXFLAGS+=-Wno-error=incompatible-pointer-types
+endif
+# gcc 4+5 does not like be compiled by gcc11/C++17
+ifeq ($(strip $(FREETZ_KERNEL_GCC_5_MAX)),y)
+GCC_KERNEL_CFLAGS+=--std=gnu11
+GCC_KERNEL_CXXFLAGS+=--std=gnu++11
+endif
+
+
 GCC_KERNEL_INITIAL_PREREQ=
 
 ifndef KERNEL_TOOLCHAIN_NO_MPFR
-GCC_KERNEL_DECIMAL_FLOAT  := --disable-decimal-float
-
 GCC_KERNEL_INITIAL_PREREQ += $(GMP_HOST_BINARY) $(MPFR_HOST_BINARY) $(MPC_HOST_BINARY)
 GCC_KERNEL_WITH_HOST_GMP   = --with-gmp=$(HOST_TOOLS_DIR)
 GCC_KERNEL_WITH_HOST_MPFR  = --with-mpfr=$(HOST_TOOLS_DIR)
 GCC_KERNEL_WITH_HOST_MPC   = --with-mpc=$(HOST_TOOLS_DIR)
+
+GCC_KERNEL_DECIMAL_FLOAT  := --disable-decimal-float
 endif
 
 # --with-isl is available since gcc-4.8.x, exclude all versions before
@@ -59,8 +74,8 @@ $(GCC_KERNEL_BUILD_DIR)/.configured: $(GCC_KERNEL_DIR)/.unpacked $(GCC_KERNEL_IN
 	mkdir -p $(GCC_KERNEL_BUILD_DIR)
 	(cd $(GCC_KERNEL_BUILD_DIR); PATH=$(KERNEL_TOOLCHAIN_PATH) \
 		CC="$(TOOLCHAIN_HOSTCC)" \
-		CFLAGS="$(TOOLCHAIN_HOST_KERNEL_CFLAGS)" \
-		CXXFLAGS="$(TOOLCHAIN_HOST_KERNEL_CXXFLAGS)" \
+		CFLAGS="$(GCC_KERNEL_CFLAGS)" \
+		CXXFLAGS="$(GCC_KERNEL_CXXFLAGS)" \
 		$(GCC_KERNEL_DIR)/configure \
 		--enable-option-checking \
 		--prefix=$(KERNEL_TOOLCHAIN_STAGING_DIR) \
