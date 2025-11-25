@@ -37,17 +37,17 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: |
-            ~/
-            #./
-            #images
-            build
-            .fakeroot-cache
             .config.compressed
+            .config.old
+            .fakeroot-cache
             .packages
+            .version
+            build
+            dl
+            kernel
+            packages
             source
             toolchain
-            .config
-            .config.old
           key: cache-${{ matrix.box }}-${{ env.DATE }}
           restore-keys: cache-${{ matrix.box }}
 
