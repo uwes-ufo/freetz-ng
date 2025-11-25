@@ -37,14 +37,13 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: |
-            ~/
+            ~/.freetz-dl
             .config.compressed
             .config.old
             .fakeroot-cache
             .packages
             .version
             build
-            dl
             kernel
             packages
             source
