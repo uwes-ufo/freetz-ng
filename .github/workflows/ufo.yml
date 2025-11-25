@@ -37,6 +37,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: |
+            ~/
             .config.compressed
             .config.old
             .fakeroot-cache
@@ -73,6 +74,10 @@ jobs:
       - uses: EndBug/add-and-commit@v9
 
       - run: ls -l images/
+
+      - run: ls -al dl
+      - run: ls -al ~/
+      - run: ls -al ~/*
 
       - uses: actions/upload-artifact@v4
         with:
