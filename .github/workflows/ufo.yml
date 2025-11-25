@@ -26,7 +26,6 @@ jobs:
       run: echo DATE=$(date +%F) >> $GITHUB_ENV
 
     - uses: actions/cache@v4
-      id: cache
       with:
         path: |
           ~/
@@ -38,15 +37,14 @@ jobs:
       with:
         clean: false
 
-    - if: steps.cache.outputs.cache-hit == '' 
-      run: |
+    - run: |
         tools/prerequisites install
+        cp config-${{ matrix.box }} .config
+        rm images/* || echo no images
         touch -d 2020-01-01 make/kernel/configs/freetz/config-ur8-7270_06.05
 
     - shell: bash
       run: |
-        cp config-${{ matrix.box }} .config
-        rm images/* || echo no images
         make
         diff -q <(grep -v '#  freetz-ng ' .config) <(grep -v '#  freetz-ng ' config-${{ matrix.box }}) || cp .config config-${{ matrix.box }}
 
