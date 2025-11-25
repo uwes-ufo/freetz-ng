@@ -25,58 +25,37 @@ jobs:
     
     steps:
 
-      - run: echo CLEAN=false >> $GITHUB_ENV
-
       - shell: bash
-        env:
-          CLEAN: ${{ env.CLEAN }}
-        run: |
-          [ $CLEAN == false ] && DATE=$(date +%F_%R) || DATE=$(date +%F_%R)
-          echo DATE=$DATE >> $GITHUB_ENV
+        run: echo DATE=$(date +%F) >> $GITHUB_ENV
 
       - uses: actions/cache@v4
         with:
           path: |
-            ~/.freetz-dl
-            .config.compressed
-            .config.old
-            .fakeroot-cache
-            .packages
-            .version
-            build
-            kernel
-            packages
-            source
-            toolchain
+            ~/
+            ./
           key: cache-${{ matrix.box }}-${{ env.DATE }}
           restore-keys: cache-${{ matrix.box }}
 
       - uses: actions/checkout@v6
         with:
-          clean: ${{ env.CLEAN }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          set-safe-directory: true
-          repository: ${{ github.repository }}
-          ref: ${{ github.ref_name }}
-          path: ${{ github.workspace }}
-          fetch-depth: 0
-          persist-credentials: true
+          clean: false
+          #token: ${{ secrets.GITHUB_TOKEN }}
+          #set-safe-directory: true
+          #repository: ${{ github.repository }}
+          #ref: ${{ github.ref_name }}
+          #path: ${{ github.workspace }}
+          #fetch-depth: 0
+          #persist-credentials: true
 
       - shell: bash
         run: |
           cp config-${{ matrix.box }} .config
-          #rm images/*
+          rm images/*
           touch -d 2020-01-01 make/kernel/configs/freetz/config-ur8-7270_06.05
           make
           diff -q <(grep -v '#  freetz-ng ' .config) <(grep -v '#  freetz-ng ' config-${{ matrix.box }}) || cp .config config-${{ matrix.box }}
 
       - uses: EndBug/add-and-commit@v9
-
-      - run: ls -l images/
-
-      - run: ls -al dl
-      - run: ls -al ~/
-      - run: ls -al ~/.freetz-dl/
 
       - uses: actions/upload-artifact@v4
         with:
