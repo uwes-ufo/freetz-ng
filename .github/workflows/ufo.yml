@@ -38,7 +38,16 @@ jobs:
         with:
           path: |
             ~/
-            ./
+            #./
+            #images
+            build
+            .fakeroot-cache
+            .config.compressed
+            .packages
+            source
+            toolchain
+            .config
+            .config.old
           key: cache-${{ matrix.box }}-${{ env.DATE }}
           restore-keys: cache-${{ matrix.box }}
 
