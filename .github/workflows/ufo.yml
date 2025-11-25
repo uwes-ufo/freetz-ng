@@ -14,7 +14,6 @@ jobs:
     permissions:
       contents: write
     strategy:
-      max-parallel: 7
       fail-fast: false
       matrix:
         box: ["5690", "7270", "7490"]
