@@ -31,7 +31,7 @@ jobs:
         env:
           CLEAN: ${{ env.CLEAN }}
         run: |
-          [ $CLEAN == false ] && DATE=$(date +%F) || DATE=$(date +%F_%R)
+          [ $CLEAN == false ] && DATE=$(date +%F_%R) || DATE=$(date +%F_%R)
           echo DATE=$DATE >> $GITHUB_ENV
 
       - uses: actions/cache@v4
