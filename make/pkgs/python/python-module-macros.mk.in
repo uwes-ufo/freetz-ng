@@ -13,7 +13,7 @@ PYTHON_SITE_PKG_DIR:=/usr/lib/python$(PYTHON_MAJOR_VERSION)/site-packages
 
 PYTHON:=python$(PYTHON_MAJOR_VERSION)
 
-HOST_PYTHON_BIN:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/hostpython2
+HOST_PYTHON_BIN:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/bin/hostpython
 
 # $(1) => statements to be executed before calling host-python
 # $(2) => parameters to be passed to host-python
@@ -45,6 +45,7 @@ define Build/PyMod2/Generic
 		$(3) \
 		, \
 		./setup.py $(2) \
+		$(SILENT) \
 	)
 	$(if $(strip $(4)),find $(strip $(4)) -type f -name "*.so" -exec $(TARGET_STRIP) \{\} \+)
 endef
