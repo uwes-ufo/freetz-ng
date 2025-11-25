@@ -22,37 +22,36 @@ jobs:
     
     steps:
 
-      - shell: bash
-        run: echo DATE=$(date +%F) >> $GITHUB_ENV
+    - shell: bash
+      run: echo DATE=$(date +%F) >> $GITHUB_ENV
 
-      - uses: actions/cache@v4
-        with:
-          path: |
-            ~/
-            ./
-          key: cache-${{ matrix.box }}-${{ env.DATE }}
-          restore-keys: cache-${{ matrix.box }}
+    - uses: actions/cache@v4
+      with:
+        path: |
+          ~/
+          ./
+        key: cache-${{ matrix.box }}-${{ env.DATE }}
+        restore-keys: cache-${{ matrix.box }}
 
-      - uses: actions/checkout@v6
-        with:
-          clean: false
+    - uses: actions/checkout@v6
+      with:
+        clean: false
 
-      - shell: bash
-        run: |
-          tools/prerequisites install
-          cp config-${{ matrix.box }} .config
-          rm images/* || echo no images
-          touch -d 2020-01-01 make/kernel/configs/freetz/config-ur8-7270_06.05
+    - if: steps.cache.outputs.cache-hit == '' 
+      run: tools/prerequisites install
 
-      - shell: bash
-        run: |
-          make
-          diff -q <(grep -v '#  freetz-ng ' .config) <(grep -v '#  freetz-ng ' config-${{ matrix.box }}) || cp .config config-${{ matrix.box }}
+    - shell: bash
+      run: |
+        cp config-${{ matrix.box }} .config
+        rm images/* || echo no images
+        touch -d 2020-01-01 make/kernel/configs/freetz/config-ur8-7270_06.05
+        make
+        diff -q <(grep -v '#  freetz-ng ' .config) <(grep -v '#  freetz-ng ' config-${{ matrix.box }}) || cp .config config-${{ matrix.box }}
 
-      - uses: EndBug/add-and-commit@v9
+    - uses: EndBug/add-and-commit@v9
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: images-${{ matrix.box }}
-          path: images
-          retention-days: 2
+    - uses: actions/upload-artifact@v4
+      with:
+        name: images-${{ matrix.box }}
+        path: images
+        retention-days: 2
