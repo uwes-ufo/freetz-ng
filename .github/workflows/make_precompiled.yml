@@ -63,14 +63,9 @@ jobs:
         id: parse
         run: |
           pkg="$(echo "${{ github.event.inputs.bump }}" | sed 's/ //g')"
-          if [ "${{ github.event_name }}" == "pull_request" ]; then \
-            BASE_SHA="${{ github.event.pull_request.base.sha }}"; \
-            HEAD_SHA="${{ github.event.pull_request.head.sha }}"; \
-            git cat-file -e "$HEAD_SHA"^{commit} 2>/dev/null || HEAD_SHA="$(git rev-parse $HEAD_SHA~1)"; \
-          else \
-            BASE_SHA="${{ github.sha }}~1"; \
-            HEAD_SHA="${{ github.sha }}"; \
-          fi
+          HEAD_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          [ "${{ github.event_name }}" == "pull_request" ] && BASE_SHA="${{ github.event.pull_request.base.sha }}" || BASE_SHA="${{ github.sha }}~1"
+          git cat-file -e "$HEAD_SHA"^{commit} 2>/dev/null || HEAD_SHA="$(git rev-parse $HEAD_SHA~1)"
           [ -z "$pkg" ] && pkg="$(git log --format=%s "$BASE_SHA..$HEAD_SHA" | head -n1 | sed -nr 's/^(add|bump|fix|test) ([^ ,:]*).*/\2/pI')"
           [ -z "$pkg" ] && pkg="$(git diff --name-only "$BASE_SHA..$HEAD_SHA" | sed -nr 's#^make/(pkgs|libs)/([^/]+)/.*#\2#p' | head -n1)"
           [ -z "$pkg" ] && echo "No add, bump, fix or test." && echo 'matrix=["skip"]' >> $GITHUB_OUTPUT && exit
@@ -197,8 +192,6 @@ jobs:
           PKG="$(echo "$pkg" | tr '[:lower:]' '[:upper:]' | sed 's/-/_/g')"
           echo "pkg=$pkg" >> $GITHUB_OUTPUT
           TYPE=""
-          for x in pkgs libs; do [ -d make/$x/$pkg ] && TYPE=$x; done
-          [ -z "$TYPE" ] && echo -n 'Waiting ' && for x in $(seq 60); do echo -n '.' && sleep 1; done && echo ' done.' && git pull
           for x in pkgs libs; do [ -d make/$x/$pkg ] && TYPE=$x; done
           [ -z "$TYPE" ] && echo "No directory." && exit
           [ "$TYPE" = "pkgs" ] && sed "/[^ ]FREETZ_PACKAGE_${PKG}[ =]/d"                                                                              -i .config
