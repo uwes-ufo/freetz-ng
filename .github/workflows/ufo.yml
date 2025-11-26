@@ -44,6 +44,8 @@ jobs:
         diff -q <(grep -v '#  freetz-ng ' .config) <(grep -v '#  freetz-ng ' config-${{ matrix.box }}) || cp .config config-${{ matrix.box }}
 
     - uses: EndBug/add-and-commit@v9
+      with:
+        pull: --rebase
 
     - uses: actions/upload-artifact@v4
       with:
