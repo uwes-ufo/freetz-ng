@@ -77,6 +77,7 @@ Latest changes
     * dos2unix 7.5.3
     * file 5.46
     * gperf 3.3
+    * ninja 1.13.2
     * patchelf 0.14.5/0.18.0-b49de1b33
     * patchelf-target 0.14.5/0.15.0
     * pseudo 1.9.2
@@ -89,6 +90,7 @@ Latest changes
     * uboot 2025.10
 
   - AVM sources:
+    * 6850 5G  8.20 - 4.4.271
     * 7510     8.20 - 5.4.213
     * Gateway  8.20 - 5.4.213
 
@@ -119,8 +121,9 @@ Latest changes
     * Python 3.14.0
     * sslh 2.2.4/2.3.0
     * Stunnel 5.76
+    * tmux 3.6
     * Tor 0.4.8.21
-    * Unbound 1.24.1
+    * Unbound 1.24.2
     * UnRAR 6.1.7/7.2.1
     * Whois 5.6.5
 
@@ -186,7 +189,6 @@ Latest changes
     * 3000 ax  8.02 - 4.4.271
     * 6360     5.29 - 2.6.28.10
     * 6591     8.20 - 5.15.179
-    * 6850 5G  8.20 - 4.4.271
     * 5530     8.20 - 4.9.337
     * 7530 ax  8.20 - 4.19.183
     * 7590 ac  8.20 - 4.9.337
