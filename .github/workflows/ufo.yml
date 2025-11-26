@@ -51,9 +51,7 @@ jobs:
       with:
         push: false
         
-    - run: |
-        git pull --rebase
-        git push
+    - run: git pull --rebase && git push
 
     - uses: actions/upload-artifact@v4
       with:
