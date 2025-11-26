@@ -65,9 +65,14 @@ Latest changes
   - Build system:
     * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.42/2.45.1
     * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.43.1/2.45.1
+    * Ccache 4.12.1
+    * new architecture: aarch64
+    * new architecture: aarch64_eb
+    * new architecture: armeb
 
   - Host tools:
     * ca-bundle 2025-11-04
+    * config a2287c3
     * cmake 4.1.3
     * dos2unix 7.5.3
     * file 5.46
@@ -80,7 +85,7 @@ Latest changes
     * python3-jsonschema 4.25.1
     * python3-pip 25.3
     * python3-referencing 0.37.0
-    * tools 2025-11-21
+    * tools 2025-11-23
     * uboot 2025.10
 
   - AVM sources:
@@ -108,7 +113,7 @@ Latest changes
     * MTR 0.80/0.96
     * Nmap 4.76/5.51/7.98
     * OpenSSH 9.3p2/10.2p1
-    * OpenVPN 2.4.12/2.5.11/2.6.15
+    * OpenVPN 2.4.12/2.5.11/2.6.16
     * PatchELF 0.18.0
     * procps-ng 4.0.5
     * Python 3.14.0
@@ -181,6 +186,7 @@ Latest changes
     * 3000 ax  8.02 - 4.4.271
     * 6360     5.29 - 2.6.28.10
     * 6591     8.20 - 5.15.179
+    * 6850 5G  8.20 - 4.4.271
     * 5530     8.20 - 4.9.337
     * 7530 ax  8.20 - 4.19.183
     * 7590 ac  8.20 - 4.9.337

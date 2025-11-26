@@ -65,7 +65,12 @@ UCLIBC_COMMON_BUILD_FLAGS += V=1
 endif
 endif
 
-UCLIBC_HOST_CFLAGS:=$(TOOLCHAIN_HOST_TARGET_CFLAGS) -U_GNU_SOURCE -fno-strict-aliasing
+UCLIBC_HOST_CFLAGS:=$(TOOLCHAIN_HOST_CFLAGS)
+# g++ -v --help 2>/dev/null | grep ' -std='
+#ifeq ($(strip $(FREETZ_TARGET_GCC_5_MAX)),y)
+#UCLIBC_HOST_CFLAGS+=--std=gnu11
+#endif
+UCLIBC_HOST_CFLAGS+=-U_GNU_SOURCE -fno-strict-aliasing
 
 
 $(DL_DIR)/$(UCLIBC_LOCALE_DATA_FILENAME): | $(DL_DIR)
@@ -204,6 +209,17 @@ ifneq ($(or $(FREETZ_TARGET_UCLIBC_0_9_28),$(FREETZ_TARGET_UCLIBC_0_9_29)),y)
 endif
 	touch -c $@
 
+define STRIP_UCLIBC
+	[ "$(FREETZ_STRIP_UCLIBC)" != "y" ] || \
+	for i in $(UCLIBC_FILES); do \
+		[ ! -L "$(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/$$i" ] || continue; \
+		[ -f "$(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/$$i" ] || continue; \
+		file $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/$$i | grep -q ':.* not stripped' || continue; \
+		echo "stripping $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/$$i" $(SILENT); \
+		$(TARGET_STRIP) $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/$$i; \
+	done
+endef
+
 ifeq ($(strip $(FREETZ_BUILD_TOOLCHAIN)),y)
 $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libc.a: $(UCLIBC_DIR)/lib/libc.a
 	@$(call _ECHO,installing,$(UCLIBC_ECHO_TYPE),$(UCLIBC_ECHO_MAKE))
@@ -252,6 +268,7 @@ $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/libc.so.$(TARGET_TOOLCHAIN_UC
 		DEVEL_PREFIX=/usr/ \
 		RUNTIME_PREFIX=/ \
 		install_runtime $(SILENT)
+	$(call STRIP_UCLIBC)
 	touch -c $@
 else
 $(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libc.a: $(TARGET_CROSS_COMPILER)
@@ -263,8 +280,8 @@ $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/libc.so.$(TARGET_TOOLCHAIN_UC
 	for i in $(UCLIBC_FILES); do \
 		[ "$$i" == "libc.so.0" ] && [ ! -e $(TARGET_TOOLCHAIN_STAGING_DIR)/lib/$$i ] && [ ! -L $(TARGET_TOOLCHAIN_STAGING_DIR)/lib/$$i ] && continue; \
 		cp -a $(TARGET_TOOLCHAIN_STAGING_DIR)/lib/$$i $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/$$i; \
-		file $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/$$i | grep -q ':.* not stripped' && $(TARGET_STRIP) $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/$$i || true; \
 	done
+	$(call STRIP_UCLIBC)
 	ln -sf libuClibc-$(UCLIBC_VERSION).so $(TARGET_SPECIFIC_ROOT_DIR)$(UCLIBC_TARGET_SUBDIR)/libc.so
 	touch -c $@
 endif
