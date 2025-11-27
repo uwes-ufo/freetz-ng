@@ -5,7 +5,8 @@
  endif
  
 +vmlinux.eva_pad: vmlinux FORCE
-+	cp $< $(boot)/$@
++	elf_offset(){ readelf -S $< | sed -rn 's/.*'$1' *[^ ]* *[^ ]* ([^ ]*).*/\1/p'; }
++	head -c$((0x$(elf_offset .bss))) $< | tail -c+$((1+0x$(elf_offset .head.text))) > $(boot)/$@
 +
  ifeq ($(CONFIG_STACKPROTECTOR_PER_TASK),y)
  prepare: stack_protector_prepare
