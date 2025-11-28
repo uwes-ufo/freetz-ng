@@ -1,11 +1,20 @@
 --- linux-5.4/arch/arm/Makefile
 +++ linux-5.4/arch/arm/Makefile
-@@ -317,6 +317,9 @@
+@@ -317,6 +317,18 @@
  KBUILD_IMAGE := $(boot)/zImage
  endif
- 
+
++ELOF = 0x$$(readelf -S $< | sed -rn 's/.*$(SECT) *[^ ]* *[^ ]* ([^ ]*).*/\1/p')
++
 +vmlinux.eva_pad: vmlinux FORCE
-+	cp $< $(boot)/$@
++#	$(CROSS_COMPILE)strip $<
++	$(eval SECT := .head.text)
++	$(eval RAWS := $$(ELOF))
++	$(eval SECT := .bss)
++	$(eval RAWE := $$(ELOF))
++	head -c$$(($(RAWE))) $< | tail -c+$$((1+$(RAWS))) > $<.strip
++	lzma -f $<.strip
++	cp $<.strip.lzma $(boot)/$@
 +
  ifeq ($(CONFIG_STACKPROTECTOR_PER_TASK),y)
  prepare: stack_protector_prepare
