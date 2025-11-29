@@ -29,5 +29,4 @@ ksfield(){
 	readelf -S $2 | sed -rn 's/ +\['"$(printf '%2d' $3)"'\] +([^ ]+) +([^ ]+) +([^ ]+) ([^ ]+) ([^ ]+).*/'\\$F'/p'
 }
 kspay(){	tail -c+$((1+$(ksfield off $1 $2))) $1 | head -c$(($(ksfield size $1 $2))); }
-#relloc(){	printf '0x%x\n' $(($(ksfield addr $1 $3)-$(ksfield addr $1 $2))); }
-ksgap(){	printf '0x%x\n' $(($(ksfield addr $1 $3)-$(ksfield addr $1 $2)-$(ksfield size $1 $2))); }
+ksgap(){	printf '0x%x\n' $(($(ksfield addr $1 $((1+$2)))-$(ksfield addr $1 $2)-$(ksfield size $1 $2))); }
