@@ -16,12 +16,18 @@ kernel_diff(){
 	diff -u <(sed -rn 's/.{8}(.*)/\1/p' kernel.ori.xxd) <(sed -rn 's/.{8}(.*)/\1/p' kernel.mod.xxd) > kernel.diff
 	ls -lt
 }
-ksloc(){
-	readelf -S $2 | sed -rn 's/.* '$3' +[^ ]+ +([^ ]+) ([^ ]+) ([^ ]+).*/0x'\\$1'/p'
+ksfield(){
+	local F=$1
+	case $F in
+		name)	F=1 ;;
+		type)	F=2 ;;
+		addr)	F=3 ;;
+		off)	F=4 ;;
+		size)	F=5 ;;
+	esac
+	[ $F -ge 3 ] && echo -n 0x
+	readelf -S $2 | sed -rn 's/ +\['"$(printf '%2d' $3)"'\] +([^ ]+) +([^ ]+) +([^ ]+) ([^ ]+) ([^ ]+).*/'\\$F'/p'
 }
-kernel_section(){
-	tail -c+$((1+$(ksloc 2 $1 $2))) $1 | head -c$(($(ksloc 3 $1 $2)))
-}
-relloc(){
-	printf '%x\n' $(($(ksloc 1 $1 $3)-$(ksloc 1 $1 $2)))
-}
+kspay(){	tail -c+$((1+$(ksfield off $1 $2))) $1 | head -c$(($(ksfield size $1 $2))); }
+#relloc(){	printf '0x%x\n' $(($(ksfield addr $1 $3)-$(ksfield addr $1 $2))); }
+ksgap(){	printf '0x%x\n' $(($(ksfield addr $1 $3)-$(ksfield addr $1 $2)-$(ksfield size $1 $2))); }
