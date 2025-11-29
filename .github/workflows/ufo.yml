@@ -41,7 +41,7 @@ jobs:
         cp config-${{ matrix.box }} .config
         rm images/* || $(exit 0)
         touch -d 2020-01-01 make/kernel/configs/freetz/config-ur8-7270_06.05
-        make kernel-dirclean
+        #make kernel-dirclean
 
     - run: |
         make
