@@ -70,7 +70,8 @@ FREETZ_SERIES_3=y
 #
 # Cable
 #
-# FREETZ_TYPE_6320 is not set
+# FREETZ_TYPE_6320_V1 is not set
+# FREETZ_TYPE_6320_V2 is not set
 # FREETZ_TYPE_6360 is not set
 # FREETZ_TYPE_6430 is not set
 # FREETZ_TYPE_6490 is not set
