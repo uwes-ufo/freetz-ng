@@ -55,6 +55,14 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
+        name: kernel-${{ matrix.box }}
+        path: |
+          build/*/kernel/kernel.raw
+          source/kernel/*/*/vmlinux
+        retention-days: 2
+        
+    - uses: actions/upload-artifact@v4
+      with:
         name: images-${{ matrix.box }}
         path: images
         retention-days: 2
