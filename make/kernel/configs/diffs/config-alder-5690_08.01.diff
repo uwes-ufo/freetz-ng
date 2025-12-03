@@ -1,5 +1,5 @@
---- avm/config-alder-5690_08.03
-+++ freetz/config-alder-5690_08.03
+--- avm/config-alder-5690_08.01
++++ freetz/config-alder-5690_08.01
 @@ -4,12 +4,11 @@
  #
  
