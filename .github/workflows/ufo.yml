@@ -58,7 +58,7 @@ jobs:
         name: kernel-${{ matrix.box }}
         path: |
           build/*/kernel/kernel.raw
-          source/kernel/*/*/vmlinux
+          source/kernel/*/linux/vmlinux
         retention-days: 2
         
     - uses: actions/upload-artifact@v4
