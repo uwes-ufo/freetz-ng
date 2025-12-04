@@ -1,5 +1,18 @@
 #!/bin/sh
 
+image2kernel(){
+	for f in $@
+	do
+		local F=$(echo $f | sed -rn 's/(.*).image/\1/p')
+		tar -xf $f ./var/tmp/fit-image
+		~/git/freetz-ng/tools/path/fitdump var/tmp/fit-image
+		rm -rf var
+		cp fit-dump/image.001 $F.kernel.bin.lzma
+		rm -rf fit-dump
+		lzma -kd $F.kernel.bin.lzma
+		~/git/freetz-ng/source/kernel/ref-alder-5690_08.01/linux-5.4/scripts/extract-ikconfig $F.kernel.bin > $F.kernel.config
+	done
+}
 kernel_xxd(){
 	ls -l ~/git/freetz-ng/build/*/kernel/
 	cp ~/git/freetz-ng/source/kernel/ref-alder-5690_08.01/linux-5.4/vmlinux kernel.elf
