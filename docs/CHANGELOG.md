@@ -73,11 +73,12 @@ Latest changes
   - Host tools:
     * ca-bundle 2025-12-02
     * config a2287c3
-    * cmake 4.1.3
+    * cmake 4.2.0
     * dos2unix 7.5.3
     * file 5.46
     * gperf 3.3
     * kconfig 6.18
+    * meson 1.9.2
     * ninja 1.13.2
     * patchelf 0.14.5/0.18.0-b49de1b33
     * patchelf-target 0.14.5/0.15.0
@@ -125,7 +126,7 @@ Latest changes
     * Python 3.14.0
     * sslh 2.2.4/2.3.0
     * Stunnel 5.76
-    * tmux 3.6
+    * tmux 3.6a
     * Tor 0.4.8.21
     * Unbound 1.24.2
     * UnRAR 6.1.7/7.2.1

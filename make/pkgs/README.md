@@ -963,7 +963,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [URL blocking](../../docs/make/tinyproxy.md#url-blocking)
      - [Memory usage](../../docs/make/tinyproxy.md#memory-usage)
 
-  * **[tmux 3.6 (binary only)](../../docs/make/tmux.md)<a id='tmux'></a>**<br>
+  * **[tmux 3.6a (binary only)](../../docs/make/tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
   * **[Tor 0.4.8.21](../../docs/make/tor.md)<a id='tor'></a>**<br>
@@ -1202,6 +1202,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[PHP 5.6.40 (binary only) - DEPRECATED](../../docs/make/php.md)<a id='php'></a>**<br>
     PHP: Hypertext Preprocessor PHP is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
      - [Memory usage](../../docs/make/php.md#memory-usage)
+
+  * **[PHP5 5.6.40 (binary only) - DEPRECATED](../../docs/make/php5.md)<a id='php5'></a>**<br>
+    PHP: Hypertext Preprocessor PHP is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
+     - [Memory usage](../../docs/make/php5.md#memory-usage)
 
   * **[sane-backends: SANE 1.0.27 - DEPRECATED](../../docs/make/sane-backends.md)<a id='sane-backends'></a>**<br>
     SANE - Scanner support (initial Freetz package by Michael Denk, tehron @ http://www.ip-phone-forum.de/)
