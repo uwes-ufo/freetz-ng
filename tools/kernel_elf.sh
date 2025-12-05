@@ -1,6 +1,8 @@
 #!/bin/sh
 
-image2kernel(){
+i2k(){
+	#local M=5690Pro_08.03.all_freetz-ng-60e2f6d073-ufo_20251129-164123
+	local M=5690Pro_08.03.all_freetz-ng-24df4d3ec9-ufo_20251204-174926
 	for f in $@
 	do
 		local F=$(echo $f | sed -rn 's/(.*).image/\1/p')
@@ -9,8 +11,11 @@ image2kernel(){
 		rm -rf var
 		cp fit-dump/image.001 $F.kernel.bin.lzma
 		rm -rf fit-dump
-		lzma -kd $F.kernel.bin.lzma
+		lzma -kdf $F.kernel.bin.lzma
 		~/git/freetz-ng/source/kernel/ref-alder-5690_08.01/linux-5.4/scripts/extract-ikconfig $F.kernel.bin > $F.kernel.config
+		diff -u --color $M.kernel.config $F.kernel.config
+		diff -u $M.kernel.config $F.kernel.config > $F.kernel.config.diff
+		diff -u <(xxd $M.kernel.bin) <(xxd $F.kernel.bin) > $F.kernel.bin.diff
 	done
 }
 kernel_xxd(){
