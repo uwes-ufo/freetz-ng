@@ -1,0 +1,239 @@
+This patch has been created from AVM's opensrc packages:
+
+    diff -durN --no-dereference 5690_Pro-alder-08.01 5690_Pro-alder-08.03  > this.patch
+
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/conf/sensors.d/maple.conf 5690_Pro-alder-08.03/sources/conf/sensors.d/maple.conf
+--- 5690_Pro-alder-08.01/sources/conf/sensors.d/maple.conf	2024-12-11 16:20:09.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/conf/sensors.d/maple.conf	2025-01-29 12:29:00.000000000 +0100
+@@ -1,10 +1,12 @@
+ chip "tsens_tz_sensor1-*"
+ 
+     label temp1 "soc.ubi32:temp"
++    compute temp1 @*1000, @/1000
+ 
+ chip "tsens_tz_sensor2-*"
+ 
+     label temp1 "soc.cpu.0:temp"
++    compute temp1 @*1000, @/1000
+ 
+ chip "tsens_tz_sensor3-*"
+ 
+@@ -13,3 +15,4 @@
+ chip "tsens_tz_sensor4-*"
+ 
+     label temp1 "soc.gephy:temp ui.main:temp"
++    compute temp1 @*1000, @/1000
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/conf/sensors.d/sht4x.conf 5690_Pro-alder-08.03/sources/conf/sensors.d/sht4x.conf
+--- 5690_Pro-alder-08.01/sources/conf/sensors.d/sht4x.conf	2024-12-11 16:20:09.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/conf/sensors.d/sht4x.conf	2025-01-29 12:29:00.000000000 +0100
+@@ -1,4 +1,4 @@
+ chip "sht4x-*"
+ 
+     label temp1 "pcb:temp"
+-    label humidity1 "pcb:humidity"
++    label humidity1 "pcb:humidity ui.main:humidity"
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/hui/module/connect/connect_methode7.c 5690_Pro-alder-08.03/sources/hui/module/connect/connect_methode7.c
+--- 5690_Pro-alder-08.01/sources/hui/module/connect/connect_methode7.c	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/hui/module/connect/connect_methode7.c	2025-01-29 12:29:01.000000000 +0100
+@@ -6,12 +6,14 @@
+ #include <avm/hui/events.h>
+ 
+ static bool methode7_ap_mode = false;
++static bool methode7_wait_completed = false;
+ 
+ static void methode7_init(enum connect_event new_state __maybe_unused) {
+-
+     if (wlan_on == 0) {
+         wlan_on = 1;
+         state_machine_queue_trigger_event(connect_event_turn_wlan_on);
++    } else if (is_wlan_configuring() && !methode7_wait_completed) {
++        state_machine_queue_trigger_event(connect_event_wlan_configuring);
+     } else if (is_nexus_master() || access != access_type_wlan_bridge || uplink != wlan_uplink_down) {
+         methode7_ap_mode = true;
+         state_machine_queue_trigger_event(connect_event_uplink_other);
+@@ -19,6 +21,17 @@
+         methode7_ap_mode = false;
+         state_machine_queue_trigger_event(connect_event_uplink_wlan_bridge_down);
+     }
++
++    methode7_wait_completed = false;
++}
++
++static void methode7_post_wait_wlan_on(enum connect_event new_state) {
++    /* Wlan should now be active but the state is not updated until later...
++     * For this reason we give the init state a hint to check if we waited
++     * for wlan.
++     */
++    if (new_state == connect_event_boot_complete)
++        methode7_wait_completed = true;
+ }
+ 
+ static void methode7_post_nexus_check(enum connect_event new_state __maybe_unused) {
+@@ -37,6 +50,7 @@
+         .pre_button_events = {
+             avm_event_push_button_nexus_pairing_off,
+         },
++        .post_func = methode7_post_wait_wlan_on,
+         .transitions = {
+             /* timeout -> fail with timeout */
+             {.event = connect_event_timeout, .next_state = connect_state_timeout},
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/hui/module/connect/utility.c 5690_Pro-alder-08.03/sources/hui/module/connect/utility.c
+--- 5690_Pro-alder-08.01/sources/hui/module/connect/utility.c	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/hui/module/connect/utility.c	2025-01-29 12:29:01.000000000 +0100
+@@ -5,3 +5,8 @@
+ {
+ 	return event_get_value(nexus) == nexus_is_master;
+ }
++
++bool is_wlan_configuring(void)
++{
++	return event_get_value(wlan) == wlan_configuring;
++}
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/hui/module/connect/utility.h 5690_Pro-alder-08.03/sources/hui/module/connect/utility.h
+--- 5690_Pro-alder-08.01/sources/hui/module/connect/utility.h	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/hui/module/connect/utility.h	2025-01-29 12:29:01.000000000 +0100
+@@ -4,5 +4,6 @@
+ #include <linux/types.h>
+ 
+ extern bool is_nexus_master(void);
++extern bool is_wlan_configuring(void);
+ 
+ #endif /* UTILITY_H */
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/.kernelvariables 5690_Pro-alder-08.03/sources/kernel/linux/.kernelvariables
+--- 5690_Pro-alder-08.01/sources/kernel/linux/.kernelvariables	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/.kernelvariables	2025-01-29 12:29:01.000000000 +0100
+@@ -34,10 +34,10 @@
+ #reproducibility = yes
+ 
+ ifneq ($(reproducibility),)
+-export SOURCE_DATE_EPOCH = 1733407420
++export SOURCE_DATE_EPOCH = 1734012870
+ export KBUILD_BUILD_USER = kbuild-team
+ export KBUILD_BUILD_HOST = core.avm.de
+-export KBUILD_BUILD_TIMESTAMP = 2024-12-05
++export KBUILD_BUILD_TIMESTAMP = 2024-12-12
+ endif
+ # No variables exported via $(kernelvariables_extra)
+ 
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm/boot/dts/Fritz_Box_HW279-0.dts 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm/boot/dts/Fritz_Box_HW279-0.dts
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm/boot/dts/Fritz_Box_HW279-0.dts	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm/boot/dts/Fritz_Box_HW279-0.dts	2025-01-29 12:29:03.000000000 +0100
+@@ -34,7 +34,7 @@
+ 			compatible = "avm,hui-generic-led-pwm";
+ 			led-type = "default-on";
+ 			/* GPIO 46 is channel 20 */
+-			pwms = <&pwm 2 100000>;
++			pwms = <&pwm 2 1000000>;
+ 			dimmable;
+ 		};
+ 
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm/boot/dts/Fritz_Box_HW279-2.dts 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm/boot/dts/Fritz_Box_HW279-2.dts
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm/boot/dts/Fritz_Box_HW279-2.dts	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm/boot/dts/Fritz_Box_HW279-2.dts	2025-01-29 12:29:03.000000000 +0100
+@@ -37,7 +37,7 @@
+ 			compatible = "avm,hui-generic-led-pwm";
+ 			led-type = "default-on";
+ 			/* GPIO 47 is channel 30 */
+-			pwms = <&pwm 3 100000>;
++			pwms = <&pwm 3 1000000>;
+ 			dimmable;
+ 		};
+ 
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/Fritz_Box_HW286.dts 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/Fritz_Box_HW286.dts
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/Fritz_Box_HW286.dts	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/Fritz_Box_HW286.dts	2025-01-29 12:29:03.000000000 +0100
+@@ -189,7 +189,7 @@
+ 			compatible = "avm,hui-generic-led-pwm";
+ 			led-type = "default-on";
+ 			/* GPIO 47 is channel 30 */
+-			pwms = <&pwm 3 100000>;
++			pwms = <&pwm 3 1000000>;
+ 			dimmable;
+ 		};
+ 
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/Fritz_Box_HW291_HW300.dtsi 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/Fritz_Box_HW291_HW300.dtsi
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/Fritz_Box_HW291_HW300.dtsi	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/Fritz_Box_HW291_HW300.dtsi	2025-01-29 12:29:03.000000000 +0100
+@@ -40,7 +40,7 @@
+ 			compatible = "avm,hui-generic-led-pwm";
+ 			led-type = "default-on";
+ 			/* GPIO 47 is channel 30 */
+-			pwms = <&pwm 3 100000>;
++			pwms = <&pwm 3 1000000>;
+ 			dimmable;
+ 		};
+ 
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5018-memory.dtsi 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5018-memory.dtsi
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5018-memory.dtsi	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5018-memory.dtsi	2025-01-29 12:29:03.000000000 +0100
+@@ -87,6 +87,7 @@
+ 			reg = <0x0 0x4a500000 0x0 0x20000>;
+ 			record-size = <0x20000>;
+ 			no-dump-oops;
++			ecc-size = <0x10>;
+ 		};
+ 
+ 		nss@40000000 {
+@@ -186,6 +187,7 @@
+ 			console-size = <0x20000>;
+ 			pmsg-size = <0x20000>;
+ 			no-dump-oops;
++			ecc-size = <0x10>;
+ 		};
+ 
+ 		nss@40000000 {
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5332-512MB-memory.dtsi 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5332-512MB-memory.dtsi
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5332-512MB-memory.dtsi	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5332-512MB-memory.dtsi	2025-01-29 12:29:03.000000000 +0100
+@@ -124,6 +124,7 @@
+ 			console-size = <0x20000>;
+ 			pmsg-size = <0x20000>;
+ 			no-dump-oops;
++			ecc-size = <0x10>;
+ 		};
+ 
+ 		tzlog@0x0x53700000 {
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5332-default-memory.dtsi 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5332-default-memory.dtsi
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5332-default-memory.dtsi	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq5332-default-memory.dtsi	2025-01-29 12:29:03.000000000 +0100
+@@ -124,6 +124,7 @@
+ 			console-size = <0x20000>;
+ 			pmsg-size = <0x20000>;
+ 			no-dump-oops;
++			ecc-size = <0x10>;
+ 		};
+ 
+ 		tzlog@0x60100000 {
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq8074-memory.dtsi 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq8074-memory.dtsi
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq8074-memory.dtsi	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq8074-memory.dtsi	2025-01-29 12:29:03.000000000 +0100
+@@ -336,6 +336,7 @@
+ 			record-size = <0x20000>;
+ 			pmsg-size = <0x20000>;
+ 			no-dump-oops;
++			ecc-size = <0x10>;
+ 		};
+ #if 0
+ 		tzapp_data: tzapp_data@4a300000 {  /* TZAPP_DATA */
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq9574-default-memory.dtsi 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq9574-default-memory.dtsi
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq9574-default-memory.dtsi	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq9574-default-memory.dtsi	2025-01-29 12:29:03.000000000 +0100
+@@ -93,6 +93,7 @@
+ 			console-size = <0x20000>;
+ 			pmsg-size = <0x20000>;
+ 			no-dump-oops;
++			ecc-size = <0x10>;
+ 		};
+ 
+ 		nss@40000000 {
+diff -durN --no-dereference 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq9574-wkk-default-memory.dtsi 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq9574-wkk-default-memory.dtsi
+--- 5690_Pro-alder-08.01/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq9574-wkk-default-memory.dtsi	2024-12-11 16:20:10.000000000 +0100
++++ 5690_Pro-alder-08.03/sources/kernel/linux/arch/arm64/boot/dts/qcom/ipq9574-wkk-default-memory.dtsi	2025-01-29 12:29:03.000000000 +0100
+@@ -220,6 +220,7 @@
+ 			console-size = <0x20000>;
+ 			pmsg-size = <0x20000>;
+ 			no-dump-oops;
++			ecc-size = <0x10>;
+ 		};
+ 
+ 		mhi_region0: dma_pool0@0 {
