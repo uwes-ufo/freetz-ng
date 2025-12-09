@@ -929,6 +929,7 @@ FREETZ_WGET=y
 #
 # Debug helpers
 #
+# FREETZ_PACKAGE_BINUTILS_TOOLS is not set
 # FREETZ_PACKAGE_FILE is not set
 # FREETZ_PACKAGE_GDB is not set
 # FREETZ_PACKAGE_INOTIFY_TOOLS is not set
