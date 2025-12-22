@@ -436,11 +436,13 @@ Currently supported devices and firmwares
     - 175.07.29 rev92061 {ALL} [PSQ19P2NL4]
     - 175.07.59 rev113612 {ALL} [MOVE21NL2]
     - 175.08.02 rev118102 {ALL} [Smart24 P1 NL1]
+    - 175.08.21 rev127230 {ALL} [Smart24 P2]
     - Alien 7530 {GER}
   * __Fritz!Box Fon WLAN 7520 B (UNTESTED)__
     - 276.07.31 rev98652 {ALL} [PSQ19P2NL4]
     - 276.07.59 rev113613 {ALL} [MOVE21NL2]
     - 276.08.02 rev118103 {ALL} [Smart24 P1 NL1]
+    - 276.08.21 rev127231 {ALL} [Smart24 P2]
   * __Fritz!Box Fon WLAN 7530__
     - 164.07.02 rev62311 {GER}
     - 164.07.14 rev73183 {GER} [MESH18 NL4]
@@ -538,6 +540,7 @@ Currently supported devices and firmwares
     - 150.07.16 rev108014 {ALL} [WU22 MESH18]
   * __Fritz!Powerline 1240 AX__
     - 275.07.58 rev114298 {ALL} [MOVE21NL1]
+    - 275.08.20 rev127613 {ALL} [Smart24 P2]
   * __Fritz!Powerline 1260E__
     - 157.07.01 rev63181 {ALL}
     - 157.07.12 rev70670 {ALL} [MESH18 NL2]
@@ -579,6 +582,7 @@ Currently supported devices and firmwares
   * __Fritz!Repeater 1200 AX__
     - 268.07.31 rev108167 {ALL} [PSQ19P2NL4]
     - 268.07.58 rev113012 {ALL} [MOVE21NL1]
+    - 268.08.20 rev127465 {ALL} [Smart24 P2]
   * __Fritz!Repeater 1200 AX v2 (UNTESTED)__
     - 296.08.03 rev120165 {ALL} [Smart24 P1 FCS]
   * __Fritz!Repeater 1700 (UNTESTED)__
@@ -603,13 +607,14 @@ Currently supported devices and firmwares
   * __Fritz!Repeater 6000__
     - 253.07.31 rev109964 {ALL} [PSQ19P2NL4]
     - 253.07.58 rev113014 {ALL} [MOVE21NL1]
+    - 253.08.20 rev127464 {ALL} [Smart24 P2]
 
 ### Fritz!Smart
 
   * __Fritz!Smart Gateway__
     - 265.07.63 rev116265 {ALL} [MOVE21NL1]
     - 265.08.02 rev119969 {ALL} [Smart24 P1 NL1]
-    - 265.08.20 rev124035 {ALL} [Smart24 P2]
+    - 265.08.24 rev127475 {ALL} [Smart24 P2 NL1]
 
 ### T-Com derivatives
 
