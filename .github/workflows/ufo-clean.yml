@@ -23,12 +23,13 @@ jobs:
 
     - uses: actions/checkout@v6
 
-    - run: |
-        tools/prerequisites install
-        cp config-${{ matrix.box }} .config
+    - run: tools/prerequisites install
+
+    - run: cp config-${{ matrix.box }} .config
+
+    - run: make
 
     - run: |
-        make
         grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
         git checkout make/kernel/configs/freetz/config-ur8-7270_06.05
 
