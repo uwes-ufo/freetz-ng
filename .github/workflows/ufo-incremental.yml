@@ -40,13 +40,13 @@ jobs:
         tools/prerequisites install
         cp config-${{ matrix.box }} .config
         rm images/* || true
-        touch -d 2020-01-01 make/kernel/configs/freetz/config-ur8-7270_06.05
         # make kernel-autofix
         # make kernel-dirclean
 
     - run: |
         make
         grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
+        git checkout make/kernel/configs/freetz/config-ur8-7270_06.05
 
     - uses: EndBug/add-and-commit@v9
       with:
