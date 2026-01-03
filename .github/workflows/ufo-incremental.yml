@@ -58,6 +58,6 @@ jobs:
 
     - uses: actions/upload-artifact@v6
       with:
-        name: images-${{ matrix.box }}-${{ github.sha }}
+        name: incremental-${{ matrix.box }}-${{ github.sha }}
         path: images
         retention-days: 2
