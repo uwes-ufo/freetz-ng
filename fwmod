@@ -1390,14 +1390,15 @@ if [ "$DO_MOD" -gt 0 ]; then
 		echo0 "installing$strip_output modules"
 		if [ "$FREETZ_KERNEL_VERSION_5" = "y" ]
 		then
-			vermagic_src=$(echo -n 'vermagic=5.4.213 SMP preempt mod_unload modversions ARMv7 p2v8 ' | xxd -p -c0)
-			vermagic_dst=$(echo -n 'vermagic=5.4.213 SMP preempt mod_unload ARMv7 p2v8 ' | xxd -p -c0)'000000000000000000000000'
-			src=$(echo "${MODULES_DIR}" | sed -rn 's/(.*)modified(.*)/\1original\2/p')
-			for f in $(find $src -name *.ko)
+			vermagic=$(echo -n 'vermagic=' | xxd -p -c0)
+			modversions=$(echo -n 'modversions ' | xxd -p -c0)
+			zero12=$(printf '%024x' 0)
+			for f in $(find $MODULES_DIR -name *.ko)
 			do
-				dst=$(echo $f | sed -rn 's/(.*)original(.*)/\1modified\2/p')
-				xxd -p -c0 $f | sed 's/'$vermagic_src'/'$vermagic_dst'/' | xxd -r -p > $dst
+				mv $f tmp
+				xxd -p -c0 tmp | sed -r 's/('$vermagic'.*)'$modversions'(([^0].)*)/\1\2'$zero12'/' | xxd -r -p > $f
 			done
+			rm tmp
 		fi
 		for i in \
 		$( \
