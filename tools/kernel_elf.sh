@@ -52,10 +52,24 @@ ksgap(){	printf '0x%x\n' $(($(ksfield addr $1 $((1+$2)))-$(ksfield addr $1 $2)-$
 updatemodversions(){
 	k=source/kernel/ref-alder-5690_08.01/linux-5.4/Module.symvers
 	f=build/original/filesystem/lib/modules/5.4.213/piglet_noemif/Piglet_noemif.ko
+	x=$(xxd -p -c0 $f)
+	p=0
 	for s in $(modprobe --dump-modversions $f | sed -r 's/\t//')
 	do
-		local $(echo $s | sed -rn 's/0x(.{8})(.*)/h=\1 n=\2/p')
-		local $(grep -w $n $k | sed -rn 's/0x(.{8}).*/u=\1/p')
-		[ $h != $u ] && echo $h $u $n
+		h=$(echo $s | sed -rn 's/0x(.{8})(.*)/\1/p')
+		n=$(echo $s | sed -rn 's/0x(.{8})(.*)/\2/p')
+		u=$(grep -w $n $k | sed -rn 's/0x(.{8}).*/\1/p')
+		if [ $u ] && [ $h != $u ]
+		then
+			((p++))
+			H=$(echo -n $h | tac -rs ..)
+			U=$(echo -n $u | tac -rs ..)
+			N=$(echo -n $n | xxd -p -c0)
+			echo $h $u $n
+			local y=$(echo $x | sed 's/'$H$N'/'$U$N'/')
+			x=$y
+		fi
 	done
+	echo $x | xxd -r -p > $f.ufo
+	printf '%4d\n' $p
 }
