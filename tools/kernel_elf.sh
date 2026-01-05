@@ -48,3 +48,14 @@ ksfield(){
 }
 kspay(){	tail -c+$((1+$(ksfield off $1 $2))) $1 | head -c$(($(ksfield size $1 $2))); }
 ksgap(){	printf '0x%x\n' $(($(ksfield addr $1 $((1+$2)))-$(ksfield addr $1 $2)-$(ksfield size $1 $2))); }
+
+updatemodversions(){
+	k=source/kernel/ref-alder-5690_08.01/linux-5.4/Module.symvers
+	f=build/original/filesystem/lib/modules/5.4.213/piglet_noemif/Piglet_noemif.ko
+	for s in $(modprobe --dump-modversions $f | sed -r 's/\t//')
+	do
+		local $(echo $s | sed -rn 's/0x(.{8})(.*)/h=\1 n=\2/p')
+		local $(grep -w $n $k | sed -rn 's/0x(.{8}).*/u=\1/p')
+		[ $h != $u ] && echo $h $u $n
+	done
+}
