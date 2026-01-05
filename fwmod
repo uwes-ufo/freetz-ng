@@ -1388,6 +1388,18 @@ if [ "$DO_MOD" -gt 0 ]; then
 	if [ "$FREETZ_REPLACE_KERNEL" == "y" -o -n "$(set|grep ^FREETZ_MODULE_.*=y)" -o -n "$FREETZ_MODULES_OWN" ]; then
 		[ "$FREETZ_STRIP_MODULES_FREETZ" == "y" ] && strip_output=" and stripping"
 		echo0 "installing$strip_output modules"
+		if [ "$FREETZ_KERNEL_VERSION_5" = "y" ]
+		then
+			vermagic=$(echo -n 'vermagic=' | xxd -p -c0)
+			modversions=$(echo -n 'modversions ' | xxd -p -c0)
+			zero12=$(printf '%024x' 0)
+			for f in $(find $MODULES_DIR -name *.ko)
+			do
+				mv $f tmp
+				xxd -p -c0 tmp | sed -r 's/('$vermagic'.*)'$modversions'(([^0].)*)/\1\2'$zero12'/' | xxd -r -p > $f
+			done
+			rm tmp
+		fi
 		for i in \
 		$( \
 			cd "${KERNEL_REP_DIR}/modules-${KERNEL_ID}" && \
@@ -1397,7 +1409,8 @@ if [ "$DO_MOD" -gt 0 ]; then
 			ko_symbol="$(echo "${bn%\.ko}" | tr '\-+' '_x')"
 			ko_install="$(eval "echo \"\$FREETZ_MODULE_$ko_symbol\"")"
 			echo " $FREETZ_MODULES_OWN " | grep -q " $ko_symbol " && ko_install="y"
-			[ "$FREETZ_MODULES_ALL" = "y" -o "$ko_install" == "y" ] || continue
+			ko_file_ori="${MODULES_DIR}/kernel/${i}"
+			[ "$FREETZ_KERNEL_VERSION_5" = "y" -a -f "$ko_file_ori" -o "$FREETZ_MODULES_ALL" = "y" -o "$ko_install" == "y" ] || continue
 			sizeinfo "$bn"
 			ko_file_src="${KERNEL_REP_DIR}/modules-${KERNEL_ID}/${i}"
 			ko_path_dst="${MODULES_DIR}/kernel/$(dirname "$i")"
