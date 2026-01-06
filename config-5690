@@ -2557,13 +2557,11 @@ FREETZ_BUSYBOX___V137_FEATURE_PASSWD_WEAK_CHECK=y
 # Linux Module Utilities
 #
 # FREETZ_BUSYBOX___V137_DEPMOD is not set
-FREETZ_BUSYBOX___V137_MODINFO=y
+# FREETZ_BUSYBOX___V137_MODINFO is not set
 
 #
 # Options common to multiple modutils
 #
-FREETZ_BUSYBOX___V137_DEFAULT_MODULES_DIR="/lib/modules"
-FREETZ_BUSYBOX___V137_DEFAULT_DEPMOD_FILE="modules.dep"
 # end of Linux Module Utilities
 
 #
