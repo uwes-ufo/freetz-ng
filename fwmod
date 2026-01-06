@@ -1393,7 +1393,7 @@ if [ "$DO_MOD" -gt 0 ]; then
 			vermagic=$(echo -n 'vermagic=' | xxd -p -c0)
 			modversions=$(echo -n 'modversions ' | xxd -p -c0)
 			zero12=$(printf '%024x' 0)
-			k=$ABS_BASE_DIR/source/kernel/ref-alder-5690_08.01/linux-5.4/Module.symvers
+			k=$ABS_BASE_DIR/source/kernel/ref-$KERNEL_ID/linux-$FREETZ_KERNEL_VERSION_MAJOR/Module.symvers
 			for f in $(cd $MODULES_DIR && find . -name *.ko)
 			do
 				[ -f ${KERNEL_REP_DIR}/modules-${KERNEL_ID}/$(echo $f | sed 's/\/kernel\//\//') ] && continue
@@ -1427,7 +1427,8 @@ if [ "$DO_MOD" -gt 0 ]; then
 					echo $x | xxd -r -p > $f
 					bn="$(basename "$f")"
 					sizeinfo "$bn"
-					[ $t -gt 0 ] && printf '%5d of %5d symbols updated\n' $p $t || echo ' vermagic updated'
+					[ $t -gt 0 ] && printf '%5d of %5d symbols updated' $p $t || echo -n ' vermagic updated'
+					sizeinfo mod $f
 				fi
 			done
 		fi
