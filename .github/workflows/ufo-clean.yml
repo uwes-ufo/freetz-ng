@@ -31,8 +31,8 @@ jobs:
 
     - run: |
         grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
-        rm_config_date(){ local t="$(grep -vE '^# ... ... .. ..:..:.. ....$' $1)"; diff -q <(echo "$t") $1 || echo "$t" > $1; }
-        rm_config_date make/kernel/configs/freetz/config-ur8-7270_06.05
+        rm_date(){ local t="$(grep -vE '^# ... ... .. ..:..:.. ....$' $1)"; diff -q <(echo "$t") $1 || echo "$t" > $1; }
+        rm_date make/kernel/configs/freetz/config-ur8-7270_06.05
 
     - uses: EndBug/add-and-commit@v9
       with:
