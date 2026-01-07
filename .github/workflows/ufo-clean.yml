@@ -33,7 +33,7 @@ jobs:
         grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
         f=make/kernel/configs/freetz/config-ur8-7270_06.05
         tmp="$(grep -vE '^# ... ... .. ..:..:.. ....$' $f)"
-        diff -q <(echo "$tmp") $f && echo "$tmp" > $f
+        diff -q <(echo "$tmp") $f || echo "$tmp" > $f
 
     - uses: EndBug/add-and-commit@v9
       with:
