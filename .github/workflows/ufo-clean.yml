@@ -1,0 +1,46 @@
+name: ufo-clean
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+
+  ufo:
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        box: ["5690", "7270", "7490"]
+    runs-on: ubuntu-latest
+    
+    steps:
+
+    - uses: actions/checkout@v6
+
+    - run: tools/prerequisites install
+
+    - run: cp config-${{ matrix.box }} .config
+
+    - run: make
+
+    - run: |
+        grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
+        git checkout make/kernel/configs/freetz/config-ur8-7270_06.05
+
+    - uses: EndBug/add-and-commit@v9
+      with:
+        push: false
+        
+    - run: git pull --rebase && git push
+
+    - uses: actions/upload-artifact@v6
+      with:
+        name: images-${{ matrix.box }}-${{ github.sha }}
+        path: images
+        retention-days: 2

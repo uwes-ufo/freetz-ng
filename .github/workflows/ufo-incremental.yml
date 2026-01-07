@@ -1,4 +1,4 @@
-name: ufo
+name: ufo-incremental
 
 on:
   push:
@@ -22,30 +22,33 @@ jobs:
     steps:
 
     - shell: bash
-      run: echo DATE=$(date +%F) >> $GITHUB_ENV
+      run: echo DATE=$(date +%F_%R) >> $GITHUB_ENV
 
-    - uses: actions/cache@v4
+    - uses: actions/cache@v5
       with:
         path: |
           ~/
           ./
-        key: cache-${{ matrix.box }}-${{ env.DATE }}
-        restore-keys: cache-${{ matrix.box }}
+        key: cache-${{ github.ref_name }}-${{ matrix.box }}-${{ env.DATE }}
+        restore-keys: cache-${{ github.ref_name }}-${{ matrix.box }}
 
     - uses: actions/checkout@v6
       with:
         clean: false
 
-    - run: |
-        tools/prerequisites install
-        cp config-${{ matrix.box }} .config
-        rm images/* || echo no images
-        touch -d 2020-01-01 make/kernel/configs/freetz/config-ur8-7270_06.05
+    - run: tools/prerequisites install
 
-    - shell: bash
-      run: |
-        make
-        diff -q <(grep -v '#  freetz-ng ' .config) <(grep -v '#  freetz-ng ' config-${{ matrix.box }}) || cp .config config-${{ matrix.box }}
+    - run: |
+        cp config-${{ matrix.box }} .config
+        rm images/* || true
+        # make kernel-autofix
+        # make kernel-dirclean
+
+    - run: make
+
+    - run: |
+        grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
+        git checkout make/kernel/configs/freetz/config-ur8-7270_06.05
 
     - uses: EndBug/add-and-commit@v9
       with:
@@ -53,8 +56,8 @@ jobs:
         
     - run: git pull --rebase && git push
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v6
       with:
-        name: images-${{ matrix.box }}
+        name: incremental-${{ matrix.box }}-${{ github.sha }}
         path: images
         retention-days: 2
