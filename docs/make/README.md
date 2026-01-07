@@ -5,10 +5,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### A
 
-  * **[ACME.sh 3.1.1](acme.md)<a id='acme'></a>**<br>
+  * **[ACME.sh 3.1.2](acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
-  * **[Apache2 2.4.65 (binary only)](apache2.md)<a id='apache2'></a>**<br>
+  * **[Apache2 2.4.66 (binary only)](apache2.md)<a id='apache2'></a>**<br>
     The Apache httpd server
 
   * **<u>asterisk-chan-capi: chan_capi: ISDN API 2.0 module for asterisk - DEPRECATED</u><a id='asterisk-chan-capi'></a>**<br>
@@ -48,7 +48,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>bfusb: AVM BlueFRITZ! USB stick support (binary only)</u><a id='bfusb'></a>**<br>
     This package adds support for the AVM BlueFRITZ! USB stick.
 
-  * **[BIND 9.11.37/9.20.15](bind.md)<a id='bind'></a>**<br>
+  * **[BIND 9.11.37/9.20.16](bind.md)<a id='bind'></a>**<br>
     BIND is a suite of software for interacting with the Domain Name System (DNS). The name BIND stands for "Berkeley Internet Name Daemon".
 
   * **[Bip 0.9.2 - DEPRECATED](bip.md)<a id='bip'></a>**<br>
@@ -77,7 +77,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[CA-bundle 2025-11-04](ca-bundle.md)<a id='ca-bundle'></a>**<br>
+  * **[CA-bundle 2025-12-02](ca-bundle.md)<a id='ca-bundle'></a>**<br>
     The Mozilla CA certificate store in PEM format, see https://www.curl.se/docs/caextract.html Size of uncompressed file is about 250 KB.
 
   * **[Callmonitor 1.20.9-git](callmonitor.md)<a id='callmonitor'></a>**<br>
@@ -157,7 +157,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>dosfstools 3.0.28 (binary only) - DEPRECATED</u><a id='dosfstools'></a>**<br>
     utilities to create, check and label MS-DOS FAT filesystems
 
-  * **[Dropbear 2025.88](dropbear.md)<a id='dropbear'></a>**<br>
+  * **[Dropbear 2025.89](dropbear.md)<a id='dropbear'></a>**<br>
     Dropbear SSH server and client Dropbear is a relatively small SSH 2 server and client. It runs on a variety of POSIX-based platforms. Dropbear is open source software, distributed under a MIT-style license. Dropbear is particularly useful for "embedded"-type Linux (or other Unix) systems, such as wireless routers. Features - A small memory footprint suitable for memory-constrained environments - Dropbear can compile to a 110kB statically linked binary with uClibc on x86 (only minimal options selected) - Dropbear server implements X11 forwarding, and authentication-agent forwarding for OpenSSH clients - Can run from inetd or standalone - Compatible with OpenSSH ~/.ssh/authorized_keys public key authentication - The server, client, keygen, and key converter can be compiled into a single binary (a la busybox) - Features can easily be disabled when compiling to save space TCP forwarding support
 
   * **[dtach 0.9 (binary only)](dtach.md)<a id='dtach'></a>**<br>
@@ -290,7 +290,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[IGMPproxy 0.4](igmpproxy.md)<a id='igmpproxy'></a>**<br>
     IGMPproxy is a simple dynamic Multicast Routing Daemon using only IGMP signalling. It's intended for simple forwarding of Multicast traffic between networks.
 
-  * **[ImageMagick 7.1.0-62/7.1.2-2 (binary only)](imagemagick.md)<a id='imagemagick'></a>**<br>
+  * **[ImageMagick 7.1.0-62/7.1.2-9 (binary only)](imagemagick.md)<a id='imagemagick'></a>**<br>
     ImageMagick is a robust collection of tools and libraries to read, write, and manipulate an image in many image formats, including popular formats like TIFF, JPEG, PNG, PDF, PhotoCD, and GIF. With ImageMagick, you can create images dynamically, making it suitable for Web applications. You can also resize, rotate, sharpen, color-reduce, or add special effects to an image and save your completed work in many different image formats. Image processing operations are available from the command line as well as through C, C++, and PERL-based programming interfaces.
 
   * **[Inadyn-mt 02.28.10 - DEPRECATED](inadyn-mt.md)<a id='inadyn-mt'></a>**<br>
@@ -475,7 +475,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.18/3.5.4 (binary only)](openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
-  * **[OpenVPN 2.4.12/2.5.11/2.6.16](openvpn.md)<a id='openvpn'></a>**<br>
+  * **[OpenVPN 2.4.12/2.5.11/2.6.17](openvpn.md)<a id='openvpn'></a>**<br>
     VPN Server
 
   * **[owfs 2.7p32 (binary only) - DEPRECATED](owfs.md)<a id='owfs'></a>**<br>
@@ -494,6 +494,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **<u>phonebook-tools: Phone book tools 1.0</u><a id='phonebook-tools'></a>**<br>
     A set of tools for reading and converting Fritz!Box phone book to such (easy parseable) formats like: - .csv (comma-separated values), or - .tsv (tab-separated values).
+
+  * **[PHP5 5.6.40 (binary only) - DEPRECATED](php5.md)<a id='php5'></a>**<br>
+    PHP: Hypertext Preprocessor PHP is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
 
   * **[Pingtunnel 0.72 - DEPRECATED](pingtunnel.md)<a id='pingtunnel'></a>**<br>
     Ptunnel is an application that allows you to reliably tunnel TCP connections to a remote host using ICMP echo request and reply packets, commonly known as ping requests and replies. At first glance, this might seem like a rather useless thing to do, but it can actually come in handy in some cases.
@@ -534,7 +537,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Python 2.7.18 - DEPRECATED](python.md)<a id='python'></a>**<br>
     Python is a remarkably powerful dynamic programming language that is used in a wide variety of application domains. CAUTION: Python adds roughly 4 MB to 15.5 MB (depending on your choice of modules) of uncompressed data to your image. In most cases, it should therefore be externalized.
 
-  * **[python3: Python 3.14.0 - EXPERIMENTAL](python3.md)<a id='python3'></a>**<br>
+  * **[python3: Python 3.14.2 - EXPERIMENTAL](python3.md)<a id='python3'></a>**<br>
     Python is a remarkably powerful dynamic programming language that is used in a wide variety of application domains. CAUTION: Python adds roughly 4 MB to 15.5 MB (depending on your choice of modules) of uncompressed data to your image. In most cases, it should therefore be externalized.
 
   * **<u>python-bjoern: bjoern 1.3.4 - DEPRECATED</u><a id='python-bjoern'></a>**<br>
@@ -722,7 +725,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Tinyproxy 1.11.2](tinyproxy.md)<a id='tinyproxy'></a>**<br>
     Tinyproxy is a lightweight HTTP and HTTPS proxy.
 
-  * **[tmux 3.5a (binary only)](tmux.md)<a id='tmux'></a>**<br>
+  * **[tmux 3.6a (binary only)](tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
   * **[Tor 0.4.8.21](tor.md)<a id='tor'></a>**<br>
@@ -745,7 +748,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[uMurmur 0.2.20/0.3.1](umurmur.md)<a id='umurmur'></a>**<br>
     umurmur is a minimalistic Mumble server primarily targeted to run on routers using less resources. It targets to fill the needs of a pretty small group of users communicating, which in part originates from the other goal of working well on a small system with a limited CPU and limited amount of disk space. It also aims to minimize writing to the disk since these kinds of systems usually only has a flash memory for disk. umurmur supports a subset of the features of Murmur. https://github.com/umurmur/umurmur
 
-  * **[Unbound 1.24.1](unbound.md)<a id='unbound'></a>**<br>
+  * **[Unbound 1.24.2](unbound.md)<a id='unbound'></a>**<br>
     Unbound is designed as a set of modular components, so that also DNSSEC (secure DNS) validation and stub-resolvers (that do not run as a server, but are linked into an application) are easily possible.
 
   * **[UNFS3 0.9.23 - DEPRECATED](unfs3.md)<a id='unfs3'></a>**<br>
@@ -765,7 +768,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### V
 
-  * **[Vim 9.1.1275 (binary only)](vim.md)<a id='vim'></a>**<br>
+  * **[Vim 9.1.1952 (binary only)](vim.md)<a id='vim'></a>**<br>
     An improved version of VI
 
   * **[VLMCSD svn1113](vlmcsd.md)<a id='vlmcsd'></a>**<br>
@@ -852,7 +855,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[pciutils 3.1.7 (binary only) - DEPRECATED](pciutils.md)<a id='pciutils'></a>**<br>
     The PCI Utilities are a collection of programs for inspecting and manipulating configuration of PCI devices, all based on a common portable library libpci which offers access to the PCI configuration space on a variety of operating systems. lspci displays detailed information about all PCI buses and devices in the system. setpci allows reading from and writing to PCI device configuration registers. For example, you can adjust the latency timers with it.
 
-  * **[strace 4.9/5.0/6.17 (binary only)](strace.md)<a id='strace'></a>**<br>
+  * **[strace 4.9/5.0/6.18 (binary only)](strace.md)<a id='strace'></a>**<br>
     strace - trace system calls and signals strace is a system call tracer, i.e. a debugging tool which prints out a trace of all the system calls made by another process/program.
 
   * **<u>target-tester - DEVELOPER</u><a id='target-tester'></a>**<br>

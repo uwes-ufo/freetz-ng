@@ -60,7 +60,9 @@ config FREETZ_TYPE_PREFIX
 	default "5690_Pro"          if FREETZ_TYPE_5690_PRO
 	default "5690_XGS"          if FREETZ_TYPE_5690_XGS
 	default "6000"              if FREETZ_TYPE_6000
-	default "6320"              if FREETZ_TYPE_6320
+	default "6320_v1"           if FREETZ_TYPE_6320_V1
+	default "6320_v2"           if FREETZ_TYPE_6320_V2
+	default "6340"              if FREETZ_TYPE_6340
 	default "6360"              if FREETZ_TYPE_6360
 	default "6430"              if FREETZ_TYPE_6430
 	default "6490"              if FREETZ_TYPE_6490
@@ -172,6 +174,7 @@ config FREETZ_TYPE_PREFIX_ALIEN_HARDWARE
 	default "7270v2_"           if FREETZ_TYPE_7270_V2_V1
 	default "7312_"             if FREETZ_TYPE_7312_7330
 	default "7320_"             if FREETZ_TYPE_7320_7330
+	default "7340_"             if FREETZ_TYPE_7340_7390
 	default "7412_"             if FREETZ_TYPE_7412_7430
 	default "7520_"             if FREETZ_TYPE_7520_V1_7530_W5
 	default "7570_"             if FREETZ_TYPE_7570_7270

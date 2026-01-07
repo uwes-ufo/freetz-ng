@@ -6,7 +6,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[autoconf 2.72](autoconf-host.md)<a id='autoconf-host'></a>**<br>
 
-  * **[automake 1.18](automake-host.md)<a id='automake-host'></a>**<br>
+  * **[automake 1.18.1](automake-host.md)<a id='automake-host'></a>**<br>
 
   * **[avm-rle 1.0](avm-rle-host.md)<a id='avm-rle-host'></a>**<br>
 
@@ -16,9 +16,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[ca-bundle 2025-11-04](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
+  * **[ca-bundle 2025-12-02](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 4.1.3](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 4.2.1](cmake-host.md)<a id='cmake-host'></a>**<br>
 
   * **[config a2287c3](config-host.md)<a id='config-host'></a>**<br>
 
@@ -54,7 +54,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### K
 
-  * **[kconfig 6.17](kconfig-host.md)<a id='kconfig-host'></a>**<br>
+  * **[kconfig 6.18](kconfig-host.md)<a id='kconfig-host'></a>**<br>
 
 ### L
 
@@ -74,7 +74,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[make 4.4.1](make-host.md)<a id='make-host'></a>**<br>
 
-  * **[meson 1.9.1](meson-host.md)<a id='meson-host'></a>**<br>
+  * **[meson 1.10.0](meson-host.md)<a id='meson-host'></a>**<br>
 
   * **[mklibs 0.1.45](mklibs-host.md)<a id='mklibs-host'></a>**<br>
 
@@ -90,7 +90,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[netkit-ftp 0.17-35](netkit-ftp-host.md)<a id='netkit-ftp-host'></a>**<br>
 
-  * **[ninja 1.13.1](ninja-host.md)<a id='ninja-host'></a>**<br>
+  * **[ninja 1.13.2](ninja-host.md)<a id='ninja-host'></a>**<br>
 
 ### O
 
@@ -116,7 +116,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python3-attrs 25.4.0](python3-attrs-host.md)<a id='python3-attrs-host'></a>**<br>
 
-  * **[python3 3.14.0](python3-host.md)<a id='python3-host'></a>**<br>
+  * **[python3 3.14.2](python3-host.md)<a id='python3-host'></a>**<br>
 
   * **[python3-jsonschema 4.25.1](python3-jsonschema-host.md)<a id='python3-jsonschema-host'></a>**<br>
 
@@ -150,7 +150,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2025-11-23](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2025-12-09](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
