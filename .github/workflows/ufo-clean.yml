@@ -31,7 +31,7 @@ jobs:
 
     - run: |
         grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
-        git checkout make/kernel/configs/freetz/config-ur8-7270_06.05
+        sed -i 's/^# ... ... .. ..:..:.. ....$/# date removed by ufo/' make/kernel/configs/freetz/config-ur8-7270_06.05
 
     - uses: EndBug/add-and-commit@v9
       with:
