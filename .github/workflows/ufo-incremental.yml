@@ -48,8 +48,6 @@ jobs:
 
     - run: grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
 
-    - run: touch -d 2014-04-01 ~/git/freetz-ng/make/kernel/configs/freetz/config-ur8-7270_06.05
-
     - uses: EndBug/add-and-commit@v9
       with:
         push: false
