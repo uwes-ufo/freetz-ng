@@ -43,6 +43,7 @@ jobs:
         rm images/* || true
         # make kernel-autofix
         # make kernel-dirclean
+        touch -d 2020-01-01 make/kernel/configs/freetz/config-ur8-7270_06.05
 
     - run: make
 
