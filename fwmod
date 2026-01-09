@@ -1392,6 +1392,8 @@ if [ "$DO_MOD" -gt 0 ]; then
 		then
 			symvers=$ABS_BASE_DIR/source/kernel/ref-$KERNEL_ID/linux-$FREETZ_KERNEL_VERSION_MAJOR/Module.symvers
 			firsthash=$(($(head -c10 $symvers)))
+			sqlite3 symvers.db 'CREATE TABLE "symvers"("hash" TEXT, "name" TEXT, "m" TEXT, "e" TEXT, "z" TEXT); CREATE UNIQUE INDEX "i" ON "symvers" ("name"); '
+			sqlite3 -separator $'\t' symvers.db ".import source/kernel/ref-alder-5690_08.01/linux-5.4/Module.symvers symvers"
 			for module in $(cd $MODULES_DIR && find . -name *.ko)
 			do
 				[ -f ${KERNEL_REP_DIR}/modules-${KERNEL_ID}/$(echo $module | sed 's,/kernel/,/,') ] && continue
@@ -1412,7 +1414,8 @@ if [ "$DO_MOD" -gt 0 ]; then
 					do
 						((total++))
 						declare $(echo $symbol | sed -rn 's/0x(.{8});(.*)/hash=\1 name=\2/p')
-						newhash=$(grep -w $name $symvers | sed -rn 's/0x(.{8}).*/\1/p')
+						#newhash=$(grep -w $name $symvers | sed -rn 's/0x(.{8}).*/\1/p')
+						newhash=$(sqlite3 symvers.db 'SELECT hash FROM symvers where name = "'$name'"; ' | sed -rn 's/0x(.{8})/\1/p')
 						if [ $newhash ] && [ $newhash != $hash ]
 						then
 							((updated++))
@@ -1439,6 +1442,7 @@ if [ "$DO_MOD" -gt 0 ]; then
 					sizeinfo mod $module
 				fi
 			done
+			rm symvers.db
 		fi
 		for i in \
 		$( \
