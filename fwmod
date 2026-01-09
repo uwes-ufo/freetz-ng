@@ -1390,43 +1390,43 @@ if [ "$DO_MOD" -gt 0 ]; then
 		echo0 "installing$strip_output modules"
 		if [ "$FREETZ_KERNEL_VERSION_5" = "y" ]
 		then
-			vermagic=$(echo -n 'vermagic=' | xxd -p -c0)
-			modversions=$(echo -n 'modversions ' | xxd -p -c0)
-			zeropadding=$(echo $modversions | sed 's/./0/g')
 			symvers=$ABS_BASE_DIR/source/kernel/ref-$KERNEL_ID/linux-$FREETZ_KERNEL_VERSION_MAJOR/Module.symvers
 			firsthash=$(($(head -c10 $symvers)))
 			for module in $(cd $MODULES_DIR && find . -name *.ko)
 			do
-				[ -f ${KERNEL_REP_DIR}/modules-${KERNEL_ID}/$(echo $module | sed 's/\/kernel\//\//') ] && continue
+				[ -f ${KERNEL_REP_DIR}/modules-${KERNEL_ID}/$(echo $module | sed 's,/kernel/,/,') ] && continue
 				module=$MODULES_DIR/$module
-				hexmodule=$(xxd -p -c0 $module)
 				updated=0
 				total=0
 				if [ $firsthash -eq 0 ]
 				then
 					((total++))
 					((updated++))
-					hexmodule=$(echo $hexmodule | sed -r 's/('$vermagic'.*)'$modversions'(([^0].)*)/\1\2'$zeropadding'/')
+					vermagic=$(echo -n 'vermagic=' | xxd -p -c0)
+					modversions=$(echo -n 'modversions ' | xxd -p -c0)
+					zeropadding=$(echo $modversions | sed 's/./0/g')
+					pattern='s/('$vermagic'.*)'$modversions'(([^0].)*)/\1\2'$zeropadding'/'
 				else
+					pattern=''
 					for symbol in $(modprobe --dump-modversions $module | sed -r 's/\t/;/')
 					do
 						((total++))
-						hash=$(echo $symbol | sed -rn 's/0x(.{8});(.*)/\1/p')
-						name=$(echo $symbol | sed -rn 's/0x(.{8});(.*)/\2/p')
+						declare $(echo $symbol | sed -rn 's/0x(.{8});(.*)/hash=\1 name=\2/p')
 						newhash=$(grep -w $name $symvers | sed -rn 's/0x(.{8}).*/\1/p')
 						if [ $newhash ] && [ $newhash != $hash ]
 						then
 							((updated++))
 							littlehash=$(echo -n $hash | tac -rs ..)
 							newlittlehash=$(echo -n $newhash | tac -rs ..)
-							hexname=$(echo -n $name | xxd -p -c0)
-							hexmodule=$(echo $hexmodule | sed 's/'$littlehash$hexname'/'$newlittlehash$hexname'/')
+							hexname=$(echo -n $name | xxd -p -c0)'00'
+							pattern=$pattern's/'$littlehash$hexname'/'$newlittlehash$hexname'/;'
 						fi
 					done
 				fi
 				if [ $updated -gt 0 ]
 				then
-					echo $hexmodule | xxd -r -p > $module
+					xxd -p -c0 $module | sed -r $pattern | xxd -r -p > tmp
+					mv tmp $module
 					bn="$(basename "$module")"
 					sizeinfo "$bn"
 					if [ $firsthash -eq 0 ]
@@ -1482,10 +1482,19 @@ if [ "$DO_MOD" -gt 0 ]; then
 			  "$MODULES_DIR/modules.builtin" \
 			  "$MODULES_DIR/modules.builtin.modinfo" \
 			  "$MODULES_DIR/modules.order"
-			LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
-			  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
-			  $FREETZ_KERNEL_VERSION \
-			  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
+			if [ "$FREETZ_KERNEL_VERSION_5" = "y" -a $firsthash -ne 0 ]
+			then
+				LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
+				  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
+				  -E $symvers \
+				  $FREETZ_KERNEL_VERSION \
+				  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
+			else
+				LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
+				  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
+				  $FREETZ_KERNEL_VERSION \
+				  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
+			fi
 		else
 			NM=$NM ${TOOLS_DIR}/depmod.pl -e -b "$MODULES_DIR" \
 			  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
