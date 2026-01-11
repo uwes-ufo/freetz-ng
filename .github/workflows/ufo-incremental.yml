@@ -46,9 +46,7 @@ jobs:
 
     - run: make
 
-    - run: |
-        grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
-        git checkout make/kernel/configs/freetz/config-ur8-7270_06.05
+    - run: grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
 
     - uses: EndBug/add-and-commit@v9
       with:
