@@ -1392,9 +1392,6 @@ if [ "$DO_MOD" -gt 0 ]; then
 		then
 			symvers=$ABS_BASE_DIR/source/kernel/ref-$KERNEL_ID/linux-$FREETZ_KERNEL_VERSION_MAJOR/Module.symvers
 			firsthash=$(($(head -c10 $symvers)))
-
-			firsthash=0
-
 			starttime=$(date +%s)
 			for module in $(cd $MODULES_DIR && find . -name *.ko)
 			do
