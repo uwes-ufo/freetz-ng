@@ -1391,7 +1391,6 @@ if [ "$DO_MOD" -gt 0 ]; then
 			symvers=$ABS_BASE_DIR/source/kernel/ref-$KERNEL_ID/linux-$FREETZ_KERNEL_VERSION_MAJOR/Module.symvers
 			firsthash=$(($(head -c10 $symvers)))
 			[ $firsthash -eq 0 ] && echo0 "update modules vermagic" || echo0 "update modules symvers"
-			starttime=$(date +%s)
 			for module in $(cd $MODULES_DIR && find . -name *.ko)
 			do
 				[ -f ${KERNEL_REP_DIR}/modules-${KERNEL_ID}/$(echo $module | sed 's,/kernel/,/,') ] && continue
@@ -1430,7 +1429,6 @@ if [ "$DO_MOD" -gt 0 ]; then
 					sizeinfo mod $module
 				fi
 			done
-			[ $firsthash -ne 0 ] && echo -e "\e[32m  took $(date +%M:%S -d@$(($(date +%s) - starttime)))\e[0m"
 		fi
 		[ "$FREETZ_STRIP_MODULES_FREETZ" == "y" ] && strip_output=" and stripping"
 		echo0 "installing$strip_output modules"
