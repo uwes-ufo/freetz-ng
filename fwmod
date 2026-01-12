@@ -1426,7 +1426,7 @@ if [ "$DO_MOD" -gt 0 ]; then
 					xxd -p -c0 $module | sed -r $pattern | xxd -r -p > tmp && mv tmp $module
 					bn="$(basename "$module")"
 					sizeinfo "$bn"
-					[ $firsthash -ne 0 ] && printf '%5d of %5d ...' $updated $total
+					[ $firsthash -ne 0 ] && printf '%5d of %5d .......' $updated $total
 					sizeinfo mod $module
 				fi
 			done
