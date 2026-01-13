@@ -50,26 +50,21 @@ kspay(){	tail -c+$((1+$(ksfield off $1 $2))) $1 | head -c$(($(ksfield size $1 $2
 ksgap(){	printf '0x%x\n' $(($(ksfield addr $1 $((1+$2)))-$(ksfield addr $1 $2)-$(ksfield size $1 $2))); }
 
 updatemodversions(){
-	k=source/kernel/ref-alder-5690_08.01/linux-5.4/Module.symvers
-	f=build/original/filesystem/lib/modules/5.4.213/piglet_noemif/Piglet_noemif.ko
-	x=$(xxd -p -c0 $f)
-	p=0
-	for s in $(modprobe --dump-modversions $f | sed -r 's/\t//')
+	symvers=source/kernel/ref-alder-5690_08.01/linux-5.4/Module.symvers
+	module=build/original/filesystem/lib/modules/5.4.213/piglet_noemif/Piglet_noemif.ko
+	total=0
+	updated=0
+	pattern=''
+	for symbol in $(modprobe --dump-modversions $module | sed -r 's/\t/,/')
 	do
-		h=$(echo $s | sed -rn 's/0x(.{8})(.*)/\1/p')
-		n=$(echo $s | sed -rn 's/0x(.{8})(.*)/\2/p')
-		u=$(grep -w $n $k | sed -rn 's/0x(.{8}).*/\1/p')
-		if [ $u ] && [ $h != $u ]
+		((total++))
+		declare $(echo $symbol | sed -rn 's/0x(..)(..)(..)(..),(.*)/hash=\4\3\2\1 name=\5/p')
+		newhash=$(grep -w $name $symvers | sed -rn 's/0x(..)(..)(..)(..).*/\4\3\2\1/p')
+		if [ $newhash ] && [ $newhash != $hash ]
 		then
-			((p++))
-			H=$(echo -n $h | tac -rs ..)
-			U=$(echo -n $u | tac -rs ..)
-			N=$(echo -n $n | xxd -p -c0)
-			echo $h $u $n
-			local y=$(echo $x | sed 's/'$H$N'/'$U$N'/')
-			x=$y
+			((updated++))
+			hexname=$(echo -n $name | xxd -p -c0)'00'
+			pattern=$pattern's/'$hash$hexname'/'$newhash$hexname'/;'
 		fi
 	done
-	echo $x | xxd -r -p > $f.ufo
-	printf '%4d\n' $p
 }
