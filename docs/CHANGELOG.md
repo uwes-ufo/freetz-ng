@@ -117,6 +117,7 @@ Latest changes
     * Bzip2 1.0.8
     * CA-bundle 2025-12-02
     * Curl 8.12.1/8.17.0
+    * Dnsmasq 2.80/2.92
     * Dropbear 2025.89
     * file 5.46
     * GNU Make 4.2.1/4.4.1
@@ -143,9 +144,10 @@ Latest changes
     * Whois 5.6.5
 
   - Libraries:
-    * harfbuzz 12.2.0
+    * harfbuzz 12.3.1
     * libcap 2.49/2.77
     * libdeflate 1.25
+    * libpcap 1.1.1/1.10.6
     * liburcu 0.15.4
     * libxml2 2.15.1
     * libyaml 0.2.5
