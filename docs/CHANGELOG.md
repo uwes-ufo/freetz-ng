@@ -74,12 +74,13 @@ Latest changes
     * automake 1.18.1
     * ca-bundle 2025-12-02
     * config a2287c3
-    * cmake 4.2.1
+    * cmake 4.2.2
     * dos2unix 7.5.3
+    * fakeroot 1.37.2
     * file 5.46
     * gperf 3.3
     * kconfig 6.18
-    * meson 1.10.0
+    * meson 1.10.1
     * ninja 1.13.2
     * patchelf 0.14.5/0.18.0-b49de1b33
     * patchelf-target 0.14.5/0.15.0
@@ -90,7 +91,7 @@ Latest changes
     * python3-pip 25.3
     * python3-referencing 0.37.0
     * tools 2025-12-09
-    * uboot 2025.10
+    * uboot 2026.01
 
   - AVM sources:
     * 600      8.20 - 4.4.271
@@ -112,30 +113,34 @@ Latest changes
   - Packages:
     * ACME.sh 3.1.2
     * Apache2 2.4.66
-    * BIND 9.11.37/9.20.16
+    * BIND 9.11.37/9.20.17
     * Binutils 2.45.1
     * Bzip2 1.0.8
     * CA-bundle 2025-12-02
-    * Curl 8.12.1/8.17.0
+    * Curl 8.12.1/8.18.0
     * Dnsmasq 2.80/2.92
     * Dropbear 2025.89
     * file 5.46
     * GNU Make 4.2.1/4.4.1
     * hostapd_cli 2.7/2.10/2.11
-    * ImageMagick 7.1.0-62/7.1.2-9
+    * ImageMagick 7.1.0-62/7.1.2-12
     * Info-ZIP 3.0
     * iPerf3 3.3/3.20
-    * ldd 0.1/1.0.55
+    * ldd 0.1/1.0.56
     * MTR 0.80/0.96
     * Nmap 4.76/5.51/7.98
     * OpenSSH 9.3p2/10.2p1
     * OpenVPN 2.4.12/2.5.11/2.6.17
     * PatchELF 0.18.0
+    * Privoxy 4.1.0
     * procps-ng 4.0.5
+    * pyLoad 0.4.x
     * Python 3.14.2
+    * socat 1.8.1.0
     * sslh 2.2.4/2.3.0
     * strace 4.9/5.0/6.18
     * Stunnel 5.76
+    * tcpdump 4.1.1/4.99.6
     * tmux 3.6a
     * Tor 0.4.8.21
     * Unbound 1.24.2
