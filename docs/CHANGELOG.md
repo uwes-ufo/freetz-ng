@@ -66,6 +66,7 @@ Latest changes
     * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.42/2.45.1
     * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.43.1/2.45.1
     * ccache 4.12.2
+    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.56
     * new architecture: aarch64
     * new architecture: aarch64_eb
     * new architecture: armeb
@@ -91,7 +92,7 @@ Latest changes
     * python3-jsonschema 4.25.1
     * python3-pip 25.3
     * python3-referencing 0.37.0
-    * tools 2026-01-23
+    * tools 2026-01-24
     * uboot 2026.01
 
   - AVM sources:
@@ -154,6 +155,7 @@ Latest changes
     * libcap 2.49/2.77
     * libdeflate 1.25
     * libpcap 1.1.1/1.10.6
+    * libpng 1.6.54
     * liburcu 0.15.4
     * libxml2 2.15.1
     * libyaml 0.2.5
@@ -496,7 +498,7 @@ Latest changes
     * OpenSSH 9.3p2/9.8p1
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.14
     * OpenVPN 2.4.12/2.5.11/2.6.13
-    * PCP client 1c783fb 
+    * PCP client 1c783fb
     * PCSC-lite 1.9.5/2.1.0
     * psl 0.21.5
     * socat 1.8.0.0
