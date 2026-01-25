@@ -66,6 +66,7 @@ Latest changes
     * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.42/2.45.1
     * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.43.1/2.45.1
     * ccache 4.12.2
+    * dl-toolchains r27868
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.56
     * new architecture: aarch64
     * new architecture: aarch64_eb
@@ -130,6 +131,7 @@ Latest changes
     * iPerf3 3.3/3.20
     * ldd 0.1/1.0.56
     * MTR 0.80/0.96
+    * Net-SNMP 5.9.5.2
     * Nmap 4.76/5.51/7.98
     * OpenSSH 9.3p2/10.2p1
     * OpenVPN 2.4.12/2.5.11/2.6.17
