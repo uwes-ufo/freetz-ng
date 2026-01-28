@@ -281,10 +281,8 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
   * fritzbox-6842-lte/
     - [fritz_box_6842_source_files.06.21.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6842-lte/fritz_box_6842_source_files.06.21.tar.gz)
   * fritzbox-6850-5g/
-    - [source-files-FRITZ.Box_6850_5G-cortexa9-07.59.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6850-5g/source-files-FRITZ.Box_6850_5G-cortexa9-07.59.tar.gz)
     - [source-files-FRITZ.Box_6850_5G-cortexa9-08.20.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6850-5g/source-files-FRITZ.Box_6850_5G-cortexa9-08.20.tar.gz)
   * fritzbox-6850-lte/
-    - [source-files-FRITZ.Box_6850_LTE-cortexa9-07.59.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6850-lte/source-files-FRITZ.Box_6850_LTE-cortexa9-07.59.tar.gz)
     - [source-files-FRITZ.Box_6850_LTE-cortexa9-08.20.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6850-lte/source-files-FRITZ.Box_6850_LTE-cortexa9-08.20.tar.gz)
   * fritzbox-6860-5g/
     - [source-files-FRITZ.Box_6860_5G-maple-08.20.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6860-5g/source-files-FRITZ.Box_6860_5G-maple-08.20.tar.gz)
@@ -546,6 +544,7 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
 ### FritzWlan
   * fritzmesh-set-1600/
     - [source-files-FRITZ.Repeater_1200_AX_v2-08.03.tar.gz](https://osp.avm.de/fritzwlan/fritzmesh-set-1600/source-files-FRITZ.Repeater_1200_AX_v2-08.03.tar.gz)
+    - [source-files-FRITZ.Repeater_1200_AX_v2-08.20.tar.gz](https://osp.avm.de/fritzwlan/fritzmesh-set-1600/source-files-FRITZ.Repeater_1200_AX_v2-08.20.tar.gz)
   * fritzmesh-set-4200/
     - [source-files-FRITZ.Repeater_3000_AX-08.02.tar.gz](https://osp.avm.de/fritzwlan/fritzmesh-set-4200/source-files-FRITZ.Repeater_3000_AX-08.02.tar.gz)
   * fritzrepeater-1200/
@@ -553,6 +552,7 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
     - [source-files-FRITZ.Repeater_1200-08.20.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-1200/source-files-FRITZ.Repeater_1200-08.20.tar.gz)
   * fritzrepeater-1200-ax/
     - [source-files-FRITZ.Repeater_1200_AX-07.58.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-1200-ax/source-files-FRITZ.Repeater_1200_AX-07.58.tar.gz)
+    - [source-files-FRITZ.Repeater_1200_AX-08.20.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-1200-ax/source-files-FRITZ.Repeater_1200_AX-08.20.tar.gz)
   * fritzrepeater-1700/
     - [source-files-FRITZ.Repeater_1700-08.06.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-1700/source-files-FRITZ.Repeater_1700-08.06.tar.gz)
   * fritzrepeater-2400/
@@ -568,11 +568,13 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
   * fritzrepeater-3000-ax/
     - [source-files-FRITZ.Repeater_3000_AX-07.41.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-3000-ax/source-files-FRITZ.Repeater_3000_AX-07.41.tar.gz)
     - [source-files-FRITZ.Repeater_3000_AX-07.58.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-3000-ax/source-files-FRITZ.Repeater_3000_AX-07.58.tar.gz)
+    - [source-files-FRITZ.Repeater_3000_AX-08.20.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-3000-ax/source-files-FRITZ.Repeater_3000_AX-08.20.tar.gz)
   * fritzrepeater-600/
     - [source-files-FRITZ.Repeater_600-07.58.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-600/source-files-FRITZ.Repeater_600-07.58.tar.gz)
     - [source-files-FRITZ.Repeater_600-08.20.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-600/source-files-FRITZ.Repeater_600-08.20.tar.gz)
   * fritzrepeater-6000/
     - [source-files-FRITZ.Repeater_6000-07.58.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-6000/source-files-FRITZ.Repeater_6000-07.58.tar.gz)
+    - [source-files-FRITZ.Repeater_6000-08.20.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-6000/source-files-FRITZ.Repeater_6000-08.20.tar.gz)
   * fritzrepeater-600v2/
     - [source-files-FRITZ.Repeater_600v2-07.58.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-600v2/source-files-FRITZ.Repeater_600v2-07.58.tar.gz)
     - [source-files-FRITZ.Repeater_600v2-08.20.tar.gz](https://osp.avm.de/fritzwlan/fritzrepeater-600v2/source-files-FRITZ.Repeater_600v2-08.20.tar.gz)
