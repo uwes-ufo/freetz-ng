@@ -18,7 +18,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ca-bundle 2025-12-02](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 4.2.2](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 4.2.3](cmake-host.md)<a id='cmake-host'></a>**<br>
 
   * **[config a2287c3](config-host.md)<a id='config-host'></a>**<br>
 
@@ -94,7 +94,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### O
 
-  * **[openssl 3.5.4](openssl-host.md)<a id='openssl-host'></a>**<br>
+  * **[openssl 3.5.5](openssl-host.md)<a id='openssl-host'></a>**<br>
 
 ### P
 
