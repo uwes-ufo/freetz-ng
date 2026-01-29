@@ -472,7 +472,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[OpenSSH 9.3p2/10.2p1](openssh.md)<a id='openssh'></a>**<br>
     OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.
 
-  * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.18/3.5.4 (binary only)](openssl.md)<a id='openssl'></a>**<br>
+  * **[OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.19/3.5.5 (binary only)](openssl.md)<a id='openssl'></a>**<br>
     This package contains the OpenSSL command-line utility.
 
   * **[OpenVPN 2.4.12/2.5.11/2.6.17](openvpn.md)<a id='openvpn'></a>**<br>
@@ -728,10 +728,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[tmux 3.6a (binary only)](tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.8.21](tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.8.22](tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
 
-  * **[Transmission 3.00/4.0.6 (binary only)](transmission.md)<a id='transmission'></a>**<br>
+  * **[Transmission 3.00/4.1.0 (binary only)](transmission.md)<a id='transmission'></a>**<br>
     If needed, remember to change the base directory as well as the installation directory on the webif.
 
   * **[Tree 1.8.0/2.2.1 (binary only)](tree.md)<a id='tree'></a>**<br>

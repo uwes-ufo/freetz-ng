@@ -76,7 +76,7 @@ Latest changes
     * automake 1.18.1
     * ca-bundle 2025-12-02
     * config a2287c3
-    * cmake 4.2.2
+    * cmake 4.2.3
     * dos2unix 7.5.3
     * fakeroot 1.37.2
     * file 5.46
@@ -85,6 +85,7 @@ Latest changes
     * meson 1.10.1
     * ncurses 6.6
     * ninja 1.13.2
+    * openssl 3.5.5
     * patchelf 0.14.5/0.18.0-b49de1b33
     * patchelf-target 0.14.5/0.15.0
     * pseudo 1.9.2
@@ -100,6 +101,8 @@ Latest changes
     * 600      8.20 - 4.4.271
     * 1240 AX  8.20 - 5.4.213
     * 2400     8.20 - 4.4.271
+    * 3000 AX  8.20 - 5.4.213
+    * 6000     8.20 - 5.4.213
     * 6850 5G  8.20 - 4.4.271
     * 6860 5G  8.20 - 5.4.213
     * 7510     8.20 - 5.4.213
@@ -134,6 +137,7 @@ Latest changes
     * Net-SNMP 5.9.5.2
     * Nmap 4.76/5.51/7.98
     * OpenSSH 9.3p2/10.2p1
+    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.19/3.5.5
     * OpenVPN 2.4.12/2.5.11/2.6.17
     * PatchELF 0.18.0
     * Privoxy 4.1.0
@@ -146,7 +150,8 @@ Latest changes
     * Stunnel 5.76
     * tcpdump 4.1.1/4.99.6
     * tmux 3.6a
-    * Tor 0.4.8.21
+    * Tor 0.4.8.22
+    * Transmission 3.00/4.1.0
     * Unbound 1.24.2
     * UnRAR 6.1.7/7.2.1
     * Vim 9.1.1952
