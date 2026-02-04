@@ -110,6 +110,7 @@ Currently supported devices and firmwares
   * __Fritz!Box 4050__
     - 287.07.58 rev115740 {ALL} [MOVE21NL1]
     - 287.08.02 rev118032 {ALL} [Smart24 P1 FCS]
+    - 287.08.21 rev128526 {ALL} [Smart24 P2]
 
   * __Fritz!Box 4060__
     - 261.07.30 rev95826 {ALL} [PSQ19P2NL4]
@@ -119,6 +120,7 @@ Currently supported devices and firmwares
     - 307.08.21 rev128315 {ALL} [Smart24 P2]
   * __Fritz!Box 4690 (UNTESTED)__
     - 291.08.03 rev118786 {ALL} [Smart24 P1 FCS]
+    - 291.08.21 rev128527 {ALL} [Smart24 P2]
 
 ### Fritz!Box Fon (50xx/51xx)
 
