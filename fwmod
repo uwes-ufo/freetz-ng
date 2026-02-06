@@ -1474,19 +1474,20 @@ if [ "$DO_MOD" -gt 0 ]; then
 			  "$MODULES_DIR/modules.builtin" \
 			  "$MODULES_DIR/modules.builtin.modinfo" \
 			  "$MODULES_DIR/modules.order"
-			if [ "$FREETZ_KERNEL_VERSION_5" = "y" -a $firsthash -ne 0 ]
-			then
+#			if [ "$FREETZ_KERNEL_VERSION_5" = "y" -a $firsthash -ne 0 ]
+#			then
+				symvers=$ABS_BASE_DIR/source/kernel/ref-$KERNEL_ID/linux-$FREETZ_KERNEL_VERSION_MAJOR/Module.symvers
 				LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
 				  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
 				  -E $symvers \
 				  $FREETZ_KERNEL_VERSION \
 				  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
-			else
-				LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
-				  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
-				  $FREETZ_KERNEL_VERSION \
-				  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
-			fi
+#			else
+#				LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
+#				  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
+#				  $FREETZ_KERNEL_VERSION \
+#				  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
+#			fi
 		else
 			NM=$NM ${TOOLS_DIR}/depmod.pl -e -b "$MODULES_DIR" \
 			  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
