@@ -65,7 +65,7 @@ Latest changes
   - Build system:
     * binutils (kernel) 2.18/2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.42/2.45.1
     * binutils (target) 2.22/2.23.2/2.24/2.25.1/2.26.1/2.31.1/2.36.1/2.43.1/2.45.1
-    * ccache 4.12.2
+    * ccache 4.12.3
     * dl-toolchains r27868
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.56
     * new architecture: aarch64
@@ -81,7 +81,7 @@ Latest changes
     * fakeroot 1.37.2
     * file 5.46
     * gperf 3.3
-    * kconfig 6.18
+    * kconfig 6.19
     * meson 1.10.1
     * ncurses 6.6
     * ninja 1.13.2
@@ -149,7 +149,7 @@ Latest changes
     * Python 3.14.2
     * socat 1.8.1.0
     * sslh 2.2.4/2.3.0
-    * strace 4.9/5.0/6.18
+    * strace 4.9/5.0/6.19
     * Stunnel 5.76
     * tcpdump 4.1.1/4.99.6
     * tmux 3.6a
@@ -161,6 +161,7 @@ Latest changes
     * Whois 5.6.5
 
   - Libraries:
+    * expat 2.7.4
     * harfbuzz 12.3.2
     * libcap 2.49/2.77
     * libdeflate 1.25
