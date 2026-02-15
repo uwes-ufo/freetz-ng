@@ -77,11 +77,12 @@ Latest changes
     * ca-bundle 2025-12-02
     * config a2287c3
     * cmake 4.2.3
-    * dos2unix 7.5.3
+    * dos2unix 7.5.4
     * fakeroot 1.37.2
     * file 5.46
     * gperf 3.3
     * kconfig 6.19
+    * m4 1.4.21
     * meson 1.10.1
     * ncurses 6.6
     * ninja 1.13.2
@@ -137,6 +138,7 @@ Latest changes
     * iPerf3 3.3/3.20
     * ldd 0.1/1.0.56
     * MTR 0.80/0.96
+    * Nano 8.7.1
     * Net-SNMP 5.9.5.2
     * Nmap 4.76/5.51/7.98
     * OpenSSH 9.3p2/10.2p1
@@ -157,7 +159,7 @@ Latest changes
     * Transmission 3.00/4.1.0
     * Unbound 1.24.2
     * UnRAR 6.1.7/7.2.1
-    * Vim 9.1.1952
+    * Vim 9.2.0000
     * Whois 5.6.5
 
   - Libraries:
@@ -167,7 +169,7 @@ Latest changes
     * libdeflate 1.25
     * libpcap 1.1.1/1.10.6
     * libpng 1.6.55
-    * liburcu 0.15.4
+    * liburcu 0.15.6
     * libxml2 2.15.1
     * libyaml 0.2.5
     * MbedTLS 2.7.19/2.28.10/3.6.5
