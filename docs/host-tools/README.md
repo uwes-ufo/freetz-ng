@@ -26,7 +26,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### D
 
-  * **[dos2unix 7.5.3](dos2unix-host.md)<a id='dos2unix-host'></a>**<br>
+  * **[dos2unix 7.5.4](dos2unix-host.md)<a id='dos2unix-host'></a>**<br>
 
   * **[dtc 1.7.2](dtc-host.md)<a id='dtc-host'></a>**<br>
 
@@ -70,7 +70,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### M
 
-  * **[m4 1.4.20](m4-host.md)<a id='m4-host'></a>**<br>
+  * **[m4 1.4.21](m4-host.md)<a id='m4-host'></a>**<br>
 
   * **[make 4.4.1](make-host.md)<a id='make-host'></a>**<br>
 
