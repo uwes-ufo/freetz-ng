@@ -152,7 +152,7 @@ Latest changes
     * socat 1.8.1.0
     * sslh 2.2.4/2.3.0
     * strace 4.9/5.0/6.19
-    * Stunnel 5.76
+    * Stunnel 5.77
     * tcpdump 4.1.1/4.99.6
     * tmux 3.6a
     * Tor 0.4.8.22
@@ -177,6 +177,7 @@ Latest changes
     * ncursesw 6.6
     * openjp2 2.5.4
     * pcre2 10.47
+    * zlib 1.3.2
 
   - Firmware updates:
     * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
