@@ -127,6 +127,7 @@ Latest changes
     * Binutils 2.45.1
     * Bzip2 1.0.8
     * CA-bundle 2025-12-02
+    * cpulimit 0.2
     * Curl 8.12.1/8.18.0
     * Dnsmasq 2.80/2.92
     * Dropbear 2025.89
@@ -152,7 +153,7 @@ Latest changes
     * socat 1.8.1.0
     * sslh 2.2.4/2.3.0
     * strace 4.9/5.0/6.19
-    * Stunnel 5.76
+    * Stunnel 5.77
     * tcpdump 4.1.1/4.99.6
     * tmux 3.6a
     * Tor 0.4.8.22
@@ -177,6 +178,7 @@ Latest changes
     * ncursesw 6.6
     * openjp2 2.5.4
     * pcre2 10.47
+    * zlib 1.3.2
 
   - Firmware updates:
     * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
