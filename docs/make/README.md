@@ -232,7 +232,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>gntpsend 0.3.2-git (binary only) - DEPRECATED</u><a id='gntpsend'></a>**<br>
     Growl is a notification system for the Mac OS X. Applications can use Growl to display small notifications about events which the user deems important, in a consistent manner. This package provides a tool 'gntp-send' which allows to send notifications to Growl.
 
-  * **<u>GNU Make 4.2.1/4.4.1 (binary only)</u><a id='gnu-make'></a>**<br>
+  * **<u>gnu-make: Make 4.2.1/4.4.1 (binary only)</u><a id='gnu-make'></a>**<br>
     Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
 
   * **[GnuTLS 3.7.8 (binary only) - DEPRECATED](gnutls.md)<a id='gnutls'></a>**<br>
@@ -834,7 +834,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[file 5.46 (binary only)](file.md)<a id='file'></a>**<br>
     file - determine file type The file command is used to identify a particular file according to the type of data contained by the file. File can identify many different file types, including ELF binaries, system libraries, RPM packages, and many different graphics formats. This utility is essential for analyzing binaries and file formats on the target system, especially useful for debugging cross-compilation issues.
 
-  * **<u>gdb GNU debugger 6.8/7.9.1 (binary only) - DEPRECATED</u><a id='gdb'></a>**<br>
+  * **<u>gdb 6.8/7.9.1 (binary only) - DEPRECATED</u><a id='gdb'></a>**<br>
     Select the version of gdb you wish to use.
 
   * **[inotify-tools 3.14 (binary only) - DEPRECATED](inotify-tools.md)<a id='inotify-tools'></a>**<br>
