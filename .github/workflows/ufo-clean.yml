@@ -34,6 +34,7 @@ jobs:
     
     - run: find . -name '*.symtypes' -exec bash -c 'f={}; sed "s/^/override /" $f > ${f%.symtypes}.symref' \;
     - run: git checkout make/kernel/configs/freetz/config-alder-4690_08.21
+    - run: rm images/* || true
     
     - run: KBUILD_PRESERVE=1 make
 
