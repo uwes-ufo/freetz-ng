@@ -1424,11 +1424,16 @@ if [ "$DO_MOD" -gt 0 ]; then
 	if [ "$FREETZ_REPLACE_KERNEL" == "y" -o -n "$(set|grep ^FREETZ_MODULE_.*=y)" -o -n "$FREETZ_MODULES_OWN" ]; then
 		echo1 "generating modules.dep"
 		DEPMOD_TEMP="$(mktemp)"
+		DEPMOD_E_TEMP="$(mktemp)"
 		if [ "$FREETZ_AVM_VERSION_07_2X_MIN" == "y" ]; then
 			touch \
 			  "$MODULES_DIR/modules.builtin" \
 			  "$MODULES_DIR/modules.builtin.modinfo" \
 			  "$MODULES_DIR/modules.order"
+			LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
+			  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
+			  $FREETZ_KERNEL_VERSION \
+			  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
 			symvers=$ABS_BASE_DIR/source/kernel/ref-$KERNEL_ID/linux-$FREETZ_KERNEL_VERSION_MAJOR/Module.symvers
 			if [ -f $symvers ]
 			then
@@ -1436,12 +1441,8 @@ if [ "$DO_MOD" -gt 0 ]; then
 				LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
 				  -E $symvers \
 				  $FREETZ_KERNEL_VERSION \
-				  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
+				  2>&1 | tee "$DEPMOD_E_TEMP" | sed "s@ ${ABS_BASE_DIR}/build/modified/filesystem/lib/modules/@ @g"
 			fi
-			LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
-			  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
-			  $FREETZ_KERNEL_VERSION \
-			  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
 		else
 			NM=$NM ${TOOLS_DIR}/depmod.pl -e -b "$MODULES_DIR" \
 			  -F ${KERNEL_REP_DIR}/System-${KERNEL_ID}.map \
@@ -1452,6 +1453,11 @@ if [ "$DO_MOD" -gt 0 ]; then
 			warn "Unresolved symbols detected, not all AVM-features may work.\nApropriate sources by AVM not used or not available? Error in kernel's .config? Ask fritzbox_info@avm.de for sources!"
 		fi
 		rm -f "$DEPMOD_TEMP"
+		if grep -q "disagrees" "$DEPMOD_E_TEMP"; then
+			[ "$FREETZ_MODULES_TEST" == "y" ] && error 1 "Disagrees about version of symbols."
+			error 1 "Disagrees about version of symbols. Modules will not load. The system will not boot."
+		fi
+		rm -f "$DEPMOD_E_TEMP"
 		# add plugin kernel modules for 7270v1 if plugins are not enabled
 		if [ "$FREETZ_TYPE_7270_V1" == "y" -a "$FREETZ_AVMPLUGINS_INTEGRATE" != "y" ]; then
 			echo "kernel/drivers/net/rfcntl/rfcntl.ko: kernel/drivers/char/audio/avm_audio.ko" >> "$MODULES_DIR/modules.dep"
