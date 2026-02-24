@@ -101,11 +101,11 @@ update_lfs() {
 start() {
 	echo "Freetz version $(sed 's/^freetz-//' /etc/.freetz-version)"
 
-        if [ -s /tmp/flash/mod/rc.primary ]; then
-                echo -n "Starting rc.primary ... "
-                nohup sh /tmp/flash/mod/rc.primary 0</dev/null 1>/var/log/rc_primary.log 2>&1 &
-                echo "asynchronous."
-        fi
+	if [ -s /tmp/flash/mod/rc.primary ]; then
+		echo -n "Starting rc.primary ... "
+		nohup sh /tmp/flash/mod/rc.primary 0</dev/null 1>/var/log/rc_primary.log 2>&1 &
+		echo "asynchronous."
+	fi
 
 	# Basic Packages: links
 	for pkg in crond telnetd webcfg stickymon dsld ftpd rextd multid swap external websrv smbd; do
@@ -244,6 +244,7 @@ register() {
 	modreg_file  .profile    0
 	modreg_file  hosts       1
 	modreg_file  modules     0
+	modreg_file  rc.primary  0
 	modreg_file  rc.custom   0
 	modreg_file  shutdown    0
 	[ -h /usr/bin/dtrace ] && modreg_file dtrace 0
