@@ -101,6 +101,12 @@ update_lfs() {
 start() {
 	echo "Freetz version $(sed 's/^freetz-//' /etc/.freetz-version)"
 
+        if [ -s /tmp/flash/mod/rc.primary ]; then
+                echo -n "Starting rc.primary ... "
+                nohup sh /tmp/flash/mod/rc.primary 0</dev/null 1>/var/log/rc_primary.log 2>&1 &
+                echo "asynchronous."
+        fi
+
 	# Basic Packages: links
 	for pkg in crond telnetd webcfg stickymon dsld ftpd rextd multid swap external websrv smbd; do
 		local pkg_default=/etc/default.$pkg
@@ -232,8 +238,8 @@ register() {
 	AUML="$(echo -ne '\344')"
 
 	modreg cgi mod "Freetz"
-	modreg conf mod webcfg "$(lang de:"Weboberfl${AUML}che" en:"Web interface")"
-	modreg cgi avm "$(lang de:"AVM-Dienste" en:"AVM services")"
+	modreg conf mod webcfg "Weboberfl${AUML}che"
+	modreg cgi avm "AVM-Dienste"
 
 	modreg_file  .profile    0
 	modreg_file  hosts       1
