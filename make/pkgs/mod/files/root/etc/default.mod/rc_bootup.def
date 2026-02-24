@@ -1,6 +1,6 @@
-CAPTION='Freetz: rc.primary'
+CAPTION='Freetz: rc.bootup'
 DESCRIPTION="$(lang de:"Skript wird am Anfang des Bootprozesses aufgerufen" en:"script is executed at the beginning of the boot process")"
 
-CONFIG_FILE='/tmp/flash/mod/rc.primary'
+CONFIG_FILE='/tmp/flash/mod/rc.bootup'
 CONFIG_SAVE='modsave flash;'
 CONFIG_TYPE='text'
