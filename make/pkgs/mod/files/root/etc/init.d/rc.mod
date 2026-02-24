@@ -238,8 +238,8 @@ register() {
 	AUML="$(echo -ne '\344')"
 
 	modreg cgi mod "Freetz"
-	modreg conf mod webcfg "Weboberfl${AUML}che"
-	modreg cgi avm "AVM-Dienste"
+	modreg conf mod webcfg "$(lang de:"Weboberfl${AUML}che" en:"Web interface")"
+	modreg cgi avm "$(lang de:"AVM-Dienste" en:"AVM services")"
 
 	modreg_file  .profile    0
 	modreg_file  hosts       1
