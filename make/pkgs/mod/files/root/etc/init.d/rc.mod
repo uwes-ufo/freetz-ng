@@ -244,7 +244,7 @@ register() {
 	modreg_file  .profile    0
 	modreg_file  hosts       1
 	modreg_file  modules     0
-	modreg_file  rc.primary  0
+	modreg_file  rc.bootup   0
 	modreg_file  rc.custom   0
 	modreg_file  shutdown    0
 	[ -h /usr/bin/dtrace ] && modreg_file dtrace 0
