@@ -22,8 +22,8 @@ EOF
 
 # actual filesystem
 cat << EOF > "${FILESYSTEM_MOD_DIR}/etc/inittab"
-# ::sysinit:/bin/sh -c /etc/inittab.sysinit
-::sysinit:$sysinit
+::sysinit:/bin/sh -c /etc/inittab.sysinit
+# ::sysinit:$sysinit
 
 # Start an "askfirst" shell on the console (whatever that may be)
 ${FREETZ_AVM_SERIAL_CONSOLE_DEVICE}::askfirst:$shell
