@@ -178,7 +178,7 @@ Currently supported devices and firmwares
     - 110.06.21 rev29895 {INT}
   * __Fritz!Box 6340 Cable (DEVELOPER)__
     - 115.05.24 rev22613 {GER}
-  * __Fritz!Box 6360 Cable (UNTESTED)__
+  * __Fritz!Box 6360 Cable__
     - 85.06.04 rev27374 {GER}
     - 85.06.51 rev35033 {GER}
 
@@ -256,6 +256,8 @@ Currently supported devices and firmwares
     - 262.07.59 rev114651 {ALL} [MOVE21NL2]
     - 262.08.03 rev119186 {ALL} [Smart24 P1 NL1]
     - 262.08.20 rev124916 {ALL} [Smart24 P2]
+  * __Fritz!Box 6860 4G (UNTESTED)__
+    - 297.08.20 rev126271 {ALL} [Smart24 P2]
   * __Fritz!Box 6850 5G__
     - 258.07.30 rev94600 {ALL} [PSQ19P2NL4]
     - 258.07.59 rev114650 {ALL} [MOVE21NL2]
