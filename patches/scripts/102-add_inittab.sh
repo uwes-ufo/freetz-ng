@@ -18,7 +18,6 @@ cat << EOF > "${FILESYSTEM_MOD_DIR}/etc/inittab.sysinit"
 [ -s /tmp/flash/mod/rc.bootup ] && nohup sh /tmp/flash/mod/rc.bootup 0</dev/null 1>/var/log/rc_bootup.log 2>&1 &
 $sysinit
 EOF
-# chmod +x "${FILESYSTEM_MOD_DIR}/etc/inittab.sysinit"
 
 # actual filesystem
 cat << EOF > "${FILESYSTEM_MOD_DIR}/etc/inittab"
