@@ -13,8 +13,16 @@ echo1 "creating inittab"
 # Script for sysinit
 [ -n "$SYSTEMD_CORE_MOD_DIR" ] && sysinit="/etc/boot.d/1" || sysinit="/etc/init.d/rc.S"
 
+cat << EOF > "${FILESYSTEM_MOD_DIR}/etc/inittab.sysinit"
+#!/bin/sh
+[ -s /tmp/flash/mod/rc.bootup ] && nohup sh /tmp/flash/mod/rc.bootup 0</dev/null 1>/var/log/rc_bootup.log 2>&1 &
+$sysinit
+EOF
+# chmod +x "${FILESYSTEM_MOD_DIR}/etc/inittab.sysinit"
+
 # actual filesystem
 cat << EOF > "${FILESYSTEM_MOD_DIR}/etc/inittab"
+# ::sysinit:/bin/sh -c /etc/inittab.sysinit
 ::sysinit:$sysinit
 
 # Start an "askfirst" shell on the console (whatever that may be)
