@@ -40,9 +40,9 @@ jobs:
     - run: tools/prerequisites install
 
     - run: cp config-${{ matrix.box }} .config
-        # make kernel-autofix
-        # make kernel-dirclean
-    - run: make tools-dirclean
+    #- run: make kernel-autofix
+    #- run: make kernel-dirclean
+    #- run: make tools-dirclean
 
     - if: steps.cache.outputs.cache-hit == ''
       run: |
