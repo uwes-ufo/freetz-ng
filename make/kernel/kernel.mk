@@ -205,6 +205,9 @@ else
 	$(SUBMAKE) $(KERNEL_COMMON_MAKE_OPTIONS) olddefconfig $(SILENT)
 endif
 	@cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE) && grep '^FREETZ_MODULE_' $(TOPDIR)/.config > $@ || true
+ifeq ($(strip $(FREETZ_KERNEL_VERSION_2)),y)
+	sed -i 's/^# ... ... .. ..:..:.. ....$$/# date removed by ufo/' $(KERNEL_CONFIG_FILE)
+endif
 
 $(KERNEL_DIR)/.prepared: $(KERNEL_DIR)/.configured
 	@$(call _ECHO,preparing,$(KERNEL_ECHO_TYPE))
@@ -296,19 +299,31 @@ kernel-menuconfig: $(KERNEL_DIR)/.configured
 	$(SUBMAKE) $(KERNEL_COMMON_MAKE_OPTIONS) menuconfig
 	-cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE) && \
 	touch $<
+ifeq ($(strip $(FREETZ_KERNEL_VERSION_2)),y)
+	sed -i 's/^# ... ... .. ..:..:.. ....$$/# date removed by ufo/' $(KERNEL_CONFIG_FILE)
+endif
 
 kernel-xconfig: $(KERNEL_DIR)/.configured
 	$(SUBMAKE) $(KERNEL_COMMON_MAKE_OPTIONS) xconfig
 	-cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE) && \
 	touch $<
+ifeq ($(strip $(FREETZ_KERNEL_VERSION_2)),y)
+	sed -i 's/^# ... ... .. ..:..:.. ....$$/# date removed by ufo/' $(KERNEL_CONFIG_FILE)
+endif
 
 kernel-oldconfig: $(KERNEL_DIR)/.configured
 	-cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE) && \
 	touch $<
+ifeq ($(strip $(FREETZ_KERNEL_VERSION_2)),y)
+	sed -i 's/^# ... ... .. ..:..:.. ....$$/# date removed by ufo/' $(KERNEL_CONFIG_FILE)
+endif
 
 kernel-olddefconfig: $(KERNEL_DIR)/.configured
 	-cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE) && \
 	touch $<
+ifeq ($(strip $(FREETZ_KERNEL_VERSION_2)),y)
+	sed -i 's/^# ... ... .. ..:..:.. ....$$/# date removed by ufo/' $(KERNEL_CONFIG_FILE)
+endif
 
 kernel-source: $(KERNEL_DIR)/.unpacked
 
@@ -318,6 +333,9 @@ kernel-clean:
 
 kernel-mrproper:
 	-cp -f $(KERNEL_SOURCE_DIR)/.config $(KERNEL_CONFIG_FILE)
+ifeq ($(strip $(FREETZ_KERNEL_VERSION_2)),y)
+	sed -i 's/^# ... ... .. ..:..:.. ....$$/# date removed by ufo/' $(KERNEL_CONFIG_FILE)
+endif
 	$(SUBMAKE) $(KERNEL_COMMON_MAKE_OPTIONS) mrproper
 	-cp -f $(KERNEL_CONFIG_FILE) $(KERNEL_SOURCE_DIR)/.config
 ifeq ($(strip $(FREETZ_KERNEL_VERSION_2_MAX)),y)
