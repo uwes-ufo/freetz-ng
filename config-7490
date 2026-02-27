@@ -312,7 +312,6 @@ FREETZ_DROP_NOEXEC_EXTERNAL=y
 # Replacement patches --------------------------------------
 #
 FREETZ_REPLACE_DTRACE=y
-FREETZ_REPLACE_ONLINECHANGED=y
 
 #
 # Additional patches ---------------------------------------
