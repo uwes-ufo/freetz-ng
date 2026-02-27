@@ -31,7 +31,7 @@ jobs:
           ~/
           ./
         key: cache-${{ github.ref_name }}-${{ matrix.box }}-${{ env.DATE }}
-        restore-keys: cache-${{ github.ref_name }}-${{ matrix.box }}
+        # restore-keys: cache-${{ github.ref_name }}-${{ matrix.box }}
 
     - uses: actions/checkout@v6
       with:
