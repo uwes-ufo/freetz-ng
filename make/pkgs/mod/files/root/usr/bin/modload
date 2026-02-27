@@ -32,6 +32,14 @@ lnmod() {
 	done
 }
 
+rc_bootup() {
+	if [ -s /tmp/flash/mod/rc.bootup ]; then
+		echo -n "Starting rc.bootup ... "
+		nohup sh /tmp/flash/mod/rc.bootup 0</dev/null 1>/var/log/rc_bootup.log 2>&1 &
+		echo "asynchronous."
+	fi
+}
+
 mod_load() {
 	echo -n 'Loading env ... '
 	# store 'clean' environment
@@ -69,6 +77,8 @@ mod_load() {
 	echo -n 'Loading hosts ... '
 	/usr/bin/modhosts load
 	echo 'done.'
+
+	rc_bootup
 
 	echo -n 'Loading config ... '
 	for pkg in $(cat /mod/etc/static.pkg 2>/dev/null) avm; do

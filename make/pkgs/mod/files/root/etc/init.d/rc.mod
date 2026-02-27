@@ -98,14 +98,18 @@ update_lfs() {
 	echo "asynchronous."
 }
 
-start() {
-	echo "Freetz version $(sed 's/^freetz-//' /etc/.freetz-version)"
-
+rc_bootup() {
 	if [ -s /tmp/flash/mod/rc.bootup ]; then
 		echo -n "Starting rc.bootup ... "
 		nohup sh /tmp/flash/mod/rc.bootup 0</dev/null 1>/var/log/rc_bootup.log 2>&1 &
 		echo "asynchronous."
 	fi
+}
+
+start() {
+	echo "Freetz version $(sed 's/^freetz-//' /etc/.freetz-version)"
+
+	# rc_bootup
 
 	# Basic Packages: links
 	for pkg in crond telnetd webcfg stickymon dsld ftpd rextd multid swap external websrv smbd; do
