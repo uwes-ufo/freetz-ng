@@ -217,7 +217,7 @@ FREETZ_AUTOMOUNT_EXT2=y
 # Replace OpenSSL libraries (not available, requires openssl-0.9.8)
 #
 FREETZ_REPLACE_DTRACE=y
-FREETZ_REPLACE_ONLINECHANGED=y
+# FREETZ_REPLACE_ONLINECHANGED is not set
 
 #
 # Additional patches ---------------------------------------
