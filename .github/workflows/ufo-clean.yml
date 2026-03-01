@@ -36,6 +36,8 @@ jobs:
     #- run: git checkout make/kernel/configs/freetz/config-alder-4690_08.21
     #- run: rm images/* || true
 
+    - run: mkdir -p source/kernel/ref-alder-4690_08.21/linux-5.4
+
     - run: cp -r make/kernel/configs/symref/symref-alder-4690_08.21 source/kernel/ref-alder-4690_08.21/linux-5.4
     
     - run: KBUILD_PRESERVE=1 make
