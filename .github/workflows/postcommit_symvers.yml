@@ -1,10 +1,11 @@
-name: make_kernel
+name: postcommit_symvers
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/make_kernel.yml'
+      - '.github/workflows/postcommit_symvers.yml'
+      - 'make/kernel/configs/avm/*'
   schedule:
     - cron: '00 15 28 * *'
   workflow_dispatch:
@@ -15,23 +16,9 @@ on:
         default: "08_2X"
         type: choice
         options:
-          - "freetz_org"
           - "freetz-ng"
-          - "Fos04"
-          - "Fos05"
-          - "Fos06"
           - "Fos07"
           - "Fos08"
-          - "04_XX"
-          - "05_2X"
-          - "05_5X"
-          - "06_0X"
-          - "06_2X"
-          - "06_5X"
-          - "06_8X"
-          - "06_9X"
-          - "07_0X"
-          - "07_1X"
           - "07_2X"
           - "07_5X"
           - "08_0X"
@@ -39,7 +26,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
 
@@ -54,7 +41,6 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      gitsha: ${{ steps.parse.outputs.gitsha }}
       matrix: ${{ steps.parse.outputs.matrix }}
 
     steps:
@@ -80,7 +66,6 @@ jobs:
           [ "$FOS" = "freetz_org" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[456])/\1/p" config/avm/availability.in) 07_0X 07_1X"
           [ "$FOS" = "freetz-ng" ] && FOS="07_2X 07_5X $(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(0[89])/\1/p" config/avm/availability.in)"
           [ "$FOS" != "${FOS#Fos}" ] && FOS="$(sed -rn "s/^config FREETZ_AVM_HAS_FIRMWARE_(${FOS#Fos})/\1/p" config/avm/availability.in)"
-          echo "gitsha=\"${{ github.sha }}\"" >> $GITHUB_OUTPUT
           for fos in $FOS; do \
             cat config/avm/availability.in | \
               grep -A999 -m1 "^config FREETZ_AVM_HAS_FIRMWARE_$fos$" | grep -B999 -m2 "^config FREETZ_AVM_HAS_" | \
@@ -92,12 +77,11 @@ jobs:
       - name: vars
         run: |
           echo "##########################################################"
-          echo "gitsha=${{ steps.parse.outputs.gitsha }}"
           echo "matrix=${{ steps.parse.outputs.matrix }}" | sed 's/\[{/\[\n{/;s/},{/},\n{/g;s/},\]/},\n\]/'
 
   build:
     permissions:
-      contents: read
+      contents: write
     container:
 #     image: ubuntu:20.04
 #     image: freetzng/firmware
@@ -105,7 +89,7 @@ jobs:
       options: --user 1001:1001
     needs: matrizifizieren
     strategy:
-      max-parallel: 18
+      max-parallel: 12
       fail-fast: false
       matrix:
         fritz: ${{ fromJson(needs.matrizifizieren.outputs.matrix) }}
@@ -149,11 +133,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           set-safe-directory: true
           repository: ${{ github.repository }}
-          ref: ${{ fromJson(needs.matrizifizieren.outputs.gitsha) }}
+          ref: ${{ github.ref_name }}
           path: ${{ github.workspace }}
           fetch-depth: 0
           clean: false
           persist-credentials: true
+
 
       - name: cache_load
         uses: actions/cache/restore@v5
@@ -205,6 +190,20 @@ jobs:
           echo "##########################################################"
           ls -l images/
           sha256sum images/*
+
+      - name: commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git pull || exit
+          git add make/kernel/configs/symvers/
+          git status
+          git config --local user.name github-actions[bot]
+          git config --local user.email github-actions[bot]@users.noreply.github.com
+          git diff --cached --quiet && exit 0 || git commit -m "symvers: automatic update"
+          git config --local credential.helper '!x() { echo "password=$GITHUB_TOKEN"; };x'
+          git push origin $GITHUB_REF_NAME
 
 #     - name: cache_clear
 #       if: github.repository == 'freetz-ng/freetz-ng'
