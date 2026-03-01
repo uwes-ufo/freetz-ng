@@ -44,13 +44,15 @@ jobs:
     #- run: make kernel-dirclean
     #- run: make tools-dirclean
 
-    - if: steps.cache.outputs.cache-hit == ''
-      run: |
-        cp make/kernel/configs/avm/config-alder-4690_08.21 make/kernel/configs/freetz/config-alder-4690_08.21
-        patch -p1 make/kernel/configs/freetz/config-alder-4690_08.21 < make/kernel/configs/diffs/config-alder-4690_08.21.diff
-        KBUILD_SYMTYPES=1 make
-        find . -name '*.symtypes' -exec bash -c 'f={}; sed "s/^/override /" $f > ${f%.symtypes}.symref' \;
-        git checkout make/kernel/configs/freetz/config-alder-4690_08.21
+    #- if: steps.cache.outputs.cache-hit == ''
+      # run |
+        # cp make/kernel/configs/avm/config-alder-4690_08.21 make/kernel/configs/freetz/config-alder-4690_08.21
+        # patch -p1 make/kernel/configs/freetz/config-alder-4690_08.21 < make/kernel/configs/diffs/config-alder-4690_08.21.diff
+        # KBUILD_SYMTYPES=1 make
+        # find . -name '*.symtypes' -exec bash -c 'f={}; sed "s/^/override /" $f > ${f%.symtypes}.symref' \;
+        # git checkout make/kernel/configs/freetz/config-alder-4690_08.21
+
+    - run: cp -r make/kernel/configs/symref/symref-alder-4690_08.21 source/kernel/ref-alder-4690_08.21/linux-5.4
 
     - run: rm images/* || true
 
