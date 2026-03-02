@@ -56,9 +56,11 @@ jobs:
 
     - run: cp -r make/kernel/configs/symref/symref-alder-4690_08.21/* source/kernel/ref-alder-4690_08.21/linux-5.4
 
+    - run: find . -name '*.symref'
+
     - run: rm images/* || true
 
-    - run: KBUILD_PRESERVE=1 make
+    #- run: KBUILD_PRESERVE=1 make
 
     - run: grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
 
