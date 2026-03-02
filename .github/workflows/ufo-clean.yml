@@ -27,21 +27,17 @@ jobs:
 
     - run: cp config-${{ matrix.box }} .config
 
-    #- run: cp make/kernel/configs/avm/config-alder-4690_08.21 make/kernel/configs/freetz/config-alder-4690_08.21
-    #- run: patch -p1 make/kernel/configs/freetz/config-alder-4690_08.21 < make/kernel/configs/diffs/config-alder-4690_08.21.diff
-
-    #- run: KBUILD_SYMTYPES=1 make
-    
-    #- run: find . -name '*.symtypes' -exec bash -c 'f={}; sed "s/^/override /" $f > ${f%.symtypes}.symref' \;
-    #- run: git checkout make/kernel/configs/freetz/config-alder-4690_08.21
-    #- run: rm images/* || true
-
-    #- run: mkdir -p source/kernel/ref-alder-4690_08.21/linux-5.4
-
-    - run: make kernel-olddefconfig
-
     - if: matrix.box == 5690
-      run: cp -r make/kernel/configs/symref/symref-alder-4690_08.21/* source/kernel/ref-alder-4690_08.21/linux-5.4
+      run: |
+        make kernel-olddefconfig
+        cp -r make/kernel/configs/symref/symref-alder-4690_08.21/* source/kernel/ref-alder-4690_08.21/linux-5.4
+
+      # cp make/kernel/configs/avm/config-alder-4690_08.21 make/kernel/configs/freetz/config-alder-4690_08.21
+      # patch -p1 make/kernel/configs/freetz/config-alder-4690_08.21 < make/kernel/configs/diffs/config-alder-4690_08.21.diff
+      # KBUILD_SYMTYPES=1 make
+      # find . -name '*.symtypes' -exec bash -c 'f={}; sed "s/^/override /" $f > ${f%.symtypes}.symref' \;
+      # git checkout make/kernel/configs/freetz/config-alder-4690_08.21
+      # rm images/* || true
 
     - run: KBUILD_PRESERVE=1 make
 
