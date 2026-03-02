@@ -40,7 +40,8 @@ jobs:
 
     - run: make kernel-olddefconfig
 
-    - run: cp -r make/kernel/configs/symref/symref-alder-4690_08.21/* source/kernel/ref-alder-4690_08.21/linux-5.4
+    - if: matrix.box == 5690
+      run: cp -r make/kernel/configs/symref/symref-alder-4690_08.21/* source/kernel/ref-alder-4690_08.21/linux-5.4
 
     - run: KBUILD_PRESERVE=1 make
 
