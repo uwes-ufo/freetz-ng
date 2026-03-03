@@ -57,7 +57,7 @@ jobs:
       # cd ../../../..
       # git checkout make/kernel/configs/freetz/config-alder-4690_08.21
 
-    - run: rm images/* || true
+    - run: rm -f images/*
 
     - run: KBUILD_PRESERVE=1 make
 
