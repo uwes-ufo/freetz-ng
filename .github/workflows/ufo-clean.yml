@@ -40,7 +40,7 @@ jobs:
       # find . -name '*.symref' -exec cp --parents {} ../../../../make/kernel/configs/symref/symref-alder-4690_08.21 \;
       # cd ../../../..
       # git checkout make/kernel/configs/freetz/config-alder-4690_08.21
-      # rm images/* || true
+      # rm -f images/*
 
     - run: KBUILD_PRESERVE=1 make
 
