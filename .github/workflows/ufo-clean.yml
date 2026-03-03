@@ -29,8 +29,9 @@ jobs:
 
     - if: matrix.box == 5690
       run: |
-        make kernel-olddefconfig
+        make kernel-unpacked
         cp -r make/kernel/configs/symref/symref-alder-4690_08.21/* source/kernel/ref-alder-4690_08.21/linux-5.4
+      # make kernel-olddefconfig
       # cp make/kernel/configs/avm/config-alder-4690_08.21 make/kernel/configs/freetz/config-alder-4690_08.21
       # patch -p1 make/kernel/configs/freetz/config-alder-4690_08.21 < make/kernel/configs/diffs/config-alder-4690_08.21.diff
       # KBUILD_SYMTYPES=1 make
