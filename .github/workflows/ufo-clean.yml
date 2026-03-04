@@ -41,7 +41,7 @@ jobs:
       # git checkout make/kernel/configs/freetz/config-alder-4690_08.21
       # rm -f images/*
 
-    - run: KBUILD_PRESERVE=1 make kernel-precompiled
+    - run: KBUILD_PRESERVE=1 make
 
     - run: grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
 
