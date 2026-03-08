@@ -3348,10 +3348,10 @@ FREETZ_DL_SITE_USER=""
 # FREETZ_DL_IMAGE_AT_LAST is not set
 FREETZ_DL_VCS_REPO_FIRST=y
 FREETZ_DL_VCS_FROM_MIRRORS=y
-FREETZ_DL_KERNEL_TOOLCHAIN_SITE="@DLTOKEN/https://api.github.com/repos/Freetz-NG/internal/releases/tags/toolchain"
+FREETZ_DL_KERNEL_TOOLCHAIN_SITE="@DLTOKEN/https://api.github.com/repos/Freetz-NG/internal/releases/tags/toolchains"
 FREETZ_DL_KERNEL_TOOLCHAIN_VERSION="r27868"
 FREETZ_DL_KERNEL_TOOLCHAIN_HASH="59b518049331aa28f42669bbbd68c935484e0b3c690b2c7db143d192b9d596da"
-FREETZ_DL_TARGET_TOOLCHAIN_SITE="@DLTOKEN/https://api.github.com/repos/Freetz-NG/internal/releases/tags/toolchain"
+FREETZ_DL_TARGET_TOOLCHAIN_SITE="@DLTOKEN/https://api.github.com/repos/Freetz-NG/internal/releases/tags/toolchains"
 FREETZ_DL_TARGET_TOOLCHAIN_VERSION="r27868"
 FREETZ_DL_TARGET_TOOLCHAIN_HASH="a2f34d43b86bfc7c5c110d9c879969879e24e9227fc2ce176aa68a6708ddf237"
 # FREETZ_DL_KERNEL_OVERRIDE is not set
