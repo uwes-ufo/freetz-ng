@@ -3251,7 +3251,6 @@ FREETZ_TARGET_UCLIBC_PROVIDES_SSP=y
 #
 # Host-tools options ----------------------------------
 #
-# FREETZ_HOSTTOOLS_DOWNLOAD is not set
 FREETZ_HOSTTOOLS_BUILD=y
 # FREETZ_ROOTEMU_FAKEROOT is not set
 FREETZ_ROOTEMU_PSEUDO=y
