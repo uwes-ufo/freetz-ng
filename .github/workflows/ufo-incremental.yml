@@ -69,7 +69,7 @@ jobs:
       #with:
         #push: false
         
-    - run: git commit -am incremental-${{ matrix.box }} && git pull --rebase && git push
+    - run: git commit -am incremental-${{ matrix.box }} && git pull --rebase && git push || true
 
     - uses: actions/upload-artifact@v7
       with:
