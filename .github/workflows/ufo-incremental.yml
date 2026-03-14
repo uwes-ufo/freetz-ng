@@ -31,7 +31,7 @@ jobs:
           ~/
           ./
         key: cache-${{ github.ref_name }}-${{ matrix.box }}-${{ env.DATE }}
-        #restore-keys: cache-${{ github.ref_name }}-${{ matrix.box }}
+        restore-keys: cache-${{ github.ref_name }}-${{ matrix.box }}
 
     - uses: actions/checkout@v6
       with:
@@ -64,11 +64,7 @@ jobs:
     - run: grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
 
     - run: git checkout make/kernel/configs/freetz/config-ur8-7270_06.05 && touch -d 2014-03-27 make/kernel/configs/freetz/config-ur8-7270_06.05
-
-    #- uses: EndBug/add-and-commit@v9
-      #with:
-        #push: false
-        
+    
     - run: git commit -am incremental-${{ matrix.box }} && git pull --rebase && git push || true
 
     - uses: actions/upload-artifact@v7
