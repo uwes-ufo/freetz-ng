@@ -47,11 +47,11 @@ jobs:
 
     - run: git checkout make/kernel/configs/freetz/config-ur8-7270_06.05
 
-    - uses: EndBug/add-and-commit@v9
-      with:
-        push: false
+    #- uses: EndBug/add-and-commit@v9
+      #with:
+        #push: false
         
-    - run: git pull --rebase && git push
+    - run: git commit -am clean-${{ matrix.box }} && git pull && git push || true
 
     - uses: actions/upload-artifact@v7
       with:
