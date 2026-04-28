@@ -4,7 +4,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### A
 
-  * **[autoconf 2.72](autoconf-host.md)<a id='autoconf-host'></a>**<br>
+  * **[autoconf 2.73](autoconf-host.md)<a id='autoconf-host'></a>**<br>
 
   * **[automake 1.18.1](automake-host.md)<a id='automake-host'></a>**<br>
 
@@ -18,15 +18,15 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ca-bundle 2026-03-19](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 4.3.0](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 4.3.2](cmake-host.md)<a id='cmake-host'></a>**<br>
 
-  * **[config a2287c3](config-host.md)<a id='config-host'></a>**<br>
+  * **[config a2287c3041a3f2a204eb942e09c015eab00dc7dd](config-host.md)<a id='config-host'></a>**<br>
 
   * **[cpio 2.15](cpio-host.md)<a id='cpio-host'></a>**<br>
 
 ### D
 
-  * **[dos2unix 7.5.4](dos2unix-host.md)<a id='dos2unix-host'></a>**<br>
+  * **[dos2unix 7.5.5](dos2unix-host.md)<a id='dos2unix-host'></a>**<br>
 
   * **[dtc 1.7.2](dtc-host.md)<a id='dtc-host'></a>**<br>
 
@@ -54,7 +54,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### K
 
-  * **[kconfig 6.19](kconfig-host.md)<a id='kconfig-host'></a>**<br>
+  * **[kconfig 7.0](kconfig-host.md)<a id='kconfig-host'></a>**<br>
 
 ### L
 
@@ -66,7 +66,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[lzma2eva 1.0](lzma2eva-host.md)<a id='lzma2eva-host'></a>**<br>
 
-  * **[lzma2 5.6.4](lzma2-host.md)<a id='lzma2-host'></a>**<br>
+  * **[lzma2 5.8.3](lzma2-host.md)<a id='lzma2-host'></a>**<br>
 
 ### M
 
@@ -74,7 +74,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[make 4.4.1](make-host.md)<a id='make-host'></a>**<br>
 
-  * **[meson 1.10.2](meson-host.md)<a id='meson-host'></a>**<br>
+  * **[meson 1.11.1](meson-host.md)<a id='meson-host'></a>**<br>
 
   * **[mklibs 0.1.45](mklibs-host.md)<a id='mklibs-host'></a>**<br>
 
@@ -94,7 +94,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### O
 
-  * **[openssl 3.5.5](openssl-host.md)<a id='openssl-host'></a>**<br>
+  * **[openssl 3.5.6](openssl-host.md)<a id='openssl-host'></a>**<br>
 
 ### P
 
@@ -106,7 +106,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[prelink 20131005](prelink-host.md)<a id='prelink-host'></a>**<br>
 
-  * **[pseudo 1.9.3](pseudo-host.md)<a id='pseudo-host'></a>**<br>
+  * **[pseudo 1.9.5](pseudo-host.md)<a id='pseudo-host'></a>**<br>
 
   * **[python2 2.7.18](python2-host.md)<a id='python2-host'></a>**<br>
 
@@ -116,7 +116,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python3-attrs 25.4.0](python3-attrs-host.md)<a id='python3-attrs-host'></a>**<br>
 
-  * **[python3 3.14.3](python3-host.md)<a id='python3-host'></a>**<br>
+  * **[python3 3.14.4](python3-host.md)<a id='python3-host'></a>**<br>
 
   * **[python3-jsonschema 4.25.1](python3-jsonschema-host.md)<a id='python3-jsonschema-host'></a>**<br>
 
@@ -150,7 +150,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2026-03-19](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2026-04-24](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 

@@ -421,6 +421,7 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
     - [source-files-FRITZ.Box_7412-vr9-06.87.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7412/source-files-FRITZ.Box_7412-vr9-06.87.tar.gz)
   * fritzbox-7430/
     - [source-files-FRITZ.Box_7430-07.27.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7430/source-files-FRITZ.Box_7430-07.27.tar.gz)
+    - [source-files-FRITZ.Box_7430-07.31.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7430/source-files-FRITZ.Box_7430-07.31.tar.gz)
   * fritzbox-7490/
     - [source-files-FRITZ.Box_7490-05.59.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7490/source-files-FRITZ.Box_7490-05.59.tar.gz)
     - [source-files-FRITZ.Box_7490-06.01.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7490/source-files-FRITZ.Box_7490-06.01.tar.gz)
@@ -476,10 +477,12 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
     - [source-files-FRITZ.Box_7530-cortexa9-08.02.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530/source-files-FRITZ.Box_7530-cortexa9-08.02.tar.gz)
     - [source-files-FRITZ.Box_7530-cortexa9-08.20.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530/source-files-FRITZ.Box_7530-cortexa9-08.20.tar.gz)
     - [source-files-FRITZ.Box_7530-cortexa9-08.21.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530/source-files-FRITZ.Box_7530-cortexa9-08.21.tar.gz)
+    - [source-files-FRITZ.Box_7530-cortexa9-08.25.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530/source-files-FRITZ.Box_7530-cortexa9-08.25.tar.gz)
   * fritzbox-7530-ax/
     - [source-files-FRITZ.Box_7530_AX-07.57.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530-ax/source-files-FRITZ.Box_7530_AX-07.57.tar.gz)
     - [source-files-FRITZ.Box_7530_AX-07.81.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530-ax/source-files-FRITZ.Box_7530_AX-07.81.tar.gz)
     - [source-files-FRITZ.Box_7530_AX-08.20.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530-ax/source-files-FRITZ.Box_7530_AX-08.20.tar.gz)
+    - [source-files-FRITZ.Box_7530_AX-08.25.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530-ax/source-files-FRITZ.Box_7530_AX-08.25.tar.gz)
     - [source-files-FRITZ.Box_7530_AX-brcma9-07.56.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530-ax/source-files-FRITZ.Box_7530_AX-brcma9-07.56.tar.gz)
     - [source-files-FRITZ.Box_7530_AX-brcma9-07.80.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530-ax/source-files-FRITZ.Box_7530_AX-brcma9-07.80.tar.gz)
     - [source-files-FRITZ.Box_7530_AX-brcma9-08.00.tar.gz](https://osp.avm.de/fritzbox/fritzbox-7530-ax/source-files-FRITZ.Box_7530_AX-brcma9-08.00.tar.gz)
@@ -565,7 +568,7 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
 
 ### FritzSmart
   * fritzsmart-gateway/
-    - [source-files-FRITZ.Smart_Gateway-08.24.tar.gz](https://osp.avm.de/fritzsmart/fritzsmart-gateway/source-files-FRITZ.Smart_Gateway-08.24.tar.gz)
+    - [source-files-FRITZ.Smart_Gateway-08.26.tar.gz](https://osp.avm.de/fritzsmart/fritzsmart-gateway/source-files-FRITZ.Smart_Gateway-08.26.tar.gz)
 
 ### FritzWlan
   * fritzmesh-set-1600/
