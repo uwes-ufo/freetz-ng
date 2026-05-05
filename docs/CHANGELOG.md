@@ -78,6 +78,7 @@ Latest changes
     * openssl 3.5.6
     * pseudo 1.9.5
     * python3 3.14.4
+    * sed 4.10
 
   - AVM sources:
 
@@ -89,6 +90,7 @@ Latest changes
 
   - Packages:
     * ACME.sh 3.1.3
+    * Apache2 2.4.67
     * Atop 2.12.1
     * Bftpd 6.6
     * BIND 9.11.37/9.20.22
