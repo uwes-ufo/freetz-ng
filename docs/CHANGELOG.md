@@ -77,7 +77,7 @@ Latest changes
     * meson 1.11.1
     * openssl 3.5.6
     * pseudo 1.9.6
-    * python3 3.14.4
+    * python3 3.14.5
     * sed 4.10
 
   - AVM sources:
@@ -98,7 +98,7 @@ Latest changes
     * CA-bundle 2026-03-19
     * Curl 8.12.1/8.20.0
     * davfs2 1.5.2/1.7.3
-    * Dropbear 2026.90
+    * Dropbear 2026.91
     * Git 2.26.2/2.53.0
     * htop 1.0.3/3.5.1
     * htpdate 2.0.2

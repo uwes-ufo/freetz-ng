@@ -57,6 +57,18 @@ aarch64
 sudo dnf -y update && sudo systemctl daemon-reload
 ```
 
+  - Fedora 44 64-Bit:
+```
+sudo dnf -y install \
+  bc binutils bison bzip2 ccache cmake curl ecj elfutils-libelf-devel flex gcc gcc-c++ gettext \
+  git glib2-devel glibc-devel glibc-devel.i686 gnutls-devel ImageMagick inkscape \
+  javapackages-tools kmod libacl-devel libatomic.i686 libattr-devel libcap-devel libgcc libglade2-devel \
+  libstdc++-devel libtool libuuid-devel libxml2-devel libzstd-devel make ncurses ncurses-devel \
+  ncurses-term netcat net-tools openssl openssl-devel openssl-devel-engine patch patchutils perl \
+  perl-String-CRC32 pkgconfig pv qt5-qtbase-devel readline-devel rpcgen rsync sharutils sqlite sqlite-devel \
+  subversion texinfo unar util-linux wget which xz zlib-ng-devel
+```
+
   - Fedora 42/43 64-Bit:
 ```
 sudo dnf -y install \
@@ -173,8 +185,8 @@ sudo apt -y install \
   lib32ncurses-dev lib32stdc++6 lib32z1-dev libacl1-dev libc6-dev-i386 libcap-dev libelf-dev \
   libglib2.0-dev libgnutls28-dev libncurses5-dev libreadline-dev libsqlite3-dev libssl-dev \
   libstring-crc32-perl libtool-bin libusb-dev libxml2-dev libzstd-dev make netcat-traditional patch patchutils \
-  perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo tofrodos unar unzip uuid-dev \
-  wget zlib1g-dev
+  perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo unar unzip uuid-dev wget \
+  zlib1g-dev
 ```
 
   - Debian 12 64-Bit:
@@ -185,8 +197,8 @@ sudo apt -y install \
   lib32ncurses5-dev lib32stdc++6 lib32z1-dev libacl1-dev libc6-dev-i386 libcap-dev libelf-dev \
   libglib2.0-dev libgnutls28-dev libncurses5-dev libreadline-dev libsqlite3-dev libssl-dev \
   libstring-crc32-perl libtool-bin libusb-dev libxml2-dev libzstd-dev make netcat-traditional patch patchutils \
-  perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo tofrodos unar unzip uuid-dev \
-  wget zlib1g-dev
+  perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo unar unzip uuid-dev wget \
+  zlib1g-dev
 ```
 
   - Debian 11 64-Bit:
@@ -197,8 +209,7 @@ sudo apt -y install \
   lib32ncurses5-dev lib32stdc++6 lib32z1-dev libacl1-dev libc6-dev-i386 libcap-dev libelf-dev \
   libglib2.0-dev libgnutls28-dev libncurses5-dev libreadline-dev libsqlite3-dev libssl-dev \
   libstring-crc32-perl libtool-bin libusb-dev libxml2-dev libzstd-dev make netcat patch patchutils perl \
-  pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo tofrodos unar unzip uuid-dev wget \
-  zlib1g-dev
+  pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo unar unzip uuid-dev wget zlib1g-dev
 ```
 
 
@@ -252,8 +263,8 @@ sudo apt-get -y install \
   lib32ncurses-dev lib32stdc++6 lib32z1-dev libacl1-dev libc6-dev-i386 libcap-dev libelf-dev \
   libglib2.0-dev libgnutls28-dev libncurses-dev libreadline-dev libsqlite3-dev libssl-dev \
   libstring-crc32-perl libtool-bin libusb-dev libxml2-dev libzstd-dev make ncftp netcat-openbsd net-tools patch \
-  patchutils perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo tofrodos unar unzip \
-  uuid-dev wget zip zlib1g-dev
+  patchutils perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo unar unzip uuid-dev wget \
+  zip zlib1g-dev
 ```
 
   - Ubuntu 22 64-Bit:
@@ -264,8 +275,8 @@ sudo apt-get -y install \
   lib32ncurses5-dev lib32stdc++6 lib32z1-dev libacl1-dev libc6-dev-i386 libcap-dev libelf-dev \
   libglib2.0-dev libgnutls28-dev libncurses5-dev libreadline-dev libsqlite3-dev libssl-dev \
   libstring-crc32-perl libtool-bin libusb-dev libxml2-dev libzstd-dev make ncftp netcat-openbsd net-tools patch \
-  patchutils perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo tofrodos unar unzip \
-  uuid-dev wget zip zlib1g-dev
+  patchutils perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo unar unzip uuid-dev wget \
+  zip zlib1g-dev
 ```
 
   - Ubuntu 20/21 64-Bit:
@@ -276,8 +287,8 @@ sudo apt-get -y install \
   lib32ncurses5-dev lib32stdc++6 lib32z1-dev libacl1-dev libc6-dev-i386 libcap-dev libelf-dev \
   libglib2.0-dev libgnutls28-dev libncurses5-dev libreadline-dev libsqlite3-dev libssl-dev \
   libstring-crc32-perl libtool-bin libusb-dev libxml2-dev libzstd-dev make ncftp netcat net-tools patch \
-  patchutils perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo tofrodos unar unzip \
-  uuid-dev wget zip zlib1g-dev
+  patchutils perl pkg-config pv rsync sharutils sqlite3 subversion sudo texinfo unar unzip uuid-dev wget \
+  zip zlib1g-dev
 # sqlite-32bit lässt sich mit apt nicht installieren, aber mit apt-get schon. Siehe auch:
 # https://developpaper.com/ubuntu-solves-the-problem-of-libsqlite3-0-dependency-recommended/
 sudo apt -y install libzstd-dev:i386 sqlite3:i386
@@ -291,7 +302,7 @@ sudo apt-get -y install \
   lib32ncurses5-dev lib32stdc++6 lib32z1-dev libacl1-dev libc6-dev-i386 libcap-dev libglib2.0-dev \
   libgnutls28-dev libncurses5-dev libreadline-dev libsqlite3-dev libssl-dev libstring-crc32-perl \
   libtool-bin libusb-dev libzstd-dev make ncftp netcat net-tools openssl patch patchutils perl \
-  pkg-config pv rsync sqlite3 subversion sudo texinfo tofrodos unar unzip uuid-dev wget zlib1g-dev
+  pkg-config pv rsync sqlite3 subversion sudo texinfo unar unzip uuid-dev wget zlib1g-dev
 ```
 
   - Ubuntu 15/16/17 64-Bit:
@@ -301,7 +312,7 @@ sudo apt-get -y install \
   gcc-multilib gettext git graphicsmagick imagemagick inkscape intltool kmod lib32ncurses5-dev \
   lib32stdc++6 libacl1-dev libc6-dev-i386 libcap-dev libglib2.0-dev libncurses5-dev libreadline-dev \
   libstring-crc32-perl libtool-bin libusb-dev make patch perl pkg-config pv realpath rsync subversion sudo texinfo \
-  tofrodos unar unzip wget zlib1g-dev
+  unar unzip wget zlib1g-dev
 ```
 
   - Ubuntu 14 64-Bit:
@@ -312,7 +323,7 @@ sudo apt-get -y install \
   inkscape intltool kmod lib32ncurses5-dev lib32stdc++6 lib32z1-dev libacl1-dev libc6-dev-i386 \
   libcap-dev libglib2.0-dev libncurses5-dev libreadline-dev libsqlite3-dev libstring-crc32-perl \
   libtool libusb-dev make netcat openssl patch perl pkg-config pv realpath rsync sqlite3 subversion \
-  sudo texinfo tofrodos unar unzip wget zlib1g-dev
+  sudo texinfo unar unzip wget zlib1g-dev
 ```
 Zusätzlich muss manuell installiert werden:
 ```
@@ -346,8 +357,7 @@ sudo apt-get -y install libtool-bin
 sudo apt-get -y install \
   autoconf automake automake1.9 binutils bison bzip2 ecj fastjar flex g++ gawk gcc gettext \
   graphicsmagick intltool libacl1-dev libcap-dev libncurses5-dev libreadline-dev libstring-crc32-perl \
-  libtool libusb-dev make patch perl pkg-config python realpath subversion texinfo tofrodos unzip \
-  zlib1g-dev
+  libtool libusb-dev make patch perl pkg-config python realpath subversion texinfo unzip zlib1g-dev
 ```
 
   - Ubuntu 10/11/12 32-Bit:
@@ -356,7 +366,7 @@ sudo apt-get -y install \
   autoconf automake binutils bison bzip2 ecj fastjar flex g++ gawk gcc gettext git-core \
   imagemagick intltool libacl1-dev libattr1-dev libcap-dev libglib2.0-dev libncurses5-dev \
   libreadline-dev libstring-crc32-perl libtool libusb-dev make patch perl pkg-config python realpath \
-  subversion texinfo tofrodos unzip xz-utils zlib1g-dev
+  subversion texinfo unzip xz-utils zlib1g-dev
 ```
 
   - Ubuntu 9.04 32-Bit (kein automake 1.8, "ecj" statt "ecj-bootstrap"):
@@ -365,7 +375,7 @@ sudo apt-get -y install \
   autoconf automake automake1.9 binutils bison bzip2 ecj fastjar flex g++ gawk gcc gettext \
   git-core imagemagick intltool jikes libacl1-dev libattr1-dev libcap-dev libglib2.0-dev \
   libncurses5-dev libreadline-dev libstring-crc32-perl libtool libusb-dev make patch perl pkg-config \
-  python realpath subversion texinfo tofrodos unzip xz-utils zlib1g-dev
+  python realpath subversion texinfo unzip xz-utils zlib1g-dev
 ```
 
 ### Mint
