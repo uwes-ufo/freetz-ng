@@ -64,7 +64,7 @@ Latest changes
 ### devel
 
   - Build system:
-    * ccache 4.13.5
+    * ccache 4.13.6
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.57
 
   - Host tools:
@@ -98,6 +98,7 @@ Latest changes
     * CA-bundle 2026-03-19
     * Curl 8.12.1/8.20.0
     * davfs2 1.5.2/1.7.3
+    * Dnsmasq 2.80/2.92rel2
     * Dropbear 2026.91
     * Git 2.26.2/2.53.0
     * htop 1.0.3/3.5.1
@@ -118,7 +119,7 @@ Latest changes
     * rsync 3.4.2
     * sslh 2.2.4/2.3.1
     * Stunnel 5.78
-    * SQLite 3.40.1/3.53.0
+    * SQLite 3.40.1/3.53.1
     * tinc 1.0.37/1.1pre18
     * Tinyproxy 1.11.3
     * Tor 0.4.8.25
@@ -132,7 +133,7 @@ Latest changes
     * XZ 5.8.3
 
   - Libraries:
-    * expat 2.7.5/2.8.0
+    * expat 2.7.5/2.8.1
     * file 5.47
     * FreeType 2.14.3
     * gettext 1.0
