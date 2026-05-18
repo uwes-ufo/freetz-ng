@@ -68,17 +68,25 @@ Latest changes
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.57
 
   - Host tools:
+    * busybox 1.38.0
     * autoconf 2.73
-    * ca-bundle 2026-03-19
+    * ca-bundle 2026-05-14
     * cmake 4.3.2
     * dos2unix 7.5.5
     * file 5.47
     * kconfig 7.0
     * meson 1.11.1
     * openssl 3.5.6
-    * pseudo 1.9.6
+    * pseudo 1.9.7
     * python3 3.14.5
+    * python3-attrs 26.1.0
+    * python3-jsonschema 4.26.0
+    * python3-packaging 26.2
+    * python3-pip 26.1.1
+    * python3-setuptools 82.0.1
     * sed 4.10
+    * uboot 2026.04
+    * util-linux 2.42
 
   - AVM sources:
 
@@ -95,12 +103,14 @@ Latest changes
     * Bftpd 6.6
     * BIND 9.11.37/9.20.22
     * Binutils 2.46.0
-    * CA-bundle 2026-03-19
+    * BusyBox 1.27.2/1.38.0
+    * CA-bundle 2026-05-14
     * Curl 8.12.1/8.20.0
     * davfs2 1.5.2/1.7.3
     * Dnsmasq 2.80/2.92rel2
     * Dropbear 2026.91
     * Git 2.26.2/2.53.0
+    * HAProxy 2.6.29
     * htop 1.0.3/3.5.1
     * htpdate 2.0.2
     * ImageMagick 7.1.0-62/7.1.2-21

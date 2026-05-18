@@ -50,6 +50,7 @@
 /sfk
 /sha1sum
 /sha256sum
+/sha384sum
 /sha512sum
 /sum
 /tar
@@ -66,6 +67,7 @@
 /unsquashfs4-avm-le
 /unxz
 /unzip
+/uuidgen
 /wget
 /xargs
 /xdelta3
