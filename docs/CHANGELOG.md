@@ -65,19 +65,19 @@ Latest changes
 
   - Build system:
     * ccache 4.13.6
-    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.57
+    * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.58
 
   - Host tools:
     * busybox 1.38.0
     * autoconf 2.73
     * ca-bundle 2026-05-14
-    * cmake 4.3.2
+    * cmake 4.3.3
     * dos2unix 7.5.5
-    * fakeroot 1.38
+    * fakeroot 1.38.1
     * file 5.47
     * kconfig 7.0
     * meson 1.11.1
-    * openssl 3.5.6
+    * openssl 3.5.7
     * pseudo 1.9.7
     * python3 3.14.5
     * python3-attrs 26.1.0
@@ -90,52 +90,58 @@ Latest changes
     * util-linux 2.42
 
   - AVM sources:
+    * 5690 XGS 8.25 - 5.4.293
 
   - Scripts:
     * zensical_httpserver.sh - run local zensical http server to develop docs
 
   - Patches:
+    * Various Fritzos 8.5 related changes
     * Still are some patches not yet adapted for Fritzos 8.2x
 
   - Packages:
     * ACME.sh 3.1.3
-    * Apache2 2.4.67
+    * Apache2 2.4.68
     * Atop 2.12.1
     * Bftpd 6.6
-    * BIND 9.11.37/9.20.22
+    * BIND 9.11.37/9.20.23
     * Binutils 2.46.0
     * BusyBox 1.27.2/1.38.0
     * CA-bundle 2026-05-14
     * Curl 8.12.1/8.20.0
     * davfs2 1.5.2/1.7.3
-    * Dnsmasq 2.80/2.92rel2
+    * Dnsmasq 2.80/2.93
     * Dropbear 2026.91
     * Git 2.26.2/2.53.0
     * HAProxy 2.6.29
     * htop 1.0.3/3.5.1
     * htpdate 2.0.2
-    * ImageMagick 7.1.0-62/7.1.2-21
+    * ImageMagick 7.1.0-62/7.1.2-25
     * iPerf3 3.3/3.21
     * LCD4linux 63fffafb
     * Iptables 1.4.11.1/1.4.21/1.6.2/1.8.13
-    * ldd 0.1/1.0.57
+    * ldd 0.1/1.0.58
     * Minicom 2.11.1
     * Nano 9.0
     * Nmap 4.76/5.51/7.99
     * OpenSSH 9.3p2/10.3p1
-    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.20/3.5.6
+    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.21/3.5.7
     * OpenVPN 2.4.12/2.5.11/2.6.20/2.7.4
     * procps-ng 4.0.6
     * Python 3.14.3
-    * rsync 3.4.2
+    * RRDtool 1.2.30/1.10.3
+    * radvd 1.9.3/2.21
+    * rsync 3.4.1/3.4.4
     * sslh 2.2.4/2.3.1
     * Stunnel 5.78
     * SQLite 3.40.1/3.53.1
     * tinc 1.0.37/1.1pre18
     * Tinyproxy 1.11.3
+    * tmux 3.6b
     * Tor 0.4.8.25
+    * Transmission 3.00/4.1.2
     * Tree 1.8.0/2.3.2
-    * Unbound 1.25.0
+    * Unbound 1.25.1
     * UnRAR 6.1.7/7.2.5
     * Virtualip-NG 1.0
     * wireguard-tools 1.0.20260223
@@ -149,7 +155,7 @@ Latest changes
     * FreeType 2.14.3
     * gettext 1.0
     * GLib2 2.32.4/2.88.0
-    * harfbuzz 14.2.0
+    * harfbuzz 14.2.1
     * libcap 2.49/2.78
     * libcap-ng 0.9.3
     * libexif 0.6.26
