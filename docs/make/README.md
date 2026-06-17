@@ -355,7 +355,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>lftp 4.8.4 (binary only) - DEPRECATED</u><a id='lftp'></a>**<br>
     LFTP is sophisticated file transfer program with command line interface. It supports FTP, HTTP, FISH, SFTP, HTTPS and FTPS protocols. GNU Readline library is used for input.
 
-  * **[Lighttpd 1.4.82](lighttpd.md)<a id='lighttpd'></a>**<br>
+  * **[Lighttpd 1.4.83](lighttpd.md)<a id='lighttpd'></a>**<br>
     Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver; as it is designed and optimized for high performance environments. With a small memory footprint compared to other web-servers, effective management of the cpu-load, and advanced feature set (FastCGI, SCGI, Auth, Output-Compression, URL-Rewriting and many more) lighttpd is the perfect solution for every server that is suffering load problems. In case you want to configure virtual hosts, you may want to consider the package onlinechanged-cgi which allows you to configure multiple DynDNS entries for your box.
 
   * **[Lua 5.1.5/5.4.8 (binary only)](lua.md)<a id='lua'></a>**<br>
@@ -846,7 +846,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[lsof 4.89 (binary only) - DEPRECATED](lsof.md)<a id='lsof'></a>**<br>
     lsof (LiSt Open Files) The lsof tool lists information about files opened by processes.
 
-  * **[ltrace 0.7.3checkpoint1-git (binary only) - DEPRECATED](ltrace.md)<a id='ltrace'></a>**<br>
+  * **[ltrace 0.7.3-git/0.8.1 (binary only)](ltrace.md)<a id='ltrace'></a>**<br>
     ltrace - library call tracer ltrace is a debugging tool, similar to strace, but it traces library calls instead of system calls.
 
   * **[Nano Shell 0.1 (binary only) - DEPRECATED](nano-shell.md)<a id='nano-shell'></a>**<br>
