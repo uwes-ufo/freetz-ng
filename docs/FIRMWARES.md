@@ -268,6 +268,8 @@ Currently supported devices and firmwares
     - 258.07.59 rev114650 {ALL} [MOVE21NL2]
     - 258.08.03 rev119185 {ALL} [Smart24 P1 NL1]
     - 258.08.20 rev124915 {ALL} [Smart24 P2]
+  * __Fritz!Box 6850 5G v2 (UNTESTED)__
+    - 312.08.24 rev133801 {ALL} [Smart24 P2 NL1] (Labor)
 
   * __Fritz!Box 6860 5G (UNTESTED)__
     - 277.08.03 rev119187 {ALL} [Smart24 P1 FCS]
@@ -561,17 +563,17 @@ Currently supported devices and firmwares
 
   * __Fritz!Powerline 1240 AX__
     - 275.07.58 rev114298 {ALL} [MOVE21NL1]
-    - 275.08.20 rev127613 {ALL} [Smart24 P2]
+    - 275.08.25 rev133713 {ALL} [Smart24 P2 NL1]
   * __Fritz!Powerline 1260E__
     - 157.07.01 rev63181 {ALL}
     - 157.07.12 rev70670 {ALL} [MESH18 NL2]
     - 157.07.29 rev93269 {ALL} [PSQ19P2NL4]
     - 157.07.58 rev113255 {ALL} [MOVE21NL1]
-    - 157.08.20 rev126998 {ALL} [Smart24 P2]
+    - 157.08.25 rev133711 {ALL} [Smart24 P2 NL1]
   * __Fritz!Powerline 1260 v2 (UNTESTED)__
     - 249.07.29 rev93271 {ALL} [PSQ19P2NL4]
     - 249.07.58 rev113256 {ALL} [MOVE21NL1]
-    - 249.08.20 rev126999 {ALL} [Smart24 P2]
+    - 249.08.25 rev133712 {ALL} [Smart24 P2 NL1]
 
 ### Fritz!Repeater
 
