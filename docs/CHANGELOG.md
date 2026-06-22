@@ -118,11 +118,15 @@ Latest changes
     * htpdate 2.0.2
     * ImageMagick 7.1.0-62/7.1.2-25
     * iPerf3 3.3/3.21
+    * jq 1.8.2
+    * juis_bearer 1.0
+    * juis_check 1.4
     * LCD4linux 63fffafb
     * Iptables 1.4.11.1/1.4.21/1.6.2/1.8.13
     * ldd 0.1/1.0.58
     * Lighttpd 1.4.84
     * ltrace 0.7.3-git/0.8.1
+    * mini-snmpd 1.7
     * Minicom 2.11.1
     * Mosquitto 2.0.22/2.1.2
     * Nano 9.0
@@ -287,6 +291,7 @@ Latest changes
     * harfbuzz 12.3.2
     * libcap 2.49/2.77
     * libdeflate 1.25
+    * libffi 3.6.0
     * libpcap 1.1.1/1.10.6
     * libpng 1.6.55
     * liburcu 0.15.6

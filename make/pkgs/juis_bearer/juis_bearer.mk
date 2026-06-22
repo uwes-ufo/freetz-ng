@@ -1,4 +1,4 @@
-$(call PKG_INIT_BIN, 1.4)
+$(call PKG_INIT_BIN, 1.0)
 ### STEWARD:=fda77
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/$(pkg)
@@ -21,7 +21,7 @@ $(pkg)-precompiled: $($(PKG)_TARGET_BINARY)
 $(pkg)-clean:
 
 $(pkg)-uninstall:
-	$(RM) $(JUIS_CHECK_TARGET_BINARY)
+	$(RM) $(JUIS_BEARER_TARGET_BINARY)
 
 $(PKG_FINISH)
 
