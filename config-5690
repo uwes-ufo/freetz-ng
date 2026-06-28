@@ -1109,6 +1109,7 @@ FREETZ_OPENSSL_VERSION_35_MAX=y
 FREETZ_LIB_liblz4=y
 # FREETZ_LIB_liblzo2 is not set
 FREETZ_LIB_liblzma=y
+# FREETZ_LIB_libzip is not set
 FREETZ_LIB_libz=y
 # end of Data compression
 
