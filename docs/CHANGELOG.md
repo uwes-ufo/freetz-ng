@@ -73,11 +73,13 @@ Latest changes
     * ca-bundle 2026-05-14
     * cmake 4.3.4
     * dos2unix 7.5.5
-    * fakeroot 1.38.1
+    * dtc 1.8.1
+    * fakeroot 2.0
     * file 5.47
     * kconfig 7.1
     * meson 1.11.1
     * openssl 3.5.7
+    * patch 2.8
     * pseudo 1.9.8
     * python3 3.14.6
     * python3-attrs 26.1.0
@@ -96,15 +98,16 @@ Latest changes
     * zensical_httpserver.sh - run local zensical http server to develop docs
 
   - Patches:
+    * New Patch: Remove hd-idle binary
     * Various Fritzos 8.5 related changes
-    * Still are some patches not yet adapted for Fritzos 8.2x
+    * Still are some patches not yet adapted for Fritzos 8.2x + 8.5x
 
   - Packages:
     * ACME.sh 3.1.3
     * Apache2 2.4.68
     * Atop 2.12.1
     * Bftpd 6.6
-    * BIND 9.11.37/9.20.23
+    * BIND 9.11.37/9.20.24
     * Binutils 2.46.0
     * BusyBox 1.27.2/1.38.0
     * CA-bundle 2026-05-14
@@ -112,11 +115,12 @@ Latest changes
     * davfs2 1.5.2/1.7.3
     * Dnsmasq 2.80/2.93
     * Dropbear 2026.91
+    * dtc 1.8.1
     * Git 2.26.2/2.53.0
     * HAProxy 2.6.29
     * htop 1.0.3/3.5.1
     * htpdate 2.0.2
-    * ImageMagick 7.1.0-62/7.1.2-25
+    * ImageMagick 7.1.0-62/7.1.2-27
     * iPerf3 3.3/3.21
     * jq 1.8.2
     * juis_bearer 1.0
@@ -126,14 +130,14 @@ Latest changes
     * ldd 0.1/1.0.58
     * Lighttpd 1.4.84
     * ltrace 0.7.3-git/0.8.1
-    * mini-snmpd 1.7
+    * mini-snmpd 2.0
     * Minicom 2.11.1
     * Mosquitto 2.0.22/2.1.2
-    * Nano 9.0
+    * Nano 9.1
     * Nmap 4.76/5.51/7.99
     * OpenSSH 9.3p2/10.3p1
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.21/3.5.7
-    * OpenVPN 2.4.12/2.5.11/2.6.20/2.7.4
+    * OpenVPN 2.4.12/2.5.11/2.6.21/2.7.5
     * procps-ng 4.0.6
     * Python 3.14.3
     * RRDtool 1.2.30/1.10.3
@@ -144,9 +148,9 @@ Latest changes
     * SQLite 3.40.1/3.53.1
     * tinc 1.0.37/1.1pre18
     * Tinyproxy 1.11.3
-    * tmux 3.6b
+    * tmux 3.7b
     * Tor 0.4.8.25
-    * Transmission 3.00/4.1.2
+    * Transmission 3.00/4.1.3
     * Tree 1.8.0/2.3.2
     * Unbound 1.25.1
     * UnRAR 6.1.7/7.2.5
@@ -166,6 +170,7 @@ Latest changes
     * libcap 2.49/2.78
     * libcap-ng 0.9.3
     * libcjson 1.7.19
+    * libevent 2.1.13
     * libexif 0.6.26
     * libmaxminddb 1.13.3
     * libpng 1.6.58
