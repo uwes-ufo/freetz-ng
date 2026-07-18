@@ -5,7 +5,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### A
 
-  * **[ACME.sh 3.1.3](acme.md)<a id='acme'></a>**<br>
+  * **[ACME.sh 3.1.4](acme.md)<a id='acme'></a>**<br>
     A pure Unix shell script implementing ACME client protocol.
 
   * **[Apache2 2.4.68 (binary only)](apache2.md)<a id='apache2'></a>**<br>
@@ -267,7 +267,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>html2text 1.3.2a (binary only) - DEPRECATED</u><a id='html2text'></a>**<br>
     html2text is a command line utility, written in C++, that converts HTML documents into plain text.
 
-  * **[htop 1.0.3/3.5.1 (binary only)](htop.md)<a id='htop'></a>**<br>
+  * **[htop 1.0.3/3.5.2 (binary only)](htop.md)<a id='htop'></a>**<br>
     htop is a more powerful alternative to top, using ncurses.
 
   * **[htpdate 2.0.2](htpdate.md)<a id='htpdate'></a>**<br>
@@ -661,7 +661,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only) - DEPRECATED</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite 3.40.1/3.53.1 (binary only)](sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite 3.40.1/3.53.3 (binary only)](sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
@@ -731,7 +731,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[tmux 3.7b (binary only)](tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.8.25](tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.8.25 - DEPRECATED](tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
 
   * **[Transmission 3.00/4.1.3 (binary only)](transmission.md)<a id='transmission'></a>**<br>

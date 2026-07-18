@@ -103,7 +103,7 @@ Latest changes
     * Still are some patches not yet adapted for Fritzos 8.2x + 8.5x
 
   - Packages:
-    * ACME.sh 3.1.3
+    * ACME.sh 3.1.4
     * Apache2 2.4.68
     * Atop 2.12.1
     * Bftpd 6.6
@@ -118,7 +118,7 @@ Latest changes
     * dtc 1.8.1
     * Git 2.26.2/2.53.0
     * HAProxy 2.6.29
-    * htop 1.0.3/3.5.1
+    * htop 1.0.3/3.5.2
     * htpdate 2.0.2
     * ImageMagick 7.1.0-62/7.1.2-27
     * iPerf3 3.3/3.21
@@ -145,7 +145,7 @@ Latest changes
     * rsync 3.4.1/3.4.4
     * sslh 2.2.4/2.3.1
     * Stunnel 5.79
-    * SQLite 3.40.1/3.53.1
+    * SQLite 3.40.1/3.53.3
     * tinc 1.0.37/1.1pre18
     * Tinyproxy 1.11.3
     * tmux 3.7b
