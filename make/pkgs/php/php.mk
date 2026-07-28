@@ -92,11 +92,6 @@ endif
 
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_PHP_WITH_JSON),--enable-json,--disable-json)
 
-ifeq ($(strip $(FREETZ_PACKAGE_PHP_WITH_LIBONIG)),y)
-$(PKG)_DEPENDS_ON += libonig
-$(PKG)_CONFIGURE_OPTIONS += --with-onig="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
-endif
-
 ifeq ($(strip $(FREETZ_PACKAGE_PHP_WITH_LIBXML)),y)
 $(PKG)_DEPENDS_ON += libxml2
 $(PKG)_CONFIGURE_OPTIONS += --with-libxml-dir="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
@@ -156,6 +151,14 @@ ifeq ($(strip $(FREETZ_PACKAGE_PHP_WITH_ZIP)),y)
 $(PKG)_CONFIGURE_OPTIONS += --enable-zip
 endif
 
+
+ifneq ($(strip $(FREETZ_PACKAGE_PHP_VERSION_56)),y)
+
+ifeq ($(strip $(FREETZ_PACKAGE_PHP_WITH_LIBONIG)),y)
+$(PKG)_DEPENDS_ON += libonig
+$(PKG)_CONFIGURE_OPTIONS += --with-onig="$(TARGET_TOOLCHAIN_STAGING_DIR)/usr"
+endif
+
 ifeq ($(strip $(FREETZ_PACKAGE_PHP_WITH_FFI)),y)
 $(PKG)_DEPENDS_ON += libffi
 $(PKG)_CONFIGURE_OPTIONS += --with-ffi
@@ -173,6 +176,9 @@ $(PKG)_CONFIGURE_OPTIONS += --with-pdo-mysql=mysqlnd
 else
 $(PKG)_CONFIGURE_OPTIONS += --without-pdo-mysql
 endif
+
+endif
+
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_PHP_STATIC
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_PHP_apxs2
