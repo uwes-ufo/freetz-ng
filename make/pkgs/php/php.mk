@@ -32,6 +32,11 @@ $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_PHP_VERSION_85
 
 $(PKG)_CONDITIONAL_PATCHES+=$(call GET_MAJOR_VERSION,$($(PKG)_VERSION))
 
+ifneq ($(strip $(FREETZ_PACKAGE_PHP_VERSION_56)),y)
+# just for 200-copy_file_range-check.patch of configure.ac !
+$(PKG)_CONFIGURE_PRE_CMDS += ./buildconf --force $(SILENT);
+endif
+
 $(PKG)_EXTRA_CFLAGS  := -ffunction-sections -fdata-sections
 $(PKG)_EXTRA_LDFLAGS := -Wl,--gc-sections
 ifeq ($(strip $(FREETZ_PACKAGE_PHP_STATIC)),y)
