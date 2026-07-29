@@ -28,22 +28,22 @@ if FREETZ_PACKAGE_PHP
 
 		config FREETZ_PACKAGE_PHP_VERSION_82
 			bool "8.2.33 - UNTESTED"
-			depends on FREETZ_TARGET_GCC_5_MIN
+			depends on FREETZ_TARGET_GCC_8_MIN
 			select FREETZ_LIB_libonig if ! FREETZ_PACKAGE_PHP_STATIC
 
 		config FREETZ_PACKAGE_PHP_VERSION_83
 			bool "8.3.33 - UNTESTED"
-			depends on FREETZ_TARGET_GCC_5_MIN
+			depends on FREETZ_TARGET_GCC_8_MIN
 			select FREETZ_LIB_libonig if ! FREETZ_PACKAGE_PHP_STATIC
 
 		config FREETZ_PACKAGE_PHP_VERSION_84
 			bool "8.4.24 - UNTESTED"
-			depends on FREETZ_TARGET_GCC_5_MIN
+			depends on FREETZ_TARGET_GCC_8_MIN
 			select FREETZ_LIB_libonig if ! FREETZ_PACKAGE_PHP_STATIC
 
 		config FREETZ_PACKAGE_PHP_VERSION_85
 			bool "8.5.9"
-			depends on FREETZ_TARGET_GCC_5_MIN
+			depends on FREETZ_TARGET_GCC_8_MIN
 			select FREETZ_LIB_libonig if ! FREETZ_PACKAGE_PHP_STATIC
 
 	endchoice
