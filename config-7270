@@ -1150,7 +1150,14 @@ FREETZ_LIB_libpcap_WITH_VERSION_ABANDON=y
 # FREETZ_LIB_libonig is not set
 # FREETZ_LIB_libpcre is not set
 # FREETZ_LIB_libpcreposix is not set
+
+#
+# libpcre2
+#
 # FREETZ_LIB_libpcre2 is not set
+# FREETZ_LIB_libpcre2_WITH_JIT is not set
+# end of libpcre2
+
 # FREETZ_LIB_libpcre2_posix is not set
 # end of Regular expressions
 
@@ -1290,7 +1297,14 @@ FREETZ_LIB_libexpat_WITH_VERSION_ABANDON=y
 FREETZ_LIB_libexpat=y
 # end of libexpat
 
+#
+# libxml2
+#
 # FREETZ_LIB_libxml2 is not set
+# FREETZ_LIB_libxml2_WITH_HTML is not set
+# FREETZ_LIB_libxml2_WITH_RELAXNG is not set
+# end of libxml2
+
 # FREETZ_LIB_libxslt is not set
 # FREETZ_LIB_libexslt is not set
 # end of XML & XSLT
