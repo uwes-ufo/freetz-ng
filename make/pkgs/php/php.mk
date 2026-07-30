@@ -194,6 +194,7 @@ endif
 
 ifeq ($(strip $(FREETZ_PACKAGE_PHP_WITH_ZIP)),y)
 ifeq ($(strip $(FREETZ_PACKAGE_PHP_VERSION_56)),y)
+$(PKG)_DEPENDS_ON += zlib
 $(PKG)_CONFIGURE_OPTIONS += --enable-zip
 else
 $(PKG)_DEPENDS_ON += libzip
