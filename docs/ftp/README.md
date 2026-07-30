@@ -185,6 +185,8 @@ Content: [FritzBox](#fritzbox) - [FritzPowerline](#fritzpowerline) - [FritzSmart
   * fritzbox-7590-ax/
     - deutschland: [FRITZ.Box_7590_AX-08.25.image](https://download.avm.de/fritzbox/fritzbox-7590-ax/deutschland/fritz.os/FRITZ.Box_7590_AX-08.25.image)
     - other: [FRITZ.Box_7590_AX-08.25.image](https://download.avm.de/fritzbox/fritzbox-7590-ax/other/fritz.os/FRITZ.Box_7590_AX-08.25.image)
+  * fritzbox-7620/
+    - deutschland: [FRITZ.Box_7620-08.26.image](https://download.avm.de/fritzbox/fritzbox-7620/deutschland/fritz.os/FRITZ.Box_7620-08.26.image)
   * fritzbox-7630/
     - deutschland: [FRITZ.Box_7630-08.25.image](https://download.avm.de/fritzbox/fritzbox-7630/deutschland/fritz.os/FRITZ.Box_7630-08.25.image)
     - other: [FRITZ.Box_7630-08.25.image](https://download.avm.de/fritzbox/fritzbox-7630/other/fritz.os/FRITZ.Box_7630-08.25.image)
