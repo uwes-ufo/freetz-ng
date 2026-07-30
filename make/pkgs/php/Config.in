@@ -70,7 +70,7 @@ if FREETZ_PACKAGE_PHP
 		default n
 
 	config FREETZ_PACKAGE_PHP_apxs2
-		bool "Apache2 module - UNTESTED"
+		bool "Apache2 module"
 		default n
 
 
