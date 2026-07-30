@@ -52,6 +52,7 @@ $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_PHP_WITH_PCRE2_JIT),--with-pcr
 endif
 
 $(PKG)_CONFIGURE_OPTIONS += --enable-cli
+$(PKG)_EXCLUDED += $(if $(FREETZ_PACKAGE_PHP_cgi),,$($(PKG)_TARGET_BINARY))
 $(PKG)_EXCLUDED += $(if $(FREETZ_PACKAGE_PHP_cli),,$($(PKG)_CLI_TARGET_BINARY))
 
 ifeq ($(strip $(FREETZ_PACKAGE_PHP_apxs2)),y)

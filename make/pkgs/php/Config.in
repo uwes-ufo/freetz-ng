@@ -1,6 +1,6 @@
 menuconfig FREETZ_PACKAGE_PHP
 	bool "PHP 5.6.40/8.2.33/8.3.33/8.4.24/8.5.9 (binary only)"
-	select FREETZ_PACKAGE_PHP_cgi
+	select FREETZ_PACKAGE_PHP_cgi if !( FREETZ_PACKAGE_PHP_cli || FREETZ_PACKAGE_PHP_apxs2 )
 	select FREETZ_LIB_libdl if ! FREETZ_PACKAGE_PHP_STATIC && FREETZ_TARGET_UCLIBC_HAS_multiple_libs
 	default n
 	help
@@ -63,7 +63,7 @@ if FREETZ_PACKAGE_PHP
 
 	config FREETZ_PACKAGE_PHP_cgi
 		bool "PHP CGI"
-		default y
+		default n
 
 	config FREETZ_PACKAGE_PHP_cli
 		bool "PHP CLI"
