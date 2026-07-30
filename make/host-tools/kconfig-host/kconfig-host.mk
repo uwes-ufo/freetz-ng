@@ -52,6 +52,12 @@ $(patsubst %,$(pkg)-%,$($(PKG)_TARGET_PRG)): $(pkg)-precompiled--int
 $(patsubst %,$(pkg)-%,$($(PKG)_TARGET_PRG)): $(pkg)-% : $($(PKG)_TARGET_DIR)/%
 $(pkg)-gconf: $(pkg)-gconf.ui
 
+$(pkg)-gconf $(pkg)-qconf: $($(PKG)_DIR)/.installed
+$($(PKG)_DIR)/.installed:
+	mkdir -p $(KCONFIG_HOST_TARGET_DIR)/scripts/kconfig/icons; ln -sf ../../gconf.ui $(KCONFIG_HOST_TARGET_DIR)/scripts/kconfig/
+	cp $(KCONFIG_HOST_DIR)/scripts/kconfig/icons/*.xpm $(KCONFIG_HOST_TARGET_DIR)/scripts/kconfig/icons/
+	@touch $@
+
 $(pkg)-precompiled: $(patsubst %,$($(PKG)_TARGET_DIR)/%,$($(PKG)_TARGET_DEF))
 
 
@@ -70,7 +76,7 @@ $(pkg)-clean:
 		$(KCONFIG_HOST_DIR)/scripts/kconfig/gconf \
 		$(KCONFIG_HOST_DIR)/scripts/kconfig/nconf \
 		$(KCONFIG_HOST_DIR)/scripts/kconfig/mconf
-	-$(RM) $(KCONFIG_HOST_DIR)/.{configured,compiled}
+	-$(RM) $(KCONFIG_HOST_DIR)/.{configured,compiled,installed}
 
 $(pkg)-dirclean:
 	$(RM) -r $(KCONFIG_HOST_DIR)
