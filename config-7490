@@ -132,6 +132,7 @@ FREETZ_TYPE_7490=y
 # FREETZ_TYPE_7583_V2 is not set
 # FREETZ_TYPE_7590_W5 is not set
 # FREETZ_TYPE_7590_W6 is not set
+# FREETZ_TYPE_7620 is not set
 # FREETZ_TYPE_7630 is not set
 # FREETZ_TYPE_7632 is not set
 # FREETZ_TYPE_7682 is not set
@@ -1006,19 +1007,27 @@ FREETZ_PACKAGE_SYSLOGD_CGI=y
 #
 
 #
-# Apache Portable Runtime libs
+# Apache Portable Runtime
 #
 # FREETZ_LIB_libapr is not set
 # FREETZ_LIB_libaprutil is not set
-# end of Apache Portable Runtime libs
+# end of Apache Portable Runtime
 
 #
-# Avahi libraries
+# Arithmetic
+#
+# FREETZ_LIB_libgmp is not set
+# FREETZ_LIB_libmpfr is not set
+# FREETZ_LIB_libmpc is not set
+# end of Arithmetic
+
+#
+# Avahi
 #
 # FREETZ_LIB_libavahi_common is not set
 # FREETZ_LIB_libavahi_core is not set
 # FREETZ_LIB_libavahi_client is not set
-# end of Avahi libraries
+# end of Avahi
 
 #
 # Charsets & Internationalization
@@ -1120,33 +1129,27 @@ FREETZ_LIB_libz=y
 # end of Data compression
 
 #
-# Database
+# Databases
 #
 # FREETZ_LIB_libdb is not set
 # FREETZ_LIB_libmaxminddb is not set
-
-#
-# libsqlite3
-#
-FREETZ_LIB_libsqlite3_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libsqlite3 is not set
-# end of libsqlite3
+FREETZ_LIB_libsqlite3_WITH_VERSION_CURRENT=y
 
 #
-# librrd
+# rrdtool --------------------------------
 #
 # FREETZ_LIB_librrd_WITH_VERSION_ABANDON is not set
 FREETZ_LIB_librrd_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_librrd is not set
-# end of librrd
-# end of Database
+# end of Databases
 
 #
 # File systems
 #
 
 #
-# E2fsprogs libraries
+# E2fsprogs ------------------------------
 #
 # FREETZ_LIB_libblkid is not set
 # FREETZ_LIB_libcom_err is not set
@@ -1154,8 +1157,10 @@ FREETZ_LIB_librrd_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libext2fs is not set
 # FREETZ_LIB_libss is not set
 # FREETZ_LIB_libuuid is not set
-# end of E2fsprogs libraries
 
+#
+# Misc -----------------------------------
+#
 # FREETZ_LIB_libfuse is not set
 # FREETZ_LIB_libntfs is not set
 # end of File systems
@@ -1189,15 +1194,9 @@ FREETZ_LIB_libgcc_s=y
 # FREETZ_LIB_libgd is not set
 FREETZ_LIB_libopenjpeg=y
 # FREETZ_LIB_libopenjp2 is not set
-
-#
-# pango
-#
 # FREETZ_LIB_libpango_1 is not set
 # FREETZ_LIB_libpangoft2_1 is not set
 # FREETZ_LIB_libpangocairo_1 is not set
-# end of pango
-
 # FREETZ_LIB_libpixman_1 is not set
 # FREETZ_LIB_libtesseract is not set
 # FREETZ_LIB_libtiff is not set
@@ -1210,48 +1209,42 @@ FREETZ_LIB_libopenjpeg=y
 #
 
 #
-# GLib2
+# GLib2 ----------------------------------
 #
-FREETZ_LIB_libglib_2_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libglib_2 is not set
 # FREETZ_LIB_libgio_2 is not set
 # FREETZ_LIB_libgobject_2 is not set
 # FREETZ_LIB_libgmodule_2 is not set
 # FREETZ_LIB_libgthread_2 is not set
 # FREETZ_LIB_libgirepository_2 is not set
-# end of GLib2
+FREETZ_LIB_libglib_2_WITH_VERSION_CURRENT=y
 
 #
-# uClibc
+# uClibc ---------------------------------
 #
-FREETZ_LIB_ld_uClibc_WITH_VERSION_1_0_58=y
 FREETZ_LIB_ld_uClibc=y
 # FREETZ_LIB_libthread_db is not set
 FREETZ_LIB_libuClibc=y
-# end of uClibc
+FREETZ_LIB_ld_uClibc_WITH_VERSION_1_0_58=y
 
+#
+# uClibc++ -------------------------------
+#
 # FREETZ_LIB_libuClibcxx is not set
 # end of libc
 
 #
-# Multi precision arithmetic libs
-#
-# FREETZ_LIB_libgmp is not set
-# FREETZ_LIB_libmpfr is not set
-# FREETZ_LIB_libmpc is not set
-# end of Multi precision arithmetic libs
-
-#
 # Multimedia
 #
-# FREETZ_LIB_libdvbcsa is not set
 
 #
-# Audio and video codecs
+# ID3 tag --------------------------------
 #
+# FREETZ_LIB_libid3tag is not set
+# FREETZ_LIB_libtag is not set
 
 #
-# Audio codecs
+# Audio ----------------------------------
 #
 # FREETZ_LIB_libFLAC is not set
 # FREETZ_LIB_libmad is not set
@@ -1259,10 +1252,9 @@ FREETZ_LIB_libogg=y
 # FREETZ_LIB_libopus is not set
 # FREETZ_LIB_libspeex is not set
 # FREETZ_LIB_libspeexdsp is not set
-# end of Audio codecs
 
 #
-# FFmpeg libraries
+# FFmpeg ---------------------------------
 #
 FREETZ_LIB_libavcodec=y
 FREETZ_LIB_libavdevice=y
@@ -1272,27 +1264,18 @@ FREETZ_LIB_libavutil=y
 FREETZ_LIB_libpostproc=y
 FREETZ_LIB_libswresample=y
 FREETZ_LIB_libswscale=y
-# end of FFmpeg libraries
 
 #
-# Video codecs
-#
-
-#
-# Vorbis video codec ---------------------
+# Video ----------------------------------
 #
 FREETZ_LIB_libvorbis=y
 FREETZ_LIB_libvorbisenc=y
 FREETZ_LIB_libvorbisfile=y
-# end of Video codecs
-# end of Audio and video codecs
 
 #
-# ID3 tag reading libs
+# Misc -----------------------------------
 #
-# FREETZ_LIB_libid3tag is not set
-# FREETZ_LIB_libtag is not set
-# end of ID3 tag reading libs
+# FREETZ_LIB_libdvbcsa is not set
 # end of Multimedia
 
 #
@@ -1311,12 +1294,12 @@ FREETZ_LIB_libvorbisfile=y
 # FREETZ_LIB_libopenobex is not set
 
 #
-# ISDN & CAPI ----------------------------
+# ISDN -----------------------------------
 #
 # FREETZ_LIB_libcapi20 is not set
 
 #
-# Misc networking ------------------------
+# Misc -----------------------------------
 #
 # FREETZ_LIB_libdnet is not set
 # FREETZ_LIB_libgsm is not set
@@ -1327,25 +1310,9 @@ FREETZ_LIB_libvorbisfile=y
 # FREETZ_LIB_liboping is not set
 # FREETZ_LIB_libosip2 is not set
 # FREETZ_LIB_libosipparser2 is not set
-
-#
-# libcap
-#
-FREETZ_LIB_libpcap_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libpcap is not set
-# end of libcap
-
-#
-# libunbound
-#
+FREETZ_LIB_libpcap_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libunbound is not set
-
-#
-#  ---
-#
-# FREETZ_LIB_libunbound_WITH_EC is not set
-# end of libunbound
-
 # FREETZ_LIB_libspandsp is not set
 # FREETZ_LIB_libsrtp is not set
 # FREETZ_LIB_libtirpc is not set
@@ -1378,18 +1345,24 @@ FREETZ_LIB_libpcap_WITH_VERSION_CURRENT=y
 #
 # Regular expressions
 #
-# FREETZ_LIB_libonig is not set
+
+#
+# PCRE -----------------------------------
+#
 # FREETZ_LIB_libpcre is not set
 # FREETZ_LIB_libpcreposix is not set
 
 #
-# libpcre2
+# PCRE2 ----------------------------------
 #
 FREETZ_LIB_libpcre2=y
 # FREETZ_LIB_libpcre2_WITH_JIT is not set
-# end of libpcre2
-
 # FREETZ_LIB_libpcre2_posix is not set
+
+#
+# Misc -----------------------------------
+#
+# FREETZ_LIB_libonig is not set
 # end of Regular expressions
 
 #
@@ -1397,15 +1370,14 @@ FREETZ_LIB_libpcre2=y
 #
 
 #
-# Readline
+# Readline -------------------------------
 #
-FREETZ_LIB_libreadline_WITH_VERSION_CURRENT=y
 FREETZ_LIB_libreadline=y
 # FREETZ_LIB_libhistory is not set
-# end of Readline
+FREETZ_LIB_libreadline_WITH_VERSION_CURRENT=y
 
 #
-# ncurses
+# ncurses --------------------------------
 #
 FREETZ_SHARE_terminfo=y
 FREETZ_SHARE_terminfo_ansi=y
@@ -1437,7 +1409,6 @@ FREETZ_LIB_libncursesw=y
 # FREETZ_LIB_libformw is not set
 # FREETZ_LIB_libmenuw is not set
 # FREETZ_LIB_libpanelw is not set
-# end of ncurses
 # end of Terminal
 
 #
@@ -1446,97 +1417,42 @@ FREETZ_LIB_libncursesw=y
 # FREETZ_LIB_libftdi is not set
 # FREETZ_LIB_libftdi1 is not set
 # FREETZ_LIB_libpcsclite is not set
-
-#
-# libusb(-compat)
-#
 # FREETZ_LIB_libusb0 is not set
 # FREETZ_LIB_libusb0_WITH_VERSION_ABANDON is not set
 FREETZ_LIB_libusb0_WITH_VERSION_CURRENT=y
-# end of libusb(-compat)
-
-#
-# libusb1
-#
 # FREETZ_LIB_libusb1 is not set
 FREETZ_LIB_libusb1_WITH_VERSION_CURRENT=y
-# end of libusb1
 # end of USB & related
 
 #
-# Web and WebDAV
+# Web & WebDAV
 #
-
-#
-# libcurl
-#
-FREETZ_LIB_libcurl_WITH_VERSION_CURRENT=y
 FREETZ_LIB_libcurl=y
-
-#
-#  ---
-#
+# FREETZ_LIB_libcurl_WITH_SFTP is not set
+# FREETZ_LIB_libcurl_WITH_ZLIB is not set
 FREETZ_LIB_libcurl_WITH_SSL=y
 FREETZ_LIB_libcurl_WITH_OPENSSL=y
 # FREETZ_LIB_libcurl_WITH_MBEDTLS is not set
 # FREETZ_LIB_libcurl_WITH_CA_BUNDLE is not set
-# FREETZ_LIB_libcurl_WITH_SFTP is not set
-# FREETZ_LIB_libcurl_WITH_ZLIB is not set
-# end of libcurl
-
+FREETZ_LIB_libcurl_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libidn is not set
 # FREETZ_LIB_libjansson is not set
 # FREETZ_LIB_libjs is not set
-
-#
-# liblua
-#
+# FREETZ_LIB_liblua is not set
 # FREETZ_LIB_liblua_WITH_VERSION_ABANDON is not set
 FREETZ_LIB_liblua_WITH_VERSION_CURRENT=y
-# FREETZ_LIB_liblua is not set
-
-#
-#  ---
-#
-# FREETZ_LIB_liblua_WITH_FLOAT is not set
-# end of liblua
-
-#
-# libneon
-#
-FREETZ_LIB_libneon_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libneon is not set
-
-#
-#  ---
-#
-# FREETZ_LIB_libneon_WITH_SSL is not set
-# FREETZ_LIB_libneon_WITH_ZLIB is not set
-# end of libneon
-
+FREETZ_LIB_libneon_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libpsl is not set
 # FREETZ_LIB_libserf is not set
-# end of Web and WebDAV
+# end of Web & WebDAV
 
 #
 # XML & XSLT
 #
-
-#
-# libexpat
-#
-FREETZ_LIB_libexpat_WITH_VERSION_CURRENT=y
 FREETZ_LIB_libexpat=y
-# end of libexpat
-
-#
-# libxml2
-#
+FREETZ_LIB_libexpat_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libxml2 is not set
-# FREETZ_LIB_libxml2_WITH_HTML is not set
-# FREETZ_LIB_libxml2_WITH_RELAXNG is not set
-# end of libxml2
-
 # FREETZ_LIB_libxslt is not set
 # FREETZ_LIB_libexslt is not set
 # end of XML & XSLT
@@ -1570,9 +1486,11 @@ FREETZ_LIB_libpython3=y
 # FREETZ_LIB_libsynce is not set
 # FREETZ_LIB_libsysfs is not set
 # FREETZ_LIB_libltdl is not set
+# FREETZ_LIB_libuv is not set
+# FREETZ_LIB_libyaml is not set
 
 #
-# liburcu
+# liburcu --------------------------------
 #
 # FREETZ_LIB_liburcu is not set
 # FREETZ_LIB_liburcu_bp is not set
@@ -1581,10 +1499,6 @@ FREETZ_LIB_libpython3=y
 # FREETZ_LIB_liburcu_mb is not set
 # FREETZ_LIB_liburcu_memb is not set
 # FREETZ_LIB_liburcu_qsbr is not set
-# end of liburcu
-
-# FREETZ_LIB_libuv is not set
-# FREETZ_LIB_libyaml is not set
 # end of Other
 # end of Shared libraries
 
