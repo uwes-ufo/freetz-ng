@@ -1,6 +1,7 @@
 menuconfig FREETZ_PACKAGE_PHP
 	bool "PHP 5.6.40/8.2.33/8.3.33/8.4.24/8.5.9 (binary only)"
 	select FREETZ_PACKAGE_PHP_cgi
+	select FREETZ_LIB_libdl if ! FREETZ_PACKAGE_PHP_STATIC && FREETZ_TARGET_UCLIBC_HAS_multiple_libs
 	default n
 	help
 		PHP: Hypertext Preprocessor
@@ -25,30 +26,35 @@ if FREETZ_PACKAGE_PHP
 		config FREETZ_PACKAGE_PHP_VERSION_56
 			bool "5.6.40 - DEPRECATED"
 			depends on FREETZ_TARGET_BITS_32
+			select FREETZ_PACKAGE_PHP_WITH_PCRE
 
 		config FREETZ_PACKAGE_PHP_VERSION_82
 			bool "8.2.33 - UNTESTED"
 			depends on FREETZ_TARGET_GCC_5_MIN
 			depends on FREETZ_TARGET_GCC_8_MIN if FREETZ_TARGET_ARCH_X86
 			select FREETZ_LIB_libonig if ! FREETZ_PACKAGE_PHP_STATIC
+			select FREETZ_PACKAGE_PHP_WITH_PCRE2
 
 		config FREETZ_PACKAGE_PHP_VERSION_83
 			bool "8.3.33 - UNTESTED"
 			depends on FREETZ_TARGET_GCC_5_MIN
 			depends on FREETZ_TARGET_GCC_8_MIN if FREETZ_TARGET_ARCH_X86
 			select FREETZ_LIB_libonig if ! FREETZ_PACKAGE_PHP_STATIC
+			select FREETZ_PACKAGE_PHP_WITH_PCRE2
 
 		config FREETZ_PACKAGE_PHP_VERSION_84
 			bool "8.4.24 - UNTESTED"
 			depends on FREETZ_TARGET_GCC_5_MIN
 			depends on FREETZ_TARGET_GCC_8_MIN if FREETZ_TARGET_ARCH_X86
 			select FREETZ_LIB_libonig if ! FREETZ_PACKAGE_PHP_STATIC
+			select FREETZ_PACKAGE_PHP_WITH_PCRE2
 
 		config FREETZ_PACKAGE_PHP_VERSION_85
 			bool "8.5.9"
 			depends on FREETZ_TARGET_GCC_5_MIN
 			depends on FREETZ_TARGET_GCC_8_MIN if FREETZ_TARGET_ARCH_X86
 			select FREETZ_LIB_libonig if ! FREETZ_PACKAGE_PHP_STATIC
+			select FREETZ_PACKAGE_PHP_WITH_PCRE2
 
 	endchoice
 
@@ -57,44 +63,15 @@ if FREETZ_PACKAGE_PHP
 
 	config FREETZ_PACKAGE_PHP_cgi
 		bool "PHP CGI"
-		select FREETZ_LIB_libdl               if ! FREETZ_PACKAGE_PHP_STATIC && FREETZ_TARGET_UCLIBC_HAS_multiple_libs
-		select FREETZ_PACKAGE_PHP_WITH_PCRE   if  FREETZ_PACKAGE_PHP_VERSION_56
-		select FREETZ_PACKAGE_PHP_WITH_PCRE2  if !FREETZ_PACKAGE_PHP_VERSION_56
 		default y
 
 	config FREETZ_PACKAGE_PHP_cli
 		bool "PHP CLI"
-		select FREETZ_LIB_libdl               if ! FREETZ_PACKAGE_PHP_STATIC && FREETZ_TARGET_UCLIBC_HAS_multiple_libs
-		select FREETZ_PACKAGE_PHP_WITH_PCRE   if  FREETZ_PACKAGE_PHP_VERSION_56
-		select FREETZ_PACKAGE_PHP_WITH_PCRE2  if !FREETZ_PACKAGE_PHP_VERSION_56
 		default n
-
-	comment "Apache2 module needs OpenSSL 1.0 or older"
-		depends on FREETZ_PACKAGE_PHP_VERSION_56
-		depends on !FREETZ_OPENSSL_VERSION_10_MAX
-
-	comment "Apache2 module needs OpenSSL 1.1 or newer"
-		depends on !FREETZ_PACKAGE_PHP_VERSION_56
-		depends on !FREETZ_OPENSSL_VERSION_11_MIN
 
 	config FREETZ_PACKAGE_PHP_apxs2
 		bool "Apache2 module - UNTESTED"
-		depends on !FREETZ_PACKAGE_PHP_VERSION_56
-		depends on FREETZ_OPENSSL_VERSION_11_MIN
-		select FREETZ_LIB_libapr_WITH_DSO
-		select FREETZ_PACKAGE_PHP_WITH_PCRE   if  FREETZ_PACKAGE_PHP_VERSION_56
-		select FREETZ_PACKAGE_PHP_WITH_PCRE2  if !FREETZ_PACKAGE_PHP_VERSION_56
-		select FREETZ_LIB_libcurl            if FREETZ_PACKAGE_PHP_WITH_CURL
-		select FREETZ_LIB_libgd              if FREETZ_PACKAGE_PHP_WITH_GD
-		select FREETZ_LIB_libiconv           if FREETZ_PACKAGE_PHP_WITH_LIBICONV
-		select FREETZ_LIB_libsqlite3         if FREETZ_PACKAGE_PHP_WITH_SQLITE3
-		select FREETZ_LIB_libcrypto          if FREETZ_PACKAGE_PHP_WITH_SSL
-		select FREETZ_LIB_libssl             if FREETZ_PACKAGE_PHP_WITH_SSL
-		select FREETZ_LIB_libxml2            if FREETZ_PACKAGE_PHP_WITH_LIBXML
-		select FREETZ_LIB_libz               if FREETZ_PACKAGE_PHP_WITH_ZLIB
 		default n
-		help
-			Not available for php5 as current libcurl, libgd and libxml versions are incompatible
 
 
 	comment "Features"
