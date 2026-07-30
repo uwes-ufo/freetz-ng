@@ -1,4 +1,4 @@
-[ "$FREETZ_PACKAGE_PHP_VERSION_56" == "y" ] && ELIBVER="5" || ELIBVER="8"
+[ "$FREETZ_PACKAGE_PHP_VERSION_56" == "y" ] && ELIBVER="5" || ELIBVER=""
 
 [ "$EXTERNAL_FREETZ_PACKAGE_PHP_cgi" == "y" ]   && EXTERNAL_FILES+=" /usr/bin/php-cgi"
 [ "$EXTERNAL_FREETZ_PACKAGE_PHP_cli" == "y" ]   && EXTERNAL_FILES+=" /usr/bin/php"
