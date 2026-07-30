@@ -31,6 +31,7 @@ $(PKG)_REBUILD_SUBOPTS += FREETZ_LIB_libsqlite3_WITH_VERSION_ABANDON
 
 $(PKG)_CONFIGURE_OPTIONS += --enable-shared
 $(PKG)_CONFIGURE_OPTIONS += --enable-static
+$(PKG)_CONFIGURE_OPTIONS += --disable-rpath
 $(PKG)_CONFIGURE_OPTIONS += --disable-editline
 $(PKG)_CONFIGURE_OPTIONS += --disable-static-shell
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_LIB_libsqlite3_WITH_VERSION_ABANDON),,--disable-threadsafe)
