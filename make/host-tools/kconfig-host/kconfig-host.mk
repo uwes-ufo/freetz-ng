@@ -37,6 +37,7 @@ $(TOOLS_CONFIGURED_NOP)
 $($(PKG)_TARGET_PRG:%=$($(PKG)_DIR)/scripts/kconfig/%): $($(PKG)_DIR)/.unpacked
 	$(TOOLS_SUBMAKE) -C $(KCONFIG_HOST_DIR) \
 		HOST_EXTRACFLAGS="$(KCONFIG_HOST_CFLAGS)" \
+		HOST_EXTRACXXFLAGS="$(KCONFIG_HOST_CFLAGS)" \
 		HOSTPKG_CONFIG="pkgconf" \
 		$(subst --$(notdir $@),,$(filter %--$(notdir $@),$(KCONFIG_HOST_TARGET_ALL))) \
 		$(SILENT)
