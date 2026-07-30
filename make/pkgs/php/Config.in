@@ -72,6 +72,7 @@ if FREETZ_PACKAGE_PHP
 	config FREETZ_PACKAGE_PHP_apxs2
 		bool "Apache2 module"
 		default n
+		select FREETZ_LIB_libapr_WITH_DSO
 
 
 	comment "Features"
