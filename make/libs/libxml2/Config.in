@@ -1,14 +1,14 @@
-config FREETZ_LIB_libxml2
-	bool "libxml2 (libxml2.so)"
-	select FREETZ_LIB_libiconv    if FREETZ_TARGET_UCLIBC_0_9_28
-	select FREETZ_LIB_libpthread  if FREETZ_TARGET_UCLIBC_HAS_multiple_libs
-	select FREETZ_LIB_libm        if FREETZ_TARGET_UCLIBC_HAS_multiple_libs
-	select FREETZ_LIB_libz
-	default n
-	help
-		XML toolkit from the GNOME project
+menu "libxml2"
 
-if FREETZ_LIB_libxml2
+	config FREETZ_LIB_libxml2
+		bool "libxml2 (libxml2.so)"
+		select FREETZ_LIB_libiconv    if FREETZ_TARGET_UCLIBC_0_9_28
+		select FREETZ_LIB_libpthread  if FREETZ_TARGET_UCLIBC_HAS_multiple_libs
+		select FREETZ_LIB_libm        if FREETZ_TARGET_UCLIBC_HAS_multiple_libs
+		select FREETZ_LIB_libz
+		default n
+		help
+			XML toolkit from the GNOME project
 
 	config FREETZ_LIB_libxml2_WITH_HTML
 		bool "Build with HTML parser"
@@ -25,5 +25,5 @@ if FREETZ_LIB_libxml2
 			RELAX NG is an alternative to XML Schema for validating XML documents.
 			This increases the size of libxml2 by 96kB.
 
-endif # FREETZ_LIB_libxml2
+endmenu # libxml2
 

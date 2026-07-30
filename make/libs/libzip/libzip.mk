@@ -7,10 +7,18 @@ $(PKG)_SITE:=https://github.com/nih-at/libzip/releases/download/v$($(PKG)_VERSIO
 ### MANPAGE:=https://libzip.org/documentation/
 ### CHANGES:=https://github.com/nih-at/libzip/releases
 ### CVSREPO:=https://github.com/nih-at/libzip
+### STEWARD:=fda77
 
-$(PKG)_BINARY:=$($(PKG)_DIR)/lib/libzip.so.$($(PKG)_LIB_VERSION)
-$(PKG)_STAGING_BINARY:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libzip.so.$($(PKG)_LIB_VERSION)
-$(PKG)_TARGET_BINARY:=$($(PKG)_TARGET_DIR)/libzip.so.$($(PKG)_LIB_VERSION)
+$(PKG)_DIR_STATIC := $($(PKG)_DIR)/builddir-static
+$(PKG)_DIR_SHARED := $($(PKG)_DIR)/builddir-shared
+
+$(PKG)_BINARY_STATIC:=$($(PKG)_DIR_STATIC)/lib/libzip.a
+$(PKG)_STAGING_BINARY_STATIC:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libzip.a
+$(PKG)_TARGET_BINARY_STATIC:=$($(PKG)_TARGET_DIR)/libzip.a
+
+$(PKG)_BINARY_SHARED:=$($(PKG)_DIR_SHARED)/lib/libzip.so.$($(PKG)_LIB_VERSION)
+$(PKG)_STAGING_BINARY_SHARED:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libzip.so.$($(PKG)_LIB_VERSION)
+$(PKG)_TARGET_BINARY_SHARED:=$($(PKG)_TARGET_DIR)/libzip.so.$($(PKG)_LIB_VERSION)
 
 $(PKG)_DEPENDS_ON += cmake-host zlib
 
@@ -22,7 +30,6 @@ $(PKG)_CONFIGURE_OPTIONS += -DBUILD_DOC=OFF
 $(PKG)_CONFIGURE_OPTIONS += -DBUILD_EXAMPLES=OFF
 $(PKG)_CONFIGURE_OPTIONS += -DBUILD_OSSFUZZ=OFF
 $(PKG)_CONFIGURE_OPTIONS += -DBUILD_REGRESS=OFF
-$(PKG)_CONFIGURE_OPTIONS += -DBUILD_SHARED_LIBS=ON
 $(PKG)_CONFIGURE_OPTIONS += -DBUILD_TOOLS=OFF
 
 $(PKG)_CONFIGURE_OPTIONS += -DENABLE_COMMONCRYPTO=OFF
@@ -39,30 +46,52 @@ $(PKG)_CONFIGURE_OPTIONS += -DZLIB_INCLUDE_DIR="$(TARGET_TOOLCHAIN_STAGING_DIR)/
 
 $(PKG_SOURCE_DOWNLOAD)
 $(PKG_UNPACKED)
-$(PKG_CONFIGURED_CMAKE)
 
-$($(PKG)_BINARY): $($(PKG)_DIR)/.configured
-	$(SUBMAKE) -C $(LIBZIP_DIR)
-#cmake	cmake -LAH $(TRANSMISSION_DIR)
+$($(PKG)_DIR_STATIC)/.configured: $($(PKG)_DIR)/.unpacked
+	@mkdir -p $(LIBZIP_DIR_STATIC)
+	@cd $(LIBZIP_DIR_STATIC) && \
+	$(TARGET_CONFIGURE_ENV) cmake .. $(LIBZIP_CONFIGURE_OPTIONS) -DBUILD_SHARED_LIBS=OFF
+	@touch $@
 
-$($(PKG)_STAGING_BINARY): $($(PKG)_BINARY)
-	$(SUBMAKE) -C $(LIBZIP_DIR) \
+$($(PKG)_DIR_SHARED)/.configured: $($(PKG)_DIR)/.unpacked
+	@mkdir -p $(LIBZIP_DIR_SHARED)
+	@cd $(LIBZIP_DIR_SHARED) && \
+	$(TARGET_CONFIGURE_ENV) cmake .. $(LIBZIP_CONFIGURE_OPTIONS) -DBUILD_SHARED_LIBS=ON
+	@touch $@
+
+$($(PKG)_BINARY_STATIC): $($(PKG)_DIR_STATIC)/.configured
+	$(SUBMAKE) -C $(LIBZIP_DIR_STATIC)
+#cmake	cmake -LAH $(LIBZIP_DIR_STATIC)
+
+$($(PKG)_BINARY_SHARED): $($(PKG)_DIR_SHARED)/.configured
+	$(SUBMAKE) -C $(LIBZIP_DIR_SHARED)
+#cmake	cmake -LAH $(LIBZIP_DIR_SHARED)
+
+$($(PKG)_STAGING_BINARY_STATIC) $($(PKG)_STAGING_BINARY_SHARED): $($(PKG)_BINARY_STATIC) $($(PKG)_BINARY_SHARED)
+	$(SUBMAKE) -C $(LIBZIP_DIR_STATIC) \
+		DESTDIR="$(TARGET_TOOLCHAIN_STAGING_DIR)" \
+		install
+	$(SUBMAKE) -C $(LIBZIP_DIR_SHARED) \
 		DESTDIR="$(TARGET_TOOLCHAIN_STAGING_DIR)" \
 		install
 	$(PKG_FIX_LIBTOOL_LA) \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/lib/pkgconfig/libzip.pc
 	@touch -c $@
 
-$($(PKG)_TARGET_BINARY): $($(PKG)_STAGING_BINARY)
+$($(PKG)_TARGET_BINARY_STATIC): $($(PKG)_STAGING_BINARY_STATIC)
+	$(INSTALL_FILE)
+
+$($(PKG)_TARGET_BINARY_SHARED): $($(PKG)_STAGING_BINARY_SHARED)
 	$(INSTALL_LIBRARY_STRIP)
 
-$(pkg): $($(PKG)_STAGING_BINARY)
+$(pkg): $($(PKG)_STAGING_BINARY_STATIC) $($(PKG)_STAGING_BINARY_SHARED)
 
-$(pkg)-precompiled: $($(PKG)_TARGET_BINARY)
+$(pkg)-precompiled: $($(PKG)_TARGET_BINARY_STATIC) $($(PKG)_TARGET_BINARY_SHARED)
 
 
 $(pkg)-clean:
-	-$(SUBMAKE) -C $(LIBZIP_DIR) clean
+	-$(SUBMAKE) -C $(LIBZIP_DIR_STATIC) clean
+	-$(SUBMAKE) -C $(LIBZIP_DIR_SHARED) clean
 	$(RM) -r \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libzip.* \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/zip.h \
@@ -71,6 +100,6 @@ $(pkg)-clean:
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/cmake/libzip/
 
 $(pkg)-uninstall:
-	$(RM) $(LIBZIP_TARGET_DIR)/libzip.so*
+	$(RM) $(LIBZIP_TARGET_DIR)/libzip.a $(LIBZIP_TARGET_DIR)/libzip.so*
 
 $(PKG_FINISH)
