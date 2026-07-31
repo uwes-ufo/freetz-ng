@@ -174,10 +174,12 @@ if FREETZ_PACKAGE_PHP
 
 	config FREETZ_PACKAGE_PHP_WITH_GETTEXT
 		bool "Build with gettext"
+		depends on !FREETZ_TARGET_UCLIBC_0_9_28
 		select FREETZ_LIB_libintl if ! FREETZ_PACKAGE_PHP_STATIC
 		default n
 		help
 			This option enables the gettext support for PHP
+			Not available with uClibc 0.9.28 as current gettext version is incompatible
 
 	config FREETZ_PACKAGE_PHP_WITH_LIBICONV
 		bool "Build with ICONV"

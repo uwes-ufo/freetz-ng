@@ -193,10 +193,11 @@ $(PKG)_CONFIGURE_OPTIONS += --without-zlib
 endif
 
 ifeq ($(strip $(FREETZ_PACKAGE_PHP_WITH_ZIP)),y)
-$(PKG)_DEPENDS_ON += libzip
 ifeq ($(strip $(FREETZ_PACKAGE_PHP_VERSION_56)),y)
+$(PKG)_DEPENDS_ON += zlib
 $(PKG)_CONFIGURE_OPTIONS += --enable-zip
 else
+$(PKG)_DEPENDS_ON += libzip
 $(PKG)_CONFIGURE_OPTIONS += --with-zip
 endif
 endif
