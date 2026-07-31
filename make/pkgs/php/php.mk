@@ -282,8 +282,8 @@ $(PKG)_CONFIGURE_OPTIONS += --enable-exif
 $(PKG)_CONFIGURE_OPTIONS += --enable-mbstring
 $(PKG)_CONFIGURE_OPTIONS += --disable-phar
 $(PKG)_CONFIGURE_OPTIONS += --disable-rpath
-$(PKG)_CONFIGURE_OPTIONS += --with-config-file-path=/tmp/flash
-$(PKG)_CONFIGURE_OPTIONS += --with-config-file-scan-dir=/tmp/flash/php
+$(PKG)_CONFIGURE_OPTIONS += --with-config-file-path=/tmp/flash/php
+$(PKG)_CONFIGURE_OPTIONS += --with-config-file-scan-dir=/tmp/flash/php/php.d
 $(PKG)_CONFIGURE_OPTIONS += --without-pear
 
 

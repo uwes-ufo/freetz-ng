@@ -73,6 +73,7 @@ if FREETZ_PACKAGE_PHP
 		bool "Apache2 module"
 		default n
 		select FREETZ_LIB_libapr_WITH_DSO
+		select FREETZ_BUSYBOX_STRINGS
 
 
 	comment "Features"
