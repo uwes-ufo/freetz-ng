@@ -1,8 +1,10 @@
 #! /usr/bin/env bash
 SCRIPT="$(readlink -f $0)"
 PARENT="$(dirname ${SCRIPT%/*})"
-ZENDIR="$PARENT/docs"
-ENVDIR="$ZENDIR/.venv"
+CONFIG="$PARENT/zensical.toml"
+OUT_DIR="$PARENT/_site"
+VENV_DIR="$PARENT/.zensical"
+CACHE_DIR="$PARENT/.cache"
 
 
 detect_linux() {
@@ -34,41 +36,49 @@ setup_virtenv() {
 	  [ -x "$(command -v pip3)" ] || \
 	  install_python || exit 1
 
-	python3 -m venv "$ENVDIR"                                   || exit 1
-	source "$ENVDIR/bin/activate"                               || exit 1
-	pip3 install --upgrade pip                                  || exit 1
-	pip3 install "zensical"                                     || exit 1
+	python3 -m venv "$VENV_DIR"      || exit 1
+	source "$VENV_DIR/bin/activate"  || exit 1
+	pip3 install --upgrade pip       || exit 1
+	pip3 install "zensical"          || exit 1
+}
+
+ignore_site() {
+	[ -s "$OUT_DIR/.gitignore" ] && return
+	mkdir -p "$OUT_DIR"
+	echo '*' > "$OUT_DIR/.gitignore"
 }
 
 run_httpserver() {
 	local PORT="$1"
 	[ "$PORT" -gt 0 ] 2>/dev/null || PORT="8000"
 
-	[ -d "$ENVDIR" ] || setup_virtenv || exit 1
+	[ -d "$VENV_DIR" ] || setup_virtenv || exit 1
+	ignore_site
 
 	echo "########################################################################"
 	echo "     Starting zensical http server on [::]:$PORT, use CTRL+C to quit."
 	echo "########################################################################"
 
-	source "$ENVDIR/bin/activate"
-	zensical serve --dev-addr "[::]:$PORT" --config-file "$ZENDIR/zensical.toml"  # --open
+	source "$VENV_DIR/bin/activate"
+	zensical serve --dev-addr "[::]:$PORT" --config-file "$CONFIG"  # --open
 }
 
 build_site() {
-	[ -d "$ENVDIR" ] || setup_virtenv || exit 1
+	[ -d "$VENV_DIR" ] || setup_virtenv || exit 1
+	ignore_site
 
-	source "$ENVDIR/bin/activate"
-	zensical build --config-file "$ZENDIR/zensical.toml"  # --clean
+	source "$VENV_DIR/bin/activate"
+	zensical build --config-file "$CONFIG"  # --clean
 
-	echo "###################################################"
-	echo "     Site content can be found in ./docs/site/"
-	echo "###################################################"
+	echo "###############################################"
+	echo "     Site content can be found in ./_site/"
+	echo "###############################################"
 }
 
 cleanup_virtenv() {
-	rm -rf "$ENVDIR"
-	rm -rf "$ZENDIR/.cache/"
-	rm -rf "$ZENDIR/site/"
+	rm -rf "$OUT_DIR"
+	rm -rf "$VENV_DIR"
+	rm -rf "$CACHE_DIR"
 	echo "Done."
 }
 

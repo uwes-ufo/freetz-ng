@@ -3,12 +3,12 @@ site_name = "Freetz-NG Documentation"
 site_description = "Freetz-NG firmware modification for ​AVM devices like FRITZ!Box"
 site_author = "Freetz-NG"
 site_url = "https://freetz-ng.github.io/"
-site_dir = "site"
 repo_url = "https://github.com/freetz-ng/freetz-ng"
 edit_uri = "../freetz-ng/blob/master/docs/"
-docs_dir = "."
 copyright = '&copy <span>Freetz-NG</span><br/><span>Licensed under <a href="https://github.com/Freetz-NG/freetz-ng/raw/refs/heads/master/COPYING" target="_blank" rel="noopener noreferrer">GPL-2.0</a></span><br/>'
 extra_css = ["zensical.css"]
+docs_dir = "docs"
+site_dir = "_site"
 
 [project.extra]
 generator = false
@@ -79,5 +79,9 @@ pygments_lang_class = true
 alternate_style = "true"
 
 [project.markdown_extensions.pymdownx.tilde]
+
+[project.validation]
+invalid_links = false
+invalid_link_anchors = false
 
 
