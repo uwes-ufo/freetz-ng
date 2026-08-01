@@ -2727,7 +2727,7 @@ EXTERNAL_CREATEPAK_DYNAMIC=y
 EXTERNAL_OWN_FILES=""
 
 #
-# packages
+# packages -------------------------------
 #
 # EXTERNAL_FREETZ_PACKAGE_CA_BUNDLE is not set
 EXTERNAL_FREETZ_PACKAGE_GIT=y
@@ -2742,25 +2742,25 @@ EXTERNAL_FREETZ_PACKAGE_WGET=y
 # EXTERNAL_FREETZ_PACKAGE_LDD is not set
 
 #
-# libraries
+# libraries ------------------------------
 #
-# EXTERNAL_FREETZ_LIB_libcrypto is not set
-# EXTERNAL_FREETZ_LIB_libssl is not set
 # EXTERNAL_FREETZ_LIB_libcurl is not set
 # EXTERNAL_FREETZ_LIB_libexpat is not set
 # EXTERNAL_FREETZ_LIB_libffi is not set
-# EXTERNAL_FREETZ_LIB_libncurses is not set
-# EXTERNAL_FREETZ_LIB_libncursesw is not set
-# EXTERNAL_FREETZ_LIB_libreadline is not set
-# EXTERNAL_FREETZ_LIB_liblzma is not set
 # EXTERNAL_FREETZ_LIB_libmbedcrypto is not set
 # EXTERNAL_FREETZ_LIB_libmbedtls is not set
 # EXTERNAL_FREETZ_LIB_libmbedx509 is not set
+# EXTERNAL_FREETZ_LIB_libncurses is not set
+# EXTERNAL_FREETZ_LIB_libncursesw is not set
+# EXTERNAL_FREETZ_LIB_libcrypto is not set
+# EXTERNAL_FREETZ_LIB_libssl is not set
 EXTERNAL_FREETZ_LIB_libpython2=y
+# EXTERNAL_FREETZ_LIB_libreadline is not set
+# EXTERNAL_FREETZ_LIB_liblzma is not set
 # EXTERNAL_FREETZ_LIB_libz is not set
 
 #
-# modules
+# modules --------------------------------
 #
 EXTERNAL_OWN_MODULES=""
 
