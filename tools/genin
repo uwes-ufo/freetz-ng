@@ -1,7 +1,9 @@
 #! /usr/bin/env bash
 
 PKGDIR=make/pkgs
+LIBDIR=make/libs
 CFILE=$PKGDIR/Config.in.generated
+LFILE=$LIBDIR/external.in.generated
 EFILE=$PKGDIR/external.in.generated
 SUBCATS=tools/genin.cat
 
@@ -122,36 +124,39 @@ CATs=$( echo -e "${NONHIDDEN//%/\\n}" | sort -uV )
 
 # build menus
 SAVEMENU=""
-echo -n ""                                                                                              >  $CFILE
-echo -e "\ncomment \"packages\"\n\tdepends on EXTERNAL_ENABLED"                                         >  $EFILE
+echo -n ""                                                                                                   >  $CFILE
+echo -n ""                                                                                                   >  $LFILE
+echo -n ""                                                                                                   >  $EFILE
+# libraries (external only)
+find "$LIBDIR" -mindepth 2 -maxdepth 2 -type f -name 'external.in'      | sort | sed 's/^/source "/;s/$/"/'  >  $LFILE.libs
+find "$PKGDIR" -mindepth 2 -maxdepth 2 -type f -name 'external.in.libs' | sort | sed 's/^/source "/;s/$/"/'  >  $LFILE.pkgs
+sort -t'/' -k3,3 $LFILE.*                                                                                    >> $LFILE
+# packages
 for CAT in $CATs; do
 	while [ -n "$SAVEMENU" -a -n "${SAVEMENU##*${CAT%##*}}" ]; do
 		# the actual CAT is NO subCAT of previous, so close menu(s)
-		echo "endmenu"                                                                          >> $CFILE
+		echo "endmenu"                                                                               >> $CFILE
 		SAVEMENU=${SAVEMENU%\%%*}
 	done
 	CATONLY=${CAT##*##}
 	CATREAL="${CATONLY/$CATMARK/}"
 	if [ "$CATONLY" == "$CATREAL" -a -z "$CATDIV" -a -n "$CATMARK" ]; then
-		echo "comment \"----------------------------------------\""                             >> $CFILE
+		echo "comment \"----------------------------------------\""                                  >> $CFILE
 		CATDIV=y
 	fi
-	echo -e "\nmenu \"${CATREAL}\""                                                                 >> $CFILE
+	echo -e "\nmenu \"${CATREAL}\""                                                                      >> $CFILE
 	for PKG in $(echo -e "${CATTABLE}"| sed "/^${CATONLY/\//\\/}##/ !d ; s/^[^#]*##// "); do
-		[ -e "$PKGDIR/$PKG/external.in" ] && echo "source \"$PKGDIR/$PKG/external.in\""         >> $EFILE
+		[ -e "$PKGDIR/$PKG/external.in" ] && echo "source \"$PKGDIR/$PKG/external.in\""              >> $EFILE
 		case "$PKG" in asterisk-*|iptables-cgi|nhipt|python-*|ruby-fcgi|sg3_utils) continue ;; esac
-		[ -e "$PKGDIR/$PKG/Config.in" ] && echo -e "\tsource \"$PKGDIR/$PKG/Config.in\""        >> $CFILE
+		[ -e "$PKGDIR/$PKG/Config.in" ] && echo -e "\tsource \"$PKGDIR/$PKG/Config.in\""             >> $CFILE
 	done
 	SAVEMENU="$SAVEMENU%%$CAT"
 done
 # close menu(s), if there are some open ones
 while [ -n "$SAVEMENU" ]; do
-	echo "endmenu"                                                                                  >> $CFILE
+	echo "endmenu"                                                                                       >> $CFILE
 	SAVEMENU=${SAVEMENU%\%%*}
 done
-
-echo ""                                                                                                 >> $CFILE
-echo ""                                                                                                 >> $EFILE
 
 IFS=$buIFS # restore IFS
 

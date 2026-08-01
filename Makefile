@@ -206,11 +206,26 @@ endif
 # genin: (re)generate .in files if necessary
 ifneq ($(findstring clean,$(MAKECMDGOALS)),clean)
 # Note: the list of the packages to be treated specially (the 3rd argument of get-subdirs-containing) should match that used in genin
+GENIN:=n
+#
+ifneq ($(call genin-get-considered-packages,make/libs/external.in.generated.libs,make/libs),$(call get-subdirs-containing,make/libs,external.in))
+GENIN:=y
+endif
+#
+ifneq ($(call genin-get-considered-packages,make/libs/external.in.generated.pkgs,make/pkgs),$(call get-subdirs-containing,make/pkgs,external.in.libs))
+GENIN:=y
+endif
+#
 ifneq ($(call genin-get-considered-packages,make/pkgs/Config.in.generated),$(call get-subdirs-containing,make/pkgs,Config.in,asterisk[-].* iptables-cgi nhipt python[-].* ruby-fcgi sg3_utils))
+GENIN:=y
+endif
+#
+ifeq ($(GENIN),y)
 ifneq ($(shell $(GENERATE_IN_TOOL) $(if $(findstring legacy,$(MAKECMDGOALS)),legacy) >&2 && echo OK),OK)
 $(error genin failed)
 endif
 endif
+#
 endif
 
 all: step
@@ -667,7 +682,7 @@ $(eval $(call CONFIG_CLEAN_DEPS,config-clean-deps-keep-busybox,kernel modules$(_
 common-cacheclean:
 	[ ! -x .fwmod_custom ] || ./.fwmod_custom clean
 	./fwmod_custom clean
-	$(RM) make/pkgs/Config.in.generated make/pkgs/external.in.generated
+	$(RM) make/pkgs/Config.in.generated make/pkgs/external.in.generated make/libs/external.in.generated*
 	$(RM) .config.compressed .config.old .config.*.tmp
 	$(RM) .packages .exclude-release-tmp $(CONFIG_IN_CACHE)
 	$(RM) $(DL_FW_DIR)/*.detected.image $(DL_FW_DIR)/*.detected.image.url
