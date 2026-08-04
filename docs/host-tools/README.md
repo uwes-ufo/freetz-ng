@@ -18,7 +18,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[ca-bundle 2026-07-16](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
-  * **[cmake 4.3.4](cmake-host.md)<a id='cmake-host'></a>**<br>
+  * **[cmake 4.4.2](cmake-host.md)<a id='cmake-host'></a>**<br>
 
   * **[config a2287c3041a3f2a204eb942e09c015eab00dc7dd](config-host.md)<a id='config-host'></a>**<br>
 
