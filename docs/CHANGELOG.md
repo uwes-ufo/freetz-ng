@@ -71,7 +71,7 @@ Latest changes
     * busybox 1.38.0
     * autoconf 2.73
     * ca-bundle 2026-05-14
-    * cmake 4.3.4
+    * cmake 4.4.2
     * dos2unix 7.5.5
     * dtc 1.8.1
     * fakeroot 2.0
