@@ -7,9 +7,21 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 3
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
 
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      include:
+        - "zensical"
+      default-days: 17
+      semver-major-days: 17
+      semver-minor-days: 17
+      semver-patch-days: 17
 
