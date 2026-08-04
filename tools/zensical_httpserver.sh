@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 SCRIPT="$(readlink -f $0)"
 PARENT="$(dirname ${SCRIPT%/*})"
-SETUP="$PARENT/.zensical.txt"
+SETUP="$PARENT/zensical.txt"
 CONFIG="$PARENT/zensical.toml"
 OUT_DIR="$PARENT/_site"
 VENV_DIR="$PARENT/.zensical"
