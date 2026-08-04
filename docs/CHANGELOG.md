@@ -71,7 +71,7 @@ Latest changes
     * busybox 1.38.0
     * autoconf 2.73
     * ca-bundle 2026-05-14
-    * cmake 4.3.4
+    * cmake 4.4.2
     * dos2unix 7.5.5
     * dtc 1.8.1
     * fakeroot 2.0
@@ -133,7 +133,7 @@ Latest changes
     * mini-snmpd 1.7/2.0
     * Minicom 2.11.1
     * Mosquitto 2.0.22/2.1.2
-    * Nano 9.1
+    * Nano 9.2
     * Nmap 4.76/5.51/7.99
     * OpenSSH 9.3p2/10.4p1
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.21/3.5.7
@@ -153,7 +153,7 @@ Latest changes
     * Tor 0.4.8.25
     * Transmission 3.00/4.1.3
     * Tree 1.8.0/2.3.2
-    * Unbound 1.25.2
+    * Unbound 1.26.0
     * UnRAR 6.1.7/7.2.5
     * Virtualip-NG 1.0
     * wireguard-tools 1.0.20260223
@@ -167,7 +167,7 @@ Latest changes
     * FreeType 2.14.3
     * gettext 1.0
     * GLib2 2.32.4/2.88.0
-    * harfbuzz 14.2.1
+    * harfbuzz 14.3.0
     * libcap 2.49/2.78
     * libcap-ng 0.9.3
     * libcjson 1.7.19
