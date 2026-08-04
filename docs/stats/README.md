@@ -24,7 +24,7 @@
 </tbody></table>
 </details>
 
-<details><summary>134 verschiedene HWR</summary>
+<details><summary>136 verschiedene HWR</summary>
 
 <table>
 <caption style='background-color:gray'>&nbsp;</caption>
@@ -143,6 +143,7 @@
 <tr><td>FRITZ!Box 5590 Fiber</td><td>272</td></tr>
 <tr><td>FRITZ!Powerline 1240 AX</td><td>275</td></tr>
 <tr><td>FRITZ!Box 7520</td><td>276</td></tr>
+<tr><td>FRITZ!Box 6860 5G</td><td>277</td></tr>
 <tr><td>FRITZ!Box 7530 AX</td><td>278</td></tr>
 <tr><td>FRITZ!Box 5690 Pro</td><td>279</td></tr>
 <tr><td>FRITZ!Box 6670 Cable</td><td>284</td></tr>
@@ -164,10 +165,11 @@
 <tr><td>FRITZ!Box 6690 Pro</td><td>308</td></tr>
 <tr><td>FRITZ!Box 7620</td><td>310</td></tr>
 <tr><td>FRITZ!Box 6850 5G v2</td><td>312</td></tr>
+<tr><td>FRITZ!Box 6860 5G v2</td><td>314</td></tr>
 </tbody></table>
 </details>
 
-<details><summary>135 verschiedene Produkte</summary>
+<details><summary>137 verschiedene Produkte</summary>
 
 <table>
 <caption style='background-color:gray'>&nbsp;</caption>
@@ -280,6 +282,7 @@
 <tr><td>FRITZ!Box 5590 Fiber</td><td>Fritz_Box_HW272</td></tr>
 <tr><td>FRITZ!Powerline 1240 AX</td><td>Fritz_Box_HW275</td></tr>
 <tr><td>FRITZ!Box 7520</td><td>Fritz_Box_HW276</td></tr>
+<tr><td>FRITZ!Box 6860 5G</td><td>Fritz_Box_HW277</td></tr>
 <tr><td>FRITZ!Box 7530 AX</td><td>Fritz_Box_HW278</td></tr>
 <tr><td>FRITZ!Box 5690 Pro</td><td>Fritz_Box_HW279</td></tr>
 <tr><td>FRITZ!Box 6670 Cable</td><td>Fritz_Box_HW284</td></tr>
@@ -301,6 +304,7 @@
 <tr><td>FRITZ!Box 6690 Pro</td><td>Fritz_Box_HW308</td></tr>
 <tr><td>FRITZ!Box 7620</td><td>Fritz_Box_HW310</td></tr>
 <tr><td>FRITZ!Box 6850 5G v2</td><td>Fritz_Box_HW312</td></tr>
+<tr><td>FRITZ!Box 6860 5G v2</td><td>Fritz_Box_HW314</td></tr>
 <tr><td>FRITZ!WLAN Repeater 300E</td><td>Fritz_Box_Neon</td></tr>
 <tr><td>FRITZ!Box 6360 Cable</td><td>Fritz_Box_Puma</td></tr>
 <tr><td>FRITZ!Box SL WLAN</td><td>Fritz_Box_SL_WLAN</td></tr>
@@ -1052,7 +1056,7 @@
 <tr><td>FRITZ!Box 6690 Pro</td><td>FREETZ_TYPE_6690_PRO</td></tr>
 </tbody></table>
 <table>
-<caption style='background-color:gray'>Gen5: fit-boot (27)</caption>
+<caption style='background-color:gray'>Gen5: fit-boot (29)</caption>
 <thead><tr><th style='width:450px'>Name</th><th style='width:300px'>Symbol</th></tr></thead>
 <tbody>
 <tr><td>FRITZ!Box 4050</td><td>FREETZ_TYPE_4050</td></tr>
@@ -1065,6 +1069,8 @@
 <tr><td>FRITZ!Box 5690 Pro</td><td>FREETZ_TYPE_5690_PRO</td></tr>
 <tr><td>FRITZ!Box 5690 XGS</td><td>FREETZ_TYPE_5690_XGS</td></tr>
 <tr><td>FRITZ!Box 6825 4G</td><td>FREETZ_TYPE_6825</td></tr>
+<tr><td>FRITZ!Box 6860 5G</td><td>FREETZ_TYPE_6860_V1</td></tr>
+<tr><td>FRITZ!Box 6860 5G v2</td><td>FREETZ_TYPE_6860_V2</td></tr>
 <tr><td>FRITZ!Box 7510</td><td>FREETZ_TYPE_7510</td></tr>
 <tr><td>FRITZ!Box 7530 AX</td><td>FREETZ_TYPE_7530_W6_V1</td></tr>
 <tr><td>FRITZ!Box 7530 AX</td><td>FREETZ_TYPE_7530_W6_V2</td></tr>
