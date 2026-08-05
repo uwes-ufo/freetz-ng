@@ -1305,7 +1305,7 @@ FREETZ_MODULES_OWN=""
 #
 FREETZ_MODULE_usbhid=y
 FREETZ_MODULE_hid=y
-FREETZ_MODULE_hid_generic=y
+# FREETZ_MODULE_hid_generic is not set
 # FREETZ_MODULE_bfusb is not set
 # FREETZ_MODULE_btusb is not set
 # FREETZ_MODULE_capiconn is not set
