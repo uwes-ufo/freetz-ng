@@ -186,6 +186,10 @@ endmenu # crypto
 
 menu "drivers"
 
+config FREETZ_MODULE_input
+    bool "input.ko"
+    default n
+
 config FREETZ_MODULE_usbhid
     bool "usbhid.ko"
     default n
