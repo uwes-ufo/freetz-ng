@@ -207,7 +207,7 @@ FREETZ_AUTOMOUNT_EXT2=y
 # FREETZ_AUTOMOUNT_LINUXSWAP is not set
 # FREETZ_PATCH_MAXDEVCOUNT is not set
 # FREETZ_MODIFY_UMTSD is not set
-# FREETZ_CUSTOM_UDEV_RULES is not set
+FREETZ_CUSTOM_UDEV_RULES=y
 
 #
 # Replacement patches --------------------------------------
