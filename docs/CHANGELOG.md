@@ -141,7 +141,7 @@ Latest changes
     * PHP 5.6.40/8.2.33/8.3.33/8.4.24/8.5.9
     * procps-ng 4.0.6
     * Python 3.14.3
-    * RRDtool 1.2.30/1.10.3
+    * RRDtool 1.2.30/1.11.0
     * radvd 1.9.3/2.21
     * rsync 3.4.1/3.4.4
     * sslh 2.2.4/2.3.1
