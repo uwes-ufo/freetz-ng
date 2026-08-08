@@ -11,6 +11,8 @@ $(PKG)_SITE:=https://github.com/oetiker/rrdtool-1.x/releases/download/v$($(PKG)_
 ### CVSREPO:=https://github.com/oetiker/rrdtool-1.x
 ### STEWARD:=fda77
 
+$(PKG)_CATEGORY_LIBS:=Databases##rrdtool
+
 $(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_LIB_librrd_WITH_VERSION_ABANDON),abandon,current)
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/src/.libs/rrdtool

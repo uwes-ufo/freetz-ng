@@ -7,6 +7,8 @@ $(PKG)_SITE:=https://www.cairographics.org/releases,https://cairographics.org/sn
 ### MANPAGE:=https://www.cairographics.org/documentation/
 ### CHANGES:=https://www.cairographics.org/news/
 
+$(PKG)_CATEGORY_LIBS:=Graphics & fonts
+
 $(PKG)_LIBNAME_SHORT:=$(pkg)
 $(PKG)_LIBNAME_LONG:=$($(PKG)_LIBNAME_SHORT:%=lib%.so.$($(PKG)_LIB_VERSION))
 $(PKG)_BINARY:=$($(PKG)_DIR)/builddir/src/$($(PKG)_LIBNAME_LONG)
