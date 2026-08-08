@@ -7,7 +7,7 @@ PKGS=$(
 for dir in avm $(find "$INPWD" -maxdepth 1 -mindepth 1 -type d); do
 	pkg="${dir##*/}"
 	echo "$pkg" | grep -qE "^(busybox|linux)$" && continue
-	cat="$(sed -n 's/^$(PKG)_CATEGORY *:= *//p' $dir/$pkg.mk 2>/dev/null)"
+	cat="$(sed -n 's/^$(PKG)_CATEGORY_PKGS *:= *//p' $dir/$pkg.mk 2>/dev/null)"
 	[ "${#cat}" == "1" ] && cat="000Packages"
 	echo "${cat:-000Packages}##$pkg"
 done | sort )
