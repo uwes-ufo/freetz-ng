@@ -20,6 +20,8 @@ $(PKG)_LIBRARIES_TARGET_DIR:=$($(PKG)_LIBRARIES:%=$($(PKG)_TARGET_LIBDIR)/%)
 
 $(PKG)_DEPENDS_ON += gperf-host freetype libxml2 zlib
 
+$(PKG)_CONFIGURE_PRE_CMDS += $(call PKG_PREVENT_RPATH_HARDCODING,./configure)
+
 $(PKG)_CONFIGURE_ENV += LIBXML2_CFLAGS=-I"$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include"
 
 $(PKG)_CONFIGURE_OPTIONS += --disable-nls
