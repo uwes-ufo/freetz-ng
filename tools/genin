@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+MYPWD="$(dirname $(realpath $0))"
+
+_LIBS="y"
+_PKGS="y"
+
+case "$1" in
+	l*)	_PKGS="n" ;;
+	p*)	_LIBS="n" ;;
+esac
+
+[ "$_LIBS" != "n" ] && "$MYPWD/.genin_libs"
+[ "$_PKGS" != "n" ] && "$MYPWD/.genin_pkgs"
+
+exit 0
+
