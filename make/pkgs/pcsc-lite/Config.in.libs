@@ -15,7 +15,7 @@ config FREETZ_LIB_libpcsclite
 			depends on FREETZ_TARGET_GCC_4_MAX
 
 		config FREETZ_LIB_libpcsclite_WITH_VERSION_CURRENT
-			bool "2.1.0"
+			bool "2.5.1"
 			depends on !FREETZ_TARGET_GCC_4_MAX
 
 	endchoice
