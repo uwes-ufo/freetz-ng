@@ -19,13 +19,13 @@ if FREETZ_PACKAGE_PCSC_LITE
 
 		config FREETZ_PACKAGE_PCSC_LITE_VERSION_ABANDON
 			bool "1.9.5"
-			depends on FREETZ_LIB_libusb1_WITH_ABANDON
+			depends on FREETZ_LIB_libsqlite3_WITH_VERSION_ABANDON
 			help
 				The C11 atomics are available since GCC v4.9 only.
 
 		config FREETZ_PACKAGE_PCSC_LITE_VERSION_CURRENT
 			bool "2.1.0"
-			depends on !FREETZ_LIB_libusb1_WITH_ABANDON
+			depends on FREETZ_LIB_libsqlite3_WITH_VERSION_CURRENT
 
 	endchoice
 
