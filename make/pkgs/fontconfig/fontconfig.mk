@@ -8,6 +8,8 @@ $(PKG)_SITE:=https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic
 ### CVSREPO:=https://gitlab.freedesktop.org/fontconfig/fontconfig
 ### STEWARD:=fda77
 
+$(PKG)_CATEGORY_LIBS:=Graphics & fonts
+
 $(PKG)_BINARIES:=fonts.conf
 $(PKG)_BINARIES_BUILD_DIR:=$($(PKG)_BINARIES:%=$($(PKG)_DIR)/%)
 $(PKG)_BINARIES_TARGET_DIR:=$($(PKG)_BINARIES:%=$($(PKG)_DEST_DIR)/etc/fonts/%)

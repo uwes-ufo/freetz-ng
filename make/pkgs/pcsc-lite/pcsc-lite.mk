@@ -11,6 +11,8 @@ $(PKG)_SITE:=https://pcsclite.apdu.fr/files
 ### CVSREPO:=https://salsa.debian.org/rousseau/PCSC
 ### STEWARD:=fda77
 
+$(PKG)_CATEGORY_LIBS:=USB & related
+
 $(PKG)_STARTLEVEL=90
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/$(if $(FREETZ_LIB_libpcsclite_WITH_VERSION_ABANDON),src,builddir)/pcscd

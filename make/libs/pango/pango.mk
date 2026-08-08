@@ -9,6 +9,8 @@ $(PKG)_SITE:=https://download.gnome.org/sources/pango/$(call GET_MAJOR_VERSION,$
 ### CHANGES:=https://gitlab.gnome.org/GNOME/pango/blob/main/NEWS
 ### CVSREPO:=https://gitlab.gnome.org/GNOME/pango
 
+$(PKG)_CATEGORY_LIBS:=Graphics & fonts
+
 $(PKG)_LIBNAMES_SHORT   := pango pangoft2 pangocairo
 $(PKG)_LIBNAMES_LONG    := $($(PKG)_LIBNAMES_SHORT:%=lib%-$($(PKG)_MAJOR_VERSION).so.$($(PKG)_LIB_VERSION))
 $(PKG)_LIBS_BUILD_DIR   := $($(PKG)_LIBNAMES_LONG:%=$($(PKG)_DIR)/builddir/pango/%)
