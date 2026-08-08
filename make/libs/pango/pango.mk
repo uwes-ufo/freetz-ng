@@ -30,6 +30,8 @@ $(PKG)_CONFIGURE_OPTIONS += -D libthai=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D sysprof=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D xft=disabled
 
+$(PKG)_CONFIGURE_POST_CMDS += $(call PKG_PREVENT_MESON_BUILD_RPATH,builddir/build.ninja)
+
 $(PKG)_EXTRA_CFLAGS += -I$(TARGET_TOOLCHAIN_STAGING_DIR)/include/glib-2.0
 $(PKG)_EXTRA_CFLAGS += -I$(TARGET_TOOLCHAIN_STAGING_DIR)/lib/glib-2.0/include
 
