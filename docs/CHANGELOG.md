@@ -111,6 +111,7 @@ Latest changes
     * Binutils 2.46.0
     * BusyBox 1.27.2/1.38.0
     * CA-bundle 2026-05-14
+    * CCID 1.8.2
     * Curl 8.12.1/8.21.0
     * davfs2 1.5.2/1.7.3
     * Dnsmasq 2.80/2.93
@@ -132,16 +133,17 @@ Latest changes
     * ltrace 0.7.3-git/0.8.1
     * mini-snmpd 1.7/2.0
     * Minicom 2.11.1
-    * Mosquitto 2.0.22/2.1.2
+    * Mosquitto 2.0.23/2.1.2
     * Nano 9.2
     * Nmap 4.76/5.51/7.99
     * OpenSSH 9.3p2/10.4p1
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.21/3.5.7
     * OpenVPN 2.4.12/2.5.11/2.6.22/2.7.6
+    * PCSC-lite 1.9.5/2.5.1
     * PHP 5.6.40/8.2.33/8.3.33/8.4.24/8.5.9
     * procps-ng 4.0.6
     * Python 3.14.3
-    * RRDtool 1.2.30/1.10.3
+    * RRDtool 1.2.30/1.11.0
     * radvd 1.9.3/2.21
     * rsync 3.4.1/3.4.4
     * sslh 2.2.4/2.3.1

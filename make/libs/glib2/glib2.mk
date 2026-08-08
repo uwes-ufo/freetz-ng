@@ -96,6 +96,8 @@ $(PKG)_CONFIGURE_OPTIONS += -D glib_checks=false
 $(PKG)_CONFIGURE_OPTIONS += -D libelf=disabled
 $(PKG)_CONFIGURE_OPTIONS += -D multiarch=false
 #$(PKG)_CONFIGURE_OPTIONS += -D force_posix_threads=true
+
+$(PKG)_CONFIGURE_POST_CMDS += $(call PKG_PREVENT_MESON_BUILD_RPATH,builddir/build.ninja)
 endif
 
 
