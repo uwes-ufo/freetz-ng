@@ -33,6 +33,8 @@ $(PKG)_CONFIGURE_OPTIONS += -Dxlib=disabled
 $(PKG)_CONFIGURE_OPTIONS += -Dxlib-xcb=disabled
 $(PKG)_CONFIGURE_OPTIONS += -Dzlib=disabled
 
+$(PKG)_CONFIGURE_POST_CMDS += $(call PKG_PREVENT_MESON_BUILD_RPATH,builddir/build.ninja)
+
 
 $(PKG_SOURCE_DOWNLOAD)
 $(PKG_UNPACKED)
