@@ -1425,6 +1425,7 @@ FREETZ_LIB_libncursesw=y
 # FREETZ_LIB_libftdi is not set
 # FREETZ_LIB_libftdi1 is not set
 # FREETZ_LIB_libpcsclite is not set
+FREETZ_LIB_libpcsclite_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libusb0 is not set
 # FREETZ_LIB_libusb0_WITH_VERSION_ABANDON is not set
 FREETZ_LIB_libusb0_WITH_VERSION_CURRENT=y
