@@ -117,7 +117,7 @@ Latest changes
     * Dnsmasq 2.80/2.93
     * Dropbear 2026.94
     * dtc 1.8.1
-    * Git 2.26.2/2.53.0
+    * Git 2.26.2/2.55.0
     * HAProxy 2.6.29
     * htop 1.0.3/3.5.2
     * htpdate 2.0.2
