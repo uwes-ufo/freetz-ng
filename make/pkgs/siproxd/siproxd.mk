@@ -29,12 +29,17 @@ $(PKG)_CONFIGURE_OPTIONS += --with-libosip-prefix="$(TARGET_TOOLCHAIN_STAGING_DI
 $(PKG)_CONFIGURE_OPTIONS += --enable-shared
 $(PKG)_CONFIGURE_OPTIONS += --disable-debug
 
+$(PKG)_CFLAGS := $(TARGET_CFLAGS)
+$(PKG)_CFLAGS += -fcommon
+
+
 $(PKG_SOURCE_DOWNLOAD)
 $(PKG_UNPACKED)
 $(PKG_CONFIGURED_CONFIGURE)
 
 $($(PKG)_BINARY_BUILD_DIR): $($(PKG)_DIR)/.configured
 	$(SUBMAKE) -C $(SIPROXD_DIR) \
+		CFLAGS="$(SIPROXD_CFLAGS)" \
 		all
 
 $($(PKG)_BINARY_TARGET_DIR): $($(PKG)_BINARY_BUILD_DIR)
@@ -55,6 +60,7 @@ $($(PKG)_MODULES_LA_TARGET_DIR): $($(PKG)_DEST_DIR)$($(PKG)_MODULES_DIR)/%: $($(
 $(pkg):
 
 $(pkg)-precompiled: $($(PKG)_BINARY_TARGET_DIR)  $($(PKG)_MODULES_SO_TARGET_DIR) $($(PKG)_MODULES_LA_TARGET_DIR)
+
 
 $(pkg)-clean:
 	-$(SUBMAKE) -C $(SIPROXD_DIR) clean
