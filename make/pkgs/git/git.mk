@@ -71,6 +71,9 @@ $(PKG)_MAKE_PARAMS := V=1 NO_NSEC=1 STRIP="$(TARGET_STRIP)" NO_INSTALL_HARDLINKS
 ifeq ($(strip $(FREETZ_PACKAGE_GIT_WITH_PCRE)),y)
 $(PKG)_MAKE_PARAMS += NO_LIBPCRE1_JIT=1
 endif
+ifneq ($(strip $(FREETZ_PACKAGE_GIT_VERSION_ABANDON)),y)
+$(PKG)_MAKE_PARAMS += NO_RUST=1
+endif
 $(PKG)_MAKE_PARAMS += CSPRNG_METHOD=openssl
 $(PKG)_MAKE_PARAMS += EXTRA_CFLAGS="-ffunction-sections -fdata-sections" EXTRA_LDFLAGS="-Wl,--gc-sections"
 
