@@ -128,7 +128,7 @@ Latest changes
     * juis_check 1.4
     * LCD4linux 63fffafb
     * Iptables 1.4.11.1/1.4.21/1.6.2/1.8.13
-    * ldd 0.1/1.0.58
+    * ldd 0.1/1.0.59
     * Lighttpd 1.4.85
     * ltrace 0.7.3-git/0.8.1
     * mini-snmpd 1.7/2.0
