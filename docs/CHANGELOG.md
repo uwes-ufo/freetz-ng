@@ -77,7 +77,7 @@ Latest changes
     * fakeroot 2.0
     * file 5.47
     * kconfig 7.1
-    * meson 1.11.2
+    * meson 1.12.0
     * openssl 3.5.7
     * patch 2.8
     * pseudo 1.9.8
@@ -117,7 +117,7 @@ Latest changes
     * Dnsmasq 2.80/2.93
     * Dropbear 2026.94
     * dtc 1.8.1
-    * Git 2.26.2/2.53.0
+    * Git 2.26.2/2.55.0
     * HAProxy 2.6.29
     * htop 1.0.3/3.5.2
     * htpdate 2.0.2
@@ -128,7 +128,7 @@ Latest changes
     * juis_check 1.4
     * LCD4linux 63fffafb
     * Iptables 1.4.11.1/1.4.21/1.6.2/1.8.13
-    * ldd 0.1/1.0.58
+    * ldd 0.1/1.0.59
     * Lighttpd 1.4.85
     * ltrace 0.7.3-git/0.8.1
     * mini-snmpd 1.7/2.0
@@ -152,7 +152,7 @@ Latest changes
     * tinc 1.0.37/1.1pre18
     * Tinyproxy 1.11.3
     * tmux 3.7b
-    * Tor 0.4.9.11
+    * Tor 0.4.8.25/0.4.9.11
     * Transmission 3.00/4.1.3
     * Tree 1.8.0/2.3.2
     * Unbound 1.26.0
@@ -164,18 +164,18 @@ Latest changes
     * XZ 5.8.3
 
   - Libraries:
-    * expat 2.7.5/2.8.2
+    * expat 2.7.5/2.8.3
     * file 5.47
     * FreeType 2.14.3
     * gettext 1.0
-    * GLib2 2.32.4/2.88.0
+    * GLib2 2.32.4/2.88.3
     * harfbuzz 14.3.0
     * libcap 2.49/2.78
     * libcap-ng 0.9.3
     * libcjson 1.7.19
     * libevent 2.1.13
     * libexif 0.6.26
-    * libffi 3.7.1
+    * libffi 3.8.0
     * libmaxminddb 1.13.3
     * libpng 1.6.58
     * libusb(-compat) 0.1.12/0.1.9
@@ -185,7 +185,7 @@ Latest changes
     * libzip 1.11.4
     * MbedTLS 2.7.19/2.28.10/3.6.7
     * neon 0.30.2/0.37.0
-    * pango 1.58.0
+    * pango 1.58.2
 
   - Firmware updates:
     * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
