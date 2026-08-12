@@ -14,12 +14,17 @@ $(PKG)_PARSER_BINARY:=$($(PKG)_DIR)/src/osipparser2/.libs/libosipparser2.so.$($(
 $(PKG)_PARSER_STAGING_BINARY:=$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libosipparser2.so.$($(PKG)_LIB_VERSION)
 $(PKG)_PARSER_TARGET_BINARY:=$($(PKG)_TARGET_DIR)/libosipparser2.so.$($(PKG)_LIB_VERSION)
 
+$(PKG)_DEPENDS_ON += config-host
+
+$(PKG)_CONFIGURE_PRE_CMDS += $(call PKG_UPDATE_CONFIGS,./scripts)
+
 $(PKG)_CONFIGURE_OPTIONS += --enable-shared
 $(PKG)_CONFIGURE_OPTIONS += --enable-static
 $(PKG)_CONFIGURE_OPTIONS += --disable-debug
 $(PKG)_CONFIGURE_OPTIONS += --disable-trace
 $(PKG)_CONFIGURE_OPTIONS += --enable-pthread
 $(PKG)_CONFIGURE_OPTIONS += --enable-semaphore
+
 
 $(PKG_SOURCE_DOWNLOAD)
 $(PKG_UNPACKED)
@@ -46,6 +51,7 @@ $($(PKG)_PARSER_TARGET_BINARY): $($(PKG)_PARSER_STAGING_BINARY)
 $(pkg): $($(PKG)_STAGING_BINARY) $($(PKG)_PARSER_STAGING_BINARY)
 
 $(pkg)-precompiled: $($(PKG)_TARGET_BINARY) $($(PKG)_PARSER_TARGET_BINARY)
+
 
 $(pkg)-clean:
 	-$(SUBMAKE) -C $(LIBOSIP2_DIR) clean
