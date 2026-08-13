@@ -140,7 +140,7 @@ endef
 ## PKG_UNPACKED: Unpack and patch package
 define PKG_UNPACKED__ALL_INT
 $(pkg)-source: | $(DL_DIR)/$($(PKG)_SOURCE)
-$($(PKG)_DIR)/.unpacked: $(pkg)-source $(if $($(PKG)_CUSTOM_UNPACK),$($(PKG)_DIR)/.build-prereq-checked) | $($(PKG)_SOURCE_DIR)
+$($(PKG)_DIR)/.unpacked: $(if $($(PKG)_CUSTOM_UNPACK),$($(PKG)_DIR)/.build-prereq-checked) | $(pkg)-source $($(PKG)_SOURCE_DIR)
 	@$(call _ECHO,preparing)
 	@$(call RMDIR_KEEP_FILES__INT,$($(PKG)_DIR),.build-prereq-checked)
 	$(call PKG_UNPACK)
@@ -156,7 +156,7 @@ endef
 ## "unpack" (actually copy) local source package
 define PKG_UNPACKED_LOCALSOURCE_PACKAGE__INT
 $(pkg)-source: | $(wildcard $($(PKG)_MAKE_DIR)/src/*)
-$($(PKG)_DIR)/.unpacked: $(pkg)-source | $($(PKG)_SOURCE_DIR)
+$($(PKG)_DIR)/.unpacked: | $(pkg)-source $($(PKG)_SOURCE_DIR)
 	@$(call _ECHO,preparing)
 	@$(call RMDIR_KEEP_FILES__INT,$($(PKG)_DIR),.build-prereq-checked)
 	mkdir -p $($(PKG)_DIR)
