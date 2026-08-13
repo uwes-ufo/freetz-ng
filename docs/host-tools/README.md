@@ -128,7 +128,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python3-referencing 0.37.0](python3-referencing-host.md)<a id='python3-referencing-host'></a>**<br>
 
-  * **[python3-setuptools 82.0.1](python3-setuptools-host.md)<a id='python3-setuptools-host'></a>**<br>
+  * **[python3-setuptools 84.0.0](python3-setuptools-host.md)<a id='python3-setuptools-host'></a>**<br>
 
 ### S
 
