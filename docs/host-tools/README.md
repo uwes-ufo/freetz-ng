@@ -156,7 +156,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### U
 
-  * **[uboot 2026.04](uboot-host.md)<a id='uboot-host'></a>**<br>
+  * **[uboot 2026.07](uboot-host.md)<a id='uboot-host'></a>**<br>
 
   * **[uimg 871930d](uimg-host.md)<a id='uimg-host'></a>**<br>
 
