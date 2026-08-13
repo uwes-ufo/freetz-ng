@@ -90,7 +90,7 @@ Latest changes
     * python3-setuptools 84.0.0
     * sed 4.10
     * uboot 2026.04
-    * util-linux 2.42
+    * util-linux 2.42.2
 
   - AVM sources:
     * 5690 XGS 8.25 - 5.4.293
