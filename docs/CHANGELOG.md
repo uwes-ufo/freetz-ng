@@ -73,7 +73,7 @@ Latest changes
     * ca-bundle 2026-05-14
     * cmake 4.4.2
     * config 4286648
-    * dos2unix 7.5.5
+    * dos2unix 7.5.6
     * dtc 1.8.1
     * fakeroot 2.0
     * file 5.47
