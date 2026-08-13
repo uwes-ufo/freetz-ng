@@ -155,12 +155,12 @@ endef
 
 ## "unpack" (actually copy) local source package
 define PKG_UNPACKED_LOCALSOURCE_PACKAGE__INT
-$(pkg)-source: | $(wildcard $($(PKG)_MAKE_DIR)/src/*)
+$(pkg)-source: | $($(PKG)_MAKE_DIR)/src/
 $($(PKG)_DIR)/.unpacked: | $(pkg)-source $($(PKG)_SOURCE_DIR)
 	@$(call _ECHO,preparing)
 	@$(call RMDIR_KEEP_FILES__INT,$($(PKG)_DIR),.build-prereq-checked)
 	mkdir -p $($(PKG)_DIR)
-	cp -a $$^ $($(PKG)_DIR)
+	cp -a $(wildcard $($(PKG)_MAKE_DIR)/src/*) $($(PKG)_DIR)
 	@touch $$@
 $(pkg)-unpacked: $($(PKG)_DIR)/.unpacked
 .PHONY: $(pkg)-source $(pkg)-unpacked
