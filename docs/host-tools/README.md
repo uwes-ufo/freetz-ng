@@ -76,7 +76,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[meson 1.12.0](meson-host.md)<a id='meson-host'></a>**<br>
 
-  * **[mklibs 0.1.45](mklibs-host.md)<a id='mklibs-host'></a>**<br>
+  * **[mklibs 0.1.46](mklibs-host.md)<a id='mklibs-host'></a>**<br>
 
   * **[mpc 1.1.0](mpc-host.md)<a id='mpc-host'></a>**<br>
 
