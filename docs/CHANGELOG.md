@@ -80,7 +80,7 @@ Latest changes
     * meson 1.12.0
     * openssl 3.5.7
     * patch 2.8
-    * pseudo 1.9.8
+    * pseudo 1.9.11
     * python3 3.14.7
     * python3-attrs 26.1.0
     * python3-jsonschema 4.26.0
