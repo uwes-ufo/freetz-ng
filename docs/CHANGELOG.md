@@ -115,7 +115,7 @@ Latest changes
     * BIND 9.11.37/9.20.24
     * Binutils 2.46.0
     * BusyBox 1.27.2/1.38.0
-    * CA-bundle 2026-05-14
+    * CA-bundle 2026-08-13
     * CCID 1.8.2
     * Curl 8.12.1/8.21.0
     * davfs2 1.5.2/1.7.3
