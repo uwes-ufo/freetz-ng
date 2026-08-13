@@ -1,12 +1,10 @@
-$(call TOOLS_INIT, $(if $(FREETZ_TOOLS_PATCHELF_VERSION_ABANDON),0.14.5,b49de1b33))
+$(call TOOLS_INIT, $(if $(FREETZ_TOOLS_PATCHELF_VERSION_ABANDON),0.14.5,0.19.1))
 $(PKG)_SOURCE:=patchelf-$($(PKG)_VERSION).tar.bz2
 $(PKG)_HASH_ABANDON:=b9a46f2989322eb89fa4f6237e20836c57b455aa43a32545ea093b431d982f5c
-$(PKG)_HASH_CURRENT:=b5baedcef96b73dbdd6ae296f7aecdddd3fe51e3f335ef8bc99643a223242e95
+$(PKG)_HASH_CURRENT:=2cce01de93653829f6ab68a20c2ec275e1c00a946110704a27e928d2e6e88716
 $(PKG)_HASH:=$($(PKG)_HASH_$(if $(FREETZ_TOOLS_PATCHELF_VERSION_ABANDON),ABANDON,CURRENT))
-$(PKG)_SITE_ABANDON:=https://github.com/NixOS/patchelf/releases/download/$($(PKG)_VERSION)
-$(PKG)_SITE_CURRENT:=git@https://github.com/NixOS/patchelf.git
-$(PKG)_SITE:=$($(PKG)_SITE_$(if $(FREETZ_TOOLS_PATCHELF_VERSION_ABANDON),ABANDON,CURRENT))
-### VERSION:=0.14.5/0.18.0-b49de1b33
+$(PKG)_SITE:=https://github.com/NixOS/patchelf/releases/download/$($(PKG)_VERSION)
+### VERSION:=0.14.5/0.19.1
 ### WEBSITE:=https://opencollective.com/nixos
 ### MANPAGE:=https://sources.debian.org/patches/patchelf/
 ### CHANGES:=https://github.com/NixOS/patchelf/releases
