@@ -75,7 +75,7 @@ Latest changes
     * config 4286648
     * dos2unix 7.5.6
     * dtc 1.8.1
-    * fakeroot 2.0
+    * fakeroot 1.38.1/2.1.4
     * file 5.48
     * genext2fs 1.6.2
     * kconfig 7.1
