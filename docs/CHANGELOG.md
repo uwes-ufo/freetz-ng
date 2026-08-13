@@ -70,7 +70,7 @@ Latest changes
   - Host tools:
     * busybox 1.38.0
     * autoconf 2.73
-    * ca-bundle 2026-05-14
+    * ca-bundle 2026-08-13
     * cmake 4.4.2
     * config 4286648
     * dos2unix 7.5.6
@@ -115,7 +115,7 @@ Latest changes
     * BIND 9.11.37/9.20.24
     * Binutils 2.46.0
     * BusyBox 1.27.2/1.38.0
-    * CA-bundle 2026-05-14
+    * CA-bundle 2026-08-13
     * CCID 1.8.2
     * Curl 8.12.1/8.21.0
     * davfs2 1.5.2/1.7.3
@@ -145,13 +145,14 @@ Latest changes
     * OpenSSH 9.3p2/10.4p1
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.21/3.5.7
     * OpenVPN 2.4.12/2.5.11/2.6.22/2.7.6
+    * PatchELF 0.19.1
     * PCSC-lite 1.9.5/2.5.1
     * PHP 5.6.40/8.2.33/8.3.33/8.4.24/8.5.9
     * procps-ng 4.0.6
     * Python 3.14.3
     * RRDtool 1.2.30/1.11.0
     * radvd 1.9.3/2.21
-    * rsync 3.4.1/3.4.4
+    * rsync 3.4.1/3.5.0
     * Smartmontools 7.2/7.5
     * sslh 2.2.4/2.3.1
     * Stunnel 5.80
@@ -175,7 +176,7 @@ Latest changes
     * FreeType 2.14.3
     * gettext 1.0
     * GLib2 2.32.4/2.88.3
-    * harfbuzz 14.3.0
+    * harfbuzz 14.3.1
     * libcap 2.49/2.78
     * libcap-ng 0.9.3
     * libcjson 1.7.19
