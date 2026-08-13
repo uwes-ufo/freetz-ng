@@ -122,6 +122,7 @@ Latest changes
     * Dnsmasq 2.80/2.93
     * Dropbear 2026.94
     * dtc 1.8.1
+    * file 5.48
     * Git 2.26.2/2.55.0
     * HAProxy 2.6.29
     * htop 1.0.3/3.5.2
@@ -171,7 +172,6 @@ Latest changes
 
   - Libraries:
     * expat 2.7.5/2.8.3
-    * file 5.47
     * FreeType 2.14.3
     * gettext 1.0
     * GLib2 2.32.4/2.88.3
