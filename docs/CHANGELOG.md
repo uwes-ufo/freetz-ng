@@ -72,24 +72,29 @@ Latest changes
     * autoconf 2.73
     * ca-bundle 2026-05-14
     * cmake 4.4.2
-    * dos2unix 7.5.5
+    * config 4286648
+    * dos2unix 7.5.6
     * dtc 1.8.1
     * fakeroot 2.0
-    * file 5.47
+    * file 5.48
+    * genext2fs 1.6.2
     * kconfig 7.1
     * meson 1.12.0
+    * mklibs 0.1.46
     * openssl 3.5.7
+    * patchelf 0.14.5/0.19.1
     * patch 2.8
-    * pseudo 1.9.8
+    * pkgconf 3.0.1
+    * pseudo 1.9.11
     * python3 3.14.7
     * python3-attrs 26.1.0
     * python3-jsonschema 4.26.0
-    * python3-packaging 26.2
-    * python3-pip 26.1.1
-    * python3-setuptools 82.0.1
+    * python3-packaging 26.3
+    * python3-pip 26.2.1
+    * python3-setuptools 84.0.0
     * sed 4.10
-    * uboot 2026.04
-    * util-linux 2.42
+    * uboot 2026.07
+    * util-linux 2.42.2
 
   - AVM sources:
     * 5690 XGS 8.25 - 5.4.293
@@ -117,6 +122,7 @@ Latest changes
     * Dnsmasq 2.80/2.93
     * Dropbear 2026.94
     * dtc 1.8.1
+    * file 5.48
     * Git 2.26.2/2.55.0
     * HAProxy 2.6.29
     * htop 1.0.3/3.5.2
@@ -166,7 +172,6 @@ Latest changes
 
   - Libraries:
     * expat 2.7.5/2.8.3
-    * file 5.47
     * FreeType 2.14.3
     * gettext 1.0
     * GLib2 2.32.4/2.88.3
