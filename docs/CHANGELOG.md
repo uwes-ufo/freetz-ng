@@ -72,6 +72,7 @@ Latest changes
     * autoconf 2.73
     * ca-bundle 2026-05-14
     * cmake 4.4.2
+    * config 4286648
     * dos2unix 7.5.5
     * dtc 1.8.1
     * fakeroot 2.0
