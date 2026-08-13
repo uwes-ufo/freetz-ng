@@ -77,6 +77,7 @@ Latest changes
     * dtc 1.8.1
     * fakeroot 2.0
     * file 5.48
+    * genext2fs 1.6.2
     * kconfig 7.1
     * meson 1.12.0
     * openssl 3.5.7
