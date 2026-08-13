@@ -152,7 +152,7 @@ Latest changes
     * Python 3.14.3
     * RRDtool 1.2.30/1.11.0
     * radvd 1.9.3/2.21
-    * rsync 3.4.1/3.4.4
+    * rsync 3.4.1/3.5.0
     * Smartmontools 7.2/7.5
     * sslh 2.2.4/2.3.1
     * Stunnel 5.80
