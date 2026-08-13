@@ -84,7 +84,7 @@ Latest changes
     * python3 3.14.7
     * python3-attrs 26.1.0
     * python3-jsonschema 4.26.0
-    * python3-packaging 26.2
+    * python3-packaging 26.3
     * python3-pip 26.1.1
     * python3-setuptools 82.0.1
     * sed 4.10
