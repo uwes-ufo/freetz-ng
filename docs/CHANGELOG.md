@@ -80,6 +80,7 @@ Latest changes
     * genext2fs 1.6.2
     * kconfig 7.1
     * meson 1.12.0
+    * mklibs 0.1.46
     * openssl 3.5.7
     * patchelf 0.14.5/0.19.1
     * patch 2.8
