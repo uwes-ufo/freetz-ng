@@ -122,7 +122,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[python3-jsonschema 4.26.0](python3-jsonschema-host.md)<a id='python3-jsonschema-host'></a>**<br>
 
-  * **[python3-packaging 26.2](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
+  * **[python3-packaging 26.3](python3-packaging-host.md)<a id='python3-packaging-host'></a>**<br>
 
   * **[python3-pip 26.1.1](python3-pip-host.md)<a id='python3-pip-host'></a>**<br>
 
