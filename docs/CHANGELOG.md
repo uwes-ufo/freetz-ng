@@ -70,7 +70,7 @@ Latest changes
   - Host tools:
     * busybox 1.38.0
     * autoconf 2.73
-    * ca-bundle 2026-05-14
+    * ca-bundle 2026-08-13
     * cmake 4.4.2
     * config 4286648
     * dos2unix 7.5.6
