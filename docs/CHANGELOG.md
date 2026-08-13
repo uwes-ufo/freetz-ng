@@ -76,7 +76,7 @@ Latest changes
     * dos2unix 7.5.6
     * dtc 1.8.1
     * fakeroot 2.0
-    * file 5.47
+    * file 5.48
     * kconfig 7.1
     * meson 1.12.0
     * openssl 3.5.7
