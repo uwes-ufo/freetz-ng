@@ -90,7 +90,7 @@ Latest changes
     * python3-pip 26.2.1
     * python3-setuptools 84.0.0
     * sed 4.10
-    * uboot 2026.04
+    * uboot 2026.07
     * util-linux 2.42.2
 
   - AVM sources:
