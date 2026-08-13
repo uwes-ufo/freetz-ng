@@ -83,6 +83,7 @@ Latest changes
     * openssl 3.5.7
     * patchelf 0.14.5/0.19.1
     * patch 2.8
+    * pkgconf 3.0.1
     * pseudo 1.9.11
     * python3 3.14.7
     * python3-attrs 26.1.0
