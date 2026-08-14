@@ -1152,7 +1152,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Benutzung](../../docs/make/nano-shell.md#benutzung)
 
   * **[PatchELF 0.19.1 (binary only)](../../docs/make/patchelf.md)<a id='patchelf'></a>**<br>
-    Modifies existing ELF executables and libraries. Can change the interpreter, RPATH, and other ELF metadata. Useful for modifying binaries to use different dynamic linker paths or library search paths (RPATH/RUNPATH).
+    Modifies existing ELF executables and libraries. Can change the interpreter, RPATH, and other ELF metadata.
 
   * **[pciutils 3.1.7 (binary only) - DEPRECATED](../../docs/make/pciutils.md)<a id='pciutils'></a>**<br>
     The PCI Utilities are a collection of programs for inspecting and manipulating configuration of PCI devices, all based on a common portable library libpci which offers access to the PCI configuration space on a variety of operating systems. lspci displays detailed information about all PCI buses and devices in the system. setpci allows reading from and writing to PCI device configuration registers. For example, you can adjust the latency timers with it.

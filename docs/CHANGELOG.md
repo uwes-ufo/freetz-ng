@@ -79,6 +79,7 @@ Latest changes
     * file 5.48
     * genext2fs 1.6.2
     * kconfig 7.1
+    * libtool 2.6.2
     * meson 1.12.0
     * mklibs 0.1.46
     * openssl 3.5.7
@@ -192,6 +193,8 @@ Latest changes
     * libxml2 2.15.3
     * libzip 1.11.4
     * MbedTLS 2.7.19/2.28.10/3.6.7
+    * mpc 1.4.1
+    * mpfr 4.2.2
     * neon 0.30.2/0.37.0
     * pango 1.58.2
 

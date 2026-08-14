@@ -60,7 +60,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[libdtc 1.6.1](libdtc-host.md)<a id='libdtc-host'></a>**<br>
 
-  * **[libtool 2.5.4](libtool-host.md)<a id='libtool-host'></a>**<br>
+  * **[libtool 2.6.2](libtool-host.md)<a id='libtool-host'></a>**<br>
 
   * **[lzma1 465](lzma1-host.md)<a id='lzma1-host'></a>**<br>
 
@@ -78,9 +78,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[mklibs 0.1.46](mklibs-host.md)<a id='mklibs-host'></a>**<br>
 
-  * **[mpc 1.1.0](mpc-host.md)<a id='mpc-host'></a>**<br>
+  * **[mpc 1.4.1](mpc-host.md)<a id='mpc-host'></a>**<br>
 
-  * **[mpfr 3.1.6](mpfr-host.md)<a id='mpfr-host'></a>**<br>
+  * **[mpfr 4.2.2](mpfr-host.md)<a id='mpfr-host'></a>**<br>
 
 ### N
 
