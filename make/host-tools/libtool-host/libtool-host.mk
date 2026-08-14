@@ -16,6 +16,7 @@ $(PKG)_BINARIES            := libtool libtoolize
 $(PKG)_BINARIES_TARGET_DIR := $($(PKG)_BINARIES:%=$($(PKG)_DESTDIR)/bin/%)
 
 $(PKG)_CONFIGURE_OPTIONS += --prefix=$(LIBTOOL_HOST_DESTDIR)
+$(PKG)_CONFIGURE_OPTIONS += --disable-ltdl-install
 
 
 $(TOOLS_SOURCE_DOWNLOAD)
@@ -34,8 +35,7 @@ $($(PKG)_DIR)/.installed: $($(PKG)_DIR)/.compiled
 
 $(pkg)-fixhardcoded:
 	-@$(SED) -i "s!$(TOOLS_HARDCODED_DIR)!$(LIBTOOL_HOST_DESTDIR)!g" \
-		$(LIBTOOL_HOST_BINARIES_TARGET_DIR) \
-		$(LIBTOOL_HOST_DESTDIR)/lib/libltdl.la
+		$(LIBTOOL_HOST_BINARIES_TARGET_DIR)
 
 $(pkg)-precompiled: $($(PKG)_DIR)/.installed
 
