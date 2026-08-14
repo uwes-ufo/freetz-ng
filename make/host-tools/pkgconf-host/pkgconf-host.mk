@@ -37,12 +37,17 @@ $($(PKG)_DIR)/.installed: $($(PKG)_DIR)/.compiled
 $($(PKG)_WRAPPER_TARGET): $($(PKG)_WRAPPER_SOURCE)
 	cp $< $@
 
+$(pkg)-fixhardcoded:
+	-@$(SED) -i "s!$(TOOLS_HARDCODED_DIR)!$(PKGCONF_HOST_DESTDIR)!g" \
+		$(PKGCONF_HOST_DESTDIR)/lib/libpkgconf.la \
+		$(PKGCONF_HOST_DESTDIR)/lib/pkgconfig/libpkgconf.pc
+
 $(pkg)-precompiled: $($(PKG)_DIR)/.installed $($(PKG)_WRAPPER_TARGET)
 
 
 $(pkg)-clean:
 	-$(MAKE) -C $(PKGCONF_HOST_DIR) clean
-	-$(RM) $(PKGCONF_HOST_DIR)/.{configured,compiled,installed}
+	-$(RM) $(PKGCONF_HOST_DIR)/.{configured,compiled,installed,fixhardcoded}
 
 $(pkg)-dirclean:
 	$(RM) -r $(PKGCONF_HOST_DIR)
