@@ -10,7 +10,7 @@ $(PKG)_SITE:=https://distfiles.ariadne.space/pkgconf
 
 $(PKG)_DESTDIR             := $(FREETZ_BASE_DIR)/$(TOOLS_BUILD_DIR)
 
-$(PKG)_BINARIES            := pkgconf bomtool
+$(PKG)_BINARIES            := pkgconf
 $(PKG)_BINARIES_TARGET_DIR := $($(PKG)_BINARIES:%=$($(PKG)_DESTDIR)/bin/%)
 
 $(PKG)_WRAPPER             := pkg-config
