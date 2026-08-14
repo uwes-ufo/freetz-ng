@@ -78,7 +78,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[mklibs 0.1.46](mklibs-host.md)<a id='mklibs-host'></a>**<br>
 
-  * **[mpc 1.1.0](mpc-host.md)<a id='mpc-host'></a>**<br>
+  * **[mpc 1.4.1](mpc-host.md)<a id='mpc-host'></a>**<br>
 
   * **[mpfr 4.2.2](mpfr-host.md)<a id='mpfr-host'></a>**<br>
 

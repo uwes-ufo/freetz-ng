@@ -261,7 +261,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[mbedtls: mbedCrypto (libmbedcrypto.so) 2.7.19/2.28.10/3.6.7](mbedtls.md)<a id='mbedtls'></a>**<br>
     Enables support for the Blowfish block cipher.
 
-  * **[mpc: GNU MPC Library (libmpc.so) 1.1.0](mpc.md)<a id='mpc'></a>**<br>
+  * **[mpc: GNU MPC Library (libmpc.so) 1.4.1](mpc.md)<a id='mpc'></a>**<br>
     MPC is a C library for the arithmetic of complex numbers with arbitrarily high precision and correct rounding of the result. It is built upon and follows the same principles as MPFR.
 
   * **[mpfr: GNU MPFR Library (libmpfr.so) 4.2.2](mpfr.md)<a id='mpfr'></a>**<br>
