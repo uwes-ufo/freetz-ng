@@ -68,7 +68,7 @@ $($(PKG)_MAINARCH_DIR)/.configured: $($(PKG)_DIR)/.reconfigured
 		--prefix=$(FAKEROOT_HOST_DESTDIR) \
 		$(FAKEROOT_HOST_CONFIGURE_OPTIONS) \
 	);
-	touch -c $@
+	touch $@
 $($(PKG)_TARGET_SCRIPT): $($(PKG)_MAINARCH_DIR)/.configured
 	$(TOOLS_SUBMAKE) -C $(FAKEROOT_HOST_MAINARCH_DIR) install
 	$(SED) -i 's,^FAKEROOT_PREFIX=.*,FAKEROOT_PREFIX="$$(readlink -f $$0 | sed "s!/bin/fakeroot\\$$!!")",'  $(FAKEROOT_HOST_TARGET_SCRIPT)
@@ -89,7 +89,7 @@ $($(PKG)_BIARCH_DIR)/.configured: $($(PKG)_DIR)/.reconfigured
 		$(if $(findstring Microsoft,$(shell uname -r)),--host=$(shell uname -m),) \
 		$(FAKEROOT_HOST_CONFIGURE_OPTIONS) \
 	);
-	touch -c $@
+	touch $@
 $($(PKG)_TARGET_BIARCH_LIB): $($(PKG)_BIARCH_DIR)/.configured
 	$(TOOLS_SUBMAKE) -C $(FAKEROOT_HOST_BIARCH_DIR) libdir="$(FAKEROOT_HOST_BIARCH_LD_PRELOAD_PATH)" install-libLTLIBRARIES
 	touch -c $@
