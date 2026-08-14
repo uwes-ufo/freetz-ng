@@ -264,7 +264,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[mpc: GNU MPC Library (libmpc.so) 1.1.0](mpc.md)<a id='mpc'></a>**<br>
     MPC is a C library for the arithmetic of complex numbers with arbitrarily high precision and correct rounding of the result. It is built upon and follows the same principles as MPFR.
 
-  * **[mpfr: GNU MPFR Library (libmpfr.so) 3.1.6](mpfr.md)<a id='mpfr'></a>**<br>
+  * **[mpfr: GNU MPFR Library (libmpfr.so) 4.2.2](mpfr.md)<a id='mpfr'></a>**<br>
     MPFR provides a library for multiple-precision floating-point computation with correct rounding. The computation is both efficient and has a well-defined semantics. It copies the good ideas from the ANSI/IEEE-754 standard for double-precision floating-point arithmetic (53-bit mantissa).
 
 ### N

@@ -80,7 +80,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[mpc 1.1.0](mpc-host.md)<a id='mpc-host'></a>**<br>
 
-  * **[mpfr 3.1.6](mpfr-host.md)<a id='mpfr-host'></a>**<br>
+  * **[mpfr 4.2.2](mpfr-host.md)<a id='mpfr-host'></a>**<br>
 
 ### N
 
