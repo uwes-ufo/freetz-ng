@@ -160,7 +160,7 @@ Latest changes
     * SQLite 3.40.1/3.53.4
     * tinc 1.0.37/1.1pre18
     * Tinyproxy 1.11.3
-    * tmux 3.7b
+    * tmux 3.7c
     * Tor 0.4.8.25/0.4.9.11
     * Transmission 3.00/4.1.3
     * Tree 1.8.0/2.3.2
