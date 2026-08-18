@@ -556,7 +556,7 @@ $(patsubst %,%-recompile,$(TOOLS)): %-recompile : %-distclean %-precompiled
 $(patsubst %,%-fixhardcoded,$(TOOLS)): %-fixhardcoded : 
 
 tools: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_CONDITIONAL),$(TOOLS))
-tools-all: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_TARXZBUNDLE),$(TOOLS))
+tools-all: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(if $(HOST_RUN32BIT),,$(TOOLS_32BIT_ONLY)) $(TOOLS_TARXZBUNDLE),$(TOOLS))
 tools-allexcept-local: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS))
 tools-distclean-local: $(patsubst %,%-distclean,$(filter-out $(TOOLS_TARXZBUNDLE),$(TOOLS_BUILD_LOCAL)))
 tools-dirclean: $(TOOLS_DIRCLEAN)
