@@ -19,7 +19,7 @@
 <tr><td>FRITZ!OS 07.20+</td><td>FREETZ_TYPE_FIRMWARE_07_2X</td></tr>
 <tr><td>FRITZ!OS 07.50+</td><td>FREETZ_TYPE_FIRMWARE_07_5X</td></tr>
 <tr><td>FRITZ!OS 08.00+</td><td>FREETZ_TYPE_FIRMWARE_08_0X</td></tr>
-<tr><td>FRITZ!OS 08.20+</td><td>FREETZ_TYPE_FIRMWARE_08_2X</td></tr>
+<tr><td>FRITZ!OS 08.25+</td><td>FREETZ_TYPE_FIRMWARE_08_2X</td></tr>
 <tr><td>FRITZ!OS 08.50+</td><td>FREETZ_TYPE_FIRMWARE_08_5X</td></tr>
 </tbody></table>
 </details>
