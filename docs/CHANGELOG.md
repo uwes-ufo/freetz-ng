@@ -78,7 +78,7 @@ Latest changes
     * fakeroot 1.38.1/2.1.4
     * file 5.48
     * genext2fs 1.6.2
-    * kconfig 7.1
+    * kconfig 7.2
     * libtool 2.6.2
     * meson 1.12.0
     * mklibs 0.1.46
