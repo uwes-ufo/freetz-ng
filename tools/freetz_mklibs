@@ -22,7 +22,8 @@ freetz_mklibs() {
 		file -r -N -F '' {} + | \
 		awk ' /shared object/ { print $1 }' >> "${MOD_DIR}/mklibs-progs"
 	# Run mklibs script, needs path to mklibs-readelf and objcopy
-	[ "$FREETZ_TOOLCHAIN_CCACHE" == "y" ] \
+	# Pseudo is to crappy to run mklibs with enabled ccache !
+	[ "$FREETZ_TOOLCHAIN_CCACHE" == "y" ] && [ "$FREETZ_ROOTEMU_PSEUDO" != "y" ] \
 	  && BINS_PATH="${TARGET_TOOLCHAIN_STAGING_DIR}/bin:${TARGET_TOOLCHAIN_STAGING_DIR}/bin-ccache" \
 	  || BINS_PATH="${TARGET_TOOLCHAIN_STAGING_DIR}/bin-ccache:${TARGET_TOOLCHAIN_STAGING_DIR}/bin"
 	PATH="${BINS_PATH}:${PATH}" \
