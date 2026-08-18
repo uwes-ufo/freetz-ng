@@ -107,12 +107,15 @@ MESON=meson
 CMAKE=cmake
 NINJA=ninja
 PERL=perl
-MAKE1=make
 ifeq ($(FREETZ_JLEVEL),0)
-MAKE=make -j$(shell echo $$(( $$(nproc || echo 1) +1 )) )
+NPROC=$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 else
-MAKE=make -j$(FREETZ_JLEVEL)
+NPROC=$(FREETZ_JLEVEL)
 endif
+MAKE=make -j$(NPROC)
+MAKE1=make -j1
+
+
 ifeq ($(FREETZ_REPRODUCIBLE),y)
 export SOURCE_DATE_EPOCH:=$(shell tools/freetz_revision ticks)
 endif
