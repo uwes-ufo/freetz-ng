@@ -156,6 +156,7 @@ Latest changes
     * rsync 3.4.1/3.5.0
     * Smartmontools 7.2/7.5
     * sslh 2.2.4/2.3.1
+    * strace 4.9/5.0/6.19/7.2
     * Stunnel 5.80
     * SQLite 3.40.1/3.53.4
     * tinc 1.0.37/1.1pre18
