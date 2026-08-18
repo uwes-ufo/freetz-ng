@@ -370,6 +370,7 @@ export VERBOSE
 include $(MAKE_DIR)/include/400-host.mk
 include $(MAKE_DIR)/include/500-echo.mk
 include $(MAKE_DIR)/include/600-macros.mk
+include $(MAKE_DIR)/include/700-variables.mk
 
 # include by other packages used variables of packages first
 TOOLS_LIBS:=openssl python2 python3
@@ -425,7 +426,7 @@ endif
 -include .config.cmd
 
 include $(MAKE_DIR)/toolchain/Makefile.in
-include $(MAKE_DIR)/include/700-image.mk
+include $(MAKE_DIR)/include/800-image.mk
 include $(MAKE_DIR)/pkgs/Makefile.in
 include $(call sorted-wildcard,$(MAKE_DIR)/libs/*/Makefile.in)
 include $(call sorted-wildcard,$(MAKE_DIR)/pkgs/*/Makefile.in)
