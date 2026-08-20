@@ -165,7 +165,7 @@ sudo apt -y upgrade
 sudo apt -y dist-upgrade
 ```
 
-  - Debian 13 64-Bit:
+  - Debian 13/14 64-Bit:
 ```
 sudo apt -y install \
   autopoint bc binutils bison bsdmainutils bzip2 ccache cmake curl ecj flex ftp g++ gawk gcc \
