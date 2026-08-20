@@ -77,14 +77,23 @@ MAKE_DIR:=make
 KERNEL_TARGET_DIR:=kernel
 PACKAGES_DIR_ROOT:=packages
 SOURCE_DIR_ROOT:=source
+STAGING_DIR_TOOLS:=staging-tools
 TOOLCHAIN_DIR:=toolchain
 TOOLS_DIR:=tools
+
+ZENSICAL_OUT_DIR=_site
+ZENSICAL_VENV_DIR=.zensical
+ZENSICAL_CACHE_DIR=.cache
+
 DL_FW_DIR:=$(DL_DIR)/fw
 export FW_IMAGES_DIR:=images
 MIRROR_DIR:=$(DL_DIR)/mirror
 
 TOOLCHAIN_BUILD_DIR:=$(TOOLCHAIN_DIR)/$(BUILD_DIR)
 TOOLS_BUILD_DIR:=$(TOOLS_DIR)/$(BUILD_DIR)
+
+TOOLS_STAGING_DIR:=$(SOURCE_DIR_ROOT)/$(STAGING_DIR_TOOLS)
+TOOLS_STAGING_REALDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_STAGING_DIR)
 
 include $(MAKE_DIR)/include/200-aliases.mk
 include $(MAKE_DIR)/include/300-helper.mk
@@ -410,6 +419,12 @@ $(TOOLS_BUILD_DIR) \
 $(FW_IMAGES_DIR):
 	@mkdir -p $@
 
+$(TOOLS_STAGING_DIR) $(TOOLS_STAGING_REALDIR):
+	@ \
+	mkdir -p $@ $@/bin $@/lib $@/lib/pkgconfig ;\
+	ln -snf lib $@/lib64 ;\
+	ln -snf . $@/usr ;
+
 ifneq ($(strip $(FREETZ_HAVE_DOT_CONFIG)),y)
 
 step: menuconfig
@@ -546,8 +561,8 @@ distclean: $(TOOLCHAIN_DISTCLEAN) $(TOOLS_DISTCLEAN) common-distclean
 endif # FREETZ_HAVE_DOT_CONFIG!=y
 
 #wrapper: $TOOL-host -> $TOOL-host-precompiled
-$(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : $(if $(FREETZ_HOSTTOOLS_DOWNLOAD),tools-host,%-precompiled)
-$(filter $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : %-precompiled
+$(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : $(if $(FREETZ_HOSTTOOLS_DOWNLOAD),tools-host,$(TOOLS_STAGING_DIR) %-precompiled)
+$(filter $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : $(TOOLS_STAGING_DIR) %-precompiled
 
 $(patsubst %,%-autofix,$(TOOLS)): %-autofix : %-dirclean
 	$(MAKE) AUTO_FIX_PATCHES=y $*-unpacked
@@ -555,12 +570,17 @@ $(patsubst %,%-recompile,$(TOOLS)): %-recompile : %-distclean %-precompiled
 
 $(patsubst %,%-fixhardcoded,$(TOOLS)): %-fixhardcoded : 
 
-tools: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_CONDITIONAL),$(TOOLS))
-tools-all: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(if $(HOST_RUN32BIT),,$(TOOLS_32BIT_ONLY)) $(TOOLS_TARXZBUNDLE),$(TOOLS))
-tools-allexcept-local: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS))
+tools: $(DL_DIR) $(SOURCE_DIR_ROOT) $(TOOLS_STAGING_DIR) $(filter-out $(TOOLS_CONDITIONAL),$(TOOLS))
+tools-all: $(DL_DIR) $(SOURCE_DIR_ROOT) $(TOOLS_STAGING_DIR) $(filter-out $(if $(HOST_RUN32BIT),,$(TOOLS_32BIT_ONLY)) $(TOOLS_TARXZBUNDLE),$(TOOLS))
+tools-allexcept-local: $(DL_DIR) $(SOURCE_DIR_ROOT) $(TOOLS_STAGING_DIR) $(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS))
 tools-distclean-local: $(patsubst %,%-distclean,$(filter-out $(TOOLS_TARXZBUNDLE),$(TOOLS_BUILD_LOCAL)))
-tools-dirclean: $(TOOLS_DIRCLEAN)
-tools-distclean: $(TOOLS_DISTCLEAN)
+tools-cacheclean: $(TOOLS_CACHECLEAN)
+tools-clean: $(TOOLS_CLEAN) tools-stagingclean
+tools-dirclean: $(TOOLS_DIRCLEAN) tools-stagingclean
+tools-distclean: $(TOOLS_DISTCLEAN) tools-stagingclean
+
+tools-stagingclean:
+	$(RM) -r $(TOOLS_STAGING_DIR)
 
 .PHONY: push_firmware push-firmware pf pfp tools-push_firmware
 pfp tools-push_firmware: netkit-ftp-host ncftp-host dos2unix-host tichksum-host dtc-host uimg-host
@@ -705,7 +725,18 @@ $(eval $(call CONFIG_CLEAN_DEPS,config-clean-deps,kernel modules$(_comma) shared
 # Deactivate all optional stuff except for Busybox applets
 $(eval $(call CONFIG_CLEAN_DEPS,config-clean-deps-keep-busybox,kernel modules$(_comma) shared libraries and terminfos,MODULE|LIB|SHARE_terminfo))
 
-common-cacheclean:
+
+zensical-cacheclean:
+	$(RM) -r $(ZENSICAL_CACHE_DIR)
+
+zensical-dirclean:
+	$(RM) -r $(ZENSICAL_OUT_DIR)
+
+zensical-distclean:
+	$(RM) -r $(ZENSICAL_VENV_DIR)
+
+
+common-cacheclean: zensical-cacheclean
 	[ ! -x .fwmod_custom ] || ./.fwmod_custom clean
 	./fwmod_custom clean
 	$(RM) make/pkgs/external.in.generated make/pkgs/Config.in.generated make/libs/external.in.generated make/libs/Config.in.generated
@@ -715,12 +746,12 @@ common-cacheclean:
 	$(RM) -r $(BUILD_DIR)
 	$(RM) -r $(FAKEROOT_CACHE_DIR)
 
-common-clean: common-cacheclean
+common-clean: common-cacheclean tools-stagingclean
 
-common-dirclean: common-clean $(if $(FREETZ_HAVE_DOT_CONFIG),kernel-dirclean)
+common-dirclean: common-clean zensical-dirclean $(if $(FREETZ_HAVE_DOT_CONFIG),kernel-dirclean)
 	$(RM) -r $(if $(FREETZ_HAVE_DOT_CONFIG),$(PACKAGES_DIR) $(SOURCE_DIR) $(TARGET_TOOLCHAIN_DIR),$(PACKAGES_DIR_ROOT) $(SOURCE_DIR_ROOT))
 
-common-distclean: common-dirclean
+common-distclean: common-dirclean zensical-distclean
 	$(RM)    .config.cmd .tmpconfig.h .build.log *.log
 	$(RM) -r $(INCLUDE_DIR)/config
 	$(RM) -r $(FW_IMAGES_DIR)
@@ -774,7 +805,7 @@ help:
 
 .PHONY: all world step $(KCONFIG_TARGETS) config-flush-invalid config-cache config-cache-clean config-cache-refresh tools recover \
 	config-clean-deps-modules config-clean-deps-libs config-clean-deps-busybox config-clean-deps-terminfo config-clean-deps config-clean-deps-keep-busybox \
-	cacheclean clean dirclean distclean common-cacheclean common-clean common-dirclean common-distclean release \
+	cacheclean clean dirclean distclean zensical-cacheclean zensical-dirclean zensical-distclean common-cacheclean common-clean common-dirclean common-distclean release \
 	$(TOOLS) $(TOOLS_CACHECLEAN) $(TOOLS_CLEAN) $(TOOLS_DIRCLEAN) $(TOOLS_DISTCLEAN) $(TOOLS_SOURCE) $(TOOLS_PRECOMPILED) $(TOOLS_RECOMPILE) $(TOOLS_FIXHARDCODED) $(TOOLS_AUTOFIX) \
 	clear-echo-temporary check-dot-config-uptodateness help
 
