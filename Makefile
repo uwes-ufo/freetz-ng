@@ -77,6 +77,7 @@ MAKE_DIR:=make
 KERNEL_TARGET_DIR:=kernel
 PACKAGES_DIR_ROOT:=packages
 SOURCE_DIR_ROOT:=source
+STAGING_DIR_TOOLS:=staging-tools
 TOOLCHAIN_DIR:=toolchain
 TOOLS_DIR:=tools
 DL_FW_DIR:=$(DL_DIR)/fw
@@ -85,6 +86,9 @@ MIRROR_DIR:=$(DL_DIR)/mirror
 
 TOOLCHAIN_BUILD_DIR:=$(TOOLCHAIN_DIR)/$(BUILD_DIR)
 TOOLS_BUILD_DIR:=$(TOOLS_DIR)/$(BUILD_DIR)
+
+TOOLS_STAGING_DIR:=$(SOURCE_DIR_ROOT)/$(STAGING_DIR_TOOLS)
+TOOLS_STAGING_REALDIR:=$(FREETZ_BASE_DIR)/$(TOOLS_STAGING_DIR)
 
 include $(MAKE_DIR)/include/200-aliases.mk
 include $(MAKE_DIR)/include/300-helper.mk
@@ -410,6 +414,12 @@ $(TOOLS_BUILD_DIR) \
 $(FW_IMAGES_DIR):
 	@mkdir -p $@
 
+$(TOOLS_STAGING_DIR) $(TOOLS_STAGING_REALDIR):
+	@ \
+	mkdir -p $@ $@/bin $@/lib $@/lib/pkgconfig ;\
+	ln -snf lib $@/lib64 ;\
+	ln -snf . $@/usr ;
+
 ifneq ($(strip $(FREETZ_HAVE_DOT_CONFIG)),y)
 
 step: menuconfig
@@ -546,8 +556,8 @@ distclean: $(TOOLCHAIN_DISTCLEAN) $(TOOLS_DISTCLEAN) common-distclean
 endif # FREETZ_HAVE_DOT_CONFIG!=y
 
 #wrapper: $TOOL-host -> $TOOL-host-precompiled
-$(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : $(if $(FREETZ_HOSTTOOLS_DOWNLOAD),tools-host,%-precompiled)
-$(filter $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : %-precompiled
+$(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : $(if $(FREETZ_HOSTTOOLS_DOWNLOAD),tools-host,$(TOOLS_STAGING_DIR) %-precompiled)
+$(filter $(TOOLS_BUILD_LOCAL),$(TOOLS)): % : $(TOOLS_STAGING_DIR) %-precompiled
 
 $(patsubst %,%-autofix,$(TOOLS)): %-autofix : %-dirclean
 	$(MAKE) AUTO_FIX_PATCHES=y $*-unpacked
@@ -555,12 +565,17 @@ $(patsubst %,%-recompile,$(TOOLS)): %-recompile : %-distclean %-precompiled
 
 $(patsubst %,%-fixhardcoded,$(TOOLS)): %-fixhardcoded : 
 
-tools: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_CONDITIONAL),$(TOOLS))
-tools-all: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(if $(HOST_RUN32BIT),,$(TOOLS_32BIT_ONLY)) $(TOOLS_TARXZBUNDLE),$(TOOLS))
-tools-allexcept-local: $(DL_DIR) $(SOURCE_DIR_ROOT) $(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS))
+tools: $(DL_DIR) $(SOURCE_DIR_ROOT) $(TOOLS_STAGING_DIR) $(filter-out $(TOOLS_CONDITIONAL),$(TOOLS))
+tools-all: $(DL_DIR) $(SOURCE_DIR_ROOT) $(TOOLS_STAGING_DIR) $(filter-out $(if $(HOST_RUN32BIT),,$(TOOLS_32BIT_ONLY)) $(TOOLS_TARXZBUNDLE),$(TOOLS))
+tools-allexcept-local: $(DL_DIR) $(SOURCE_DIR_ROOT) $(TOOLS_STAGING_DIR) $(filter-out $(TOOLS_BUILD_LOCAL),$(TOOLS))
 tools-distclean-local: $(patsubst %,%-distclean,$(filter-out $(TOOLS_TARXZBUNDLE),$(TOOLS_BUILD_LOCAL)))
-tools-dirclean: $(TOOLS_DIRCLEAN)
-tools-distclean: $(TOOLS_DISTCLEAN)
+tools-cacheclean: $(TOOLS_CACHECLEAN)
+tools-clean: $(TOOLS_CLEAN) tools-stagingclean
+tools-dirclean: $(TOOLS_DIRCLEAN) tools-stagingclean
+tools-distclean: $(TOOLS_DISTCLEAN) tools-stagingclean
+
+tools-stagingclean:
+	$(RM) -r $(TOOLS_STAGING_DIR)
 
 .PHONY: push_firmware push-firmware pf pfp tools-push_firmware
 pfp tools-push_firmware: netkit-ftp-host ncftp-host dos2unix-host tichksum-host dtc-host uimg-host
@@ -715,7 +730,7 @@ common-cacheclean:
 	$(RM) -r $(BUILD_DIR)
 	$(RM) -r $(FAKEROOT_CACHE_DIR)
 
-common-clean: common-cacheclean
+common-clean: common-cacheclean tools-stagingclean
 
 common-dirclean: common-clean $(if $(FREETZ_HAVE_DOT_CONFIG),kernel-dirclean)
 	$(RM) -r $(if $(FREETZ_HAVE_DOT_CONFIG),$(PACKAGES_DIR) $(SOURCE_DIR) $(TARGET_TOOLCHAIN_DIR),$(PACKAGES_DIR_ROOT) $(SOURCE_DIR_ROOT))
