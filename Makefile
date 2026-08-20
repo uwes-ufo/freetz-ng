@@ -80,6 +80,11 @@ SOURCE_DIR_ROOT:=source
 STAGING_DIR_TOOLS:=staging-tools
 TOOLCHAIN_DIR:=toolchain
 TOOLS_DIR:=tools
+
+ZENSICAL_OUT_DIR=_site
+ZENSICAL_VENV_DIR=.zensical
+ZENSICAL_CACHE_DIR=.cache
+
 DL_FW_DIR:=$(DL_DIR)/fw
 export FW_IMAGES_DIR:=images
 MIRROR_DIR:=$(DL_DIR)/mirror
@@ -720,7 +725,18 @@ $(eval $(call CONFIG_CLEAN_DEPS,config-clean-deps,kernel modules$(_comma) shared
 # Deactivate all optional stuff except for Busybox applets
 $(eval $(call CONFIG_CLEAN_DEPS,config-clean-deps-keep-busybox,kernel modules$(_comma) shared libraries and terminfos,MODULE|LIB|SHARE_terminfo))
 
-common-cacheclean:
+
+zensical-cacheclean:
+	$(RM) -r $(ZENSICAL_CACHE_DIR)
+
+zensical-dirclean:
+	$(RM) -r $(ZENSICAL_OUT_DIR)
+
+zensical-distclean:
+	$(RM) -r $(ZENSICAL_VENV_DIR)
+
+
+common-cacheclean: zensical-cacheclean
 	[ ! -x .fwmod_custom ] || ./.fwmod_custom clean
 	./fwmod_custom clean
 	$(RM) make/pkgs/external.in.generated make/pkgs/Config.in.generated make/libs/external.in.generated make/libs/Config.in.generated
@@ -732,10 +748,10 @@ common-cacheclean:
 
 common-clean: common-cacheclean tools-stagingclean
 
-common-dirclean: common-clean $(if $(FREETZ_HAVE_DOT_CONFIG),kernel-dirclean)
+common-dirclean: common-clean zensical-dirclean $(if $(FREETZ_HAVE_DOT_CONFIG),kernel-dirclean)
 	$(RM) -r $(if $(FREETZ_HAVE_DOT_CONFIG),$(PACKAGES_DIR) $(SOURCE_DIR) $(TARGET_TOOLCHAIN_DIR),$(PACKAGES_DIR_ROOT) $(SOURCE_DIR_ROOT))
 
-common-distclean: common-dirclean
+common-distclean: common-dirclean zensical-distclean
 	$(RM)    .config.cmd .tmpconfig.h .build.log *.log
 	$(RM) -r $(INCLUDE_DIR)/config
 	$(RM) -r $(FW_IMAGES_DIR)
@@ -789,7 +805,7 @@ help:
 
 .PHONY: all world step $(KCONFIG_TARGETS) config-flush-invalid config-cache config-cache-clean config-cache-refresh tools recover \
 	config-clean-deps-modules config-clean-deps-libs config-clean-deps-busybox config-clean-deps-terminfo config-clean-deps config-clean-deps-keep-busybox \
-	cacheclean clean dirclean distclean common-cacheclean common-clean common-dirclean common-distclean release \
+	cacheclean clean dirclean distclean zensical-cacheclean zensical-dirclean zensical-distclean common-cacheclean common-clean common-dirclean common-distclean release \
 	$(TOOLS) $(TOOLS_CACHECLEAN) $(TOOLS_CLEAN) $(TOOLS_DIRCLEAN) $(TOOLS_DISTCLEAN) $(TOOLS_SOURCE) $(TOOLS_PRECOMPILED) $(TOOLS_RECOMPILE) $(TOOLS_FIXHARDCODED) $(TOOLS_AUTOFIX) \
 	clear-echo-temporary check-dot-config-uptodateness help
 
