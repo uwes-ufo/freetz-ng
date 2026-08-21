@@ -62,7 +62,7 @@ DO_C99_MATH=y
 # DO_XSI_MATH is not set
 # UCLIBC_HAS_FENV is not set
 UCLIBC_HAS_LONG_DOUBLE_MATH=y
-KERNEL_HEADERS="$(KERNEL_INCLUDE)"
+KERNEL_HEADERS="/home/uwe/git/freetz-ng/source/toolchain-arm_gcc-13.4.0_uClibc-1.0.59-nptl_kernel-5.4/linux-dev/5.4/include"
 HAVE_DOT_CONFIG=y
 
 #
@@ -124,7 +124,7 @@ UCLIBC_HAS_TM_EXTENSIONS=y
 UCLIBC_HAS_TZ_CACHING=y
 UCLIBC_HAS_TZ_FILE=y
 UCLIBC_HAS_TZ_FILE_READ_MANY=y
-UCLIBC_TZ_FILE_PATH="/etc/TZ-force_localtime_fallback"
+UCLIBC_TZ_FILE_PATH="/etc/TZ"
 UCLIBC_FALLBACK_TO_ETC_LOCALTIME=y
 # UCLIBC_USE_TIME64 is not set
 
