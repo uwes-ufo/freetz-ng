@@ -1573,10 +1573,6 @@ FREETZ_REPLACE_MODULES=y
 #
 # drivers
 #
-# FREETZ_MODULE_input_core is not set
-FREETZ_MODULE_usbhid=y
-FREETZ_MODULE_hid=y
-FREETZ_MODULE_hid_generic=y
 # FREETZ_MODULE_bfusb is not set
 # FREETZ_MODULE_btusb is not set
 # FREETZ_MODULE_capiconn is not set
@@ -1593,6 +1589,13 @@ FREETZ_MODULE_hid_generic=y
 # FREETZ_MODULE_usb_storage is not set
 # FREETZ_MODULE_usblp is not set
 # FREETZ_MODULE_usbmon is not set
+
+#
+#  input
+#
+FREETZ_MODULE_hid=y
+FREETZ_MODULE_hid_generic=y
+FREETZ_MODULE_usbhid=y
 
 #
 #  ppp
