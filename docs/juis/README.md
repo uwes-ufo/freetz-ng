@@ -94,7 +94,7 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - HWR 262: [FRITZ.Box_6850_LTE-08.24-133786-LabBETA.image](http://download.example.com/labor/Smart24P2NL1/6850LTE/FRITZ.Box_6850_LTE-08.24-133786-LabBETA.image)
   - HWR 267: [FRITZ.Box_6690_Cable-08.40-135729-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-135729-LabBETA.image)
   - HWR 271: [FRITZ.Box_7510-08.24-133269-LabBETA.image](http://download.example.com/labor/Smart24P2NL1/7510/FRITZ.Box_7510-08.24-133269-LabBETA.image)
-  - HWR 272: [FRITZ.Box_5590_Fiber-08.40-135583-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/5590Fiber/FRITZ.Box_5590_Fiber-08.40-135583-LabBETA.image)
+  - HWR 272: [FRITZ.Box_5590_Fiber-08.40-135708-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/5590Fiber/FRITZ.Box_5590_Fiber-08.40-135708-LabBETA.image)
   - HWR 276: [FRITZ.Box_7520_B-08.24-132253-LabBETA.image](http://download.example.com/labor/Smart24P2NL1/7520B/FRITZ.Box_7520_B-08.24-132253-LabBETA.image)
 
 ### FOS-Inhaus
@@ -161,4 +161,4 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
 ### Dect-Inhaus
 
 ### BPjM
-  - CRC 50cd3dff: [bpjm.data](http://download.avm.de/bpjm/316336/bpjm.data)
+  - CRC 03c8e9f7: [bpjm.data](http://download.avm.de/bpjm/320923/bpjm.data)
