@@ -272,8 +272,8 @@ kernel-recompile: kernel-distclean kernel-precompiled
 ifeq ($(FREETZ_AVM_HAS_MODVERSIONS_BUILTIN),y)
 kernel-symrefs: kernel-recompile
 	find $(KERNEL_SOURCE_DIR) -name '*.symtypes' -exec bash -c 'f="$$0"; sed "s/^/override /" "$$f" > "$${f%.*}.symref"' {} ';'
-	find $(KERNEL_SOURCE_DIR) -name '*.symref' -printf '%P\n' | \
-	  $(TAR) -c  --owner=0 --group=0 --numeric-owner  --sort=name --mtime='@0'  -C $(KERNEL_SOURCE_DIR)  -T - | \
+	find $(KERNEL_SOURCE_DIR) -name '*.symref' -printf '%P\n' | LANG=C sort | \
+	  $(TAR) -c  --owner=0 --group=0 --numeric-owner  --mtime='@0'  -C $(KERNEL_SOURCE_DIR)  -T - | \
 	  $(LZMA) e -si $(DL_DIR)/$(KERNEL_SYMREFS_PAK) -d25
 	@ln -sf "$(DL_DIR)/$(KERNEL_SYMREFS_PAK)"
 	@echo
