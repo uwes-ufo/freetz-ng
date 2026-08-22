@@ -179,7 +179,7 @@ jobs:
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
-          make kernel-symref
+          make olddefconfig kernel-symref
 
       - name: result
         run: |
