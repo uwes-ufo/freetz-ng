@@ -192,7 +192,7 @@ jobs:
         if: steps.generate.outputs.ABORT != 'true'
         run: |
           echo "##########################################################"
-          tar xvf symrefs-*.tar.lzma
+          tar tvf symrefs-*.tar.lzma
 
       - name: result
         if: steps.generate.outputs.ABORT != 'true'
