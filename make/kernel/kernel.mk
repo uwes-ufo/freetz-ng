@@ -38,6 +38,14 @@ KERNEL_COMMON_MAKE_OPTIONS += INSTALL_MOD_PATH="$(FREETZ_BASE_DIR)/$(KERNEL_DIR)
 ifeq ($(strip $(FREETZ_VERBOSITY_LEVEL)),2)
 KERNEL_COMMON_MAKE_OPTIONS += V=1
 endif
+ifeq ($(FREETZ_AVM_HAS_MODVERSIONS_BUILTIN),y)
+ifeq ($(filter kernel-symref,$(MAKECMDGOALS)),)
+KERNEL_COMMON_MAKE_OPTIONS += KBUILD_PRESERVE=1
+else
+KERNEL_COMMON_MAKE_OPTIONS += KBUILD_SYMTYPES=1
+endif
+KERNEL_SYMREF_PAK:=symref-$(KERNEL_ID).tar.lzma
+endif
 
 KERNEL_VANILLA_SOURCE:=$(call qstrip,$(FREETZ_DL_KERNEL_VANILLA_SOURCE))
 KERNEL_VANILLA_HASH:=$(call qstrip,$(FREETZ_DL_KERNEL_VANILLA_HASH))
@@ -259,6 +267,26 @@ kernel-autofix: kernel-dirclean
 	$(MAKE) AUTO_FIX_PATCHES=y $(KERNEL_DIR)/.configured
 kernel-recompile: kernel-distclean kernel-precompiled
 .PHONY: kernel-autofix kernel-recompile
+
+
+ifeq ($(FREETZ_AVM_HAS_MODVERSIONS_BUILTIN),y)
+kernel-symref: kernel-recompile
+	find $(KERNEL_SOURCE_DIR) -name '*.symtypes' -exec bash -c 'f="$$0"; sed "s/^/override /" "$$f" > "$${f%.*}.symref"' {} ';'
+	find $(KERNEL_SOURCE_DIR) -name '*.symref' -printf '%P\n' | \
+	  $(TAR) -c  --owner=0 --group=0 --numeric-owner  --sort=name --mtime='@0'  -C $(KERNEL_SOURCE_DIR)  -T - | \
+	  $(LZMA) e -si $(DL_DIR)/$(KERNEL_SYMREF_PAK) -d25
+	@touch -d "2014-06-03 12:00:00.000000000 +0200" "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
+	@ln -f "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
+	@echo
+	@du -h "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
+	@sha256sum "$(DL_DIR)/$(KERNEL_SYMREF_PAK)" | sed 's/^/SHA256:=/;s/ .*//'
+	@echo "OUTPUT:=$(KERNEL_SYMREF_PAK)"
+else
+kernel-symref:
+	$(error This kernel has no MODVERSIONS)
+endif
+.PHONY: kernel-symref
+
 
 $(KERNEL_SOURCE_DIR)/$(KERNEL_IMAGE_FILE): $(KERNEL_DIR)/.prepared $(KERNEL_BUILD_DEPENDENCIES) | $(KERNEL_DEPENDS_ON)
 	$(call _ECHO,image,$(KERNEL_ECHO_TYPE))
