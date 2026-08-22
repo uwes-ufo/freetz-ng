@@ -107,6 +107,7 @@ PARSE_CONFIG_TOOL:=$(TOOLS_DIR)/parse-config
 CHECK_PREREQ_TOOL:=$(TOOLS_DIR)/prerequisites
 GENERATE_IN_LIBS_TOOL:=$(TOOLS_DIR)/.genin_libs
 GENERATE_IN_PKGS_TOOL:=$(TOOLS_DIR)/.genin_pkgs
+LZMA:=$(TOOLS_DIR)/lzma
 TAR:=$(TOOLS_DIR)/tar-gnu
 SED:=sed
 PATCHELF_HOST:=patchelf
