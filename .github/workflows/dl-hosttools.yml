@@ -102,7 +102,7 @@ jobs:
           artifacts: "dl/tools-${{ steps.version.outputs.version }}.tar.xz"
           token: ${{ secrets.GITHUB_TOKEN }}
           replacesArtifacts: false
-          artifactErrorsFailBuild: false
+          artifactErrorsFailBuild: true
 
       - name: bump
         env:
