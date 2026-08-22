@@ -1449,7 +1449,8 @@ if [ "$DO_MOD" -gt 0 ]; then
 			echo "kernel/drivers/char/audio/avm_audio.ko:" >> "$MODULES_DIR/modules.dep"
 		fi
 		# symvers
-		if [ "$FREETZ_REPLACE_KERNEL" == "y" ] && [ "$FREETZ_AVM_HAS_MODVERSIONS_BUILTIN" == "y" ]; then
+#		if [ "$FREETZ_REPLACE_KERNEL" == "y" ] && [ "$FREETZ_AVM_HAS_MODVERSIONS_BUILTIN" == "y" ]; then
+		if [ "$FREETZ_AVM_HAS_MODVERSIONS_BUILTIN" == "y" ]; then
 			DEPMOD_SYMVERS="${BASE_DIR}/${SOURCE_SUBDIR}/kernel/ref-${KERNEL_ID}/linux-${FREETZ_KERNEL_VERSION_MAJOR}/Module.symvers"
 			LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
 			  -E "${DEPMOD_SYMVERS}" \
