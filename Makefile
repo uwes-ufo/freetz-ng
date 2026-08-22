@@ -56,9 +56,7 @@ endif
 endif
 	@$(ENVIRA_REV_TOOL) make
 ifeq ($(ENVIRA_OLDDEFCONFIG),y)
-	@echo ODa
 	@$(MAKE) olddefconfig > /dev/null
-	@echo ODb
 endif
 	@umask $(ENVIRA_UMASK) && LANG=C PATH="$(ENVIRA_PATH_ABS):$(PATH):/usr/sbin" $(MAKE) $(filter-out $(if $(ENVIRA_OLDDEFCONFIG),olddefconfig,),$(MAKECMDGOALS)) $(ENVIRA_MAKE_VARS) || kill $$$$
 
