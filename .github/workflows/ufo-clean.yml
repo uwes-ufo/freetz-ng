@@ -1,4 +1,4 @@
-name: ufo-clean
+name: ufo-clean-symref
 
 on:
   push:
