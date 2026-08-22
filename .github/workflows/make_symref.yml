@@ -179,18 +179,20 @@ jobs:
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
-          make kernel-symref
-
-      - name: result
-        run: |
-          echo "##########################################################"
-          ls -l symref-*.tar.lzma
-          sha256sum symref-*.tar.lzma
+          make olddefconfig kernel-symref
+          [ -e symref-*.tar.lzma ] || echo "ABORT=true" >> "$GITHUB_ENV"
 
       - name: git-diff
         run: |
           echo "##########################################################"
           git diff --no-prefix
+
+      - name: result
+        if: env.ABORT != 'true'
+        run: |
+          echo "##########################################################"
+          ls -lL symref-*.tar.lzma
+          sha256sum symref-*.tar.lzma
 
 #     - name: cache_clear
 #       if: github.repository == 'freetz-ng/freetz-ng'
@@ -212,8 +214,10 @@ jobs:
 
       - name: release
         uses: ncipollo/release-action@v1
-        if: github.repository == 'freetz-ng/dl-mirror'
+        if: env.ABORT != 'true' && github.repository == 'freetz-ng/freetz-ng'
         with:
+          owner: Freetz-NG
+          repo: dl-mirror
           tag: dl
           name: dl
           body: .

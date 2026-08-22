@@ -275,15 +275,14 @@ kernel-symref: kernel-recompile
 	find $(KERNEL_SOURCE_DIR) -name '*.symref' -printf '%P\n' | \
 	  $(TAR) -c  --owner=0 --group=0 --numeric-owner  --sort=name --mtime='@0'  -C $(KERNEL_SOURCE_DIR)  -T - | \
 	  $(LZMA) e -si $(DL_DIR)/$(KERNEL_SYMREF_PAK) -d25
-	@touch -d "2014-06-03 12:00:00.000000000 +0200" "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
-	@ln -f "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
+	@ln -sf "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
 	@echo
 	@du -h "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
 	@sha256sum "$(DL_DIR)/$(KERNEL_SYMREF_PAK)" | sed 's/^/SHA256:=/;s/ .*//'
 	@echo "OUTPUT:=$(KERNEL_SYMREF_PAK)"
 else
 kernel-symref:
-	$(error This kernel has no MODVERSIONS)
+	@echo WARNING: This kernel has no MODVERSIONS
 endif
 .PHONY: kernel-symref
 
