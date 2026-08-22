@@ -39,12 +39,12 @@ ifeq ($(strip $(FREETZ_VERBOSITY_LEVEL)),2)
 KERNEL_COMMON_MAKE_OPTIONS += V=1
 endif
 ifeq ($(FREETZ_AVM_HAS_MODVERSIONS_BUILTIN),y)
-ifeq ($(filter kernel-symref,$(MAKECMDGOALS)),)
+ifeq ($(filter kernel-symrefs,$(MAKECMDGOALS)),)
 KERNEL_COMMON_MAKE_OPTIONS += KBUILD_PRESERVE=1
 else
 KERNEL_COMMON_MAKE_OPTIONS += KBUILD_SYMTYPES=1
 endif
-KERNEL_SYMREF_PAK:=symref-$(KERNEL_ID).tar.lzma
+KERNEL_SYMREFS_PAK:=symrefs-$(KERNEL_ID).tar.lzma
 endif
 
 KERNEL_VANILLA_SOURCE:=$(call qstrip,$(FREETZ_DL_KERNEL_VANILLA_SOURCE))
@@ -270,21 +270,21 @@ kernel-recompile: kernel-distclean kernel-precompiled
 
 
 ifeq ($(FREETZ_AVM_HAS_MODVERSIONS_BUILTIN),y)
-kernel-symref: kernel-recompile
+kernel-symrefs: kernel-recompile
 	find $(KERNEL_SOURCE_DIR) -name '*.symtypes' -exec bash -c 'f="$$0"; sed "s/^/override /" "$$f" > "$${f%.*}.symref"' {} ';'
 	find $(KERNEL_SOURCE_DIR) -name '*.symref' -printf '%P\n' | \
 	  $(TAR) -c  --owner=0 --group=0 --numeric-owner  --sort=name --mtime='@0'  -C $(KERNEL_SOURCE_DIR)  -T - | \
-	  $(LZMA) e -si $(DL_DIR)/$(KERNEL_SYMREF_PAK) -d25
-	@ln -sf "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
+	  $(LZMA) e -si $(DL_DIR)/$(KERNEL_SYMREFS_PAK) -d25
+	@ln -sf "$(DL_DIR)/$(KERNEL_SYMREFS_PAK)"
 	@echo
-	@du -h "$(DL_DIR)/$(KERNEL_SYMREF_PAK)"
-	@sha256sum "$(DL_DIR)/$(KERNEL_SYMREF_PAK)" | sed 's/^/SHA256:=/;s/ .*//'
-	@echo "OUTPUT:=$(KERNEL_SYMREF_PAK)"
+	@du -h "$(DL_DIR)/$(KERNEL_SYMREFS_PAK)"
+	@sha256sum "$(DL_DIR)/$(KERNEL_SYMREFS_PAK)" | sed 's/^/SHA256:=/;s/ .*//'
+	@echo "OUTPUT:=$(KERNEL_SYMREFS_PAK)"
 else
-kernel-symref:
+kernel-symrefs:
 	@echo WARNING: This kernel has no MODVERSIONS
 endif
-.PHONY: kernel-symref
+.PHONY: kernel-symrefs
 
 
 $(KERNEL_SOURCE_DIR)/$(KERNEL_IMAGE_FILE): $(KERNEL_DIR)/.prepared $(KERNEL_BUILD_DEPENDENCIES) | $(KERNEL_DEPENDS_ON)

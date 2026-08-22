@@ -1,10 +1,10 @@
-name: make_symref
+name: make_symrefs
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/make_symref.yml'
+      - '.github/workflows/make_symrefs.yml'
   schedule:
     - cron: '00 15 14 * *'
   workflow_dispatch:
@@ -180,21 +180,27 @@ jobs:
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
-          make olddefconfig kernel-symref
-          [ -e symref-*.tar.lzma ] && echo "ABORT=false" >> "$GITHUB_OUTPUT" || echo "ABORT=true" >> "$GITHUB_OUTPUT" 
+          make olddefconfig kernel-symrefs
+          [ -e symrefs-*.tar.lzma ] && echo "ABORT=false" >> "$GITHUB_OUTPUT" || echo "ABORT=true" >> "$GITHUB_OUTPUT" 
 
       - name: git-diff
         run: |
           echo "##########################################################"
           git diff --no-prefix
 
+      - name: symrefs
+        if: steps.generate.outputs.ABORT != 'true'
+        run: |
+          echo "##########################################################"
+          tar xvf symrefs-*.tar.lzma
+
       - name: result
         if: steps.generate.outputs.ABORT != 'true'
         run: |
           echo "##########################################################"
-          ls -lL symref-*.tar.lzma
-          du -sh $(readlink symref-*.tar.lzma)
-          sha256sum symref-*.tar.lzma
+          ls -lL symrefs-*.tar.lzma
+          du -sh $(readlink symrefs-*.tar.lzma)
+          sha256sum symrefs-*.tar.lzma
 
 #     - name: cache_clear
 #       if: github.repository == 'freetz-ng/freetz-ng'
@@ -227,7 +233,7 @@ jobs:
           prerelease: true
           allowUpdates: true
           removeArtifacts: false
-          artifacts: "symref-*.tar.lzma"
+          artifacts: "symrefs-*.tar.lzma"
           token: ${{ secrets.GITHUB_TOKEN }}
           replacesArtifacts: false
           artifactErrorsFailBuild: false
