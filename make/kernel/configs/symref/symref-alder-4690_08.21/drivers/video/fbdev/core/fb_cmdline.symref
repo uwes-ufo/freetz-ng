@@ -1,2 +1,0 @@
-override fb_mode_option extern const char * fb_mode_option 
-override fb_get_options extern int fb_get_options ( const char * , char * * ) 

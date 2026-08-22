@@ -1,3 +1,0 @@
-override t#__u64 __extension__ typedef unsigned long long __u64 
-override t#u64 typedef t#__u64 u64 
-override arch_timer_read_counter extern t#u64 ( * arch_timer_read_counter ) ( void ) 

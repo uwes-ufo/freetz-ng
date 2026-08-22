@@ -1,2 +1,0 @@
-override s#proc_dir_entry struct proc_dir_entry { UNKNOWN } 
-override atm_proc_root extern s#proc_dir_entry * atm_proc_root 

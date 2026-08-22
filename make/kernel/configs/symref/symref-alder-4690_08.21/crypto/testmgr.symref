@@ -1,3 +1,0 @@
-override t#__u32 typedef unsigned int __u32 
-override t#u32 typedef t#__u32 u32 
-override alg_test int alg_test ( const char * , const char * , t#u32 , t#u32 ) 

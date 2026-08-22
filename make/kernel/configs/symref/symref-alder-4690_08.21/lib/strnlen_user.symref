@@ -1,1 +1,0 @@
-override strnlen_user extern long strnlen_user ( const char * , long ) 
