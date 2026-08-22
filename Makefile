@@ -30,6 +30,16 @@ ENVIRA_SYS_LANG:=$(shell locale | sed -n 's/^LANG=//p')
 ENVIRA_MAKE_VARS:=$(ENVIRA_MARK)=y
 ENVIRA_MAKE_VARS+=SYS_LANG=$(ENVIRA_SYS_LANG)
 
+ifeq ($(strip $(MAKECMDGOALS)),)
+ENVIRA_OLDDEFCONFIG:=y
+else
+ifneq ($(filter olddefconfig,$(MAKECMDGOALS)),)
+ifneq ($(filter-out olddefconfig,$(MAKECMDGOALS)),)
+ENVIRA_OLDDEFCONFIG:=y
+endif
+endif
+endif
+
 envira:
 ifneq ($(shell umask),$(ENVIRA_UMASK))
 ifneq ($(shell grep -q "$$($(ENVIRA_REV_TOOL))" $(ENVIRA_LAST_REV) 2>/dev/null && echo y),y)
@@ -45,16 +55,12 @@ ifneq ($(shell grep -q "$$($(ENVIRA_REV_TOOL))" $(ENVIRA_LAST_REV) 2>/dev/null &
 endif
 endif
 	@$(ENVIRA_REV_TOOL) make
-ifeq ($(strip $(MAKECMDGOALS)),)
+ifeq ($(ENVIRA_OLDDEFCONFIG),y)
+	@echo ODa
 	@$(MAKE) olddefconfig > /dev/null
-else
-ifneq ($(filter olddefconfig,$(MAKECMDGOALS)),)
-ifneq ($(filter-out olddefconfig,$(MAKECMDGOALS)),)
-	@$(MAKE) olddefconfig > /dev/null
+	@echo ODb
 endif
-endif
-endif
-	@umask $(ENVIRA_UMASK) && LANG=C PATH="$(ENVIRA_PATH_ABS):$(PATH):/usr/sbin" $(MAKE) $(MAKECMDGOALS) $(ENVIRA_MAKE_VARS) || kill $$$$
+	@umask $(ENVIRA_UMASK) && LANG=C PATH="$(ENVIRA_PATH_ABS):$(PATH):/usr/sbin" $(MAKE) $(filter-out $(if $(ENVIRA_OLDDEFCONFIG),olddefconfig,),$(MAKECMDGOALS)) $(ENVIRA_MAKE_VARS) || kill $$$$
 
 $(filter-out envira,$(MAKECMDGOALS)): envira
 	@:
