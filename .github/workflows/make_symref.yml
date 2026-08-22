@@ -83,7 +83,7 @@ jobs:
   build:
     permissions:
       packages: read
-      contents: read
+      contents: write
     container:
       image: ghcr.io/freetz-ng/internal/firmware
       credentials:
