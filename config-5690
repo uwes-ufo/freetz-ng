@@ -185,26 +185,10 @@ FREETZ_AVM_VERSION_LATEST_MAJOR=y
 FREETZ_TYPE_FIRMWARE_FINAL=y
 
 #
-# WARNINGS -------------------------------------------------
-#
-
-#
-#  - replace-kernel might not work at all
-#
-
-#
-#    or cause stability issues
-#
-
-#
 # Original components --------------------------------------
 #
 FREETZ_TARGET_IPV6_SUPPORT=y
-FREETZ_REPLACE_KERNEL=y
-
-#
-#  DEVELOPER  DEVELOPER  DEVELOPER  DEVELOPER  DEVELOPER
-#
+# FREETZ_REPLACE_KERNEL is not set
 
 #
 # Removal patches
@@ -306,7 +290,6 @@ FREETZ_REPLACE_DTRACE=y
 #
 # Additional patches ---------------------------------------
 #
-FREETZ_ADD_SWAPOPTIONS=y
 # FREETZ_ADD_TELNETD is not set
 # FREETZ_ADD_ETCNETCONFIG is not set
 FREETZ_CUSTOM_ETCSERVICES=y
@@ -659,7 +642,6 @@ FREETZ_PACKAGE_JUIS_CHECK_WITH_SSL=y
 # FREETZ_PACKAGE_MINIDLNA is not set
 # FREETZ_PACKAGE_MINISATIP is not set
 FREETZ_PACKAGE_MOD=y
-FREETZ_PACKAGE_MOD_SWAPOPTIONS=y
 FREETZ_PACKAGE_MODCGI=y
 # FREETZ_PACKAGE_MODULE_INIT_TOOLS is not set
 # FREETZ_PACKAGE_MOSQUITTO is not set
@@ -693,6 +675,10 @@ FREETZ_PACKAGE_NANO_SYNTAX_FILE_XML=y
 # FREETZ_PACKAGE_NETPBM is not set
 # FREETZ_PACKAGE_NETSNMP is not set
 # FREETZ_PACKAGE_NFS_UTILS is not set
+
+#
+# NFS-root (not available, needs replace kernel)
+#
 # FREETZ_PACKAGE_NGIRCD is not set
 # FREETZ_PACKAGE_NMAP is not set
 # FREETZ_PACKAGE_NOIP is not set
@@ -1560,8 +1546,6 @@ FREETZ_LIB_libpython3=y
 #
 # FREETZ_MODULES_KOON is not set
 FREETZ_MODULES_OWN=""
-# FREETZ_MODULES_ALL is not set
-# FREETZ_REPLACE_MODULES is not set
 
 #
 # crypto
@@ -3415,10 +3399,6 @@ FREETZ_FWMOD_SIGN_PASSWORD="freetz"
 #
 # FREETZ_SQUASHFS_BLOCKSIZE_ORIG is not set
 FREETZ_SQUASHFS_BLOCKSIZE_65536=y
-# FREETZ_SQUASHFS_BLOCKSIZE_131072 is not set
-# FREETZ_SQUASHFS_BLOCKSIZE_262144 is not set
-# FREETZ_SQUASHFS_BLOCKSIZE_524288 is not set
-# FREETZ_SQUASHFS_BLOCKSIZE_1048576 is not set
 FREETZ_SQUASHFS_BLOCKSIZE=65536
 # end of SquashFS options
 
