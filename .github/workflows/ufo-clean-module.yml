@@ -1,0 +1,57 @@
+name: ufo-clean
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+
+  ufo:
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        box: ["5690", "7270", "7490"]
+    runs-on: ubuntu-latest
+    
+    steps:
+
+    - uses: actions/checkout@v6
+
+    - run: tools/prerequisites install
+
+    - run: cp config-${{ matrix.box }} .config
+
+#    - if: matrix.box == 5690
+#      run: |
+#        make kernel-unpacked
+#        cp -r make/kernel/configs/symref/symref-alder-4690_08.21/* source/kernel/ref-alder-4690_08.21/linux-5.4
+      # cp make/kernel/configs/avm/config-alder-4690_08.21 make/kernel/configs/freetz/config-alder-4690_08.21
+      # patch -p1 make/kernel/configs/freetz/config-alder-4690_08.21 < make/kernel/configs/diffs/config-alder-4690_08.21.diff
+      # KBUILD_SYMTYPES=1 make
+      # cd source/kernel/ref-alder-4690_08.21/linux-5.4
+      # find . -name '*.symtypes' -exec bash -c 'f={}; sed "s/^/override /" $f > ${f%.symtypes}.symref' \;
+      # find . -name '*.symref' -exec cp --parents {} ../../../../make/kernel/configs/symref/symref-alder-4690_08.21 \;
+      # cd ../../../..
+      # git checkout make/kernel/configs/freetz/config-alder-4690_08.21
+      # rm -f images/*
+
+#    - run: KBUILD_PRESERVE=1 make
+    - run: make
+
+    - run: grep -v '#  freetz-ng ' .config > config-${{ matrix.box }}
+
+    - run: git checkout make/kernel/configs/freetz/config-ur8-7270_06.05
+
+    - run: git commit -am clean-${{ matrix.box }} && git pull && git push || true
+
+    - uses: actions/upload-artifact@v7
+      with:
+        name: images-${{ matrix.box }}-${{ github.sha }}
+        path: images
+        retention-days: 2
