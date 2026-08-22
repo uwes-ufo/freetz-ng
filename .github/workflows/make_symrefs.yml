@@ -236,6 +236,6 @@ jobs:
           artifacts: "symrefs-*.tar.lzma"
           token: ${{ secrets.GITHUB_TOKEN }}
           replacesArtifacts: false
-          artifactErrorsFailBuild: false
+          artifactErrorsFailBuild: true
 
 
