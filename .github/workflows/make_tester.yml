@@ -141,7 +141,9 @@ jobs:
         env:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
-          make && rm -f images/latest.image
+          make
+          rm -f images/latest.image
+          exec true
       - name: result
         run: |
           echo "##########################################################"
