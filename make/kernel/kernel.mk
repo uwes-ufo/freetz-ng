@@ -113,7 +113,7 @@ ifeq ($(strip $(FREETZ_KERNEL_AVMDIFF_AVAILABLE)),y)
 endif
 ifeq ($(KERNEL_SYMREFS_AVAILABLE),y)
 	@echo "#unpacking symrefs archive" $(SILENT)
-	@$(call UNPACK_TARBALL,$(DL_DIR)/$(KERNEL_SYMREFS_SOURCE),$(KERNEL_SOURCE_DIR),1)
+	@$(call UNPACK_TARBALL,$(DL_DIR)/$(KERNEL_SYMREFS_SOURCE),$(KERNEL_SOURCE_DIR))
 endif
 	@if [ -e "$(KERNEL_SOURCE_DIR)/scripts/kconfig/lxdialog/check-lxdialog.sh" ]; then \
 		echo "#fixing ncurses detection bug" $(SILENT); \
