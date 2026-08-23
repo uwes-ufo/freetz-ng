@@ -41,7 +41,7 @@ endif
 ifeq ($(FREETZ_AVM_HAS_MODVERSIONS_BUILTIN),y)
 ifeq ($(filter kernel-symrefs,$(MAKECMDGOALS)),)
 ifneq ($(filter-out X,$(call qstrip,$(FREETZ_DL_KERNEL_SYMREFS_HASH))),)
-KERNEL_SYMREFS_UNPACK:=y
+KERNEL_SYMREFS_AVAILABLE:=y
 endif
 KERNEL_COMMON_MAKE_OPTIONS += KBUILD_PRESERVE=1
 else
@@ -68,13 +68,17 @@ $(DL_DIR)/$(KERNEL_VANILLA_SOURCE): | $(DL_DIR)
 	@$(call _ECHO,downloading,$(KERNEL_ECHO_TYPE))
 	$(DL_TOOL) $(DL_DIR) $(KERNEL_VANILLA_SOURCE) $(KERNEL_VANILLA_SITE) $(KERNEL_VANILLA_HASH) $(SILENT)
 
+ifeq ($(FREETZ_KERNEL_AVMDIFF_AVAILABLE),y)
 $(DL_DIR)/$(KERNEL_AVMDIFF_SOURCE): | $(DL_DIR)
 	@$(call _ECHO,downloading,$(KERNEL_ECHO_TYPE))
 	$(DL_TOOL) $(DL_DIR) $(KERNEL_AVMDIFF_SOURCE) $(KERNEL_AVMDIFF_SITE) $(KERNEL_AVMDIFF_HASH) $(SILENT)
+endif
 
+ifeq ($(KERNEL_SYMREFS_AVAILABLE),y)
 $(DL_DIR)/$(KERNEL_SYMREFS_SOURCE): | $(DL_DIR)
 	@$(call _ECHO,downloading,$(KERNEL_ECHO_TYPE))
 	$(DL_TOOL) $(DL_DIR) $(KERNEL_SYMREFS_SOURCE) $(KERNEL_SYMREFS_SITE) $(KERNEL_SYMREFS_HASH) $(SILENT)
+endif
 
 # Make sure that a perfectly clean build is performed whenever Freetz package
 # options have changed. The safest way to achieve this is by starting over
@@ -82,7 +86,7 @@ $(DL_DIR)/$(KERNEL_SYMREFS_SOURCE): | $(DL_DIR)
 kernel-unpacked: $(KERNEL_DIR)/.unpacked
 $(KERNEL_DIR)/.unpacked: $(DL_DIR)/$(KERNEL_VANILLA_SOURCE)
 $(KERNEL_DIR)/.unpacked: $(if $(FREETZ_KERNEL_AVMDIFF_AVAILABLE),$(DL_DIR)/$(KERNEL_AVMDIFF_SOURCE))
-$(KERNEL_DIR)/.unpacked: $(if $(KERNEL_SYMREFS_UNPACK),$(DL_DIR)/$(KERNEL_SYMREFS_SOURCE))
+$(KERNEL_DIR)/.unpacked: $(if $(KERNEL_SYMREFS_AVAILABLE),$(DL_DIR)/$(KERNEL_SYMREFS_SOURCE))
 $(KERNEL_DIR)/.unpacked: | $(UNPACK_TARBALL_PREREQUISITES)
 $(KERNEL_DIR)/.unpacked: | gcc-kernel
 $(KERNEL_DIR)/.unpacked:
@@ -107,7 +111,7 @@ ifeq ($(strip $(FREETZ_KERNEL_AVMDIFF_AVAILABLE)),y)
 	  [ "$$a" == "touch" ] && touch       "$(KERNEL_SOURCE_DIR)/$${b}"; \
 	done $(SILENT) || true
 endif
-ifeq ($(KERNEL_SYMREFS_UNPACK),y)
+ifeq ($(KERNEL_SYMREFS_AVAILABLE),y)
 	@echo "#unpacking symrefs archive" $(SILENT)
 	@$(call UNPACK_TARBALL,$(DL_DIR)/$(KERNEL_SYMREFS_SOURCE),$(KERNEL_SOURCE_DIR),1)
 endif
