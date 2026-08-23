@@ -1449,7 +1449,6 @@ if [ "$DO_MOD" -gt 0 ]; then
 			echo "kernel/drivers/char/audio/avm_audio.ko:" >> "$MODULES_DIR/modules.dep"
 		fi
 		# symvers
-#		if [ "$FREETZ_REPLACE_KERNEL" == "y" ] && [ "$FREETZ_AVM_HAS_MODVERSIONS_BUILTIN" == "y" ]; then
 		if [ "$FREETZ_AVM_HAS_MODVERSIONS_BUILTIN" == "y" ]; then
 			DEPMOD_SYMVERS="${BASE_DIR}/${SOURCE_SUBDIR}/kernel/ref-${KERNEL_ID}/linux-${FREETZ_KERNEL_VERSION_MAJOR}/Module.symvers"
 			LANG=C depmod -e -b "$FILESYSTEM_MOD_DIR" \
@@ -1458,10 +1457,9 @@ if [ "$DO_MOD" -gt 0 ]; then
 			  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
 			if grep -q "disagrees about version of symbol" "$DEPMOD_TEMP"; then
 				DEPMOD_DISAGREES="$(grep "disagrees about version of symbol" "$DEPMOD_TEMP" | wc -l)"
-				[ "$FREETZ_MODULES_TEST" != "y" ] && error 1 "$DEPMOD_DISAGREES disagrees about version of symbol. Modules will not load. The system will not boot."
-				warn "$DEPMOD_DISAGREES disagrees about version of symbol."
+				[ "$FREETZ_REPLACE_KERNEL" == "y" ] && error 1 "$DEPMOD_DISAGREES disagrees about version of symbol. Modules will not load. The system will not boot."
+				warn "$DEPMOD_DISAGREES disagrees about version of symbol. Modules will not load."
 			fi
-			cp -f "${DEPMOD_SYMVERS}" "${BASE_DIR}/make/kernel/configs/symvers/symvers-${KERNEL_ID}"
 		fi
 		rm -f "$DEPMOD_TEMP"
 		# reproducible
