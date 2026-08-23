@@ -181,8 +181,8 @@ jobs:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
           make olddefconfig kernel-symrefs
-          [ ! -e symrefs-*.tar.lzma ] && echo "ABORT=true" >> "$GITHUB_OUTPUT"
-          ! tar tf symrefs-*.tar.lzma 2>/dev/null | grep -q . && echo "EMPTY=true" >> "$GITHUB_OUTPUT"
+          [ -e symrefs-*.tar.lzma ] || echo "ABORT=true" >> "$GITHUB_OUTPUT"
+          tar tf symrefs-*.tar.lzma 2>/dev/null | grep -q . || echo "EMPTY=true" >> "$GITHUB_OUTPUT"
 
       - name: result
         if: steps.generate.outputs.ABORT != 'true'
