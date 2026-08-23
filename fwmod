@@ -1465,7 +1465,6 @@ if [ "$DO_MOD" -gt 0 ]; then
 					error 1 "$DEPMOD_DISAGREES disagrees about version of symbol. No modules will be loaded, the system will not boot."
 				fi
 			fi
-			cp -f "${DEPMOD_SYMVERS}" "${BASE_DIR}/make/kernel/configs/symvers/symvers-${KERNEL_ID}"
 		fi
 		rm -f "$DEPMOD_TEMP"
 		# reproducible
