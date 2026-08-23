@@ -1457,8 +1457,13 @@ if [ "$DO_MOD" -gt 0 ]; then
 			  2>&1 | tee "$DEPMOD_TEMP" | sed "s@ ${ABS_BASE_DIR}/@ @g"
 			if grep -q "disagrees about version of symbol" "$DEPMOD_TEMP"; then
 				DEPMOD_DISAGREES="$(grep "disagrees about version of symbol" "$DEPMOD_TEMP" | wc -l)"
-				[ "$FREETZ_REPLACE_KERNEL" == "y" ] && error 1 "$DEPMOD_DISAGREES disagrees about version of symbol. Modules will not load. The system will not boot."
-				warn "$DEPMOD_DISAGREES disagrees about version of symbol. Modules will not load."
+				if [ "$FREETZ_MODULES_TEST" == "y" ]; then
+					warn "$DEPMOD_DISAGREES disagrees about version of symbol."
+				elif [ "$FREETZ_REPLACE_KERNEL" != "y" ]; then
+					warn "$DEPMOD_DISAGREES disagrees about version of symbol. Additional modules will not be loaded."
+				else
+					error 1 "$DEPMOD_DISAGREES disagrees about version of symbol. No modules will be loaded, the system will not boot."
+				fi
 			fi
 		fi
 		rm -f "$DEPMOD_TEMP"
