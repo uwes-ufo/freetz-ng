@@ -1,4 +1,4 @@
-name: ufo-clean-symref
+name: ufo-clean-symref-two-stage
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
         make kernel-unpacked
         cp make/kernel/configs/avm/config-alder-4690_08.21 make/kernel/configs/freetz/config-alder-4690_08.21
         patch -p1 make/kernel/configs/freetz/config-alder-4690_08.21 < make/kernel/configs/diffs/config-alder-4690_08.21.diff
-        KBUILD_SYMTYPES=1 make
+        KBUILD_SYMTYPES=1 make kernel-precompiled
         cd source/kernel/ref-alder-4690_08.21/linux-5.4
         find . -name '*.symtypes' -exec bash -c 'f={}; sed "s/^/override /" $f > ${f%.symtypes}.symref' \;
         cd ../../../..
