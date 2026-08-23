@@ -85,7 +85,7 @@ jobs:
           key: make_cache-${{ github.run_id }}
           restore-keys: make_cache
 
-      - name: download
+      - name: config
         run: |
           truncate -s0                                                                                  .config
           echo -n
@@ -120,6 +120,9 @@ jobs:
           [ -z "${{ secrets.FREETZ_DLTOKEN }}" ] && \
           echo '# FREETZ_HOSTTOOLS_DOWNLOAD is not set'                                               >> .config ||
           echo 'FREETZ_HOSTTOOLS_DOWNLOAD=y'                                                          >> .config
+          sed '/FREETZ_ROOTEMU_/d'                                                                    -i .config
+          echo '# FREETZ_ROOTEMU_FAKEROOT is not set'                                                 >> .config
+          echo 'FREETZ_ROOTEMU_PSEUDO=y'                                                              >> .config
           sed '/FREETZ_VERBOSITY_FWMOD_/d'                                                            -i .config
           echo 'FREETZ_VERBOSITY_FWMOD_2=y'                                                           >> .config
           sed '/FREETZ_VERBOSITY_LEVEL/d'                                                             -i .config
@@ -143,7 +146,6 @@ jobs:
         run: |
           make
           rm -f images/latest.image
-          exec true
       - name: result
         run: |
           echo "##########################################################"
