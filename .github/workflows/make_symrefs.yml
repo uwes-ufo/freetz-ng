@@ -181,18 +181,13 @@ jobs:
           FREETZ_DLTOKEN: ${{ secrets.FREETZ_DLTOKEN }}
         run: |
           make olddefconfig kernel-symrefs
-          [ -e symrefs-*.tar.lzma ] && echo "ABORT=false" >> "$GITHUB_OUTPUT" || echo "ABORT=true" >> "$GITHUB_OUTPUT" 
+          [ -e symrefs-*.tar.lzma ] && echo "ABORT=false" >> "$GITHUB_OUTPUT" || echo "ABORT=true" >> "$GITHUB_OUTPUT"
 
       - name: git-diff
-        run: |
-          echo "##########################################################"
-          git diff --no-prefix
-
-      - name: symrefs
         if: steps.generate.outputs.ABORT != 'true'
         run: |
           echo "##########################################################"
-          tar tvf symrefs-*.tar.lzma
+          git diff --no-prefix
 
       - name: result
         if: steps.generate.outputs.ABORT != 'true'
@@ -201,6 +196,12 @@ jobs:
           ls -lL symrefs-*.tar.lzma
           du -sh $(readlink symrefs-*.tar.lzma)
           sha256sum symrefs-*.tar.lzma
+
+      - name: symrefs
+        if: steps.generate.outputs.ABORT != 'true'
+        run: |
+          echo "##########################################################"
+          tar tvf symrefs-*.tar.lzma
 
 #     - name: cache_clear
 #       if: github.repository == 'freetz-ng/freetz-ng'
