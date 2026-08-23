@@ -98,7 +98,7 @@ ifeq ($(strip $(FREETZ_KERNEL_AVMDIFF_AVAILABLE)),y)
 	@$(call APPLY_PATCHES,$(DL_DIR),$(KERNEL_SOURCE_DIR),$(KERNEL_AVMDIFF_SOURCE),/dev/null)
 	@echo "#vanilla to avm fixes" $(SILENT)
 	@find $(KERNEL_SOURCE_DIR) -type l -exec rm -f {} ';'
-	@$(TOOLS_DIR)/unxz $(DL_DIR)/$(KERNEL_AVMDIFF_SOURCE) -c | grep -E '^    #FREETZ# (mkdir|chmod|slink|touch) .*' | while read x a b c; do \
+	@$(LZMA) d $(DL_DIR)/$(KERNEL_AVMDIFF_SOURCE) -so | grep -E '^    #FREETZ# (mkdir|chmod|slink|touch) .*' | while read x a b c; do \
 	  [ "$$a" != "mkdir" ] && [ "$$b" != "$${b%/*}" ] && mkdir -p    "$(KERNEL_SOURCE_DIR)/$${b%/*}"; \
 	  [ "$$a" == "mkdir" ] && mkdir -p    "$(KERNEL_SOURCE_DIR)/$${b}"; \
 	  [ "$$a" == "chmod" ] && touch       "$(KERNEL_SOURCE_DIR)/$${b}"; \
