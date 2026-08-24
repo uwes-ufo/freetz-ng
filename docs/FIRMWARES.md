@@ -643,6 +643,7 @@ Currently supported devices and firmwares
     - 169.08.25 rev132922 {ALL} [Smart24 P2 NL1]
   * __Fritz!Repeater 2700 (UNTESTED)__
     - 301.08.07 rev128070 {ALL} [Smart24 P1 FCS]
+    - 301.08.24 rev135213 {ALL} [Smart24 P2 NL1] (Labor)
   * __Fritz!Repeater 3000__
     - 174.07.04 rev66458 {ALL}
     - 174.07.14 rev73940 {ALL} [MESH18 NL4]
