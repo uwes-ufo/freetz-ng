@@ -229,7 +229,7 @@ config FREETZ_KERNEL_BINUTILS_2_36_DEFAULT
 	depends on FREETZ_AVM_GCC_9
 config FREETZ_KERNEL_BINUTILS_2_42_DEFAULT
 	def_bool y
-	depends on (FREETZ_AVM_GCC_10 || FREETZ_AVM_GCC_13) && FREETZ_TARGET_BITS_32
+	depends on (FREETZ_AVM_GCC_10 && FREETZ_TARGET_BITS_32) || FREETZ_AVM_GCC_13
 config FREETZ_KERNEL_BINUTILS_2_45_DEFAULT
 	def_bool y
 	depends on FREETZ_AVM_GCC_10 && FREETZ_TARGET_BITS_64
@@ -298,8 +298,9 @@ choice
 
 	config FREETZ_KERNEL_BINUTILS_2_42
 		bool "binutils-2.42"
-		depends on (FREETZ_AVM_GCC_10 || FREETZ_AVM_GCC_13) && FREETZ_TARGET_BITS_32
+		depends on (FREETZ_AVM_GCC_10 && FREETZ_TARGET_BITS_32) || FREETZ_AVM_GCC_13
 		# depends on any kernel version, used by avm for kernel 4.19 arm32 (1700+2700) only so far
+		# labor 1700+2700 for kernel 5.15 unknown, gpl seems to be optional for avm as public beta are "not public"
 		depends on FREETZ_KERNEL_BINUTILS_2_42_DEFAULT || (FREETZ_BUILD_TOOLCHAIN || FREETZ_DL_TOOLCHAIN_OVERRIDE)
 
 	config FREETZ_KERNEL_BINUTILS_2_45
