@@ -194,8 +194,6 @@ jobs:
           [ -z "${{ secrets.FREETZ_DLTOKEN }}" ] && \
           echo '# FREETZ_HOSTTOOLS_DOWNLOAD is not set'                                               >> .config ||
           echo 'FREETZ_HOSTTOOLS_DOWNLOAD=y'                                                          >> .config
-          echo '# FREETZ_ROOTEMU_FAKEROOT is not set'                                                 >> .config
-          echo 'FREETZ_ROOTEMU_PSEUDO=y'                                                              >> .config
           grep -q '^FREETZ_TYPE_' .config || echo "FREETZ_TYPE_$BOX=y"                                >> .config
           grep -q '^FREETZ_TYPE_FIRMWARE_' .config || echo "FREETZ_TYPE_FIRMWARE_$FOS=y"              >> .config
           echo "##########################################################" && echo -n "Lines=" && wc -l .config

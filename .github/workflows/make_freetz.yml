@@ -103,8 +103,6 @@ jobs:
           echo 'FREETZ_DL_SITE_USER="https://github.com/Freetz-NG/dl-mirror/releases/download/dl"'    >> .config
           echo '# FREETZ_DOWNLOAD_TOOLCHAIN is not set'                                               >> .config
           echo '# FREETZ_HOSTTOOLS_DOWNLOAD is not set'                                               >> .config
-          echo '# FREETZ_ROOTEMU_FAKEROOT is not set'                                                 >> .config
-          echo 'FREETZ_ROOTEMU_PSEUDO=y'                                                              >> .config
           echo -n
           URL="${{ secrets.ACTIONS_FREETZ }}"
           echo -n "Downloading file '${URL##*/}': "
