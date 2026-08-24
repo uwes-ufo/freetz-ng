@@ -120,9 +120,6 @@ jobs:
           [ -z "${{ secrets.FREETZ_DLTOKEN }}" ] && \
           echo '# FREETZ_HOSTTOOLS_DOWNLOAD is not set'                                               >> .config ||
           echo 'FREETZ_HOSTTOOLS_DOWNLOAD=y'                                                          >> .config
-          sed '/FREETZ_ROOTEMU_/d'                                                                    -i .config
-          echo '# FREETZ_ROOTEMU_FAKEROOT is not set'                                                 >> .config
-          echo 'FREETZ_ROOTEMU_PSEUDO=y'                                                              >> .config
           sed '/FREETZ_VERBOSITY_FWMOD_/d'                                                            -i .config
           echo 'FREETZ_VERBOSITY_FWMOD_2=y'                                                           >> .config
           sed '/FREETZ_VERBOSITY_LEVEL/d'                                                             -i .config
