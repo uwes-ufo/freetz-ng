@@ -52,7 +52,7 @@ jobs:
 
     - run: git checkout make/kernel/configs/freetz/config-ur8-7270_06.05 && touch -d 2014-03-27 make/kernel/configs/freetz/config-ur8-7270_06.05
 
-    - run: du -sh * || true
+    - run: du -sh * | sort -h || true
 
     - run: git commit -am incremental-${{ matrix.box }} && git pull --rebase && git push || true
 
