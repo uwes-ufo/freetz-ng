@@ -1,4 +1,4 @@
-This patch has been created from AVM's opensrc packages for 7490.07.27 and 5491.07.27
+This patch has been created from AVM's opensrc packages for 6590.07.25 and 6430.07.30
 by applying to the kernel sources they contain the following command:
 
     diff -durN --no-dereference 6590.07.25 6430.07.30 > this.patch
