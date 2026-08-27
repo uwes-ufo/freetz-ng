@@ -6126,6 +6126,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -7966,6 +7968,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
 config FREETZ_AVM_HAS_CDROM_ISO
@@ -8028,6 +8032,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
@@ -8097,6 +8103,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
 	def_bool y
@@ -8175,6 +8183,8 @@ config FREETZ_AVM_HAS_DMESG_LINK
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -8249,6 +8259,8 @@ config FREETZ_AVM_HAS_SAMBA_SMBD
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
 	def_bool y
@@ -15133,6 +15145,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
 config FREETZ_AVM_PROP_SQUASHFS_VERSION_2
@@ -15191,6 +15205,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
@@ -15268,6 +15284,8 @@ config FREETZ_AVM_HAS_CTLMGR_CTL
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -15360,6 +15378,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
@@ -15436,6 +15456,8 @@ config FREETZ_AVM_HAS_TR069_FWUPDATE
 config FREETZ_AVM_HAS_DMESG_LINK
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_OPENSSL
 	def_bool y
@@ -30417,6 +30439,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
 config FREETZ_AVM_HAS_ETHERNET_OVER_USB
@@ -30487,6 +30511,8 @@ config FREETZ_AVM_HAS_CTLMGR_CTL
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -30564,6 +30590,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -30645,6 +30673,8 @@ config FREETZ_AVM_HAS_CTLMGR_CTL
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -30728,6 +30758,8 @@ config FREETZ_AVM_HAS_CTLMGR_CTL
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -30815,6 +30847,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -30904,6 +30938,8 @@ config FREETZ_AVM_HAS_CTLMGR_CTL
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -31001,6 +31037,8 @@ config FREETZ_AVM_HAS_CTLMGR_CTL
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -31107,6 +31145,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
@@ -31201,6 +31241,8 @@ config FREETZ_AVM_HAS_TC
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -31300,6 +31342,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -31408,6 +31452,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
@@ -31507,6 +31553,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
@@ -31605,6 +31653,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
@@ -31992,6 +32042,8 @@ config FREETZ_AVM_HAS_VPN
 config FREETZ_AVM_HAS_HOSTAPD
 	def_bool y
 config FREETZ_AVM_HAS_HOSTAPD_VERSION_0_5_9
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
 	def_bool y
@@ -49290,6 +49342,8 @@ config FREETZ_AVM_HAS_HOSTAPD
 	def_bool y
 config FREETZ_AVM_HAS_HOSTAPD_VERSION_0_5_9
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_DTRACE
 	def_bool y
 config FREETZ_AVM_HAS_PRINTSERV
@@ -56238,6 +56292,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
 config FREETZ_AVM_HAS_CDROM_ISO
@@ -56295,6 +56351,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
 config FREETZ_AVM_HAS_CDROM_ISO
@@ -56351,6 +56409,8 @@ config FREETZ_AVM_HAS_DMESG_LINK
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
@@ -56764,6 +56824,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_OPENSSL
 	def_bool y
 config FREETZ_AVM_HAS_OPENSSL_VERSION_09
@@ -56829,6 +56891,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_WEBSRV
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
 config FREETZ_AVM_HAS_CDROM_ISO
@@ -56888,6 +56952,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
 config FREETZ_AVM_HAS_CDROM_ISO
@@ -56946,6 +57012,8 @@ config FREETZ_AVM_HAS_DMESG_LINK
 config FREETZ_AVM_HAS_SHOWDSLDSTAT
 	def_bool y
 config FREETZ_AVM_HAS_DSLD
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_HAS_KIDS
 	def_bool y
@@ -57016,6 +57084,8 @@ config FREETZ_AVM_HAS_HOSTAPD
 	def_bool y
 config FREETZ_AVM_HAS_HOSTAPD_VERSION_0_5_9
 	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
+	def_bool y
 config FREETZ_AVM_PROP_SQUASHFS_VERSION_3
 	def_bool y
 config FREETZ_AVM_PROP_SQUASHFS_COMPRESSION_LZMA
@@ -57074,6 +57144,8 @@ config FREETZ_AVM_HAS_CTLMGR_CTL
 config FREETZ_AVM_HAS_HOSTAPD
 	def_bool y
 config FREETZ_AVM_HAS_HOSTAPD_VERSION_0_5_9
+	def_bool y
+config FREETZ_AVM_HAS_RUN_CLOCK
 	def_bool y
 config FREETZ_AVM_PROP_SQUASHFS_VERSION_3
 	def_bool y
