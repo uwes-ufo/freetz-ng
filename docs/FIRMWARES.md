@@ -9,7 +9,7 @@ Currently supported devices and firmwares
   * [Fritz!Box Fon (50xx/51xx)](#fritzbox-fon-50xx51xx)
   * [Fritz!Box Fiber (54xx/55xx/56xx)](#fritzbox-fiber-54xx55xx56xx)
   * [Fritz!Box Cable (63xx/64xx/65xx/66xx)](#fritzbox-cable-63xx64xx65xx66xx)
-  * [Fritz!Box LTE (68xx)](#fritzbox-lte-68xx)
+  * [Fritz!Box LTE/4G/5G (68xx)](#fritzbox-lte4g5g-68xx)
   * [Fritz!Box Fon WLAN (70xx)](#fritzbox-fon-wlan-70xx)
   * [Fritz!Box Fon WLAN (71xx)](#fritzbox-fon-wlan-71xx)
   * [Fritz!Box Fon WLAN (72xx)](#fritzbox-fon-wlan-72xx)
@@ -223,7 +223,7 @@ Currently supported devices and firmwares
   * __Fritz!Box 6690 PRO (UNTESTED)__
     - 308.08.24 rev130508 {GER} [Smart24 P2 NL1] (Inhaus)
 
-### Fritz!Box LTE (68xx)
+### Fritz!Box LTE/4G/5G (68xx)
 
   * __Fritz!Box 6810 LTE (UNTESTED)__
     - 108.06.35 rev38809 {GER}
