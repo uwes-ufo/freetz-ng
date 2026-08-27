@@ -839,6 +839,7 @@ config FREETZ_REMOVE_PRINTSERV_MODULE
 
 config FREETZ_REMOVE_RUNCLOCK
 	bool "Remove run_clock"
+	depends on FREETZ_AVM_HAS_RUN_CLOCK
 	default n
 	help
 		Remove /bin/run_clock (operating hours meter) daemon.
