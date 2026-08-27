@@ -2,7 +2,7 @@
 
 ### 2026-08-26
 Riesen Update bei AVM.<br>
-Es war scheinbar keine Fehler dass vor 2 Wochen eine via AVM-Juis ausgelieferte URL zu einem Firmware-Image als http**S**-URL ausgeliefert wurde.
+Es war scheinbar kein Fehler dass vor 2 Wochen eine via AVM-Juis ausgelieferte URL zu einem Firmware-Image als http**S**-URL ausgeliefert wurde.
 Heute kamen 2 weitere dazu! Es sind somit schon insgesammt 3!
 
    - [855246b7](https://github.com/Freetz-NG/freetz-ng/commit/855246b7458c28207a6f8d034a32687222e413f6)<br>
