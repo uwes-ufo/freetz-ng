@@ -141,6 +141,7 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - MHW 06.12: [06.12.05.45.avm.de.upd](http://download.avm.de/dect/0612/FW_05.45/06.12.05.45.avm.de.upd)
   - MHW 06.13: [06.13.03.58.avm.de.upd](http://download.avm.de/dect/0613/Smart24/06.13.03.58.avm.de.upd)
   - MHW 06.14: [06.14.03.76.avm.de.upd](http://download.avm.de/dect/0614/FW_03.76/06.14.03.76.avm.de.upd)
+  - MHW 06.16: [06.16.05.00.avm.de.upd](http://download.avm.de/dect/0616/FW_05.00/06.16.05.00.avm.de.upd)
   - MHW 07.01: [07.01.04.25.avm.de.upd](http://download.avm.de/dect/0701/07.01.04.25.avm.de.upd)
   - MHW 07.02: [07.02.04.32.avm.de.upd](http://download.avm.de/dect/0702/FW_04.32/07.02.04.32.avm.de.upd)
   - MHW 07.03: [07.03.04.25.avm.de.upd](http://download.avm.de/dect/0703/move21/07.03.04.25.avm.de.upd)
