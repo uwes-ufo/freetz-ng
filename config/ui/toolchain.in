@@ -211,6 +211,10 @@ choice
 		bool "kernel-5.15.179"
 		depends on FREETZ_AVM_PROP_KERNEL_5_15_179
 
+	config FREETZ_KERNEL_VERSION_5_15_215
+		bool "kernel-5.15.215"
+		depends on FREETZ_AVM_PROP_KERNEL_5_15_215
+
 endchoice
 
 config FREETZ_KERNEL_BINUTILS_2_18_DEFAULT
