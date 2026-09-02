@@ -93,6 +93,7 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - HWR 260: [FRITZ.Box_7583_VDSL-07.39-103078-LabBETA.image](http://download.example.com/labor/MOVE21/7583VDSL/FRITZ.Box_7583_VDSL-07.39-103078-LabBETA.image)
   - HWR 262: [FRITZ.Box_6850_LTE-08.24-133786-LabBETA.image](http://download.example.com/labor/Smart24P2NL1/6850LTE/FRITZ.Box_6850_LTE-08.24-133786-LabBETA.image)
   - HWR 267: [FRITZ.Box_6690_Cable-08.40-136021-LabBETA.image](https://download.example.com/labor/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-136021-LabBETA.image)
+  - HWR 270: [FRITZ.Repeater_3000_AX-08.40-135996-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/3000AX/FRITZ.Repeater_3000_AX-08.40-135996-LabBETA.image)
   - HWR 271: [FRITZ.Box_7510-08.24-133269-LabBETA.image](http://download.example.com/labor/Smart24P2NL1/7510/FRITZ.Box_7510-08.24-133269-LabBETA.image)
   - HWR 272: [FRITZ.Box_5590_Fiber-08.40-135922-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/5590Fiber/FRITZ.Box_5590_Fiber-08.40-135922-LabBETA.image)
   - HWR 276: [FRITZ.Box_7520_B-08.24-132253-LabBETA.image](http://download.example.com/labor/Smart24P2NL1/7520B/FRITZ.Box_7520_B-08.24-132253-LabBETA.image)
