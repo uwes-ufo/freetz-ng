@@ -94,7 +94,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### O
 
-  * **[openssl 3.5.7](openssl-host.md)<a id='openssl-host'></a>**<br>
+  * **[openssl 3.5.8](openssl-host.md)<a id='openssl-host'></a>**<br>
 
 ### P
 
@@ -152,7 +152,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2026-08-25](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2026-09-06](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
