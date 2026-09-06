@@ -72,7 +72,7 @@ Latest changes
     * busybox 1.38.0
     * autoconf 2.73
     * ca-bundle 2026-08-13
-    * cmake 4.4.2
+    * cmake 4.4.3
     * config 4286648
     * dos2unix 7.5.6
     * dtc 1.8.1
@@ -119,7 +119,7 @@ Latest changes
     * BusyBox 1.27.2/1.38.0
     * CA-bundle 2026-08-13
     * CCID 1.8.2
-    * Curl 8.12.1/8.21.0
+    * Curl 8.12.1/8.22.0
     * davfs2 1.5.2/1.7.3
     * Dnsmasq 2.80/2.93
     * Dropbear 2026.94
@@ -180,7 +180,7 @@ Latest changes
     * FreeType 2.14.3
     * gettext 1.0
     * GLib2 2.32.4/2.88.3
-    * harfbuzz 14.3.1
+    * harfbuzz 14.4.0
     * libcap 2.49/2.78
     * libcap-ng 0.9.3
     * libcjson 1.7.19
