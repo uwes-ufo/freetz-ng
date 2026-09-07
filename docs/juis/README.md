@@ -116,7 +116,7 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - HWR 261: [FRITZ.Box_4060-08.24-134026-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/4060/FRITZ.Box_4060-08.24-134026-Inhaus.image)
   - HWR 262: [FRITZ.Box_6850_LTE-08.40-136147-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/6850LTE/FRITZ.Box_6850_LTE-08.40-136147-Inhaus.image)
   - HWR 263: [FRITZ.Repeater_600v2-08.24-130212-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/600v2/FRITZ.Repeater_600v2-08.24-130212-Inhaus.image)
-  - HWR 267: [FRITZ.Box_6690_Cable-08.40-136134-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-136134-Inhaus.image)
+  - HWR 267: [FRITZ.Box_6690_Cable-08.40-136364-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-136364-Inhaus.image)
   - HWR 268: [FRITZ.Repeater_1200_AX-08.40-136185-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/1200AX/FRITZ.Repeater_1200_AX-08.40-136185-Inhaus.image)
   - HWR 270: [FRITZ.Repeater_3000_AX-08.40-136198-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/3000AX/FRITZ.Repeater_3000_AX-08.40-136198-Inhaus.image)
   - HWR 271: [FRITZ.Box_7510-08.40-136153-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/7510/FRITZ.Box_7510-08.40-136153-Inhaus.image)
