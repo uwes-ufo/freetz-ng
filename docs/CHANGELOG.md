@@ -81,6 +81,7 @@ Latest changes
     * genext2fs 1.6.2
     * kconfig 7.2
     * libtool 2.6.2
+    * lzma2 5.8.4
     * meson 1.12.0
     * mklibs 0.1.46
     * openssl 3.5.8
@@ -166,14 +167,14 @@ Latest changes
     * Tor 0.4.8.25/0.4.9.12
     * Transmission 3.00/4.1.3
     * Tree 1.8.0/2.3.2
-    * uMurmur 0.2.20/0.4.1
+    * uMurmur 0.2.20/0.5.0
     * Unbound 1.26.0
     * UnRAR 6.1.7/7.2.5
     * Virtualip-NG 1.0
     * wireguard-tools 1.0.20260223
     * Whois 5.6.6
     * xsltproc 1.1.45
-    * XZ 5.8.3
+    * XZ 5.8.4
 
   - Libraries:
     * expat 2.7.5/2.8.4
@@ -188,7 +189,7 @@ Latest changes
     * libevent 2.1.13
     * libexif 0.6.26
     * libffi 3.8.0
-    * libmaxminddb 1.13.3
+    * libmaxminddb 1.14.0
     * libpcap 1.1.1/1.10.7
     * libpng 1.6.58
     * libusb(-compat) 0.1.12/0.1.9

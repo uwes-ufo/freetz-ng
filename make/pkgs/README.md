@@ -1004,7 +1004,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>udpxy 1.0.23-9 (binary only) - DEPRECATED</u><a id='udpxy'></a>**<br>
     Small-footprint UNIX/Linux daemon to relay multicast UDP traffic to client's TCP (HTTP) connection.
 
-  * **[uMurmur 0.2.20/0.4.1](../../docs/make/umurmur.md)<a id='umurmur'></a>**<br>
+  * **[uMurmur 0.2.20/0.5.0](../../docs/make/umurmur.md)<a id='umurmur'></a>**<br>
     umurmur is a minimalistic Mumble server primarily targeted to run on routers using less resources. It targets to fill the needs of a pretty small group of users communicating, which in part originates from the other goal of working well on a small system with a limited CPU and limited amount of disk space. It also aims to minimize writing to the disk since these kinds of systems usually only has a flash memory for disk. umurmur supports a subset of the features of Murmur. https://github.com/umurmur/umurmur
 
   * **[Unbound 1.26.0](../../docs/make/unbound.md)<a id='unbound'></a>**<br>
@@ -1105,7 +1105,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[xsltproc 1.1.45 (binary only)](../../docs/make/xsltproc.md)<a id='xsltproc'></a>**<br>
     xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop.
 
-  * **[XZ 5.8.3 (binary only)](../../docs/make/xz.md)<a id='xz'></a>**<br>
+  * **[XZ 5.8.4 (binary only)](../../docs/make/xz.md)<a id='xz'></a>**<br>
     XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm compression format, which provides memory-hungry but powerful compression (often better than bzip2) and fast, easy decompression. This package provides the command line tools for working with XZ compression. They can also handle the older LZMA format, and if invoked via appropriate symlinks will emulate the behavior of the commands in the lzma package.
 
 # Debug helpers
