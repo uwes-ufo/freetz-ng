@@ -81,6 +81,7 @@ Latest changes
     * genext2fs 1.6.2
     * kconfig 7.2
     * libtool 2.6.2
+    * lzma2 5.8.4
     * meson 1.12.0
     * mklibs 0.1.46
     * openssl 3.5.8
@@ -173,7 +174,7 @@ Latest changes
     * wireguard-tools 1.0.20260223
     * Whois 5.6.6
     * xsltproc 1.1.45
-    * XZ 5.8.3
+    * XZ 5.8.4
 
   - Libraries:
     * expat 2.7.5/2.8.4
