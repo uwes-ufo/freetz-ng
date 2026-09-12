@@ -309,6 +309,9 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
     - [source-files-FRITZ.Box_6690_Cable-atomp7-08.03.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6690-cable/source-files-FRITZ.Box_6690_Cable-atomp7-08.03.tar.gz)
     - [source-files-FRITZ.Box_6690_Cable-atomp7-08.21.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6690-cable/source-files-FRITZ.Box_6690_Cable-atomp7-08.21.tar.gz)
     - [source-files-FRITZ.Box_6690_Cable-atomp7-08.25.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6690-cable/source-files-FRITZ.Box_6690_Cable-atomp7-08.25.tar.gz)
+  * fritzbox-6690-pro/
+    - [source-files-FRITZ.Box_6690_Pro-armp7-08.26.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6690-pro/source-files-FRITZ.Box_6690_Pro-armp7-08.26.tar.gz)
+    - [source-files-FRITZ.Box_6690_Pro-atomp7-08.26.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6690-pro/source-files-FRITZ.Box_6690_Pro-atomp7-08.26.tar.gz)
   * fritzbox-6810-lte/
     - [fritz_box_6810_source_files.06.21.tar.gz](https://osp.avm.de/fritzbox/fritzbox-6810-lte/fritz_box_6810_source_files.06.21.tar.gz)
   * fritzbox-6820-lte/
