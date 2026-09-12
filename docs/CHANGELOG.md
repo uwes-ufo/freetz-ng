@@ -167,7 +167,7 @@ Latest changes
     * Tor 0.4.8.25/0.4.9.12
     * Transmission 3.00/4.1.3
     * Tree 1.8.0/2.3.2
-    * uMurmur 0.2.20/0.4.1
+    * uMurmur 0.2.20/0.5.0
     * Unbound 1.26.0
     * UnRAR 6.1.7/7.2.5
     * Virtualip-NG 1.0
