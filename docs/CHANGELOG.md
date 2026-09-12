@@ -189,7 +189,7 @@ Latest changes
     * libevent 2.1.13
     * libexif 0.6.26
     * libffi 3.8.0
-    * libmaxminddb 1.13.3
+    * libmaxminddb 1.14.0
     * libpcap 1.1.1/1.10.7
     * libpng 1.6.58
     * libusb(-compat) 0.1.12/0.1.9
