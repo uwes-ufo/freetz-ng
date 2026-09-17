@@ -101,6 +101,7 @@ Latest changes
 
   - AVM sources:
     * 5690 XGS 8.25 - 5.4.293
+    * 6850 5G  8.25 - 4.4.271
 
   - Scripts:
     * zensical_httpserver.sh - run local zensical http server to develop docs
