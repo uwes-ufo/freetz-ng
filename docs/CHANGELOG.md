@@ -127,7 +127,7 @@ Latest changes
     * Dropbear 2026.94
     * dtc 1.8.1
     * file 5.48
-    * Fontconfig 2.18.3
+    * Fontconfig 2.17.1/2.18.3
     * Git 2.26.2/2.55.0
     * HAProxy 2.6.29
     * htop 1.0.3/3.5.3
