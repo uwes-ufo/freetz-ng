@@ -200,7 +200,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[FFmpeg 5.1.4/7.1.1](ffmpeg.md)<a id='ffmpeg'></a>**<br>
     FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video.
 
-  * **[Fontconfig 2.17.1 (binary only)](fontconfig.md)<a id='fontconfig'></a>**<br>
+  * **[Fontconfig 2.17.1/2.18.3 (binary only)](fontconfig.md)<a id='fontconfig'></a>**<br>
     Fontconfig is a library for configuring and customizing font access. This package adds /etc/fontsfonts.conf
 
   * **[fortune 1.2 - DEPRECATED](fortune.md)<a id='fortune'></a>**<br>
@@ -682,7 +682,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Streamripper 1.64.6 - DEPRECATED](streamripper.md)<a id='streamripper'></a>**<br>
     Streamripper records mp3 and ogg streams. For shoutcast style streams it finds the "meta data" or track separation data, and uses that as a marker for where the track should be separated.
 
-  * **[Stunnel 5.80](stunnel.md)<a id='stunnel'></a>**<br>
+  * **[Stunnel 5.82](stunnel.md)<a id='stunnel'></a>**<br>
     Stunnel universal SSL proxy
 
   * **[Subversion 1.9.12/1.14.5](subversion.md)<a id='subversion'></a>**<br>
@@ -748,10 +748,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>udpxy 1.0.23-9 (binary only) - DEPRECATED</u><a id='udpxy'></a>**<br>
     Small-footprint UNIX/Linux daemon to relay multicast UDP traffic to client's TCP (HTTP) connection.
 
-  * **[uMurmur 0.2.20/0.5.0](umurmur.md)<a id='umurmur'></a>**<br>
+  * **[uMurmur 0.2.20/0.5.1](umurmur.md)<a id='umurmur'></a>**<br>
     umurmur is a minimalistic Mumble server primarily targeted to run on routers using less resources. It targets to fill the needs of a pretty small group of users communicating, which in part originates from the other goal of working well on a small system with a limited CPU and limited amount of disk space. It also aims to minimize writing to the disk since these kinds of systems usually only has a flash memory for disk. umurmur supports a subset of the features of Murmur. https://github.com/umurmur/umurmur
 
-  * **[Unbound 1.26.0](unbound.md)<a id='unbound'></a>**<br>
+  * **[Unbound 1.26.1](unbound.md)<a id='unbound'></a>**<br>
     Unbound is designed as a set of modular components, so that also DNSSEC (secure DNS) validation and stub-resolvers (that do not run as a server, but are linked into an application) are easily possible.
 
   * **[UNFS3 0.9.23 - DEPRECATED](unfs3.md)<a id='unfs3'></a>**<br>

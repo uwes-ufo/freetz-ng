@@ -101,6 +101,7 @@ Latest changes
 
   - AVM sources:
     * 5690 XGS 8.25 - 5.4.293
+    * 6850 5G  8.25 - 4.4.271
 
   - Scripts:
     * zensical_httpserver.sh - run local zensical http server to develop docs
@@ -126,6 +127,7 @@ Latest changes
     * Dropbear 2026.94
     * dtc 1.8.1
     * file 5.48
+    * Fontconfig 2.17.1/2.18.3
     * Git 2.26.2/2.55.0
     * HAProxy 2.6.29
     * htop 1.0.3/3.5.3
@@ -159,7 +161,7 @@ Latest changes
     * Smartmontools 7.2/7.5
     * sslh 2.2.4/2.3.1
     * strace 4.9/5.0/7.2
-    * Stunnel 5.80
+    * Stunnel 5.82
     * SQLite 3.40.1/3.53.4
     * tinc 1.0.37/1.1pre18
     * Tinyproxy 1.11.3
@@ -167,8 +169,8 @@ Latest changes
     * Tor 0.4.8.25/0.4.9.12
     * Transmission 3.00/4.1.3
     * Tree 1.8.0/2.3.2
-    * uMurmur 0.2.20/0.5.0
-    * Unbound 1.26.0
+    * uMurmur 0.2.20/0.5.1
+    * Unbound 1.26.1
     * UnRAR 6.1.7/7.2.5
     * Virtualip-NG 1.0
     * wireguard-tools 1.0.20260223
@@ -189,7 +191,7 @@ Latest changes
     * libevent 2.1.13
     * libexif 0.6.26
     * libffi 3.8.0
-    * libmaxminddb 1.14.0
+    * libmaxminddb 1.14.1
     * libpcap 1.1.1/1.10.7
     * libpng 1.6.58
     * libusb(-compat) 0.1.12/0.1.9
