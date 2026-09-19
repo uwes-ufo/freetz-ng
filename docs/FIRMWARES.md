@@ -252,6 +252,8 @@ Currently supported devices and firmwares
 
   * __Fritz!Box 6825 4G (UNTESTED)__
     - 306.08.25 rev134130 {ALL} [Smart24 P2 NL1]
+  * __Fritz!Box 6835 5G (UNTESTED)__
+    - 313.08.40 rev136299 {ALL} [MyFRITZOS P1] (Inhaus)
 
   * __Fritz!Box 6840 LTE__
     - 105.06.30 rev31187 {GER}
