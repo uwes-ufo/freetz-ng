@@ -321,7 +321,7 @@
 </tbody></table>
 </details>
 
-<details><summary>136 verschiedene Geräte</summary>
+<details><summary>137 verschiedene Geräte</summary>
 
 <table>
 <caption style='background-color:gray'>T-Com (2)</caption>
@@ -405,7 +405,7 @@
 <tr><td>6690 Pro</td><td>FREETZ_TYPE_6690_PRO</td></tr>
 </tbody></table>
 <table>
-<caption style='background-color:gray'>LTE/4G/5G (15)</caption>
+<caption style='background-color:gray'>LTE/4G/5G (16)</caption>
 <thead><tr><th style='width:450px'>Name</th><th style='width:300px'>Symbol</th></tr></thead>
 <tbody>
 <tr><td>6810</td><td>FREETZ_TYPE_6810</td></tr>
@@ -414,6 +414,7 @@
 <tr><td>6820 v3</td><td>FREETZ_TYPE_6820_V3</td></tr>
 <tr><td>6820 v4</td><td>FREETZ_TYPE_6820_V4</td></tr>
 <tr><td>6825 4G</td><td>FREETZ_TYPE_6825</td></tr>
+<tr><td>6835 5G</td><td>FREETZ_TYPE_6835</td></tr>
 <tr><td>6840</td><td>FREETZ_TYPE_6840</td></tr>
 <tr><td>6842</td><td>FREETZ_TYPE_6842</td></tr>
 <tr><td>6850 LTE</td><td>FREETZ_TYPE_6850_4G_V1</td></tr>
@@ -521,7 +522,7 @@
 </tbody></table>
 </details>
 
-<details><summary>413 verschiedene Images</summary>
+<details><summary>414 verschiedene Images</summary>
 
 <table>
 <caption style='background-color:gray'>&nbsp;</caption>
@@ -738,6 +739,7 @@
 <tr><td>FRITZ.Box_6820v3_LTE-07.59.image</td><td>FREETZ_TYPE_6820_V3 &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_07_5X</td></tr>
 <tr><td>FRITZ.Box_6820v4_LTE-07.59.image</td><td>FREETZ_TYPE_6820_V4 &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_07_5X</td></tr>
 <tr><td>FRITZ.Box_6825_4G-08.25.image</td><td>FREETZ_TYPE_6825 &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_08_2X</td></tr>
+<tr><td>FRITZ.Box_6835_5G-08.40-136299-Inhaus.image</td><td>FREETZ_TYPE_6835 &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_08_5X</td></tr>
 <tr><td>FRITZ.Box_6840_LTE.105.06.30.image</td><td>FREETZ_TYPE_6840 &amp;&amp;<br> FREETZ_TYPE_LANG_DE &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_06_2X</td></tr>
 <tr><td>FRITZ.Box_6840_LTE.105.06.50.image</td><td>FREETZ_TYPE_6840 &amp;&amp;<br> FREETZ_TYPE_LANG_DE &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_06_5X</td></tr>
 <tr><td>FRITZ.Box_6840_LTE.105.06.88.image</td><td>FREETZ_TYPE_6840 &amp;&amp;<br> FREETZ_TYPE_LANG_DE &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_06_8X</td></tr>
