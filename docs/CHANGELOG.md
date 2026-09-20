@@ -181,6 +181,7 @@ Latest changes
   - Libraries:
     * expat 2.7.5/2.8.4
     * FreeType 2.14.3
+    * fribidi 1.0.17
     * gettext 1.0
     * GLib2 2.32.4/2.88.3
     * harfbuzz 14.4.0
