@@ -151,7 +151,7 @@ Latest changes
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.8
     * OpenVPN 2.4.12/2.5.11/2.6.22/2.7.7
     * PatchELF 0.19.1
-    * PCSC-lite 1.9.5/2.5.1
+    * PCSC-lite 1.9.5/2.5.2
     * PHP 5.6.40/8.2.33/8.3.33/8.4.25/8.5.10
     * procps-ng 4.0.6
     * Python 3.14.3
