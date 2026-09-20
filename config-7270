@@ -1000,6 +1000,7 @@ FREETZ_LIB_libgcc_s=y
 # Graphics & fonts -----------------------
 #
 # FREETZ_LIB_libfontconfig is not set
+FREETZ_LIB_libfontconfig_WITH_VERSION_ABANDON=y
 # FREETZ_LIB_libfreetype is not set
 # FREETZ_LIB_libjpeg is not set
 # FREETZ_LIB_liblept is not set
