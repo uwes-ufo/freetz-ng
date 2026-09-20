@@ -95,6 +95,7 @@ FREETZ_SERIES_3=y
 # FREETZ_TYPE_6820_V3 is not set
 # FREETZ_TYPE_6820_V4 is not set
 # FREETZ_TYPE_6825 is not set
+# FREETZ_TYPE_6835 is not set
 # FREETZ_TYPE_6840 is not set
 # FREETZ_TYPE_6842 is not set
 # FREETZ_TYPE_6850_4G_V1 is not set
@@ -1231,6 +1232,7 @@ FREETZ_LIB_libgcc_s=y
 #
 # FREETZ_LIB_libcairo is not set
 # FREETZ_LIB_libfontconfig is not set
+FREETZ_LIB_libfontconfig_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libfreetype is not set
 # FREETZ_LIB_libharfbuzz is not set
 # FREETZ_LIB_libjpeg is not set
