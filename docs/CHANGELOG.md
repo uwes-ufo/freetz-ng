@@ -194,6 +194,7 @@ Latest changes
     * libmaxminddb 1.14.1
     * libpcap 1.1.1/1.10.7
     * libpng 1.6.58
+    * libtirpc 1.3.8
     * libusb(-compat) 0.1.12/0.1.9
     * libusb1 1.0.23/1.0.30
     * libuv 1.44.2/1.52.1
