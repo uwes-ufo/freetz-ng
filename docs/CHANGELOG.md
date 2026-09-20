@@ -185,7 +185,7 @@ Latest changes
     * GLib2 2.32.4/2.88.3
     * harfbuzz 14.4.0
     * libcap 2.49/2.78
-    * libcap-ng 0.9.3
+    * libcap-ng 0.9.6
     * libcjson 1.7.19
     * libdeflate 1.26
     * libevent 2.1.13
