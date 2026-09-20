@@ -47,7 +47,7 @@ $(pkg)-precompiled: $($(PKG)_TARGET_BINARY)
 
 $(pkg)-clean:
 	-$(SUBMAKE) -C $(FRIBIDI_DIR) clean
-	$(RM) \
+	$(RM) -r \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libfribidi.* \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/fribidi/ \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/pkgconfig/fribidi.pc \
