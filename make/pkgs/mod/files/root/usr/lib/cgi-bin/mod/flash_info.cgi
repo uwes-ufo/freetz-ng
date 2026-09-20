@@ -33,6 +33,32 @@ echo "</dl>"
 sec_end
 
 
+if test -f /proc/avm_partitions; then
+sec_begin "$(lang de:"AVM-Partitions" en:"AVM partitions")"
+echo "<dl class='info'>"
+echo "<pre class='log.unlimited'>"
+(
+echo "     Device          Bytes         Size     Name"
+echo "====================================================================="
+
+sed -n 's/_SIZE=.*//p' /proc/avm_partitions | while read line; do
+part="$(sed -n "s/^${line}=//p" /proc/avm_partitions)"
+size="$(sed -n "s/^${line}_SIZE=//p" /proc/avm_partitions)"
+
+kb="$(( $size /1024 ))"
+mb="$(( $size /1024/1024 ))"
+[ $kb -lt 1024 ] && xb="$kb KB" || xb="$mb MB"
+while [ ${#xb} -lt 7 ]; do xb=" $xb"; done
+
+echo "$part:    $size    $xb    $line"
+done
+) | html
+echo '</pre>'
+echo "</dl>"
+sec_end
+fi
+
+
 sec_begin "$(lang de:"Dateisysteme" en:"Filesystems")"
 echo "<dl class='info'>"
 echo "<pre class='log.unlimited'>"
