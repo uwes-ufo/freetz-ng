@@ -25,7 +25,7 @@ r="$(mlen 3 '0' ${r:-$y} )";
 l="$(echo "$y" | sed -n 's/...$//p')";
 
 l="$(mlen 5 ' ' ${l:-0} )";
-echo "$a   $b  $x KB  ${l:-x},${r:-0} MB   ${d//\"/}";
+echo "$a   $b  $x kB  ${l:-x},${r:-0} MB   ${d//\"/}";
 done
 ) | html
 echo '</pre>'
