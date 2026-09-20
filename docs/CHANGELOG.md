@@ -158,6 +158,7 @@ Latest changes
     * RRDtool 1.2.30/1.11.0
     * radvd 1.9.3/2.21
     * rsync 3.4.1/3.5.0
+    * Screen 4.9.1/5.0.2
     * Smartmontools 7.2/7.5
     * sslh 2.2.4/2.3.1
     * strace 4.9/5.0/7.2
