@@ -47,7 +47,7 @@ size="$(sed -n "s/^${line}_SIZE=//p" /proc/avm_partitions)"
 
 kb="$(( $size /1024 ))"
 mb="$(( $size /1024/1024 ))"
-[ $kb -lt 1024 ] && xb="$kb KB" || xb="$mb MB"
+[ $kb -lt 1024 ] && xb="$kb kB" || xb="$mb MB"
 while [ ${#xb} -lt 7 ]; do xb=" $xb"; done
 
 echo "$part:    $size    $xb    $line"
