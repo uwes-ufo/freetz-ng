@@ -143,6 +143,7 @@ Latest changes
     * Lighttpd 1.4.85
     * ltrace 0.7.3-git/0.8.1
     * Lua 5.1.5/5.4.9
+    * Lynx 2.9.3
     * mini-snmpd 1.7/2.1
     * Minicom 2.11.1
     * Mosquitto 2.0.23/2.1.2
