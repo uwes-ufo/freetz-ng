@@ -129,7 +129,7 @@ Latest changes
     * file 5.48
     * Fontconfig 2.17.1/2.18.3
     * Git 2.26.2/2.55.0
-    * HAProxy 2.6.29
+    * HAProxy 2.6.33
     * htop 1.0.3/3.5.3
     * htpdate 2.0.2
     * ImageMagick 7.1.0-62/7.1.2-31
