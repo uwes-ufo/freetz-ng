@@ -112,7 +112,7 @@ Latest changes
     * Still are some patches not yet adapted for Fritzos 8.2x + 8.5x
 
   - Packages:
-    * ACME.sh 3.1.4
+    * ACME.sh 3.1.6
     * Apache2 2.4.68
     * Atop 2.13.0
     * Bftpd 6.6
