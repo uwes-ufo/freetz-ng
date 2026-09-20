@@ -134,11 +134,11 @@ Latest changes
     * htpdate 2.0.2
     * ImageMagick 7.1.0-62/7.1.2-31
     * iPerf3 3.3/3.21
+    * Iptables 1.4.11.1/1.4.21/1.6.2/1.8.13
     * jq 1.8.2
     * juis_bearer 1.0
     * juis_check 1.4
     * LCD4linux 63fffafb
-    * Iptables 1.4.11.1/1.4.21/1.6.2/1.8.13
     * ldd 0.1/1.0.59
     * Lighttpd 1.4.85
     * ltrace 0.7.3-git/0.8.1
