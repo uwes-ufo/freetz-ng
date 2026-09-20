@@ -5,7 +5,6 @@ $(PKG)_HASH_ABANDON:=9f5cae93f4fffc1fbc05ae99cdfc708cd60dfd6612ffc0512827025c026
 $(PKG)_HASH_CURRENT:=4f7b554a38cdf78c033f666c8871f3749e14a094f65a07f630c91ed0b43d35e3
 $(PKG)_HASH:=$($(PKG)_HASH_$(if $(FREETZ_PACKAGE_FONTCONFIG_VERSION_ABANDON),ABANDON,CURRENT))
 $(PKG)_SITE:=https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/$(pkg)/$($(PKG)_VERSION)
-### VERSION:=2.17.1/2.18.3
 ### WEBSITE:=https://www.freedesktop.org/wiki/Software/fontconfig/
 ### CHANGES:=https://gitlab.freedesktop.org/fontconfig/fontconfig/tags
 ### CVSREPO:=https://gitlab.freedesktop.org/fontconfig/fontconfig
