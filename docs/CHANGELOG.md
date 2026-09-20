@@ -185,7 +185,7 @@ Latest changes
     * fribidi 1.0.17
     * gettext 1.0
     * GLib2 2.32.4/2.90.0
-    * harfbuzz 14.4.0
+    * harfbuzz 14.5.0
     * libcap 2.49/2.78
     * libcap-ng 0.9.6
     * libcjson 1.7.19
