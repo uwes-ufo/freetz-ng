@@ -160,6 +160,7 @@ Latest changes
     * rsync 3.4.1/3.5.0
     * Screen 4.9.1/5.0.2
     * Smartmontools 7.2/7.5
+    * socat 1.8.1.3
     * sslh 2.2.4/2.3.1
     * strace 4.9/5.0/7.2
     * Stunnel 5.82
