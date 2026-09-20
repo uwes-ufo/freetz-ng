@@ -136,8 +136,8 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - MHW 06.03: [06.03.04.92.avm.de.upd](http://download.avm.de/dect/0603/move21/06.03.04.92.avm.de.upd)
   - MHW 06.04: [06.04.03.50.avm.de.upd](http://download.avm.de/dect/0604/p15/06.04.03.50.avm.de.upd)
   - MHW 06.05: [06.05.04.85.avm.de.upd](http://download.avm.de/dect/0605/iq17/06.05.04.85.avm.de.upd)
-  - MHW 06.06: [06.06.05.23.avm.de.upd](http://download.avm.de/dect/0606/Smart24P2/06.06.05.23.avm.de.upd)
-  - MHW 06.07: [06.07.05.23.avm.de.upd](http://download.avm.de/dect/0607/Smart24P2/06.07.05.23.avm.de.upd)
+  - MHW 06.06: [06.06.05.34.avm.de.upd](http://download.avm.de/dect/0606/FW_05.34/06.06.05.34.avm.de.upd)
+  - MHW 06.07: [06.07.05.34.avm.de.upd](http://download.avm.de/dect/0607/FW_05.34/06.07.05.34.avm.de.upd)
   - MHW 06.08: [06.08.04.93.avm.de.upd](http://download.avm.de/dect/0608/naut_test/06.08.04.93.avm.de.upd)
   - MHW 06.10: [06.10.04.90.avm.de.upd](http://download.avm.de/dect/0610/06.10.04.90.avm.de.upd)
   - MHW 06.12: [06.12.05.45.avm.de.upd](http://download.avm.de/dect/0612/FW_05.45/06.12.05.45.avm.de.upd)
@@ -157,8 +157,6 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
 
 ### Dect-Labor
   - MHW 06.04: [06.04.03.54.avm.de.upd](http://download.avm.de/dect/0604/p15/06.04.03.54.avm.de.upd)
-  - MHW 06.06: [06.06.05.34.avm.de.upd](http://download.avm.de/dect/0606/FW_05.34/06.06.05.34.avm.de.upd)
-  - MHW 06.07: [06.07.05.34.avm.de.upd](http://download.avm.de/dect/0607/FW_05.34/06.07.05.34.avm.de.upd)
   - MHW 08.01: [08.01.05.11.avm.de.upd](http://download.avm.de/dect/0801/smart24p1/08.01.05.11.avm.de.upd)
   - MHW 08.02: [08.02.05.11.avm.de.upd](http://download.avm.de/dect/0802/smart24p1/08.02.05.11.avm.de.upd)
   - MHW 08.03: [08.03.05.12.avm.de.upd](http://download.avm.de/dect/0803/smart24p1/08.03.05.12.avm.de.upd)
