@@ -69,9 +69,9 @@ Latest changes
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.59
 
   - Host tools:
+    * autoconf 2.73
     * automake 1.19
     * busybox 1.38.0
-    * autoconf 2.73
     * ca-bundle 2026-08-13
     * cmake 4.4.3
     * config 4286648
