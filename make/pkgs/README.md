@@ -110,7 +110,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Callmonitor 1.20.9-git](../../docs/make/callmonitor.md)<a id='callmonitor'></a>**<br>
     Callmonitor enables you to perform arbitrary actions upon incoming calls on your AVM Fritz!Box (e.g., to send notifications to your favorite set-top box, to wake up your PC, or to send you a mail when you have missed a call).
 
-  * **[CCID 1.8.2](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
+  * **[CCID 1.8.4](../../docs/make/ccid.md)<a id='ccid'></a>**<br>
     ccid provides the source code for a generic USB CCID (Chip/Smart Card Interface Devices) driver and ICCD (Integrated Circuit(s) Card Devices).
 
   * **[Checkmaild 0.4.7 - DEPRECATED](../../docs/make/checkmaild.md)<a id='checkmaild'></a>**<br>
@@ -464,10 +464,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Geoblocking](../../docs/make/lighttpd.md#geoblocking)
      - [Links](../../docs/make/lighttpd.md#links)
 
-  * **[Lua 5.1.5/5.4.8 (binary only)](../../docs/make/lua.md)<a id='lua'></a>**<br>
+  * **[Lua 5.1.5/5.4.9 (binary only)](../../docs/make/lua.md)<a id='lua'></a>**<br>
     Lua Scripting Language. Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. Lua combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode with a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
-  * **[Lynx 2.9.2 (binary only)](../../docs/make/lynx.md)<a id='lynx'></a>**<br>
+  * **[Lynx 2.9.3 (binary only)](../../docs/make/lynx.md)<a id='lynx'></a>**<br>
     Lynx text mode web browser Lynx is a fully-featured World Wide Web (WWW) client for users running cursor-addressable, character-cell display devices (e.g., vt100 terminals, vt100 emulators running on PCs or Macs, or any other character-cell display). It will display HTML documents containing links to files on the local system, as well as files on remote systems running http, gopher, ftp, wais, nntp, finger, or cso/ph/qi servers, and services accessible via logins to telnet, tn3270 or rlogin accounts.
 
 ### M
@@ -651,7 +651,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[PCP client 1c783fb (binary only)](../../docs/make/pcp.md)<a id='pcp'></a>**<br>
     PCP client library implements client side of PCP (RFC 6887) and NATPMP (RFC 6886) protocols. Switch to NATPMP is done automatically by version negotiation. This library enables any network application to manage network edge device (e.g. to create NAT mapping or ask router for specific flow treatment).
 
-  * **[PCSC-lite 1.9.5/2.5.1 (binary only)](../../docs/make/pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
+  * **[PCSC-lite 1.9.5/2.5.2 (binary only)](../../docs/make/pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
     The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a very small form factor for communicating to smart cards and readers.
 
   * **<u>phonebook-tools: Phone book tools 1.0</u><a id='phonebook-tools'></a>**<br>
@@ -804,7 +804,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
      - [Einleitung](../../docs/make/rrdtool.md#einleitung)
      - [RRDstats](../../docs/make/rrdtool.md#rrdstats)
 
-  * **[rsync 3.4.1/3.5.0](../../docs/make/rsync.md)<a id='rsync'></a>**<br>
+  * **[rsync 3.4.1/3.5.1](../../docs/make/rsync.md)<a id='rsync'></a>**<br>
     rsync is an open source utility that provides fast incremental file transfer.
 
   * **<u>RTMPDump 2.4-git (binary only) - DEPRECATED</u><a id='rtmpdump'></a>**<br>

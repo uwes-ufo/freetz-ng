@@ -69,16 +69,17 @@ Latest changes
     * uClibc 0.9.28/0.9.29/0.9.32.1/0.9.33.2/1.0.14/1.0.59
 
   - Host tools:
-    * busybox 1.38.0
     * autoconf 2.73
+    * automake 1.19
+    * busybox 1.38.0
     * ca-bundle 2026-08-13
     * cmake 4.4.3
     * config 4286648
-    * dos2unix 7.5.6
+    * dos2unix 7.5.7
     * dtc 1.8.1
     * fakeroot 1.38.1/2.1.4
     * file 5.48
-    * genext2fs 1.6.2
+    * genext2fs 1.6.3
     * kconfig 7.2
     * libtool 2.6.2
     * lzma2 5.8.4
@@ -87,7 +88,7 @@ Latest changes
     * openssl 3.5.8
     * patchelf 0.14.5/0.19.1
     * patch 2.8
-    * pkgconf 3.0.1
+    * pkgconf 3.0.7
     * pseudo 1.9.11
     * python3 3.14.7
     * python3-attrs 26.1.0
@@ -120,7 +121,7 @@ Latest changes
     * Binutils 2.46.0
     * BusyBox 1.27.2/1.38.0
     * CA-bundle 2026-08-13
-    * CCID 1.8.2
+    * CCID 1.8.4
     * Curl 8.12.1/8.22.0
     * davfs2 1.5.2/1.7.3
     * Dnsmasq 2.80/2.93
@@ -142,6 +143,8 @@ Latest changes
     * ldd 0.1/1.0.59
     * Lighttpd 1.4.85
     * ltrace 0.7.3-git/0.8.1
+    * Lua 5.1.5/5.4.9
+    * Lynx 2.9.3
     * mini-snmpd 1.7/2.1
     * Minicom 2.11.1
     * Mosquitto 2.0.23/2.1.2
@@ -151,13 +154,13 @@ Latest changes
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.8
     * OpenVPN 2.4.12/2.5.11/2.6.22/2.7.7
     * PatchELF 0.19.1
-    * PCSC-lite 1.9.5/2.5.1
+    * PCSC-lite 1.9.5/2.5.2
     * PHP 5.6.40/8.2.33/8.3.33/8.4.25/8.5.10
     * procps-ng 4.0.6
     * Python 3.14.3
     * RRDtool 1.2.30/1.11.0
     * radvd 1.9.3/2.21
-    * rsync 3.4.1/3.5.0
+    * rsync 3.4.1/3.5.1
     * Screen 4.9.1/5.0.2
     * Smartmontools 7.2/7.5
     * socat 1.8.1.3

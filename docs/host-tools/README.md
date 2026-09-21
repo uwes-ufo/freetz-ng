@@ -6,7 +6,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[autoconf 2.73](autoconf-host.md)<a id='autoconf-host'></a>**<br>
 
-  * **[automake 1.18.1](automake-host.md)<a id='automake-host'></a>**<br>
+  * **[automake 1.19](automake-host.md)<a id='automake-host'></a>**<br>
 
   * **[avm-rle 1.0](avm-rle-host.md)<a id='avm-rle-host'></a>**<br>
 
@@ -26,7 +26,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### D
 
-  * **[dos2unix 7.5.6](dos2unix-host.md)<a id='dos2unix-host'></a>**<br>
+  * **[dos2unix 7.5.7](dos2unix-host.md)<a id='dos2unix-host'></a>**<br>
 
   * **[dtc 1.8.1](dtc-host.md)<a id='dtc-host'></a>**<br>
 
@@ -46,7 +46,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### G
 
-  * **[genext2fs 1.6.2](genext2fs-host.md)<a id='genext2fs-host'></a>**<br>
+  * **[genext2fs 1.6.3](genext2fs-host.md)<a id='genext2fs-host'></a>**<br>
 
   * **[gmp 6.3.0](gmp-host.md)<a id='gmp-host'></a>**<br>
 
@@ -104,7 +104,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[patch 2.8](patch-host.md)<a id='patch-host'></a>**<br>
 
-  * **[pkgconf 3.0.5](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
+  * **[pkgconf 3.0.7](pkgconf-host.md)<a id='pkgconf-host'></a>**<br>
 
   * **[prelink 20131005](prelink-host.md)<a id='prelink-host'></a>**<br>
 
@@ -152,7 +152,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2026-09-17](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2026-09-21](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
