@@ -160,7 +160,7 @@ Latest changes
     * Python 3.14.3
     * RRDtool 1.2.30/1.11.0
     * radvd 1.9.3/2.21
-    * rsync 3.4.1/3.5.0
+    * rsync 3.4.1/3.5.1
     * Screen 4.9.1/5.0.2
     * Smartmontools 7.2/7.5
     * socat 1.8.1.3
