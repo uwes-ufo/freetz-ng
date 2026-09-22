@@ -185,7 +185,7 @@ Latest changes
 
   - Libraries:
     * cairo 1.18.6
-    * expat 2.7.5/2.8.4
+    * expat 2.7.5/2.8.5
     * FreeType 2.14.3
     * fribidi 1.0.17
     * gettext 1.0
