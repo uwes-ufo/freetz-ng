@@ -83,7 +83,7 @@ Latest changes
     * kconfig 7.2
     * libtool 2.6.2
     * lzma2 5.8.4
-    * meson 1.12.0
+    * meson 1.12.1
     * mklibs 0.1.46
     * openssl 3.5.8
     * patchelf 0.14.5/0.19.1
