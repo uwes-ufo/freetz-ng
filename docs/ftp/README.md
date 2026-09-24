@@ -277,14 +277,14 @@ Content: [FritzBox](#fritzbox) - [FritzPowerline](#fritzpowerline) - [FritzSmart
     - deutschland: [FRITZ.Repeater_1610_Outdoor-08.25.image](https://download.avm.de/fritzwlan/fritzrepeater-1610-outdoor/deutschland/fritz.os/FRITZ.Repeater_1610_Outdoor-08.25.image)
     - other: [FRITZ.Repeater_1610_Outdoor-08.25.image](https://download.avm.de/fritzwlan/fritzrepeater-1610-outdoor/other/fritz.os/FRITZ.Repeater_1610_Outdoor-08.25.image)
   * fritzrepeater-1700/
-    - deutschland: [FRITZ.Repeater_1700-08.07.image](https://download.avm.de/fritzwlan/fritzrepeater-1700/deutschland/fritz.os/FRITZ.Repeater_1700-08.07.image)
-    - other: [FRITZ.Repeater_1700-08.07.image](https://download.avm.de/fritzwlan/fritzrepeater-1700/other/fritz.os/FRITZ.Repeater_1700-08.07.image)
+    - deutschland: [FRITZ.Repeater_1700-08.26.image](https://download.avm.de/fritzwlan/fritzrepeater-1700/deutschland/fritz.os/FRITZ.Repeater_1700-08.26.image)
+    - other: [FRITZ.Repeater_1700-08.26.image](https://download.avm.de/fritzwlan/fritzrepeater-1700/other/fritz.os/FRITZ.Repeater_1700-08.26.image)
   * fritzrepeater-2400/
     - deutschland: [FRITZ.Repeater_2400-08.25.image](https://download.avm.de/fritzwlan/fritzrepeater-2400/deutschland/fritz.os/FRITZ.Repeater_2400-08.25.image)
     - other: [FRITZ.Repeater_2400-08.25.image](https://download.avm.de/fritzwlan/fritzrepeater-2400/other/fritz.os/FRITZ.Repeater_2400-08.25.image)
   * fritzrepeater-2700/
-    - deutschland: [FRITZ.Repeater_2700-08.07.image](https://download.avm.de/fritzwlan/fritzrepeater-2700/deutschland/fritz.os/FRITZ.Repeater_2700-08.07.image)
-    - other: [FRITZ.Repeater_2700-08.07.image](https://download.avm.de/fritzwlan/fritzrepeater-2700/other/fritz.os/FRITZ.Repeater_2700-08.07.image)
+    - deutschland: [FRITZ.Repeater_2700-08.26.image](https://download.avm.de/fritzwlan/fritzrepeater-2700/deutschland/fritz.os/FRITZ.Repeater_2700-08.26.image)
+    - other: [FRITZ.Repeater_2700-08.26.image](https://download.avm.de/fritzwlan/fritzrepeater-2700/other/fritz.os/FRITZ.Repeater_2700-08.26.image)
   * fritzrepeater-3000/
     - deutschland: [FRITZ.Repeater_3000-08.25.image](https://download.avm.de/fritzwlan/fritzrepeater-3000/deutschland/fritz.os/FRITZ.Repeater_3000-08.25.image)
     - other: [FRITZ.Repeater_3000-08.25.image](https://download.avm.de/fritzwlan/fritzrepeater-3000/other/fritz.os/FRITZ.Repeater_3000-08.25.image)
