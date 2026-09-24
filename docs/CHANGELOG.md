@@ -171,7 +171,7 @@ Latest changes
     * tinc 1.0.37/1.1pre18
     * Tinyproxy 1.11.3
     * tmux 3.7c
-    * Tor 0.4.8.25/0.4.9.12
+    * Tor 0.4.8.25/0.4.9.13
     * Transmission 3.00/4.1.3
     * Tree 1.8.0/2.3.2
     * uMurmur 0.2.20/0.5.1
@@ -205,7 +205,7 @@ Latest changes
     * libtirpc 1.3.8
     * libusb(-compat) 0.1.12/0.1.9
     * libusb1 1.0.23/1.0.30
-    * libuv 1.44.2/1.52.1
+    * libuv 1.44.2/1.53.0
     * libxml2 2.15.4
     * libzip 1.11.4
     * MbedTLS 2.7.19/2.28.10/3.6.7
