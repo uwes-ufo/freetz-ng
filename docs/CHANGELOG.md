@@ -72,7 +72,7 @@ Latest changes
     * autoconf 2.73
     * automake 1.19
     * busybox 1.38.0
-    * ca-bundle 2026-08-13
+    * ca-bundle 2026-09-25
     * cmake 4.4.3
     * config 4286648
     * dos2unix 7.5.7
@@ -120,7 +120,7 @@ Latest changes
     * BIND 9.11.37/9.20.29
     * Binutils 2.46.0
     * BusyBox 1.27.2/1.38.0
-    * CA-bundle 2026-08-13
+    * CA-bundle 2026-09-25
     * CCID 1.8.4
     * Curl 8.12.1/8.22.0
     * davfs2 1.5.2/1.7.3
