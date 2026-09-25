@@ -4,6 +4,7 @@ Latest changes
 
   - Freetz-NG
     * [devel](#devel)
+    * [ng26090](#ng26090)
     * [ng26020](#ng26020)
     * [ng25090](#ng25090)
     * [ng25030](#ng25030)
@@ -62,6 +63,11 @@ Latest changes
 <br>
 
 ### devel
+
+  - Firmware updates:
+    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+
+### ng26090
 
   - Build system:
     * ccache 4.14
@@ -216,7 +222,7 @@ Latest changes
     * pcre2 10.48
 
   - Firmware updates:
-    * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
+    * Please see [FIRMWARES](https://github.com/Freetz-NG/freetz-ng/blob/ng26090/docs/FIRMWARES.md) for the list of supported devices and firmwares.
 
 ### ng26020
 

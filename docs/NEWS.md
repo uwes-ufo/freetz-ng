@@ -1,5 +1,11 @@
 # Neuigkeiten
 
+### 2026-09-25
+Es wurde ein neuer [Tag](https://github.com/Freetz-NG/freetz-ng/tags) `ng26090` erstellt.<br>
+Ein Tag sollte wie in der [README](https://github.com/Freetz-NG/freetz-ng#or-clone-a-single-tag) beschrieben mit git ausgecheckt werden.<br>
+
+  - Siehe [ng26090](https://github.com/Freetz-NG/freetz-ng/releases/tag/ng26090)<br>
+
 ### 2026-08-26
 Riesen Update bei AVM.<br>
 Es war scheinbar kein Fehler dass vor 2 Wochen eine via AVM-Juis ausgelieferte URL zu einem Firmware-Image als http**S**-URL ausgeliefert wurde.
