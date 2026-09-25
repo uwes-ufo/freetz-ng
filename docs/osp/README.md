@@ -37,6 +37,8 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
     - [fritz box wlan 3270v3 source files 05.05.tar.gz](https://osp.avm.de/fritzbox/fritzbox-3270-v3/fritz%20box%20wlan%203270v3%20source%20files%2005.05.tar.gz)
     - [fritz box wlan 3270v3 source files 05.21.tar.gz](https://osp.avm.de/fritzbox/fritzbox-3270-v3/fritz%20box%20wlan%203270v3%20source%20files%2005.21.tar.gz)
     - [fritz box wlan 3270v3 source files 05.50.tar.gz](https://osp.avm.de/fritzbox/fritzbox-3270-v3/fritz%20box%20wlan%203270v3%20source%20files%2005.50.tar.gz)
+  * fritzbox-3272/
+    - [source-files-FRITZ.Box_3272-06.88.tar.gz](https://osp.avm.de/fritzbox/fritzbox-3272/source-files-FRITZ.Box_3272-06.88.tar.gz)
   * fritzbox-3370/
     - [fritz_box_wlan_3370_source_files.05.21.tar.gz](https://osp.avm.de/fritzbox/fritzbox-3370/fritz_box_wlan_3370_source_files.05.21.tar.gz)
     - [fritz_box_wlan_3370_source_files.05.50.tar.gz](https://osp.avm.de/fritzbox/fritzbox-3370/fritz_box_wlan_3370_source_files.05.50.tar.gz)
