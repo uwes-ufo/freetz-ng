@@ -64,6 +64,12 @@ Latest changes
 
 ### devel
 
+  - Host tools:
+
+  - Packages:
+
+  - Libraries:
+
   - Firmware updates:
     * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
 
