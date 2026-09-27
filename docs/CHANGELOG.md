@@ -64,6 +64,9 @@ Latest changes
 
 ### devel
 
+  - Build system:
+    * ccache 4.14.1
+
   - Host tools:
 
   - Packages:
