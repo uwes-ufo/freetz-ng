@@ -490,7 +490,7 @@ trap cleanup EXIT SIGTERM SIGINT
 usage() {
 cat << EOX
 
-Usage: $0 [image] [ -f ] [ -w ] [ -ip <ip> ] [ -map <hex> ] [ -ali <kb> ] [ -mem <mb> ] [ -lfs <0|1|9> ] [ -prg <ftp|ncftp> ] [ -hn ]
+Usage: $0 [image] [ -f ] [ -w ] [ -ip <ip> ] [ -map <hex> ] [ -ali <kb> ] [ -mem <mb> ] [ -lfs <0|1|9> ] [ -cmd <ftp|ncftp> ] [ -hn ]
 
 [image]           When no 'image' file is given, images/latest.image will be tried.
 -f                Disable safety prompt, force instant flash.
@@ -506,8 +506,8 @@ Usage: $0 [image] [ -f ] [ -w ] [ -ip <ip> ] [ -map <hex> ] [ -ali <kb> ] [ -mem
 -lfs <0|1|9>      Not single- and fit-boot mode: Set linux_fs_start to 0 or 1 and flash this.
                     Without this parameter, the inactive linux_fs_start will be used.
                     Use '9' for the currently active linux_fs_start.
--afu              Only fit-boot: No avm_fwupdate, run system from ram without flash it.
--prg <ftp|ncftp>  Force the prefered usage of ncftp (buggy) or ftp command for upload.
+-afu              Only fit-boot: No avm_fwupdate, run system from ram without flash it. (DEVELOPER)
+-cmd <ftp|ncftp>  Force the prefered usage of ncftp (buggy) or ftp command for upload. (DEVELOPER)
 -hn               Only single-boot mode: Flash to an 'Alice/HanseNet' version of 7570.
 
 This scipt supports currently single-, ram-, dual-, uimg- and fit-boot modes, for more
@@ -526,6 +526,9 @@ exit 1
 # main
 while [ $# -ge 1 ]; do
 	case "$1" in
+		(-DEVELOPER)
+			ISDEVEL=true
+			;;
 		(-f|-force)
 			ISFORCE=true
 			;;
@@ -569,10 +572,9 @@ while [ $# -ge 1 ]; do
 			;;
 		(-afu)
 			NOAFU=true
-			shift
 			;;
-		(-prg)
-			[ "$2" != "ftp" -a "$2" != "ncftp" ] && echo "Invalid command value" && usage
+		(-cmd)
+			[ "$2" != "ftp" -a "$2" != "ncftp" ] && echo "Invalid value for '-cmd', use ftp or ncftp" && usage
 			CMD=$2
 			shift
 			;;
@@ -604,6 +606,7 @@ kernel_mtd5=""
 # environment
 [ "$FREETZ_FORCEPF" == "true" ] && ISFORCE=true
 [ "$FREETZ_WAITSPF" == "true" ] && ISWAITS=true
+[ "$FREETZ_DEVELPF" == "true" ] && ISDEVEL=true
 
 # file checks
 [ -z "$file" ] && [ -e images/latest.image ] && file="images/latest.image"
@@ -613,6 +616,9 @@ kernel_mtd5=""
 [ -e "$file" ] || { echo "No such file or directory: $file" ; exit 1; }
 [ -f "$file" ] || { echo "Not a file: $file"                ; exit 1; }
 [ -r "$file" ] || { echo "Access denied: $file"             ; exit 1; }
+
+#
+[ $ISDEVEL ] && echo -e " * Developer mode: \033[4mDO NOT ASK FOR SUPPORT\033[0m"
 
 # img detect
 PRODUCT="$(tar -Oxf "$file" ./var/content 2>/dev/null | sed -n 's/^Product=//p')"
@@ -649,6 +655,8 @@ fi
 [ ! -x "$(command -v dos2unix)" ]                && echo "Tool 'dos2unix' missing. Run 'make dos2unix-host' first."          && exit 1
 [ ! -x "$(command -v telnet)" ] && [ $ISALICE ]  && echo "Tool 'telnet' missing. Run 'make busybox-host' first."             && exit 1
 [ ! -x "$(command -v ftp)" ]                     && echo "Tool 'ftp' missing. Run 'make netkit-ftp-host' first."             && exit 1
+[ ! $ISDEVEL ]  && [ $NOAFU ]                    && echo "Don't use -afu! This is a DEVELOPER OPTION. You are NO DEVELOPER." && exit 1
+[ ! $ISDEVEL ]  && [ -n "$CMD" ]                 && echo "Don't use -cmd! This is a DEVELOPER OPTION. You are NO DEVELOPER." && exit 1
 
 prepare_image
 
@@ -729,7 +737,7 @@ if [ -n "$FOUND_NCFTP" -a -n "$FOUND_FTP" ]; then
 	[ $ISSINGLE ] && FOUND_FTP=""
 	[ $ISALICE ]  && FOUND_NCFTP=""
 fi
-[ -n "$FOUND_NCFTP" ] && UCMD="ncftpput" || UCMD="ftp"
+[ -n "$FOUND_NCFTP" ] && U_CMD="ncftpput" || U_CMD="ftp"
 
 # logging
 function relpath() {
@@ -740,7 +748,7 @@ function relpath() {
 [ -n "$PRODUCT" ] && echo " * Product: $PRODUCT"
 echo " * Using dos2unix binary: $(relpath dos2unix)"
 echo " * Using tar binary: $(relpath tar)"
-echo " * Using ftp binary: $(relpath $UCMD)"
+echo " * Using ftp binary: $(relpath $U_CMD)"
 echo " * Target host: $ip"
 echo " * Outgoing IP: $oa"
 
