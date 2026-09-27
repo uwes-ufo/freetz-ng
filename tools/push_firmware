@@ -117,12 +117,14 @@ function push_fw() {
 
 	wait_loader
 	read_env
-	for x in ProductID HWRevision HWSubRevision memsize linux_fs_start; do
+	for x in ProductID HWRevision HWSubRevision memsize linux_fs_start prompt; do
 		eval env_$x="\$(read_enval '$x')"
+		[ "$x" == "prompt" ] && continue
 		eval echo -e "\ \ \ $x:\ \ \ \ \ \\\t   \$env_$x"
 	done
 	echo
 	[ -z "$env_ProductID" ] && echo "You are not connected to the bootloader of the device." && exit 1
+	[ "$env_prompt" != "Eva_AVM" ] && echo "You are not connected to an Eva_AVM bootloader." && exit 1
 
 	local HWR_ENV="$( echo "$env_ProductID" | sed -nr 's/.*_HW(...).*/\1/p')"
 	local HWR_IMG="$( echo "$PRODUCT"       | sed -nr 's/.*_HW(...).*/\1/p')"
