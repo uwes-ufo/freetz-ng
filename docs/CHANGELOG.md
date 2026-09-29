@@ -72,6 +72,7 @@ Latest changes
   - Packages:
 
   - Libraries:
+    * pcre2 10.49
 
   - Firmware updates:
     * Please see [FIRMWARES](FIRMWARES.md) for the list of currently supported devices and firmwares.
