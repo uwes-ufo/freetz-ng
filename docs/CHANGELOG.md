@@ -68,8 +68,10 @@ Latest changes
     * ccache 4.14.1
 
   - Host tools:
+    * openssl 3.5.9
 
   - Packages:
+    * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
 
   - Libraries:
     * pcre2 10.49
