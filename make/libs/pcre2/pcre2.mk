@@ -1,6 +1,6 @@
 $(call PKG_INIT_LIB, 10.49)
 $(PKG)_LIB_VERSION:=0.16.1
-$(PKG)_POSIX_LIB_VERSION:=3.0.8
+$(PKG)_POSIX_LIB_VERSION:=3.0.9
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.bz2
 $(PKG)_HASH:=53c156e1ba416a20da8e65395daa132da0d80e76910424caca3fcdae7831d384
 $(PKG)_SITE:=https://github.com/PCRE2Project/pcre2/releases/download/pcre2-$($(PKG)_VERSION)
