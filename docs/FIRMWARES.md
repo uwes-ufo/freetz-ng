@@ -466,6 +466,7 @@ Currently supported devices and firmwares
     - 271.07.59 rev113715 {ALL} [MOVE21NL2]
     - 271.08.02 rev117988 {ALL} [Smart24 P1 NL1]
     - 271.08.26 rev134664 {ALL} [Smart24 P2 NL1]
+    - 271.08.40 rev136585 {ALL} [MyFRITZOS P1] (Inhaus)
   * __Fritz!Box Fon WLAN 7520__
     - 175.07.14 rev73182 {GER} [MESH18 NL4]
     - 175.07.29 rev92061 {ALL} [PSQ19P2NL4]
