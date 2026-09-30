@@ -139,7 +139,12 @@ if [ -x "$(which bootslotctl)" ]; then
 	else
 		SECB="$(cat $CACHE 2>/dev/null)"
 		if [ -z "$SECB" ]; then
-			[ "$FREETZ_AVM_PROP_INNER_FILESYSTEM_TYPE_CPIO" != "y" ] && fitmnt  # || TODO: cpio
+			DEAD="$(sed -rn 's/^(mtd)?(.*):.*"reserved-filesystem"$/\2/p' /proc/mtd)"
+			if [ -n "$DEAD" ]; then
+				resmnt
+			else
+				[ "$FREETZ_AVM_PROP_INNER_FILESYSTEM_TYPE_CPIO" != "y" ] && fitmnt  # || TODO: cpio
+			fi
 			SECB="$(imginfo $MNT | tee $CACHE)"
 		fi
 		resunm
