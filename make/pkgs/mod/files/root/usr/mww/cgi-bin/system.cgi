@@ -5,11 +5,11 @@
 
 stat_button() {
 	local CHECK=""
-	if [ "$1" == "reboot" ]; then
-		CHECK="onsubmit='return window.confirm(\"Reboot?\")'"
-	elif [ "$1" == "linux_fs_start" ] && [ -x "$(which bootslotctl)" ]; then
-		CHECK="onsubmit='return window.confirm(\"Toggle?\")'"
-	fi
+	case "$1" in
+		reboot)		CHECK="onsubmit='return window.confirm(\"Reboot?\")'" ;;
+		linux_fs_start)	CHECK="onsubmit='return window.confirm(\"Toggle?\")'" ;;
+		messagebox)	CHECK="onsubmit='alert(\"$3\"); return false'" ;;
+	esac
 	echo "<form action='/cgi-bin/exec.cgi/$1' $CHECK method='post'><p><input type='submit' value='$2'></p></form>"
 }
 
