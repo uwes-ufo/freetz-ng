@@ -93,6 +93,9 @@ function import_tgz() {
 	  HWR="$tgz" && 
 	  tgz="$CERT/$tgz.tgz"
 
+	# fallback
+	[ ! -f "$tgz" ] && [ -f "$PROC_CRT" ] && [ "$tgz" == "$(env_hwrevision)" ] && tgz="$PROC_CRT"
+
 	[ -f "$tgz" ] || errnex "Source file does not exist: $tgz"
 
 	if [ -z "$HWR" ]; then
