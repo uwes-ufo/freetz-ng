@@ -71,6 +71,7 @@ Latest changes
     * openssl 3.5.9
 
   - Packages:
+    * iPerf3 3.3/3.22
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
 
   - Libraries:
