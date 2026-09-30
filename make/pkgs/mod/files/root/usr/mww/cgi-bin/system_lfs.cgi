@@ -126,13 +126,13 @@ resunm() {
 	rm -rf $DUMPS
 }
 
-# SWITCHABLE="y"
+SWITCHABLE="linux_fs_start"
 if [ -x "$(which bootslotctl)" ]; then
 	. /bin/env.mod.rcconf avm  # CONFIG_ENVIRONMENT_PATH
 	LFS_LIVE="$(bootslotctl get_active)"
 	LFS_DEAD="$(bootslotctl get_other)"
 	NEXT="$LFS_LIVE"
-	[ "$LFS_LIVE" == "$LFS_DEAD" ] && LFS_LIVE="$(( ($LFS_LIVE+1) %2 ))"  # && SWITCHABLE="n"
+	[ "$LFS_LIVE" == "$LFS_DEAD" ] && LFS_LIVE="$(( ($LFS_LIVE+1) %2 ))" && SWITCHABLE="messagebox"
 	[ "$VISUALIZE" != "yes" ] || PRIB="$(imginfo /)"
 	if [ -x /usr/bin/bootmanager ]; then
 		SECB="$(fitinfo)"
@@ -184,8 +184,7 @@ cat << EOF | sed -r 's#(Running|Momentan| enabled| aktiviert)#<span class="succe
 <pre>$SECB</pre>
 EOF
 
-#	[ "$SWITCHABLE" != "n" ] && \
-	stat_button linux_fs_start "$(lang de:"Firmwarepartition wechseln" en:"Toggle firmware partition")"
+	stat_button "$SWITCHABLE" "$(lang de:"Firmwarepartition wechseln" en:"Toggle firmware partition")" "$(lang de:"Nicht verf&uuml;gbar" en:"Not available")"
 }
 [ "$VISUALIZE" != "yes" ] || visualize
 
