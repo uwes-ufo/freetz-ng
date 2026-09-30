@@ -3,6 +3,7 @@ skin_head() {
 	local hname="$(hostname -s|html)"
 	[ "$hname" != "fritz" ] && hname="&#64;${hname}&nbsp;" || hname=""
 	cat << EOF
+<meta name="color-scheme" content="dark">
 <title>Freetz&nbsp;${hname}&ndash; $title</title>
 <link rel="stylesheet" type="text/css" href="/style/cuma/base.css">
 <link rel="stylesheet" type="text/css" href="/style/colorscheme.css">
