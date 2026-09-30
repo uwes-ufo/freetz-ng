@@ -117,11 +117,11 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - HWR 261: [FRITZ.Box_4060-08.24-134026-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/4060/FRITZ.Box_4060-08.24-134026-Inhaus.image)
   - HWR 262: [FRITZ.Box_6850_LTE-08.40-136576-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/6850LTE/FRITZ.Box_6850_LTE-08.40-136576-Inhaus.image)
   - HWR 263: [FRITZ.Repeater_600v2-08.24-130212-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/600v2/FRITZ.Repeater_600v2-08.24-130212-Inhaus.image)
-  - HWR 267: [FRITZ.Box_6690_Cable-08.40-136763-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-136763-Inhaus.image)
+  - HWR 267: [FRITZ.Box_6690_Cable-08.40-137113-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-137113-Inhaus.image)
   - HWR 268: [FRITZ.Repeater_1200_AX-08.40-136818-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/1200AX/FRITZ.Repeater_1200_AX-08.40-136818-Inhaus.image)
   - HWR 270: [FRITZ.Repeater_3000_AX-08.40-136831-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/3000AX/FRITZ.Repeater_3000_AX-08.40-136831-Inhaus.image)
   - HWR 271: [FRITZ.Box_7510-08.40-136585-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/7510/FRITZ.Box_7510-08.40-136585-Inhaus.image)
-  - HWR 272: [FRITZ.Box_5590_Fiber-08.40-136741-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/5590Fiber/FRITZ.Box_5590_Fiber-08.40-136741-Inhaus.image)
+  - HWR 272: [FRITZ.Box_5590_Fiber-08.40-136949-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/5590Fiber/FRITZ.Box_5590_Fiber-08.40-136949-Inhaus.image)
   - HWR 275: [FRITZ.Powerline_1240_AX-08.24-132183-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/1240AX/FRITZ.Powerline_1240_AX-08.24-132183-Inhaus.image)
   - HWR 276: [FRITZ.Box_7520_B-08.24-132184-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/7520B/FRITZ.Box_7520_B-08.24-132184-Inhaus.image)
 
