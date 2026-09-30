@@ -183,6 +183,7 @@ cat << EOF | sed -r 's#(Running|Momentan| enabled| aktiviert)#<span class="succe
 <ul><li>$SECH</li></ul>
 <pre>$SECB</pre>
 EOF
+
 	if [ "$SWITCHABLE" == "y" ]; then
 		stat_button "linux_fs_start" "$(lang de:"Firmwarepartition wechseln" en:"Toggle firmware partition")" "$(lang de:"Umschalten" en:"Toggle")"
 	else
