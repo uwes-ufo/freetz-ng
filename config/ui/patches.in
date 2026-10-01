@@ -388,7 +388,6 @@ config FREETZ_REMOVE_MYFRITZ
 config FREETZ_REMOVE_DDNSD
 	bool "Remove DDNSD"
 	depends on FREETZ_AVM_HAS_DDNSD
-	depends on FREETZ_AVM_VERSION_08_0X_MAX || FREETZ_REAL_DEVELOPER_ONLY  # never tested by anyone with fos 8.2x+
 	default n
 	help
 		Removes the Dynamic DNS daemon (saves about 70 KB in compressed image)
@@ -968,12 +967,11 @@ config FREETZ_REMOVE_TR069_VOIPPROVIDERS
 config FREETZ_REMOVE_UMTSD
 	bool "Remove UMTS (USB GSM)"
 	depends on FREETZ_AVM_HAS_UMTS
-	depends on FREETZ_AVM_VERSION_08_0X_MAX || FREETZ_REAL_DEVELOPER_ONLY  # never tested by anyone with fos 8.2x+
 	default n
 	help
 		Remove UMTS support
-		This patch will remove UMTS-dependent files from firmware.
-		It saves about 12K compressed space in kernel.image.
+		This patch will remove UMTS and MOBILED dependent files from firmware.
+		It saves about 12 KB - 176 KB compressed space in kernel.image.
 
 config FREETZ_REMOVE_UPNP
 	bool "Remove UPnP (igdd/upnpd)"

@@ -69,6 +69,10 @@ Latest changes
 
   - Host tools:
     * openssl 3.5.9
+    * python3 3.14.8
+
+  - Patches:
+    * Various Fritzos 8.25 related fixes
 
   - Packages:
     * ImageMagick 7.1.0-62/7.1.2-32
@@ -76,6 +80,7 @@ Latest changes
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
 
   - Libraries:
+    * harfbuzz 14.5.1
     * pcre2 10.49
 
   - Firmware updates:
