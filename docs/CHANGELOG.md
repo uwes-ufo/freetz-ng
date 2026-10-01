@@ -70,6 +70,9 @@ Latest changes
   - Host tools:
     * openssl 3.5.9
 
+  - Patches:
+    * Various Fritzos 8.25 related fixes
+
   - Packages:
     * ImageMagick 7.1.0-62/7.1.2-32
     * iPerf3 3.3/3.22
