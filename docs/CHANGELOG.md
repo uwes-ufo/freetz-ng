@@ -79,6 +79,7 @@ Latest changes
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
 
   - Libraries:
+    * harfbuzz 14.5.1
     * pcre2 10.49
 
   - Firmware updates:
