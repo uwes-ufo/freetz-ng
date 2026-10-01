@@ -388,7 +388,6 @@ config FREETZ_REMOVE_MYFRITZ
 config FREETZ_REMOVE_DDNSD
 	bool "Remove DDNSD"
 	depends on FREETZ_AVM_HAS_DDNSD
-	depends on FREETZ_AVM_VERSION_08_0X_MAX || FREETZ_REAL_DEVELOPER_ONLY  # never tested by anyone with fos 8.2x+
 	default n
 	help
 		Removes the Dynamic DNS daemon (saves about 70 KB in compressed image)
