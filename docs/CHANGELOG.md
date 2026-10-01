@@ -69,6 +69,7 @@ Latest changes
 
   - Host tools:
     * openssl 3.5.9
+    * python3 3.14.8
 
   - Patches:
     * Various Fritzos 8.25 related fixes
