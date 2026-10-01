@@ -75,6 +75,7 @@ Latest changes
     * Various Fritzos 8.25 related fixes
 
   - Packages:
+    * Apache2 2.4.69
     * ImageMagick 7.1.0-62/7.1.2-32
     * iPerf3 3.3/3.22
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
