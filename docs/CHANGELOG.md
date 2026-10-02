@@ -71,6 +71,9 @@ Latest changes
     * openssl 3.5.9
     * python3 3.14.8
 
+  - AVM sources:
+    * 1700     8.26 - 5.15.176
+
   - Patches:
     * Various Fritzos 8.25 related fixes
 
