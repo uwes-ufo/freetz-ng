@@ -68,16 +68,15 @@ $(pkg)-precompiled: $($(PKG)_TARGET_BINARIES)
 
 
 $(pkg)-clean:
-	-$(SUBMAKE) -C $(GENSIO_DIR)/lib clean
+	-$(SUBMAKE) -C $(GENSIO_DIR) clean
 	$(RM) -r \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libgensio*.so* \
+		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libgensio*.a \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/libgensio*.la \
 		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/lib/pkgconfig/libgensio*.pc \
-		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/gensio
+		$(TARGET_TOOLCHAIN_STAGING_DIR)/usr/include/gensio/
 
 $(pkg)-uninstall:
-	$(RM) $(GENSIO_TARGET_DIR)/libgensio*.so* \
-		$(GENSIO_TARGET_DIR)/libgensioosh*.so* \
-		$(GENSIO_TARGET_DIR)/libgensiomdns*.so*
+	$(RM) $(GENSIO_TARGET_DIR)/libgensio*.so*
 
 $(PKG_FINISH)
