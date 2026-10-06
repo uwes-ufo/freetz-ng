@@ -85,6 +85,7 @@ Latest changes
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
 
   - Libraries:
+    * expat 2.7.5/2.9.0
     * gensio 2.8.15
     * harfbuzz 14.5.1
     * libpng 1.6.59
