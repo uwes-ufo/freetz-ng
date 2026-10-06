@@ -49,6 +49,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### G
 
+  * **[gensio: libgensio (libgensio.so) 2.8.15](gensio.md)<a id='gensio'></a>**<br>
+    Gensio - a library for abstracting stream I/O. Provides network and serial I/O with support for TCP, UDP, serial devices, telnet, SSL/TLS, and more.
+
   * **[gettext (libintl.so) 1.0](gettext.md)<a id='gettext'></a>**<br>
     GNU Internationalization library
 
