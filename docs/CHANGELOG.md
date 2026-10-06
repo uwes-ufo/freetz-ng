@@ -68,6 +68,7 @@ Latest changes
     * ccache 4.14.1
 
   - Host tools:
+    * cmake 4.4.4
     * openssl 3.5.9
     * python3 3.14.8
 
