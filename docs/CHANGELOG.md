@@ -87,6 +87,7 @@ Latest changes
     * OpenSSH 9.3p2/10.6p1
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
     * Patchelf 0.19.2
+    * PHP 5.6.40/8.2.34/8.3.35/8.4.26/8.5.11
     * procps-ng 4.0.7
 
   - Libraries:
