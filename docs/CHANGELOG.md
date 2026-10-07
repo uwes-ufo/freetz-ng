@@ -81,6 +81,7 @@ Latest changes
 
   - Packages:
     * Apache2 2.4.69
+    * Bftpd 6.7
     * ImageMagick 7.1.0-62/7.1.2-32
     * iPerf3 3.3/3.22
     * OpenSSH 9.3p2/10.6p1
