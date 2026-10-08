@@ -85,7 +85,7 @@ Latest changes
     * Apache2 2.4.69
     * axTLS wrapper 2.1.5
     * Bftpd 6.7
-    * bridge-utils 1.5
+    * bridge-utils 1.7.1
     * Empty 0.6.23d
     * endlessh 1.1
     * ImageMagick 7.1.0-62/7.1.2-32
