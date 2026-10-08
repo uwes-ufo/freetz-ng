@@ -66,8 +66,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[br2684ctl (binary only) - DEPRECATED](br2684ctl.md)<a id='br2684ctl'></a>**<br>
     ATM Ethernet bridging configuration utility
 
-  * **[bridge-utils 1.5 (binary only) - DEPRECATED](bridge-utils.md)<a id='bridge-utils'></a>**<br>
-    This package contains utilities for configuring the Linux ethernet bridge. The Linux ethernet bridge can be used for connecting multiple ethernet devices together. The connection is fully transparent: hosts connected to one ethernet device see hosts connected to the other ethernet devices directly. Authors: Lennert Buytenhek <buytenh@gnu.org>
+  * **[bridge-utils 1.7.1 (binary only)](bridge-utils.md)<a id='bridge-utils'></a>**<br>
+    This package contains utilities for configuring the Linux ethernet bridge. The Linux ethernet bridge can be used for connecting multiple ethernet devices together. The connection is fully transparent: hosts connected to one ethernet device see hosts connected to the other ethernet devices directly.
 
   * **[bvi 1.5.0 (binary only)](bvi.md)<a id='bvi'></a>**<br>
     A hex editor/viewer for binary files
