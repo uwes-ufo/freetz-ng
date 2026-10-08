@@ -98,7 +98,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### P
 
-  * **[patchelf 0.14.5/0.19.1](patchelf-host.md)<a id='patchelf-host'></a>**<br>
+  * **[patchelf 0.14.5/0.19.2](patchelf-host.md)<a id='patchelf-host'></a>**<br>
 
   * **[patchelf-target 0.14.5/0.15.0](patchelf-target-host.md)<a id='patchelf-target-host'></a>**<br>
 
@@ -152,11 +152,11 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2026-10-02](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2026-10-08](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
-  * **[uboot 2026.07](uboot-host.md)<a id='uboot-host'></a>**<br>
+  * **[uboot 2026.10](uboot-host.md)<a id='uboot-host'></a>**<br>
 
   * **[uimg 871930d](uimg-host.md)<a id='uimg-host'></a>**<br>
 
