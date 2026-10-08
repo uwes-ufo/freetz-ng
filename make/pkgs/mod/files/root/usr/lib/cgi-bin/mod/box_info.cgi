@@ -27,6 +27,7 @@ getNetworkInfo() {
 	done
 }
 
+ubootversion="$(cat /sys/firmware/devicetree/base/uboot-version 2>/dev/null)"
 if [ -r /var/env ]; then
 	while read -r key value; do
 		case $key in
@@ -168,6 +169,7 @@ sec_end
 
 sec_begin "$(lang de:"Bootenvironment" en:"Boot environment")"
 
+[ -n "$ubootversion" ] && echo "<dl class='info'>" && echo "<dt>$(lang de:"U-Boot Version" en:"Version of U-Boot")</dt><dd>$ubootversion</dd>" && echo "</dl>"
 echo "<dl class='info'>"
 [ -n "$loaderversion" ]  && echo "<dt>$(lang de:"Bootloaderversion" en:"Version of bootloader")</dt><dd>$loaderversion</dd>"
 [ -n "$urladerversion" ] && echo "<dt>$(lang de:"Urladerversion" en:"Version of urlader")</dt><dd>$urladerversion</dd>"
