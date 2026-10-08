@@ -3,7 +3,7 @@ $(PKG)_SOURCE:=bridge-utils-$($(PKG)_VERSION).tar.xz
 $(PKG)_HASH:=a61d8be4f1a1405c60c8ef38d544f0c18c05b33b9b07e5b4b31033536165e60e
 $(PKG)_SITE:=@KERNEL/linux/utils/net/bridge-utils
 ### WEBSITE:=https://wiki.linuxfoundation.org/networking/bridge
-### MANPAGE:=
+### MANPAGE:=https://linux.die.net/man/8/brctl
 ### CHANGES:=https://www.kernel.org/pub/linux/utils/net/bridge-utils/
 ### CVSREPO:=https://git.kernel.org/pub/scm/network/bridge/bridge-utils.git/
 
