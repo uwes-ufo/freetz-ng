@@ -2,17 +2,22 @@ $(call PKG_INIT_BIN, 4.12)
 $(PKG)_SOURCE:=sispmctl-$($(PKG)_VERSION).tar.gz
 $(PKG)_HASH:=e757863a4838da6e1ca72a57adc5aca6fc47ffbddc72a69052d8abd743d57082
 $(PKG)_SITE:=@SF/sispmctl
+### WEBSITE:=https://sourceforge.net/projects/sispmctl/
+### MANPAGE:=https://sispmctl.sourceforge.net/#mozTocId756141
+### CHANGES:=https://sourceforge.net/projects/sispmctl/files/sispmctl/
+### CVSREPO:=https://sourceforge.net/p/sispmctl/git/ci/master/tree/
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/src/sispmctl
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/sispmctl
 
-$(PKG)_DEPENDS_ON += config-host
 $(PKG)_DEPENDS_ON += libusb0
 
-$(PKG)_CONFIGURE_PRE_CMDS += $(call PKG_UPDATE_CONFIGS,./admin)
+$(PKG)_CONFIGURE_PRE_CMDS += $(call PKG_PREVENT_RPATH_HARDCODING,./configure)
 
 $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_SISPMCTL_WEB),--with-webdir=/usr/share/sispmctl,--enable-webless)
-$(PKG)_CONFIGURE_OPTIONS += --enable-all-static
+# libsispmctl is unused, only libusb0 shared
+$(PKG)_CONFIGURE_OPTIONS += --disable-shared
+$(PKG)_CONFIGURE_OPTIONS += --enable-static
 
 $(PKG)_REBUILD_SUBOPTS += $(LIBUSB0_REBUILD_SUBOPTS)
 $(PKG)_REBUILD_SUBOPTS += FREETZ_SISPMCTL_WEB
