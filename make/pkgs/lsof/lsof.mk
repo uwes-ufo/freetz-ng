@@ -7,22 +7,20 @@ $(PKG)_SITE:=https://github.com/lsof-org/lsof/releases/download/$($(PKG)_VERSION
 ### CHANGES:=https://github.com/lsof-org/lsof/releases
 ### CVSREPO:=https://github.com/lsof-org/lsof
 
-$(PKG)_BINARY:=$($(PKG)_DIR)/lsof
-$(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/lsof
 $(PKG)_CATEGORY_PKGS:=Debug helpers
 
-$(PKG)_DEPENDS_ON += wget-host
+$(PKG)_BINARY:=$($(PKG)_DIR)/lsof
+$(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/lsof
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_TARGET_IPV6_SUPPORT
-ifeq ($(FREETZ_TARGET_IPV6_SUPPORT),y)
-$(PKG)_HASIPV6 := Y
-endif
 
-$(PKG)_CONFIGURE_DEFOPTS := n
 $(PKG)_CONFIGURE_ENV += CC="$(TARGET_CC)"
 $(PKG)_CONFIGURE_ENV += CFLAGS="$(TARGET_CFLAGS)"
+
 $(PKG)_CONFIGURE_OPTIONS += --host=$(REAL_GNU_TARGET_NAME)
-$(PKG)_CONFIGURE_OPTIONS += --disable-liblsof --without-libtirpc
+$(PKG)_CONFIGURE_OPTIONS += --disable-liblsof
+$(PKG)_CONFIGURE_OPTIONS += --without-libtirpc
+$(PKG)_CONFIGURE_OPTIONS += --without-selinux
 
 
 $(PKG_SOURCE_DOWNLOAD)
@@ -30,7 +28,7 @@ $(PKG_UNPACKED)
 $(PKG_CONFIGURED_CONFIGURE)
 
 $($(PKG)_BINARY): $($(PKG)_DIR)/.configured
-	$(SUBMAKE) -C $(LSOF_DIR) MANS=
+	$(SUBMAKE) -C $(LSOF_DIR)
 
 $($(PKG)_TARGET_BINARY): $($(PKG)_BINARY)
 	$(INSTALL_BINARY_STRIP)
