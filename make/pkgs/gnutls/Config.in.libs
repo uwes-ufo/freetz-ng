@@ -1,3 +1,16 @@
+choice
+	prompt "Version"
+		default FREETZ_LIB_libgnutls_WITH_VERSION_CURRENT
+
+	config FREETZ_LIB_libgnutls_WITH_VERSION_ABANDON
+		bool "3.7.8 - DEPRECATED"
+
+	config FREETZ_LIB_libgnutls_WITH_VERSION_CURRENT
+		bool "3.8.13"
+		depends on  FREETZ_TARGET_GCC_5_MIN
+
+endchoice
+
 config FREETZ_LIB_libgnutls
 	bool "GnuTLS library (libgnutls.so)"
 	select FREETZ_LIB_libgmp

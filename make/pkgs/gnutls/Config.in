@@ -14,12 +14,12 @@ if FREETZ_PACKAGE_GNUTLS
 			default FREETZ_PACKAGE_GNUTLS_VERSION_CURRENT
 
 		config FREETZ_PACKAGE_GNUTLS_VERSION_ABANDON
-			bool "3.7.8"
-			depends on !FREETZ_TARGET_GCC_5_MIN
+			bool "3.7.8 - DEPRECATED"
+			depends on FREETZ_LIB_libgnutls_WITH_VERSION_ABANDON
 
 		config FREETZ_PACKAGE_GNUTLS_VERSION_CURRENT
 			bool "3.8.13"
-			depends on  FREETZ_TARGET_GCC_5_MIN
+			depends on FREETZ_LIB_libgnutls_WITH_VERSION_CURRENT
 
 	endchoice
 
@@ -36,3 +36,4 @@ if FREETZ_PACKAGE_GNUTLS
 			Provides gnutls-cli, gnutls-serv, psktool and srptool utilities.
 
 endif # FREETZ_PACKAGE_GNUTLS
+
