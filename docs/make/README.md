@@ -637,7 +637,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[siproxd 0.8.1 - DEPRECATED](siproxd.md)<a id='siproxd'></a>**<br>
     Siproxd is a proxy/masquerading daemon for the SIP protocol. See http://siproxd.sourceforge.net for more information.
 
-  * **[sispmctl 3.1 - DEPRECATED](sispmctl.md)<a id='sispmctl'></a>**<br>
+  * **[sispmctl 4.12 - DEPRECATED](sispmctl.md)<a id='sispmctl'></a>**<br>
     sispmctl is an application enabling the use of the GEMBIRD SiS-PM (sispm) USB-controlled power-outlet device under Linux. Note that the device is also sold under different names, i.e. as "IntelliPlug" in Germany.
 
   * **[slang: S-Lang 2.3.3 (binary only)](slang.md)<a id='slang'></a>**<br>
