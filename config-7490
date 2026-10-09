@@ -1548,6 +1548,9 @@ FREETZ_LIB_libexpat_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libattr is not set
 # FREETZ_LIB_libdbus is not set
 # FREETZ_LIB_libdevmapper is not set
+# FREETZ_LIB_libgensio is not set
+# FREETZ_LIB_libgensioosh is not set
+# FREETZ_LIB_libgensiomdns is not set
 # FREETZ_LIB_libcap is not set
 FREETZ_LIB_libcap_ng=y
 # FREETZ_LIB_libcjson is not set
