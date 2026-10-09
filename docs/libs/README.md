@@ -218,7 +218,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libsynce (libsynce.so) 0.10.0](libsynce.md)<a id='libsynce'></a>**<br>
     A helper library for SynCE, a framework to sync WinCE devices
 
-  * **[libtasn1: GNU ASN1 library (libtasn1.so) 4.19.0](libtasn1.md)<a id='libtasn1'></a>**<br>
+  * **[libtasn1: GNU ASN1 library (libtasn1.so) 4.21.0](libtasn1.md)<a id='libtasn1'></a>**<br>
     A small ASN.1 library.
 
   * **[libtirpc (libtirpc.so) 1.3.8](libtirpc.md)<a id='libtirpc'></a>**<br>
