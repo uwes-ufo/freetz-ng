@@ -99,6 +99,7 @@ Latest changes
     * procps-ng 4.0.7
     * Python3 3.14.8
     * rpcbind 1.3.1
+    * sispmctl 4.12
     * tcpdump 4.99.7
     * Tor 0.4.8.25/0.4.9.14
     * Vim 9.2.1169
