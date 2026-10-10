@@ -1061,19 +1061,21 @@ FREETZ_PACKAGE_SYSLOGD_CGI=y
 #
 # GnuTLS ---------------------------------
 #
+# FREETZ_LIB_libgnutls_WITH_VERSION_ABANDON is not set
+FREETZ_LIB_libgnutls_WITH_VERSION_CURRENT=y
 # FREETZ_LIB_libgnutls is not set
 # FREETZ_LIB_libtasn1 is not set
 
 #
 # mbed TLS -------------------------------
 #
+FREETZ_MBEDTLS_VERSION_228=y
+# FREETZ_MBEDTLS_VERSION_306 is not set
 FREETZ_LIB_libmbedcrypto=y
 # FREETZ_LIB_libmbedcrypto_WITH_BLOWFISH is not set
 # FREETZ_LIB_libmbedcrypto_WITH_GENRSA is not set
 FREETZ_LIB_libmbedtls=y
 FREETZ_LIB_libmbedx509=y
-FREETZ_MBEDTLS_VERSION_228=y
-# FREETZ_MBEDTLS_VERSION_306 is not set
 FREETZ_MBEDTLS_SHORT_VERSION="2.28"
 FREETZ_MBEDTLS_VERSION_207_MIN=y
 FREETZ_MBEDTLS_VERSION_228_MIN=y
@@ -1089,11 +1091,11 @@ FREETZ_MBEDTLS_VERSION_306_MAX=y
 #
 # OpenSSL --------------------------------
 #
-FREETZ_LIB_libcrypto=y
-FREETZ_LIB_libssl=y
 # FREETZ_OPENSSL_VERSION_11 is not set
 FREETZ_OPENSSL_VERSION_30=y
 # FREETZ_OPENSSL_VERSION_35 is not set
+FREETZ_LIB_libcrypto=y
+FREETZ_LIB_libssl=y
 
 #
 # OpenSSL configuration
