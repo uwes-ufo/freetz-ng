@@ -235,7 +235,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>gnu-make: Make 4.2.1/4.4.1 (binary only)</u><a id='gnu-make'></a>**<br>
     Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
 
-  * **[GnuTLS 3.7.8 (binary only) - DEPRECATED](gnutls.md)<a id='gnutls'></a>**<br>
+  * **[GnuTLS 3.7.11/3.8.13 (binary only)](gnutls.md)<a id='gnutls'></a>**<br>
     GnuTLS is a project that aims to develop a library which provides a secure layer, over a reliable transport layer. Currently the GnuTLS library implements TLS 1.3, 1.2, 1.1, 1.0 protocols and SSL 3.0.
 
   * **<u>gocr 0.49 (binary only) - DEPRECATED</u><a id='gocr'></a>**<br>
@@ -540,7 +540,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Python 2.7.18 - DEPRECATED](python.md)<a id='python'></a>**<br>
     Python is a remarkably powerful dynamic programming language that is used in a wide variety of application domains. CAUTION: Python adds roughly 4 MB to 15.5 MB (depending on your choice of modules) of uncompressed data to your image. In most cases, it should therefore be externalized.
 
-  * **[python3: Python 3.14.3 - EXPERIMENTAL](python3.md)<a id='python3'></a>**<br>
+  * **[python3: Python 3.14.8 - EXPERIMENTAL](python3.md)<a id='python3'></a>**<br>
     Python is a remarkably powerful dynamic programming language that is used in a wide variety of application domains. CAUTION: Python adds roughly 4 MB to 15.5 MB (depending on your choice of modules) of uncompressed data to your image. In most cases, it should therefore be externalized.
 
   * **<u>python-bjoern: bjoern 1.3.4 - DEPRECATED</u><a id='python-bjoern'></a>**<br>
@@ -637,7 +637,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[siproxd 0.8.1 - DEPRECATED](siproxd.md)<a id='siproxd'></a>**<br>
     Siproxd is a proxy/masquerading daemon for the SIP protocol. See http://siproxd.sourceforge.net for more information.
 
-  * **[sispmctl 3.1 - DEPRECATED](sispmctl.md)<a id='sispmctl'></a>**<br>
+  * **[sispmctl 4.12 - DEPRECATED](sispmctl.md)<a id='sispmctl'></a>**<br>
     sispmctl is an application enabling the use of the GEMBIRD SiS-PM (sispm) USB-controlled power-outlet device under Linux. Note that the device is also sold under different names, i.e. as "IntelliPlug" in Germany.
 
   * **[slang: S-Lang 2.3.3 (binary only)](slang.md)<a id='slang'></a>**<br>
@@ -878,7 +878,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Asterisk 11.25.3 - DEPRECATED</u><a id='asterisk'></a>**<br>
     Asterisk is an open source framework for building communications applications.
 
-  * **<u>axtlswrap: axTLS wrapper 2.1.5 (binary only) - DEPRECATED</u><a id='axtlswrap'></a>**<br>
+  * **[axtlswrap: axTLS wrapper 2.1.5 (binary only) - DEPRECATED](axtlswrap.md)<a id='axtlswrap'></a>**<br>
 
   * **[Collectd 4.10.3 - DEPRECATED](collectd.md)<a id='collectd'></a>**<br>
     Collectd collects information about the system it is running on and stores this information. The information can then be used to do find current performance bottlenecks (i. e. performance analysis) and predict future system load (i. e. capacity planning). Or if you just want pretty graphs of your private server and are fed up with some homegrown solution you're at the right place, too.
