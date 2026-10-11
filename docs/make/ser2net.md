@@ -6,15 +6,17 @@
   - Package: [master/make/pkgs/ser2net/](https://github.com/Freetz-NG/freetz-ng/tree/master/make/pkgs/ser2net/)
   - Steward: ???
 
-Anwendungsbeispiele:
-[http://www.nwlab.net/tutorials/ser2net/konsolenserver-linux.html](http://www.nwlab.net/tutorials/ser2net/konsolenserver-linux.html)
-[http://www.aufpreis.de/aufpreis/php/ser2netttyredirect.php](http://www.aufpreis.de/aufpreis/php/ser2netttyredirect.php)
+Mit set2net kann ein lokale serielle Schnittstelle im Netzwerk per Telnet freigegeben werden.<br>
 
-Als Windows-Client eignet sich [HW Virtual Serial
-Port](http://www.hw-group.com/products/hw_vsp/index_de.html)
-Auch ein direkter Zugriff über Telnet auf den Netzport von ser2net ist
-möglich.
+[![screenshot](../screenshots/000-PKG_ser2net_md.png)](../screenshots/000-PKG_ser2net.png)
+
+Anwendungsbeispiele:
+ - [http://www.nwlab.net/tutorials/ser2net/konsolenserver-linux.html](http://www.nwlab.net/tutorials/ser2net/konsolenserver-linux.html)
+ - [http://www.aufpreis.de/aufpreis/php/ser2netttyredirect.php](http://www.aufpreis.de/aufpreis/php/ser2netttyredirect.php)
+
+Als Windows-Client eignet sich [HW Virtual SerialPort](http://www.hw-group.com/products/hw_vsp/index_de.html)
+Auch ein direkter Zugriff über Telnet auf den Netzport von ser2net ist möglich.
 
 Thread im IPPF:
-[http://www.ip-phone-forum.de/showthread.php?p=1329692](http://www.ip-phone-forum.de/showthread.php?p=1329692)
+ - [http://www.ip-phone-forum.de/showthread.php?p=1329692](http://www.ip-phone-forum.de/showthread.php?p=1329692)
 

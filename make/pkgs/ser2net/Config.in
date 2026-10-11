@@ -21,7 +21,7 @@ if FREETZ_PACKAGE_SER2NET
 				portparameters), but you must have a compliant client.
 				
 				This version uses traditional config format (ser2net.conf).
-				Compatible with older build environments.
+				No additional libraries are required.
 
 		config FREETZ_PACKAGE_SER2NET_CURRENT
 			bool "4.6.8"
@@ -40,9 +40,7 @@ if FREETZ_PACKAGE_SER2NET
 				information on gensios.
 				
 				This version uses YAML configuration format (ser2net.yaml).
-				Requires gensio and yaml libraries.
-				
-				Gensio needs uClibc 0.9.30 or newer.
+				Requires gensio and yaml libraries and also uClibc 0.9.30 or newer.
 
 	endchoice
 
