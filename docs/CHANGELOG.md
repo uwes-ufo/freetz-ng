@@ -95,13 +95,13 @@ Latest changes
     * lsof 4.99.7
     * OpenSSH 9.3p2/10.6p1
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
-    * ser2net 3.5.4/4.6.8
     * OpenVPN 2.4.12/2.5.11/2.6.23/2.7.8
     * Patchelf 0.19.2
     * PHP 5.6.40/8.2.34/8.3.35/8.4.26/8.5.11
     * procps-ng 4.0.7
     * Python3 3.14.8
     * rpcbind 1.3.1
+    * ser2net 3.5.4/4.6.8
     * sispmctl 4.12
     * tcpdump 4.99.7
     * Tor 0.4.8.25/0.4.9.14
