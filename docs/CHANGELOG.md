@@ -79,6 +79,7 @@ Latest changes
     * 2700     8.26 - 5.15.176
 
   - Patches:
+    * New tagging: custom & modded
     * Various Fritzos 8.25 related fixes
 
   - Packages:
