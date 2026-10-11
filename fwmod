@@ -1586,6 +1586,7 @@ if [ "$DO_MOD" -gt 0 ]; then
 						if [ -n "$tagging_temp" ]; then
 							inkscape "$tagging_file" --export-type=png --export-filename="$tagging_temp" -w 98 -h 77 -y 0 &>/dev/null || \
 							inkscape --without-gui "$tagging_file" --export-png="$tagging_temp" -w 98 -h 77 -y 0 &>/dev/null || \
+							magick -compress NONE -background NONE "$tagging_file" -resize 98x77 "$tagging_temp" || \
 							convert -compress NONE -background NONE -resize 98x77 "$tagging_file" "$tagging_temp" || \
 							error 1 "tagging failed on converting, is inkscape installed?"
 						fi
