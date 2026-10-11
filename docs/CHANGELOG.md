@@ -79,7 +79,9 @@ Latest changes
     * 2700     8.26 - 5.15.176
 
   - Patches:
+    * New tagging: custom & modded
     * Various Fritzos 8.25 related fixes
+    * Various Fritzos 8.50 related fixes
 
   - Packages:
     * Apache2 2.4.69
@@ -100,6 +102,7 @@ Latest changes
     * procps-ng 4.0.7
     * Python3 3.14.8
     * rpcbind 1.3.1
+    * ser2net 3.5.4/4.6.8
     * sispmctl 4.12
     * tcpdump 4.99.7
     * Tor 0.4.8.25/0.4.9.14
