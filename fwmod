@@ -1603,6 +1603,7 @@ if [ "$DO_MOD" -gt 0 ]; then
 				done
 			}
 			echo1 "tagging avm webif (tag by ${FREETZ_TAGGING_STRING})"
+			tagging      "" ""       "Fritz_Logo_sRGB_w.svg" "fritz"  # svg since  Fritz!OS 8.5x (eg 7690 08.50)
 			tagging      "" ""       "logo_fritzDiamond.svg" "avm"    # svg since  Fritz!OS 7.1x (eg 7490 07.11)
 			tagging  "+0+6" "center" "fritzLogo.svg"                  # svg since  Fritz!OS 6.5x (eg 7320 06.50)
 			tagging  "+0+6" "center" "kopfbalken_links.png"           # lua since  Fritz!OS 6.2x (small logo @left, eg 7390 06.23)
