@@ -81,6 +81,7 @@ Latest changes
   - Patches:
     * New tagging: custom & modded
     * Various Fritzos 8.25 related fixes
+    * Various Fritzos 8.50 related fixes
 
   - Packages:
     * Apache2 2.4.69
