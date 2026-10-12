@@ -18,7 +18,7 @@ EOF
 else
 cat << EOF
 <ul>
-<li><a href="$(href file ser2net conf)">$(lang de:"ser2net.yaml bearbeiten" en:"Edit ser2net.yaml")</a></li>
+<li><a href="$(href file ser2net yaml)">$(lang de:"ser2net.yaml bearbeiten" en:"Edit ser2net.yaml")</a></li>
 </ul>
 EOF
 fi

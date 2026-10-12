@@ -8,6 +8,7 @@ $(PKG)_SITE:=@SF/ser2net
 ### MANPAGE:=https://linux.die.net/man/8/ser2net
 ### CHANGES:=https://sourceforge.net/p/ser2net/news/
 ### CVSREPO:=https://sourceforge.net/projects/ser2net/
+### STEWARD:=fda77
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/ser2net
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/sbin/ser2net

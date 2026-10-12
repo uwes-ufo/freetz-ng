@@ -91,7 +91,7 @@ Latest changes
     * Empty 0.6.23d
     * endlessh 1.1
     * GnuTLS 3.7.11/3.8.13
-    * ImageMagick 7.1.0-62/7.1.2-32
+    * ImageMagick 7.1.0-62/7.1.2-33
     * iPerf3 3.3/3.22
     * lsof 4.99.7
     * OpenSSH 9.3p2/10.6p1
