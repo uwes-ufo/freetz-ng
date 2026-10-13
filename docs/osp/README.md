@@ -143,6 +143,8 @@ Content: [FritzBox](#fritzbox) - [FritzDect](#fritzdect) - [FritzPowerline](#fri
     - [source-files-FRITZ.Box_5590_Fiber-qcaarmv8-08.02.tar.gz](https://osp.avm.de/fritzbox/fritzbox-5590-fiber/source-files-FRITZ.Box_5590_Fiber-qcaarmv8-08.02.tar.gz)
     - [source-files-FRITZ.Box_5590_Fiber-qcaarmv8-08.20.tar.gz](https://osp.avm.de/fritzbox/fritzbox-5590-fiber/source-files-FRITZ.Box_5590_Fiber-qcaarmv8-08.20.tar.gz)
     - [source-files-FRITZ.Box_5590_Fiber-qcaarmv8-08.25.tar.gz](https://osp.avm.de/fritzbox/fritzbox-5590-fiber/source-files-FRITZ.Box_5590_Fiber-qcaarmv8-08.25.tar.gz)
+  * fritzbox-5630/
+    - [source-files-FRITZ.Box_5630-airoha02-08.50.tar.gz](https://osp.avm.de/fritzbox/fritzbox-5630/source-files-FRITZ.Box_5630-airoha02-08.50.tar.gz)
   * fritzbox-5690/
     - [source-files-FRITZ.Box_5690-miami-08.03.tar.gz](https://osp.avm.de/fritzbox/fritzbox-5690/source-files-FRITZ.Box_5690-miami-08.03.tar.gz)
     - [source-files-FRITZ.Box_5690-miami-08.04.tar.gz](https://osp.avm.de/fritzbox/fritzbox-5690/source-files-FRITZ.Box_5690-miami-08.04.tar.gz)
