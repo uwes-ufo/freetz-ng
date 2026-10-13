@@ -105,6 +105,7 @@ Latest changes
     * ser2net 3.5.4/4.6.8
     * sispmctl 4.12
     * tcpdump 4.99.7
+    * tmux 3.8
     * Tor 0.4.8.25/0.4.9.14
     * Vim 9.2.1169
 
