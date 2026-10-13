@@ -120,6 +120,7 @@ Latest changes
     * libpcap 1.11.0
     * libpng 1.6.59
     * libtasn1 4.21.0
+    * libzip 1.12
     * pcre2 10.49
     * utf8proc 2.12.0
 
