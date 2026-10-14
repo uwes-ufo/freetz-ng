@@ -1,6 +1,6 @@
 --- configure
 +++ configure
-@@ -5636,6 +5636,7 @@
+@@ -5642,6 +5642,7 @@
  check_cflags_cc -std=$stdc ctype.h "__STDC_VERSION__ >= 201112L" ||
      { check_cflags_cc -std=c11 ctype.h "__STDC_VERSION__ >= 201112L" && stdc="c11" || die "Compiler lacks C11 support"; }
  
