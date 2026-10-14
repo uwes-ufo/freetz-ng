@@ -29,7 +29,7 @@ $(PKG)_LIBVERSIONS_MAJOR   := 59      59       8        59       57     56      
 $(PKG)_LIBVERSIONS_MINOR   := 37.100  7.100    44.100   27.100   28.100 6.100    7.100      7.100
 else
 $(PKG)_LIBVERSIONS_MAJOR   := 61      61       10       61       59     58       5          8
-$(PKG)_LIBVERSIONS_MINOR   := 19.101  3.100    4.100    7.100    39.100 3.100    3.100      3.100
+$(PKG)_LIBVERSIONS_MINOR   := 19.101  3.100    5.100    7.103    39.100 3.100    3.100      3.100
 endif
 
 $(PKG)_LIBNAMES_LONG_MAJOR := $(join $($(PKG)_LIBNAMES_SHORT:%=lib%.so.),$($(PKG)_LIBVERSIONS_MAJOR))
