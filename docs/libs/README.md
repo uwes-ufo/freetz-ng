@@ -245,7 +245,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libxml2 (libxml2.so) 2.15.4](libxml2.md)<a id='libxml2'></a>**<br>
     XML toolkit from the GNOME project
 
-  * **[libzip (libzip.so) 1.12](libzip.md)<a id='libzip'></a>**<br>
+  * **[libzip (libzip.so) 1.12.1](libzip.md)<a id='libzip'></a>**<br>
     libzip is a C library for reading, creating, and modifying zip archives. It supports encryption, compression, and Zip64 extensions.
 
   * **[linux-atm (libatm.so) 2.5.2](linux-atm.md)<a id='linux-atm'></a>**<br>
