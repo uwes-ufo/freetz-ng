@@ -1,7 +1,7 @@
-$(call PKG_INIT_LIB, 1.11.4)
-$(PKG)_LIB_VERSION:=5.5
+$(call PKG_INIT_LIB, 1.12)
+$(PKG)_LIB_VERSION:=5.6
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.xz
-$(PKG)_HASH:=8a247f57d1e3e6f6d11413b12a6f28a9d388de110adc0ec608d893180ed7097b
+$(PKG)_HASH:=376908d0f0fda13180a19fdc4f7062a1abfb59e09ca07a392d361253b8e60c2b
 $(PKG)_SITE:=https://github.com/nih-at/libzip/releases/download/v$($(PKG)_VERSION)
 ### WEBSITE:=https://libzip.org
 ### MANPAGE:=https://libzip.org/documentation/
