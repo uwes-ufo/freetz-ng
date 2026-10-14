@@ -88,6 +88,7 @@ Latest changes
     * axTLS wrapper 2.1.5
     * Bftpd 6.7
     * bridge-utils 1.7.1
+    * Curl 8.12.1/8.23.0
     * Empty 0.6.23d
     * endlessh 1.1
     * GnuTLS 3.7.11/3.8.13
