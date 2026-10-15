@@ -88,10 +88,12 @@ Latest changes
     * axTLS wrapper 2.1.5
     * Bftpd 6.7
     * bridge-utils 1.7.1
+    * Curl 8.12.1/8.23.0
     * Empty 0.6.23d
     * endlessh 1.1
+    * FFmpeg 5.1.10/7.1.5
     * GnuTLS 3.7.11/3.8.13
-    * ImageMagick 7.1.0-62/7.1.2-33
+    * ImageMagick 7.1.0-62/7.1.2-34
     * iPerf3 3.3/3.22
     * lsof 4.99.7
     * Lua 5.1.5/5.5.1
@@ -121,7 +123,7 @@ Latest changes
     * libpcap 1.11.0
     * libpng 1.6.59
     * libtasn1 4.21.0
-    * libzip 1.12
+    * libzip 1.12.1
     * pcre2 10.49
     * utf8proc 2.12.0
 

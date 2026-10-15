@@ -245,7 +245,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[libxml2 (libxml2.so) 2.15.4](libxml2.md)<a id='libxml2'></a>**<br>
     XML toolkit from the GNOME project
 
-  * **[libzip (libzip.so) 1.12](libzip.md)<a id='libzip'></a>**<br>
+  * **[libzip (libzip.so) 1.12.1](libzip.md)<a id='libzip'></a>**<br>
     libzip is a C library for reading, creating, and modifying zip archives. It supports encryption, compression, and Zip64 extensions.
 
   * **[linux-atm (libatm.so) 2.5.2](linux-atm.md)<a id='linux-atm'></a>**<br>
@@ -352,7 +352,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### T
 
-  * **[taglib (libtag.so) 1.6.3](taglib.md)<a id='taglib'></a>**<br>
+  * **[taglib (libtag.so) - DEPRECATED 1.6.3](taglib.md)<a id='taglib'></a>**<br>
     TagLib is a library for reading and editing the meta-data of several popular audio formats. Currently it supports both ID3v1 and ID3v2 for MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC, MPC, Speex, WavPack TrueAudio, WAV, AIFF, MP4 and ASF files.
 
 ### U
