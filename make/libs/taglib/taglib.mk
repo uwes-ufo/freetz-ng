@@ -3,6 +3,9 @@ $(PKG)_LIB_VERSION:=1.9.0
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.gz
 $(PKG)_HASH:=a9ba089cc2c6d26d266bad492de31cadaeb878dea858e22ae3196091718f284b
 $(PKG)_SITE:=http://developer.kde.org/~wheeler/files/src
+### WEBSITE:=https://taglib.org/
+### CHANGES:=https://github.com/taglib/taglib/releases
+### CVSREPO:=https://github.com/taglib/taglib
 
 $(PKG)_CATEGORY_LIBS:=Multimedia##ID3 tag
 
