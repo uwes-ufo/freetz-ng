@@ -18,6 +18,8 @@ $(PKG)_CONFIGURE_PRE_CMDS += $(call PKG_UPDATE_CONFIGS,./admin/)
 # touch some autotools' files to prevent configure from being regenerated
 $(PKG)_CONFIGURE_PRE_CMDS += touch -t 200001010000.00 configure.in.in configure.in subdirs acinclude.m4 aclocal.m4 admin/acinclude.m4.in admin/libtool.m4.in;
 
+$(PKG)_CONFIGURE_ENV += lt_cv_deplibs_check_method=pass_all
+
 $(PKG)_CONFIGURE_OPTIONS += --enable-shared
 $(PKG)_CONFIGURE_OPTIONS += --enable-static
 $(PKG)_CONFIGURE_OPTIONS += --disable-debug
