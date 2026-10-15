@@ -9,6 +9,7 @@ $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/sbin/mediatomb
 $(PKG)_SHARE_DIR:=/usr/share/mediatomb
 $(PKG)_TARGET_WEBIF:=$($(PKG)_DEST_DIR)$($(PKG)_SHARE_DIR)/web/index.html
 
+$(PKG)_DEPENDS_ON += config-host
 $(PKG)_DEPENDS_ON += $(STDCXXLIB) curl expat ffmpeg libexif sqlite taglib zlib
 ifeq ($(strip $(FREETZ_PACKAGE_MEDIATOMB_WITH_PLAYLIST_SUPPORT)),y)
 $(PKG)_DEPENDS_ON += js
@@ -25,6 +26,8 @@ ifeq ($(strip $(FREETZ_PACKAGE_MEDIATOMB_WITH_PLAYLIST_SUPPORT)),y)
 $(PKG)_REBUILD_SUBOPTS += FREETZ_OPENSSL_SHORT_VERSION
 endif
 $(PKG)_REBUILD_SUBOPTS += $(filter FREETZ_LIB_libcurl_% FREETZ_OPENSSL_SHLIB_VERSION,$(CURL_REBUILD_SUBOPTS))
+
+$(PKG)_CONFIGURE_PRE_CMDS += $(call PKG_UPDATE_CONFIGS,./configure_aux/)
 
 $(PKG)_CONFIGURE_OPTIONS += --disable-rpl-malloc
 $(PKG)_CONFIGURE_OPTIONS += --enable-pthread-lib
