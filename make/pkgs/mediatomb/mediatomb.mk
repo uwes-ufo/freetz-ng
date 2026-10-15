@@ -2,6 +2,7 @@ $(call PKG_INIT_BIN, 0.12.1)
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.gz
 $(PKG)_HASH:=31163c34a7b9d1c9735181737cb31306f29f1f2a0335fb4f53ecccf8f62f11cd
 $(PKG)_SITE:=@SF/mediatomb
+### STEWARD:=EOL
 
 $(PKG)_BINARY:=$($(PKG)_DIR)/build/mediatomb
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/sbin/mediatomb
