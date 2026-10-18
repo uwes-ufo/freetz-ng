@@ -683,6 +683,7 @@ Currently supported devices and firmwares
     - 265.07.63 rev116265 {ALL} [MOVE21NL1]
     - 265.08.02 rev119969 {ALL} [Smart24 P1 NL1]
     - 265.08.26 rev131168 {ALL} [Smart24 P2 NL1]
+    - 265.08.50 rev136031 {ALL} [MyFRITZOS P1]
 
 ### T-Com derivatives
 
