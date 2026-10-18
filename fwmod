@@ -2271,7 +2271,7 @@ if [ "$DO_PACK" -gt 0 ]; then
 	if [ -n "$FREETZ_AVM_HAS_AR7_LITE" ]; then
 		fit_src="${img_name%.*}.fit"
 		fit_dst="${AVM_FW_VERSION}-${AVM_FW_REVISION}.fit"
-		ln -f "$FIRMWARE_DIR/var/tmp/fit-image" "$fit_src"
+		ln -f "$FIRMWARE_DIR/var/tmp/fit-image" "$fit_src" 2>/dev/null || cp -p "$FIRMWARE_DIR/var/tmp/fit-image" "$fit_src"
 		hint "The fiber module needs an unmodified fit-image."
 		hint "Put '$fit_src'"
 		hint "to the internal storage on your device into"
