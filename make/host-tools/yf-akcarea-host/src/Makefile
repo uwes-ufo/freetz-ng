@@ -10,9 +10,12 @@ RM = rm -f
 OPT = -O2
 BITNESS =
 override CFLAGS   += $(OPT) $(BITNESS) -std=c99 -W -Wall
-override CPPFLAGS += -I$(LIBFDT_DIR)/include -DUSE_STRIPPED_AVM_KERNEL_CONFIG_H
+#override CPPFLAGS += -I$(LIBFDT_DIR)/include -DUSE_STRIPPED_AVM_KERNEL_CONFIG_H
+override CPPFLAGS += -I$(LIBFDT_DIR) -DUSE_STRIPPED_AVM_KERNEL_CONFIG_H
 override LDFLAGS  += $(BITNESS)
-override LDLIBS   += -L$(LIBFDT_DIR)/lib -lfdt
+#override LDLIBS   += -L$(LIBFDT_DIR)/lib -lfdt
+#override LDLIBS   += -L$(LIBFDT_DIR) -lfdt
+override LDLIBS   += $(LIBFDT_DIR)/libfdt.a
 
 BASENAME = avm_kernel_config
 
