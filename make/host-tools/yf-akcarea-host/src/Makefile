@@ -8,7 +8,7 @@ CC = gcc
 RM = rm -f
 
 OPT = -O2
-BITNESS = -m32
+BITNESS =
 override CFLAGS   += $(OPT) $(BITNESS) -std=c99 -W -Wall
 override CPPFLAGS += -I$(LIBFDT_DIR)/include -DUSE_STRIPPED_AVM_KERNEL_CONFIG_H
 override LDFLAGS  += $(BITNESS)
