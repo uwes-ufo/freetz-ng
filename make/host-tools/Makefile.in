@@ -44,7 +44,7 @@ TOOLS_FAVORED:=kconfig-host tar-host busybox-host make-host pkgconf-host m4-host
 TOOLS_ALLOFIT:=$(sort $(basename $(notdir $(wildcard $(FREETZ_BASE_DIR)/$(MAKE_DIR)/host-tools/*/*.mk))))
 TOOLS:=$(TOOLS_FAVORED) $(filter-out $(TOOLS_FAVORED),$(TOOLS_ALLOFIT))
 
-TOOLS_32BIT_ONLY:=libdtc-host
+TOOLS_32BIT_ONLY:=
 TOOLS_TARXZBUNDLE:=tools-host
 
 # tools not built by default
@@ -63,7 +63,6 @@ TOOLS_CONDITIONAL+=$(if $(or $(FREETZ_STRIP_SCRIPTS),$(FREETZ_STRIP_BINARIES)),,
 TOOLS_CONDITIONAL+=$(if $(FREETZ_AVM_PROP_OUTER_FILESYSTEM_TYPE_EXT2),,genext2fs-host)
 TOOLS_CONDITIONAL+=gmp-host
 TOOLS_CONDITIONAL+=gperf-host
-TOOLS_CONDITIONAL+=libdtc-host
 TOOLS_CONDITIONAL+=lzma1-host
 TOOLS_CONDITIONAL+=lzma2-host
 TOOLS_CONDITIONAL+=meson-host
