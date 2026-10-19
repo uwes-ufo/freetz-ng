@@ -1,5 +1,10 @@
 # Neuigkeiten
 
+### 2026-10-20
+Es gibt jetzt keine host-tools mehr die ausschliesslich 32-Bit unterstützen. Somit kann alles auch unter aarch64 genutzt werden.<br>
+
+  - Siehe [a609823d](https://github.com/Freetz-NG/freetz-ng/commit/a609823d9cade184862e15fa4a18fb721ce0b8a9)<br>
+
 ### 2026-10-18
 Im menuconfig können bereits manche Fritzos 8.5x ausgwählt werden. Diese sind NICHT GETESTET.<br>
 Außerdem passen viele Patches noch nicht und brechen ab. Workaround: Problem beheben oder Patch deselektieren!<br>
