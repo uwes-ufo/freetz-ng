@@ -91,13 +91,13 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - HWR 259: [FRITZ.Box_7590_AX-08.40-137468-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/7590AX/FRITZ.Box_7590_AX-08.40-137468-LabBETA.image)
   - HWR 260: [FRITZ.Box_7583_VDSL-07.39-103078-LabBETA.image](http://download.example.com/labor/MOVE21/7583VDSL/FRITZ.Box_7583_VDSL-07.39-103078-LabBETA.image)
   - HWR 262: [FRITZ.Box_6850_LTE-08.40-137450-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/6850LTE/FRITZ.Box_6850_LTE-08.40-137450-LabBETA.image)
-  - HWR 267: [FRITZ.Box_6690_Cable-08.40-137204-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-137204-LabBETA.image)
+  - HWR 267: [FRITZ.Box_6690_Cable-08.40-137613-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-137613-LabBETA.image)
   - HWR 270: [FRITZ.Repeater_3000_AX-08.40-137504-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/3000AX/FRITZ.Repeater_3000_AX-08.40-137504-LabBETA.image)
   - HWR 271: [FRITZ.Box_7510-08.40-137459-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/7510/FRITZ.Box_7510-08.40-137459-LabBETA.image)
   - HWR 272: [FRITZ.Box_5590_Fiber-08.40-137427-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/5590Fiber/FRITZ.Box_5590_Fiber-08.40-137427-LabBETA.image)
 
 ### FOS-Inhaus
-  - HWR 226: [FRITZ.Box_7590-08.40-137463-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/7590/FRITZ.Box_7590-08.40-137463-Inhaus.image)
+  - HWR 226: [FRITZ.Box_7590-08.40-137641-Inhaus.image](http://download.example.com/inhaus/MyFRITZOSP1/7590/FRITZ.Box_7590-08.40-137641-Inhaus.image)
   - HWR 229: [FRITZ.Powerline_1260E-08.24-132169-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/1260E/FRITZ.Powerline_1260E-08.24-132169-Inhaus.image)
   - HWR 236: [FRITZ.Box_7530-08.24-131636-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/7530/FRITZ.Box_7530-08.24-131636-Inhaus.image)
   - HWR 240: [FRITZ.Repeater_600-08.24-130210-Inhaus.image](http://download.example.com/inhaus/Smart24P2NL1/600/FRITZ.Repeater_600-08.24-130210-Inhaus.image)
