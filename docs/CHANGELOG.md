@@ -110,6 +110,7 @@ Latest changes
     * rpcbind 1.3.1
     * ser2net 3.5.4/4.6.8
     * sispmctl 4.12
+    * Subversion 1.9.12/1.15.0
     * tcpdump 4.99.7
     * tmux 3.8
     * Tor 0.4.8.25/0.4.9.14
