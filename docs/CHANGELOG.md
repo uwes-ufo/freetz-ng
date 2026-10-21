@@ -113,6 +113,7 @@ Latest changes
     * tcpdump 4.99.7
     * tmux 3.8
     * Tor 0.4.8.25/0.4.9.14
+    * Unbound 1.26.2
     * Vim 9.2.1169
 
   - Libraries:
