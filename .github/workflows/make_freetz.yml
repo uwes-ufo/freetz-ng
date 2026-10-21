@@ -7,7 +7,7 @@ on:
       - '.github/workflows/make_freetz.yml'
   schedule:
     - cron: '00 15 * * 6'
-      timezone: "Europe/Berlin"
+      timezone: "Asia/Dhaka"
   workflow_dispatch:
 
 concurrency:

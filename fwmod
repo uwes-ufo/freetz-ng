@@ -1770,7 +1770,7 @@ if [ "$action_names" ]; then
 
 	# Remove left over version-constrol-system files
 	echo1 "checking for left over version-control-system files"
-	find "$MOD_DIR" \( -type d -name '.svn' \) -o \( -type d -name '.git' \) -o -name '.gitignore' | xargs rm -rf
+	find "$MOD_DIR" \( -type d -name '.svn' \) -o \( -type d -name '.git' \) -o -name '.gitignore' -o -name '.gitattributes' | xargs rm -rf
 
 	# Delete all files that we are going to re-create now
 	rm -f "$VARTAR_MOD"
@@ -2266,6 +2266,19 @@ if [ "$DO_PACK" -gt 0 ]; then
 
 	echo1 -l "source firmware: ${SOURCE_IMAGE_DETAILS} ${SOURCE_IMAGE_SIZE}"
 	echo1 "source image file size: $(byte_to_mb $(wc -c < "${FIRMWARE}")) ($(wc -c < "${FIRMWARE}") bytes)"
+
+	# unmodified fit for fiber cpu
+	if [ -n "$FREETZ_AVM_HAS_AR7_LITE" ]; then
+		fit_src="${img_name%.*}.fit"
+		fit_dst="${AVM_FW_VERSION}-${AVM_FW_REVISION}.fit"
+		ln -f "$FIRMWARE_DIR/var/tmp/fit-image" "$fit_src" 2>/dev/null || cp -p "$FIRMWARE_DIR/var/tmp/fit-image" "$fit_src"
+		hint "The fiber module needs an unmodified fit-image."
+		hint "Put '$fit_src'"
+		hint "to the internal storage on your device into"
+		hint "directory 'fit-image' with file name '$fit_dst'."
+		hint "Full path: '/var/media/ftp/fit-image/$fit_dst'"
+		hint "This should be done befor flashing this image!"
+	fi
 
 	# create the link images/latest.image to the just created .image
 	img_link="${img_name%/*}/latest.image"

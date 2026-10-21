@@ -65,10 +65,12 @@ Latest changes
 ### devel
 
   - Build system:
-    * ccache 4.14.1
+    * ccache 4.14.2
 
   - Host tools:
+    * ca-bundle 2026-10-20
     * cmake 4.4.4
+    * kconfig 7.3
     * openssl 3.5.9
     * patchelf 0.14.5/0.19.2
     * python3 3.14.8
@@ -88,6 +90,7 @@ Latest changes
     * axTLS wrapper 2.1.5
     * Bftpd 6.7
     * bridge-utils 1.7.1
+    * CA-bundle 2026-10-20
     * Curl 8.12.1/8.23.0
     * Empty 0.6.23d
     * endlessh 1.1
@@ -114,6 +117,7 @@ Latest changes
 
   - Libraries:
     * expat 2.7.5/2.9.0
+    * FreeType 2.15.0
     * gensio 3.0.4
     * GLib2 2.32.4/2.90.1
     * harfbuzz 14.6.0

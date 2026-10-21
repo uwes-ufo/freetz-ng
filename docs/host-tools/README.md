@@ -16,7 +16,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### C
 
-  * **[ca-bundle 2026-09-25](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
+  * **[ca-bundle 2026-10-20](ca-bundle-host.md)<a id='ca-bundle-host'></a>**<br>
 
   * **[cmake 4.4.4](cmake-host.md)<a id='cmake-host'></a>**<br>
 
@@ -54,11 +54,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### K
 
-  * **[kconfig 7.2](kconfig-host.md)<a id='kconfig-host'></a>**<br>
+  * **[kconfig 7.3](kconfig-host.md)<a id='kconfig-host'></a>**<br>
 
 ### L
-
-  * **[libdtc 1.6.1](libdtc-host.md)<a id='libdtc-host'></a>**<br>
 
   * **[libtool 2.6.2](libtool-host.md)<a id='libtool-host'></a>**<br>
 
@@ -152,7 +150,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
   * **[tichksum 1.0](tichksum-host.md)<a id='tichksum-host'></a>**<br>
 
-  * **[tools 2026-10-08](tools-host.md)<a id='tools-host'></a>**<br>
+  * **[tools 2026-10-20](tools-host.md)<a id='tools-host'></a>**<br>
 
 ### U
 
