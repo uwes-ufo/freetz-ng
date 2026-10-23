@@ -323,7 +323,7 @@
 </tbody></table>
 </details>
 
-<details><summary>137 verschiedene Geräte</summary>
+<details><summary>138 verschiedene Geräte</summary>
 
 <table>
 <caption style='background-color:gray'>T-Com (2)</caption>
@@ -428,7 +428,7 @@
 <tr><td>6890</td><td>FREETZ_TYPE_6890</td></tr>
 </tbody></table>
 <table>
-<caption style='background-color:gray'>Fon WLAN (47)</caption>
+<caption style='background-color:gray'>Fon WLAN (48)</caption>
 <thead><tr><th style='width:450px'>Name</th><th style='width:300px'>Symbol</th></tr></thead>
 <tbody>
 <tr><td>Fon WLAN</td><td>FREETZ_TYPE_WLAN</td></tr>
@@ -478,6 +478,7 @@
 <tr><td>7632</td><td>FREETZ_TYPE_7632</td></tr>
 <tr><td>7682</td><td>FREETZ_TYPE_7682</td></tr>
 <tr><td>7690</td><td>FREETZ_TYPE_7690</td></tr>
+<tr><td>7695 <DSL/Fiber 7-90></td><td>FREETZ_TYPE_7695</td></tr>
 </tbody></table>
 <table>
 <caption style='background-color:gray'>Powerline (6)</caption>
@@ -524,7 +525,7 @@
 </tbody></table>
 </details>
 
-<details><summary>419 verschiedene Images</summary>
+<details><summary>420 verschiedene Images</summary>
 
 <table>
 <caption style='background-color:gray'>&nbsp;</caption>
@@ -944,6 +945,7 @@
 <tr><td>FRITZ.Box_7690-08.02.image</td><td>FREETZ_TYPE_7690 &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_08_0X</td></tr>
 <tr><td>FRITZ.Box_7690-08.25.image</td><td>FREETZ_TYPE_7690 &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_08_2X</td></tr>
 <tr><td>FRITZ.Box_7690-08.50.image</td><td>FREETZ_TYPE_7690 &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_08_5X</td></tr>
+<tr><td>FRITZ.Box_DSL_Fiber_7-90-08.47.image</td><td>FREETZ_TYPE_7695 &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_08_5X</td></tr>
 <tr><td>FRITZ.Smart_Gateway-07.63-Release.image</td><td>FREETZ_TYPE_GATE &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_07_5X</td></tr>
 <tr><td>FRITZ.Smart_Gateway-08.02-Release.image</td><td>FREETZ_TYPE_GATE &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_08_0X</td></tr>
 <tr><td>FRITZ.Smart_Gateway-08.26-Release.image</td><td>FREETZ_TYPE_GATE &amp;&amp;<br> FREETZ_TYPE_FIRMWARE_08_2X</td></tr>
