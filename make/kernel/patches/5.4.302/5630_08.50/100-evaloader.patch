@@ -1,8 +1,8 @@
---- linux-5.4/arch/arm/Makefile
-+++ linux-5.4/arch/arm/Makefile
-@@ -304,6 +304,12 @@
- KBUILD_IMAGE := $(boot)/zImage
- endif
+--- linux-5.4/arch/arm64/Makefile
++++ linux-5.4/arch/arm64/Makefile
+@@ -63,6 +63,12 @@
+ KBUILD_CFLAGS	+= $(call cc-option,-mabi=lp64)
+ KBUILD_AFLAGS	+= $(call cc-option,-mabi=lp64)
  
 +vmlinux.bin: vmlinux
 +	$(CROSS_COMPILE)objcopy --remove-section .note.gnu.build-id -S -O binary $< $@
