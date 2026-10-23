@@ -23,7 +23,6 @@ Currently supported devices and firmwares
   * [T-Com derivatives](#t-com-derivatives)
   * [Alice derivatives](#alice-derivatives)
 
-<br>
 
 ### Not supported devices
 
