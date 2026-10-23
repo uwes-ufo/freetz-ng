@@ -82,13 +82,13 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
   - HWR 276: [FRITZ.Box_7520_B-08.25.image](http://download.avm.de/fritzbox/fritzbox-7520-B/deutschland/fritz.os/FRITZ.Box_7520_B-08.25.image)
 
 ### FOS-Labor
-  - HWR 226: [FRITZ.Box_7590-08.40-137465-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/7590/FRITZ.Box_7590-08.40-137465-LabBETA.image)
+  - HWR 226: [FRITZ.Box_7590-08.40-137643-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/7590/FRITZ.Box_7590-08.40-137643-LabBETA.image)
   - HWR 233: [FRITZ.Box_6591_Cable-08.24-130621-LabBETA.image](http://download.example.com/labor/Smart24P2NL1/6591Cable/FRITZ.Box_6591_Cable-08.24-130621-LabBETA.image)
   - HWR 239: [FRITZ.Box_7583-07.39-103075-LabBETA.image](http://download.example.com/labor/MOVE21/7583/FRITZ.Box_7583-07.39-103075-LabBETA.image)
   - HWR 253: [FRITZ.Repeater_6000-08.40-137511-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/6000/FRITZ.Repeater_6000-08.40-137511-LabBETA.image)
   - HWR 257: [FRITZ.Box_5530_Fiber-08.24-133263-LabBETA.image](http://download.example.com/labor/Smart24P2NL1/5530Fiber/FRITZ.Box_5530_Fiber-08.24-133263-LabBETA.image)
   - HWR 258: [FRITZ.Box_6850_5G-08.40-137444-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/68505G/FRITZ.Box_6850_5G-08.40-137444-LabBETA.image)
-  - HWR 259: [FRITZ.Box_7590_AX-08.40-137468-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/7590AX/FRITZ.Box_7590_AX-08.40-137468-LabBETA.image)
+  - HWR 259: [FRITZ.Box_7590_AX-08.40-137646-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/7590AX/FRITZ.Box_7590_AX-08.40-137646-LabBETA.image)
   - HWR 260: [FRITZ.Box_7583_VDSL-07.39-103078-LabBETA.image](http://download.example.com/labor/MOVE21/7583VDSL/FRITZ.Box_7583_VDSL-07.39-103078-LabBETA.image)
   - HWR 262: [FRITZ.Box_6850_LTE-08.40-137450-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/6850LTE/FRITZ.Box_6850_LTE-08.40-137450-LabBETA.image)
   - HWR 267: [FRITZ.Box_6690_Cable-08.40-137613-LabBETA.image](http://download.example.com/labor/MyFRITZOSP1/6690Cable/FRITZ.Box_6690_Cable-08.40-137613-LabBETA.image)
@@ -154,6 +154,7 @@ Content: [FOS-Release](#fos-release) - [FOS-Labor](#fos-labor) - [FOS-Inhaus](#f
 
 ### Dect-Labor
   - MHW 06.04: [06.04.03.54.avm.de.upd](http://download.avm.de/dect/0604/p15/06.04.03.54.avm.de.upd)
+  - MHW 06.16: [06.16.05.02.avm.de.upd](http://download.avm.de/dect/0616/FW_05.02/06.16.05.02.avm.de.upd)
   - MHW 08.01: [08.01.05.11.avm.de.upd](http://download.avm.de/dect/0801/smart24p1/08.01.05.11.avm.de.upd)
   - MHW 08.02: [08.02.05.11.avm.de.upd](http://download.avm.de/dect/0802/smart24p1/08.02.05.11.avm.de.upd)
   - MHW 08.03: [08.03.05.12.avm.de.upd](http://download.avm.de/dect/0803/smart24p1/08.03.05.12.avm.de.upd)
