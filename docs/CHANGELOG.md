@@ -91,6 +91,7 @@ Latest changes
   - Packages:
     * Apache2 2.4.69
     * axTLS wrapper 2.1.5
+    * BIND 9.11.37/9.20.30
     * Bftpd 6.7
     * bridge-utils 1.7.1
     * CA-bundle 2026-10-20
