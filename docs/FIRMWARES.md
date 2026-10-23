@@ -23,7 +23,6 @@ Currently supported devices and firmwares
   * [T-Com derivatives](#t-com-derivatives)
   * [Alice derivatives](#alice-derivatives)
 
-<br>
 
 ### Not supported devices
 
@@ -494,6 +493,7 @@ Currently supported devices and firmwares
     - 256.07.57 rev109901 {ALL} [MOVE21NL1]
     - 256.08.02 rev117981 {ALL} [Smart24 P1 NL1]
     - 256.08.25 rev131440 {ALL} [Smart24 P2 NL1]
+    - 256.08.50 rev137523 {ALL} [MyFRITZOS P1]
   * __Fritz!Box Fon WLAN 7530 AX B__
     - 278.08.02 rev119131 {ALL} [Smart24 P1 FCS]
   * __Fritz!Box Fon WLAN 7560__
@@ -564,6 +564,8 @@ Currently supported devices and firmwares
     - 285.08.02 rev117971 {ALL} [Smart24 P1 FCS]
     - 285.08.25 rev134025 {ALL} [Smart24 P2 NL1]
     - 285.08.50 rev136731 {ALL} [MyFRITZOS P1]
+  * __Fritz!Box 7695 <DSL/Fiber 7-90>__
+    - 316.08.47 rev136899 {ALL} [MyFRITZOS P1]
 
 ### Fritz!Powerline
 
