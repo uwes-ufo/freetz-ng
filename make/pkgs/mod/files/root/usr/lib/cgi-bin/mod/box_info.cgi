@@ -97,7 +97,7 @@ fi
 _CONFIG_TFFS="$(echo $CONFIG_ROMSIZE | sed -ne "s/^.*sflash_size=\([0-9BKMG]*\).*/\1/p" | sed -r 's/([0-9]*)/\1 /' | grep -v '^0 ')"
 _CONFIG_NAND="$(echo $CONFIG_ROMSIZE | sed -ne   "s/^.*nand_size=\([0-9BKMG]*\).*/\1/p" | sed -r 's/([0-9]*)/\1 /' | grep -v '^0 ')"
 _CONFIG_EMMC="$(echo $CONFIG_ROMSIZE | sed -ne   "s/^.*emmc_size=\([0-9BKMG]*\).*/\1/p" | sed -r 's/([0-9]*)/\1 /' | grep -v '^0 ')"
-[ $(which run_clock) ] && run_clock=$(run_clock | sed 's/.*: //') && service_code=$(run_clock -S)
+[ $(which run_clock) ] && run_clock="$(run_clock | sed 's/.*: //')" && service_code="$(run_clock -S | sed 's/.* //')"
 reboot_status="$(cat /proc/sys/urlader/reboot_status 2>/dev/null)"
 
 if [ -e /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies ]; then
