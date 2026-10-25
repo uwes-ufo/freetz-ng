@@ -1,5 +1,11 @@
 # Neuigkeiten
 
+### 2026-10-25
+Das menuconfig von kconfig nutzt jetzt das neue Theme `dark`, vorher war es `bluetitle`.<br>
+Es stehen 5 Themes zur Auswahl: `menuconfig` - `Toolchain options` - `Theme for menuconfig`<br>
+
+  - Siehe [28a3e561](https://github.com/Freetz-NG/freetz-ng/commit/28a3e5611371dbfbb361db7f51e9410a87529d4c)<br>
+
 ### 2026-10-20
 Es gibt jetzt keine host-tools mehr die ausschliesslich 32-Bit unterstützen. Somit kann alles auch unter aarch64 genutzt werden.<br>
 Siehe<br>

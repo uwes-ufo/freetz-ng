@@ -190,14 +190,14 @@ config FREETZ_AVM_HAS_KERNEL_CONFIG_AREA
 
 config FREETZ_AVM_HAS_FIT_SIZE
 	int
-	default 999  if FREETZ_TYPE_1700
-	default 999  if FREETZ_TYPE_2700
+	default 64   if FREETZ_TYPE_1700
+	default 64   if FREETZ_TYPE_2700
 	default 80   if FREETZ_TYPE_4060
 	default 80   if FREETZ_TYPE_4690
 	default 50   if FREETZ_TYPE_5530
 	default 80   if FREETZ_TYPE_5590
 	default 999  if FREETZ_TYPE_5630_NIX
-	default 999  if FREETZ_TYPE_5630_XGS
+	default 112  if FREETZ_TYPE_5630_XGS
 	default 999  if FREETZ_TYPE_5690_NIX
 	default 80   if FREETZ_TYPE_5690_PRO
 	default 999  if FREETZ_TYPE_5690_XGS
