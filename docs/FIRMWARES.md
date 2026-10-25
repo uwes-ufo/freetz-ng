@@ -651,7 +651,7 @@ Currently supported devices and firmwares
     - 296.08.26 rev135004 {ALL} [Smart24 P2 NL1]
   * __Fritz!Repeater 1610 Outdoor (UNTESTED)__
     - 305.08.25 rev134317 {ALL} [Smart24 P2 NL1]
-  * __Fritz!Repeater 1700 (UNTESTED)__
+  * __Fritz!Repeater 1700__
     - 290.08.07 rev128069 {ALL} [Smart24 P1 FCS]
     - 290.08.26 rev136867 {ALL} [Smart24 P2 NL1]
   * __Fritz!Repeater 2400__
@@ -659,7 +659,7 @@ Currently supported devices and firmwares
     - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
     - 169.07.58 rev111615 {ALL} [MOVE21NL1]
     - 169.08.25 rev132922 {ALL} [Smart24 P2 NL1]
-  * __Fritz!Repeater 2700 (UNTESTED)__
+  * __Fritz!Repeater 2700__
     - 301.08.07 rev128070 {ALL} [Smart24 P1 FCS]
     - 301.08.26 rev136868 {ALL} [Smart24 P2 NL1]
   * __Fritz!Repeater 3000__
