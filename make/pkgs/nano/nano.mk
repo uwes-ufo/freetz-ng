@@ -54,6 +54,7 @@ ifeq ($(strip $(FREETZ_TARGET_UCLIBC_1_0_14)),y)
 $(PKG)_CONFIGURE_ENV += ac_cv_func_getrandom=no
 $(PKG)_CONFIGURE_ENV += gl_cv_onwards_func_getrandom=yes
 endif
+$(PKG)_CONFIGURE_ENV += CFLAGS="$(TARGET_CFLAGS) --std=gnu11"
 
 $(PKG)_SYNTAX_FILES_LIST:=
 $(PKG)_SYNTAX_FILES_LIST += $(if $(FREETZ_PACKAGE_NANO_SYNTAX_FILE_SH),sh.nanorc)
