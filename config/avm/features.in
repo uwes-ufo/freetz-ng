@@ -188,7 +188,20 @@ config FREETZ_AVM_HAS_KERNEL_CONFIG_AREA
 	depends on FREETZ_KERNEL_VERSION_3_MIN
 	depends on !FREETZ_SYSTEM_TYPE_PUMA7
 
-config FREETZ_AVM_HAS_FIT_SIZE
+config FREETZ_AVM_HAS_FIT_FS_SIZE
+	int
+	default 48   if FREETZ_TYPE_1700
+	default 48   if FREETZ_TYPE_2700
+	default 999  if FREETZ_TYPE_5630_NIX
+	default 999  if FREETZ_TYPE_5630_XGS
+	default 999  if FREETZ_TYPE_5690_XGS
+	default 0
+	depends on FREETZ_AVM_HAS_FWLAYOUT_5
+	help
+		The maximum size (in MB) of the filesystem inside fit-image.
+		TODO: 999 = unknown
+
+config FREETZ_AVM_HAS_FIT_IMG_SIZE
 	int
 	default 64   if FREETZ_TYPE_1700
 	default 64   if FREETZ_TYPE_2700
