@@ -1,5 +1,10 @@
 # Neuigkeiten
 
+### 2026-10-26
+Höhere Preise, dafür halber RAM und halber Flash. Bis zu 7 Fritzboxen betroffen.
+
+  - Siehe [Router-FAQ.de: Hat FRITZ! den Speicher (der FRITZ!Box 5690 Pro) halbiert?](https://www.router-faq.de/?id=newsuinfo&newsuinfo=202610_fb5690prospeicher)<br>
+
 ### 2026-10-25
 Das menuconfig von kconfig nutzt jetzt das neue Theme `dark`, vorher war es `bluetitle`.<br>
 Es stehen 5 Themes zur Auswahl: `menuconfig` - `Toolchain options` - `Theme for menuconfig`<br>

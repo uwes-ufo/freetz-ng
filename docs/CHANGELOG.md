@@ -73,7 +73,7 @@ Latest changes
     * kconfig 7.3
     * openssl 3.5.9
     * patchelf 0.14.5/0.19.2
-    * python3 3.14.9
+    * python3 3.14.10
     * U-Boot 2026.10
 
   - AVM sources:
