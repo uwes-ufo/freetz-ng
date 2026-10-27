@@ -86,6 +86,7 @@ Latest changes
 
   - Patches:
     * New tagging: custom & modded
+    * New Patch: Remove ASSETSD (assets downloader)
     * Various Fritzos 8.25 related fixes
     * Various Fritzos 8.50 related fixes
 
