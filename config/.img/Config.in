@@ -3372,6 +3372,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -3506,6 +3508,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -5153,6 +5157,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -5287,6 +5293,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -5430,6 +5438,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -6945,6 +6955,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -7087,6 +7099,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -8038,6 +8052,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -8172,6 +8188,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -13814,6 +13832,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -14156,6 +14176,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -14326,6 +14348,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -14844,6 +14868,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -15017,6 +15043,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -15188,6 +15216,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -15356,6 +15386,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -15527,6 +15559,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -17390,6 +17424,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -17540,6 +17576,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -18067,6 +18105,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -18245,6 +18285,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -18417,6 +18459,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -18595,6 +18639,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -18770,6 +18816,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -18943,6 +18991,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -19115,6 +19165,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -19460,6 +19512,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -19635,6 +19689,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -19807,6 +19863,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -23561,6 +23619,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -23739,6 +23799,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -24422,6 +24484,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -24592,6 +24656,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -24931,6 +24997,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -25101,6 +25169,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -25623,6 +25693,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -25795,6 +25867,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -25969,6 +26043,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -26121,6 +26197,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -27809,6 +27887,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -27949,6 +28029,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -29482,6 +29564,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -29655,6 +29739,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -29825,6 +29911,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -30345,6 +30433,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -30517,6 +30607,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -30691,6 +30783,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -30850,6 +30944,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -31001,6 +31097,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -31151,6 +31249,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -45890,6 +45990,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -46069,6 +46171,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -46245,6 +46349,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -46781,6 +46887,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -46959,6 +47067,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -47648,6 +47758,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -47824,6 +47936,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -48362,6 +48476,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -48540,6 +48656,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -49732,6 +49850,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -49918,6 +50038,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -50106,6 +50228,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -50290,6 +50414,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -53684,6 +53810,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -53862,6 +53990,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -54736,6 +54866,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -54914,6 +55046,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -55466,6 +55600,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -55646,6 +55782,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -57311,6 +57449,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -57489,6 +57629,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -57669,6 +57811,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -57846,6 +57990,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -58021,6 +58167,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -58193,6 +58341,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -58368,6 +58518,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -58713,6 +58865,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -58887,6 +59041,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
@@ -59063,6 +59219,8 @@ config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
 	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
+	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
 config FREETZ_AVM_HAS_WIREGUARD
@@ -59237,6 +59395,8 @@ config FREETZ_AVM_HAS_SHOWDSLDSTAT
 config FREETZ_AVM_HAS_DSLD
 	def_bool y
 config FREETZ_AVM_HAS_MULTID
+	def_bool y
+config FREETZ_AVM_HAS_ASSETSD
 	def_bool y
 config FREETZ_AVM_HAS_VPN
 	def_bool y
