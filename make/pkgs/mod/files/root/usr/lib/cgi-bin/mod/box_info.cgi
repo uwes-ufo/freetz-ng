@@ -111,10 +111,7 @@ else
 	[ -z "$_SYS_FRQ" ] && _SYS_FRQ="$(sed 's/000$//' /sys/devices/system/cpu/cpu1/cpufreq/cpuinfo_max_freq)"
 fi
 
-_CPU_TMP="$(sed -rn 's!^Channel .: ([0-9.]*) .*!\1!p' /proc/chip_temperature 2>/dev/null | sort -r | head -n1)"
-[ -z "$_CPU_TMP" ] && _CPU_TMP="$(sed 's/^../&./' /sys/devices/virtual/thermal/thermal_zone0/temp 2>/dev/null)"
-[ -z "$_CPU_TMP" ] && _CPU_TMP="$(sed 's/ .*//g' /proc/avm/powermanagmentressourceinfo/powerdevice_temperature | grep -v '^0$' 2>/dev/null)"
-[ -z "$_CPU_TMP" ] && _CPU_TMP="$(sed -rn 's!^(CPU|cpu-thermal) *: ([0-9.]*) .*!\2!p' /proc/avm/temp_sensors 2>/dev/null)"
+_CPU_TMP="$(modtemp)"
 
 
 sec_begin "$(lang de:"Hardware" en:"Hardware")"

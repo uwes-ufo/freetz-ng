@@ -184,7 +184,7 @@ cat << EOF
 <p>
 <input type="hidden" name="temp_enb" value="no">
 <input id="f1" type="checkbox" name="temp_enb" value="yes"$temp_enb_chk>
-<label for="f1">$(lang de:"Temperatur aufzeichnen und anzeigen" en:"Temperature logging and graphs")</label></p>
+<label for="f1">$(lang de:"Temperatur aufzeichnen und anzeigen (wenn vorhanden)" en:"Temperature logging and graphs (if available)")</label></p>
 EOF
 fi
 
