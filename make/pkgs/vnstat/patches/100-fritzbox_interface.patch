@@ -122,7 +122,7 @@
 +			/* START - FRITZBOX BOOT WORKAROUND */
 +			if (strcmp(ifinfo.name, "fritzbox") == 0) {
 +				data.currx = ifinfo.rx;
-+				data.currx = ifinfo.rx;
++				data.curtx = ifinfo.tx;
 +			} else {
 +				data.currx=0;
 +				data.curtx=0;
