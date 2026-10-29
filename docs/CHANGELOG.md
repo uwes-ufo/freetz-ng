@@ -120,6 +120,7 @@ Latest changes
     * ser2net 3.5.4/4.6.8
     * sispmctl 4.12
     * strace 4.9/5.0/7.3
+    * SQLite 3.40.1/3.54.1
     * Subversion 1.9.12/1.15.0
     * tcpdump 4.99.7
     * tmux 3.8
