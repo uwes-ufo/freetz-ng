@@ -4,7 +4,7 @@
 
 . /mod/etc/conf/vnstat.cfg
 
-_NICE=$(which nice)
+_NICE="$(which nice 2>/dev/null)"
 NOCACHE="?nocache=$(date -Iseconds | sed 's/T/_/g;s/+.*$//g;s/:/-/g')"
 TEMPDIR=/tmp/vnstat
 mkdir -p $TEMPDIR

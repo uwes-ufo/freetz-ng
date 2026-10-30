@@ -11,10 +11,10 @@ config() {
 	local SUBDAEMON=vns
 	modlib_config httpd-$SUBDAEMON /mod/etc/httpd-${SUBDAEMON}.conf
 
-	mkdir $VNSTAT_DBDIR 2>/dev/null
+	mkdir "$VNSTAT_DBDIR" 2>/dev/null
 	mkdir -p /var/lib
 	rm -rf /var/lib/vnstat 2>/dev/null
-	ln -s $VNSTAT_DBDIR /var/lib/vnstat
+	ln -s "$VNSTAT_DBDIR" /var/lib/vnstat
 
 	if [ -z "$VNSTAT_INTERFACES" ]; then
 		VNSTAT_INTERFACES=$(ifconfig | grep "^\w" | sed 's/ .*//g' | grep -v ':')
@@ -38,8 +38,9 @@ config() {
 		if [ $? -ne 0 ]; then
 			echo 'failed.'
 			vnstat -u -i $ifname --config /tmp/flash/vnstat/vnstat.conf
+			ret=$?
 			echo 'Is your USB-device yet available?'
-			exit $?
+			exit $ret
 		fi
 	done
 }
@@ -60,7 +61,7 @@ start() {
 		webcfg-vns -P $HTTPD_PID_VNS
 	fi
 	modlib_startdaemon $DAEMON_BIN -s -d --config /tmp/flash/vnstat/vnstat.conf
-	[ -x /mod/etc/init.d/rc.inetd ] && //mod/etc/init.d/rc.inetd config vnstat
+	[ -x /mod/etc/init.d/rc.inetd ] && /mod/etc/init.d/rc.inetd config vnstat
 	modreg status vnstat vnstat stats
 }
 
