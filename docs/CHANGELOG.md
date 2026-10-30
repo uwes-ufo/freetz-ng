@@ -69,7 +69,7 @@ Latest changes
 
   - Host tools:
     * ca-bundle 2026-10-20
-    * cmake 4.4.4
+    * cmake 4.4.5
     * kconfig 7.3
     * openssl 3.5.9
     * patchelf 0.14.5/0.19.2
@@ -120,13 +120,15 @@ Latest changes
     * ser2net 3.5.4/4.6.8
     * sispmctl 4.12
     * strace 4.9/5.0/7.3
+    * SQLite 3.40.1/3.54.1
     * Subversion 1.9.12/1.15.0
     * tcpdump 4.99.7
     * tmux 3.8
-    * Tor 0.4.8.25/0.4.9.14
+    * Tor 0.4.8.25/0.4.9.15
     * Transmission 3.00/4.1.4
     * Unbound 1.26.2
     * Vim 9.2.1169
+    * vnStat 1.18/2.13
 
   - Libraries:
     * expat 2.7.5/2.9.0

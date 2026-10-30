@@ -661,7 +661,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>spawn-fcgi 1.6.3 (binary only) - DEPRECATED</u><a id='spawn-fcgi'></a>**<br>
     Spawns FastCGI processes
 
-  * **[SQLite 3.40.1/3.53.4 (binary only)](sqlite.md)<a id='sqlite'></a>**<br>
+  * **[SQLite 3.40.1/3.54.1 (binary only)](sqlite.md)<a id='sqlite'></a>**<br>
     SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.
 
   * **<u>squashfs3: squashfs-tools 3.4</u><a id='squashfs3'></a>**<br>
@@ -731,7 +731,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[tmux 3.8 (binary only)](tmux.md)<a id='tmux'></a>**<br>
     tmux, a BSD-licensed alternative to GNU screen. Uses ncurses.
 
-  * **[Tor 0.4.8.25/0.4.9.14](tor.md)<a id='tor'></a>**<br>
+  * **[Tor 0.4.8.25/0.4.9.15](tor.md)<a id='tor'></a>**<br>
     The Onion Router Anonymous Internet communication system.
 
   * **[Transmission 3.00/4.1.4 (binary only)](transmission.md)<a id='transmission'></a>**<br>
@@ -780,7 +780,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[VLMCSD svn1113](vlmcsd.md)<a id='vlmcsd'></a>**<br>
     vlmcsd is a fully Microsoft compatible KMS server hat provides product activation services to clients. It is designed to run on POSIX compatible operating systens. Only requirements are a basic C library with a BSD-style sockets API and either fork(2) or pthreads(7). That allows it to run on most embedded systems like routers, NASes, etc.
 
-  * **[vnStat 1.18 (binary only) - DEPRECATED](vnstat.md)<a id='vnstat'></a>**<br>
+  * **[vnStat 1.18/2.13 (binary only)](vnstat.md)<a id='vnstat'></a>**<br>
     vnStat is a console-based network traffic monitor. It keeps a log of hourly, daily and monthly network traffic for the selected interface(s). However, it isn't a packet sniffer. The traffic information is analyzed from the proc(5) filesystem. That way vnStat can be used even without root permissions.
 
   * **[Vpnc 0.5.3 - DEPRECATED](vpnc.md)<a id='vpnc'></a>**<br>
@@ -988,8 +988,8 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Transmission CGI</u><a id='transmission'></a>**<br>
     Provides a simple configuration interface for transmission-daemon.
 
-  * **<u>vnstat-cgi: vnstat Webinterface - DEPRECATED</u><a id='vnstat'></a>**<br>
-    Lets you view graphically the output of vnstat.
+  * **<u>vnstat-cgi: vnstat Webinterface</u><a id='vnstat'></a>**<br>
+    Lets you view graphically the output of vnStat.
 
   * **<u>wol-cgi: Wake-on-LAN (WoL) CGI</u><a id='wol'></a>**<br>
     Web configuration interface for Etherwake wake-on-LAN. Accessible via the URL http://fritz.box:84, it enables you to interactively wake up sleeping or switched off computers in the LAN reachable from you router box. Which machines can be woken up can be configured using the regular Freetz web interface.
