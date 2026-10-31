@@ -10,6 +10,18 @@ https://github.com/NixOS/patchelf/commit/109b771f53ee3d37ede8c0f165665605183c097
 Issue: https://github.com/NixOS/patchelf/issues/663
 "BE(?) broken since 0.15.0"
 
+fail: 7390-MIPS(BE) + 6360-ARMEB
+okay: 7170-MISPEL + 4040-ARM(LE) + 6430-Ix86 + 5690XGS-AARCH64(LE)
+(
+  for x in source/target-*/busybox-*/busybox; do
+    echo "##### $x"
+    cp "$x" ./busybox
+    tools/patchelf ./busybox --set-interpreter /usr/lib/freetz/ld-uClibc.so.1
+    readelf -l ./busybox #>/dev/null
+  done
+)
+readelf: Error: the PHDR segment is not covered by a LOAD segment
+
 --- a/src/patchelf.cc
 +++ b/src/patchelf.cc
 @@ -586,9 +586,9 @@

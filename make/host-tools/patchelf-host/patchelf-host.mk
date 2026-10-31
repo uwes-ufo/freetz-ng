@@ -1,17 +1,4 @@
 $(call TOOLS_INIT, $(if $(FREETZ_TOOLS_PATCHELF_VERSION_ABANDON),0.14.5,0.19.3))
-# remove patchelf-target-host when fixed !
-# BE(?) broken since
-# "Rework file shifting to avoid sections crossing multiple segments"
-# https://github.com/NixOS/patchelf/commit/109b771f53ee3d37ede8c0f165665605183c0975
-# fail: 7390-MIPS(BE) + 6360-ARMEB
-# okay: 7170-MISPEL + 4040-ARM(LE) + 6430-Ix86 + 5690XGS-AARCH64(LE)
-#for x in source/target-*/busybox-*/busybox; do
-# echo "##### $x"
-# cp "$x" ./busybox
-# tools/patchelf ./busybox --set-interpreter /usr/lib/freetz/ld-uClibc.so.1
-# readelf -l ./busybox #>/dev/null
-#done
-# readelf: Error: the PHDR segment is not covered by a LOAD segment
 $(PKG)_SOURCE:=patchelf-$($(PKG)_VERSION).tar.bz2
 $(PKG)_HASH_ABANDON:=b9a46f2989322eb89fa4f6237e20836c57b455aa43a32545ea093b431d982f5c
 $(PKG)_HASH_CURRENT:=20dbe23e9dbc4ad769078a867ad002c04297a069ff93c95fb72242dd55d4dd6f
@@ -33,9 +20,7 @@ $(PKG)_REBUILD_SUBOPTS += FREETZ_TOOLS_PATCHELF_VERSION_ABANDON
 $(PKG)_CONFIGURE_PRE_CMDS += $(AUTORECONF)
 
 
-#
 $(TOOLS_SOURCE_DOWNLOAD)
-#
 $(TOOLS_UNPACKED)
 $(TOOLS_CONFIGURED_CONFIGURE)
 
