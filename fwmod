@@ -193,7 +193,7 @@ BUSYBOX="${TOOLS_DIR}/${BUSYBOX_TOOL}"
 BLKID="${TOOLS_DIR}/blkid"
 
 # Tools in $PATH
-PATCHELF_TARGET="patchelf-target"
+PATCHELF="patchelf"
 
 # Freetz directores relative to base dir
 PACKAGES_DIR_ROOT="${BASE_DIR}/packages"
