@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         box: ["5690", "7270", "7490"]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
 
