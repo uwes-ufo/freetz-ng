@@ -270,7 +270,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[htop 1.0.3/3.5.3 (binary only)](htop.md)<a id='htop'></a>**<br>
     htop is a more powerful alternative to top, using ncurses.
 
-  * **[htpdate 2.0.2](htpdate.md)<a id='htpdate'></a>**<br>
+  * **[htpdate 2.1.0](htpdate.md)<a id='htpdate'></a>**<br>
     The HTTP Time Protocol (HTP) is used to synchronize a computer's time with web servers as reference time source. Htpdate will synchronize your computer's time by extracting timestamps from HTTP headers found in web server responses. Htpdate can be used as a daemon, to keep your computer synchronized. WWW: http://www.clevervest.com/htp/ Manpage: http://linux.die.net/man/8/htpdate This package automatically removes AVM'S chronyd if necessary.
 
   * **<u>httpry 0.1.8 - DEPRECATED</u><a id='httpry'></a>**<br>
@@ -293,7 +293,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[IGMPproxy 0.4](igmpproxy.md)<a id='igmpproxy'></a>**<br>
     IGMPproxy is a simple dynamic Multicast Routing Daemon using only IGMP signalling. It's intended for simple forwarding of Multicast traffic between networks.
 
-  * **[ImageMagick 7.1.0-62/7.1.2-34 (binary only)](imagemagick.md)<a id='imagemagick'></a>**<br>
+  * **[ImageMagick 7.1.0-62/7.1.2-35 (binary only)](imagemagick.md)<a id='imagemagick'></a>**<br>
     ImageMagick is a robust collection of tools and libraries to read, write, and manipulate an image in many image formats, including popular formats like TIFF, JPEG, PNG, PDF, PhotoCD, and GIF. With ImageMagick, you can create images dynamically, making it suitable for Web applications. You can also resize, rotate, sharpen, color-reduce, or add special effects to an image and save your completed work in many different image formats. Image processing operations are available from the command line as well as through C, C++, and PERL-based programming interfaces.
 
   * **[Inadyn-mt 02.28.10 - DEPRECATED](inadyn-mt.md)<a id='inadyn-mt'></a>**<br>
@@ -602,7 +602,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[RRDtool 1.2.30/1.11.0 (binary only)](rrdtool.md)<a id='rrdtool'></a>**<br>
     RRDtool is the OpenSource industry standard, high performance data logging and graphing system for time series data. Use it to write your custom monitoring shell scripts or create whole applications using its PHP bindings.
 
-  * **[rsync 3.4.1/3.5.1](rsync.md)<a id='rsync'></a>**<br>
+  * **[rsync 3.4.1/3.5.2](rsync.md)<a id='rsync'></a>**<br>
     rsync is an open source utility that provides fast incremental file transfer.
 
   * **<u>RTMPDump 2.4-git (binary only) - DEPRECATED</u><a id='rtmpdump'></a>**<br>
@@ -780,7 +780,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[VLMCSD svn1113](vlmcsd.md)<a id='vlmcsd'></a>**<br>
     vlmcsd is a fully Microsoft compatible KMS server hat provides product activation services to clients. It is designed to run on POSIX compatible operating systens. Only requirements are a basic C library with a BSD-style sockets API and either fork(2) or pthreads(7). That allows it to run on most embedded systems like routers, NASes, etc.
 
-  * **[vnStat 1.18/2.13 (binary only)](vnstat.md)<a id='vnstat'></a>**<br>
+  * **[vnStat 1.18/2.14 (binary only)](vnstat.md)<a id='vnstat'></a>**<br>
     vnStat is a console-based network traffic monitor. It keeps a log of hourly, daily and monthly network traffic for the selected interface(s). However, it isn't a packet sniffer. The traffic information is analyzed from the proc(5) filesystem. That way vnStat can be used even without root permissions.
 
   * **[Vpnc 0.5.3 - DEPRECATED](vpnc.md)<a id='vpnc'></a>**<br>
@@ -988,7 +988,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>Transmission CGI</u><a id='transmission'></a>**<br>
     Provides a simple configuration interface for transmission-daemon.
 
-  * **<u>vnstat-cgi: vnstat Webinterface</u><a id='vnstat'></a>**<br>
+  * **<u>vnstat-cgi: vnStat Webinterface</u><a id='vnstat'></a>**<br>
     Lets you view graphically the output of vnStat.
 
   * **<u>wol-cgi: Wake-on-LAN (WoL) CGI</u><a id='wol'></a>**<br>

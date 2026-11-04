@@ -73,7 +73,7 @@ Latest changes
     * kconfig 7.3
     * openssl 3.5.9
     * patchelf 0.14.5/0.19.3
-    * python3 3.14.10
+    * python3 3.15.2
     * U-Boot 2026.10
 
   - AVM sources:
@@ -103,7 +103,8 @@ Latest changes
     * FFmpeg 5.1.10/7.1.5
     * Git 2.26.2/2.56.0
     * GnuTLS 3.7.11/3.8.13
-    * ImageMagick 7.1.0-62/7.1.2-34
+    * htpdate 2.1.0
+    * ImageMagick 7.1.0-62/7.1.2-35
     * iPerf3 3.3/3.22
     * lsof 4.99.7
     * Lua 5.1.5/5.5.1
@@ -117,6 +118,7 @@ Latest changes
     * procps-ng 4.0.7
     * Python3 3.14.8
     * rpcbind 1.3.1
+    * rsync 3.4.1/3.5.2
     * ser2net 3.5.4/4.6.8
     * sispmctl 4.12
     * strace 4.9/5.0/7.3
@@ -128,10 +130,10 @@ Latest changes
     * Transmission 3.00/4.1.4
     * Unbound 1.26.2
     * Vim 9.2.1169
-    * vnStat 1.18/2.13
+    * vnStat 1.18/2.14
 
   - Libraries:
-    * expat 2.7.5/2.9.0
+    * expat 2.7.5/2.10.0
     * FreeType 2.15.0
     * fribidi 1.0.18
     * gensio 3.0.4
