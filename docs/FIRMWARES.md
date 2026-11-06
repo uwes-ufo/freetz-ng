@@ -110,6 +110,7 @@ Currently supported devices and firmwares
     - 287.07.58 rev115740 {ALL} [MOVE21NL1]
     - 287.08.02 rev118032 {ALL} [Smart24 P1 FCS]
     - 287.08.25 rev134116 {ALL} [Smart24 P2 NL1]
+    - 287.08.51 rev137945 {ALL} [MyFRITZOS P1]
 
   * __Fritz!Box 4060__
     - 261.07.30 rev95826 {ALL} [PSQ19P2NL4]
@@ -118,9 +119,11 @@ Currently supported devices and firmwares
     - 261.08.25 rev134164 {ALL} [Smart24 P2 NL1]
   * __Fritz!Box 4630 (UNTESTED)__
     - 307.08.25 rev134090 {ALL} [Smart24 P2 NL1]
+    - 307.08.51 rev137970 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 4690__
     - 291.08.03 rev118786 {ALL} [Smart24 P1 FCS]
     - 291.08.25 rev134165 {ALL} [Smart24 P2 NL1]
+    - 291.08.51 rev137966 {ALL} [MyFRITZOS P1]
 
 ### Fritz!Box Fon (50xx/51xx)
 
@@ -222,11 +225,13 @@ Currently supported devices and firmwares
     - 284.07.63 rev113732 {GER} [FCS23]
     - 284.08.03 rev118552 {GER} [Smart24 P1 FCS]
     - 284.08.25 rev132295 {GER} [Smart24 P2 NL1]
+    - 284.08.51 rev137879 {GER} [MyFRITZOS P1]
   * __Fritz!Box 6690 Cable__
     - 267.07.29 rev92355 {GER} [PSQ19P2NL4]
     - 267.07.57 rev109915 {GER} [MOVE21NL1]
     - 267.08.03 rev118555 {GER} [Smart24 P1 NL1]
     - 267.08.25 rev132475 {GER} [Smart24 P2 NL1]
+    - 267.08.51 rev137878 {GER} [MyFRITZOS P1]
   * __Fritz!Box 6690 PRO (UNTESTED)__
     - 308.08.26 rev135073 {GER} [Smart24 P2 NL1]
 
@@ -555,6 +560,9 @@ Currently supported devices and firmwares
     - 310.08.26 rev134699 {ALL} [Smart24 P2 NL1]
   * __Fritz!Box 7630 (UNTESTED)__
     - 304.08.25 rev134148 {ALL} [Smart24 P2 NL1]
+    - 304.08.51 rev137939 {ALL} [MyFRITZOS P1]
+  * __Fritz!Box 7630 B (UNTESTED)__
+    - 319.08.51 rev137940 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 7632 (UNTESTED)__
     - 303.08.25 rev134495 {ALL} [Smart24 P2 NL1]
     - 303.08.51 rev137938 {ALL} [MyFRITZOS P1]
@@ -567,7 +575,7 @@ Currently supported devices and firmwares
     - 285.08.25 rev134025 {ALL} [Smart24 P2 NL1]
     - 285.08.50 rev136731 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 7695 <DSL/Fiber 7-90>__
-    - 316.08.47 rev136899 {ALL} [MyFRITZOS P1]
+    - 316.08.51 rev137968 {ALL} [MyFRITZOS P1]
 
 ### Fritz!Powerline
 
