@@ -4151,6 +4151,6 @@ Features:
 
 ```
 
-Latest change of this file: $Id: 48d0179fd98f73d27a8c962454a000c046e6bed8 $
+Latest change of this file: $Id$
 ```
 
