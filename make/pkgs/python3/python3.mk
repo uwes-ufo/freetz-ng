@@ -1,4 +1,4 @@
-$(call PKG_INIT_BIN, 3.14.8)
+$(call PKG_INIT_BIN, 3.15.2)
 $(PKG)_SOURCE:=Python-$($(PKG)_VERSION).tar.xz
 $(PKG)_HASH:=c2215904f02b175596dc49351585104f4bc20341e1c47378b26a2c274360ce73
 $(PKG)_SITE:=https://www.python.org/ftp/python/$($(PKG)_VERSION)

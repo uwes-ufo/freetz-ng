@@ -117,7 +117,7 @@ Latest changes
     * Patchelf 0.19.3
     * PHP 5.6.40/8.2.35/8.3.36/8.4.27/8.5.12
     * procps-ng 4.0.7
-    * Python3 3.14.8
+    * Python3 3.15.2
     * rpcbind 1.3.1
     * rsync 3.4.1/3.5.2
     * ser2net 3.5.4/4.6.8
@@ -4151,6 +4151,6 @@ Features:
 
 ```
 
-Latest change of this file: $Id$
+Latest change of this file: $Id: 48d0179fd98f73d27a8c962454a000c046e6bed8 $
 ```
 
