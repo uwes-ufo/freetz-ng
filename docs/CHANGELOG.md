@@ -65,7 +65,7 @@ Latest changes
 ### devel
 
   - Build system:
-    * ccache 4.14.2
+    * ccache 4.14.3
 
   - Host tools:
     * ca-bundle 2026-11-05
@@ -79,7 +79,12 @@ Latest changes
   - AVM sources:
     * 1700     8.26 - 5.15.176
     * 2700     8.26 - 5.15.176
+    * 4050     8.51 - 5.4.213
+    * 4690     8.51 - 5.4.213
     * 5630     8.50 - 5.4.302
+    * 5690 XGS 8.51 - 5.4.302
+    * 6000     8.51 - 5.4.213
+    * 6670     8.51 - 5.15.215
     * 7530 ax  8.50 - 4.19.183
     * 7690     8.50 - 5.4.213
     * Gateway  8.50 - 5.4.213
@@ -147,7 +152,7 @@ Latest changes
     * libpng 1.6.59
     * libtasn1 4.21.0
     * libzip 1.12.1
-    * lz4 1.11.0
+    * lz4 1.11.1
     * pcre2 10.49
     * utf8proc 2.12.0
     * zlib 1.4

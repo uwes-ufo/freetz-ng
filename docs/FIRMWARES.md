@@ -177,6 +177,7 @@ Currently supported devices and firmwares
     - 279.07.62 rev115017 {ALL} [FCS23]
     - 279.08.03 rev118508 {ALL} [Smart24 P1 FCS]
     - 279.08.25 rev134496 {ALL} [Smart24 P2 NL1]
+    - 279.08.51 rev137971 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 5690 XGS (UNTESTED)__
     - 295.08.25 rev133396 {ALL} [Smart24 P2 NL1]
     - 295.08.51 rev137972 {ALL} [MyFRITZOS P1]
@@ -548,11 +549,13 @@ Currently supported devices and firmwares
     - 154.07.59 rev113250 {ALL} [MOVE21NL2]
     - 154.08.03 rev119633 {ALL} [Smart24 P1 NL1]
     - 154.08.25 rev130856 {ALL} [Smart24 P2 NL1]
+    - 154.08.51 rev137954 {ALL} [MyFRITZOS P1]
   * __Fritz!Box Fon WLAN 7590 AX__
     - 259.07.31 rev94867 {ALL} [PSQ19P2NL4]
     - 259.07.57 rev107809 {ALL} [MOVE21NL1]
     - 259.08.02 rev117984 {ALL} [Smart24 P1 NL1]
     - 259.08.25 rev130857 {ALL} [Smart24 P2 NL1]
+    - 259.08.51 rev137952 {ALL} [MyFRITZOS P1]
 
 ### Fritz!Box Fon WLAN (76xx)
 
@@ -656,11 +659,14 @@ Currently supported devices and firmwares
     - 268.07.31 rev108167 {ALL} [PSQ19P2NL4]
     - 268.07.58 rev113012 {ALL} [MOVE21NL1]
     - 268.08.25 rev133939 {ALL} [Smart24 P2 NL1]
+    - 268.08.51 rev138180 {ALL} [MyFRITZOS P1]
   * __Fritz!Repeater 1200 AX v2 (UNTESTED)__
     - 296.08.03 rev120165 {ALL} [Smart24 P1 FCS]
     - 296.08.26 rev135004 {ALL} [Smart24 P2 NL1]
+    - 296.08.51 rev138181 {ALL} [MyFRITZOS P1]
   * __Fritz!Repeater 1610 Outdoor (UNTESTED)__
     - 305.08.25 rev134317 {ALL} [Smart24 P2 NL1]
+    - 305.08.51 rev138182 {ALL} [MyFRITZOS P1]
   * __Fritz!Repeater 1700__
     - 290.08.07 rev128069 {ALL} [Smart24 P1 FCS]
     - 290.08.26 rev136867 {ALL} [Smart24 P2 NL1]

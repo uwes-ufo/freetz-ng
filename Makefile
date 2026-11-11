@@ -121,18 +121,18 @@ LZMA:=$(TOOLS_DIR)/lzma
 TAR:=$(TOOLS_DIR)/tar-gnu
 SED:=sed
 PATCHELF:=patchelf
-PYTHON3=python3
-MESON=meson
-CMAKE=cmake
-NINJA=ninja
-PERL=perl
+PYTHON3:=python3
+MESON:=meson
+CMAKE:=cmake
+NINJA:=ninja
+PERL:=perl
 ifeq ($(FREETZ_JLEVEL),0)
-NPROC=$(shell echo $$(( $$(nproc || echo 1) +1 )) )
+NPROC:=$(shell echo $$(( $$(nproc || echo 1) +1 )) )
 else
-NPROC=$(FREETZ_JLEVEL)
+NPROC:=$(FREETZ_JLEVEL)
 endif
-MAKE=make -j$(NPROC)
-MAKE1=make -j1
+MAKE:=make -j$(NPROC)
+MAKE1:=make -j1
 
 
 ifeq ($(FREETZ_REPRODUCIBLE),y)
@@ -454,6 +454,9 @@ include $(call sorted-wildcard,$(MAKE_DIR)/pkgs/*/Makefile.in)
 include $(call sorted-wildcard,$(MAKE_DIR)/busybox/Makefile.in)
 include $(call sorted-wildcard,$(MAKE_DIR)/kernel/Makefile.in)
 
+
+ifneq ($(filter-out $(KCONFIG_TARGETS),$(or $(MAKECMDGOALS),all)),)  # KCONFIG_TARGETS dont need target build rules !
+
 include $(call sorted-wildcard,$(MAKE_DIR)/libs/*/*.mk)
 include $(call sorted-wildcard,$(MAKE_DIR)/pkgs/*/*.mk)
 include $(call sorted-wildcard,$(MAKE_DIR)/busybox/busybox.mk)
@@ -490,6 +493,9 @@ include $(MAKE_DIR)/toolchain/target-toolchain.mk
 else
 include $(MAKE_DIR)/toolchain/download-toolchain.mk
 endif
+
+endif  # KCONFIG_TARGETS dont need target build rules !
+
 
 package-list: package-list-clean $(PACKAGES_LIST)
 	@touch .packages
