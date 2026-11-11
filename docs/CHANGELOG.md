@@ -86,6 +86,7 @@ Latest changes
     * 6000     8.51 - 5.4.213
     * 6670     8.51 - 5.15.215
     * 7530 ax  8.50 - 4.19.183
+    * 7590     8.51 - 4.9.337
     * 7690     8.50 - 5.4.213
     * Gateway  8.50 - 5.4.213
 
@@ -97,7 +98,7 @@ Latest changes
     * Various Fritzos 8.50 related fixes
 
   - Packages:
-    * Apache2 2.4.69
+    * Apache2 2.4.71
     * axTLS wrapper 2.1.5
     * BIND 9.11.37/9.20.30
     * Bftpd 6.7
