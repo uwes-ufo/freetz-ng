@@ -4,8 +4,8 @@ config EXTERNAL_FREETZ_PACKAGE_PYTHON3
 	default n
 	help
 		externals the following file(s):
-		 /usr/bin/python3.14.bin
-		 /usr/include/python3.14/
+		 /usr/bin/python3.15.bin
+		 /usr/include/python3.15/
 		 /usr/lib/python314.zip (if exists)
-		 /usr/lib/python3.14/
+		 /usr/lib/python3.15/
 
