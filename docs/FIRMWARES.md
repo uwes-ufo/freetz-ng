@@ -572,6 +572,7 @@ Currently supported devices and firmwares
   * __Fritz!Box 7682 (UNTESTED)__
     - 286.08.03 rev118255 {ALL} [Smart24 P1 FCS]
     - 286.08.25 rev134545 {ALL} [Smart24 P2 NL1]
+    - 286.08.51 rev138186 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 7690__
     - 285.07.62 rev115134 {ALL} [FCS23]
     - 285.08.02 rev117971 {ALL} [Smart24 P1 FCS]
@@ -670,6 +671,7 @@ Currently supported devices and firmwares
   * __Fritz!Repeater 1700__
     - 290.08.07 rev128069 {ALL} [Smart24 P1 FCS]
     - 290.08.26 rev136867 {ALL} [Smart24 P2 NL1]
+    - 290.08.40 rev138211 {ALL} [MyFRITZOS P1] (Labor)
   * __Fritz!Repeater 2400__
     - 169.07.12 rev71975 {ALL} [MESH18 NL2]
     - 169.07.29 rev93265 {ALL} [PSQ19P2NL4]
@@ -678,6 +680,7 @@ Currently supported devices and firmwares
   * __Fritz!Repeater 2700__
     - 301.08.07 rev128070 {ALL} [Smart24 P1 FCS]
     - 301.08.26 rev136868 {ALL} [Smart24 P2 NL1]
+    - 301.08.40 rev138212 {ALL} [MyFRITZOS P1] (Labor)
   * __Fritz!Repeater 3000__
     - 174.07.04 rev66458 {ALL}
     - 174.07.14 rev73940 {ALL} [MESH18 NL4]
