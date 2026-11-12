@@ -161,7 +161,7 @@ GRAPHICS_SUBDIR="graphics"
 RAW_KERNEL_FILE="kernel.raw"
 RAW_HIDDEN_FILE="kernelsquashfs.raw"
 VARTAR_FILE="var.tar"
-UNPACKED_FILE="$DIR/.unpacked"
+UNPACKED_FILE="$DIR/.original"
 
 # Path to bash (shell required by fwmod)
 SHELL=$BASH
@@ -1880,7 +1880,7 @@ if [ "$action_names" ]; then
 		export_modmakedate="$modmakedate"
 		export_modstring="$modstring"
 	else
-		export_modmakedate="$(date -d "@$SOURCE_DATE_EPOCH" +%Y%m%d-%H%M%S) (reproducible)"
+		export_modmakedate="$(date -u -d "@$SOURCE_DATE_EPOCH" +%Y%m%d-%H%M%S) UTC (reproducible)"
 		export_modstring="${modstring/$modmakedate/*}"
 	fi
 
