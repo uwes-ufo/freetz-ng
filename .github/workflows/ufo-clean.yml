@@ -10,7 +10,21 @@ concurrency:
 
 jobs:
 
+  check-artifact:
+    runs-on: ubuntu-latest
+    outputs:
+      exists: ${{ steps.check.outputs.exists }}
+    steps:
+      - id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          COUNT=$(gh api repos/${{ github.repository }}/actions/artifacts --jq '[.artifacts[] | select(.expired == false)] | length')
+          echo "exists=$([ "$COUNT" -gt 0 ] && echo true || echo false)" >> $GITHUB_OUTPUT
+  
   ufo:
+    needs: check-artifact
+    if: needs.check-artifact.outputs.exists == 'false' || github.event_name == 'workflow_dispatch'
     permissions:
       contents: write
     strategy:
@@ -18,7 +32,6 @@ jobs:
       matrix:
         box: ["5690", "7270", "7490"]
     runs-on: ubuntu-24.04
-    
     steps:
 
     - uses: actions/checkout@v6
