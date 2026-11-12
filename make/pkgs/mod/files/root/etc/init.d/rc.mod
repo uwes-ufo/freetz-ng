@@ -107,7 +107,7 @@ rc_bootup() {
 }
 
 start() {
-	echo "Freetz-NG version $(sed 's/^freetz-//;s/^ng-//' /etc/.freetz-version)"
+	echo "Freetz-NG $(sed 's/^freetz-//;s/^ng-//' /etc/.freetz-version)"
 
 	# rc_bootup
 
@@ -241,7 +241,7 @@ modreg_file() {
 register() {
 	AUML="$(echo -ne '\344')"
 
-	modreg cgi mod "Freetz-NG"
+	modreg cgi mod "Freetz"
 	modreg conf mod webcfg "$(lang de:"Weboberfl${AUML}che" en:"Web interface")"
 	modreg cgi avm "$(lang de:"AVM-Dienste" en:"AVM services")"
 

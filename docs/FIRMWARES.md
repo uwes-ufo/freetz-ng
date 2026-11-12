@@ -172,7 +172,7 @@ Currently supported devices and firmwares
   * __Fritz!Box 5690 (UNTESTED)__
     - 298.08.04 rev119423 {ALL} [Smart24 P1 FCS]
     - 298.08.25 rev134002 {ALL} [Smart24 P2 NL1]
-    - 298.08.50 rev137518 {ALL} [MyFRITZOS P1]
+    - 298.08.51 rev138198 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 5690 Pro__
     - 279.07.62 rev115017 {ALL} [FCS23]
     - 279.08.03 rev118508 {ALL} [Smart24 P1 FCS]
@@ -222,6 +222,7 @@ Currently supported devices and firmwares
     - 252.07.57 rev107842 {GER} [MOVE21NL1]
     - 252.08.03 rev118554 {GER} [Smart24 P1 NL1]
     - 252.08.25 rev130624 {GER} [Smart24 P2 NL1]
+    - 252.08.51 rev138167 {GER} [MyFRITZOS P1]
   * __Fritz!Box 6670 Cable (UNTESTED)__
     - 284.07.63 rev113732 {GER} [FCS23]
     - 284.08.03 rev118552 {GER} [Smart24 P1 FCS]
@@ -235,6 +236,7 @@ Currently supported devices and firmwares
     - 267.08.51 rev137878 {GER} [MyFRITZOS P1]
   * __Fritz!Box 6690 PRO (UNTESTED)__
     - 308.08.26 rev135073 {GER} [Smart24 P2 NL1]
+    - 308.08.51 rev138168 {GER} [MyFRITZOS P1]
 
 ### Fritz!Box LTE/4G/5G (68xx)
 
@@ -577,7 +579,7 @@ Currently supported devices and firmwares
     - 285.07.62 rev115134 {ALL} [FCS23]
     - 285.08.02 rev117971 {ALL} [Smart24 P1 FCS]
     - 285.08.25 rev134025 {ALL} [Smart24 P2 NL1]
-    - 285.08.50 rev136731 {ALL} [MyFRITZOS P1]
+    - 285.08.51 rev138145 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 7695 <DSL/Fiber 7-90>__
     - 316.08.51 rev137968 {ALL} [MyFRITZOS P1]
 
