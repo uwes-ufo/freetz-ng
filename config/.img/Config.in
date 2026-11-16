@@ -3712,6 +3712,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_ETCSERVICES
@@ -3848,6 +3850,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -5525,6 +5529,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_ETCSERVICES
@@ -5664,6 +5670,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_ETCSERVICES
@@ -5802,6 +5810,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -5950,6 +5960,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_ETCSERVICES
@@ -6094,6 +6106,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -7639,6 +7653,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_ETCSERVICES
@@ -7786,6 +7802,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_ETCSERVICES
@@ -7930,6 +7948,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -9038,6 +9058,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_ETCSERVICES
@@ -9174,6 +9196,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -14737,6 +14761,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -14903,6 +14929,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -15076,6 +15104,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -15252,6 +15282,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -15427,6 +15459,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -15599,6 +15633,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -15948,6 +15984,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -16124,6 +16162,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -16302,6 +16342,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -16476,6 +16518,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -16652,6 +16696,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -16824,6 +16870,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -17000,6 +17048,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -17174,6 +17224,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -18910,6 +18962,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -19065,6 +19119,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -19219,6 +19275,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -19574,6 +19632,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -19755,6 +19815,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -19938,6 +20000,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -20114,6 +20178,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -20296,6 +20362,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -20475,6 +20543,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -20651,6 +20721,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -20829,6 +20901,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -21003,6 +21077,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -21182,6 +21258,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -21364,6 +21442,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -21545,6 +21625,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -21721,6 +21803,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -21902,6 +21986,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -24147,6 +24233,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -24958,6 +25046,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -25642,6 +25732,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -25825,6 +25917,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -26007,6 +26101,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -26523,6 +26619,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -26700,6 +26798,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -26874,6 +26974,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -27050,6 +27152,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -27220,6 +27324,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -27393,6 +27499,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -27569,6 +27677,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -27743,6 +27853,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -28094,6 +28206,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -28273,6 +28387,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -28449,6 +28565,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -28627,6 +28745,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -28803,6 +28923,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -28981,6 +29103,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -29133,6 +29257,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -30293,6 +30419,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -30565,6 +30693,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -30699,6 +30829,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -30849,6 +30981,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -30993,6 +31127,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -32375,6 +32511,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -32551,6 +32689,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -32729,6 +32869,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -32903,6 +33045,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -33254,6 +33398,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -33430,6 +33576,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -33608,6 +33756,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -33785,6 +33935,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -33946,6 +34098,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -34101,6 +34255,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -34255,6 +34411,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -35140,6 +35298,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -46898,6 +47058,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -49023,6 +49185,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -49205,6 +49369,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -49389,6 +49555,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -49569,6 +49737,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -49930,6 +50100,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -50113,6 +50285,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -50295,6 +50469,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -50813,6 +50989,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -50994,6 +51172,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -51174,6 +51354,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -51537,6 +51719,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -51720,6 +51904,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -51902,6 +52088,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -52921,6 +53109,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -53109,6 +53299,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -53301,6 +53493,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -53492,6 +53686,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -53680,6 +53876,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -56939,6 +57137,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -57126,6 +57326,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -57310,6 +57512,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -58019,6 +58223,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -58206,6 +58412,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -58390,6 +58598,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -58763,6 +58973,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -58950,6 +59162,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -59135,6 +59349,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -59319,6 +59535,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -60825,6 +61043,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -61012,6 +61232,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -61196,6 +61418,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
@@ -61382,6 +61606,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_PLCD
 	def_bool y
 config FREETZ_AVM_HAS_MEDIASRV
@@ -61567,6 +61793,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -61747,6 +61975,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -61929,6 +62159,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -62109,6 +62341,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -62291,6 +62525,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -62472,6 +62708,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -62650,6 +62888,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -62832,6 +63072,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -63013,6 +63255,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -63187,6 +63431,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -63366,6 +63612,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
@@ -63548,6 +63796,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -63729,6 +63979,8 @@ config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
 	def_bool y
+config FREETZ_AVM_HAS_MOVED
+	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
 config FREETZ_AVM_HAS_PLCD
@@ -63909,6 +64161,8 @@ config FREETZ_AVM_HAS_NEXUS
 config FREETZ_AVM_HAS_MESHD
 	def_bool y
 config FREETZ_AVM_HAS_PCPD
+	def_bool y
+config FREETZ_AVM_HAS_MOVED
 	def_bool y
 config FREETZ_AVM_HAS_UNTRUSTEDD
 	def_bool y
