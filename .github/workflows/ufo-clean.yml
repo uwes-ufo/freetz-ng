@@ -19,9 +19,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          COUNT=$(gh api repos/${{ github.repository }}/actions/artifacts --jq '[.artifacts[] | select(.expired == false)] | length')
+          COUNT=$(gh api repos/${{ github.repository }}/actions/artifacts --jq '[.artifacts[] | select(.expired == false and (.name | startswith("images-")))] | length')
           echo "exists=$([ "$COUNT" -gt 0 ] && echo true || echo false)" >> $GITHUB_OUTPUT
-  
+
   ufo:
     needs: check-artifact
     if: needs.check-artifact.outputs.exists == 'false' || github.event_name == 'workflow_dispatch'
