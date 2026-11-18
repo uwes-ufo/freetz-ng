@@ -88,6 +88,10 @@ EOF
 	site_refresh
 	cgi_width_setup
 	skin_head "$title" "$id"
+	if [ -n "$_CGI_CSRF_TOKEN" ]; then
+		echo "<meta name='csrf-token' content='$_CGI_CSRF_TOKEN'>"
+		cat /usr/lib/mod/cgi/csrf.js
+	fi
 	cat << EOF
 </head>
 <body${id:+ id='$id'}>

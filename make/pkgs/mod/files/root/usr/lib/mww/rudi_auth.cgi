@@ -1,5 +1,9 @@
 <%
 . /usr/lib/libmodcgi.sh
+if [ "$MOD_HTTPD_CSRF_RUDI" != "yes" ] || [ "$REQUEST_METHOD" != "GET" ] || [ "$SCRIPT_NAME" != "/cgi-bin/shell/cmd.cgi" ]; then
+	csrf_check required
+fi
+
 pid1=$(cgi_param pid)
 pid2=$(cat /var/run/rudi_shell.pid)
 unset error

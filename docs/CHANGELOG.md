@@ -104,6 +104,7 @@ Latest changes
 
   - Packages:
     * Apache2 2.4.71
+    * AutoFS 5.0.5/5.2.0
     * axTLS wrapper 2.1.5
     * BIND 9.11.37/9.20.30
     * Bftpd 6.7
@@ -115,18 +116,23 @@ Latest changes
     * FFmpeg 5.1.10/7.1.5
     * Git 2.26.2/2.56.1
     * GnuTLS 3.7.11/3.8.13
+    * HAProxy 2.6.35
     * htpdate 2.1.0
-    * ImageMagick 7.1.0-62/7.1.2-35
+    * ImageMagick 7.1.0-62/7.1.2-36
     * iPerf3 3.3/3.22
     * lsof 4.99.7
     * Lua 5.1.5/5.5.1
+    * Mosquitto 2.0.23/2.1.4
     * Nano 9.2/9.3
     * Nmap 4.76/5.51/7.993
     * OpenSSH 9.3p2/10.6p2
     * OpenSSL 0.9.8zh/1.0.2u/1.1.1w/3.0.22/3.5.9
     * OpenVPN 2.4.12/2.5.11/2.6.23/2.7.9
     * Patchelf 0.19.3
+    * PCP/NAT-PMP client 1.0.0
+    * PCSC-lite 1.9.5/2.5.3
     * PHP 5.6.40/8.2.35/8.3.36/8.4.27/8.5.12
+    * Privoxy 4.2.0
     * procps-ng 4.0.7
     * Python3 3.15.2
     * rpcbind 1.3.1
@@ -141,7 +147,8 @@ Latest changes
     * Tor 0.4.8.25/0.4.9.17
     * Transmission 3.00/4.1.4
     * Unbound 1.26.2
-    * Vim 9.2.1169
+    * UnRAR 6.1.7/7.3.2
+    * Vim 9.2.1302
     * vnStat 1.18/2.14
 
   - Libraries:

@@ -26,7 +26,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[Atop 2.13.0 (binary only)](atop.md)<a id='atop'></a>**<br>
     The program atop is an interactive monitor to view the load on a Linux system. It shows the occupation of the most critical hardware resources (from a performance point of view) on system level, i.e. cpu, memory, disk and network.
 
-  * **[AutoFS 5.0.5/5.1.9](autofs.md)<a id='autofs'></a>**<br>
+  * **[AutoFS 5.0.5/5.2.0](autofs.md)<a id='autofs'></a>**<br>
     Autofs is a kernel-based automounter for Linux. It performs a job similar to amd(8) but relies on a small stub of kernel code instead of pretending to be an NFS server. The result is simpler code, better reliability, and much faster operation in the common case (everything already mounted).
 
   * **<u>autossh 1.4g (binary only) - DEPRECATED</u><a id='autossh'></a>**<br>
@@ -246,7 +246,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### H
 
-  * **[HAProxy 2.6.33 - DEPRECATED](haproxy.md)<a id='haproxy'></a>**<br>
+  * **[HAProxy 2.6.35](haproxy.md)<a id='haproxy'></a>**<br>
     HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
   * **[Haserl 0.9.36 (binary only)](haserl.md)<a id='haserl'></a>**<br>
@@ -293,7 +293,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[IGMPproxy 0.4](igmpproxy.md)<a id='igmpproxy'></a>**<br>
     IGMPproxy is a simple dynamic Multicast Routing Daemon using only IGMP signalling. It's intended for simple forwarding of Multicast traffic between networks.
 
-  * **[ImageMagick 7.1.0-62/7.1.2-35 (binary only)](imagemagick.md)<a id='imagemagick'></a>**<br>
+  * **[ImageMagick 7.1.0-62/7.1.2-36 (binary only)](imagemagick.md)<a id='imagemagick'></a>**<br>
     ImageMagick is a robust collection of tools and libraries to read, write, and manipulate an image in many image formats, including popular formats like TIFF, JPEG, PNG, PDF, PhotoCD, and GIF. With ImageMagick, you can create images dynamically, making it suitable for Web applications. You can also resize, rotate, sharpen, color-reduce, or add special effects to an image and save your completed work in many different image formats. Image processing operations are available from the command line as well as through C, C++, and PERL-based programming interfaces.
 
   * **[Inadyn-mt 02.28.10 - DEPRECATED](inadyn-mt.md)<a id='inadyn-mt'></a>**<br>
@@ -402,7 +402,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[module-init-tools 3.12 (binary only) - DEPRECATED](module-init-tools.md)<a id='module-init-tools'></a>**<br>
     The module-init-tools (m-i-t) package provides many of the utilities needed by Linux systems for managing loadable Linux Kernel Modules. This includes depmod, insmod, rmmod, modprobe and tools like modinfo.
 
-  * **[Mosquitto 2.0.23/2.1.2](mosquitto.md)<a id='mosquitto'></a>**<br>
+  * **[Mosquitto 2.0.23/2.1.4](mosquitto.md)<a id='mosquitto'></a>**<br>
     Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers like the Arduino.
 
   * **[MTR 0.80/0.96 (binary only)](mtr.md)<a id='mtr'></a>**<br>
@@ -489,10 +489,10 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[p7zip 16.02 (binary only)](p7zip.md)<a id='p7zip'></a>**<br>
     7-Zip  is  a  file  archiver  with the highest compression ratio. The program supports 7z (that implements LZMA compression algorithm), ZIP, CAB, ARJ, GZIP, BZIP2, TAR, CPIO, RPM and DEB formats. Compression ratio in the new 7z format is 30-50% better  than ratio in ZIP format.
 
-  * **[PCP client 1c783fb (binary only)](pcp.md)<a id='pcp'></a>**<br>
-    PCP client library implements client side of PCP (RFC 6887) and NATPMP (RFC 6886) protocols. Switch to NATPMP is done automatically by version negotiation. This library enables any network application to manage network edge device (e.g. to create NAT mapping or ask router for specific flow treatment).
+  * **[pcpnatpmp: PCP/NAT-PMP client 1.0.0 (binary only)](pcpnatpmp.md)<a id='pcpnatpmp'></a>**<br>
+    Port Control Protocol (PCP) and NAT-PMP client library Implements client side of PCP (RFC 6887) and NAT-PMP (RFC 6886) protocols. Switch to NAT-PMP is done automatically by version negotiation. This library enables any network application to manage network edge device (e.g. to create NAT mapping or ask router for specific flow treatment).
 
-  * **[PCSC-lite 1.9.5/2.5.2 (binary only)](pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
+  * **[PCSC-lite 1.9.5/2.5.3 (binary only)](pcsc-lite.md)<a id='pcsc-lite'></a>**<br>
     The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a very small form factor for communicating to smart cards and readers.
 
   * **<u>phonebook-tools: Phone book tools 1.0</u><a id='phonebook-tools'></a>**<br>
@@ -522,7 +522,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **<u>privatekeypassword 0.7-git</u><a id='privatekeypassword'></a>**<br>
     Reveals the password for AVM's private key file (/var/flash/websrv_ssl_key.pem), makes it possible to reuse it for other packages.
 
-  * **[Privoxy 4.1.0](privoxy.md)<a id='privoxy'></a>**<br>
+  * **[Privoxy 4.2.0](privoxy.md)<a id='privoxy'></a>**<br>
     Privoxy is a web proxy with advanced filtering capabilities for protecting privacy, modifying web page data, managing cookies, controlling access, and removing ads, banners, pop-ups and other obnoxious Internet junk. It can also be used together with Tor Proxy to forward HTTP traffic to Tor as described in the Tor documentation. Open http://config.privoxy.org/show-status for details.
 
   * **[procps-ng 4.0.7 (binaries only)](procps-ng.md)<a id='procps-ng'></a>**<br>
@@ -757,7 +757,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[UNFS3 0.9.23 - DEPRECATED](unfs3.md)<a id='unfs3'></a>**<br>
     Userspace NFS v3 Server.
 
-  * **[UnRAR 6.1.7/7.3.1 (binary only)](unrar.md)<a id='unrar'></a>**<br>
+  * **[UnRAR 6.1.7/7.3.2 (binary only)](unrar.md)<a id='unrar'></a>**<br>
     Unarchiver for .rar files
 
   * **[usbids: usb.ids 635738b64e](usbids.md)<a id='usbids'></a>**<br>
@@ -771,7 +771,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### V
 
-  * **[Vim 9.2.1169 (binary only)](vim.md)<a id='vim'></a>**<br>
+  * **[Vim 9.2.1302 (binary only)](vim.md)<a id='vim'></a>**<br>
     An improved version of VI
 
   * **[Virtualip-NG - EXPERIMENTAL](virtualip-ng.md)<a id='virtualip-ng'></a>**<br>
@@ -846,7 +846,7 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
   * **[ldd 0.1/1.0.59 (binary only)](ldd.md)<a id='ldd'></a>**<br>
     ldd prints the shared libraries required by each program or shared library specified on the command line.
 
-  * **[lsof 4.89 (binary only) - DEPRECATED](lsof.md)<a id='lsof'></a>**<br>
+  * **[lsof 4.99.7 (binary only)](lsof.md)<a id='lsof'></a>**<br>
     lsof (LiSt Open Files) The lsof tool lists information about files opened by processes.
 
   * **[ltrace 0.7.3-git/0.8.1 (binary only)](ltrace.md)<a id='ltrace'></a>**<br>
