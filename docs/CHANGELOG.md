@@ -103,6 +103,7 @@ Latest changes
     * Various Fritzos 8.50 related fixes
 
   - Packages:
+    * ACME.sh 3.1.7
     * Apache2 2.4.71
     * AutoFS 5.0.5/5.2.0
     * axTLS wrapper 2.1.5
@@ -131,7 +132,7 @@ Latest changes
     * Patchelf 0.19.3
     * PCP/NAT-PMP client 1.0.0
     * PCSC-lite 1.9.5/2.5.3
-    * PHP 5.6.40/8.2.35/8.3.36/8.4.27/8.5.12
+    * PHP 5.6.40/8.2.36/8.3.37/8.4.28/8.5.13/8.6.0
     * Privoxy 4.2.0
     * procps-ng 4.0.7
     * Python3 3.15.2
