@@ -3,6 +3,10 @@
 # keine Schleife, wenn wir schon libmodcgi.sh hatten ;-)
 [ -z "$SENDSID" ] && . /usr/lib/libmodcgi.sh
 
+# Nach 10 Minuten läuft der Login ab
+find /tmp -maxdepth 1 -type f -name ".webcfg.${_CGI_CSRF_SCOPE:-default}.*.tmp" -mmin +9 -exec rm -f {} \;
+echo "$SENDSID#$REMOTE_ADDR" > "/tmp/.webcfg.${_CGI_CSRF_SCOPE:-default}.$SENDSID.tmp"
+
 # Schicken wir dem Browser eine SessionID, gueltig fuer alle Pfade. Dazu nicht
 # via JS auslesbar und nicht mitsenden bei Anfragen anderer Websites ans Webif.
 echo "Set-Cookie: SID=$SENDSID; Path=/; HttpOnly; SameSite=Strict"
@@ -13,13 +17,16 @@ cgi_begin "$(lang de:"Anmelden" en:"Login")"
 
 cat << EOF
 <br><br>
-$(lang de:"Passwort" en:"Password"): <input  type="password" id="inp_pw" maxlength="45" onkeydown="if (event.keyCode == 13) document.getElementById('id_go').click()">
+<form id="login" action="/cgi-bin/login.cgi" method="POST" onsubmit="document.getElementById('login_hash').value=makemd5(document.getElementById('inp_pw').value,'$SENDSID')">
+<input type="hidden" name="hash" id="login_hash">
+$(lang de:"Passwort" en:"Password"): <input type="password" id="inp_pw" maxlength="45">
 &nbsp;
-<input type="button" name="go" id="id_go" value="$(lang de:"Anmelden" en:"Login")"
+<input type="submit" name="go" id="id_go" value="$(lang de:"Anmelden" en:"Login")">
 EOF
 subpage="$(echo "${REQUEST_URI}" | sed -n 's/.*\?subpage=//p' | sed 's/^\/*//;s/&.*//;s/[^-_a-zA-Z0-9\.\/]//g;s/\.\.//g')"
 [ -z "$subpage" ] && subpage="${REQUEST_URI%%\?*}" || subpage="/$subpage"
-echo "onclick='location.href=\"/cgi-bin/login.cgi?subpage=$subpage&hash=\"+makemd5(document.getElementById(\"inp_pw\").value, \"$SENDSID\")'>"
+echo "<input type='hidden' name='subpage' value='$(html "$subpage")'>"
+echo '</form>'
 echo "<script> document.getElementById(\"inp_pw\").focus(); </script>"
 echo '<br><br>'
 
@@ -30,7 +37,3 @@ if [ "$WRONGPW" == "1" ]; then
 fi
 
 cgi_end
-
-# Wir "merken" uns genau ein SID-"Angebot" 
-echo "$SENDSID#$REMOTE_ADDR" > /tmp/loginsid
-
