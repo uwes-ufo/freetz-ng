@@ -4,7 +4,7 @@
 [ -z "$SENDSID" ] && . /usr/lib/libmodcgi.sh
 
 # Nach 10 Minuten läuft der Login ab
-find /tmp -maxdepth 1 -type f -name ".webcfg.${_CGI_CSRF_SCOPE:-default}.*.tmp" -mmin +9 -exec rm -f {} \;
+find /tmp/ -maxdepth 1 -type f -name ".webcfg.${_CGI_CSRF_SCOPE:-default}.*.tmp" -mmin +9 -exec rm -f {} \;
 echo "$SENDSID#$REMOTE_ADDR" > "/tmp/.webcfg.${_CGI_CSRF_SCOPE:-default}.$SENDSID.tmp"
 
 # Schicken wir dem Browser eine SessionID, gueltig fuer alle Pfade. Dazu nicht
@@ -12,6 +12,11 @@ echo "$SENDSID#$REMOTE_ADDR" > "/tmp/.webcfg.${_CGI_CSRF_SCOPE:-default}.$SENDSI
 echo "Set-Cookie: SID=$SENDSID; Path=/; HttpOnly; SameSite=Strict"
 
 cgi_begin "$(lang de:"Anmelden" en:"Login")"
+
+if [ "$(cat /tmp/flash/mod/webmd5 2>/dev/null)" == "465d0ff27bb239292778dc3a0c2f28d9" ]; then
+	WGPASS="$(sed -n 's/^webgui_pass[\t ]*//p' /proc/sys/urlader/environment)"
+	[ -n "$WGPASS" ] && echo "<p>$(lang de:"Bitte das AVM-Ger&auml;tekennwort vom Typenschild verwenden." en:"Please use the AVM device password printed on the label.")</p>"
+fi
 
 . /usr/mww/cgi-bin/md5hash.sh
 
