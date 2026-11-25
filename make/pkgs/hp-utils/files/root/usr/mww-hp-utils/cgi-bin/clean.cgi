@@ -11,9 +11,14 @@ csrf_require_post
 eval "$(modcgi level clean)"
 
 if [ -z "$CLEAN_LEVEL" ]; then
-	cgi_error "$(lang de:"Keine Reinigungsstufe angegeben" en:"no clean level")"
+	cgi_error "$(lang de:"Keine Reinigungsstufe angegeben" en:"No clean level")"
 	exit 1
 fi
+
+case $CLEAN_LEVEL in
+	1|2|3) ;;
+	*) cgi_error "$(lang de:"Ung&uuml;ltige Reinigungsstufe angegeben" en:"Invalid clean level")"; exit 1 ;;
+esac
 
 cgi_begin "$(lang de:"Reinige" en:"Cleaning")"
 
@@ -23,7 +28,7 @@ if [ -z "$HP_UTILS_URI" ]; then
 	echo "error"
 	echo "Printer not configured.</pre>"
 else
-	if hp-clean --device "$HP_UTILS_URI" --mode printserv --clean-level $CLEAN_LEVEL >/dev/null 2>&1; then
+	if hp-clean --device "$HP_UTILS_URI" --mode printserv --clean-level "$CLEAN_LEVEL" >/dev/null 2>&1; then
 		echo "done"
 		echo "wait for cleaning to complete</pre>"
 	else

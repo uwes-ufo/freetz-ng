@@ -450,6 +450,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
 
 ### L
 
+  * **[LAME 4.0 (binary only)](../../docs/make/lame.md)<a id='lame'></a>**<br>
+    Encode WAV audio as MP3.
+
   * **[LCD4linux 63fffafb](../../docs/make/lcd4linux.md)<a id='lcd4linux'></a>**<br>
     LCD4Linux is a small program that grabs information from the kernel and some subsystems and displays it on an external liquid crystal display.
 
@@ -1049,6 +1052,9 @@ Index: [A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H]
     vnStat is a console-based network traffic monitor. It keeps a log of hourly, daily and monthly network traffic for the selected interface(s). However, it isn't a packet sniffer. The traffic information is analyzed from the proc(5) filesystem. That way vnStat can be used even without root permissions.
      - [Dunkler Modus von v2](../../docs/make/vnstat.md#dunkler-modus-von-v2)
      - [Migration](../../docs/make/vnstat.md#migration)
+
+  * **<u>Voicemail-XML parser 1.0 (binary only)</u><a id='voicemail-xml'></a>**<br>
+    Parse FRITZ!OS call and answering machine lists for Callmonitor.
 
   * **[Vpnc 0.5.3 - DEPRECATED](../../docs/make/vpnc.md)<a id='vpnc'></a>**<br>
     Cisco IPSec VPN Client

@@ -112,6 +112,7 @@ Latest changes
     * Bftpd 6.7
     * bridge-utils 1.7.1
     * CA-bundle 2026-11-05
+    * Callmonitor: optional answering machine events and mail actions
     * Curl 8.12.1/8.23.0
     * kmod 34.3
     * Empty 0.6.23d
@@ -125,6 +126,7 @@ Latest changes
     * ImageMagick 7.1.0-62/7.1.2-36
     * iPerf3 3.3/3.22.1
     * lsof 4.99.7
+    * LAME 4.0
     * Lua 5.1.5/5.5.1
     * Mosquitto 2.0.23/2.1.4
     * Nano 9.2/9.3
@@ -159,9 +161,10 @@ Latest changes
     * UnRAR 6.1.7/7.3.2
     * Vim 9.2.1302
     * vnStat 1.18/2.14
+    * Voicemail-XML parser 1.0
 
   - Libraries:
-    * expat 2.7.5/2.10.0
+    * expat 2.7.5/2.11.0
     * FreeType 2.15.0
     * fribidi 1.0.18
     * gensio 3.0.4

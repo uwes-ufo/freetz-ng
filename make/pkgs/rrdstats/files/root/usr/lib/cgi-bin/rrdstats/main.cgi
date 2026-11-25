@@ -10,8 +10,12 @@ RRDTOOL="rrdtool-freetz"
 
 DATESTRING=$(date -R)
 [ -n "$_cgi_width" ] && let WIDTH=_cgi_width-145 || let WIDTH=500
-GROUP_PERIOD="$(cgi_param group | tr -d .)"
-ALL_GRAPHS="$(cgi_param graph | tr -d .)"
+ALL_GRAPHS="$(cgi_param graph)"
+GROUP_PERIOD="$(cgi_param group)"
+PDEV_ARG="$(cgi_param pdev)"
+REFRESH_ARG="$(cgi_param refresh)"
+AIN_ARG="$(cgi_param ain)"
+STATE_ARG="$(cgi_param state)"
 while [ $# -gt 0 ]; do
 	case "$1" in
 		-graph=*)
@@ -33,6 +37,58 @@ while [ $# -gt 0 ]; do
 	shift
 done
 [ -z "$ALL_GRAPHS" ] && ALL_GRAPHS="mainpage"
+
+
+badarg() {
+	echo "RRDstats: Invalid argument"
+	exit 1
+}
+
+case $ALL_GRAPHS in
+	*[!a-zA-Z0-9_\ ]*) badarg ;;
+esac
+for graph in $ALL_GRAPHS; do
+	case $graph in
+		mainpage|cpu|mem|swap|upt|pow|temp|thg[0-3]|epc[012ABC]|arris[0-3]|dvb|csl[0-2]|diskio[1-4]|if[1-4]|one|aha_pdev|aha_watt|aha_sein|aha_blnd|aha_volt|aha_kilo|aha_grad|aha_curr|aha_fact) ;;
+		*) badarg ;;
+	esac
+done
+
+case $GROUP_PERIOD in
+	*[[:space:]/\\\*\?\[\]\<\>\&\"\'\`\$\;\|\(\)\{\}]*) badarg ;;
+esac
+case $PDEV_ARG in
+	''|w|s|x|z) ;;
+	*) badarg ;;
+esac
+case $REFRESH_ARG in
+	*[!0-9]*) badarg ;;
+esac
+case $AIN_ARG in
+	*[!a-zA-Z0-9:-]*) badarg ;;
+esac
+case $STATE_ARG in
+	''|-1|0|1|on|off|toggle|1[6-9]|[2-4][0-9]|5[0-6]|253|254) ;;
+	*) badarg ;;
+esac
+
+case $WIDTH in
+	''|*[!0-9]*) badarg ;;
+esac
+case $PERIOD_ARG in
+	*[!0-9hdwmy\ ]*) badarg ;;
+esac
+for period in $PERIOD_ARG; do
+	case $period in
+		*[hdwmy])
+			case ${period%?} in
+				''|*[!0-9]*) badarg ;;
+			esac
+			;;
+		*) badarg ;;
+	esac
+done
+
 
 if [ "$FREETZ_PACKAGE_RRDTOOL_VERSION_ABANDON" == "y" ]; then
 	NBSP="$(echo -e  '\240')"
@@ -100,7 +156,7 @@ generate_graph() {
 			if [ -e $FILE ]; then
 				[ "$RRDSTATS_CPU100PERC" = "yes" ] && CPU100PERC=" -u 100 -r "
 				$_NICE $RRDTOOL graph $GRAPHARGS                           \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                    \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                  \
 				--title "$TITLE"                                           \
 				--start now-$PERIODE                                       \
 				--width $WIDTH --height $HEIGHT                            \
@@ -136,7 +192,7 @@ generate_graph() {
 			if [ -e $FILE ]; then
 				let RAM=$(grep MemTotal /proc/meminfo | tr -s [:blank:] " " | cut -d " " -f 2)*1024
 				$_NICE $RRDTOOL graph $GRAPHARGS                                       \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                                \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                              \
 				--title "$TITLE"                                                       \
 				--start now-$PERIODE -u $RAM -r -l 0 $LAZY                             \
 				--width $WIDTH --height $HEIGHT                                        \
@@ -182,7 +238,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/upt_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                           \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                    \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                  \
 				--title "$TITLE"                                           \
 				--start -1-$PERIODE -l 0 -r                                \
 				--width $WIDTH --height $HEIGHT $LAZY                      \
@@ -227,7 +283,7 @@ generate_graph() {
 					"
 				done
 				$_NICE $RRDTOOL graph $GRAPHARGS                          \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                   \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                 \
 				--title "$TITLE"                                          \
 				--start -1-$PERIODE -l 0 -u 100 -r                        \
 				--width $WIDTH --height $HEIGHT $LAZY                     \
@@ -244,7 +300,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/temp_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                                    \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                             \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                           \
 				--title "$TITLE"                                                    \
 				--start -1-$PERIODE -l 0 -r                                         \
 				--width $WIDTH --height $HEIGHT $LAZY                               \
@@ -327,7 +383,7 @@ generate_graph() {
 				done
 
 				$_NICE $RRDTOOL graph $GRAPHARGS                                                               \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                                                        \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                                                      \
 				--title "$TITLE"                                                                               \
 				--start now-$PERIODE                                                                           \
 				--width $WIDTH --height $HEIGHT                                                                \
@@ -370,7 +426,7 @@ generate_graph() {
 						GPRINT:rxsn$count:LAST:%4.1lf\n "
 				done
 				$_NICE $RRDTOOL graph $GRAPHARGS                         \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -409,7 +465,7 @@ generate_graph() {
 						GPRINT:rxdb$count:LAST:%4.1lf\n "
 				done
 				$_NICE $RRDTOOL graph $GRAPHARGS                                                             \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                                                      \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                                                    \
 				--title "$TITLE"                                                                             \
 				--start now-$PERIODE                                                                         \
 				--width $WIDTH --height $HEIGHT                                                              \
@@ -458,7 +514,7 @@ generate_graph() {
 				done
 
 				$_NICE $RRDTOOL graph $GRAPHARGS                                                               \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                                                        \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                                                      \
 				--title "$TITLE"                                                                               \
 				--start now-$PERIODE                                                                           \
 				--width $WIDTH --height $HEIGHT                                                                \
@@ -480,7 +536,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/epc_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                         \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -522,7 +578,7 @@ generate_graph() {
 						GPRINT:rxfq$count:LAST:%3.0lf\n "
 				done
 				$_NICE $RRDTOOL graph $GRAPHARGS                                       \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                                \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                              \
 				--title "$TITLE"                                                       \
 				--start now-$PERIODE                                                   \
 				--width $WIDTH --height $HEIGHT                                        \
@@ -541,7 +597,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/thg_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                          \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                   \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                 \
 				--title "$TITLE"                                          \
 				--start now-$PERIODE                                      \
 				--width $WIDTH --height $HEIGHT                           \
@@ -586,7 +642,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/thg_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                         \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -610,7 +666,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/thg_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                                  \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                           \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                         \
 				--title "$TITLE"                                                  \
 				--start now-$PERIODE                                              \
 				--width $WIDTH --height $HEIGHT                                   \
@@ -634,7 +690,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/thg_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                            \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                     \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                   \
 				--title "$TITLE"                                            \
 				--start now-$PERIODE                                        \
 				--width $WIDTH --height $HEIGHT                             \
@@ -658,7 +714,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/arris_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                          \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                   \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                 \
 				--title "$TITLE"                                          \
 				--start now-$PERIODE                                      \
 				--width $WIDTH --height $HEIGHT                           \
@@ -703,7 +759,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/arris_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                         \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                \
 				--title "$TITLE"                                         \
 				--start now-$PERIODE                                     \
 				--width $WIDTH --height $HEIGHT                          \
@@ -727,7 +783,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/arris_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                        \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                 \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"               \
 				--title "$TITLE"                                        \
 				--start now-$PERIODE                                    \
 				--width $WIDTH --height $HEIGHT                         \
@@ -751,7 +807,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/arris_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                          \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                   \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                 \
 				--title "$TITLE"                                          \
 				--start now-$PERIODE                                      \
 				--width $WIDTH --height $HEIGHT                           \
@@ -800,7 +856,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/mem_$RRDSTATS_INTERVAL.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                                      \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                               \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                             \
 				--title "$TITLE"                                                      \
 				--start -1-$PERIODE -l 0 -u 100 -r                                    \
 				--width $WIDTH --height $HEIGHT	$LAZY                                 \
@@ -869,7 +925,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/$1_$RRDSTATS_INTERVAL-$DISK.rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                               \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                        \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                      \
 				--title "$TITLE"                                               \
 				--start -1-$PERIODE $LOGARITHMIC $LAZY $MAXIMALBW              \
 				--width $WIDTH --height $HEIGHT                                \
@@ -948,7 +1004,7 @@ generate_graph() {
 			FILE=$RRDSTATS_RRDDATA/$1_$RRDSTATS_INTERVAL-$(echo $IF | sed 's/\:/_/g').rrd
 			if [ -e $FILE ]; then
 				$_NICE $RRDTOOL graph $GRAPHARGS                             \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                      \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                    \
 				--title "$TITLE"                                             \
 				--start -1-$PERIODE $LOGARITHMIC $LAZY $MAXIMALBW            \
 				--width $WIDTH --height $HEIGHT                              \
@@ -985,7 +1041,7 @@ generate_graph() {
 			[ -n "$RRDSTATS_DIGITEMP_U" ] && _SENSOR_LOW="$_SENSOR_LOW -u $RRDSTATS_DIGITEMP_U"
 
 			if [ $# -ge 5 ]; then
-				_SENSOR_ALI=$(grep -vE "^#|^ |^$|^//" /tmp/flash/rrdstats/digitemp.group | tr -s " " | cut -d" " -f1-2 | grep $5$ | cut -d " " -f1)
+				_SENSOR_ALI=$(grep -vE "^#|^ |^$|^//" /tmp/flash/rrdstats/digitemp.group | tr -s " " | cut -d" " -f1-2 | grep " $5$" | cut -d " " -f1)
 				_SENSOR_HEX=$(grep -vE "^#|^ |^$|^//" /tmp/flash/rrdstats/digitemp.alias | tr -s " " | cut -d" " -f 1,3 | grep -E "$(echo $_SENSOR_ALI | sed 's/ /\$|/g')$" | cut -d " " -f1)
 			else
 				_SENSOR_HEX=$(grep "^ROM " /tmp/flash/rrdstats/digitemp.conf 2>/dev/null | sed 's/^ROM .//g;s/ 0x//g')
@@ -1009,18 +1065,18 @@ generate_graph() {
 				let _SENSOR_CUR=_SENSOR_CUR+1
 			done
 			if [ -n "$_SENSOR_GEN" ]; then
-				$_NICE $RRDTOOL graph $GRAPHARGS         \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE  \
-				--title "$TITLE"                         \
-				--start now-$PERIODE                     \
-				--width $WIDTH --height $HEIGHT          \
-				--vertical-label "${GRAD}$_SENSOR_UOM"   \
-				$DEFAULT_COLORS                          \
-				--slope-mode HRULE:0#000000              \
-				$LAZY $_SENSOR_LOW                       \
-				-W "Generated on: $DATESTRING"           \
-				COMMENT:"$(mamc "${GRAD}$_SENSOR_UOM")"  \
-				$_SENSOR_GEN                             > /dev/null
+				$_NICE $RRDTOOL graph $GRAPHARGS           \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"  \
+				--title "$TITLE"                           \
+				--start now-$PERIODE                       \
+				--width $WIDTH --height $HEIGHT            \
+				--vertical-label "${GRAD}$_SENSOR_UOM"     \
+				$DEFAULT_COLORS                            \
+				--slope-mode HRULE:0#000000                \
+				$LAZY $_SENSOR_LOW                         \
+				-W "Generated on: $DATESTRING"             \
+				COMMENT:"$(mamc "${GRAD}$_SENSOR_UOM")"    \
+				$_SENSOR_GEN                               > /dev/null
 			fi
 			;;
 		aha*)
@@ -1039,7 +1095,7 @@ generate_graph() {
 			_SENSOR_CUR=0
 
 
-			pdev="$(cgi_param pdev | tr -d .)"
+			pdev="$PDEV_ARG"
 			[ "$pdev" == "x" ] && pdev=""
 			IMAGENAME=$IMAGENAME$pdev
 			if [ -n "$pdev" ]; then
@@ -1138,18 +1194,18 @@ generate_graph() {
 				done
 			fi
 			if [ -n "$_SENSOR_GEN" ]; then
-				$_NICE $RRDTOOL graph $GRAPHARGS         \
-				$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE  \
-				--title "$TITLE"                         \
-				--start now-$PERIODE                     \
-				--width $WIDTH --height $HEIGHT          \
-				--vertical-label "$DNAME [$DESCR]"       \
-				$DEFAULT_COLORS                          \
-				--slope-mode HRULE:0#000000              \
-				$LAZY  $RANGE                            \
-				-W "Generated on: $DATESTRING"           \
-				COMMENT:"$(mamc "$DESCR")"               \
-				$_SENSOR_GEN                             > /dev/null
+				$_NICE $RRDTOOL graph $GRAPHARGS           \
+				"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"  \
+				--title "$TITLE"                           \
+				--start now-$PERIODE                       \
+				--width $WIDTH --height $HEIGHT            \
+				--vertical-label "$DNAME [$DESCR]"         \
+				$DEFAULT_COLORS                            \
+				--slope-mode HRULE:0#000000                \
+				$LAZY  $RANGE                              \
+				-W "Generated on: $DATESTRING"             \
+				COMMENT:"$(mamc "$DESCR")"                 \
+				$_SENSOR_GEN                               > /dev/null
 			fi
 			;;
 		*)
@@ -1272,7 +1328,7 @@ csl_graph() {
 		#LINE2:rpn_MIN$GREEN
 
 		$_NICE $RRDTOOL graph $GRAPHARGS                         \
-		$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE                  \
+		"$RRDSTATS_RRDTEMP/$IMAGENAME.$IMAGETYPE"                \
 		--title "$TITLE"                                         \
 		--start now-$PERIODE -l 0 $MAXSPEEDP -r                  \
 		--width $WIDTH --height $HEIGHT                          \
@@ -1314,7 +1370,7 @@ gen_main() {
 	[ $# -ge 4 ] && GROUP_URL="&group=$4"
 	[ $# -ge 5 ] && GROUP_URL="&pdev=$5$GROUP_URL"
 	sec_begin "$FNAME"
-	generate_graph "$SNAME" "$CURRENT_PERIOD" "$SNAME" "" $GROUP $5
+	generate_graph "$SNAME" "$CURRENT_PERIOD" "$SNAME" "" ${GROUP:+"$GROUP"} ${5:+"$5"}
 	echo "<center><a href=\"$SCRIPT_NAME?graph=$SNAME$GROUP_URL\" class=\"image\">"
 	echo "<img src=\"/statpix/$SNAME$GROUP$5.$IMAGETYPE$NOCACHE\" alt=\"$FNAME stats for last $LAPSE\" border=\"0\" $HTMLWIDTH />"
 	echo "</a></center>"
@@ -1323,11 +1379,11 @@ gen_main() {
 
 graphit() {
 	graph=$1
-	#graph=$(cgi_param graph | tr -d .)
+	#graph="ALL_GRAPHS"
 	case $graph in
 		cpu|mem|swap|upt|pow|temp|thg0|thg1|thg2|thg3|epc0|epcA|epcB|epcC|epc1|epc2|arris0|arris1|arris2|arris3|dvb|csl0|csl1|csl2|diskio1|diskio2|diskio3|diskio4|if1|if2|if3|if4|one|aha*)
 			set_lazy "$RRDSTATS_NOTLAZYS"
-			#GROUP_PERIOD=$(cgi_param group | tr -d .)
+			#GROUP_PERIOD="$GROUP_PERIOD"
 			if [ -z "$GROUP_PERIOD" ]; then
 				heading=$(echo $graph | sed "s/^upt$/Uptime/;s/^pow$/Power/;s/^temp$/Temperature/;s/^cpu$/Processor/;s/^mem$/Memory/;s/^swap$/Swapspace/;\
 				  s/^thg0$/Thomson THG - basic/;s/^thg1$/Thomson THG - System Uptime/;s/^thg2/Thomson THG - Downstream Frequency/;s/^thg3$/Thomson THG - Upstream Channel/;\
@@ -1388,9 +1444,9 @@ graphit() {
 			for period in $CURRENT_PERIOD; do
 				set_period $period
 				sec_begin "last $periodnn"
-				generate_graph "$graph" "$periodG" "$graph-$period" "" $GROUP_PERIOD
+				generate_graph "$graph" "$periodG" "$graph-$period" "" ${GROUP_PERIOD:+"$GROUP_PERIOD"}
 				echo "<center><a href=\"$SCRIPT_NAME\" class=\"image\">"
-				echo "<img src=\"/statpix/$graph-$period$GROUP_PERIOD$(cgi_param pdev | tr -d .).$IMAGETYPE$NOCACHE\" alt=\"$heading stats for last $periodnn\" border=\"0\" $HTMLWIDTH />"
+				echo "<img src=\"/statpix/$graph-$period$GROUP_PERIOD$PDEV_ARG.$IMAGETYPE$NOCACHE\" alt=\"$heading stats for last $periodnn\" border=\"0\" $HTMLWIDTH />"
 				echo "</a></center>"
 				sec_end
 			done
@@ -1401,7 +1457,7 @@ graphit() {
 			set_lazy "$RRDSTATS_NOTLAZYM"
 			[ -n "$PERIOD_ARG" ] && CURRENT_PERIOD="$PERIOD_ARG" || CURRENT_PERIOD="$RRDSTATS_PERIODMAIN"
 			set_period "$CURRENT_PERIOD"
-			[ "$(cgi_param pdev | tr -d .)" == "z" ] && echo "<br>" || echo "<center><font size=+1><br><b>Stats for last $periodnn</b></font></center>"
+			[ "$PDEV_ARG" == "z" ] && echo "<br>" || echo "<center><font size=+1><br><b>Stats for last $periodnn</b></font></center>"
 			case $RRD_DISPLAY_TYPE in
 				rrddt)
 					ALL_GROUPS=$(grep -vE "^#|^$|^ " /var/tmp/flash/rrdstats/digitemp.group 2>/dev/null | tr -s " " | cut -d " " -f2 | uniq)
@@ -1411,16 +1467,16 @@ graphit() {
 					done
 					;;
 				avmha)
-					pdev="$(cgi_param pdev | tr -d .)"
+					pdev="$PDEV_ARG"
 					[ -z "$pdev" ] && pdev=x
 
-					refresh="$(cgi_param refresh | tr -d .)"
+					refresh="$REFRESH_ARG"
 					[ -n "$refresh" ] && refresh="&refresh=$refresh"
 
-					if [ "$REQUEST_METHOD" == "POST" -a -n "$(cgi_param ain | tr -d .)" ]; then
+					if [ "$REQUEST_METHOD" == "POST" -a -n "$AIN_ARG" ]; then
 						csrf_check required
 						echo "<center><br><b>Processing ...</b><br><br><font size=1>"
-						/usr/bin/aha.sh docmd "$(cgi_param ain | tr -d .)" "$(cgi_param state | tr -d .)" >/dev/null
+						/usr/bin/aha.sh docmd "$AIN_ARG" "$STATE_ARG" >/dev/null
 						sleep 1
 						echo '<font style="opacity:0">'
 						. /usr/lib/libmodredir.sh

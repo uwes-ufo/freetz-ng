@@ -55,7 +55,7 @@ if [ "$REQUEST_METHOD" = "POST" ] || [ "$NHIPT_CONFIG" = "box" ]; then
 		if (login==1) {
 			if(myConf["LOGTARGET"] == "syslog"){ logtarget = 1; } else { logtarget = 0; }
 			if (ENVIRON["REQUEST_METHOD"] == "POST" || ENVIRON["NHIPT_CONFIG"] == "box") {
-				n = split(urldecode(PSTR), PA, "&"); for (i=1;i<=n;i++) {split(PA[i], PM, "=");Param[PM[1]] = PM[2]}
+				readParams(PSTR);
 				if (ENVIRON["NHIPT_CONFIG"] == "box") {
 					delete Param;
 					Param["AIRBAG"] = myConf["AIRBAG"]
@@ -77,6 +77,7 @@ if [ "$REQUEST_METHOD" = "POST" ] || [ "$NHIPT_CONFIG" = "box" ]; then
 					if (ENVIRON["NHIPT_START_LOG"] == "start") {Param["STRTLOG"] = "start";}
 					noloadmodules=1;
 				}
+				validateParams();
 				if (Param["IPV6"] == 1){myCmdPrefix = "ip6";} else {myCmdPrefix = "ip";}
 				table	   = Param["TABLE"];
 				targetSet  = 0;
@@ -95,7 +96,7 @@ if [ "$REQUEST_METHOD" = "POST" ] || [ "$NHIPT_CONFIG" = "box" ]; then
 						if (Param["GETSYSLOG"] > ""){myCmd = "grep -v -E \"DECT|DCT|dect|SRC=\" " SYSLOGDFILE ".2 " SYSLOGDFILE ".1 " SYSLOGDFILE ".0 " SYSLOGDFILE " | tail -n 50"; ret = system(myCmd);}
 					}
 				} else {
-					if (Param["GETFWLOG"] > "")	{myCmd = "tail -n 50 " myConf["LOGD"] "/system.log | grep 'SRC='"; ret = system(myCmd);}
+					if (Param["GETSYSLOG"] > "")	{myCmd = "tail -n 50 " myConf["LOGD"] "/system.log"; ret = system(myCmd);}
 					if (Param["GETFWLOG"] > "")	{myCmd = "tail -n 50 " myConf["LOGD"] "/fw.log"; ret = system(myCmd);}
 				}
 #				if (Param["GETFWLOG"] > "")	{myCmd = "tail -n 50 " myConf["LOGD"] "/fw.log"; ret = system(myCmd);}
@@ -109,7 +110,7 @@ if [ "$REQUEST_METHOD" = "POST" ] || [ "$NHIPT_CONFIG" = "box" ]; then
 					ret = loadModules();
 					ret = persist("settings");}
 				if (Param["SETIP"] == "set")    {cfgchanged=1; myCmd = ""; myConf["ADMINIP"] = Param["ADMIP"]; persist("settings");}
-				if (Param["EXEC"] == "execute") {myCmd = Param["EXPERT"];  	ret = system(myCmd);  if (ret==0){changed=1;}; }
+				if (Param["EXEC"] == "execute") {myCmd = expertCommand(Param["EXPERT"]);  	ret = system(myCmd);  if (ret==0){changed=1;}; }
 				if (Param["MODE"] == "New")     {myCmd = myCmdPrefix "tables -t " table " -N " Param["CHAIN"];	ret = system(myCmd);  if (ret==0){changed=1;}}
 				if (Param["DOIT"] == "Insert")  {myCmd = "";
 					iprange    = "-m iprange ";
@@ -133,27 +134,27 @@ if [ "$REQUEST_METHOD" = "POST" ] || [ "$NHIPT_CONFIG" = "box" ]; then
 					if (index(Param["O"],"!") > 0) { x = "! "; gsub(/!/,"",Param["O"]);} else { x = ""; }
 					if (Param["O"] > "") {myCmd = myCmd "-o " x Param["O"] " ";}
 					if (index(Param["P"],"!") > 0) { x = "! "; gsub(/!/,"",Param["P"]);} else { x = ""; }
-					if (Param["P"] == "icmp" && Param["EXTRA"] > "") {myCmd = myCmd "-p " x Param["P"] " --icmp-type " Param["EXTRA"] " ";} else if (Param["P"] > "") {myCmd = myCmd "-p " x Param["P"] " ";}
+					if (Param["P"] == "icmp" && Param["EXTRA"] > "") {myCmd = myCmd "-p " x Param["P"] " --icmp-type " shellquote(Param["EXTRA"]) " ";} else if (Param["P"] > "") {myCmd = myCmd "-p " x Param["P"] " ";}
 
-					if (Param["MODULE"] == "state") { myCmd = myCmd state "--state " Param["EXTRA"] " "; state="";}
-						else if (Param["MODULE"] == "comment") { system("modprobe ipt_comment"); myCmd = myCmd comment "--comment \47" Param["EXTRA"] "\47 "; comment="";}
-						else if (Param["MODULE"] == "ah") { system("modprobe xt_ah"); myCmd = myCmd ah "--ahspi " Param["EXTRA"] " "; ah="";}
-						else if (Param["MODULE"] == "esp") { system("modprobe xt_esp"); myCmd = myCmd esp "--espspi " Param["EXTRA"] " "; esp="";}
+					if (Param["MODULE"] == "state") { myCmd = myCmd state "--state " shellquote(Param["EXTRA"]) " "; state="";}
+						else if (Param["MODULE"] == "comment") { system("modprobe ipt_comment"); myCmd = myCmd comment "--comment " shellquote(Param["EXTRA"]) " "; comment="";}
+						else if (Param["MODULE"] == "ah") { system("modprobe xt_ah"); myCmd = myCmd ah "--ahspi " shellquote(Param["EXTRA"]) " "; ah="";}
+						else if (Param["MODULE"] == "esp") { system("modprobe xt_esp"); myCmd = myCmd esp "--espspi " shellquote(Param["EXTRA"]) " "; esp="";}
 					if (index(Param["SPORT"],"!") > 0) { x = "! "; gsub(/!/,"",Param["SPORT"]);} else { x = ""; }
 					if (Param["SPORT"] > "" &&  index(Param["SPORT"],",") == 0  && index(Param["SPORT"],":") == 0)  {myCmd = myCmd "--sport " x Param["SPORT"] " ";}
 					if (Param["SPORT"] > "" && (index(Param["SPORT"],",") > 0   || index(Param["SPORT"],":") >  0)) {myCmd = myCmd multiport x "--sports " Param["SPORT"] " "; multiport="";}
 					if (index(Param["DPORT"],"!") > 0) { x = "! "; gsub(/!/,"",Param["DPORT"]);} else { x = ""; }
 					if (Param["DPORT"] > "" &&  index(Param["DPORT"],",") == 0  && index(Param["DPORT"],":") == 0)  {myCmd = myCmd "--dport " x Param["DPORT"] " ";}
 					if (Param["DPORT"] > "" && (index(Param["DPORT"],",") > 0   || index(Param["DPORT"],":") >  0)) {myCmd = myCmd multiport x "--dports " Param["DPORT"] " "; multiport="";}
-					if (Param["ACTION"] == "LOG" && Param["EXTRA"] >  "") {myCmd = myCmd "-j LOG --log-prefix " Param["EXTRA"]  " ";targetSet=1;}
+					if (Param["ACTION"] == "LOG" && Param["EXTRA"] >  "") {myCmd = myCmd "-j LOG --log-prefix " shellquote(Param["EXTRA"])  " ";targetSet=1;}
 					if (Param["ACTION"] == "LOG" && Param["EXTRA"] == "") {myCmd = myCmd "-j LOG --log-prefix \"[IPT] \"";targetSet=1;}
 					if (Param["ACTION"] == "LOG" && Param["EXTRA"] == "") {myCmd = myCmd "-j LOG --log-prefix \"[IPT] \"";targetSet=1;}
-					if (Param["ACTION"] == "DNAT" && Param["EXTRA"] >  "") {myCmd = myCmd "-j DNAT --to-destination " Param["EXTRA"]  " ";targetSet=1;}
-					if (Param["ACTION"] == "SNAT" && Param["EXTRA"] >  "") {myCmd = myCmd "-j SNAT --to-source " Param["EXTRA"]  " ";targetSet=1;}
-					if (Param["ACTION"] == "MASQUERADE" && Param["EXTRA"] >  "") {system("modprobe ipt_MASQUERADE");myCmd = myCmd "-j MASQUERADE --to-ports " Param["EXTRA"]  " ";targetSet=1;}
-					if (Param["ACTION"] == "CONNMARK" && Param["EXTRA"] >  "") {myCmd = myCmd "-j CONNMARK --set-mark " Param["EXTRA"]  " ";targetSet=1;}
-					if (Param["ACTION"] == "REDIRECT" && Param["EXTRA"] >  "") {system("modprobe ipt_REDIRECT"); myCmd = myCmd "-j REDIRECT --to-ports " Param["EXTRA"]  " ";targetSet=1;}
-					if (Param["ACTION"] == "MARK" && Param["EXTRA"] >  "") {system("modprobe xt_MARK\nmodprobe xt_mark"); myCmd = myCmd "-j MARK --set-mark " Param["EXTRA"]  " ";targetSet=1;}
+					if (Param["ACTION"] == "DNAT" && Param["EXTRA"] >  "") {myCmd = myCmd "-j DNAT --to-destination " shellquote(Param["EXTRA"])  " ";targetSet=1;}
+					if (Param["ACTION"] == "SNAT" && Param["EXTRA"] >  "") {myCmd = myCmd "-j SNAT --to-source " shellquote(Param["EXTRA"])  " ";targetSet=1;}
+					if (Param["ACTION"] == "MASQUERADE" && Param["EXTRA"] >  "") {system("modprobe ipt_MASQUERADE");myCmd = myCmd "-j MASQUERADE --to-ports " shellquote(Param["EXTRA"])  " ";targetSet=1;}
+					if (Param["ACTION"] == "CONNMARK" && Param["EXTRA"] >  "") {myCmd = myCmd "-j CONNMARK --set-mark " shellquote(Param["EXTRA"])  " ";targetSet=1;}
+					if (Param["ACTION"] == "REDIRECT" && Param["EXTRA"] >  "") {system("modprobe ipt_REDIRECT"); myCmd = myCmd "-j REDIRECT --to-ports " shellquote(Param["EXTRA"])  " ";targetSet=1;}
+					if (Param["ACTION"] == "MARK" && Param["EXTRA"] >  "") {system("modprobe xt_MARK\nmodprobe xt_mark"); myCmd = myCmd "-j MARK --set-mark " shellquote(Param["EXTRA"])  " ";targetSet=1;}
 					if (Param["ACTION"] == "NOTRACK") {system("modprobe xt_NOTRACK"); myCmd = myCmd "-j NOTRACK " Param["EXTRA"]  " ";targetSet=1;}
 					if (targetSet==0) {myCmd = myCmd "-j " Param["ACTION"];}
 
@@ -163,7 +164,7 @@ if [ "$REQUEST_METHOD" = "POST" ] || [ "$NHIPT_CONFIG" = "box" ]; then
 			}
 			# Links now submit POST; keep their query parameters for the action.
 			if (ENVIRON["REQUEST_METHOD"] == "POST" && ENVIRON["NHIPT_CONFIG"] != "box") {
-				n = split(urldecode(QSTR), PA, "&"); for (i=1;i<=n;i++) {split(PA[i], PM, "=");Param[PM[1]] = PM[2]}
+				readParams(QSTR); validateParams();
 				table	   = Param["TABLE"];
 				if (Param["IPV6"] == 1){myCmdPrefix = "ip6";} else {myCmdPrefix = "ip";}
 				if (Param["MODE"] != "UP" || Param["MODE"] != "DN") {
@@ -476,6 +477,14 @@ function loadSettings(){
 #	if (myConf["BACK"] == "") { myConf["BACK"] = myRoot;}
 	if (myConf["LOGD"] == "") { myConf["LOGD"] = myRoot;}
 	myConf["MYIP"] = myIP;
+	# These saved/fallback values are interpolated into shell commands as well.
+	validateValue("PORT", myConf["PORT"]);
+	validateValue("ROOT", myConf["ROOT"]);
+	validateValue("LOGDIR", myConf["LOGD"]);
+	validateValue("BACDIR", myConf["BACK"]);
+	validateValue("BOOTDIR", myConf["BOOTDIR"]);
+	validateValue("ADMIP", myConf["ADMINIP"]);
+	validateValue("DELAY", myConf["DELAY"]);
 	return stat;
 }
 function saveSettings(Settings){
@@ -493,6 +502,98 @@ function saveSettings(Settings){
 		dirchanged=0; cfgchanged=0;
 	}
 	return ret;
+}
+# Request values reach system() and generated boot scripts. Validate both
+# POST fields and action-URL fields; EXTRA must also survive rules replay.
+# EXPERT is restricted separately to one iptables/ip6tables invocation.
+function invalidParam() {
+	print "Invalid NHIPT parameter." > "/dev/stderr";
+	exit 1;
+}
+function validateValue(key, value) {
+	if (value == "") return;
+	if (key == "TABLE" && value !~ /^(filter|nat|mangle|raw|security)$/) invalidParam();
+	if ((key == "CHAIN" || key == "ACTION") && value !~ /^[a-zA-Z0-9_][a-zA-Z0-9_.:+-]*$/) invalidParam();
+	if ((key == "P" || key == "MODULE") && value !~ /^!?[a-zA-Z0-9_][a-zA-Z0-9_-]*$/) invalidParam();
+	if ((key == "I" || key == "O") && value !~ /^!?[a-zA-Z0-9_.:][a-zA-Z0-9_.:+-]*$/) invalidParam();
+	if ((key == "S" || key == "D") && value !~ /^!?[a-zA-Z0-9_.:][a-zA-Z0-9_.:\/-]*$/) invalidParam();
+	if ((key == "SPORT" || key == "DPORT") && value !~ /^!?[a-zA-Z0-9_][a-zA-Z0-9_:,-]*$/) invalidParam();
+	if ((key == "IDX" || key == "J" || key == "PORT" || key == "DELAY") && value !~ /^[0-9]+$/) invalidParam();
+	if (key == "ROW" && value != "A" && value !~ /^[0-9]+$/) invalidParam();
+	if ((key == "IPV6" || key == "AIRBAG" || key == "DSLDOFF") && value !~ /^[01]$/) invalidParam();
+	if (key == "ADMIP" && value !~ /^[0-9.\/]+$/) invalidParam();
+	if (key == "SERVERIP" && value !~ /^[a-fA-F0-9.:]+$/) invalidParam();
+	if ((key == "BACDIR" || key == "LOGDIR" || key == "ROOT" || key == "BOOTDIR") && value !~ /^\/[a-zA-Z0-9_.\/:+-]*$/) invalidParam();
+	if (key == "BOOT" && value !~ /^(usb|flash)$/) invalidParam();
+	if (key == "BOOTSTRAP" && value !~ /^(freetz|debug)$/) invalidParam();
+	if (key == "LOGTO" && value !~ /^(internal|syslog)$/) invalidParam();
+	if (key == "EXTRA" && value !~ /^[a-zA-Z0-9_.,:\/ +!@%=-]*$/) invalidParam();
+}
+function validateParams(    key) {
+	for (key in Param) validateValue(key, Param[key]);
+	# NOTRACK has no target arguments; do not accept additional iptables options.
+	if (Param["ACTION"] == "NOTRACK" && Param["EXTRA"] != "") invalidParam();
+}
+function readParams(encoded,    count, fields, field, pos, key) {
+	# Split first, then decode each field exactly once (including encoded &/=).
+	count = split(encoded, fields, "&");
+	for (field=1; field<=count; field++) {
+		pos = index(fields[field], "=");
+		if (pos) {
+			key = urldecode(substr(fields[field], 1, pos-1));
+			Param[key] = urldecode(substr(fields[field], pos+1));
+		}
+	}
+}
+function shellquote(value) {
+	gsub(/\47/, "\47\42\47\42\47", value);
+	return "\47" value "\47";
+}
+function expertCommand(value,    words, count, word, quoted, active, i, c, option, arg, pos, named, j, k, needsname, rename, command) {
+	# Rules are later replayed as shell scripts: reject substitutions and controls
+	# even inside quoted values. Keep quotes/spaces and IPv6/LOG brackets usable.
+	if (value ~ /[^][a-zA-Z0-9_.,:\/ +!@%=\42\47\t-]/) invalidParam();
+	for (i=1; i<=length(value); i++) {
+		c = substr(value, i, 1);
+		if (quoted != "") {
+			if (c == quoted) quoted = ""; else word = word c;
+		} else if (c == "\42" || c == "\47") {
+			quoted = c; active = 1;
+		} else if (c == " " || c == "\t") {
+			if (active) {words[++count] = word; word = ""; active = 0;}
+		} else {word = word c; active = 1;}
+	}
+	if (quoted != "") invalidParam();
+	if (active) words[++count] = word;
+	if (words[1] != "iptables" && words[1] != "ip6tables") invalidParam();
+	command = words[1];
+	split("match jump goto protocol new-chain rename-chain", named, " ");
+	for (i=2; i<=count; i++) {
+		option = words[i]; pos = index(option, "=");
+		arg = pos ? substr(option, pos+1) : words[i+1];
+		if (pos) option = substr(option, 1, pos-1);
+		# Allow no-argument short options together (-nvL), but keep values separate.
+		if (option ~ /^-[^-]./) {
+			for (k=2; k<length(option); k++)
+				if (index("nvxfV046", substr(option, k, 1)) == 0) invalidParam();
+			option = "-" substr(option, length(option), 1);
+		}
+		# getopt_long also accepts abbreviated --modprobe options, e.g. --mo.
+		if (option == "-M" ||
+		    (length(option) > 2 && index("--modprobe", option) == 1)) invalidParam();
+		needsname = (option ~ /^-[mjgpNE]$/); rename = (option == "-E");
+		for (j in named) {
+			if (length(option) > 2 && index("--" named[j], option) == 1) {
+				needsname = 1;
+				if (named[j] == "rename-chain") rename = 1;
+			}
+		}
+		# Match/target/protocol and new chain names can trigger shared-library loads.
+		if (needsname && arg !~ /^[a-zA-Z0-9_][a-zA-Z0-9_.:+-]*$/) invalidParam();
+		if (rename && words[i+(pos ? 1 : 2)] !~ /^[a-zA-Z0-9_][a-zA-Z0-9_.:+-]*$/) invalidParam();
+		command = command " " shellquote(words[i]);
+	}
+	return command;
 }
 function urldecode (s) {
 	hextab["0"] = 0; hextab["8"] = 8;
@@ -516,6 +617,7 @@ function urldecode (s) {
 					print "WARNING: invalid hex encoding: %" c1 c2 | "cat >&2";
 				} else {
 					code = 0 + hextab[c1] * 16 + hextab[c2] + 0;
+					if (code == 0) invalidParam();
 					c = sprintf ("%c", code);
 					i = i + 2;
 				}
@@ -634,6 +736,7 @@ fi
 	myIP  = ENVIRON["REMOTE_ADDR"];
 	n = split(QSTR, PA, "&"); for (i=1;i<=n;i++) {split(PA[i], PM, "=");Param[PM[1]] = PM[2]}
 	CurrentJumpMark = Param["J"];
+	if (CurrentJumpMark !~ /^[0-9]+$/) CurrentJumpMark = 0;
 	if (Param["MODE"]=="EDT"){ editRule=1; } else {editRule = 0}
 	JumpMark = (CurrentJumpMark + 1) % 9;
 	if (admIP == "") { ifcIP = myIP; ipStr = "SET ";} else { ifcIP = admIP;  ipStr = "CHANGE ";}
@@ -738,6 +841,14 @@ if (myConf["BOOT"]=="usb") {
 	myStr = myStr "</FORM></TABLE>";
 	return myStr;
 }
+function html(value) {
+	gsub(/&/, "\\&amp;", value);
+	gsub(/</, "\\&lt;", value);
+	gsub(/>/, "\\&gt;", value);
+	gsub(/\42/, "\\&quot;", value);
+	gsub(/\47/, "\\&#39;", value);
+	return value;
+}
 function cbOption(comp, value, caption){if (comp==value){checked=" SELECTED";} else {checked="";} return "<OPTION VALUE=\"" value "\" " checked ">" caption "</OPTION>";}
 function cbModule(name,caption){ return ("<INPUT TYPE=CHECKBOX NAME=\"" name "\"  VALUE=\"" name "\"  " checkModule(name)  "> " caption);}
 function checkModule (name){	if (myModules[name] == 1) {return " checked";} else {return "";}}
@@ -840,7 +951,7 @@ function myTBHL (chain) {
 				print "</TABLE><P></TD><TD COLSPAN=6 class=noborder>" AdminIFC() "</TD><TD class=noborder></TD><TD COLSPAN=2 class=noborder>" AdminButtons() "</TD></TR>";
 				inSubTable=0;
 				print "<FORM METHOD=POST ACTION=" myURL ">" csrfInput;
-				print "<TR><TH COLSPAN=\"2\">Experts only: /var/mod/root # </TH><TD COLSPAN=\"9\"><INPUT TYPE=TEXT NAME=EXPERT class=expert></TD><TD><INPUT TYPE=SUBMIT NAME=EXEC VALUE=execute></TD></TR></FORM>";
+			print "<TR><TH COLSPAN=\"2\">Experts only: iptables / ip6tables </TH><TD COLSPAN=\"9\"><INPUT TYPE=TEXT NAME=EXPERT class=expert></TD><TD><INPUT TYPE=SUBMIT NAME=EXEC VALUE=execute></TD></TR></FORM>";
 				} else {inSubTable=0; print "</TABLE><P></TD><TD CLASS=noborder COLSPAN=9></TD></TR>"}
 			}
 		if (CurrentChain != myArray["Chain"]) {
@@ -878,13 +989,13 @@ function myTBHL (chain) {
 		if (editRule==1 && Param["TABLE"] == table && Param["CHAIN"] == myArray["Chain"] && Param["IDX"] == i && Param["IPV6"] == ipv6){
 			myRule=$0; gsub(/\"/,"\47", myRule); gsub("-A " myArray["Chain"],"-t " table " -R " myArray["Chain"] " " i " ", myRule);
 			if (ipv6 == 1) {myCmd = "ip6tables ";} else {myCmd = "iptables ";}
-			print "<TR><TD>" i "</TD><TD><B>/var/mod/root #</B></TD><TD COLSPAN=9><INPUT TYPE=TEXT NAME=EXPERT class=expert VALUE=\"" myCmd myRule "\"></TD><TD><INPUT TYPE=SUBMIT NAME=EXEC VALUE=execute></TD></TR></FORM>";
+			print "<TR><TD>" i "</TD><TD><B>iptables / ip6tables</B></TD><TD COLSPAN=9><INPUT TYPE=TEXT NAME=EXPERT class=expert VALUE=\"" html(myCmd myRule) "\"></TD><TD><INPUT TYPE=SUBMIT NAME=EXEC VALUE=execute></TD></TR></FORM>";
 		} else {
 			print "<TR><TD>&nbsp;" i "</TD><TD>&nbsp;" \
 			myArray["SourceIP"] "</TD><TD>&nbsp;" myArray["DestIP"] "</TD><TD>&nbsp;" myArray["InIF"] "</TD><TD>&nbsp;" \
 			myArray["OutIF"] "</TD><TD>&nbsp;" myArray["Prot"] "</TD><TD>&nbsp;" myArray["Module"] "</TD><TD>&nbsp;" \
 			myArray["Sport"] "</TD><TD>&nbsp;" myArray["Dport"] "</TD><TD>&nbsp;" myArray["Target"] "</TD><TD>&nbsp;" \
-			myArray["Rej"] myArray["Log"] myArray["State"] myArray["Extra"] myArray["Comment"] "</TD><TD nowrap><A HREF=" myURL "?MODE=UP&IPV6=" ipv6 "&TABLE=" table "&CHAIN=" myArray["Chain"] "&IDX=" i "&J=" JumpMark "#" table ipv6 myArray["Chain"] JumpMark " onclick=\"return csrfPost(this.href)\">[UP]</A> <A HREF=" myURL "?MODE=DN&IPV6=" ipv6 "&TABLE=" table "&CHAIN=" myArray["Chain"] "&IDX=" i "&J=" JumpMark "#" table ipv6 myArray["Chain"] JumpMark " onclick=\"return csrfPost(this.href)\">[DN]</A> <A HREF=" myURL "?MODE=DEL&IPV6=" ipv6 "&TABLE=" table "&CHAIN=" myArray["Chain"] "&IDX=" i "&J=" JumpMark "#" table ipv6 myArray["Chain"] JumpMark " onclick=\"return csrfPost(this.href)\">[Del]</A> <A HREF=" myURL "?MODE=EDT&IPV6=" ipv6 "&TABLE=" table "&CHAIN=" myArray["Chain"] "&IDX=" i "&J=" JumpMark "#" table ipv6 myArray["Chain"] JumpMark ">[Edit]</A></TD></TR>"
+			html(myArray["Rej"] myArray["Log"] myArray["State"] myArray["Extra"] myArray["Comment"]) "</TD><TD nowrap><A HREF=" myURL "?MODE=UP&IPV6=" ipv6 "&TABLE=" table "&CHAIN=" myArray["Chain"] "&IDX=" i "&J=" JumpMark "#" table ipv6 myArray["Chain"] JumpMark " onclick=\"return csrfPost(this.href)\">[UP]</A> <A HREF=" myURL "?MODE=DN&IPV6=" ipv6 "&TABLE=" table "&CHAIN=" myArray["Chain"] "&IDX=" i "&J=" JumpMark "#" table ipv6 myArray["Chain"] JumpMark " onclick=\"return csrfPost(this.href)\">[DN]</A> <A HREF=" myURL "?MODE=DEL&IPV6=" ipv6 "&TABLE=" table "&CHAIN=" myArray["Chain"] "&IDX=" i "&J=" JumpMark "#" table ipv6 myArray["Chain"] JumpMark " onclick=\"return csrfPost(this.href)\">[Del]</A> <A HREF=" myURL "?MODE=EDT&IPV6=" ipv6 "&TABLE=" table "&CHAIN=" myArray["Chain"] "&IDX=" i "&J=" JumpMark "#" table ipv6 myArray["Chain"] JumpMark ">[Edit]</A></TD></TR>"
 		}
 		i++;
 	}
@@ -904,7 +1015,7 @@ function myTBHL (chain) {
 				print "</TABLE><P></TD><TD COLSPAN=6 class=noborder>" AdminIFC() "</TD><TD class=noborder></TD><TD COLSPAN=2 class=noborder>" AdminButtons() "</TD></TR>";
 				inSubTable=0;
 				print "<FORM METHOD=POST ACTION=" myURL ">" csrfInput;
-				print "<TR><TH COLSPAN=\"2\">Experts only: /var/mod/root # </TH><TD COLSPAN=\"9\"><INPUT TYPE=TEXT NAME=EXPERT class=expert></TD><TD><INPUT TYPE=SUBMIT NAME=EXEC VALUE=execute></TD></TR></FORM>";
+			print "<TR><TH COLSPAN=\"2\">Experts only: iptables / ip6tables </TH><TD COLSPAN=\"9\"><INPUT TYPE=TEXT NAME=EXPERT class=expert></TD><TD><INPUT TYPE=SUBMIT NAME=EXEC VALUE=execute></TD></TR></FORM>";
 				} else {inSubTable=0; print "</TABLE><P></TD><TD CLASS=noborder COLSPAN=9></TD></TR>"}
 		 }
 	if (formPrinted == 1){
@@ -915,7 +1026,7 @@ function myTBHL (chain) {
 	for (y=1;y<=nTables;y++) { if (Chains[y,2]==0) { myTBHL(Chains[y,1]); print myDD(1) myFL myTT(CChains,nCChains,Chains[y,1]) myFR;}}
 	print "<TR class=solid><TD COLSPAN=\"12\" class=noborder><A NAME=END" CurrentJumpMark ">&nbsp;</TD></TR>";
 	while ((ret = getline test < "/var/tmp/nhipt.log") > 0) {
-		print "<TR><TD COLSPAN=\"12\" class=log>" test "</TD></TR>";
+		print "<TR><TD COLSPAN=\"12\" class=log>" html(test) "</TD></TR>";
 	}
 	if (ret==0){close("/var/tmp/nhipt.log"); system("rm /var/tmp/nhipt.log");}
 	print "</TABLE>";
