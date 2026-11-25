@@ -410,6 +410,7 @@ FREETZ_PACKAGE_CALLMONITOR=y
 FREETZ_PACKAGE_CALLMONITOR_webif=y
 FREETZ_PACKAGE_CALLMONITOR_actions=y
 FREETZ_PACKAGE_CALLMONITOR_monitor=y
+# FREETZ_PACKAGE_CALLMONITOR_voicemail is not set
 # FREETZ_PACKAGE_CALLMONITOR_phonebook is not set
 # FREETZ_PACKAGE_CCID is not set
 # FREETZ_PACKAGE_CHECKMAILD is not set
@@ -657,6 +658,7 @@ FREETZ_PACKAGE_JUIS_CHECK=y
 #
 # L
 #
+# FREETZ_PACKAGE_LAME is not set
 # FREETZ_PACKAGE_LCD4LINUX is not set
 # FREETZ_PACKAGE_LFTP is not set
 # FREETZ_PACKAGE_LIGHTTPD is not set
@@ -921,6 +923,7 @@ FREETZ_PACKAGE_STUNNEL=y
 # FREETZ_PACKAGE_VIRTUALIP_NG is not set
 # FREETZ_PACKAGE_VLMCSD is not set
 # FREETZ_PACKAGE_VNSTAT is not set
+# FREETZ_PACKAGE_VOICEMAIL_XML is not set
 # FREETZ_PACKAGE_VPNC is not set
 # FREETZ_PACKAGE_VSFTPD is not set
 # FREETZ_PACKAGE_VTUN is not set
@@ -1297,6 +1300,7 @@ FREETZ_LIB_ld_uClibc_WITH_VERSION_1_0_59=y
 # Audio ----------------------------------
 #
 # FREETZ_LIB_libFLAC is not set
+# FREETZ_LIB_libmp3lame is not set
 # FREETZ_LIB_libmad is not set
 FREETZ_LIB_libogg=y
 # FREETZ_LIB_libopus is not set
