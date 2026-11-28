@@ -262,6 +262,7 @@ Currently supported devices and firmwares
 
   * __Fritz!Box 6825 4G (UNTESTED)__
     - 306.08.25 rev134130 {ALL} [Smart24 P2 NL1]
+    - 306.08.51 rev138803 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 6835 5G (UNTESTED)__
     - 313.08.40 rev136299 {ALL} [MyFRITZOS P1] (Inhaus)
 
@@ -293,9 +294,11 @@ Currently supported devices and firmwares
   * __Fritz!Box 6860 5G (UNTESTED)__
     - 277.08.03 rev119187 {ALL} [Smart24 P1 FCS]
     - 277.08.25 rev134337 {ALL} [Smart24 P2 NL1]
+    - 277.08.51 rev138801 {ALL} [MyFRITZOS P1]
 
   * __Fritz!Box 6860 5G v2 (UNTESTED)__
     - 314.08.25 rev134683 {ALL} [Smart24 P2 NL1]
+    - 314.08.51 rev138805 {ALL} [MyFRITZOS P1]
 
   * __Fritz!Box 6890 LTE__
     - 162.06.87 rev59283 {ALL}
@@ -498,7 +501,7 @@ Currently supported devices and firmwares
     - 164.07.29 rev92062 {ALL} [PSQ19P2NL4]
     - 164.07.59 rev113249 {ALL} [MOVE21NL2]
     - 164.08.02 rev117978 {ALL} [Smart24 P1 NL1]
-    - 164.08.25 rev131719 {ALL} [Smart24 P2 NL1]
+    - 164.08.26 rev138690 {ALL} [Smart24 P2 NL1 WU25]
   * __Fritz!Box Fon WLAN 7530 AX__
     - 256.07.31 rev94779 {ALL} [PSQ19P2NL4]
     - 256.07.57 rev109901 {ALL} [MOVE21NL1]
@@ -583,7 +586,7 @@ Currently supported devices and firmwares
     - 285.08.25 rev134025 {ALL} [Smart24 P2 NL1]
     - 285.08.51 rev138145 {ALL} [MyFRITZOS P1]
   * __Fritz!Box 7695 <DSL/Fiber 7-90>__
-    - 316.08.51 rev137968 {ALL} [MyFRITZOS P1]
+    - 316.08.51 rev138754 {ALL} [MyFRITZOS P1]
 
 ### Fritz!Powerline
 

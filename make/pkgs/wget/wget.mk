@@ -1,6 +1,8 @@
-$(call PKG_INIT_BIN, 1.25.0)
+$(call PKG_INIT_BIN, $(if $(FREETZ_PACKAGE_WGET_VERSION_ABANDON),1.21.2,1.25.0))
 $(PKG)_SOURCE:=$(pkg)-$($(PKG)_VERSION).tar.lz
-$(PKG)_HASH:=19225cc756b0a088fc81148dc6a40a0c8f329af7fd8483f1c7b2fe50f4e08a1f
+$(PKG)_HASH_ABANDON:=1727a330a86acacb3e57615ce268f5f29978bf7adec4abe6a30d370207bc91b3
+$(PKG)_HASH_CURRENT:=19225cc756b0a088fc81148dc6a40a0c8f329af7fd8483f1c7b2fe50f4e08a1f
+$(PKG)_HASH:=$($(PKG)_HASH_$(if $(FREETZ_PACKAGE_WGET_VERSION_ABANDON),ABANDON,CURRENT))
 $(PKG)_SITE:=@GNU/$(pkg)
 ### WEBSITE:=https://www.gnu.org/software/wget/
 ### MANPAGE:=https://www.gnu.org/software/wget/manual/
@@ -11,6 +13,8 @@ $(PKG)_SITE:=@GNU/$(pkg)
 $(PKG)_BINARY:=$($(PKG)_DIR)/src/wget
 $(PKG)_TARGET_BINARY:=$($(PKG)_DEST_DIR)/usr/bin/wget-gnu
 
+$(PKG)_CONDITIONAL_PATCHES+=$(if $(FREETZ_PACKAGE_WGET_VERSION_ABANDON),abandon,current)
+
 # Rename base64_encode/decode to avoid name clash with the same named functions from GnuTLS
 $(PKG)_PATCH_POST_CMDS += find $(abspath $($(PKG)_DIR)) \( -name *.h -o -name *.c \) -type f \
 	-exec $(SED) -i -r -e 's,(base64_(en|de)code),wget_\1,g' \{\} \+;
@@ -18,7 +22,14 @@ $(PKG)_PATCH_POST_CMDS += find $(abspath $($(PKG)_DIR)) \( -name *.h -o -name *.
 $(PKG)_PATCH_POST_CMDS += $(call PKG_ADD_EXTRA_FLAGS,(C|LD)FLAGS|LIBS)
 
 $(PKG)_EXTRA_CFLAGS  += -ffunction-sections -fdata-sections
+$(PKG)_EXTRA_CFLAGS  += $(if $(FREETZ_PACKAGE_WGET_CA_BUNDLE),-DWGET_DEFAULT_CA_BUNDLE='\"/etc/ssl/certs/ca-bundle.crt\"')
 $(PKG)_EXTRA_LDFLAGS += -Wl,--gc-sections
+
+ifeq ($(strip $(FREETZ_TARGET_ARCH_ARM)),y)
+ifeq ($(strip $(FREETZ_TARGET_ARCH_BE)),y)
+$(PKG)_CONFIGURE_ENV += gl_cv_header_working_byteswap_h=yes
+endif
+endif
 
 ifeq ($(strip $(FREETZ_PACKAGE_WGET_WITH_SSL)),y)
 
@@ -62,6 +73,7 @@ $(PKG)_CONFIGURE_OPTIONS += $(if $(FREETZ_PACKAGE_WGET_WITH_SSL),,--without-ssl)
 
 $(PKG)_REBUILD_SUBOPTS += FREETZ_BUSYBOX_WGET
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_WGET_WITH_SSL
+$(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_WGET_CA_BUNDLE
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_WGET_OPENSSL
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_WGET_GNUTLS
 $(PKG)_REBUILD_SUBOPTS += FREETZ_PACKAGE_WGET_STATIC

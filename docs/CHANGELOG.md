@@ -83,6 +83,7 @@ Latest changes
   - AVM sources:
     * 1700     8.26 - 5.15.176
     * 2700     8.26 - 5.15.176
+    * 3000 AX  8.51 - 5.4.213
     * 4050     8.51 - 5.4.213
     * 4690     8.51 - 5.4.213
     * 5630     8.50 - 5.4.302
@@ -162,6 +163,7 @@ Latest changes
     * Vim 9.2.1302
     * vnStat 1.18/2.14
     * Voicemail-XML parser 1.0
+    * Wget 1.21.2/1.25.0
 
   - Libraries:
     * expat 2.7.5/2.11.0
@@ -171,12 +173,13 @@ Latest changes
     * GLib2 2.32.4/2.90.1
     * harfbuzz 15.2.0
     * libconfuse 3.4
-    * libffi 3.8.1
+    * libffi 3.8.2
     * libgcrypt 1.12.4
     * libgpg-error 1.61
-    * libpcap 1.11.0
+    * libpcap 1.11.1
     * libpng 1.6.59
     * libtasn1 4.21.0
+    * libyaml 0.2.7
     * libzip 1.12.1
     * lz4 1.11.1
     * MbedTLS 2.7.19/2.28.10/3.6.8
